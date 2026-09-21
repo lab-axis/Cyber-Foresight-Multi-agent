@@ -2,9 +2,9 @@
 
 This repository contains the forecasting and multi-agent decision-support pipeline for context-aware cyber foresight. It combines a Bayesian graph-based forecasting model with evidence-grounded critique, structured debate, contextual feasibility analysis, and deterministic decision synthesis.
 
-![Framework Architecture](figure/framework.png)
+![Framework Architecture](figure/CTI_Agent_Diagram.jpg)
 
-![Multi-Agent Pipeline](figure/multi_agent_pipeline.png)
+![Multi-Agent Pipeline](figure/multi_agent_pipeline.jpg)
 
 ## Overview
 
