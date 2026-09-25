@@ -4,7 +4,7 @@ This repository contains the forecasting and multi-agent decision-support pipeli
 
 ![Framework Architecture](figure/CTI_Agent_Diagram.jpg)
 
-![Multi-Agent Pipeline](figure/multi_agent_pipeline.jpg)
+![Multi-Agent Pipeline](figure/multi_agent_pipeline.png)
 
 ## Overview
 
@@ -17,15 +17,15 @@ The current forecasting contract contains **124 nodes** (26 Threat + 98 PMT) ove
 
 ## Multi-Agent Pipeline
 
-| Stage | Role |
-| --- | --- |
-| **Stage 0** | Canonical forecast migration, frozen evidence snapshots, deterministic retrieval |
-| **Stage 1** | Independent Attack Feasibility and Defense Robustness critique |
-| **Stage 2** | Evidence-grounded structured debate and bounded Mediator adjudication |
-| **Stage 3** | Deterministic Common Decision Object and KR/EU/US contextualization |
-| **Stage 4** | Information-isolated Technical, Institutional/Regional, and Financial/Adoption evaluation |
-| **Stage 5** | Deterministic disagreement, evidence, and context-sensitivity diagnostics |
-| **Stage 6** | Deterministic decision policy and evidence-grounded strategic report |
+| Stage             | Role                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------ |
+| **Stage 0** | Canonical forecast migration, frozen evidence snapshots, deterministic retrieval                 |
+| **Stage 1** | Independent Attack Feasibility and Defense Robustness critique                                   |
+| **Stage 2** | Evidence-grounded structured debate and bounded Mediator adjudication                            |
+| **Stage 3** | Deterministic Common Decision Object and KR/EU/US contextualization                              |
+| **Stage 4** | Information-isolated Technical, Institutional/Regional, and Financial/Adoption evaluation        |
+| **Stage 5** | Deterministic disagreement, evidence, and context-sensitivity diagnostics                        |
+| **Stage 6** | Deterministic decision policy and evidence-grounded strategic report                             |
 | **Stage 7** | Validation harness for robustness, architecture/cost, context contribution, and integrity audits |
 
 The active decision pipeline ends at **Stage 6**. Stage 7 evaluates frozen outputs and is not another decision-making agent.
