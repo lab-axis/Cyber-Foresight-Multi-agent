@@ -1,4 +1,4 @@
-# Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty
+# From Forecasting to Decision Support: Evidence-Bounded Multi-Agent Reasoning for Long-Horizon Cyber Foresight
 
 This repository contains the forecasting and multi-agent decision-support pipeline for context-aware cyber foresight. It combines a Bayesian graph-based forecasting model with evidence-grounded critique, structured debate, contextual feasibility analysis, and deterministic decision synthesis.
 
