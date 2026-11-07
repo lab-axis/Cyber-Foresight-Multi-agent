@@ -1,0 +1,155 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-S1",
+        "evidence_ids": [
+          "DE_DE04_0B77B88875745973"
+        ],
+        "scope": "GENERAL",
+        "statement": "Decision guidance for IDPS/administrative controls provides an institutional pathway for anomaly detection, including separate administrator accounts, restricted network access, protected management communications, configuration backup, update testing, and consideration of multiple IDPS technology types.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-S2",
+        "evidence_ids": [
+          "DE_DE05_105D0030778F41BC"
+        ],
+        "scope": "GENERAL",
+        "statement": "Decision guidance for behavioral anomaly detection describes organizational benefits and a voluntary cybersecurity framework presented as not imposing additional regulatory requirements, supporting a governance pathway for anomaly-detection deployment.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-S3",
+        "evidence_ids": [
+          "DE_DE06_14CCCEB6F82351D5"
+        ],
+        "scope": "GENERAL",
+        "statement": "Decision guidance for ICS environments specifies auditability and monitoring documentation capabilities, including sending audit logs to an external audit process, accurate internal system time, monitoring configuration changes, and documentation for securely deploying monitoring devices, which supports institutional oversight of anomaly detection.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-C1",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen reference-enterprise profile is described as a multi-department CIS IG2 enterprise with personnel responsible for managing and protecting IT infrastructure, differing risk profiles, and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-C2",
+        "evidence_ids": [
+          "DE_DE16_CEA1C38E613068F8"
+        ],
+        "scope": "GENERAL",
+        "statement": "Decision guidance characterizes anomaly-based detection as able to address unknown threats but subject to false negatives, sensitivity to network device changes, subjectivity, unpredictable behavior, and the need to trust the system completely, while HIDS operation can incur a computer resource penalty.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC conclusion would require jurisdiction-specific regulatory_applicability evidence for the frozen jurisdiction plus matching governance_enablement or compliance_constraint evidence.",
+      "If the frozen jurisdiction imposes data localization, cross-border transfer, privacy, audit, or log-retention obligations, those obligations must be evidenced and mapped to the anomaly-detection implementation.",
+      "If the organization relies on the supplied NISTIR, separate evidence would be needed to show jurisdictional regulatory compliance because the supplied NISTIR does not guarantee compliance.",
+      "If the reference-enterprise profile's dependence on enterprise-grade technology and specialized expertise is material, implementation planning would need evidence of institutional capacity, training, or procurement pathways sufficient for anomaly-detection deployment."
+    ],
+    "constraints": [
+      "Anomaly detection is positioned by guidance as part of a broader IDPS architecture, because a robust IDPS solution often cannot be achieved without multiple IDPS technology types.",
+      "Anomaly-based detection has documented limitations, including false-negative potential, sensitivity to changes, subjective interpretation, unpredictable behavior, and resource penalties for host-based monitoring.",
+      "The supplied NISTIR does not guarantee compliance with any regulatory initiatives.",
+      "The reference-enterprise profile describes safeguards that may depend on enterprise-grade technology and specialized expertise."
+    ],
+    "decision_object_id": "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+    "evidence_gaps": [
+      "No jurisdiction-specific regulatory applicability evidence is supplied, so no DEPLOYMENT_SPECIFIC regional/legal feasibility direction can be grounded.",
+      "No directionally eligible compliance_constraint evidence is supplied for this lens in the grounding contract.",
+      "No supplied evidence establishes that anomaly detection is deployed, auditable, or compliance-verified in the reference enterprise.",
+      "No supplied evidence addresses data sovereignty, cross-border transfer, privacy, log retention, or sector-specific obligations relevant to anomaly detection.",
+      "No supplied evidence resolves whether the frozen jurisdiction imposes specific legal obligations on network monitoring or anomaly-detection tooling."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "On balance, the supplied records support GENERAL institutional feasibility for ANOMALY DETECTION under this lens. Eligible governance_enablement decision-evidence records provide institutional/administrative pathways for anomaly or IDPS deployment, including administrative controls, voluntary-framework guidance, and audit/monitoring documentation. No directionally eligible compliance_constraint record is supplied for this lens, and the frozen jurisdiction is masked, so DEPLOYMENT_SPECIFIC legal/regional feasibility cannot be grounded and is retained as an evidence gap rather than converted into a directional stance.",
+    "stance": 1
+  },
+  "assessment_sha256": "20dce9d0b02e297c10a4b6e866bcadef87173d8aeec2a14e450b807a27d9f12e",
+  "checkpoint_sha256": "0eb6960b22f96a6c9eb38e3740e2cde05b209d05448710c872a0f6213efd09ac",
+  "created_at": "2026-11-06T06:59:16.382474+00:00",
+  "identity": {
+    "axis": "PROMPT_SEED_ROBUSTNESS",
+    "case_id": "main__malware__anomaly_detection",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE04_0B77B88875745973",
+        "DE_DE05_105D0030778F41BC",
+        "DE_DE06_14CCCEB6F82351D5",
+        "DE_DE16_CEA1C38E613068F8"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "2f4e2154685fc9744b70a72074514a24388d4e06c39760caf48f0d6c61ed2dd3",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__eu__cis_ig2__7b3abb36d94e3682",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__us__cis_ig2__72ba6e0d3d843499"
+    ],
+    "payload_sha256": "2c9392660f945f132847e785f91999d9d776baffae5bb17fe7eca2bab3d63a30",
+    "payload_transform_id": null,
+    "prompt_variant": "P2_EVIDENCE_FIRST",
+    "repeat_index": 43,
+    "response_schema_sha256": "6e113f72d4a320cf7270e9006ee14a01df6feaac2c80b56d06bcb1457062c250",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "dff05310cdf7f806d7e6e33d8fa16542fbef2fd075104f447caecfa259cf13a4",
+    "variant_id": "P2_EVIDENCE_FIRST"
+  }
+}

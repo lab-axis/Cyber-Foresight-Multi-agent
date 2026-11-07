@@ -1,0 +1,120 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied key-management guidance supports institutional feasibility of cryptography by requiring identification of authorized entities, access-control mechanisms, traceability of key generation, access, use, and destruction, and auditing of key-access logs.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CISA CPG record supports institutional feasibility by providing a recommended strong/agile encryption action with an intended outcome of effective encryption, including properly configured and up-to-date TLS/SSL, updating outdated or weak encryption, and considering post-quantum implications.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-3",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST algorithm-transition record challenges institutional feasibility by creating a compliance constraint on algorithm selection: two-key TDEA encryption is disallowed; three-key TDEA encryption is deprecated through 2023 and disallowed after 2023 unless specifically allowed by other NIST guidance; and AES-128, AES-192, and AES-256 encryption/decryption are acceptable.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-4",
+        "evidence_ids": [
+          "E_31_A0893427DD4F5B04",
+          "E_31_6BBE82F2BAC198B3",
+          "E_31_C1CFA326F0420DCA"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied EU primary-law records provide neutral jurisdictional context for the frozen EU scenario: GDPR Article 32 lists pseudonymisation and encryption of personal data as appropriate technical and organisational security measures; a NIS2 recital references state-of-the-art security and privacy-preserving measures such as pseudonymisation or encryption; and another NIS2 record references encryption in public procurement and state-of-the-art cybersecurity risk-management measures.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "To make an EU deployment-specific institutional/regional conclusion, supplied evidence must establish legal applicability of the relevant EU records to the CIS IG2 reference enterprise and link that applicability to a direction-carrying governance or compliance record.",
+      "If the NIST algorithm-transition guidance is adopted, cryptographic implementation must avoid disallowed two-key TDEA encryption and, for new encryption after 2023, avoid three-key TDEA encryption unless specifically allowed, and may use the acceptable AES choices identified in the record.",
+      "If the key-management governance support is to be realized, implementation must provide traceability and auditability for key generation, access, use, and destruction, including identification of authorized entities and access-control mechanisms.",
+      "If the CPG strong/agile encryption pathway is to be realized, implementation should include properly configured and up-to-date TLS/SSL where technically feasible, update outdated or weak encryption, and consider post-quantum implications."
+    ],
+    "constraints": [
+      "Algorithm selection is constrained by the supplied NIST transition record: disallowed or deprecated encryption algorithms cannot be treated as equivalent to the acceptable AES choices under that guidance. [DE_DE09_6719137897848A9E]",
+      "The EU primary-law records are jurisdictional context only and cannot be used to infer a positive or negative EU legal conclusion for the generic CIS IG2 reference enterprise. [E_31_A0893427DD4F5B04, E_31_6BBE82F2BAC198B3, E_31_C1CFA326F0420DCA]",
+      "The GENERAL support is based on governance and implementation-pathway guidance, not on measured operational effectiveness, budget, staffing, or EU legal approval. [DE_DE08_031120C53EF050F3, E_23_534489D29C38B327]"
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__insider_threat__cryptography__EU",
+    "evidence_gaps": [
+      "No supplied evidence establishes whether the EU primary-law records apply to the frozen CIS IG2 reference enterprise, including GDPR controller/processor status or NIS2 essential/important/sector status.",
+      "No supplied evidence establishes the enterprise's existing cryptographic governance, key-management auditability, or implementation capacity for the 2025-2027 window.",
+      "No supplied EU record applies the supplied NIST algorithm-transition statuses to the frozen EU scenario, so an EU deployment-specific challenge based on those statuses is not grounded.",
+      "No supplied evidence quantifies compliance burden, cost, staffing, or timeline for aligning cryptography with the identified governance and algorithm constraints."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The grounded GENERAL institutional direction supports feasibility. The supplied governance_enablement records provide an institutional pathway for cryptography by addressing key-management accountability/traceability and a recommended strong/agile encryption implementation pathway. The supplied compliance_constraint record challenges feasibility by imposing algorithm-selection constraints, but it does not establish that the action is infeasible; it creates a bounded compliance condition. The supplied EU primary-law records are jurisdictional context for the frozen EU scenario and are directionally neutral under this contract. They do not establish whether the generic CIS IG2 reference enterprise is subject to specific GDPR or NIS2 obligations, nor do they independently support or challenge the frozen action. Because the missing information is needed for a narrower EU deployment-specific legal conclusion, the GENERAL direction is preserved and evidence sufficiency is recorded as PARTIAL rather than as an insufficient-context or insufficient-evidence case.",
+    "stance": 1
+  },
+  "assessment_sha256": "31e887cbcde18afb8ac7c92bd88e90cce7629ee21ed4a6fca45b2dd503d94126",
+  "checkpoint_sha256": "e51fe54fe329c61bee44628d0b6ad0a873fce46a01c9490997d77f77687d4ee3",
+  "created_at": "2026-11-06T16:46:29.338497+00:00",
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "condition": "EU",
+    "decision_object_sha256": "d9267c4643d54eda380a332efcee0db265be28eec0ee12136e92ffe526579279",
+    "evidence_content_sha256": "4a651fdb7404341db0ccc07b34e2992734ce80dd40fff15487f30efc84bdf2e2",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "097f55d931f4b3cea4df34e65f531a99c1ae60e3d871b61eb462c42a225c9c45",
+    "response_schema_sha256": "5185b9cfc1ad6886e9da954ed8487a38a40a2a67284d1723952e96d87a9072bb",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 42,
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "e95ca10bec598fe537e76eb9e924f67e547393fd7d0e00d1afee36e10b0911a5"
+  }
+}

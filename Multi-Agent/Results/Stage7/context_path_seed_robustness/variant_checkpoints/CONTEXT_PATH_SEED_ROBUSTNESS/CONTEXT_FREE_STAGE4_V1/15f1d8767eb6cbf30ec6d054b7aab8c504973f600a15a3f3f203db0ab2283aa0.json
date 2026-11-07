@@ -1,0 +1,201 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FAF-001",
+        "evidence_ids": [
+          "E_02_669F59880AF52688"
+        ],
+        "scope": "GENERAL",
+        "statement": "The DBIR records 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and states that threat actors continue to take advantage of assets with default, simplistic, and easily guessable credentials via brute forcing them, buying them, or reusing them from previous breaches.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAF-002",
+        "evidence_ids": [
+          "E_03_F2B2EBA86BEEFDC5"
+        ],
+        "scope": "GENERAL",
+        "statement": "Mandiant M-Trends reports initial infection vector shares when identified, including exploit at 38%, phishing at 17%, prior compromise at 15%, and includes Brute Force as an initial infection vector category; this is observed vector-share context, not a brute-force incident-count or frequency trajectory.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAF-003",
+        "evidence_ids": [
+          "E_03_C54C5F099169E020"
+        ],
+        "scope": "GENERAL",
+        "statement": "Mandiant M-Trends reports observed password guessing attacks against cloud sign-in portals to identify accounts that do not have MFA configured, including dormant accounts that should have been disabled or service accounts with no need for MFA.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAF-004",
+        "evidence_ids": [
+          "E_04_02D425B67E57F32D"
+        ],
+        "scope": "GENERAL",
+        "statement": "IBM X-Force notes vulnerabilities that make brute force attacks easier for attackers and reports widespread and likely indiscriminate internal and external vulnerability scanning as the most common attack attempt against OT-related industries.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAF-005",
+        "evidence_ids": [
+          "E_23_312B9513BCEE9B9D"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG recommends MFA for IT and OT accounts, with prioritization of higher-risk accounts such as privileged administrative accounts, and maps this to Brute Force, Valid Accounts, External Remote Services, and related remote-service techniques.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAF-006",
+        "evidence_ids": [
+          "E_23_B21FAA9377991F05"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG recommends that security teams be notified after a specific number of consecutive unsuccessful login attempts, that alerts be logged and stored for retroactive analysis, and that system-enforced login prevention be enabled for suspicious IT accounts when available.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAF-007",
+        "evidence_ids": [
+          "E_23_EBCAB9508641E703"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG recommends provisioning unique and separate credentials for similar services and asset access on IT and OT networks, including unique service and machine account passwords, mapped to Valid Accounts and Brute Force subtechniques.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAF-008",
+        "evidence_ids": [
+          "E_25_FE58E4FCF044EDE3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 Rev.5 discusses automatic account lockout or delay algorithms, or a combination of other actions, to help prevent brute force attacks, with possible exceptions based on operational mission or need.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAF-009",
+        "evidence_ids": [
+          "E_12_D8076704AE363FE2"
+        ],
+        "scope": "GENERAL",
+        "statement": "MITRE ATT&CK M1029 lists intrusion detection log forwarding as a measure, including forwarding logs from IDS/IPS systems to a remote security information system.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAF-010",
+        "evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "scope": "GENERAL",
+        "statement": "Crossref cutoff-constrained publication trend reports annual IDS/IPS security publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year and first-to-last delta of 14, while explicitly not establishing deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAF-011",
+        "evidence_ids": [
+          "E_29_8E495DC2A98305B1",
+          "E_29_BAD6581A8E96027C",
+          "E_29_CA00E63DF08A6FC1"
+        ],
+        "scope": "GENERAL",
+        "statement": "Three Crossref academic metadata records tagged PMT_IDS_IPS identify publications concerning IDS/IPS efficiency against DOS/DDOS attacks, Suricata IDS/IPS modes for a computing cluster, and IDS/IPS with Telegram notification; these records are metadata and abstract-level documentation only and do not establish deployment maturity or operational effectiveness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific financial feasibility conclusion requires evidence of available budget, expected cost, staffing/resource burden, existing infrastructure, and any contractual or regional constraints.",
+      "If the organization can support MFA, unsuccessful-login alerting and lockout, unique credential management, and remote IDS/IPS log forwarding, general adoption feasibility is more plausible; if it cannot, organizational and operational burden may increase.",
+      "If operational effectiveness evidence for IDS/IPS against brute force is unavailable, the financial justification remains conditional and cannot be asserted from publication activity alone.",
+      "Implementation timing within the 2025-2027 window cannot be asserted from the supplied records; it must be derived from deployment-specific planning and resource evidence."
+    ],
+    "constraints": [
+      "Deployment-specific financial feasibility cannot be concluded from the supplied records because the frozen deployment context does not specify budget, infrastructure, organization type, or region.",
+      "Publication-trend evidence is limited to directional publication activity and cannot be used to infer deployment maturity, operational effectiveness, causal mitigation effectiveness, or financial return (FAF-010).",
+      "Official guidance and mitigation records provide recommended controls and operational context but do not establish exact control effectiveness, product ROI, TCO, staffing cost, or universal feasibility (FAF-005, FAF-006, FAF-007, FAF-008, FAF-009).",
+      "Threat records provide observed threat patterns, vector shares, adversary behavior, or scanning context; they do not provide future probability, product ROI, product TCO, universal control effectiveness, or deployment-specific cost (FAF-001, FAF-002, FAF-003, FAF-004)."
+    ],
+    "decision_object_id": "decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c",
+    "evidence_gaps": [
+      "Missing budget_context, infrastructure_context, organization_type, and region in the frozen deployment context.",
+      "No supplied record provides IDS/IPS cost, TCO, ROI, payback period, budget availability, vendor or product version, license, maintenance, or implementation timeline.",
+      "No supplied record quantifies staffing, tuning, false-positive management, alerting, SIEM/log integration, MFA integration, account lockout, or unique credential management burden for this deployment.",
+      "No supplied record establishes operational effectiveness of IDS/IPS against brute force in this specific deployment or in a context matching the frozen scenario.",
+      "No supplied record establishes opportunity cost relative to alternative mitigation options within the frozen organization."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "financial_adoption",
+    "rationale": "Under the financial/adoption lens, the supplied records provide general adoption relevance for IDS/IPS but do not support a deployment-specific financial feasibility conclusion. Observed brute-force-related threat patterns, vector context, password-guessing behavior, and vulnerability-scanning context create an adoption motive for monitoring and prevention capabilities (FAF-001, FAF-002, FAF-003, FAF-004). Official guidance and mitigation records outline complementary operational pathways and burdens, including MFA, unsuccessful-login alerting and lockout, unique credential management, and IDS/IPS log forwarding to a remote security system (FAF-005, FAF-006, FAF-007, FAF-008, FAF-009). Crossref publication-trend and metadata records indicate an active IDS/IPS publication ecosystem and documented academic IDS/IPS studies, but only as publication activity or metadata, not deployment maturity, operational effectiveness, or financial return (FAF-010, FAF-011). However, the frozen deployment context lacks budget, infrastructure, organization type, and region, and the supplied evidence does not provide cost, TCO, ROI, payback period, staffing/resource burden, contracts, product versions, implementation timeline, or operational effectiveness for this deployment. Therefore, general adoption feasibility is directionally supported and not materially challenged, while deployment-specific financial/adoption feasibility remains indeterminate. The stance is 0 rather than +1 because the required financial judgment under the frozen scenario cannot be established, and it is not -1 because no supplied record presents a material financial or adoption barrier.",
+    "stance": 0
+  },
+  "assessment_sha256": "f2166630c5d89cdeb2899ac421ed062077e7e8100a1f60a9cccbc6d1552a0158",
+  "checkpoint_sha256": "d56e68b785be680d4525230184af102a516cd41f8d85ff53a8f5db3508e7da8e",
+  "created_at": "2026-11-06T13:09:58.354901+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "577799c73a613d52e2d7d92d673cb2cbeb7d998e4ba82ef8ade093548ee53466",
+    "base_stage3_input_fingerprint": "40634fab0e4340b0e2daea7aec502d04dd39579f3be02f628153d13292e1a815",
+    "base_stage3_output_sha256": "39986484dc1b69948531ef36d4c6d2d4cace4c3afd4c7520c5b2a4f020d29817",
+    "case_id": "main__brute_force__ids_ips",
+    "evidence_ids": [
+      "E_02_669F59880AF52688",
+      "E_03_C54C5F099169E020",
+      "E_03_F2B2EBA86BEEFDC5",
+      "E_04_02D425B67E57F32D",
+      "E_12_D8076704AE363FE2",
+      "E_23_312B9513BCEE9B9D",
+      "E_23_B21FAA9377991F05",
+      "E_23_EBCAB9508641E703",
+      "E_25_FE58E4FCF044EDE3",
+      "E_29_8E495DC2A98305B1",
+      "E_29_BAD6581A8E96027C",
+      "E_29_CA00E63DF08A6FC1",
+      "E_33_A707006877BFD1C2"
+    ],
+    "input_fingerprint": "15f1d8767eb6cbf30ec6d054b7aab8c504973f600a15a3f3f203db0ab2283aa0",
+    "lens_type": "financial_adoption",
+    "response_schema_sha256": "b3c00c2f63cd7ec581c44e9a10294c5ccb6f85baca61e8cfb763bc9cfd081833",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "a1be70c855d702b7fb11d2664113a8b726343461c6e9d463ba901b11ff19d9f2",
+    "user_prompt_sha256": "76e26387bdba12b875605230c4122e3e9b23ad8edc15abbc7a91939925aa71d9",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

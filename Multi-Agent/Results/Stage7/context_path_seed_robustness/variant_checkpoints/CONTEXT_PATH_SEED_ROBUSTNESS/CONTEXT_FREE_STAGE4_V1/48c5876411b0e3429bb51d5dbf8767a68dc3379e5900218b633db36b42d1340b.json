@@ -1,0 +1,162 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IRF_C1",
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref cutoff-constrained PMT publication trend record reports annual NLP/LLM security publication counts of 2021=14, 2022=18, 2023=33, and 2024=87, with OLS slope 23.400000 works/year, first-to-last delta 73, and total results 152.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF_C2",
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref trend record states that the publication trend is an external publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF_C3",
+        "evidence_ids": [
+          "E_29_CD092D34A1331D02"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref academic metadata record is for the title 'Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case.' with DOI 10.2139/ssrn.4996945, and its allowed claim types are publication/DOI metadata while deployment maturity and operational effectiveness are prohibited.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF_C4",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "scope": "GENERAL",
+        "statement": "The DBIR record reports growth in DDoS attack size, including median bits per second increasing from 1.4 Gbps to 2.2 Gbps and the 97.5 percentile increasing from 99 Gbps to 124 Gbps, and it frames mitigation readiness by advising that a contracted service should be able to clear the bar, that DNS resiliency should be checked, and that mitigation-service options should be reviewed.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF_C5",
+        "evidence_ids": [
+          "E_04_892BBCAA3CE5CC92"
+        ],
+        "scope": "GENERAL",
+        "statement": "The X-Force record reports hacktivism context related to the Israel-Hamas conflict and recommends DDoS mitigation readiness actions, including contacting a DDoS mitigation provider, having and practicing a DDoS incident response plan, and ensuring incident responders have up-to-date contact information for DDoS mitigation and internet service providers.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF_C6",
+        "evidence_ids": [
+          "E_08_3453329306E149CB"
+        ],
+        "scope": "GENERAL",
+        "statement": "The CISA KEV record for CVE-2023-44487 describes HTTP/2 Rapid Reset as allowing a DDoS attack and provides mitigation guidance to apply vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF_C7",
+        "evidence_ids": [
+          "E_03_06E6ABC42DA3AC77",
+          "E_03_F13F996D181217BA"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Mandiant records describe DDoS as an example of destructive operations and report hacktivist claims of DDoS attacks, website defacements, and hack-and-leak operations.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If region is provided, assess jurisdiction-specific NLP/LLM governance, data sovereignty, cross-border data handling, and compliance obligations without assuming APAC, EU, US, or Korea rules.",
+      "If organization type is provided, assess the governance pathway and accountability/auditability requirements for NLP/LLM-assisted DDoS decision support, including logging, oversight, and responsibility assignment.",
+      "If infrastructure_context is provided, assess how existing DDoS mitigation service reliance, DNS resiliency, incident-response planning, and provider contact requirements can incorporate NLP/LLM outputs under those constraints.",
+      "If budget_context is provided, assess implementation and compliance burden against available resources, without adding dollar values, ROI, or exact timelines not in evidence.",
+      "Before deployment-specific institutional/regional feasibility can be rated, require direct evidence of NLP/LLM-specific institutional enablement or constraints in the target region."
+    ],
+    "constraints": [
+      "No cited claim establishes NLP/LLM-specific regulatory compatibility, data sovereignty, cross-border data constraints, compliance burden, governance pathways, accountability/auditability, or implementation barriers.",
+      "The cited DDoS mitigation-readiness claims are threat-level rather than NLP/LLM-level: E_02_066AFE8300EDCEBB frames reliance on a contracted mitigation service and DNS resiliency, and E_04_892BBCAA3CE5CC92 frames provider contact and incident-response readiness.",
+      "E_08_3453329306E149CB provides CISA KEV mitigation guidance for CVE-2023-44487, including BOD 22-01 cloud-services guidance, but it does not establish NLP/LLM institutional/regional feasibility.",
+      "E_33_ADC8BC66D812799F's NLP/LLM publication trend is limited to publication activity and explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+      "Because the target region is absent, no jurisdiction-specific institutional, regulatory, data-sovereignty, or cross-border feasibility claim can be made."
+    ],
+    "decision_object_id": "decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272",
+    "evidence_gaps": [
+      "region is absent in deployment_context, so jurisdiction-specific institutional/regional feasibility cannot be assessed without it.",
+      "organization_type is absent, so organization-specific governance, procurement, accountability, and auditability requirements cannot be assessed.",
+      "infrastructure_context is absent, so implementation constraints for integrating NLP/LLM with DDoS detection, mitigation, DNS resiliency, or incident-response workflows cannot be assessed.",
+      "budget_context is absent, so compliance, operational, or implementation cost burden cannot be assessed.",
+      "No supplied evidence addresses NLP/LLM-specific regulatory compatibility, data sovereignty, cross-border data constraints, compliance burden, governance pathways, accountability/auditability, or implementation barriers.",
+      "No supplied evidence links the NLP/LLM publication trend in E_33_ADC8BC66D812799F to deployable NLP/LLM mitigation capacity for DDoS within the 2025-2027 timing window.",
+      "No jurisdiction-specific obligations are supplied; region must be known before applying any regional institutional or regulatory requirements."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "institutional_regional",
+    "rationale": "The frozen deployment context does not specify region, organization type, infrastructure context, or budget context, so deployment-specific institutional/regional feasibility cannot be assessed without guessing a jurisdiction. The supplied evidence supports general DDoS mitigation-readiness context through contracted mitigation services, incident-response readiness, provider contact planning, and CISA KEV mitigation guidance, but it does not establish NLP/LLM-specific institutional enablement. The supplied evidence also supports an NLP/LLM security publication-activity trend, but the Crossref trend record explicitly limits that trend to publication activity and states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. No supplied evidence establishes NLP/LLM-specific regulatory compatibility, data sovereignty, cross-border constraints, compliance burden, governance pathways, accountability/auditability, or implementation barriers. Because insufficiency and missing context must not be converted into a directional stance, the institutional/regional feasibility judgment is indeterminate.",
+    "stance": 0
+  },
+  "assessment_sha256": "ce7e3bcaeb2aced02def3c8699a3fff1741944fd3625295ea8356702231f0e69",
+  "checkpoint_sha256": "cece0cce9867a4124d41b6529acdb24378ade42cfeda4929f5cfa8b5103b2f21",
+  "created_at": "2026-11-06T10:26:57.200911+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "27491951f56835359ac6d0b22199cc60df73c0a8b70a51d6a611d1e5dcaa83c7",
+    "base_stage3_input_fingerprint": "ce0ff7e92295b8e62d1cd5f39a80758e67832acf98132f024af1630d4285e98d",
+    "base_stage3_output_sha256": "1dffb6d7017761e18978137fb0ced9c53e3786e7d8fe1189558300e35f023ef2",
+    "case_id": "main__ddos__nlp_llm",
+    "evidence_ids": [
+      "E_02_066AFE8300EDCEBB",
+      "E_03_06E6ABC42DA3AC77",
+      "E_03_F13F996D181217BA",
+      "E_04_892BBCAA3CE5CC92",
+      "E_08_3453329306E149CB",
+      "E_29_CD092D34A1331D02",
+      "E_33_ADC8BC66D812799F"
+    ],
+    "input_fingerprint": "48c5876411b0e3429bb51d5dbf8767a68dc3379e5900218b633db36b42d1340b",
+    "lens_type": "institutional_regional",
+    "response_schema_sha256": "b9ff7f38654b572f83ffefb2ff11a0d05a71b74d04f66434aa2995feb74e595f",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "061fee6c798b1c8b402519d2ed9ebd6de85bcb567838e1f3108bc84c36bbd6ac",
+    "user_prompt_sha256": "f7edbe0a665d7af86756789ed17bda28e974286296e7d5371e3d498a2ce71857",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

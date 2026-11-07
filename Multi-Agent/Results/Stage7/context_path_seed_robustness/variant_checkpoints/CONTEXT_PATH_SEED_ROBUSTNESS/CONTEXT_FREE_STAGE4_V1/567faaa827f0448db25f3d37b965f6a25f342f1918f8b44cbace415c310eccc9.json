@@ -1,0 +1,198 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "E_23_B21FAA9377991F05"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG describes alerting after consecutive unsuccessful login attempts, logging that alert for retroactive analysis, and, for IT assets, a system-enforced policy preventing future logins for the suspicious account, mapped to Brute Force subtechniques T1110.001 through T1110.004.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_23_312B9513BCEE9B9D"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG describes prioritized MFA for IT and OT accounts with remote access, ranks MFA options from hardware-based phishing-resistant MFA to SMS or voice only when no other options are possible, and maps the control to Brute Force, Valid Accounts, and External Remote Services.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "E_23_EBCAB9508641E703"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG describes provisioning unique and separate credentials for similar services and asset access on IT and OT networks, mapped to Brute Force subtechniques.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C4",
+        "evidence_ids": [
+          "E_25_FE58E4FCF044EDE3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 Rev.5 discusses automatic system lockout or execution of a delay algorithm in support of the availability objective and notes that, if not implemented, organizations consider a combination of other actions to help prevent brute force attacks.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C5",
+        "evidence_ids": [
+          "E_12_D8076704AE363FE2"
+        ],
+        "scope": "GENERAL",
+        "statement": "MITRE ATT&CK M1029 describes centralized log management, remote storage of security logs and sensitive files, forwarding of IDS/IPS logs to a remote security information system, and use of encryption and access control for stored data.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C6",
+        "evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref cutoff-constrained publication trend reports IDS/IPS annual publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year, and states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C7",
+        "evidence_ids": [
+          "E_29_CA00E63DF08A6FC1"
+        ],
+        "scope": "GENERAL",
+        "statement": "Crossref metadata identifies a publication titled 'Analisis Keamanan Jaringan Komputer Menggunakan Metode IDS dan IPS dengan Notifikasi Telegram' in the Indonesian Journal of Computer Science with DOI 10.33022/ijcs.v13i1.3505.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C8",
+        "evidence_ids": [
+          "E_29_BAD6581A8E96027C"
+        ],
+        "scope": "GENERAL",
+        "statement": "Crossref metadata identifies a publication titled 'THE BASIC MODES OF THE INTRUSION PREVENTION SYSTEM (IDS/IPS SURICATA) FOR THE COMPUTING CLUSTER' with DOI 10.25559/sitito.2017.3.629.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C9",
+        "evidence_ids": [
+          "E_23_EBCAB9508641E703"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG states that examples of low-risk OT assets that may not be technically feasible include those in remote locations, such as offshore rigs or wind turbines.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C10",
+        "evidence_ids": [
+          "E_25_FE58E4FCF044EDE3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 Rev.5 states that automatically unlocking an account after a specified period of time is generally not permitted, although exceptions may be required based on operational mission or need.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C11",
+        "evidence_ids": [
+          "E_29_8E495DC2A98305B1"
+        ],
+        "scope": "GENERAL",
+        "statement": "Crossref metadata identifies a publication titled 'Efficiency test of IDS/IPS systems against DOS and DDOS attacks' with DOI 10.7862/re.2016.7.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If a target region is specified, assess regional feasibility by jurisdiction rather than treating a multi-country region as a single legal jurisdiction.",
+      "If IDS/IPS logs are forwarded to centralized, remote, or third-party storage, assess access control, encryption, retention, and data sovereignty or cross-border constraints under the applicable regional context.",
+      "If the organization operates OT assets, determine whether MFA, unique credentials, central authentication, or logon lockout controls are technically feasible for each asset class, including remote OT assets where C9 notes feasibility may be limited.",
+      "If automatic lockout or delay mechanisms are adopted, define operational exceptions and business-continuity handling consistent with the condition in C10.",
+      "If CISA CPG or NIST SP 800-53 Rev.5 controls are used as an institutional governance baseline, confirm their status and applicability in the target jurisdiction before treating them as compliance requirements."
+    ],
+    "constraints": [
+      "Control-related constraints are grounded in C1, C2, C4, C9, and C10: unsuccessful login handling may require alerts, logging, lockout or delay, MFA priority ordering, unique credentials, and operational-exception handling. C9 and C10 identify technical or operational conditions that can limit implementation in certain OT or account-unlock contexts.",
+      "Publication-related claims are limited by C6-C8 and C11: they establish publication metadata or publication activity only, not deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+    ],
+    "decision_object_id": "decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c",
+    "evidence_gaps": [
+      "Target region is not specified in the frozen deployment context, so jurisdiction-specific regulatory compatibility, data sovereignty, and cross-border constraints cannot be assessed.",
+      "Organization type, infrastructure context, and budget context are not specified, so deployment-specific institutional feasibility cannot be assessed.",
+      "No supplied record establishes whether the CISA CPG or NIST SP 800-53 Rev.5 controls are mandatory, recommended, adopted, or applicable in the target jurisdiction.",
+      "No supplied record establishes compliance burden, regulatory approval requirements, or data residency obligations for IDS/IPS in the target region.",
+      "No supplied record links the IDS/IPS publication trend or academic metadata records to deployment maturity, operational effectiveness, or institutional adoption in the target region."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied records support general institutional/governance enablement for IDS/IPS: CISA CPG and NIST SP 800-53 Rev.5 describe control options relevant to brute-force credential abuse, unsuccessful login handling, MFA, unique credentials, alert logging, and account lockout/delay, while MITRE ATT&CK M1029 describes IDS/IPS log forwarding, centralized/remote log storage, encryption, and access control. These claims support general auditability and governance pathways. However, the frozen deployment context has no region, organization type, infrastructure context, or budget context, and no supplied record establishes jurisdiction-specific regulatory compatibility, data sovereignty, compliance burden, or cross-border constraints. The academic metadata and publication-trend records only establish publication activity or publication metadata; they do not establish deployment maturity, operational effectiveness, or target-region institutional feasibility. On balance, the records provide general enablement but do not support a deployment-specific regional feasibility conclusion.",
+    "stance": 0
+  },
+  "assessment_sha256": "964b23ead9617c2afff366f0e66d66ce302227bf272ecf4f867078205971eb9e",
+  "checkpoint_sha256": "cfcd0adb963de5e9bbbefe14beaf2ac2255a700eae0b2e8ca508709423870456",
+  "created_at": "2026-11-06T11:29:11.291385+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "577799c73a613d52e2d7d92d673cb2cbeb7d998e4ba82ef8ade093548ee53466",
+    "base_stage3_input_fingerprint": "40634fab0e4340b0e2daea7aec502d04dd39579f3be02f628153d13292e1a815",
+    "base_stage3_output_sha256": "39986484dc1b69948531ef36d4c6d2d4cace4c3afd4c7520c5b2a4f020d29817",
+    "case_id": "main__brute_force__ids_ips",
+    "evidence_ids": [
+      "E_02_669F59880AF52688",
+      "E_03_C54C5F099169E020",
+      "E_03_F2B2EBA86BEEFDC5",
+      "E_04_02D425B67E57F32D",
+      "E_12_D8076704AE363FE2",
+      "E_23_312B9513BCEE9B9D",
+      "E_23_B21FAA9377991F05",
+      "E_23_EBCAB9508641E703",
+      "E_25_FE58E4FCF044EDE3",
+      "E_29_8E495DC2A98305B1",
+      "E_29_BAD6581A8E96027C",
+      "E_29_CA00E63DF08A6FC1",
+      "E_33_A707006877BFD1C2"
+    ],
+    "input_fingerprint": "567faaa827f0448db25f3d37b965f6a25f342f1918f8b44cbace415c310eccc9",
+    "lens_type": "institutional_regional",
+    "response_schema_sha256": "1867503adffd55536b85c5e76d1166165ba709f144b93d6ad3d0a5ae49756455",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "061fee6c798b1c8b402519d2ed9ebd6de85bcb567838e1f3108bc84c36bbd6ac",
+    "user_prompt_sha256": "76e26387bdba12b875605230c4122e3e9b23ad8edc15abbc7a91939925aa71d9",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

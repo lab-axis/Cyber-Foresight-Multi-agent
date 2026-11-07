@@ -1,0 +1,174 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FAC_CL1",
+        "evidence_ids": [
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied records contain a GENERAL adoption benefit for HTTPS/TLS-related adoption because one record provides concrete TLS implementation guidance for client authentication, certificate path validation, revocation status checking, and related authentication mechanisms, and another record describes a lower-overhead transport-mode configuration for secured communications.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAC_CL2",
+        "evidence_ids": [
+          "DE_DE14_EDCA207577B4607A"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied records contain a GENERAL adoption burden for HTTPS/TLS-related adoption because one record states that SSL VPN session performance can be affected by back-end authentication demands, certificate key size, and MTU fragmentation, and that addressing performance problems may involve upgrading or replacing hardware, using an SSL accelerator, or reducing processing demands.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAC_CL3",
+        "evidence_ids": [
+          "DE_DE14_5FC183B8D7DD961A",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The supplied records contain deployment-maturity context only: one SSL VPN case study describes an existing IPsec remote-access solution that required significant IT labor to install and support, and one CIS IG2 reference-enterprise profile describes multi-department enterprise IT with possible regulatory burdens, increased operational complexity, and safeguards that may depend on enterprise-grade technology and specialized expertise. These records contextualize adoption burden but do not by themselves establish a financial-adoption direction.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FAC_CL4",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied HTTPS publication-trend record supports only publication activity: annual HTTPS/security publication counts of 14 in 2021, 8 in 2022, 8 in 2023, and 15 in 2024, with OLS slope 0.300000 works/year and first-to-last delta 1. It explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FAC_CL5",
+        "evidence_ids": [
+          "AE07C_9CBF5980D3BA474A"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied records contain mitigation-scope context that HTTPS alone may not cover all session-hijacking paths because session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists. This does not by itself establish a financial-adoption direction because it is not directionally eligible under the supplied financial_adoption grounding contract.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FAC_CL6",
+        "evidence_ids": [
+          "E_10_AC5A58AF5E015229",
+          "E_04_B9A3190D9CA152A3",
+          "E_25_99857C4681E8FEE5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied records contain threat and implementation-context records that are not directionally eligible for the financial_adoption lens: for example, one record reports session-hijacking-related XSS cookie-stealing risk and recommends impact analysis and risk assessment before deploying defensive measures, another describes security misconfigurations and concurrent user sessions as a web-application risk context, and another describes NIST session-authenticity control guidance. These can inform the deployment environment but cannot be used to create a financial-adoption direction under the supplied grounding contract.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific SUPPORTS_FEASIBILITY or CHALLENGES_FEASIBILITY conclusion for this lens would require supplied evidence directly tied to the frozen HTTPS action and the frozen deployment context, such as bounded cost, ROI, TCO, payback period, staffing effort, procurement timing, or performance-impact evidence.",
+      "To strengthen the GENERAL SUPPORTS_FEASIBILITY direction, evidence would need to show that the TLS implementation guidance or lower-overhead transport option translates into a material adoption benefit for the frozen enterprise, such as reduced implementation effort, reduced processing overhead, or avoided cost.",
+      "To strengthen the GENERAL CHALLENGES_FEASIBILITY direction, evidence would need to show that the SSL/HTTPS-related performance, hardware, accelerator, or processing-demand burden is material in the frozen deployment context, such as through measured performance degradation, required hardware upgrades, or additional staffing effort.",
+      "A DEPLOYMENT_SPECIFIC financial/adoption feasibility conclusion would require evidence about the actual CIS IG2 enterprise instance, including existing TLS/HTTPS maturity, network architecture, certificate-management capacity, performance baselines, staffing capacity, and budget constraints.",
+      "Any jurisdiction-specific financial or regulatory feasibility claim would require supplied jurisdiction-specific evidence; under the current masked jurisdiction, no such direction may be inferred."
+    ],
+    "constraints": [
+      "No numeric budget, price, ROI, TCO, payback period, staffing count, procurement ceiling, vendor name, product version, sector-specific cost, or architecture-specific cost may be inferred from the supplied evidence.",
+      "The CIS IG2 reference-enterprise profile may support only standardized profile facts; it cannot by itself establish legal obligation, exact regulatory cost, PMT effectiveness, or HTTPS implementation burden.",
+      "The deployment_maturity record may qualify or strengthen the adoption context but cannot by itself create a SUPPORTS_FEASIBILITY or CHALLENGES_FEASIBILITY direction.",
+      "Publication-activity evidence may support HTTPS publication trends only; it cannot establish deployment maturity, operational effectiveness, causal mitigation effectiveness, or financial feasibility.",
+      "Records that are topically relevant to HTTPS, TLS, SSL VPNs, session hijacking, or security controls but are not listed in the financial_adoption grounding contract cannot be used as directional grounding for this lens.",
+      "Because the region is masked as JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE, no jurisdiction-specific financial, legal, or regulatory feasibility direction may be inferred.",
+      "Exact affordability, budget fit, ROI, TCO, payback period, staffing count, and procurement timing remain unavailable unless explicitly evidenced; their absence blocks exact financial conclusions but does not by itself determine a directional stance."
+    ],
+    "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+    "evidence_gaps": [
+      "No supplied record provides a numeric budget, price, ROI, TCO, payback period, procurement ceiling, or cost estimate for deploying HTTPS/TLS in the frozen CIS IG2 reference enterprise.",
+      "No supplied record provides an exact staffing count, labor-hour estimate, or specialist-expertise requirement specifically for HTTPS/TLS deployment, configuration, testing, or operation in this scenario.",
+      "No supplied record quantifies the actual performance impact of HTTPS/TLS in the frozen deployment context, including throughput, latency, certificate-processing load, or MTU fragmentation effects.",
+      "No supplied record quantifies whether the lower-overhead transport-mode option in DE_DE18_CDC975345637E009 is applicable to the actual HTTPS deployment architecture or provides a measurable resource saving for the frozen scenario.",
+      "No supplied record provides deployment-specific evidence of current HTTPS/TLS maturity, certificate-management maturity, existing network capacity, or prior encrypted-transport implementation burden.",
+      "No supplied record provides vendor, product, product-version, licensing, or procurement-timing information for HTTPS/TLS adoption in this scenario.",
+      "No jurisdiction-specific financial or regulatory evidence is supplied, and the jurisdiction is masked, so any jurisdiction-specific financial applicability remains unresolved."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied records produce a genuinely mixed GENERAL financial/adoption picture for PMT_HTTPS under the frozen CIS IG2 reference-enterprise scenario. Directionally eligible support is grounded in two adoption_benefit records: DE_DE10_A086B3193CD6440B supplies NIST TLS implementation guidance for client authentication, certificate path validation, revocation checking, and related authentication mechanisms, while DE_DE18_CDC975345637E009 states that transport-mode IPSec has less overhead because it does not add an additional header and discusses deployment with or without encryption depending on data sensitivity. These support adoption feasibility as a technical pathway and a lower-overhead secured-communications option, but they do not establish exact cost savings, budget fit, ROI, or payback. Directionally eligible challenge is grounded in one adoption_burden record: DE_DE14_EDCA207577B4607A states that SSL VPN performance can be affected by back-end authentication demands, certificate key size, and MTU fragmentation, and that addressing performance problems may involve upgrading or replacing hardware, using an SSL accelerator, or reducing processing demands. This is a direct resource/performance burden for encrypted transport deployment, but it also lacks exact cost, staffing, procurement timing, or budget impact. The deployment_maturity record DE_DE14_5FC183B8D7DD961A and the CIS IG2 context record CTX_CIS_IG2_9F94838146D9C3A4 add organizational and implementation context, but neither can create a financial-adoption direction by itself. Because the directional evidence includes both a grounded benefit and a grounded burden, and because exact affordability metrics are absent, the financially/adoption-feasible direction is mixed rather than clearly supported or clearly challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "db4024e74038410be3c925c4c3c6509acdffaa013fd0ad15c5f520fcb2a8990a",
+  "checkpoint_sha256": "d9786ba2de4b4ca6a5a92a8b1eae630fa19626be94f40b96ce5ba8d51b36da82",
+  "created_at": "2026-11-06T07:22:27.085267+00:00",
+  "identity": {
+    "axis": "PROMPT_SEED_ROBUSTNESS",
+    "case_id": "main__session_hijacking__https",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE10_A086B3193CD6440B",
+        "DE_DE14_5FC183B8D7DD961A",
+        "DE_DE14_EDCA207577B4607A",
+        "DE_DE18_CDC975345637E009"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "53f731001117c29651707a92594c95407fc0415d56da5540ef5d310a71af9649",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051"
+    ],
+    "payload_sha256": "262b35e37b90bb31f7356c537907b37ecf1def9669d73cbec3ba4a5b8313d8a7",
+    "payload_transform_id": null,
+    "prompt_variant": "P2_EVIDENCE_FIRST",
+    "repeat_index": 43,
+    "response_schema_sha256": "b0545cdd0e2cfc6469d2177f29a48152385ab8fb7d990acedf74355a2dd0c682",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "2abe9bddf9ae8d8834787a96b0d4cdb6b3f1a1a03c1872959b81c9b73056c278",
+    "variant_id": "P2_EVIDENCE_FIRST"
+  }
+}

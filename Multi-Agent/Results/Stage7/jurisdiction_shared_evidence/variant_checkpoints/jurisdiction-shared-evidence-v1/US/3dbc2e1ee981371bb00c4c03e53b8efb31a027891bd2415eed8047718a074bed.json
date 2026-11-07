@@ -1,0 +1,100 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-C1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3",
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL institutional/regional feasibility of PMT_CRYPTOGRAPHY is supported by governance enablement: NIST key-management guidance requires identification of authorized key actors, access-control mechanisms, traceability of key access to humans/devices/applications/processes, and audit of logs for security violations, while CISA CPG guidance treats properly configured SSL/TLS and strong agile encryption as a recommended action intended to maintain confidentiality of sensitive data and integrity of IT and OT traffic.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-C2",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL institutional/regional feasibility of PMT_CRYPTOGRAPHY is challenged by compliance constraint: NIST SP 800-131A Rev. 2 sets algorithm approval statuses that constrain cryptographic selection, including disallowed two-key TDEA encryption, disallowed SKIPJACK encryption, disallowed three-key TDEA encryption after 2023 unless specifically allowed by other NIST guidance, and acceptable AES-128/AES-192/AES-256 encryption and decryption. This constraint challenges feasibility to the extent legacy or noncompliant algorithms would need to be identified and transitioned, but the supplied records do not establish that the frozen deployment uses such algorithms.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC institutional/regional feasibility conclusion for the United States would require supplied regulatory_applicability evidence for the frozen jurisdiction in addition to eligible governance_enablement or compliance_constraint evidence.",
+      "If the deployment includes disallowed or deprecated cryptographic algorithms, institutional feasibility would require transition to acceptable algorithms consistent with the supplied NIST algorithm-status guidance.",
+      "If key material is deployed, institutional feasibility would require key-management accountability and traceability practices consistent with the supplied NIST key-management guidance."
+    ],
+    "constraints": [
+      "Key-management governance must support accountability/traceability, including identification of authorized key actors, access-control mechanisms, traceability of key access to the accessing entity, and audit of logs for security violations.",
+      "Cryptographic algorithm choices are constrained by NIST SP 800-131A Rev. 2 approval statuses: two-key TDEA encryption is disallowed, SKIPJACK encryption is disallowed, three-key TDEA encryption is disallowed after 2023 unless specifically allowed by other NIST guidance, and AES-128, AES-192, and AES-256 encryption and decryption are listed as acceptable.",
+      "CISA CPG encryption guidance is conditioned by technical feasibility, and for OT communications it emphasizes minimizing impact to latency and availability while using encryption when feasible, typically for remote or external-connected OT communications."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__insider_threat__cryptography__US",
+    "evidence_gaps": [
+      "No supplied institutional/regional record in the grounding contract establishes US jurisdiction-specific regulatory_applicability for the frozen CIS IG2 reference enterprise.",
+      "No supplied record establishes whether the frozen deployment currently uses disallowed or deprecated cryptographic algorithms that would require transition under DE_DE09_6719137897848A9E.",
+      "No supplied record establishes exact budget, staffing, procurement, implementation timeline, or operational-effectiveness evidence for institutional adoption of PMT_CRYPTOGRAPHY.",
+      "No supplied record establishes cross-border or data-sovereignty constraints specific to the frozen United States scenario beyond the supplied governance and algorithm-compliance records."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "On balance, the supplied GENERAL institutional/regional records support the feasibility of PMT_CRYPTOGRAPHY by providing governance enablement. DE_DE08_031120C53EF050F3 supplies key-management accountability and traceability practices, and E_23_534489D29C38B327 supplies a CISA CPG recommended encryption action with an expected confidentiality/integrity outcome. The main grounded challenge is institutional/regional compliance constraint from DE_DE09_6719137897848A9E, which imposes algorithm selection and transition constraints, including disallowed or deprecated algorithm statuses and an allowance for AES variants. That challenge is conditional on the presence of noncompliant or legacy algorithms, which is not established by the supplied records. The frozen United States scenario label does not by itself permit a DEPLOYMENT_SPECIFIC legal conclusion because the supplied institutional/regional grounding contract lacks a regulatory_applicability record for the frozen jurisdiction. Therefore the surviving GENERAL direction is net support, with PARTIAL sufficiency.",
+    "stance": 1
+  },
+  "assessment_sha256": "874deb0320a0fdd7052f288142d21098032ce5b3ec17a302ce9e91f58fad3afc",
+  "checkpoint_sha256": "cd2767ad2b7958434aefc50d8afd44834967556f22a148a465e254cafc3de1f7",
+  "created_at": "2026-11-06T17:35:40.882152+00:00",
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "condition": "US",
+    "decision_object_sha256": "6e0f2602867af48414e22036f6d89b98ec2ca1e65dc1b1c724ee888e627ba687",
+    "evidence_content_sha256": "4a651fdb7404341db0ccc07b34e2992734ce80dd40fff15487f30efc84bdf2e2",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "bb995315bedfdddde2761ba9e34120eb8aa47eb17296692f6e0fc4591a490499",
+    "response_schema_sha256": "4c271a1c267f9327074669385376f1f949f9203d5e61562d58b94c7a8be70ebd",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 43,
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "455767ccf7f3d5af11a871fe53f49f0e97837c6c6797ac224498ad8e35167b41"
+  }
+}

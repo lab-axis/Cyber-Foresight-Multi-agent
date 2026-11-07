@@ -1,0 +1,118 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-C1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST key-management guidance supports institutional feasibility of CRYPTOGRAPHY by providing an accountability/traceability pathway: it describes identifying entities authorized to generate, access, destroy, or use keys; recording who performs those actions; auditing logs; and states that access to plaintext cryptographic keys shall be traceable to the accessing entity.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-C2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA Cybersecurity Performance Goals recommended-action guidance supports institutional implementation of CRYPTOGRAPHY by calling for effective encryption, use of properly configured and up-to-date SSL/TLS where technically feasible, and planning to identify and update outdated or weak encryption to stronger algorithms.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-C3",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST algorithm-transition guidance challenges unconditioned feasibility by imposing a GENERAL compliance constraint: two-key TDEA encryption is disallowed, SKIPJACK encryption is disallowed, three-key TDEA encryption is disallowed after December 31, 2023 unless specifically allowed by other NIST guidance, and AES-128, AES-192, and AES-256 encryption and decryption are acceptable.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-C4",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen CIS IG2 reference-enterprise context indicates a multi-department enterprise IT environment that may face regulatory burdens and where some safeguards depend on enterprise-grade technology and specialized expertise, but this context does not by itself establish legal applicability or measured implementation burden.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC institutional/regional feasibility determination requires jurisdiction-specific regulatory_applicability evidence and organization-specific data-processing or sector context.",
+      "An inventory and migration/retirement plan for disallowed or restricted legacy cryptographic algorithms is required to address the cited algorithm-transition constraint.",
+      "Key-generation, key-access, key-destruction, and key-use traceability controls, plus audit-log mechanisms, are required to operationalize the cited key-management governance enablement.",
+      "Implementation planning must align with the cited CPG recommended action, including maintaining effective encryption and updating weak or outdated encryption where technically feasible."
+    ],
+    "constraints": [
+      "Cryptography deployment requires institutional key-management governance, including traceability of key generation, access, destruction, and use, and auditability of relevant logs.",
+      "Algorithm selection must respect the cited NIST transition status for disallowed or restricted legacy symmetric ciphers, and legacy configurations may need migration to acceptable approved algorithms.",
+      "Institutional implementation should align with the cited CPG recommended action to maintain effective encryption, use properly configured SSL/TLS where technically feasible, and update outdated or weak encryption."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__insider_threat__cryptography__UNSPECIFIED",
+    "evidence_gaps": [
+      "No eligible jurisdiction-specific regulatory_applicability evidence is supplied for the frozen masked region, so regional legal applicability, data-sovereignty obligations, and cross-border constraints cannot be assessed.",
+      "No supplied evidence identifies the specific sector, data-processing activity, personal-data obligations, or exact legal regime applicable to the CIS IG2 reference enterprise.",
+      "No supplied evidence establishes the organization's existing cryptographic inventory, key-management maturity, audit capability, staffing, budget, or architecture.",
+      "No supplied evidence directly establishes operational effectiveness of cryptography for the specific frozen Insider Threat forecast pair within the 2025-2027 timing window."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied GENERAL institutional evidence supports feasibility for the frozen CRYPTOGRAPHY action because it provides a governance and auditability pathway for cryptographic deployment. One record establishes key-management accountability/traceability as an institutional control, and another provides a recommended implementation pathway for effective encryption, including updating outdated or weak encryption and using properly configured SSL/TLS where technically feasible. A separate record creates a GENERAL compliance constraint by restricting or disallowing certain legacy symmetric algorithms, which increases institutional implementation burden but does not, in the supplied material, establish a jurisdiction-specific prohibition or a deployment-specific infeasibility. Because the region is masked and no eligible regulatory_applicability evidence is supplied, a DEPLOYMENT_SPECIFIC regional/legal feasibility conclusion is not supported.",
+    "stance": 1
+  },
+  "assessment_sha256": "d9684ee006de899e13301ba94c07102e97ea16db782856700601fc572538c987",
+  "checkpoint_sha256": "3718364ca416ccd605e0e7720cc08bac7d8d964841dd6b2de746c4c458b41a2d",
+  "created_at": "2026-11-06T16:39:08.627887+00:00",
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "condition": "UNSPECIFIED",
+    "decision_object_sha256": "a852ba21f4d1bb58047f4f92f75a326ae09bc17e6f1c8b78d88e9ae88de5ab65",
+    "evidence_content_sha256": "4a651fdb7404341db0ccc07b34e2992734ce80dd40fff15487f30efc84bdf2e2",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "bb995315bedfdddde2761ba9e34120eb8aa47eb17296692f6e0fc4591a490499",
+    "response_schema_sha256": "a4d4c25d6b39ea8ae10ac799a2e1471d32f81ff7f6c6f48b2d85ae7ff487f94e",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 42,
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "e67397fe971d78b0ea1db0042b0f41163e933b4d45b6e5fd9cb27e4fe40feef1"
+  }
+}

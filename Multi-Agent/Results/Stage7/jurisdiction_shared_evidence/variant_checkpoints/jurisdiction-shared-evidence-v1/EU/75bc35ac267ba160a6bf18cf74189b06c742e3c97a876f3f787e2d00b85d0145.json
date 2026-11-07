@@ -1,0 +1,119 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_GEN_SUPPORT_1",
+        "evidence_ids": [
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE17_567DDA7CFBC62829"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied governance_enablement evidence provides general institutional pathways for governing access control, including enterprise access policies, consistent attribute definitions and lifecycle management, exception/access-failure procedures, compliance-system inputs to policy decisions, and governance or monitoring of security policies.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_GEN_CHALLENGE_1",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied compliance_constraint evidence imposes technical compliance constraints on access-control and session implementations, including authenticated protected channels, secure cookie handling, session identifier verification, and prohibition of insecure fallback, which increase implementation constraints.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_DEPLOY_NEUTRAL_1",
+        "evidence_ids": [
+          "E_31_96F42990F3AEAC86"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The supplied EU primary-law text links cybersecurity risk-management measures for essential and important entities to human resources security and appropriate access control policies, but it does not establish that the frozen CIS IG2 reference enterprise is within that scope or subject to a specific EU access-control obligation.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR_DEPLOY_NEUTRAL_2",
+        "evidence_ids": [
+          "E_31_52DCE9554453ADEF"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The supplied EU primary-law text also mentions access policy, access management, and automated access decisions in the context of public electronic communications networks and publicly available electronic communications services, without establishing applicability to the frozen CIS IG2 reference enterprise.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC EU institutional/regional conclusion requires evidence that the frozen enterprise falls within the relevant EU legal scope and that the cited access-control or compliance requirements apply to it.",
+      "A DEPLOYMENT_SPECIFIC compliance-burden conclusion requires evidence of the enterprise's sector, service category, data-processing activities, and applicable EU obligations.",
+      "A stronger GENERAL feasibility assessment would require evidence of enterprise governance ownership, policy processes, exception handling, monitoring, and implementation capacity for the cited access-control mechanisms."
+    ],
+    "constraints": [
+      "Access-control feasibility depends on governance of enterprise access policies, attribute consistency, exception handling, and monitoring.",
+      "Access-control and session mechanisms are constrained by strict session-token, cookie, and protected-channel requirements.",
+      "EU regulatory text provides context for access-control policies but does not resolve whether the frozen enterprise is legally in scope or what EU-specific compliance burden applies."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__targeted_attack__access_control__EU",
+    "evidence_gaps": [
+      "No supplied record establishes that the frozen CIS IG2 reference enterprise is an EU essential or important entity or otherwise subject to the EU primary-law access-control expectations.",
+      "No supplied record establishes EU-specific data-sovereignty, cross-border, sector, or data-processing obligations for the frozen enterprise.",
+      "No supplied record establishes the current access-control architecture, identity infrastructure, attribute inventory, staffing, budget, or implementation burden for the frozen enterprise.",
+      "No supplied EU evidence connects the frozen action to a specific EU compliance burden or permission for the CIS IG2 profile."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The grounded GENERAL institutional direction supports feasibility: the supplied governance_enablement records describe concrete institutional mechanisms for governing access control, including enterprise access policies, attribute consistency and lifecycle management, exception and access-failure procedures, compliance-system inputs to policy decisions, and governance/monitoring of security policies. The supplied compliance_constraint record challenges feasibility by imposing strict session, cookie, token, and protected-channel requirements, but it does not establish institutional or regional infeasibility. The EU primary-law records are neutral regulatory context: they connect access-control policies to EU risk-management expectations for essential/important entities or public communications contexts, but they do not establish that the frozen CIS IG2 reference enterprise is legally in scope, and regulatory_applicability records do not carry a positive or negative feasibility direction by themselves. Therefore the overall judgment is GENERAL institutional feasibility support with PARTIAL evidence sufficiency, while DEPLOYMENT_SPECIFIC EU legal feasibility remains indeterminate.",
+    "stance": 1
+  },
+  "assessment_sha256": "e77bf8e7a23d46f98dfabbff78ba9dbad7a9d80be6e07d776175e022fb04f8b7",
+  "checkpoint_sha256": "9a84418a27449597ddca56f43c8c9c5f38c74ff07dea85ea6efac33f01d54b42",
+  "created_at": "2026-11-06T18:39:38.389248+00:00",
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "EU",
+    "decision_object_sha256": "a959c85323037925410d3b552e54237e68ade89112e50402ea80d7b8ea540199",
+    "evidence_content_sha256": "6681d8d141722dd7c750a770868fe87894ac89ad6084200a015bf1bff0400f6e",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "9680a96de9c78d7fe9f3495aa6539e9088f4b93b97773b57f875125d6d288a5a",
+    "response_schema_sha256": "5581768e7fca4dcb8b430773e97adb95f1f2e56780aa3729f8161b56c9aa0da0",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 44,
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "535ae2933c4dc6e2a3bf4189d6f147c52fda27058de7fefbdd6e22fa99aa9c09"
+  }
+}

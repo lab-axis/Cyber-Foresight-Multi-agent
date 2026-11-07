@@ -1,0 +1,158 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FIN_CLAIM_1",
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "scope": "GENERAL",
+        "statement": "Crossref reports a cutoff-constrained increasing annual publication count for NLP/LLM security, with 14 works in 2021, 18 works in 2022, 33 works in 2023, and 87 works in 2024, an OLS slope of 23.400000 works/year, and a first-to-last delta of 73.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN_CLAIM_2",
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_33_ADC8BC66D812799F states that the Crossref record is an external publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN_CLAIM_3",
+        "evidence_ids": [
+          "E_29_CD092D34A1331D02"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_29_CD092D34A1331D02 is a Crossref academic metadata record for a work titled 'Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case.' with DOI=10.2139/ssrn.4996945 and PMT_NLP_LLM.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN_CLAIM_4",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_02_066AFE8300EDCEBB reports that the median bits per second for DDoS incidents grew 57% from 1.4 Gbps to 2.2 Gbps and the 97.5 percentile grew 25% from 99 Gbps to 124 Gbps, and it states that if a contracted service can clear that bar, most of the impact will likely be absorbed.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FIN_CLAIM_5",
+        "evidence_ids": [
+          "E_04_892BBCAA3CE5CC92"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_04_892BBCAA3CE5CC92 recommends contacting a DDoS mitigation provider, having and practicing a DDoS incident response plan, and ensuring that incident responders have up-to-date contact information for DDoS mitigation and internet service providers.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FIN_CLAIM_6",
+        "evidence_ids": [
+          "E_08_3453329306E149CB"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_08_3453329306E149CB reports CVE-2023-44487 as an HTTP/2 Rapid Reset Attack vulnerability allowing DDoS and provides mitigation guidance to apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FIN_CLAIM_7",
+        "evidence_ids": [
+          "E_03_06E6ABC42DA3AC77",
+          "E_03_F13F996D181217BA"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_03_06E6ABC42DA3AC77 and E_03_F13F996D181217BA report DDoS as an example of destructive operations and reported/claimed hacktivist activity involving DDoS attacks, website defacements, and hack-and-leak operations.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific financial feasibility conclusion requires budget, organization type, infrastructure, and region context.",
+      "A supported feasibility conclusion requires NLP/LLM-specific cost, staffing, resource-saving, or effectiveness evidence tied to DDoS mitigation.",
+      "The Crossref publication-activity trend may be used only as a general adoption-enabler signal, not as proof of financial viability or operational readiness."
+    ],
+    "constraints": [
+      "NLP/LLM publication-activity growth is not evidence of deployment maturity, operational effectiveness, or causal mitigation effectiveness (E_33_ADC8BC66D812799F).",
+      "The NLP/LLM metadata record is academic publication metadata and does not establish deployment maturity or operational effectiveness (E_29_CD092D34A1331D02).",
+      "DDoS mitigation-readiness, vendor-guidance, and threat-context records do not establish NLP/LLM-specific cost, staffing, savings, or financial benefit (E_02_066AFE8300EDCEBB, E_04_892BBCAA3CE5CC92, E_08_3453329306E149CB)."
+    ],
+    "decision_object_id": "decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272",
+    "evidence_gaps": [
+      "Missing budget_context prevents deployment-specific financial feasibility judgment.",
+      "Missing organization_type prevents organizational adoption-burden judgment.",
+      "Missing infrastructure_context prevents staffing, resource, or infrastructure burden judgment.",
+      "Missing region prevents region-specific contract, vendor, or adoption-context judgment.",
+      "No supplied Stage 0 evidence reports NLP/LLM-specific cost, TCO, ROI, payback, budget, staffing, or financial savings.",
+      "No supplied Stage 0 evidence reports NLP/LLM-specific deployment maturity or operational effectiveness for DDoS.",
+      "No supplied Stage 0 evidence links NLP/LLM adoption to DDoS impact reduction, resource saving, or financial outcome."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied records do not support a positive or negative financial/adoption feasibility judgment for the frozen NLP/LLM action. E_33_ADC8BC66D812799F and E_29_CD092D34A1331D02 provide general NLP/LLM publication-activity and metadata context, which may be a weak adoption enabler, but E_33_ADC8BC66D812799F explicitly states that the publication trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. The DDoS-related records E_02_066AFE8300EDCEBB, E_04_892BBCAA3CE5CC92, and E_08_3453329306E149CB provide general threat context, mitigation-readiness recommendations, and vendor-guided vulnerability mitigation context, but they do not tie NLP/LLM adoption to cost, staffing, budget, savings, resource burden, or financial return. The frozen deployment context leaves budget_context, organization_type, infrastructure_context, and region null, so deployment-specific financial or adoption feasibility cannot be established without guessing. Therefore, the balance is indeterminate rather than materially supported or challenged under this lens.",
+    "stance": 0
+  },
+  "assessment_sha256": "333c9c78e5d5beb722d19002ddb2ea7152781b070d0728db83e8089a5b57e569",
+  "checkpoint_sha256": "47b03e8903b9a12ad250aa4c4e40ec8a68adc26d922ed981dff171f6ac22818c",
+  "created_at": "2026-11-06T12:11:42.851530+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "27491951f56835359ac6d0b22199cc60df73c0a8b70a51d6a611d1e5dcaa83c7",
+    "base_stage3_input_fingerprint": "ce0ff7e92295b8e62d1cd5f39a80758e67832acf98132f024af1630d4285e98d",
+    "base_stage3_output_sha256": "1dffb6d7017761e18978137fb0ced9c53e3786e7d8fe1189558300e35f023ef2",
+    "case_id": "main__ddos__nlp_llm",
+    "evidence_ids": [
+      "E_02_066AFE8300EDCEBB",
+      "E_03_06E6ABC42DA3AC77",
+      "E_03_F13F996D181217BA",
+      "E_04_892BBCAA3CE5CC92",
+      "E_08_3453329306E149CB",
+      "E_29_CD092D34A1331D02",
+      "E_33_ADC8BC66D812799F"
+    ],
+    "input_fingerprint": "916623a182514dcb00db705d6bc12f39a1019de12e9d064ba88f9d7a4d5905c9",
+    "lens_type": "financial_adoption",
+    "response_schema_sha256": "1d2b184b04de946d65073a9256efeda00258ab4be387145a7b8a591ff22ed379",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "a1be70c855d702b7fb11d2664113a8b726343461c6e9d463ba901b11ff19d9f2",
+    "user_prompt_sha256": "f7edbe0a665d7af86756789ed17bda28e974286296e7d5371e3d498a2ce71857",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

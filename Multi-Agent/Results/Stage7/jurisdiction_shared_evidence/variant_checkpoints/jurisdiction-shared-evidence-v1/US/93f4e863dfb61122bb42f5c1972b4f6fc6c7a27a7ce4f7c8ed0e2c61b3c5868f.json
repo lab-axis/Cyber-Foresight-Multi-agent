@@ -1,0 +1,108 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST key-management guidance sets accountability and traceability expectations for key generation, access, destruction, and use, including recording and auditing of key-related actions, and states that accountability/traceability can help prevent key compromises and reduce their impact.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG defines a recommended encryption action with a defined outcome and scope, including use of properly configured and up-to-date SSL/TLS when technically feasible, updating outdated or weak encryption, and considering post-quantum implications, which provides an institutional implementation pathway for the cryptography action.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-3",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-131A Rev. 2 states that two-key TDEA encryption is disallowed, three-key TDEA encryption is deprecated through December 31, 2023 and disallowed after December 31, 2023 unless specifically allowed by other NIST guidance, and AES-128, AES-192, and AES-256 encryption and decryption are acceptable; this creates an algorithm-transition compliance burden for the 2025-2027 cryptography action.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "If a DEPLOYMENT_SPECIFIC United States institutional/regional feasibility conclusion is required, a supplied regulatory_applicability record eligible under the current United States grounding contract and tied to PMT_CRYPTOGRAPHY is required.",
+      "If the cryptography action uses symmetric algorithms listed in DE_DE09_6719137897848A9E, algorithm transition and compliance with the stated approval statuses must be addressed for the 2025-2027 window.",
+      "If key-management controls are in scope, traceability and audit of key generation, access, destruction, and use must be addressed as described in DE_DE08_031120C53EF050F3.",
+      "If CPG-aligned encryption is in scope, use of up-to-date SSL/TLS when technically feasible and remediation of outdated or weak encryption must be addressed as described in E_23_534489D29C38B327."
+    ],
+    "constraints": [
+      "DE_DE08_031120C53EF050F3: Cryptographic key management must incorporate accountability/traceability for entities that generate, access, destroy, or use keys, including recording and auditing of key-related actions.",
+      "DE_DE09_6719137897848A9E: Cryptographic algorithm selection must respect the stated approval statuses, including disallowed, deprecated, legacy, and acceptable statuses for the listed symmetric algorithms.",
+      "E_23_534489D29C38B327: If scoped to the CPG encryption recommended action, deployment should use properly configured and up-to-date SSL/TLS when technically feasible, identify and update outdated or weak encryption, and consider post-quantum implications."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__ransomware__cryptography__US",
+    "evidence_gaps": [
+      "No eligible regulatory_applicability evidence for the United States is supplied in the institutional/regional directional grounding contract, so a DEPLOYMENT_SPECIFIC United States legal/regional direction cannot be established.",
+      "No supplied evidence establishes that the frozen CIS IG2 reference enterprise has a particular sector, data-processing activity, or jurisdiction-specific legal obligation.",
+      "No supplied evidence provides exact budget, staffing, procurement capacity, or implementation cost for the cryptography action."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Under the institutional/regional lens, the grounded GENERAL direction supports feasibility. The supplied governance_enablement evidence establishes key-management accountability/traceability controls and a CISA CPG-recommended encryption implementation pathway, which enable institutional adoption of the frozen CRYPTOGRAPHY action. The supplied compliance_constraint evidence establishes a bounded algorithm-transition burden for the 2025-2027 timing window, but it does not establish a prohibition, legal bar, or inability to implement under the frozen CIS IG2 reference scenario. Therefore the support evidence outweighs the bounded constraint on balance. A DEPLOYMENT_SPECIFIC United States legal/regional direction is not supported because no eligible regulatory_applicability record for the United States is supplied in the grounding contract; that missing jurisdictional applicability is retained as an evidence gap rather than converted into a negative stance.",
+    "stance": 1
+  },
+  "assessment_sha256": "2f028f6d3789d745bd16d41ad9f1ad96f1e0249c45ed92b0d98a0f66a69d63ae",
+  "checkpoint_sha256": "0575a6ce05ab6455640020541c36cbe000033aafe8a98460e5952058d1b242d5",
+  "created_at": "2026-11-06T17:22:35.752270+00:00",
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "US",
+    "decision_object_sha256": "68ff2f0fa653edf0e6b70f6709efde942fcf2dca6b441a6412053177d437bd18",
+    "evidence_content_sha256": "6cac15ea8d654b8ad3dcf00328817c8ad97355901db8652a23eb2c41ba8f799f",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "bb995315bedfdddde2761ba9e34120eb8aa47eb17296692f6e0fc4591a490499",
+    "response_schema_sha256": "56042004357fbd12ec25130fb660408f5609670eb4367f262ebb91b6f40979d1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 43,
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "3745c3c74cd79eff00bc2d45706d0de330f801aa29e273d8d5db81fa40e29559"
+  }
+}

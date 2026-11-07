@@ -1,0 +1,106 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_G1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST key-management guidance supports a GENERAL institutional governance pathway for cryptographic implementation by describing accountability, traceability, access-control, and audit mechanisms that can help prevent key compromises and reduce their impact.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_G2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG guidance supports a GENERAL institutional implementation pathway for CRYPTOGRAPHY by recommending strong and agile encryption, proper SSL/TLS for data in transit when technically feasible, and planning to identify, update, or manage implications of outdated or weak encryption.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_G3",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-131A Rev. 2 presents a GENERAL compliance constraint on CRYPTOGRAPHY by listing approval statuses, including disallowed, legacy, deprecated, or time-limited use, for some symmetric encryption algorithms and key lengths.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC institutional/regional feasibility conclusion would require supplied jurisdiction-specific regulatory_applicability evidence applicable to the frozen masked region and the reference enterprise.",
+      "To resolve the GENERAL compliance constraint for deployment, the scenario would need evidence that selected cryptographic algorithms and key lengths are approved for the intended uses and that any legacy or disallowed algorithm use is transitioned, documented, or otherwise addressed."
+    ],
+    "constraints": [
+      "Cryptographic key access is subject to governance expectations for accountability, traceability, access-control, and audit under the supplied NIST key-management guidance.",
+      "Cryptographic algorithm and key-length selection is constrained by supplied NIST SP 800-131A Rev. 2 approval statuses, including disallowed or time-limited uses of some algorithms.",
+      "No region-specific legal constraint or permission can be inferred from the supplied records because the frozen region is masked and no jurisdiction-specific regulatory_applicability evidence is included in the directional grounding contract."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__ransomware__cryptography__UNSPECIFIED",
+    "evidence_gaps": [
+      "No jurisdiction-specific regulatory_applicability evidence is supplied for the masked region, so region-specific legal obligations, data-sovereignty constraints, cross-border constraints, and regulatory compatibility cannot be assessed.",
+      "No supplied record establishes whether the frozen CIS IG2 reference enterprise has a specific sector, data-processing activity, or legal obligation that would trigger specific cryptography or encryption requirements.",
+      "No supplied record quantifies the institutional, staffing, cost, or compliance-effort burden of implementing cryptography under the supplied governance and algorithm-approval requirements."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Under the masked jurisdiction, only a GENERAL institutional feasibility direction is grounded. The supplied records provide institutional governance enablement for CRYPTOGRAPHY: NIST key-management guidance describes accountability, traceability, access-control, and audit mechanisms for cryptographic key access, and CISA CPG guidance recommends a strong-and-agile encryption implementation pathway, including SSL/TLS for data in transit and planning to address outdated or weak encryption. The supplied records also include a GENERAL compliance constraint: NIST SP 800-131A Rev. 2 sets approval-status constraints on cryptographic algorithms and key lengths, including disallowed or time-limited uses of some symmetric encryption algorithms. On balance, the enablement evidence is more directly aligned with institutional feasibility for adopting cryptography, while the constraint is present but not shown to be a material barrier in the frozen scenario. Region-specific legal feasibility remains unassessed because no jurisdiction-specific regulatory_applicability evidence is supplied.",
+    "stance": 1
+  },
+  "assessment_sha256": "701690d0d9f0fff74ad62270d08bc955597cc86f6c2cc509744ca31edd77a0f5",
+  "checkpoint_sha256": "55367d022bc42b1f4265f220cc423be5c6b31fc2210ba0c31879c2a4a36982a2",
+  "created_at": "2026-11-06T16:24:05.142788+00:00",
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "UNSPECIFIED",
+    "decision_object_sha256": "52c1873e10201376cd75a99979095a0dadc569bc9a177102622e5d4843d9caba",
+    "evidence_content_sha256": "6cac15ea8d654b8ad3dcf00328817c8ad97355901db8652a23eb2c41ba8f799f",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "bb995315bedfdddde2761ba9e34120eb8aa47eb17296692f6e0fc4591a490499",
+    "response_schema_sha256": "95ccc6f20e0e252054676e3d8c374f9a5aeb2e3eebf510b7de030e8189f538b7",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 42,
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "c2f4232ffa93a50a32daaee31173b033d1ac6063be16c2a10b5394a0cf06c763"
+  }
+}

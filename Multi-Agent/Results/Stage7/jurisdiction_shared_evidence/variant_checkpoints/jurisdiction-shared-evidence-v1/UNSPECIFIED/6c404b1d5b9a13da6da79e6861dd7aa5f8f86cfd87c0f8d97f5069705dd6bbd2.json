@@ -1,0 +1,108 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_INST_SUPPORT_KEYMGMT",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied key-management record supports institutional feasibility by describing accountability/traceability mechanisms for identifying entities authorized to generate, access, destroy, or use keys, recording who performs key actions, and auditing logs for security violations; it also states that accountability/traceability can help prevent key compromises and reduce impact, which supports governance, auditability, and key-management design for CRYPTOGRAPHY.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_INST_SUPPORT_CPG_ENCRYPTION",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CPG encryption record supports institutional feasibility by providing a recommended action and outcome for strong and agile encryption, including use of properly configured and up-to-date SSL/TLS when technically feasible, planning to identify outdated or weak encryption and update to sufficiently strong algorithms, and considering post-quantum implications; this gives a governance and implementation pathway for CRYPTOGRAPHY.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_INST_CHALLENGE_ALGORITHM_TRANSITION",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied cryptographic-transition record challenges feasibility as a compliance constraint by documenting algorithm approval statuses, including disallowance of two-key TDEA encryption, disallowance of SKIPJACK encryption, deprecation of three-key TDEA encryption through 2023 and disallowance after 2023, and acceptable use of AES-128/192/256; this creates a migration and compliance burden for cryptographic deployments that use affected algorithms.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "If the organization adopts the supplied key-management governance enablement, key-access traceability, access controls, and audit logs for key use would need to be part of the institutional design (DE_DE08_031120C53EF050F3).",
+      "If the organization follows the supplied CPG encryption pathway, it would need to plan to identify outdated or weak encryption, update to sufficiently strong algorithms, and consider post-quantum implications (E_23_534489D29C38B327).",
+      "If the current cryptographic estate includes two-key TDEA encryption, SKIPJACK encryption, or three-key TDEA encryption affected by the documented transition, an inventory and migration plan would be needed to address the documented algorithm constraints (DE_DE09_6719137897848A9E).",
+      "To support a DEPLOYMENT_SPECIFIC conclusion, the frozen scenario would need jurisdiction-specific regulatory_applicability evidence plus a matching direction-carrying governance_enablement or compliance_constraint record under the Institutional/Regional contract."
+    ],
+    "constraints": [
+      "Algorithm transition constraints documented in DE_DE09_6719137897848A9E require migration planning and limit reliance on deprecated or disallowed algorithms.",
+      "The encryption enablement in E_23_534489D29C38B327 is framed as a recommended action with an intended outcome and technical-feasibility condition, not as evidence that a specific encryption architecture is already deployed.",
+      "The key-management enablement in DE_DE08_031120C53EF050F3 requires identification, recording, access control, and audit of key-access entities; it is a governance mechanism rather than evidence of an existing key-management deployment."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__ransomware__cryptography__UNSPECIFIED",
+    "evidence_gaps": [
+      "No directionally eligible jurisdiction-specific regulatory_applicability evidence is supplied for the masked region, so DEPLOYMENT_SPECIFIC institutional/regional feasibility cannot be established.",
+      "No supplied record establishes that the supplied guidance is legally applicable or binding in the frozen scenario; the records are used only as directionally eligible governance/compliance material.",
+      "No deployment-specific data categories, cross-border data flows, current cryptographic inventory, or key-management architecture are supplied, so exact compliance burden, data-sovereignty impact, or migration scope cannot be assessed."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Under the Institutional/Regional lens, the directionally eligible GENERAL evidence contains governance_enablement material that supports institutional feasibility for CRYPTOGRAPHY and one compliance_constraint record that documents a bounded algorithm-transition burden. The key-management record supports accountability, access control, traceability, and auditability for cryptographic key use. The CPG encryption record supports a recommended governance and implementation pathway for encryption, including planning to identify and update weak or outdated encryption. The transition record imposes a constraint by documenting disallowed or deprecated algorithm use, but that constraint is migration-planning material rather than evidence of infeasibility in the masked region. On balance, the GENERAL institutional direction is supported, while DEPLOYMENT_SPECIFIC regional or legal feasibility remains incomplete because no directionally eligible jurisdiction-specific regulatory_applicability evidence is supplied.",
+    "stance": 1
+  },
+  "assessment_sha256": "13c40b4c030140565d5fa45e130773a2bbc348ad2f09916bc3386e8acd6be8d4",
+  "checkpoint_sha256": "9f7d8efb9ab1de8c5d4736b85d2390bbe609631042eceb8625ae3449877705d5",
+  "created_at": "2026-11-06T17:58:28.647063+00:00",
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "UNSPECIFIED",
+    "decision_object_sha256": "52c1873e10201376cd75a99979095a0dadc569bc9a177102622e5d4843d9caba",
+    "evidence_content_sha256": "6cac15ea8d654b8ad3dcf00328817c8ad97355901db8652a23eb2c41ba8f799f",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "bb995315bedfdddde2761ba9e34120eb8aa47eb17296692f6e0fc4591a490499",
+    "response_schema_sha256": "95ccc6f20e0e252054676e3d8c374f9a5aeb2e3eebf510b7de030e8189f538b7",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 44,
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "c2f4232ffa93a50a32daaee31173b033d1ac6063be16c2a10b5394a0cf06c763"
+  }
+}

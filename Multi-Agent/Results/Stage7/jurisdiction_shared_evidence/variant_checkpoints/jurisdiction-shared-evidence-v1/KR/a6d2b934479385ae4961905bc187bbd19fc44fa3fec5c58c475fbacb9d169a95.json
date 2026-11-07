@@ -1,0 +1,120 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_CLM_001",
+        "evidence_ids": [
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE17_567DDA7CFBC62829"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied zero-trust architecture record describes institutional enablement mechanisms for access control: a policy administration / policy enforcement point architecture in which the policy enforcement point enables, monitors, and can terminate connections, and an industry compliance system that helps an enterprise remain compliant with a regulatory regime. The supplied zero-trust maturity model record describes a governance function for defining and enforcing cybersecurity policies, procedures, and processes. These support GENERAL institutional feasibility for the frozen ACCESS CONTROL action.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_002",
+        "evidence_ids": [
+          "DE_DE11_1E4AAE06CC3795D7"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied ABAC guidance describes governance mechanisms for access decisions, including local access policies that should reflect enterprise policy, consistent valid attribute values across the enterprise, and procedures for communicating exception handling, access denials, and errors. These mechanisms support institutional governance and accountability for ACCESS CONTROL in general.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_003",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST SP 800-63B record specifies SHALL requirements for session management, access tokens, secure channels, and token handling. These are a GENERAL compliance constraint that an ACCESS CONTROL implementation would need to satisfy, but the record does not establish that institutional implementation is infeasible.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_004",
+        "evidence_ids": [
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE17_567DDA7CFBC62829"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "DEPLOYMENT_SPECIFIC institutional/regional feasibility for the frozen Republic of Korea scenario is indeterminate because no supplied regulatory_applicability record for that jurisdiction is present in the direction-eligible Institutional/Regional grounding contract.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "Before making a DEPLOYMENT_SPECIFIC institutional/regional legal conclusion for the frozen KR scenario, supply jurisdiction-specific primary-law or regulatory_applicability evidence tied to the frozen CIS IG2 enterprise's sector and data-processing activities.",
+      "Confirm that the organization has the governance, policy, monitoring, and audit mechanisms needed to operate ACCESS CONTROL and to map any applicable regulatory requirements.",
+      "If ABAC or zero-trust-style access control is pursued, assess transition and operational burden using deployment-specific context and supplied evidence without assuming exact staffing, budget, architecture, or vendor choices."
+    ],
+    "constraints": [
+      "Access-control/session implementations must satisfy the supplied NIST SP 800-63B SHALL requirements for sessions, access tokens, authenticated protected channels, and token handling.",
+      "In federated or shared-object settings, the supplied ABAC guidance constrains access-control design by requiring local policies to reflect enterprise policy and shared objects to be protected according to the most restrictive policy.",
+      "The supplied governance records establish guidance-level institutional pathways, not realized organizational adoption, audit readiness, or jurisdiction-specific legal applicability for the frozen Republic of Korea scenario."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__targeted_attack__access_control__KR",
+    "evidence_gaps": [
+      "No supplied regulatory_applicability record for the frozen Republic of Korea scenario is present in the Institutional/Regional directional grounding contract; therefore KR-specific legal applicability, data sovereignty, cross-border constraints, sectoral obligations, and compliance burden cannot be assessed.",
+      "No supplied evidence identifies the frozen CIS IG2 reference enterprise's sector, regulatory status, data-processing activities, or actual governance, accountability, and audit capacity for implementing ACCESS CONTROL.",
+      "No supplied evidence establishes realized organizational adoption, operational readiness, or jurisdiction-specific legal permission/prohibition for the described zero-trust, ABAC, or NIST-based access-control mechanisms in the frozen scenario."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Under the Institutional/Regional lens, the supplied direction-eligible records support GENERAL institutional feasibility for the frozen ACCESS CONTROL action. The governance_enablement records describe institutional mechanisms relevant to access-control implementation, including policy administration and policy enforcement with monitoring, an industry compliance system for regulatory regimes, a governance function for defining and enforcing cybersecurity policies/procedures, and ABAC governance mechanisms for enterprise policy alignment, consistent attributes, and access-failure procedures. The compliance_constraint record adds a real but bounded constraint: session-management and access-token SHALL requirements. This constraint does not materially establish institutional infeasibility; it identifies requirements an implementation must satisfy. Because the supplied grounding contract contains no KR-specific regulatory_applicability record, DEPLOYMENT_SPECIFIC legal/regional feasibility for the frozen Republic of Korea scenario cannot be assessed and must remain insufficient context. That missing jurisdiction-specific context does not erase the otherwise grounded GENERAL support direction, so the stance is +1 with PARTIAL sufficiency.",
+    "stance": 1
+  },
+  "assessment_sha256": "d147a94f10b43e032ede475dd2166e80f781ffc920684d0229335a143c083554",
+  "checkpoint_sha256": "dc8aa08ecb567823f68f6df214e5ca9d8a7574e1b1c95e26a0ef70a19321e28b",
+  "created_at": "2026-11-06T18:34:08.940023+00:00",
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "KR",
+    "decision_object_sha256": "c26f9f334788191cf00c0e3fc6aa3692bbd2899def91bad561b5d9a2c9a3faa7",
+    "evidence_content_sha256": "6681d8d141722dd7c750a770868fe87894ac89ad6084200a015bf1bff0400f6e",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "4e4f36e9de0c845cce3c650c5f32c845603ca11670a941e045ea00165150010d",
+    "response_schema_sha256": "f1312dd9ae46019d21b1e195458bad5ba1d15759e96b3303227a1b9f38789882",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 44,
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "7244ff5d59c513601925804367d324f8d163e2ed11996047d364db60959df13a"
+  }
+}

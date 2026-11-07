@@ -1,0 +1,169 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IRF_C1",
+        "evidence_ids": [
+          "E_25_99857C4681E8FEE5"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 Rev.5 describes a control to protect the authenticity of communications sessions, which addresses session-level communications protection and includes protecting against man-in-the-middle attacks, session hijacking, and insertion of false information; it also includes an enhancement to invalidate session identifiers at logout.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF_C2",
+        "evidence_ids": [
+          "E_26_2A6B7965607F1AAF"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A Rev.5 describes control-assessment procedures, a target audience spanning assessment, monitoring, oversight, and implementation roles, and states that organizations balance resources for deploying controls with resources for determining control effectiveness initially and through continuous monitoring.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF_C3",
+        "evidence_ids": [
+          "E_23_6C42FC29A05ADCAE"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA Cybersecurity Performance Goals are described as intended to be voluntarily adopted by organizations, applicable to critical infrastructure organizations, and associated with worksheet criteria such as Impact, Cost, and Complexity to help organizations internally prioritize investment.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF_C4",
+        "evidence_ids": [
+          "E_10_AC5A58AF5E015229"
+        ],
+        "scope": "GENERAL",
+        "statement": "A CISA advisory record concerning session cookie stealing and session hijacking includes official mitigation and governance-related language, including defensive measures, minimizing network exposure, impact analysis and risk assessment before deploying defensive measures, and reporting suspected malicious activity to CISA.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF_C5",
+        "evidence_ids": [
+          "E_02_3AE1561299B667F5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Verizon DBIR reports increased regulatory pressure for reporting data breaches to governments and states that there is no commonly accepted format for how this reporting should be done.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF_C6",
+        "evidence_ids": [
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "scope": "GENERAL",
+        "statement": "IBM X-Force reports security misconfigurations as the most observed OWASP web application risk at 30% of findings, with top offenses including allowing concurrent user sessions at 15% that could weaken MFA through session hijacking, verbose error messages at 12%, and excessive session timeouts at 8%; it also reports exploitation of public-facing applications in 29% of incidents.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF_C7",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref publication trend for PMT=HTTPS reports annual publication counts of 2021=14, 2022=8, 2023=8, and 2024=15, with OLS slope 0.30 works/year, first-to-last delta 1, total results 45, and explicitly states that the record does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "If region is supplied, evaluate whether regional breach-reporting, data-sovereignty, and cross-border transfer obligations affect HTTPS deployment.",
+      "If organization_type and governance structure are supplied, determine whether control-assessment and audit roles can be mapped to actual accountable roles.",
+      "If infrastructure_context is supplied, determine whether session-authenticity, configuration, and risk-assessment prerequisites can be implemented within the existing environment.",
+      "If budget_context is supplied, determine whether risk assessment, continuous monitoring, and reporting-related burdens are affordable and schedulable.",
+      "If evidence of existing HTTPS or session-authenticity deployment is supplied, reassess deployment-specific institutional and regional feasibility."
+    ],
+    "constraints": [
+      "Target-specific regional feasibility cannot be judged because region is absent.",
+      "Target-specific organizational governance feasibility cannot be judged because organization_type is absent.",
+      "Target-specific implementation and compliance burden cannot be judged because infrastructure_context and budget_context are absent.",
+      "No supplied record establishes that HTTPS or a specific session-authenticity control is already deployed, enforced, or auditable in the frozen deployment.",
+      "No supplied record establishes target-jurisdiction breach-reporting, data-sovereignty, or cross-border transfer obligations."
+    ],
+    "decision_object_id": "decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2",
+    "evidence_gaps": [
+      "Missing region prevents jurisdiction-specific regulatory, data-sovereignty, and cross-border compatibility assessment.",
+      "Missing organization_type prevents assessment of internal governance roles, accountability pathways, and auditability capacity.",
+      "Missing infrastructure_context prevents assessment of deployment-specific technical and administrative barriers.",
+      "Missing budget_context prevents assessment of compliance burden, risk-assessment cost, and continuous monitoring burden.",
+      "No evidence directly links HTTPS to deployment maturity, operational effectiveness, or reduced session-hijacking success in the frozen deployment."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied records provide mixed general institutional support and constraints but do not support a deployment-specific regional feasibility judgment. General enablement exists in the form of session-authenticity control guidance, control-assessment and auditability frameworks, a voluntary prioritized-practice framework, and an official advisory pathway with risk-assessment and reporting language. General constraints or limits include regulatory reporting pressure without a common reporting format, reported web-application misconfiguration and public-facing application risk context, and publication-trend evidence that is limited to publication activity and explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Because region, organization_type, infrastructure_context, and budget_context are absent from the frozen deployment context, target-specific regulatory compatibility, data-sovereignty, cross-border, and deployment-specific compliance judgments cannot be made. On balance, the action is neither materially supported nor materially challenged under this lens.",
+    "stance": 0
+  },
+  "assessment_sha256": "65ba04ba408b989aade0f2626aa6f2c38b7c1452e34c27ad0e17f289d37ea6e4",
+  "checkpoint_sha256": "56d238dc6330129ce84f3add17f413c50c566c095576a0d97abbb1c8706c5770",
+  "created_at": "2026-11-06T13:35:02.401320+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "8cbf609b1a0d7e51b91d7b153f0e4beabeb29c8ab5e339c4a1ae6911801acc3e",
+    "base_stage3_input_fingerprint": "13e1f696777533a58c7b3a267384ff9a72bfbcdcf73feae811f1626308c8a589",
+    "base_stage3_output_sha256": "4eb586fd629f7e886172255798473e9ecf9d48ada2ef4f48d39c9c6c4bf13bfd",
+    "case_id": "main__session_hijacking__https",
+    "evidence_ids": [
+      "E_02_3AE1561299B667F5",
+      "E_03_6B1B12ABFD14313F",
+      "E_04_B9A3190D9CA152A3",
+      "E_10_AC5A58AF5E015229",
+      "E_12_9B8ECD82AD844621",
+      "E_12_CFEC6517865F0563",
+      "E_19_A61B74B0F1435639",
+      "E_19_E896356AEE4DB2CD",
+      "E_20_88F8C63B0AC62BEC",
+      "E_22_808618C790A7133A",
+      "E_23_6C42FC29A05ADCAE",
+      "E_25_99857C4681E8FEE5",
+      "E_26_2A6B7965607F1AAF",
+      "E_29_2B4FE56914E3B676",
+      "E_29_5608502338822397",
+      "E_29_B82ABFE7422C38D1",
+      "E_33_13A684B424C1D15B"
+    ],
+    "input_fingerprint": "cf40e57f374f217ba69f87952bfd44ec2f434d9aa29ea15df4f7725eb8c90b28",
+    "lens_type": "institutional_regional",
+    "response_schema_sha256": "567cb944426d7065c164893c1272d11e5b6c0c1b6034d65b90bc9f616dee5846",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "061fee6c798b1c8b402519d2ed9ebd6de85bcb567838e1f3108bc84c36bbd6ac",
+    "user_prompt_sha256": "f65d8f6bd31189297fc36a6963116ceee690a55da8efa2d276ac4981f6bd6fd8",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

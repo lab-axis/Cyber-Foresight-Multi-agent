@@ -1,0 +1,111 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_CLAIM_01",
+        "evidence_ids": [
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE17_567DDA7CFBC62829"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL institutional feasibility is supported by governance_enablement evidence: NIST SP 800-162 describes enterprise policy alignment, consistent attribute values, attribute lifecycle responsibility, and procedures for access-failure handling; NIST SP 800-207 describes policy administrator and policy enforcement point components, monitoring of connections, and an industry compliance system that can hold policy rules for regulatory regimes; CISA ZTMM defines governance as the definition and enforcement of cybersecurity policies, procedures, and processes to mitigate security risks in support of zero trust principles.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLAIM_02",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL feasibility is challenged by a compliance_constraint record that requires session/authentication-related items to be sent and received over authenticated protected channels, to time out, not to fall back from secure to insecure transport, and to have session identifiers verified so that actions taken outside the session do not affect the protected session; these requirements impose implementation and compliance constraints on access-control design and operation.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLAIM_03",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied context record describes the CIS IG2 reference profile as an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles; it states that IG2 safeguards address increased operational complexity and that some depend on enterprise-grade technology and specialized expertise to install and configure.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "To make a DEPLOYMENT_SPECIFIC KR feasibility judgment, supply an eligible KR regulatory_applicability record for the frozen jurisdiction and, for a challenge direction, a KR-specific compliance_constraint record.",
+      "To assess compliance burden, supply evidence on the organization's actual data-processing activities, sector, cross-border activities, and existing access-control/session-management capabilities.",
+      "To assess institutional enablement, supply evidence on governance maturity, accountability/audit processes, or implementation capacity relevant to access control."
+    ],
+    "constraints": [
+      "The assessment is limited to GENERAL institutional/regional feasibility; DEPLOYMENT_SPECIFIC KR legal/regional feasibility is not established.",
+      "Generic governance_enablement and compliance_constraint records are not used to infer that a particular KR enterprise has a specific sector, data-processing activity, data-sovereignty constraint, or KR legal obligation.",
+      "No numeric budget, price, ROI, TCO, staffing count, vendor, product version, sector, or architecture is assumed or inferred.",
+      "Records that are not eligible under the KR directional grounding contract are not treated as evidence of KR regulatory compatibility, permission, or prohibition."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__targeted_attack__access_control__KR",
+    "evidence_gaps": [
+      "No KR-specific regulatory_applicability evidence is supplied in the directional grounding contract, so DEPLOYMENT_SPECIFIC KR legal/regional feasibility cannot be established.",
+      "No supplied evidence establishes the scenario organization's actual sector, data-processing scope, cross-border data flows, data-sovereignty constraints, or KR legal obligations.",
+      "No supplied evidence measures actual compliance burden, governance maturity, accountability/audit capability, staffing, or implementation capacity for access control in the frozen scenario.",
+      "No supplied evidence links access-control implementation to KR-specific regulatory compatibility or cross-border constraints."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The eligible Stage-4 decision-evidence contains GENERAL governance_enablement records that support institutional feasibility for ACCESS CONTROL: enterprise policy alignment, attribute/policy lifecycle management, policy enforcement and monitoring components, compliance-system alignment, and defined governance/enforcement processes. An eligible compliance_constraint record also identifies requirements for secure session/authentication handling, which is a real implementation and compliance constraint. That constraint is not shown in the supplied records to be materially infeasible, and no eligible KR-specific regulatory_applicability record is present to change the GENERAL direction. Therefore the net GENERAL institutional direction supports feasibility, while deployment-specific KR legal/regional feasibility remains insufficient context.",
+    "stance": 1
+  },
+  "assessment_sha256": "29e896a212d9cd8b54878e1fdf2a4957007b60910239b348eb77eba6dbcd92cc",
+  "checkpoint_sha256": "3c76ffe9836a9ef37eb0c29748e48a05b53d1e5c2f634756d0d069a8defc2237",
+  "created_at": "2026-11-06T17:00:36.475842+00:00",
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "KR",
+    "decision_object_sha256": "c26f9f334788191cf00c0e3fc6aa3692bbd2899def91bad561b5d9a2c9a3faa7",
+    "evidence_content_sha256": "6681d8d141722dd7c750a770868fe87894ac89ad6084200a015bf1bff0400f6e",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "4e4f36e9de0c845cce3c650c5f32c845603ca11670a941e045ea00165150010d",
+    "response_schema_sha256": "f1312dd9ae46019d21b1e195458bad5ba1d15759e96b3303227a1b9f38789882",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 42,
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "7244ff5d59c513601925804367d324f8d163e2ed11996047d364db60959df13a"
+  }
+}

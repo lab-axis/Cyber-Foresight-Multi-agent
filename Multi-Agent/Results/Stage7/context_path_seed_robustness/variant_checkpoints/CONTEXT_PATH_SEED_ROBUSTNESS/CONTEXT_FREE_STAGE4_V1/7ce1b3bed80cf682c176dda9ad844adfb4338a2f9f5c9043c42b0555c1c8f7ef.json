@@ -1,0 +1,196 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_CLM_01",
+        "evidence_ids": [
+          "E_02_BE48A23ABD77A19C"
+        ],
+        "scope": "GENERAL",
+        "statement": "The DBIR presents Access Control Management as Control 5 in Implementation Group 1, associated with the System Intrusion pattern at 67%, and frames control selection by organizational maturity, resources, and risk profile.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_02",
+        "evidence_ids": [
+          "E_02_BE48A23ABD77A19C"
+        ],
+        "scope": "GENERAL",
+        "statement": "The DBIR acknowledges that a small startup may have very limited resources for implementing security controls and suggests using the CIS Critical Security Controls Navigator and IG1 as a starting point.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_03",
+        "evidence_ids": [
+          "E_12_F6120325C44B5EA9"
+        ],
+        "scope": "GENERAL",
+        "statement": "MITRE ATT&CK M1015 describes Active Directory configuration measures for securing accounts, controlling access, restricting logons, and reducing unauthorized access and lateral movement, with implementation tools including GPMC, PowerShell, and AD Administrative Center.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_04",
+        "evidence_ids": [
+          "E_26_22D6C8ED91C81D37"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A describes a Test assessment method for controls that can include testing access control, identification and authentication, audit mechanisms, and security/privacy configuration settings.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_05",
+        "evidence_ids": [
+          "E_25_8F4D567857A97316"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 provides a glossary definition of access control, supporting common governance terminology for granting or denying access to information systems and physical facilities.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_06",
+        "evidence_ids": [
+          "E_23_42E9198B388BAA83"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG material references NIST SP 800-53 and NIST SP 800-82 for ICS and defines operational technology to include physical access control mechanisms, indicating recognized applicability across IT, ICS, and OT contexts.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_07",
+        "evidence_ids": [
+          "E_20_4D81D3799E4826F0",
+          "E_20_7FC83A095DEEBF69"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-161 material includes authorization-boundary language for federal information systems and external system service providers, and lists AC-24 Access Control Decisions in a supply-chain control table.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_08",
+        "evidence_ids": [
+          "E_10_5C0B9AC35F2420B3",
+          "E_10_B4F773BEC65685CC",
+          "E_10_CEB460BC4092B2D3"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CISA advisories recommend proper impact analysis and risk assessment before deploying defensive measures and following established internal procedures, including reporting suspected malicious activity to CISA.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_09",
+        "evidence_ids": [
+          "E_31_96F42990F3AEAC86"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied EU NIS2 chunk states that, for essential or important entities within its stated EU legal context, cybersecurity risk-management measures should include appropriate access control policies and address physical and environmental security.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_10",
+        "evidence_ids": [
+          "E_33_F4FC25CE90264812"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref access-control publication trend is an external publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "If the deployment region is an EU context and the organization is an essential or important entity, the supplied EU NIS2 chunk indicates that appropriate access control policies are part of cybersecurity risk-management measures.",
+      "If the deployment uses Active Directory, the supplied M1015 record describes applicable AD configuration measures for centralized account control, logon restrictions, and auditing.",
+      "If the deployment relies on the supplied CISA advisory guidance, impact analysis and risk assessment should be performed before deploying defensive measures and established internal reporting procedures should be followed."
+    ],
+    "constraints": [
+      "Region-specific regulatory, data-sovereignty, cross-border, and jurisdiction-specific compliance constraints cannot be assessed because the frozen deployment context does not specify region, organization_type, infrastructure_context, or budget_context.",
+      "The supplied records do not establish target-region institutional deployment maturity, adoption, or operational effectiveness for access-control controls.",
+      "CISA advisory context adds governance steps, including impact analysis and risk assessment before deploying defensive measures and established internal reporting procedures, which may constitute implementation barriers.",
+      "Small-organization resource limitations may constrain the ability to implement controls, but the frozen organization_type is absent, so this constraint cannot be evaluated for the target organization."
+    ],
+    "decision_object_id": "decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567",
+    "evidence_gaps": [
+      "Target region is absent, so jurisdiction-specific regulatory compatibility, data sovereignty, and cross-border constraints cannot be assessed.",
+      "Organization type is absent, so sector-specific institutional obligations and small-organization resource constraints cannot be assessed.",
+      "Infrastructure and budget context are absent, so implementation capacity, audit scope, and data-residency constraints cannot be assessed.",
+      "No supplied evidence reports target-region institutional adoption, deployment, or operational effectiveness of access-control controls."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied records support general institutional feasibility of ACCESS CONTROL. They show recognized governance and control-mapping context, auditability/assessment pathways, official guidance, and technology-specific implementation mechanisms. However, the frozen deployment context leaves region, organization_type, infrastructure_context, and budget_context null, so region-specific regulatory compatibility, data sovereignty, cross-border constraints, and jurisdiction-specific compliance burden cannot be assessed. The EU-specific NIS2 record is useful only as a conditional jurisdiction-specific reference and cannot be applied to the unknown target region. Overall, institutional enablement is supported in general, while deployment-specific regional feasibility is indeterminate due to missing context, so the stance is mixed/indeterminate rather than directionally supported or challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "fcc6ce031237f526a2889744d08181dc55c80855ca239f022b923ab6834a2032",
+  "checkpoint_sha256": "681a8c5978912cfbe22690d11aad616e2f233d9cda1cf8067695b7f671df1c60",
+  "created_at": "2026-11-06T13:19:23.936295+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "8dc45948c9a5fafa1e072407edadc9b50e058ecc7304cbda3de1064da4f8ea8a",
+    "base_stage3_input_fingerprint": "d258fb231d7b878ec139955f8b6c305ddfd64bd11ef3d81fc629e909837f5d13",
+    "base_stage3_output_sha256": "52a43d3a673cc8ab023b4726616257c27608a8e654371c0d22375d8ba68a4d2a",
+    "case_id": "main__targeted_attack__access_control",
+    "evidence_ids": [
+      "E_02_BE48A23ABD77A19C",
+      "E_03_B4E8A797813EC72F",
+      "E_03_F0CD4F1DE74CC7AD",
+      "E_10_5C0B9AC35F2420B3",
+      "E_10_B4F773BEC65685CC",
+      "E_10_CEB460BC4092B2D3",
+      "E_12_F6120325C44B5EA9",
+      "E_15_195FD353ADC8E8B0",
+      "E_20_4D81D3799E4826F0",
+      "E_20_7FC83A095DEEBF69",
+      "E_23_42E9198B388BAA83",
+      "E_25_8F4D567857A97316",
+      "E_26_22D6C8ED91C81D37",
+      "E_29_4ED97777A686537A",
+      "E_29_951AF8A7281A822E",
+      "E_29_A8790308F8A745BD",
+      "E_31_96F42990F3AEAC86",
+      "E_33_F4FC25CE90264812"
+    ],
+    "input_fingerprint": "7ce1b3bed80cf682c176dda9ad844adfb4338a2f9f5c9043c42b0555c1c8f7ef",
+    "lens_type": "institutional_regional",
+    "response_schema_sha256": "3261bb53c98651aef1a21f2949ebd62cb255a3e49e1482e4ed0249381a35219d",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "061fee6c798b1c8b402519d2ed9ebd6de85bcb567838e1f3108bc84c36bbd6ac",
+    "user_prompt_sha256": "0bd2c056117d5f8bb31b9615b69b28d706a79120a11cb2b0ed48c3a8e88cba95",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

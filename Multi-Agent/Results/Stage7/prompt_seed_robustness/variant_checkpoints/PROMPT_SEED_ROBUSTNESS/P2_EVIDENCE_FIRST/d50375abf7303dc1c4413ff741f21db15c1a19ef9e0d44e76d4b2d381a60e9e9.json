@@ -1,0 +1,137 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FA-C1",
+        "evidence_ids": [
+          "DE_DE16_E455D97291B61E2A",
+          "DE_DE05_105D0030778F41BC"
+        ],
+        "scope": "GENERAL",
+        "statement": "Contract-eligible adoption-benefit evidence supports general financial/adoption feasibility through documented resource-saving and operational-efficiency pathways: consolidated log and traffic-pattern alerting can eliminate time and effort for manual log reviews, integrate IDS/IPS and scanning results, speed data processing/formatting, and make review cheaper and easier; behavioral anomaly detection is also described as supporting visibility, real-time alerting, oversight of resources, faster incident response, fewer incidents, and shorter downtimes.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA-C2",
+        "evidence_ids": [
+          "DE_DE04_C6F46FCDE66BFAC7"
+        ],
+        "scope": "GENERAL",
+        "statement": "Contract-eligible adoption-burden evidence challenges general financial/adoption feasibility by documenting implementation and operational burdens for IDPS-related controls: administrators need system administration, network administration, information security, incident response, protocol/application/OS knowledge, and possibly programming skills, with training and testing of updates recommended; the record does not quantify cost, staffing, or unaffordability.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA-C3",
+        "evidence_ids": [
+          "DE_DE06_0380E777894ACF9A"
+        ],
+        "scope": "GENERAL",
+        "statement": "A NIST ICS test context describes a behavior anomaly detection configuration receiving packet streams and generating an alert, but this record is deployment-maturity context only and does not by itself establish a financial/adoption feasibility direction.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific conclusion requires actual organizational budget, staffing, existing integration assets, and procurement timing rather than inference from the frozen equivalence class.",
+      "Supportive deployment-specific feasibility would require evidence that the organization can absorb the skill, testing, and maintenance requirements documented in the adoption-burden record.",
+      "Supportive deployment-specific feasibility would require evidence that the organization can deploy or already has the log/traffic-pattern alerting and anomaly-detection visibility described in the adoption-benefit records.",
+      "A deployment-specific challenge would require evidence of actual resource constraints, integration scope, or device limitations; the maturity-context record alone is insufficient to establish that."
+    ],
+    "constraints": [
+      "The support direction is grounded in guidance-level efficiency and operational benefits, not in costed deployment data, measured ROI, TCO, payback period, or exact monetary savings.",
+      "The challenge direction is grounded in documented skill, training, and testing burdens, not in an exact budget shortfall, staffing shortage, or proven unaffordable procurement path.",
+      "The CIS IG2 reference profile describes an enterprise IT-management context and notes that some safeguards depend on enterprise-grade technology and specialized expertise, but it does not establish exact financial burden, staffing count, or deployment-specific feasibility for this action.",
+      "The deployment-maturity record is supplementary context only; it cannot create a directional financial/adoption feasibility conclusion by itself."
+    ],
+    "decision_object_id": "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+    "evidence_gaps": [
+      "Exact budget, price, TCO, ROI, payback period, staffing count, procurement ceiling, and implementation timing are not supplied for a deployment-specific financial feasibility conclusion.",
+      "No supplied record quantifies the monetary value or magnitude of the efficiency benefits described in the adoption-benefit records.",
+      "No supplied record quantifies the cost, staffing count, or duration of the skill, training, and testing burdens described in the adoption-burden record.",
+      "No supplied record establishes whether the reference enterprise already has the required log consolidation, IDS/IPS integration, packet-stream monitoring, or analyst skills for this deployment."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied direction-carrying records support general financial/adoption feasibility more than they challenge it. The contract-eligible adoption-benefit records document resource-saving and operational-efficiency pathways: consolidated log and traffic-pattern alerting can reduce manual log-review time and effort and make review cheaper and easier, and behavioral anomaly detection is described as supporting visibility, resource oversight, faster incident response, fewer incidents, and shorter downtimes. The contract-eligible adoption-burden record documents real implementation burdens, including required skills, training, and testing/maintenance activity for IDPS-related controls, but it does not quantify cost, staffing, or infeasibility. The remaining contract-eligible maturity record is supplementary context only. Because exact budget, TCO, ROI, payback, staffing count, and procurement timing are absent, the direction is retained as GENERAL and deployment-specific feasibility remains conditional.",
+    "stance": 1
+  },
+  "assessment_sha256": "796b2f1c0c536da2344fd020b1d9913488b99d5e7f42aa665c69158788ccfb15",
+  "checkpoint_sha256": "1846997c780b17e89428fdcc1d5ac16fcccd9caf5a55ab9249e65fd3d67a1e57",
+  "created_at": "2026-11-06T07:05:02.770745+00:00",
+  "identity": {
+    "axis": "PROMPT_SEED_ROBUSTNESS",
+    "case_id": "main__malware__anomaly_detection",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE04_C6F46FCDE66BFAC7",
+        "DE_DE05_105D0030778F41BC",
+        "DE_DE06_0380E777894ACF9A",
+        "DE_DE16_E455D97291B61E2A"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "d50375abf7303dc1c4413ff741f21db15c1a19ef9e0d44e76d4b2d381a60e9e9",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__eu__cis_ig2__7b3abb36d94e3682",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__us__cis_ig2__72ba6e0d3d843499"
+    ],
+    "payload_sha256": "d4da70620005a0811b31e1ca3b600d02611a3ad544ed6c3180511e8e76832892",
+    "payload_transform_id": null,
+    "prompt_variant": "P2_EVIDENCE_FIRST",
+    "repeat_index": 43,
+    "response_schema_sha256": "c5a711609b6676a53fe6406bffa491511dc493d4cc30db5bdf6d8d7ea5429121",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "ee7420834d00c9c612895b8fb56d43f0a948477fd3d4152891a4a865ee7d35e2",
+    "variant_id": "P2_EVIDENCE_FIRST"
+  }
+}

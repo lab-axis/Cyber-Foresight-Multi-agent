@@ -1,0 +1,156 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "CLM_FIN_01",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_02_066AFE8300EDCEBB reports a directional DDoS attack-size trend: median bits-per-second grew 57% from 1.4 Gbps to 2.2 Gbps, and the 97.5 percentile grew 25% from 99 Gbps to 124 Gbps.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLM_FIN_02",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_02_066AFE8300EDCEBB reports growth in distributed DNS Water Torture attacks as a resource-exhaustion attack vector against shared DNS infrastructure.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLM_FIN_03",
+        "evidence_ids": [
+          "E_03_06E6ABC42DA3AC77",
+          "E_03_F13F996D181217BA"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_03_06E6ABC42DA3AC77 reports DDoS as an example of destructive operations, and E_03_F13F996D181217BA reports hacktivist claims of DDoS attacks, website defacements, and hack-and-leak operations.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLM_FIN_04",
+        "evidence_ids": [
+          "E_04_892BBCAA3CE5CC92"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_04_892BBCAA3CE5CC92 reports claimed hacktivist operations related to the Israel-Hamas conflict, with DDoS among the observed or claimed activities and most targets in the financial sector, government, travel, and transportation industries.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLM_FIN_05",
+        "evidence_ids": [
+          "E_08_3453329306E149CB"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_08_3453329306E149CB confirms CVE-2023-44487 as an HTTP/2 Rapid Reset vulnerability that allows a distributed denial-of-service attack.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLM_FIN_06",
+        "evidence_ids": [
+          "E_29_CD092D34A1331D02"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_29_CD092D34A1331D02 provides Crossref DOI metadata for a work titled 'Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case.' associated with PMT_NLP_LLM.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLM_FIN_07",
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_33_ADC8BC66D812799F reports a Crossref cutoff-constrained NLP/LLM security publication trend with annual publication counts of 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024, OLS slope 23.4 works/year, first-to-last delta 73, and total 152, while explicitly stating that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific financial/adoption feasibility judgment would require non-null budget, infrastructure, organization, and region context or equivalent staffing/contract/resource evidence.",
+      "Publication-activity evidence must remain separated from deployment-maturity, operational-effectiveness, and causal-effectiveness evidence.",
+      "Any financial feasibility conclusion must be grounded only in supplied Stage 0 evidence and must not rely on parametric assumptions about NLP/LLM costs, market adoption, or control effectiveness."
+    ],
+    "constraints": [
+      "The frozen deployment context is null for budget_context, infrastructure_context, organization_type, and region, so deployment-specific financial or adoption feasibility cannot be established.",
+      "E_33_ADC8BC66D812799F is limited to a directional publication-activity trend and explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+      "E_29_CD092D34A1331D02 is publication metadata only and does not establish deployment maturity or operational effectiveness.",
+      "The DDoS records provide threat context but do not provide NLP/LLM-specific financial, staffing, contract, implementation-timing, or resource-saving evidence."
+    ],
+    "decision_object_id": "decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272",
+    "evidence_gaps": [
+      "Missing NLP/LLM-specific financial data, including budget, cost, staffing, contracts, resource usage, opportunity cost, or resource-saving pathways for the 2025-2027 window.",
+      "Missing NLP/LLM-specific deployment-maturity or implementation-timing evidence for DDoS mitigation.",
+      "Missing evidence linking NLP/LLM to the observed DDoS threat context or to operational/causal mitigation effectiveness.",
+      "Missing deployment context needed to distinguish general feasibility from deployment-specific financial/adoption feasibility."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied records do not provide sufficient financial or deployment-specific evidence to support or materially challenge the financial/adoption feasibility of NLP/LLM as the frozen DDoS PMT for the 2025-2027 window. The DDoS records provide threat context, including DDoS attack-size trend, a DNS resource-exhaustion vector, hacktivist operations involving DDoS, and a confirmed-exploitation DDoS-related vulnerability, but they do not establish NLP/LLM-specific cost, staffing, implementation timing, resource savings, or adoption burden. The NLP/LLM records provide publication metadata and an increasing 2021-2024 Crossref publication-activity trend, which is decision-relevant as an adoption-activity signal and is inconsistent with the frozen forecast's decreasing PMT NoP direction, but these records do not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Because the frozen deployment context is null for budget, infrastructure, organization type, and region, the financial/adoption judgment remains general and indeterminate.",
+    "stance": 0
+  },
+  "assessment_sha256": "6b997aaab366295805e51012f4b8892dd1e3d14c90cdebd6164d5924dbafb60d",
+  "checkpoint_sha256": "27a89723022e22d431bd89124be06b85572fc4b57611364d09c5beca62a65b68",
+  "created_at": "2026-11-06T10:32:54.869358+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "27491951f56835359ac6d0b22199cc60df73c0a8b70a51d6a611d1e5dcaa83c7",
+    "base_stage3_input_fingerprint": "ce0ff7e92295b8e62d1cd5f39a80758e67832acf98132f024af1630d4285e98d",
+    "base_stage3_output_sha256": "1dffb6d7017761e18978137fb0ced9c53e3786e7d8fe1189558300e35f023ef2",
+    "case_id": "main__ddos__nlp_llm",
+    "evidence_ids": [
+      "E_02_066AFE8300EDCEBB",
+      "E_03_06E6ABC42DA3AC77",
+      "E_03_F13F996D181217BA",
+      "E_04_892BBCAA3CE5CC92",
+      "E_08_3453329306E149CB",
+      "E_29_CD092D34A1331D02",
+      "E_33_ADC8BC66D812799F"
+    ],
+    "input_fingerprint": "a72b4d4f6bc1d6223825971f23eb45695bb2fd6c7b55895fe53e92c7c64c5b51",
+    "lens_type": "financial_adoption",
+    "response_schema_sha256": "1d2b184b04de946d65073a9256efeda00258ab4be387145a7b8a591ff22ed379",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "a1be70c855d702b7fb11d2664113a8b726343461c6e9d463ba901b11ff19d9f2",
+    "user_prompt_sha256": "f7edbe0a665d7af86756789ed17bda28e974286296e7d5371e3d498a2ce71857",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

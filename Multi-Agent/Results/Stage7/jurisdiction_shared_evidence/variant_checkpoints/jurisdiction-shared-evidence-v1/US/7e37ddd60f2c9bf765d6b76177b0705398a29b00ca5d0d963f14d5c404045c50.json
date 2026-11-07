@@ -1,0 +1,111 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-CL-1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3",
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL institutional feasibility is supported because the supplied governance_enablement records describe institutional pathways for cryptography: key-management accountability and traceability, and recommended encryption controls for maintaining confidentiality and integrity.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-CL-2",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL institutional feasibility is challenged by a compliance constraint because the supplied compliance_constraint record restricts acceptable cryptographic algorithm choices and imposes transition obligations for disallowed or deprecated encryption algorithms.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-CL-3",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen deployment context is the CIS IG2 reference-enterprise profile, which is described as a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure, often processing sensitive information, may face regulatory burdens, and may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "To support a DEPLOYMENT_SPECIFIC US institutional or legal feasibility conclusion, supply jurisdiction-specific regulatory_applicability evidence explicitly connecting the frozen CIS IG2 enterprise profile, its data-processing context, or its sector to the applicable US obligations.",
+      "To resolve the algorithm-compliance challenge, supply evidence of the enterprise's current cryptographic algorithm inventory and that any disallowed algorithm, including two-key TDEA, Skipjack, and three-key TDEA for encryption after the stated date, is migrated or otherwise authorized within the frozen 2025-2027 timing window.",
+      "To operationalize the key-management enablement, supply evidence of key-management roles, traceability mechanisms, and audit capability for key access, use, and destruction.",
+      "To resolve the CPG encryption constraint, supply evidence that strong/TLS encryption can be deployed where technically feasible and that outdated or weak encryption is identified and updated within the frozen timing window."
+    ],
+    "constraints": [
+      "Key-management governance must preserve accountability and traceability for key generation, access, use, and destruction, including audit of relevant logs, as described in the supplied NIST key-management guidance.",
+      "Cryptographic algorithm selection must account for the supplied algorithm transition guidance, including disallowed two-key TDEA encryption, disallowed Skipjack encryption, and disallowed three-key TDEA encryption after December 31, 2023 unless specifically allowed by other NIST guidance, while AES is listed as acceptable.",
+      "The CPG record recommends effective encryption to maintain confidentiality and integrity, properly configured and up-to-date SSL/TLS where technically feasible, and planning to identify and update outdated or weak encryption.",
+      "The CIS IG2 reference profile indicates a multi-department enterprise environment with differing risk profiles and potential dependence on enterprise-grade technology and specialized expertise, but this is profile context only and does not establish exact staffing, budget, or legal obligation."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__insider_threat__cryptography__US",
+    "evidence_gaps": [
+      "No eligible regulatory_applicability evidence for the frozen United States jurisdiction is present in the supplied directional grounding contract for this lens, so DEPLOYMENT_SPECIFIC regional or legal feasibility cannot be grounded.",
+      "The supplied records do not establish whether the CIS IG2 enterprise currently uses disallowed cryptographic algorithms, processes specific regulated data, belongs to a regulated sector, or has particular legal obligations.",
+      "The supplied records do not provide exact budget, staffing, expertise, procurement, implementation timeline, or implementation-burden information for the CRYPTOGRAPHY action.",
+      "The supplied records do not establish operational effectiveness of CRYPTOGRAPHY against the specific insider-threat forecast; the institutional assessment is limited to governance, enablement, and compliance constraints."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Under the Institutional / Regional Feasibility lens, the supplied records support a GENERAL feasibility direction for the frozen CRYPTOGRAPHY action. The eligible governance_enablement records describe institutional pathways for implementing cryptography: NIST key-management guidance emphasizes accountability and traceability for key generation, access, use, and destruction, while CISA CPG guidance recommends strong and agile encryption, effective encryption deployment, and identification/update of outdated or weak encryption. These records provide a grounded institutional enablement signal. The eligible compliance_constraint record introduces a genuine but bounded challenge: NIST cryptographic algorithm transition guidance imposes algorithm approval statuses, including disallowance of two-key TDEA and Skipjack encryption, and disallowance of three-key TDEA encryption after December 31, 2023 unless specifically allowed by other NIST guidance, while listing AES as acceptable. This creates an algorithm-selection and transition-management constraint, but the supplied record does not establish that the enterprise currently uses disallowed algorithms, lacks capacity, or faces a prohibition. On balance, the support direction is stronger than the challenge direction because the challenge is a compliance/configuration constraint rather than evidence of institutional infeasibility. The frozen United States region is treated as a scenario parameter; because no eligible regulatory_applicability evidence is supplied for a DEPLOYMENT_SPECIFIC legal conclusion, the assessed direction remains GENERAL rather than deployment-specific.",
+    "stance": 1
+  },
+  "assessment_sha256": "2fbcdb282d91146f53c4b959ec6a983ed4518433e501896f3b82d0a4bc761dfc",
+  "checkpoint_sha256": "91353d412deed1f68b928fe483007c923e12a14aad9d2cb4d165c2efbc869f5d",
+  "created_at": "2026-11-06T16:51:27.141372+00:00",
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "condition": "US",
+    "decision_object_sha256": "6e0f2602867af48414e22036f6d89b98ec2ca1e65dc1b1c724ee888e627ba687",
+    "evidence_content_sha256": "4a651fdb7404341db0ccc07b34e2992734ce80dd40fff15487f30efc84bdf2e2",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "bb995315bedfdddde2761ba9e34120eb8aa47eb17296692f6e0fc4591a490499",
+    "response_schema_sha256": "4c271a1c267f9327074669385376f1f949f9203d5e61562d58b94c7a8be70ebd",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 42,
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "455767ccf7f3d5af11a871fe53f49f0e97837c6c6797ac224498ad8e35167b41"
+  }
+}

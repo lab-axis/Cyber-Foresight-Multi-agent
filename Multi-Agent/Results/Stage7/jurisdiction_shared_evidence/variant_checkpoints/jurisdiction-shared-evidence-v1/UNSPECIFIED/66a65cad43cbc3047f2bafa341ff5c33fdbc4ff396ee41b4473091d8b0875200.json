@@ -1,0 +1,110 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_GEN_SUPPORT_GOVERNANCE_PATHWAYS",
+        "evidence_ids": [
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE17_567DDA7CFBC62829",
+          "DE_DE11_1E4AAE06CC3795D7"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied eligible access-control/zero-trust/ABAC governance records provide GENERAL institutional pathways for access-control adoption, including policy enforcement points and policy-engine inputs with a compliance system; governance defined as the definition and enforcement of cybersecurity policies, procedures, and processes; and alignment of local/federated access policies through consistent attribute values, attribute lifecycle management, attribute documentation, and access-failure exception-handling procedures.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_GEN_CHALLENGE_SESSION_COMPLIANCE_BURDEN",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied eligible digital-identity/access-control record imposes GENERAL session-security compliance constraints: sessions must use authenticated protected channels, time out, not fall back to insecure transport, and include verified session identifiers. These requirements add implementation and compliance burden to access-control controls.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CONTEXT_CIS_IG2_PROFILE",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen CIS IG2 reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments, potential processing of sensitive client or enterprise information, possible regulatory burdens, tolerance for short service interruptions, and some safeguards that may depend on enterprise-grade technology and specialized expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC SUPPORTS_FEASIBILITY conclusion for the masked jurisdiction would require jurisdiction-specific regulatory_applicability evidence together with eligible governance_enablement evidence.",
+      "A DEPLOYMENT_SPECIFIC CHALLENGES_FEASIBILITY conclusion for the masked jurisdiction would require jurisdiction-specific regulatory_applicability evidence together with eligible compliance_constraint evidence.",
+      "If cross-border or data-sovereignty constraints are material, evidence of applicable jurisdictional rules, actual data flows, and organizational data-processing activities would be required."
+    ],
+    "constraints": [
+      "Access-control/session-management implementation must accommodate secure-channel, timeout, no-insecure-fallback, and session-identifier verification requirements identified in DE_DE13_055FC5E35FA61DD5.",
+      "Federated or attribute-based access-control governance requires consistent attribute values, lifecycle ownership, attribute documentation, and exception/access-failure procedures as described in DE_DE11_1E4AAE06CC3795D7.",
+      "Access-control policy enforcement must be integrated with policy-engine inputs and compliance-system alignment, including diagnostic and threat-intelligence feeds where used, as described in DE_DE12_E6F93E4AB8722379.",
+      "Governance of zero-trust-style access control requires definition and enforcement of cybersecurity policies, procedures, and processes as described in DE_DE17_567DDA7CFBC62829."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__targeted_attack__access_control__UNSPECIFIED",
+    "evidence_gaps": [
+      "No jurisdiction-specific regulatory_applicability evidence is supplied for the masked jurisdiction, so deployment-specific legal/regional feasibility cannot be established.",
+      "No supplied evidence establishes the reference enterprise's sector, data-processing activities, cross-border data flows, or data-sovereignty obligations.",
+      "No supplied evidence establishes exact staffing, budget, architecture, vendor, or implementation effort for access-control deployment in the frozen enterprise."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Under the GENERAL institutional/regional scope, the supplied eligible decision-evidence records provide governance_enablement pathways for access-control adoption: policy enforcement and policy-engine inputs including compliance-system alignment, governance as the definition and enforcement of cybersecurity policies/procedures/processes, and federated/attribute-based policy governance through consistent attribute values, lifecycle management, and exception-handling procedures. A separate eligible compliance_constraint record imposes session-security requirements that add a bounded implementation and compliance burden. On balance, the general institutional direction is supported rather than materially challenged because the governance enablement evidence is directly relevant to institutional pathways, while the compliance constraint is a normal implementation requirement rather than evidence of infeasibility. Deployment-specific regional/legal feasibility cannot be established because the jurisdiction is masked and no jurisdiction-specific regulatory_applicability evidence is supplied; this missing narrower context is preserved in evidence_gaps and does not erase the grounded GENERAL direction.",
+    "stance": 1
+  },
+  "assessment_sha256": "41e93fa1061dec0bb40a0dae96956c8dee63eb90ba5d052cc380af45eb433837",
+  "checkpoint_sha256": "cbe0aea0ed31063edf9cb4d29a377242cac943a1fe6ef8f471e58e492bee7a07",
+  "created_at": "2026-11-06T17:40:52.631097+00:00",
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "UNSPECIFIED",
+    "decision_object_sha256": "e3b9878dcb339186aaf54fd9196c9b7ad9169dd116cad5ac7158ec4b6cfb4fc7",
+    "evidence_content_sha256": "6681d8d141722dd7c750a770868fe87894ac89ad6084200a015bf1bff0400f6e",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "4e4f36e9de0c845cce3c650c5f32c845603ca11670a941e045ea00165150010d",
+    "response_schema_sha256": "99120de530cb4d41215ce30cf96cf435f2d4124eb5c06afe2a7f13955f4cc5f6",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 43,
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "42f3e0b3ae10860fb044db43125c57bfbb9872e3253121be5a914049037f4fae"
+  }
+}

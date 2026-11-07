@@ -1,0 +1,128 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_CLAIM_001",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen CIS IG2 reference-enterprise profile is a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure; exact staffing, budget, sector, architecture, and procurement capacity are not established by the supplied context.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR_CLAIM_002",
+        "evidence_ids": [
+          "E_23_534489D29C38B327",
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied governance guidance supports institutional feasibility by providing implementation and accountability pathways for cryptography: the CISA CPG record presents strong and agile encryption as a recommended action with an outcome of effective encryption for confidentiality of sensitive data and integrity of IT/OT traffic, and the NIST key-management record requires accountability/traceability for authorized key generation, access, destruction, and audit logging.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLAIM_003",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied compliance guidance challenges institutional feasibility by identifying algorithm-transition constraints: two-key TDEA encryption is disallowed, three-key TDEA encryption is deprecated through 2023 and disallowed after 2023 unless specifically allowed, and Skipjack encryption is disallowed, while AES-128, AES-192, and AES-256 are listed as acceptable. If the enterprise uses such legacy algorithms, the CRYPTOGRAPHY action would require migration and control alignment.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLAIM_004",
+        "evidence_ids": [
+          "E_31_A0893427DD4F5B04",
+          "E_31_6BBE82F2BAC198B3",
+          "E_31_C1CFA326F0420DCA",
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "In the EU scenario, the supplied EU primary-law records establish jurisdictional regulatory context in which encryption is referenced as an appropriate security or privacy-preserving measure: GDPR Article 32 lists pseudonymisation and encryption of personal data as appropriate technical and organisational measures; a NIS2 recital references state-of-the-art security and privacy-preserving measures such as pseudonymisation or encryption where anonymisation may significantly affect the purpose; and NIS2 national-strategy policies include cybersecurity-related requirements for ICT products and services in public procurement, including encryption. Combined with key-management accountability/traceability guidance, this supports deployment-specific institutional feasibility, provided the enterprise is subject to the applicable EU obligations and implements corresponding governance controls.",
+        "status": "SUPPORTS_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "Determine EU legal applicability, including GDPR data-processing status and NIS2 entity category or other applicable EU or member-state obligations, before treating the EU-specific compatibility claim as a firm legal compliance conclusion (E_31_A0893427DD4F5B04; E_31_6BBE82F2BAC198B3).",
+      "Implement key-management accountability/traceability for key generation, access, destruction, and audit logs if the CRYPTOGRAPHY action is deployed (DE_DE08_031120C53EF050F3).",
+      "Assess and remediate any use of disallowed or deprecated cryptographic algorithms, including two-key TDEA and three-key TDEA after 2023, where the NIST transition guidance is relevant to the enterprise baseline (DE_DE09_6719137897848A9E).",
+      "Where GDPR applies, implement pseudonymisation/encryption and regular testing/assessment of technical and organisational security measures (E_31_A0893427DD4F5B04).",
+      "If the CISA CPG recommendation is adopted, include identification and replacement of outdated or weak encryption and consideration of post-quantum implications (E_23_534489D29C38B327).",
+      "Where applicable, align with EU national cybersecurity strategy and public-procurement cybersecurity requirements that reference encryption (E_31_C1CFA326F0420DCA)."
+    ],
+    "constraints": [
+      "Where GDPR personal-data processing is in scope, appropriate technical and organisational measures must be implemented, including as appropriate pseudonymisation and encryption, together with a process for regularly testing, assessing, and evaluating the effectiveness of technical and organisational measures (E_31_A0893427DD4F5B04).",
+      "Where NIS2 supervisory regimes are applicable, entity classification can affect supervisory expectations; the supplied record differentiates essential and important entities but does not establish classification of the reference enterprise (E_31_6BBE82F2BAC198B3).",
+      "Key-management deployment should provide accountability/traceability for authorized key generation, access, destruction, and audit logging (DE_DE08_031120C53EF050F3).",
+      "Algorithm-transition compliance may require identifying and remediating disallowed or deprecated cryptographic algorithms, including two-key TDEA and three-key TDEA after 2023, where the NIST transition guidance is relevant to the enterprise baseline (DE_DE09_6719137897848A9E).",
+      "If the CISA CPG recommendation is adopted, organizations should identify outdated or weak encryption, update to sufficiently strong algorithms, and consider post-quantum implications (E_23_534489D29C38B327)."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__ransomware__cryptography__EU",
+    "evidence_gaps": [
+      "Whether the CIS IG2 reference enterprise is a controller or processor of personal data in the EU and therefore within GDPR Article 32 is not established (E_31_A0893427DD4F5B04).",
+      "Whether the enterprise is an essential or important entity under NIS2, or otherwise subject to EU cybersecurity risk-management or supervisory obligations, is not established (E_31_6BBE82F2BAC198B3).",
+      "Sector, member-state implementing law, data categories, cross-border transfer exposure, and current cryptographic algorithm inventory are not supplied.",
+      "Budget, staffing, expertise, procurement capacity, and implementation timeline are not supplied.",
+      "Whether NIST SP 800-131A Rev. 2 or CISA CPG guidance is adopted as the enterprise's control baseline in the EU scenario is not supplied.",
+      "Direct EU-specific compliance burden or benefit for deploying CRYPTOGRAPHY against ransomware is not quantified in the supplied records."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied institutional/regional evidence contains grounded support for the CRYPTOGRAPHY action through governance_enablement records and EU regulatory_applicability records that reference encryption as an appropriate security or privacy-preserving measure. A grounded GENERAL challenge exists from compliance_constraint evidence describing disallowed or deprecated cryptographic algorithms and the resulting migration burden. On balance, support is stronger under this lens because the governance_enablement and EU regulatory_applicability evidence is more directly aligned with institutional and regional feasibility, while the compliance_constraint evidence is narrower and its materiality to this reference enterprise is not established. Sufficiency is PARTIAL because the records do not establish enterprise-specific EU legal applicability, current cryptographic algorithm usage, budget, staffing, expertise, or implementation capacity.",
+    "stance": 1
+  },
+  "assessment_sha256": "ce798465299ecf5489897b0c631faa2699337ec57b1cb049f6750972d69f8684",
+  "checkpoint_sha256": "4f56d22081054458fddefe747fa561d644904809f938a99fcc79cd7f054f87f4",
+  "created_at": "2026-11-06T17:21:55.383696+00:00",
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "EU",
+    "decision_object_sha256": "661db54c83a7b10d3b77c1164e64a679d67ba453afe8e92ad5af0a06a922975d",
+    "evidence_content_sha256": "6cac15ea8d654b8ad3dcf00328817c8ad97355901db8652a23eb2c41ba8f799f",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "097f55d931f4b3cea4df34e65f531a99c1ae60e3d871b61eb462c42a225c9c45",
+    "response_schema_sha256": "70b6abc141594242344eff159d3277dfafcd2b5d8ba3cbef0f4c271df7afb29e",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 43,
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "54ebf4164c1e448217f54776a71239b5fb79ad7830c25d0c9cfdbc013c5eec0f"
+  }
+}

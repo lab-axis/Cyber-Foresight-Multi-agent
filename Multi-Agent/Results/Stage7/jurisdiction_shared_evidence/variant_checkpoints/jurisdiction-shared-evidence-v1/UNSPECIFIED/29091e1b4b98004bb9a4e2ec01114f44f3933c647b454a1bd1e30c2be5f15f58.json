@@ -1,0 +1,109 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-CLAIM-1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "Institutional feasibility is supported by governance_enablement evidence for cryptographic key management: NIST SP 800-57 key-management material references key-management roles and responsibilities and defines accountability/traceability for entities authorized to generate, access, destroy, or otherwise use keys, including recording who or what performs key actions and auditing those logs.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-CLAIM-2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "Institutional feasibility is supported by governance_enablement evidence for a standard implementation pathway: CISA Cybersecurity Performance Goals include a recommended action for strong and agile encryption, describing effective encryption to maintain confidentiality of sensitive data and integrity of IT and OT traffic, use of properly configured and up-to-date SSL/TLS when technically feasible, updating outdated or weak encryption, and considering post-quantum implications.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-CLAIM-3",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "Institutional feasibility is challenged by a compliance_constraint: NIST SP 800-131A Rev.2 specifies cryptographic algorithm approval and transition statuses, including disallowed two-key TDEA encryption and disallowed three-key TDEA encryption after December 31, 2023 unless specifically allowed by other NIST guidance, creating an algorithm-selection and legacy-migration constraint for a 2025-2027 cryptography deployment.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC institutional/regional conclusion would require jurisdiction-specific regulatory_applicability evidence for the frozen masked region plus deployment-specific governance or compliance evidence eligible under the institutional/regional grounding contract.",
+      "Institutional feasibility is conditional on establishing key-management governance, accountability, and auditability for the cryptographic key lifecycle.",
+      "Feasibility is conditional on selecting and migrating to approved or acceptable cryptographic algorithms and avoiding disallowed legacy algorithms in the 2025-2027 window.",
+      "Feasibility is conditional on technically feasible deployment of strong and up-to-date encryption, including updating weak or outdated cryptography where applicable."
+    ],
+    "constraints": [
+      "Cryptographic implementation must account for algorithm approval and transition constraints, including disallowed legacy algorithm use where applicable.",
+      "Institutional adoption requires or benefits from defined key-management roles, accountability, and auditability for key generation, access, destruction, and use.",
+      "Encryption deployment should consider technical feasibility, maintain properly configured SSL/TLS, update weak or outdated encryption, and consider post-quantum implications where applicable."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__insider_threat__cryptography__UNSPECIFIED",
+    "evidence_gaps": [
+      "No jurisdiction-specific regulatory_applicability evidence is supplied for the frozen masked region; therefore DEPLOYMENT_SPECIFIC legal/regional feasibility cannot be grounded under the required regulatory_applicability scope slot.",
+      "No supplied evidence describes the frozen organization's current cryptographic inventory, legacy algorithm usage, key-management maturity, key-access logging/audit capability, or migration status.",
+      "No supplied evidence establishes the operational effectiveness of CRYPTOGRAPHY against the frozen Insider Threat forecast; that technical effectiveness question remains separate from institutional feasibility.",
+      "No budget, staffing, procurement, or resource-capacity evidence is supplied; resource feasibility remains unresolved by the supplied records."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "On balance, the supplied directionally eligible records support GENERAL institutional feasibility of CRYPTOGRAPHY under the frozen scenario. Two governance_enablement records provide institutional enablement: NIST SP 800-57 key-management material supports key-lifecycle accountability and auditability, and CISA CPG material provides a recommended implementation pathway for strong and up-to-date encryption. One compliance_constraint record introduces a relevant institutional constraint: NIST SP 800-131A Rev.2 algorithm transition guidance constrains algorithm selection and legacy migration in the 2025-2027 window. The constraint is materially relevant but does not establish that cryptography is institutionally infeasible; it frames feasible implementation as conditional on acceptable algorithm use and migration. Because the frozen region is JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE and the DEPLOYMENT_SPECIFIC scope requires regulatory_applicability evidence that is absent, no DEPLOYMENT_SPECIFIC legal/regional direction is concluded. The GENERAL direction survives as supported with PARTIAL sufficiency.",
+    "stance": 1
+  },
+  "assessment_sha256": "45c792413fd2dff133cfe8e46cf39e3a6d7212b58a867407e5c87839d711e119",
+  "checkpoint_sha256": "80b1cec8d9cdad40d409edd9b0ed673c1aabf763889ab91de8bbfe3cb7153b39",
+  "created_at": "2026-11-06T17:27:40.277100+00:00",
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "condition": "UNSPECIFIED",
+    "decision_object_sha256": "a852ba21f4d1bb58047f4f92f75a326ae09bc17e6f1c8b78d88e9ae88de5ab65",
+    "evidence_content_sha256": "4a651fdb7404341db0ccc07b34e2992734ce80dd40fff15487f30efc84bdf2e2",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "bb995315bedfdddde2761ba9e34120eb8aa47eb17296692f6e0fc4591a490499",
+    "response_schema_sha256": "a4d4c25d6b39ea8ae10ac799a2e1471d32f81ff7f6c6f48b2d85ae7ff487f94e",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 43,
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "e67397fe971d78b0ea1db0042b0f41163e933b4d45b6e5fd9cb27e4fe40feef1"
+  }
+}

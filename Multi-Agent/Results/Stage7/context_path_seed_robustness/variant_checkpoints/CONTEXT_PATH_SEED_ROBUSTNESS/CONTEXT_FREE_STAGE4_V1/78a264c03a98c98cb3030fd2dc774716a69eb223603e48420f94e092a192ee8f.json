@@ -1,0 +1,158 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "L4_INST_REG_1",
+        "evidence_ids": [
+          "E_25_746173685B235ED2"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 Rev.5 describes cryptography as supportable for protecting information, providing and implementing digital signatures, enforcing information separation, and supporting random number and hash generation, and states that cryptography is implemented in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "L4_INST_REG_2",
+        "evidence_ids": [
+          "E_26_92664A4339CF24C9"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A Rev.5 assessment reference identifies personnel responsible for the insider threat program, members of a cross-discipline insider threat incident handling team, legal counsel, and organizational personnel with information security and privacy responsibilities.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "L4_INST_REG_3",
+        "evidence_ids": [
+          "E_22_C239828119FC69CD"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA insider threat mitigation guidance describes an organization-wide insider threat mitigation program that spans the organization, uses training, policy, management practices, and multi-disciplinary capabilities, and calls for protecting civil liberties and maintaining confidentiality.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "L4_INST_REG_4",
+        "evidence_ids": [
+          "E_20_913B6F999A0F1458"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-161 Rev.1 C-SCRM guidance states that predefined frequencies for data collection should be less predictable in order to reduce the risk of an insider threat bypassing security mechanisms.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "L4_INST_REG_5",
+        "evidence_ids": [
+          "E_16_E7BB108A85B71262"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST AI 100-4 states that digital signatures are a more robust solution than recomputable fingerprints or checksums for authenticating content and metadata, providing assurance of signatory association and tamper-evidence.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "L4_INST_REG_6",
+        "evidence_ids": [
+          "E_23_A793FAF5B393EFE3"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG defines encryption as cryptographically transforming data to produce cipher text and defines hashing as producing a numeric hash value that represents data.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "L4_INST_REG_7",
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref cutoff-constrained publication trend for PMT_CRYPTOGRAPHY reports annual publication counts for 2021 through 2024 and an OLS slope, and explicitly states that this trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "If a target region is specified, assess region-specific data-sovereignty, cross-border, and legal requirements against the applicable-law implementation requirement in E_25_746173685B235ED2.",
+      "If organization_type and governance roles are specified, verify whether the organization can staff the insider-threat program, incident handling team, legal counsel, and information security/privacy responsibilities described in E_26_92664A4339CF24C9 and E_22_C239828119FC69CD.",
+      "If infrastructure and budget context are specified, assess implementation barriers and compliance burden for deploying cryptography controls and associated governance processes."
+    ],
+    "constraints": [
+      "Regulatory compatibility is conditional: the records require implementation in accordance with applicable laws and other instruments, but the target region is not specified. E_25_746173685B235ED2",
+      "Institutional governance requirements such as civil liberties, confidentiality, multi-disciplinary capability, and program tailoring are described generally, not demonstrated in the frozen deployment context. E_22_C239828119FC69CD",
+      "Accountability and assessment depend on identified personnel, cross-discipline incident handling, legal counsel, and information security/privacy responsibilities; the frozen context does not establish that the target organization can meet these. E_26_92664A4339CF24C9"
+    ],
+    "decision_object_id": "decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f",
+    "evidence_gaps": [
+      "Target region is missing from deployment_context; region-specific data sovereignty, cross-border constraints, and legal applicability cannot be assessed.",
+      "organization_type, infrastructure_context, and budget_context are missing; organization-specific governance capacity, implementation barriers, and compliance burden cannot be assessed deployment-specifically.",
+      "No supplied record provides deployment, adoption, implementation, or operational-effectiveness observations for cryptography as an insider-threat mitigation during the 2025-2027 timing window."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied records support a general institutional enablement context: cryptography is treated as a recognized security control, is subject to implementation in accordance with applicable laws and other instruments, and is associated with governance, assessment, accountability, provenance, and control-definition context relevant to insider-threat mitigation. However, the frozen deployment context leaves region, organization_type, infrastructure_context, and budget_context unspecified. The supplied records do not establish target-region regulatory applicability, data-sovereignty or cross-border constraints, organization-specific compliance burden, or deployment effectiveness. Therefore, institutional/regional feasibility is mixed/indeterminate under this lens rather than clearly supported or challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "23c99d0b0ab6299ba519b9105e01bfa4ed2d8590c047ca791a6ff1e8e4ad7591",
+  "checkpoint_sha256": "70d8591cb712a804d6c5823611ada5616792e54d0b1da19a5d4d51bf2ab51906",
+  "created_at": "2026-11-06T12:51:59.074656+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "3ed8cc05c62160848afb3b993ca7fe3e3f971f50396fab97f444e84ae643a418",
+    "base_stage3_input_fingerprint": "15d2e4849f93240cc2a6777986f6ac3e7911baf6c677e50d35bfeb35e6e3cb68",
+    "base_stage3_output_sha256": "c470023689b7e9e573ae0ebe688ded54cf26f72f31927485b386dab4e7573f23",
+    "case_id": "main__insider_threat__cryptography",
+    "evidence_ids": [
+      "E_15_0A98378FC609EF7E",
+      "E_16_E7BB108A85B71262",
+      "E_19_4E69D255F61736DB",
+      "E_20_913B6F999A0F1458",
+      "E_22_C239828119FC69CD",
+      "E_23_A793FAF5B393EFE3",
+      "E_25_746173685B235ED2",
+      "E_26_92664A4339CF24C9",
+      "E_29_185B62FFF51926EC",
+      "E_29_3C1B7B4F9532A5F2",
+      "E_29_7C01F6CA0D982DFF",
+      "E_33_CDE0F421E4D797ED"
+    ],
+    "input_fingerprint": "78a264c03a98c98cb3030fd2dc774716a69eb223603e48420f94e092a192ee8f",
+    "lens_type": "institutional_regional",
+    "response_schema_sha256": "2ecf6fc7e50581bea1e45d377a99ecb6e6306114da0d7b0135b6b6ff0b094d4d",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "061fee6c798b1c8b402519d2ed9ebd6de85bcb567838e1f3108bc84c36bbd6ac",
+    "user_prompt_sha256": "2979e95dbc0a89bc95a1f7e067f16756040c4592be3eab46558d7ce0d74f8150",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

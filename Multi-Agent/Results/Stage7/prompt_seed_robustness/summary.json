@@ -1,0 +1,151 @@
+{
+  "experiment": "PROMPT_SEED_ROBUSTNESS",
+  "cases": [
+    "main__ddos__nlp_llm",
+    "main__malware__anomaly_detection",
+    "main__session_hijacking__https"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "note": "Three Threat-PMT case clusters, nine jurisdictional rows per comparison; descriptive, not a causal estimate or independent nine-case sample.",
+  "same_seed_prompt_vs_p1": {
+    "42": {
+      "P2_EVIDENCE_FIRST": {
+        "n": 9,
+        "stance_agreement_mean": 0.7777777777777778,
+        "evidence_id_overlap_mean": 0.7297619047619047,
+        "claim_direction_overlap_mean": 1.0,
+        "recommendation_consistency_rate": 0.3333333333333333,
+        "d_lens_abs_delta_median": 0.0
+      },
+      "P3_DECISION_FIRST": {
+        "n": 9,
+        "stance_agreement_mean": 0.7777777777777778,
+        "evidence_id_overlap_mean": 0.825925925925926,
+        "claim_direction_overlap_mean": 0.9629629629629629,
+        "recommendation_consistency_rate": 1.0,
+        "d_lens_abs_delta_median": 0.0
+      }
+    },
+    "43": {
+      "P2_EVIDENCE_FIRST": {
+        "n": 9,
+        "stance_agreement_mean": 0.7777777777777778,
+        "evidence_id_overlap_mean": 0.7324979114452799,
+        "claim_direction_overlap_mean": 0.9259259259259259,
+        "recommendation_consistency_rate": 0.3333333333333333,
+        "d_lens_abs_delta_median": 0.0
+      },
+      "P3_DECISION_FIRST": {
+        "n": 9,
+        "stance_agreement_mean": 0.5555555555555556,
+        "evidence_id_overlap_mean": 0.8759259259259259,
+        "claim_direction_overlap_mean": 0.9259259259259259,
+        "recommendation_consistency_rate": 0.6666666666666666,
+        "d_lens_abs_delta_median": 0.666667
+      }
+    },
+    "44": {
+      "P2_EVIDENCE_FIRST": {
+        "n": 9,
+        "stance_agreement_mean": 0.6666666666666666,
+        "evidence_id_overlap_mean": 0.7315255731922399,
+        "claim_direction_overlap_mean": 0.9629629629629629,
+        "recommendation_consistency_rate": 0.6666666666666666,
+        "d_lens_abs_delta_median": 0.0
+      },
+      "P3_DECISION_FIRST": {
+        "n": 9,
+        "stance_agreement_mean": 0.7777777777777778,
+        "evidence_id_overlap_mean": 0.8272486772486772,
+        "claim_direction_overlap_mean": 0.9629629629629629,
+        "recommendation_consistency_rate": 0.6666666666666666,
+        "d_lens_abs_delta_median": 0.222222
+      }
+    }
+  },
+  "same_prompt_between_seeds": {
+    "P1_CANONICAL": {
+      "42-43": {
+        "n": 9,
+        "stance_agreement_mean": 0.6666666666666666,
+        "evidence_id_overlap_mean": 0.7327160493827161,
+        "claim_direction_overlap_mean": 0.9629629629629629,
+        "recommendation_consistency_rate": 0.6666666666666666,
+        "d_lens_abs_delta_median": 0.0
+      },
+      "42-44": {
+        "n": 9,
+        "stance_agreement_mean": 0.5555555555555556,
+        "evidence_id_overlap_mean": 0.7778659611992945,
+        "claim_direction_overlap_mean": 0.9629629629629629,
+        "recommendation_consistency_rate": 0.6666666666666666,
+        "d_lens_abs_delta_median": 0.0
+      },
+      "43-44": {
+        "n": 9,
+        "stance_agreement_mean": 0.5555555555555556,
+        "evidence_id_overlap_mean": 0.8376984126984126,
+        "claim_direction_overlap_mean": 1.0,
+        "recommendation_consistency_rate": 0.6666666666666666,
+        "d_lens_abs_delta_median": 0.0
+      }
+    },
+    "P2_EVIDENCE_FIRST": {
+      "42-43": {
+        "n": 9,
+        "stance_agreement_mean": 0.7777777777777778,
+        "evidence_id_overlap_mean": 0.6701925267714741,
+        "claim_direction_overlap_mean": 0.9629629629629629,
+        "recommendation_consistency_rate": 0.3333333333333333,
+        "d_lens_abs_delta_median": 0.0
+      },
+      "42-44": {
+        "n": 9,
+        "stance_agreement_mean": 0.8888888888888888,
+        "evidence_id_overlap_mean": 0.7827601410934745,
+        "claim_direction_overlap_mean": 1.0,
+        "recommendation_consistency_rate": 1.0,
+        "d_lens_abs_delta_median": 0.0
+      },
+      "43-44": {
+        "n": 9,
+        "stance_agreement_mean": 0.6666666666666666,
+        "evidence_id_overlap_mean": 0.6122157244964263,
+        "claim_direction_overlap_mean": 0.9629629629629629,
+        "recommendation_consistency_rate": 0.3333333333333333,
+        "d_lens_abs_delta_median": 0.222222
+      }
+    },
+    "P3_DECISION_FIRST": {
+      "42-43": {
+        "n": 9,
+        "stance_agreement_mean": 0.6666666666666666,
+        "evidence_id_overlap_mean": 0.8925925925925926,
+        "claim_direction_overlap_mean": 0.9259259259259259,
+        "recommendation_consistency_rate": 1.0,
+        "d_lens_abs_delta_median": 0.22222200000000003
+      },
+      "42-44": {
+        "n": 9,
+        "stance_agreement_mean": 0.7777777777777778,
+        "evidence_id_overlap_mean": 0.8481481481481481,
+        "claim_direction_overlap_mean": 0.9629629629629629,
+        "recommendation_consistency_rate": 0.3333333333333333,
+        "d_lens_abs_delta_median": 0.222222
+      },
+      "43-44": {
+        "n": 9,
+        "stance_agreement_mean": 0.4444444444444444,
+        "evidence_id_overlap_mean": 0.9111111111111111,
+        "claim_direction_overlap_mean": 0.9629629629629629,
+        "recommendation_consistency_rate": 0.3333333333333333,
+        "d_lens_abs_delta_median": 0.666667
+      }
+    }
+  },
+  "payload_sha256": "f54a92f197839008d5da21a277add0d7cd99a66db66ffa5df68b76d4b43f0ab9"
+}

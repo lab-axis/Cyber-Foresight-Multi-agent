@@ -1,0 +1,135 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-GENERAL-SUPPORT-1",
+        "evidence_ids": [
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE04_0B77B88875745973",
+          "DE_DE06_14CCCEB6F82351D5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied Stage-4 decision evidence provides institutional governance enablement for anomaly detection: NIST behavioral anomaly detection guidance associates anomaly detection with expanded visibility, oversight of resources, and faster incident response, and describes the Cybersecurity Framework as voluntary and not imposing additional regulatory requirements; NIST IDPS guidance prescribes governance and operational practices such as separate user/administrator accounts, protected management communications, configuration backups, update testing and deployment, and use of multiple IDPS technology types; NIST ICS device-capability guidance includes audit logging, configuration monitoring, and documented secure deployment of monitoring devices.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-GENERAL-NEUTRAL-1",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen reference-enterprise profile is CIS IG2, a multi-department enterprise IT profile that may face regulatory burdens and may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-GENERAL-NEUTRAL-2",
+        "evidence_ids": [
+          "DE_DE16_CEA1C38E613068F8"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied governance guidance characterizes anomaly-based detection as able to address unknown threats but sensitive to change, prone to misinterpretation, and requiring complete trust in the system; these are implementation and trust considerations, not grounded jurisdiction-specific regulatory constraints.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC institutional/regional direction requires exact jurisdiction-specific regulatory_applicability evidence plus matching direction-carrying governance_enablement or compliance_constraint evidence.",
+      "If the deployment jurisdiction or sector imposes data-sovereignty, cross-border data-flow, or sector-specific regulatory obligations, those obligations must be evidenced before they can change the feasibility direction.",
+      "The CIS IG2 profile's possible regulatory burdens and need for enterprise-grade technology or specialized expertise must be verified with jurisdiction- and organization-specific evidence before any deployment-specific compliance conclusion is made."
+    ],
+    "constraints": [
+      "The frozen context assumes no numeric budget, price, ROI, TCO, staffing count, vendor, or procurement ceiling, so institutional feasibility cannot be treated as financially proven.",
+      "The frozen region is JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE, so no region-specific legal or regulatory conclusion may be inferred from a jurisdiction label.",
+      "The general support claim is limited to governance enablement and does not establish actual deployment, compliance, budget, staffing, or organizational readiness in the target organization."
+    ],
+    "decision_object_id": "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+    "evidence_gaps": [
+      "No jurisdiction-specific regulatory_applicability evidence is supplied for the frozen masked region.",
+      "No directionally eligible compliance_constraint decision evidence is supplied for the institutional/regional lens, so regulatory compatibility, data-sovereignty, cross-border constraints, and exact compliance burden cannot be weighed as a grounded challenge.",
+      "No organization-specific governance, audit, reporting, procurement, or data-governance requirements are supplied beyond the CIS IG2 profile context."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The assigned question is whether the supplied records support or challenge the frozen action's institutional/regional feasibility. Under the institutional/regional grounding contract, SUPPORTS_FEASIBILITY is grounded because the supplied action-specific Stage-4 decision evidence contains governance_enablement records for anomaly detection that describe institutional enablement pathways, oversight, auditability, and governance practices. CHALLENGES_FEASIBILITY is not grounded because no directionally eligible compliance_constraint decision-evidence record is supplied, and no jurisdiction-specific regulatory_applicability evidence is supplied for the masked region. Therefore, a DEPLOYMENT_SPECIFIC regional/legal direction cannot be established. The surviving grounded direction is GENERAL institutional support, but evidence sufficiency is PARTIAL because jurisdiction-specific legal applicability, data-sovereignty, cross-border constraints, and exact compliance burden remain unevidenced.",
+    "stance": 1
+  },
+  "assessment_sha256": "1217ce4fdb9232a7f75af8070fad3759d45688e6d27c0ba60909c6b8501d5ea4",
+  "checkpoint_sha256": "8906d35299f40ee5f32bf02dff40f0f15c6375c4ffc493179b081a808a1da6ac",
+  "created_at": "2026-11-06T07:40:59.707046+00:00",
+  "identity": {
+    "axis": "PROMPT_SEED_ROBUSTNESS",
+    "case_id": "main__malware__anomaly_detection",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE04_0B77B88875745973",
+        "DE_DE05_105D0030778F41BC",
+        "DE_DE06_14CCCEB6F82351D5",
+        "DE_DE16_CEA1C38E613068F8"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "439866cc6259792900e13a0e469575bf2bb490e6a6520b2876ee1201250be457",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__eu__cis_ig2__7b3abb36d94e3682",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__us__cis_ig2__72ba6e0d3d843499"
+    ],
+    "payload_sha256": "2c9392660f945f132847e785f91999d9d776baffae5bb17fe7eca2bab3d63a30",
+    "payload_transform_id": null,
+    "prompt_variant": "P3_DECISION_FIRST",
+    "repeat_index": 43,
+    "response_schema_sha256": "6e113f72d4a320cf7270e9006ee14a01df6feaac2c80b56d06bcb1457062c250",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "4df8419c89d1df082dca878ca722dfc6ce5964146d9814c59f96e0878bac1dcc",
+    "variant_id": "P3_DECISION_FIRST"
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF-1",
+        "evidence_ids": [
+          "E_29_C2D0AFA5060E4ED3",
+          "E_29_EB10E20E98625441"
+        ],
+        "scope": "GENERAL",
+        "statement": "Crossref metadata records identify two 2013 publications titled 'Approaches to Network Anomaly Detection' with DOIs 10.1201/b15088-14 and 10.1201/b15088-7, indicating that network anomaly-detection approaches are documented in the academic literature.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-2",
+        "evidence_ids": [
+          "E_33_D28EA285670B0D01"
+        ],
+        "scope": "GENERAL",
+        "statement": "A Crossref cutoff-constrained publication trend for PMT_ANOMALY_DETECTION reports annual security publication counts of 1431 in 2021, 1643 in 2022, 2110 in 2023, and 2496 in 2024, with an OLS slope of 366.20 works/year, and explicitly states that the trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-3",
+        "evidence_ids": [
+          "E_15_D3680C31BEE2C0F8"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST AI 100-2e2023 states that poisoning unsupervised learning models has been shown for clustering used in malware classification and network traffic anomaly detection, representing a documented adversarial-ML limitation for ML-based anomaly detection.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-4",
+        "evidence_ids": [
+          "E_15_D3680C31BEE2C0F8"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST AI 100-2e2023 states that evasion attacks have been proposed for malware classification, PDF malware classification, and Android malicious app detection, and that Clements et al. developed a mechanism for effective generation of evasion attacks on small, weak routers in network intrusion detection; the supplied text does not document evasion attacks specifically for network traffic anomaly detection.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-5",
+        "evidence_ids": [
+          "E_15_D3680C31BEE2C0F8"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST AI 100-2e2023 mentions anomaly detection based on data-centric approaches in the context of ICS/SCADA defense-in-depth, but the supplied excerpt does not quantify deployment or effectiveness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-6",
+        "evidence_ids": [
+          "E_03_F1CA4CD00581F628"
+        ],
+        "scope": "GENERAL",
+        "statement": "Mandiant M-Trends reports a trend in which China-nexus attackers have gained access to edge devices via exploitation of vulnerabilities, particularly zero-days, and subsequently deployed custom malware ecosystems that are usually custom developed or tailored for the target edge device and underlying operating system.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-7",
+        "evidence_ids": [
+          "E_03_F1CA4CD00581F628"
+        ],
+        "scope": "GENERAL",
+        "statement": "Mandiant M-Trends reports that custom malware may go undetected for long periods because specific detections are unlikely, network defenders may have little or no means for monitoring and detection of malware activity on edge devices, and off-the-shelf security products typically will not support edge devices.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-8",
+        "evidence_ids": [
+          "E_08_FEE46219AABDA967"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA KEV records CVE-2013-7331 as a confirmed-exploited Internet Explorer information-disclosure vulnerability that could allow an attacker to detect anti-malware applications.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-9",
+        "evidence_ids": [
+          "E_08_197B243FDF3AA15A"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA KEV records CVE-2017-8540 as a confirmed-exploited Microsoft Malware Protection Engine remote code execution vulnerability affecting multiple Microsoft Windows and Exchange Server products.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-10",
+        "evidence_ids": [
+          "E_04_58956777A1075C28"
+        ],
+        "scope": "GENERAL",
+        "statement": "IBM X-Force 2024 reports that infostealers topped the list for most unique Windows malware samples in 2023, comprising 17.8% of samples, and states that threat-actor investment in infostealers and identity abuse is expected to impact defenders' detection timelines.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-11",
+        "evidence_ids": [
+          "E_02_F60155CA81B80881"
+        ],
+        "scope": "GENERAL",
+        "statement": "Verizon DBIR reports that password dumpers appeared in 2% of breaches and that this type of malware likes to reside in places with limited visibility, such as personal computers.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-12",
+        "evidence_ids": [
+          "E_04_270A1E7C47ACC4FF"
+        ],
+        "scope": "GENERAL",
+        "statement": "IBM X-Force 2023 reports operational malware context, including backdoors in 21% of incidents remediated in 2022, an early-year Emotet spike contributing to a year-over-year jump in backdoor activity, ransomware at 17%, and phishing at 41%.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-13",
+        "evidence_ids": [
+          "E_29_EC3B9CB419FEA81B"
+        ],
+        "scope": "GENERAL",
+        "statement": "A Crossref metadata record identifies a 2023 publication on low-energy LArTPC signal detection using anomaly detection, which is tagged to PMT_ANOMALY_DETECTION but is not security-specific evidence of malware-detection deployment or effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "For a deployment-specific conclusion, require evidence of telemetry and monitoring availability on in-scope systems, especially edge devices where off-the-shelf security products are typically unsupported (E_03_F1CA4CD00581F628).",
+      "If ML-based anomaly detection is used, require evidence of adversarial-ML evaluation and controls, including resistance to poisoning/evasion and model monitoring, given documented poisoning of clustering for network traffic anomaly detection and related security-ML domains (E_15_D3680C31BEE2C0F8).",
+      "Require evidence of integration with existing detection/response workflows, data pipelines, and alerting before claiming operability; current records do not establish such integration.",
+      "Require fit-for-purpose effectiveness evidence against custom and evolving malware, including edge-device custom malware and infostealer families, because supplied evidence indicates long undetected persistence and expected detection-timeline pressure (E_03_F1CA4CD00581F628, E_04_58956777A1075C28).",
+      "Require vulnerability-management evidence for detection components, given confirmed exploited vulnerabilities in anti-malware/detection-related components (E_08_FEE46219AABDA967, E_08_197B243FDF3AA15A)."
+    ],
+    "constraints": [
+      "Deployment-specific technical feasibility cannot be concluded because the frozen deployment_context has null infrastructure_context, organization_type, region, and budget_context.",
+      "Publication metadata and publication-trend records can support only subject-existence or publication-activity claims; they do not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness (E_29_C2D0AFA5060E4ED3, E_29_EB10E20E98625441, E_29_EC3B9CB419FEA81B, E_33_D28EA285670B0D01).",
+      "ML-based anomaly detection is constrained by documented adversarial-ML risks, including poisoning of clustering used for malware classification and network traffic anomaly detection (E_15_D3680C31BEE2C0F8).",
+      "Edge-device environments are constrained by limited monitoring, custom malware, and the stated observation that off-the-shelf security products typically will not support edge devices (E_03_F1CA4CD00581F628).",
+      "Detection and anti-malware-related components are constrained by confirmed exploited vulnerabilities that can expose anti-malware applications or compromise malware protection engines (E_08_FEE46219AABDA967, E_08_197B243FDF3AA15A).",
+      "Evolving infostealer uniqueness and threat-actor investment are expected to pressure defender detection timelines, limiting assumptions that current detection approaches will remain adequate without re-evaluation (E_04_58956777A1075C28)."
+    ],
+    "decision_object_id": "decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28",
+    "evidence_gaps": [
+      "No in-scope infrastructure details are supplied: network architecture, endpoint/edge-device population and OS/vendor constraints, telemetry availability, existing monitoring/SIEM, data retention, alerting capacity, or deployment model.",
+      "No supplied evidence quantifies anomaly-detection integration effort, operability, scalability, maintainability, false-positive behavior, detection coverage, or performance against custom malware.",
+      "No supplied evidence shows that PMT_ANOMALY_DETECTION would be deployed, configured, tuned, or effective for the observed malware patterns, including edge-device custom malware, infostealers, backdoors, and password stealers.",
+      "No supplied evidence addresses organizational ownership, model lifecycle, data provenance, adversarial-ML testing, human triage capacity, or budget constraints for implementing anomaly detection.",
+      "No supplied evidence distinguishes between rule-based, statistical, or ML-based anomaly detection, which matters because the supplied adversarial-ML evidence specifically targets ML-based security models (E_15_D3680C31BEE2C0F8)."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "technical_feasibility",
+    "rationale": "The frozen action is ANOMALY DETECTION, assessed generally because the frozen deployment_context has null infrastructure_context, organization_type, region, and budget_context. The supplied Stage 0 records provide some general technical enablers: Crossref metadata identifies network anomaly-detection publications (E_29_C2D0AFA5060E4ED3, E_29_EB10E20E98625441), a Crossref security publication trend for anomaly detection increased from 2021 to 2024 while explicitly stating it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness (E_33_D28EA285670B0D01), and NIST AI 100-2e2023 places cybersecurity anomaly detection in an adversarial-ML and ICS/SCADA defense context (E_15_D3680C31BEE2C0F8). These records show that anomaly detection is a documented technical subject and a plausible mitigation area, but they do not establish that a specific anomaly-detection implementation would be integrable, operable, scalable, maintainable, or effective against the observed malware patterns. The same records also present material technical limitations: documented poisoning of clustering used for malware classification and network traffic anomaly detection, plus evasion evidence in related security-ML domains (E_15_D3680C31BEE2C0F8); edge-device visibility gaps, custom malware, and limited off-the-shelf security-product support for edge devices (E_03_F1CA4CD00581F628); confirmed exploited vulnerabilities that can expose or compromise anti-malware-related components (E_08_FEE46219AABDA967, E_08_197B243FDF3AA15A); infostealer innovation expected to impact defenders' detection timelines (E_04_58956777A1075C28); and visibility-limited malware such as password dumpers (E_02_F60155CA81B80881). Operational malware context adds complexity but does not directly measure anomaly-detection feasibility (E_04_270A1E7C47ACC4FF). On balance, the evidence is mixed for general technical feasibility and indeterminate for deployment-specific feasibility, so the stance is 0 rather than a directional support or challenge. Evidence sufficiency is INSUFFICIENT_CONTEXT because deployment-specific operability, compatibility, scalability, maintainability, and effectiveness cannot be judged without the missing infrastructure and organizational context.",
+    "stance": 0
+  },
+  "assessment_sha256": "5fa09d6ebb81a49bab53520a07cf7bb63444319e5d14d875fe1171cf989b0a2a",
+  "checkpoint_sha256": "71b9c61ad01b5033aed5fbe0babbb5a999cf729f8566523f600f6c5b888a66c8",
+  "created_at": "2026-11-06T10:42:07.923356+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "5829ef17bf9bd5c950bcd602e3f0d2b574c0c1e2ada3a72ec8dd5adf07d077e9",
+    "base_stage3_input_fingerprint": "85f5d5bb621f66fbf82b5be92eb41719b2a167ec11dc3ee6901a1d8fc9428bd3",
+    "base_stage3_output_sha256": "a5ce30b9c7b30338270a3f1d160af279549cbdd2f76cbe5b3acf5b9618a9a370",
+    "case_id": "main__malware__anomaly_detection",
+    "evidence_ids": [
+      "E_02_F60155CA81B80881",
+      "E_03_F1CA4CD00581F628",
+      "E_04_270A1E7C47ACC4FF",
+      "E_04_58956777A1075C28",
+      "E_08_197B243FDF3AA15A",
+      "E_08_FEE46219AABDA967",
+      "E_12_842A9CCD6A194A93",
+      "E_12_DC3A7F14C38A9DF2",
+      "E_15_556E817722D16E74",
+      "E_15_D3680C31BEE2C0F8",
+      "E_20_BF167BDA75891A3B",
+      "E_22_04CC5D97FEA06DDE",
+      "E_29_C2D0AFA5060E4ED3",
+      "E_29_EB10E20E98625441",
+      "E_29_EC3B9CB419FEA81B",
+      "E_31_6C5988FD2D0D8867",
+      "E_33_D28EA285670B0D01"
+    ],
+    "input_fingerprint": "09714cb2c74cd1de3be0a4fef15a4e132c3b50cd4620b0902d481ae4e57f7149",
+    "lens_type": "technical_feasibility",
+    "response_schema_sha256": "192900f7f42505209ddab25ee3416b676c6d881a11ab9198c72fd62a19abb652",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "2833380ddb4f7f2d1782146cc9b7e57dd6c0462d066bcaa3308784ff3521bdae",
+    "user_prompt_sha256": "50285706bebe3e4adfc73309f572992a3202de58266a8566bc22f73c9f517512",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

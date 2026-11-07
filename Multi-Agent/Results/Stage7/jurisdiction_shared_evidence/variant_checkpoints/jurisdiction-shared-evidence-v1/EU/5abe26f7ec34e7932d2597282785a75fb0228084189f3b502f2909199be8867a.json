@@ -1,0 +1,154 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-57 key-management guidance provides an institutional governance pathway for cryptography by describing identification of authorized key users, recording key actions, auditing key-access logs, and requiring traceability for plaintext key access.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG presents strong and agile encryption as a recommended cybersecurity performance goal, including properly configured TLS/SSL where feasible and identifying/updating outdated or weak encryption, which provides an implementation pathway for cryptographic controls.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-3",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-131A Rev. 2 imposes algorithm-status constraints on cryptographic deployments: two-key TDEA encryption is disallowed, three-key TDEA encryption was deprecated through 31 Dec 2023 and is disallowed afterward unless specifically allowed by other NIST guidance, while AES encryption/decryption is listed as acceptable.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-4",
+        "evidence_ids": [
+          "E_31_A0893427DD4F5B04",
+          "DE_DE08_031120C53EF050F3",
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "For the frozen EU scenario, the cited GDPR Article 32 provision places pseudonymisation and encryption of personal data within the scope of appropriate technical and organisational security measures where personal data is processed, and the supplied governance records provide key-management accountability and encryption implementation pathways; this combination supports institutional feasibility as a conditional regulatory-technical alignment, not as proof of a specific legal obligation for the reference enterprise.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-5",
+        "evidence_ids": [
+          "E_31_A0893427DD4F5B04",
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "For the frozen EU scenario, the cited GDPR Article 32 provision makes encryption of personal data a relevant security measure where personal data is processed, while the NIST transition record constrains legacy TDEA encryption; where the NIST status framework is used as the deployment compliance baseline, reliance on two-key TDEA encryption or post-2023 three-key TDEA encryption creates a migration or avoidance constraint.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-6",
+        "evidence_ids": [
+          "E_31_6BBE82F2BAC198B3",
+          "E_31_C1CFA326F0420DCA"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The supplied NIS2 excerpts describe encryption/pseudonymisation as state-of-the-art security and privacy-preserving measures in special-category processing contexts and describe differentiated supervisory regimes and national-strategy measures for essential and important entities; these records establish regulatory perimeter and supervisory differentiation, but not that the CIS IG2 reference enterprise is classified or has a particular legal obligation.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-7",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen CIS IG2 reference profile describes a multi-department enterprise that often processes sensitive client or enterprise information, may face regulatory burdens, and may require enterprise-grade technology and specialized expertise for some safeguards; this is profile context only and does not establish exact staffing, budget, sector, or legal applicability.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "Confirm whether the organization processes personal data under the cited GDPR Article 32 provision before treating encryption as a directly applicable EU legal measure for the reference enterprise. (E_31_A0893427DD4F5B04)",
+      "Confirm NIS2 essential/important classification before assessing supervisory burden or documentation obligations. (E_31_6BBE82F2BAC198B3)",
+      "Inventory cryptographic algorithms and verify whether any two-key or three-key TDEA usage requires migration or other NIST guidance permission. (DE_DE09_6719137897848A9E)",
+      "Implement or verify key-access traceability and audit logging for key generation, access, destruction, and use if key-management controls are adopted. (DE_DE08_031120C53EF050F3)",
+      "If personal data is processed, include encryption within a broader assessment of technical and organisational measures covering confidentiality, integrity, availability, resilience, timely restoration, and regular testing. (E_31_A0893427DD4F5B04)",
+      "If deployment relies on enterprise-grade technology or specialized expertise per the CIS IG2 profile, confirm that those capabilities are available. (CTX_CIS_IG2_9F94838146D9C3A4)"
+    ],
+    "constraints": [
+      "Key-management controls require or strongly recommend accountability/traceability: identification of authorized entities, recording of key actions, and audit of key-access logs; plaintext key access shall be traceable. (DE_DE08_031120C53EF050F3)",
+      "If the NIST SP 800-131A Rev. 2 status framework is used as the compliance baseline, two-key TDEA encryption is disallowed and three-key TDEA encryption is not usable for new or post-2023 encryption unless other NIST guidance allows it; AES encryption/decryption is listed as acceptable. (DE_DE09_6719137897848A9E)",
+      "CISA CPG recommends properly configured TLS/SSL where technically feasible, identifies and updates outdated or weak encryption, and considers post-quantum implications. (E_23_534489D29C38B327)",
+      "EU records make encryption and security of processing a regulatory touchpoint: GDPR Article 32 lists pseudonymisation and encryption of personal data among appropriate technical and organisational measures, and NIS2 excerpts mention encryption/pseudonymisation and supervisory differentiation. (E_31_A0893427DD4F5B04, E_31_6BBE82F2BAC198B3, E_31_C1CFA326F0420DCA)",
+      "The CIS IG2 reference profile may face regulatory burdens and some safeguards may depend on enterprise-grade technology and specialized expertise, but exact organizational capacity is not established. (CTX_CIS_IG2_9F94838146D9C3A4)"
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__ransomware__cryptography__EU",
+    "evidence_gaps": [
+      "Exact EU legal applicability to the reference enterprise is unresolved: whether it processes personal data under the cited GDPR provision and whether it is an NIS2 essential/important entity are not specified. (E_31_A0893427DD4F5B04, E_31_6BBE82F2BAC198B3, CTX_CIS_IG2_9F94838146D9C3A4)",
+      "Current use of two-key TDEA, three-key TDEA, or other disallowed/deprecated cryptographic algorithms is not specified. (DE_DE09_6719137897848A9E)",
+      "Exact budget, staffing, procurement, cost, or implementation timeline for cryptographic controls is not supplied; resource capacity is represented only by the CIS IG2 reference profile. (CTX_CIS_IG2_9F94838146D9C3A4)",
+      "Data sovereignty, cross-border transfer, and data-location constraints are not addressed by the supplied records beyond the general EU legal excerpts.",
+      "Whether the NIST and CISA guidance records are treated as binding, advisory, or merely informative for the frozen EU deployment is not specified. (DE_DE09_6719137897848A9E, E_23_534489D29C38B327)"
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Under the institutional/regional lens, the supplied records provide grounded enablement for cryptography-related institutional practice. The NIST key-management record supplies accountability/traceability and auditability controls for cryptographic key use, and the CISA CPG record supplies a recommended implementation pathway for strong, current encryption. These are directly relevant to governance feasibility for PMT_CRYPTOGRAPHY. The main grounded challenge is the NIST algorithm-transition constraint on legacy TDEA encryption, which is a compliance/implementation constraint rather than an institutional prohibition or absence of governance. EU records establish that encryption and security of processing are within the EU regulatory perimeter, but they do not establish that the CIS IG2 reference enterprise is in scope for GDPR personal-data processing or NIS2 essential/important classification. Because the missing information affects EU-specific legal precision rather than the otherwise grounded general institutional direction, evidence sufficiency is PARTIAL and the balance is supportive, not challenging.",
+    "stance": 1
+  },
+  "assessment_sha256": "1e9e8b5d2968065f9e6386bc64a0793db2f3417341f13e3443a43102df859079",
+  "checkpoint_sha256": "e92faec1d0fe1ec4bc4c068d32a1341b32654394b59c2df5de99a75936f5b595",
+  "created_at": "2026-11-06T18:11:01.106143+00:00",
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "EU",
+    "decision_object_sha256": "661db54c83a7b10d3b77c1164e64a679d67ba453afe8e92ad5af0a06a922975d",
+    "evidence_content_sha256": "6cac15ea8d654b8ad3dcf00328817c8ad97355901db8652a23eb2c41ba8f799f",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "097f55d931f4b3cea4df34e65f531a99c1ae60e3d871b61eb462c42a225c9c45",
+    "response_schema_sha256": "70b6abc141594242344eff159d3277dfafcd2b5d8ba3cbef0f4c271df7afb29e",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 44,
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "54ebf4164c1e448217f54776a71239b5fb79ad7830c25d0c9cfdbc013c5eec0f"
+  }
+}

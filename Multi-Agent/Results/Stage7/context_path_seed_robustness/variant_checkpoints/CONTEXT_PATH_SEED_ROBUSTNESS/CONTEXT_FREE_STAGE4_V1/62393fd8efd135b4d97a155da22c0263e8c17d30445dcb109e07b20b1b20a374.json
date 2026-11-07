@@ -1,0 +1,169 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF_CLM_001",
+        "evidence_ids": [
+          "E_25_99857C4681E8FEE5"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 Rev.5 includes a control to protect the authenticity of communications sessions, and the discussion states that such protection addresses man-in-the-middle attacks, session hijacking, and insertion of false information into sessions.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CLM_002",
+        "evidence_ids": [
+          "E_25_99857C4681E8FEE5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The same NIST control guidance includes an enhancement to invalidate session identifiers upon user logout or other session termination, stating that this curtails the ability of adversaries to capture and continue to employ previously valid session IDs.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CLM_003",
+        "evidence_ids": [
+          "E_10_AC5A58AF5E015229"
+        ],
+        "scope": "GENERAL",
+        "statement": "A CISA/Siemens advisory states that a cross-site scripting vulnerability in affected Siemens SCALANCE switch products could be used by a threat actor to result in the stealing of session cookies and session hijacking.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CLM_004",
+        "evidence_ids": [
+          "E_10_AC5A58AF5E015229"
+        ],
+        "scope": "GENERAL",
+        "statement": "The same advisory recommends updating affected products, minimizing network exposure, locating control system networks behind firewalls and isolating them from business networks, using more secure remote access methods such as VPNs when required, and performing impact analysis and risk assessment before deploying defensive measures.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF_CLM_005",
+        "evidence_ids": [
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "scope": "GENERAL",
+        "statement": "IBM X-Force reports that security misconfigurations were the most observed OWASP web application risk at 30% of total findings, and that top misconfiguration offenses included allowing concurrent user sessions at 15%, which could weaken MFA through session hijacking, verbose error messages at 12%, and excessive session timeouts at 8%; exploitation of public-facing applications was identified in 29% of incidents, slightly higher than 2022.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CLM_006",
+        "evidence_ids": [
+          "E_26_2A6B7965607F1AAF"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A states that organizations balance resources expended on deployment of security and privacy controls with resources expended to determine overall control effectiveness, both initially and on an ongoing basis through continuous monitoring programs.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CLM_007",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "scope": "GENERAL",
+        "statement": "A Crossref cutoff-constrained publication trend for PMT=HTTPS and security reports annual publication counts of 2021=14, 2022=8, 2023=8, and 2024=15, with OLS slope 0.300000 works/year, first-to-last delta 1, and total results 45; the record states that this does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "Provide infrastructure_context specifying the target environment's internet-facing endpoints, web application platforms, network/proxy/load-balancer topology, certificate lifecycle capability, session identifier handling, session timeout and concurrent-session settings, monitoring/logging/continuous-assessment capacity, and legacy or client compatibility constraints.",
+      "Provide evidence that the specific HTTPS configuration in that environment implements the relevant session-authenticity control category and supports invalidation of session identifiers where applicable to the observed session-hijacking mechanisms.",
+      "Provide implementation/integration evidence, including compatibility with existing applications, clients, and any OT/ICS segmentation constraints if such systems are in scope.",
+      "Provide maintainability and assessment information, such as deployment maturity, change management, update workflow, continuous monitoring, and control assessment procedures.",
+      "For a deployment-specific technical feasibility conclusion, supply the missing organization_type, region, infrastructure_context, and budget_context fields, or the technical subset of those fields sufficient to assess compatibility."
+    ],
+    "constraints": [
+      "The frozen DecisionObject leaves region, organization_type, infrastructure_context, and budget_context unknown, so deployment-specific technical compatibility cannot be concluded.",
+      "Stage 2 adjudications are treated only as reasoning provenance and are not used as external factual evidence.",
+      "HTTPS-specific feasibility support is limited to general control context, observed threat-mechanism context, control-assessment context, and publication activity; the supplied records do not establish HTTPS-specific deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+      "E_33 explicitly limits its support to publication activity and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+      "E_10 recommends impact analysis and risk assessment before deploying defensive measures, which is a supplied technical/process constraint relevant to implementation."
+    ],
+    "decision_object_id": "decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2",
+    "evidence_gaps": [
+      "No supplied Stage 0 record explicitly identifies PMT_HTTPS as implementing the session-authenticity control described in E_25.",
+      "No supplied Stage 0 record provides HTTPS-specific implementation, integration, compatibility, scalability, maintainability, or operational effectiveness evidence for session hijacking.",
+      "No infrastructure_context is supplied for target endpoints, network/application architecture, proxy/load-balancer topology, certificate lifecycle capability, session-management settings, monitoring/logging capability, or legacy compatibility.",
+      "No post-cutoff session-hijacking exploitation signal or measured success/failure data is supplied.",
+      "No supplied record establishes whether the observed XSS-based session-cookie-stealing vector or web-application session misconfiguration vector is technically addressed by the specific HTTPS configuration under consideration."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+    "lens_type": "technical_feasibility",
+    "rationale": "The supplied records provide general technical control context relevant to session hijacking, but they do not establish that the frozen PMT_HTTPS action is technically feasible in a deployment-specific sense, nor do they establish that HTTPS specifically implements the cited session-authenticity control category or has operational effectiveness against the reported session-hijacking mechanisms. E_25 supports the existence of a session-authenticity control discussion and an enhancement related to invalidating session identifiers. E_10 and E_04 describe observed session-hijacking-related attack vectors and web-application misconfiguration risk, but they do not show that HTTPS addresses those vectors. E_26 supports the general existence of control deployment and continuous assessment/monitoring practice, but not HTTPS-specific operability. E_33 reports only an HTTPS publication trend and explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Because infrastructure_context is unknown, deployment-specific compatibility cannot be assessed. The balance of evidence is therefore mixed/indeterminate rather than clearly supported or clearly challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "6ba040dc9de164f0cfe5c3e4c0ee554d4adcb6760883260cb12d5e720d7dfa10",
+  "checkpoint_sha256": "81bac4fc44e75db5b44c84a73d7fe00d62cefec8d96a2036afb5175a9af3a2c6",
+  "created_at": "2026-11-06T11:57:38.590999+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "8cbf609b1a0d7e51b91d7b153f0e4beabeb29c8ab5e339c4a1ae6911801acc3e",
+    "base_stage3_input_fingerprint": "13e1f696777533a58c7b3a267384ff9a72bfbcdcf73feae811f1626308c8a589",
+    "base_stage3_output_sha256": "4eb586fd629f7e886172255798473e9ecf9d48ada2ef4f48d39c9c6c4bf13bfd",
+    "case_id": "main__session_hijacking__https",
+    "evidence_ids": [
+      "E_02_3AE1561299B667F5",
+      "E_03_6B1B12ABFD14313F",
+      "E_04_B9A3190D9CA152A3",
+      "E_10_AC5A58AF5E015229",
+      "E_12_9B8ECD82AD844621",
+      "E_12_CFEC6517865F0563",
+      "E_19_A61B74B0F1435639",
+      "E_19_E896356AEE4DB2CD",
+      "E_20_88F8C63B0AC62BEC",
+      "E_22_808618C790A7133A",
+      "E_23_6C42FC29A05ADCAE",
+      "E_25_99857C4681E8FEE5",
+      "E_26_2A6B7965607F1AAF",
+      "E_29_2B4FE56914E3B676",
+      "E_29_5608502338822397",
+      "E_29_B82ABFE7422C38D1",
+      "E_33_13A684B424C1D15B"
+    ],
+    "input_fingerprint": "62393fd8efd135b4d97a155da22c0263e8c17d30445dcb109e07b20b1b20a374",
+    "lens_type": "technical_feasibility",
+    "response_schema_sha256": "b8f8cca2fee4f1f1c92a7e428e329f2d00a0714e25a7968d015c01393d39d87a",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "2833380ddb4f7f2d1782146cc9b7e57dd6c0462d066bcaa3308784ff3521bdae",
+    "user_prompt_sha256": "f65d8f6bd31189297fc36a6963116ceee690a55da8efa2d276ac4981f6bd6fd8",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

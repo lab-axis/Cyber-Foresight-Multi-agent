@@ -1,0 +1,118 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_CLM_1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST key-management guidance supports institutional governance enablement by describing accountability and traceability mechanisms for cryptographic key generation, access, destruction, use, and audit logging.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The CPG record supplies an institutional recommended-action pathway for deploying strong and agile encryption, including properly configured up-to-date SSL/TLS, identification and update of outdated or weak encryption, and consideration of post-quantum implications.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_3",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-131A Rev. 2 creates a compliance constraint on cryptographic implementation by disallowing or deprecating certain algorithms and identifying AES-128, AES-192, and AES-256 encryption as acceptable.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_4",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen reference-enterprise profile is CIS IG2, described as a multi-department enterprise IT environment that may face regulatory burdens and may require enterprise-grade technology and specialized expertise for some safeguards; this record does not by itself establish feasibility direction.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC KR legal/regulatory feasibility conclusion requires exact KR-specific regulatory_applicability evidence in addition to direction-carrying governance or compliance evidence.",
+      "The GENERAL institutional support is conditional on the organization being able to implement key-management accountability/traceability and algorithm-compliance actions.",
+      "If migration from disallowed or deprecated algorithms is required, the burden is conditional on actual current algorithm usage and organizational capacity, neither of which is supplied."
+    ],
+    "constraints": [
+      "Key-management accountability and traceability must be considered if the organization adopts the supplied NIST key-management guidance, including identification of authorized entities, access control, and audit logging of key access (DE_DE08_031120C53EF050F3).",
+      "Encryption deployment is constrained by the CPG recommended action to use properly configured and up-to-date SSL/TLS when technically feasible, identify and update outdated or weak encryption, and consider post-quantum implications (E_23_534489D29C38B327).",
+      "Algorithm selection is constrained by the supplied NIST transition guidance, which disallows or deprecates certain algorithms and lists AES-128, AES-192, and AES-256 encryption as acceptable (DE_DE09_6719137897848A9E).",
+      "The CIS IG2 reference profile may require enterprise-grade technology and specialized expertise for some safeguards, but exact staffing, budget, procurement, or capacity details are not supplied (CTX_CIS_IG2_9F94838146D9C3A4)."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__ransomware__cryptography__KR",
+    "evidence_gaps": [
+      "No supplied evidence provides KR-specific regulatory_applicability for the frozen Republic of Korea scenario.",
+      "No supplied evidence establishes data sovereignty, cross-border data transfer, or sector-specific obligations for the CIS IG2 reference enterprise.",
+      "No supplied evidence quantifies budget, staffing, procurement, or cost burden for adopting or migrating cryptographic controls.",
+      "No supplied evidence establishes whether the frozen environment currently uses disallowed or deprecated algorithms identified in the supplied transition guidance."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied general institutional evidence provides enablement for the frozen CRYPTOGRAPHY action through key-management accountability/traceability guidance and a CPG recommended action for strong and agile encryption, including TLS use and handling of outdated or weak encryption. A compliance-constraint record from NIST SP 800-131A Rev. 2 limits algorithm choices by disallowing or deprecating certain algorithms and identifying AES variants as acceptable. This creates a compliance constraint, but the supplied records do not quantify the burden, establish actual noncompliance, or establish binding Republic of Korea legal applicability. Because no KR-specific regulatory_applicability evidence is supplied, the supported direction remains GENERAL institutional feasibility rather than a DEPLOYMENT_SPECIFIC legal/regulatory conclusion.",
+    "stance": 1
+  },
+  "assessment_sha256": "ecf402c06acab5278180b83210f59da501946e59222f28b78ed32d9384a7d25f",
+  "checkpoint_sha256": "b90e7323fd921d4effeaef93016bc3a0a30c92d160bac01fc390fc76d7865516",
+  "created_at": "2026-11-06T16:24:49.437329+00:00",
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "KR",
+    "decision_object_sha256": "ca66e720ad16c0689dfeeb396c6e965e31e719fb68b48d99cf18da0b80aca6eb",
+    "evidence_content_sha256": "6cac15ea8d654b8ad3dcf00328817c8ad97355901db8652a23eb2c41ba8f799f",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "bb995315bedfdddde2761ba9e34120eb8aa47eb17296692f6e0fc4591a490499",
+    "response_schema_sha256": "b15b90919622beea1732d5b40498996cc5a467b0c23da022569ff4d06b6401fc",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 42,
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "835abd638b04665a6a033a3bfb32e4f17f7d490cfa40c40b5041ecdf0554e857"
+  }
+}

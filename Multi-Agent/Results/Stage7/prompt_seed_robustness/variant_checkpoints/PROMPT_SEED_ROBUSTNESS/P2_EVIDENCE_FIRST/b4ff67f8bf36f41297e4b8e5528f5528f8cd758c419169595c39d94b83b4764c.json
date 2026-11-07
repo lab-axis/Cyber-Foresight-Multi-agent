@@ -1,0 +1,155 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-SUPPORT-1",
+        "evidence_ids": [
+          "DE_DE05_105D0030778F41BC"
+        ],
+        "scope": "GENERAL",
+        "statement": "Anomaly detection can support institutional oversight of IT, personnel, and data resources, faster incident response, expanded visibility, and real-time alerting, and can be used within a voluntary risk-based framework described as not imposing additional regulatory requirements.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-SUPPORT-2",
+        "evidence_ids": [
+          "DE_DE04_0B77B88875745973"
+        ],
+        "scope": "GENERAL",
+        "statement": "Institutional governance pathways for detection infrastructure include separate accounts, restricted network access to components, protected management communications, ongoing monitoring and vulnerability response, configuration backups, and consideration of multiple IDPS technologies.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-SUPPORT-3",
+        "evidence_ids": [
+          "DE_DE06_14CCCEB6F82351D5"
+        ],
+        "scope": "GENERAL",
+        "statement": "Auditability and governance are supported by documented capabilities to send audit logs to an external audit process, monitor configuration changes, detect remote activation, and take organizationally defined actions.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-NEUTRAL-1",
+        "evidence_ids": [
+          "DE_DE16_CEA1C38E613068F8"
+        ],
+        "scope": "GENERAL",
+        "statement": "Anomaly-based detection can address unknown threats, but it is also sensitive to network or device changes, subject to false negatives, subjective, prone to misinterpretation, unpredictable, and requires trust in system behavior; host-based IDS can incur a computer resource penalty.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-NEUTRAL-2",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen CIS IG2 reference profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure, may face regulatory burdens, and may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "Supply jurisdiction-specific regulatory_applicability evidence before making any DEPLOYMENT_SPECIFIC institutional/regional legal judgment.",
+      "Integrate anomaly-detection alerts and audit logs into oversight, incident response, and external audit/review processes (DE_DE05_105D0030778F41BC, DE_DE06_14CCCEB6F82351D5).",
+      "Apply secure administration practices such as account separation, access restriction, protected management communications, configuration backups, and update testing (DE_DE04_0B77B88875745973).",
+      "Address anomaly-detection operational caveats through tuning, change management, and resource assessment before relying on it for unknown malware (DE_DE16_CEA1C38E613068F8).",
+      "Confirm availability of enterprise-grade technology and specialized expertise if IG2 safeguards are to be used, without assuming exact staffing or budget (CTX_CIS_IG2_9F94838146D9C3A4)."
+    ],
+    "constraints": [
+      "Institutional operation should treat anomaly/IDS as a warning or audit system, with tuning and change management because anomaly-based behavior can be subjective, unpredictable, and false-negative (DE_DE16_CEA1C38E613068F8).",
+      "Host-based detection deployment may carry a computer-resource penalty and must be assessed against constrained environments (DE_DE16_CEA1C38E613068F8).",
+      "Secure administration requirements include separate accounts, restricted access, protected management communications, backup of configurations, and testing before update deployment (DE_DE04_0B77B88875745973).",
+      "The IG2 reference profile may require enterprise-grade technology and specialized expertise; exact staffing, budget, vendor, and architecture are not assumed (CTX_CIS_IG2_9F94838146D9C3A4)."
+    ],
+    "decision_object_id": "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+    "evidence_gaps": [
+      "No regulatory_applicability evidence for the masked jurisdiction is supplied, so a DEPLOYMENT_SPECIFIC regional/legal feasibility claim cannot be grounded.",
+      "No compliance_constraint evidence is supplied in the eligible institutional/regional set, so specific compliance burden, regulatory compatibility, data sovereignty, and cross-border constraints are not assessed.",
+      "No supplied evidence addresses anomaly-detection data handling, log retention, data localization, data sovereignty, or cross-border transfer in the frozen masked region.",
+      "Exact deployment context needed for deployment-specific institutional capacity—staffing, budget, vendor, architecture, and jurisdiction-specific obligations—is absent, with only the CIS IG2 reference profile available (CTX_CIS_IG2_9F94838146D9C3A4)."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Inventory of the supplied directional grounding contract: under institutional_regional GENERAL, the only directionally eligible decision-evidence records are DE_DE05_105D0030778F41BC, DE_DE04_0B77B88875745973, DE_DE06_14CCCEB6F82351D5, and DE_DE16_CEA1C38E613068F8, all classified for this lens as governance_enablement. No compliance_constraint record is supplied in the directionally eligible set, and no regulatory_applicability record is supplied for the masked jurisdiction. Therefore, no DEPLOYMENT_SPECIFIC legal/regional feasibility direction can be grounded. The GENERAL institutional direction is supported by governance_enablement evidence: oversight of resources, incident response, visibility/alerting, secure administration, configuration backups, audit logging, and configuration-change monitoring. DE_DE16_CEA1C38E613068F8 also documents operational caveats, but because challenge_slots require compliance_constraint evidence, those caveats are treated as constraints and conditional requirements rather than a grounded institutional/regional challenge. Forecast records and the CTX_CIS_IG2 profile provide context only and do not independently support a directional institutional/regional feasibility conclusion. Because the jurisdiction is intentionally masked, the conclusion remains GENERAL and jurisdiction-invariant.",
+    "stance": 1
+  },
+  "assessment_sha256": "0791536ea0c7df30e8f29038e7f4819cf6c22d773ab7a7d3daaf84ac49f56b5f",
+  "checkpoint_sha256": "bdc78ef79b61656e31b86f8225bbb11f5979ddaa612517fd418503042d4d7262",
+  "created_at": "2026-11-06T08:24:29.208129+00:00",
+  "identity": {
+    "axis": "PROMPT_SEED_ROBUSTNESS",
+    "case_id": "main__malware__anomaly_detection",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE04_0B77B88875745973",
+        "DE_DE05_105D0030778F41BC",
+        "DE_DE06_14CCCEB6F82351D5",
+        "DE_DE16_CEA1C38E613068F8"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "b4ff67f8bf36f41297e4b8e5528f5528f8cd758c419169595c39d94b83b4764c",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__eu__cis_ig2__7b3abb36d94e3682",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__us__cis_ig2__72ba6e0d3d843499"
+    ],
+    "payload_sha256": "2c9392660f945f132847e785f91999d9d776baffae5bb17fe7eca2bab3d63a30",
+    "payload_transform_id": null,
+    "prompt_variant": "P2_EVIDENCE_FIRST",
+    "repeat_index": 44,
+    "response_schema_sha256": "6e113f72d4a320cf7270e9006ee14a01df6feaac2c80b56d06bcb1457062c250",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "dff05310cdf7f806d7e6e33d8fa16542fbef2fd075104f447caecfa259cf13a4",
+    "variant_id": "P2_EVIDENCE_FIRST"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "experiment": "CONTEXT_PATH_SEED_ROBUSTNESS",
+  "cases": [
+    "main__ddos__nlp_llm",
+    "main__malware__anomaly_detection",
+    "main__ransomware__cryptography",
+    "main__insider_threat__cryptography",
+    "main__brute_force__ids_ips",
+    "main__targeted_attack__access_control",
+    "main__session_hijacking__https"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "note": "Seven Threat-PMT case clusters, 21 aligned scenario rows. Each context-free case is generated once per seed and copied to three jurisdictions. Three seeds provide descriptive comparisons, not independent 21-case samples or a sampling confidence bound. Context-free and contextualized paths differ in evidence packs and grounding conditions; the comparison is bundled, not a causal effect of context alone.",
+  "same_seed_context_free_vs_contextualized": {
+    "42": {
+      "n": 21,
+      "stance_agreement_mean": 0.3333333333333333,
+      "evidence_id_overlap_mean": 0.018040293040293042,
+      "claim_direction_overlap_mean": 0.5873015873015872,
+      "recommendation_consistency_rate": 0.2857142857142857,
+      "d_lens_abs_delta_median": 0.222222
+    },
+    "43": {
+      "n": 21,
+      "stance_agreement_mean": 0.2698412698412698,
+      "evidence_id_overlap_mean": 0.011515717398070339,
+      "claim_direction_overlap_mean": 0.6137566137566137,
+      "recommendation_consistency_rate": 0.6666666666666666,
+      "d_lens_abs_delta_median": 0.222222
+    },
+    "44": {
+      "n": 21,
+      "stance_agreement_mean": 0.2698412698412698,
+      "evidence_id_overlap_mean": 0.04069854437501497,
+      "claim_direction_overlap_mean": 0.5396825396825397,
+      "recommendation_consistency_rate": 0.7142857142857143,
+      "d_lens_abs_delta_median": 0.222222
+    }
+  },
+  "same_path_between_seeds": {
+    "context_free": {
+      "42-43": {
+        "n": 21,
+        "stance_agreement_mean": 0.9523809523809523,
+        "evidence_id_overlap_mean": 0.4200355200355201,
+        "claim_direction_overlap_mean": 0.4047619047619047,
+        "recommendation_consistency_rate": 1.0,
+        "d_lens_abs_delta_median": 0.0
+      },
+      "42-44": {
+        "n": 21,
+        "stance_agreement_mean": 0.9523809523809523,
+        "evidence_id_overlap_mean": 0.4464372928658643,
+        "claim_direction_overlap_mean": 0.4603174603174603,
+        "recommendation_consistency_rate": 1.0,
+        "d_lens_abs_delta_median": 0.0
+      },
+      "43-44": {
+        "n": 21,
+        "stance_agreement_mean": 1.0,
+        "evidence_id_overlap_mean": 0.6739229024943311,
+        "claim_direction_overlap_mean": 0.6587301587301587,
+        "recommendation_consistency_rate": 1.0,
+        "d_lens_abs_delta_median": 0.0
+      }
+    },
+    "contextualized": {
+      "42-43": {
+        "n": 21,
+        "stance_agreement_mean": 0.6825396825396826,
+        "evidence_id_overlap_mean": 0.7791761148904006,
+        "claim_direction_overlap_mean": 0.9682539682539683,
+        "recommendation_consistency_rate": 0.47619047619047616,
+        "d_lens_abs_delta_median": 0.0
+      },
+      "42-44": {
+        "n": 21,
+        "stance_agreement_mean": 0.6349206349206349,
+        "evidence_id_overlap_mean": 0.7421201814058958,
+        "claim_direction_overlap_mean": 0.9576719576719577,
+        "recommendation_consistency_rate": 0.5714285714285714,
+        "d_lens_abs_delta_median": 0.0
+      },
+      "43-44": {
+        "n": 21,
+        "stance_agreement_mean": 0.7142857142857143,
+        "evidence_id_overlap_mean": 0.7654195011337869,
+        "claim_direction_overlap_mean": 0.9894179894179894,
+        "recommendation_consistency_rate": 0.6666666666666666,
+        "d_lens_abs_delta_median": 0.0
+      }
+    }
+  },
+  "payload_sha256": "da18b2bc8196a4b13ece23245256a648d0bf10d1afb720b01577ea1abc7e97b1"
+}

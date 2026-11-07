@@ -1,0 +1,108 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_GEN_SUPPORT_KEY_MANAGEMENT_GOVERNANCE",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST key-management guidance provides an accountability/traceability framework for cryptographic key generation, access, use, destruction, and audit logging, which supports general institutional governance and auditability pathways for cryptography.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_GEN_SUPPORT_ENCRYPTION_IMPLEMENTATION_PATHWAY",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CISA CPG strong-encryption guidance recommends deploying effective encryption, using properly configured and up-to-date SSL/TLS where technically feasible, and planning to identify and update outdated or weak encryption while considering post-quantum implications, which supports a general institutional implementation pathway for cryptographic safeguards.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_GEN_CHALLENGE_ALGORITHM_TRANSITION_CONSTRAINT",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST SP 800-131A Rev. 2 guidance defines approval, disallowance, and deprecation statuses for cryptographic algorithms, including disallowed two-key TDEA encryption and SKIPJACK encryption, and three-key TDEA encryption deprecated through December 31, 2023 and disallowed afterward unless otherwise allowed, which creates a bounded compliance and algorithm-retirement constraint for cryptographic deployment.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A KR-specific deployment-specific feasibility conclusion would require jurisdiction-specific regulatory applicability evidence for cryptographic or encryption requirements in the frozen Republic of Korea scenario.",
+      "Before deployment or migration, current cryptographic algorithms should be verified against the supplied approval, disallowance, and deprecation statuses.",
+      "The enterprise should implement or be able to demonstrate key-management accountability, authorized-entity identification, access control, and audit/traceability for cryptographic key use.",
+      "The enterprise should maintain encryption configurations to avoid outdated or weak algorithms and should consider post-quantum implications as described in the supplied guidance."
+    ],
+    "constraints": [
+      "Cryptographic key use should be governed by accountability, identification of authorized entities, access-control mechanisms, and audit/traceability records for key generation, access, destruction, and other use.",
+      "Encryption deployment should use properly configured and up-to-date SSL/TLS where technically feasible, and organizations should plan to identify and update outdated or weak encryption while considering post-quantum implications.",
+      "Algorithm selection should account for the supplied NIST SP 800-131A Rev. 2 approval, disallowance, and deprecation statuses to avoid non-compliant use of affected cryptographic algorithms."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__ransomware__cryptography__KR",
+    "evidence_gaps": [
+      "No KR-specific regulatory_applicability, legal obligation, data-sovereignty, or cross-border constraint evidence is supplied under the Institutional/Regional directional grounding contract, so a DEPLOYMENT_SPECIFIC regional/legal conclusion is not supportable.",
+      "No deployment-specific evidence is supplied about the enterprise's current cryptographic inventory, current algorithm usage, key-management maturity, staffing, or compliance processes.",
+      "No supplied evidence establishes whether the NIST or CISA guidance is legally binding or formally adopted in the frozen Republic of Korea scenario."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Under this lens, the frozen action has a GENERAL institutional feasibility support. The direction-carrying governance_enablement records provide concrete institutional and auditability pathways for cryptographic controls: key-management accountability/traceability and a recommended strong-encryption implementation pathway. The direction-carrying compliance_constraint record introduces a bounded algorithm-selection and algorithm-retirement constraint, but it does not evidence a prohibition, cross-border barrier, or material institutional/regional infeasibility. Because the frozen scenario is Republic of Korea and the supplied directional grounding contract contains no KR-specific regulatory_applicability record, a DEPLOYMENT_SPECIFIC regional/legal conclusion is not supportable. That missing jurisdiction-specific context is recorded as an evidence gap and does not overturn the grounded GENERAL institutional support.",
+    "stance": 1
+  },
+  "assessment_sha256": "7232c57ea452f0509f90a90a471db93ecb5569a51726d78d5fb54623a3146c7b",
+  "checkpoint_sha256": "4b82298db6f2dc1658097c8542ec89636129eb5f9f8001810d09c991c4cf4609",
+  "created_at": "2026-11-06T17:15:40.056329+00:00",
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "KR",
+    "decision_object_sha256": "ca66e720ad16c0689dfeeb396c6e965e31e719fb68b48d99cf18da0b80aca6eb",
+    "evidence_content_sha256": "6cac15ea8d654b8ad3dcf00328817c8ad97355901db8652a23eb2c41ba8f799f",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "bb995315bedfdddde2761ba9e34120eb8aa47eb17296692f6e0fc4591a490499",
+    "response_schema_sha256": "b15b90919622beea1732d5b40498996cc5a467b0c23da022569ff4d06b6401fc",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 43,
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "835abd638b04665a6a033a3bfb32e4f17f7d490cfa40c40b5041ecdf0554e857"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF-C1",
+        "evidence_ids": [
+          "E_25_746173685B235ED2"
+        ],
+        "scope": "GENERAL",
+        "statement": "Cryptography can be employed to support protection of classified information and controlled unclassified information, the provision and implementation of digital signatures, enforcement of information separation when authorized individuals have the necessary clearances but lack the necessary formal access approvals, and random number and hash generation.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C2",
+        "evidence_ids": [
+          "E_23_A793FAF5B393EFE3"
+        ],
+        "scope": "GENERAL",
+        "statement": "Encryption is defined as any procedure used in cryptography to convert plain text into cipher text to prevent anyone but the intended recipient from reading that data, and hashing is defined as a process of applying a mathematical algorithm against a set of data to produce a numeric hash value that represents the data.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C3",
+        "evidence_ids": [
+          "E_16_E7BB108A85B71262"
+        ],
+        "scope": "GENERAL",
+        "statement": "A cryptographic or digital signature provides assurance that the claimed signatory signed and that information was not modified after signature generation, and it is described as a more robust solution than a recomputable fingerprint for authenticating content and metadata.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C4",
+        "evidence_ids": [
+          "E_16_E7BB108A85B71262"
+        ],
+        "scope": "GENERAL",
+        "statement": "A cryptographic hash or checksum fingerprint appended as metadata can be recomputed and overwritten when the content or metadata is modified, indicating a technical limitation of fingerprint-only metadata authentication.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C5",
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref cutoff-constrained PMT publication trend for CRYPTOGRAPHY reports annual publication counts 2021=210, 2022=254, 2023=272, and 2024=330, with OLS slope 37.8 works/year, first-to-last delta 120, and total results 1066; it explicitly states that this trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-C6",
+        "evidence_ids": [
+          "E_20_913B6F999A0F1458"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-161 Rev.1 C-SCRM supplemental guidance states that predefined frequencies for data collection should be less predictable in order to reduce the risk of an insider threat bypassing security mechanisms.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-C7",
+        "evidence_ids": [
+          "E_22_C239828119FC69CD"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA insider threat mitigation guidance describes an insider threat mitigation program spanning the organization that should use training and awareness, policy and procedure, and management practices to deter, detect, and prevent wrongdoing, and should apply the framework of detect and identify, assess, and manage.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-C8",
+        "evidence_ids": [
+          "E_26_92664A4339CF24C9"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A Rev.5 assessment reference includes personnel responsible for the insider threat program and members of the cross-discipline insider threat incident handling team.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific technical feasibility conclusion requires infrastructure_context sufficient to assess compatibility with existing PKI/key management, key storage/HSM, identity/access controls, data stores, network architecture, endpoints, and operational workflows.",
+      "Threat-mitigation fit requires evidence identifying the specific insider-threat mechanism, data flows, and assets that cryptography would protect, restrict, or authenticate.",
+      "Horizon feasibility for 2025-2027 requires evidence of an integration path, key/certificate lifecycle operations, maintenance processes, and performance/capacity constraints.",
+      "Scalability and maintainability require evidence of key distribution, renewal/rotation, monitoring, update processes, and operational workload."
+    ],
+    "constraints": [
+      "General technical capability claims are limited to the supplied guidance records and do not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+      "TF-C5 explicitly notes that the Crossref publication trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+      "TF-C4 identifies a technical limitation: a recomputable hash/checksum fingerprint can be overwritten if content or metadata is modified.",
+      "Deployment-specific compatibility cannot be asserted because infrastructure_context is null in the frozen deployment_context.",
+      "The insider-threat program and assessment records provide context, not direct cryptography deployment effectiveness evidence."
+    ],
+    "decision_object_id": "decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f",
+    "evidence_gaps": [
+      "infrastructure_context is missing; it is required for a deployment-specific technical compatibility conclusion.",
+      "Missing existing cryptographic infrastructure details: PKI, key management, key storage/HSM, certificate lifecycle, identity/access integration, data classification, network segmentation, endpoints, and integration points.",
+      "Missing direct linkage between the specific THREAT_INSIDER_THREAT mechanism/data flows and the cryptographic controls to be deployed.",
+      "Missing implementation, integration, operability, scalability, maintainability, and operational-effectiveness evidence for PMT_CRYPTOGRAPHY within the 2025-2027 timing window.",
+      "organization_type, region, and budget_context are missing; they may be needed for deployment-specific constraints, although the primary missing technical context is infrastructure_context."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "technical_feasibility",
+    "rationale": "The supplied records support general technical feasibility of CRYPTOGRAPHY as a control class. TF-C1, TF-C2, and TF-C3 establish encryption/hashing, digital-signature, and information-separation capabilities. TF-C4 identifies a technical limitation for fingerprint-only metadata authentication, while TF-C3 supports digital signatures as a stronger mechanism. TF-C5, TF-C6, TF-C7, and TF-C8 provide neutral context about publication activity and insider-threat program/assessment guidance, but they do not establish deployment-specific implementation, integration, operability, scalability, maintainability, or operational effectiveness for PMT_CRYPTOGRAPHY against THREAT_INSIDER_THREAT within the 2025-2027 window. Because infrastructure_context is null and deployment-specific evidence is missing, the overall technical feasibility is mixed/indeterminate under this lens.",
+    "stance": 0
+  },
+  "assessment_sha256": "bf539bc71b60aa282ddce3b5abda802b8a31fa4a3bbadb54fa60deec46a8c10b",
+  "checkpoint_sha256": "bfabd88589ca67275e2c18ff9c9189fcda51d32dbb10e76981c73c784d42cee1",
+  "created_at": "2026-11-06T12:53:28.337757+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "3ed8cc05c62160848afb3b993ca7fe3e3f971f50396fab97f444e84ae643a418",
+    "base_stage3_input_fingerprint": "15d2e4849f93240cc2a6777986f6ac3e7911baf6c677e50d35bfeb35e6e3cb68",
+    "base_stage3_output_sha256": "c470023689b7e9e573ae0ebe688ded54cf26f72f31927485b386dab4e7573f23",
+    "case_id": "main__insider_threat__cryptography",
+    "evidence_ids": [
+      "E_15_0A98378FC609EF7E",
+      "E_16_E7BB108A85B71262",
+      "E_19_4E69D255F61736DB",
+      "E_20_913B6F999A0F1458",
+      "E_22_C239828119FC69CD",
+      "E_23_A793FAF5B393EFE3",
+      "E_25_746173685B235ED2",
+      "E_26_92664A4339CF24C9",
+      "E_29_185B62FFF51926EC",
+      "E_29_3C1B7B4F9532A5F2",
+      "E_29_7C01F6CA0D982DFF",
+      "E_33_CDE0F421E4D797ED"
+    ],
+    "input_fingerprint": "d6f11d1398cceccd7a99572144615621474f9b2505a4781b9185fd0ab30c65b8",
+    "lens_type": "technical_feasibility",
+    "response_schema_sha256": "80f827647ba2de51aa301e2ec50215fb3fec1d56baa5259d52460cc0533d5e34",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "2833380ddb4f7f2d1782146cc9b7e57dd6c0462d066bcaa3308784ff3521bdae",
+    "user_prompt_sha256": "2979e95dbc0a89bc95a1f7e067f16756040c4592be3eab46558d7ce0d74f8150",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

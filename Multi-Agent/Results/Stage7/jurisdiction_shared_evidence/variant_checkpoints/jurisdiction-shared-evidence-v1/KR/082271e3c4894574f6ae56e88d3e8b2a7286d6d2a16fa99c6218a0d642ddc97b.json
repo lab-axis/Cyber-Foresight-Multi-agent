@@ -1,0 +1,101 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_GEN_SUPPORT_01",
+        "evidence_ids": [
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE17_567DDA7CFBC62829"
+        ],
+        "scope": "GENERAL",
+        "statement": "General institutional feasibility is supported by eligible governance-enablement records that describe policy, governance, compliance-integration, and monitoring pathways for access control, including enterprise-wide ABAC policy and attribute governance with access-failure handling, zero-trust policy decisioning integrated with an industry compliance system and asset/threat data sources, and governance/monitoring expectations for policy enforcement and detection of unauthorized access.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_GEN_CHALLENGE_01",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "scope": "GENERAL",
+        "statement": "A general compliance constraint is indicated by the digital identity guidance record, which specifies session and access-token management requirements, including secure-session-only cookies, host/path limitation, timeout/acceptance rules, and session identifier verification.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC support direction would require KR-specific regulatory_applicability evidence plus eligible governance_enablement evidence.",
+      "A DEPLOYMENT_SPECIFIC challenge direction would require KR-specific regulatory_applicability evidence plus eligible compliance_constraint evidence showing a materially restrictive obligation or barrier.",
+      "If the NIST SP 800-63B session/token requirements are adopted as the applicable baseline, implementation must satisfy those session-management requirements (DE_DE13_055FC5E35FA61DD5)."
+    ],
+    "constraints": [
+      "Where attribute-based access control is used, the cited ABAC guidance indicates a need for enterprise-level policy reflection, consistent attribute definitions, and procedures for handling access denials and errors (DE_DE11_1E4AAE06CC3795D7).",
+      "Where access control is implemented through zero-trust-style policy decisions, the cited architecture identifies integration with an industry compliance system, continuous diagnostics and mitigation data, and threat intelligence inputs (DE_DE12_E6F93E4AB8722379).",
+      "The cited zero-trust maturity guidance indicates governance expectations for policy/procedure enforcement and monitoring/assessment of security capabilities to detect unauthorized access and changes (DE_DE17_567DDA7CFBC62829).",
+      "The cited digital identity guidance imposes session and access-token management requirements that must be addressed if that guidance is used as the applicable compliance baseline (DE_DE13_055FC5E35FA61DD5)."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__targeted_attack__access_control__KR",
+    "evidence_gaps": [
+      "No KR-specific regulatory_applicability evidence is present in the supplied directional grounding contract, so a DEPLOYMENT_SPECIFIC regional legal feasibility direction cannot be grounded.",
+      "No supplied evidence addresses KR-specific data sovereignty, cross-border constraints, jurisdiction-specific auditability/accountability rules, or compliance burden for this action.",
+      "No deployment-specific budget, staffing, architecture, vendor, sector, or data-processing activity is supplied; therefore the magnitude of the institutional/compliance burden cannot be assessed."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied records support general institutional/regional feasibility more than they challenge it. The governance_enablement records describe workable institutional pathways for access control: enterprise-wide ABAC policy and attribute governance with failure handling, zero-trust policy decisioning integrated with compliance and asset/threat data sources, and governance/monitoring expectations for enforcing policy and detecting unauthorized access. The one eligible compliance_constraint record adds a real but narrow technical constraint: session and access-token management requirements from the digital identity guidance. On balance, the enablement evidence is broader and more directly institutional, while the challenge evidence does not establish a regional legal barrier, quantified burden, or infeasibility. A deployment-specific legal direction for the frozen KR scenario remains ungrounded because no KR-specific regulatory_applicability evidence is supplied in the directional grounding contract; that missing context is retained as a gap rather than converted into a stance.",
+    "stance": 1
+  },
+  "assessment_sha256": "37bcd753c78a1dae6a75c27b8fbc0129ad1bb9107efcf189755a5acc9cb7d91e",
+  "checkpoint_sha256": "e7151e4de09d8c26d383a7f0e93d5f4d423860d347e8d8dc4ca1cf3580be6077",
+  "created_at": "2026-11-06T17:41:30.247776+00:00",
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "KR",
+    "decision_object_sha256": "c26f9f334788191cf00c0e3fc6aa3692bbd2899def91bad561b5d9a2c9a3faa7",
+    "evidence_content_sha256": "6681d8d141722dd7c750a770868fe87894ac89ad6084200a015bf1bff0400f6e",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "4e4f36e9de0c845cce3c650c5f32c845603ca11670a941e045ea00165150010d",
+    "response_schema_sha256": "f1312dd9ae46019d21b1e195458bad5ba1d15759e96b3303227a1b9f38789882",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 43,
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "7244ff5d59c513601925804367d324f8d163e2ed11996047d364db60959df13a"
+  }
+}

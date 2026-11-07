@@ -1,0 +1,111 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_GEN_SUPPORT_01",
+        "evidence_ids": [
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE17_567DDA7CFBC62829"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied governance-enablement records support institutional feasibility for ACCESS CONTROL by describing governance and operational pathways for access decisions: policy enforcement points and an industry compliance system for policy rules under regulatory regimes; governance of cybersecurity policies, procedures, and processes with monitoring and assessment to detect unauthorized access; and ABAC governance functions including consistent attribute values, attribute lifecycle management, and procedures for access failures and access denials.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_GEN_CHALLENGE_01",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied compliance-constraint record challenges implementation feasibility for ACCESS CONTROL by imposing identity/session safeguards, including authenticated protected channels for access tokens, timeout requirements, prohibition of insecure fallback, session-identifier verification, and secure browser-cookie handling. These requirements increase compliance burden but do not by themselves establish infeasibility.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_REGIONAL_CONTEXT_01",
+        "evidence_ids": [
+          "E_31_96F42990F3AEAC86",
+          "E_31_52DCE9554453ADEF"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The supplied EU primary-law records provide jurisdiction-specific regulatory context for access control: one record states that essential and important entities should have appropriate access control policies as part of cybersecurity risk-management measures, and another record promotes access policy and access management for providers of public electronic communications networks or services. These records do not establish that the frozen reference enterprise is subject to the cited EU obligations, and regulatory applicability alone does not carry a positive or negative feasibility direction.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "Before making a firm deployment-specific EU legal conclusion, confirm whether the enterprise falls within the scope of the cited EU risk-management or communications-provider obligations.",
+      "Assign clear institutional accountability for access-control policy governance, exception handling, monitoring, and auditability if the ABAC or zero-trust pathways described in the supplied governance records are adopted.",
+      "Validate whether the deployment's identity/session mechanisms can satisfy the constraints in DE_DE13_055FC5E35FA61DD5 before treating those constraints as a material implementation barrier."
+    ],
+    "constraints": [
+      "Access-control implementation must account for the identity/session compliance constraints in DE_DE13_055FC5E35FA61DD5, including protected channels, timeout and no-insecure-fallback requirements, session-identifier verification, and secure cookie handling.",
+      "The EU regulatory-applicability records are present in the evidence boundary but do not establish that the frozen CIS IG2 reference enterprise is an essential or important entity or otherwise subject to the cited EU risk-management expectations.",
+      "The frozen context does not supply exact budget, staffing, vendor, product version, sector, architecture, or measured control effectiveness; therefore, institutional feasibility remains conditional on those deployment details."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__targeted_attack__access_control__EU",
+    "evidence_gaps": [
+      "Whether the frozen CIS IG2 enterprise is in scope for the EU access-control policy expectations described in E_31_96F42990F3AEAC86 or E_31_52DCE9554453ADEF is not established by the supplied records.",
+      "Whether the enterprise processes data in a way that would trigger additional EU data-sovereignty, cross-border, or data-protection constraints is not supplied.",
+      "The current governance ownership, approval pathway, audit responsibility, exception-handling process, and monitoring capability for access control in the frozen enterprise are not supplied.",
+      "Whether existing identity, session, or authentication systems can meet the constraints in DE_DE13_055FC5E35FA61DD5 is not supplied, so the practical compliance burden cannot be fully assessed."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The grounded GENERAL institutional direction is positive. The supplied governance-enablement records provide institutional pathways for access control, including policy enforcement, governance and monitoring functions, attribute lifecycle management, and exception handling for access decisions. The supplied compliance-constraint record adds identity/session obligations that increase implementation burden, but it does not demonstrate that access control is materially infeasible. EU jurisdiction-specific regulatory-applicability records are present and show that access-control policies are part of the regional risk-management context, but the supplied records do not establish that the frozen CIS IG2 reference enterprise is legally in scope for those EU obligations. Because the positive GENERAL direction is grounded and the missing EU legal-scope detail is deployment-specific rather than dispositive, the overall stance is +1 with PARTIAL sufficiency.",
+    "stance": 1
+  },
+  "assessment_sha256": "15b1b0aab62bb22de05f9e8483f679cbac9f53b9206edb88f6e2f7379b6974be",
+  "checkpoint_sha256": "385f1b70014ceafe2c2b52cb15798b027693b3facb3afb0bec7a8a32ef9f2954",
+  "created_at": "2026-11-06T17:49:49.903697+00:00",
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "EU",
+    "decision_object_sha256": "a959c85323037925410d3b552e54237e68ade89112e50402ea80d7b8ea540199",
+    "evidence_content_sha256": "6681d8d141722dd7c750a770868fe87894ac89ad6084200a015bf1bff0400f6e",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "9680a96de9c78d7fe9f3495aa6539e9088f4b93b97773b57f875125d6d288a5a",
+    "response_schema_sha256": "5581768e7fca4dcb8b430773e97adb95f1f2e56780aa3729f8161b56c9aa0da0",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 43,
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "535ae2933c4dc6e2a3bf4189d6f147c52fda27058de7fefbdd6e22fa99aa9c09"
+  }
+}

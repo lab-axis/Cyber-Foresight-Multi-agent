@@ -1,0 +1,153 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FIN_GEN_SUPPORT_1",
+        "evidence_ids": [
+          "DE_DE10_A086B3193CD6440B"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST TLS implementation guidance documents technical requirements and configuration options for TLS/HTTPS deployment, providing a documented adoption pathway for the frozen PMT_HTTPS action without specifying cost, staffing, or ROI.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN_GEN_SUPPORT_2",
+        "evidence_ids": [
+          "DE_DE18_CDC975345637E009"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied encryption-primer record states that transport-mode IPSec has less overhead than tunnel mode and that encryption use can be governed by data sensitivity, indicating a resource-aware design tradeoff for secure communications generally; it is less direct to HTTPS-specific financial feasibility because it discusses IPSec rather than HTTPS.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN_GEN_CHALLENGE_1",
+        "evidence_ids": [
+          "DE_DE14_EDCA207577B4607A"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied SSL VPN guidance identifies potential performance and resource burdens for SSL-based remote access, including session-establishment time, packet fragmentation, possible network slowing, and possible mitigation through hardware upgrades/replacement, SSL acceleration/offload, or reduced user and traffic demand.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN_GEN_CONTEXT_1",
+        "evidence_ids": [
+          "DE_DE14_5FC183B8D7DD961A"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied SSL VPN case-study record describes a remote-access environment in which an existing IPsec client solution required significant IT labor to install and support; it is deployment-maturity context for secure remote-access effort and does not by itself establish PMT_HTTPS deployment, cost, or effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FIN_GEN_CONTEXT_2",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CIS IG2 context record states that IG2 enterprises have multi-department IT personnel, often handle sensitive information, may face regulatory burdens, can tolerate short service interruptions, and may need enterprise-grade technology and specialized expertise for some safeguards; it does not by itself establish exact staffing, budget, cost, or PMT_HTTPS effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific financial feasibility conclusion would require supplied financial data, staffing/capacity data, and architecture/performance data rather than inferred values.",
+      "If SSL/HTTPS performance degradation is possible, capacity testing, patching/upgrade planning, possible hardware or offload costs, and user/traffic limitations would need to be evaluated.",
+      "If the CIS IG2 profile implies enterprise-grade technology or specialized expertise, the actual availability of those resources and associated costs would need to be evidenced."
+    ],
+    "constraints": [
+      "The frozen scenario supplies no numeric budget, price, ROI, TCO, payback period, staffing count, vendor, product version, or procurement ceiling, so exact financial feasibility cannot be concluded.",
+      "Directional financial/adoption claims are limited to the contract-eligible adoption-benefit and adoption-burden records; forecast records and CTX profile records provide context only and do not establish cost, burden, or effectiveness.",
+      "The support evidence is primarily technical implementation guidance and a less-direct secure-communications overhead tradeoff; the challenge evidence is conditional SSL/VPN performance and resource burden, not a proven cost overrun or implementation failure."
+    ],
+    "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+    "evidence_gaps": [
+      "Exact budget, cost, ROI, TCO, payback period, staffing count, and procurement constraints for PMT_HTTPS deployment are absent.",
+      "Deployment-specific information on network architecture, application inventory, existing TLS/VPN infrastructure, user population, and performance load is absent.",
+      "Evidence that the SSL/HTTPS performance burdens in the supplied guidance will materialize in the frozen CIS IG2 reference environment is absent.",
+      "Evidence of actual PMT_HTTPS deployment, enforcement, operational maturity, or operational effectiveness by the forecast window is absent.",
+      "Evidence quantifying resource-saving or efficiency benefits from HTTPS/TLS implementation in the frozen scenario is absent."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "The contract-eligible adoption-benefit evidence documents technical adoption pathways for TLS/HTTPS and a secure-communications overhead tradeoff, which can support general feasibility without establishing exact cost, staffing, or ROI. The contract-eligible adoption-burden evidence documents potential SSL/HTTPS-related performance, testing, and possible hardware/offload burdens, which can challenge general feasibility without proving that adoption is unaffordable or infeasible in the frozen CIS IG2 reference scenario. Because the burden is conditional and no exact budget, staffing, architecture, vendor, or performance-condition evidence is supplied, the grounded direction is mixed rather than +1 or -1.",
+    "stance": 0
+  },
+  "assessment_sha256": "7853407cb2b4ec37b45f31ec87f8e21e07269d5c0ff296953762bad9b932cb2c",
+  "checkpoint_sha256": "6ec0d41b8debb9cf730473eb6aa633d2c0d81551be6edc0c38f31aac99829604",
+  "created_at": "2026-11-06T08:52:21.828679+00:00",
+  "identity": {
+    "axis": "PROMPT_SEED_ROBUSTNESS",
+    "case_id": "main__session_hijacking__https",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE10_A086B3193CD6440B",
+        "DE_DE14_5FC183B8D7DD961A",
+        "DE_DE14_EDCA207577B4607A",
+        "DE_DE18_CDC975345637E009"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "18395510ef861acc416d87530010a6734f76e29ac47d0102efed1feb2c3b4a98",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051"
+    ],
+    "payload_sha256": "262b35e37b90bb31f7356c537907b37ecf1def9669d73cbec3ba4a5b8313d8a7",
+    "payload_transform_id": null,
+    "prompt_variant": "P2_EVIDENCE_FIRST",
+    "repeat_index": 44,
+    "response_schema_sha256": "b0545cdd0e2cfc6469d2177f29a48152385ab8fb7d990acedf74355a2dd0c682",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "2abe9bddf9ae8d8834787a96b0d4cdb6b3f1a1a03c1872959b81c9b73056c278",
+    "variant_id": "P2_EVIDENCE_FIRST"
+  }
+}

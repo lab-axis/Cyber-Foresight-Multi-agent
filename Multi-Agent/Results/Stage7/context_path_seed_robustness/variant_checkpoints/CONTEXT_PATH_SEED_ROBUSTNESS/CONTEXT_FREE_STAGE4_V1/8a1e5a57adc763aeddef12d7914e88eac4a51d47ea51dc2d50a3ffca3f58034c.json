@@ -1,0 +1,220 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FAD-1",
+        "evidence_ids": [
+          "E_33_D28EA285670B0D01"
+        ],
+        "scope": "GENERAL",
+        "statement": "Crossref publication activity for ANOMALY DETECTION with security bibliographic metadata increased from 1,431 works in 2021 to 2,496 works in 2024, with an OLS slope of 366.20 works/year, but the record states that this does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAD-2",
+        "evidence_ids": [
+          "E_29_C2D0AFA5060E4ED3",
+          "E_29_EB10E20E98625441"
+        ],
+        "scope": "GENERAL",
+        "statement": "Academic metadata records identify published approaches to network anomaly detection, indicating that the technical area has documented research artifacts, but these metadata records do not establish deployment maturity or operational effectiveness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAD-3",
+        "evidence_ids": [
+          "E_15_D3680C31BEE2C0F8"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST AI 100-2 records that poisoning of unsupervised learning models has been shown for clustering used in malware classification and network traffic anomaly detection, and it also documents evasion attacks for malware classification, PDF malware classification, Android malicious app detection, and network intrusion detection.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAD-4",
+        "evidence_ids": [
+          "E_03_F1CA4CD00581F628"
+        ],
+        "scope": "GENERAL",
+        "statement": "Mandiant reports that China-nexus attackers have gained access to edge devices via exploitation of vulnerabilities, deployed custom malware ecosystems, and that network defenders may have little to no means for monitoring and detection of malware activity on edge devices; it also states that off-the-shelf security products typically will not support edge devices.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAD-5",
+        "evidence_ids": [
+          "E_04_58956777A1075C28"
+        ],
+        "scope": "GENERAL",
+        "statement": "IBM X-Force 2024 reports that infostealers made up 17.8% of the most unique malware samples targeting Microsoft Windows in 2023 and states that, as threat actors invest in infostealers and identity-abuse trends develop, defenders' detection timelines are expected to be impacted.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAD-6",
+        "evidence_ids": [
+          "E_12_842A9CCD6A194A93"
+        ],
+        "scope": "GENERAL",
+        "statement": "MITRE M1019 describes a threat intelligence program that can be implemented by establishing a team or assigning responsibility, defining intelligence requirements, collecting internal and external intelligence, using threat intelligence platforms, integrating with SIEMs, and using frameworks such as MITRE ATT&CK.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAD-7",
+        "evidence_ids": [
+          "E_12_842A9CCD6A194A93"
+        ],
+        "scope": "GENERAL",
+        "statement": "MITRE M1019 lists open-source or free implementation options for threat intelligence, including OpenCTI as an open-source platform, OTX as providing free access, CIRCL OSINT Feed as a free source, and TheHive as an open-source incident response platform.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAD-8",
+        "evidence_ids": [
+          "E_22_04CC5D97FEA06DDE"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA insider threat guidance states that an effective insider threat mitigation program can prevent loss of revenue or intellectual property, avert sensitive data compromise, and prevent organizational reputation ruin, but the supplied record does not quantify cost, ROI, or payback.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAD-9",
+        "evidence_ids": [
+          "E_31_6C5988FD2D0D8867"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied EU NIS2 record describes a policy context in which cybersecurity PPPs can provide a framework for knowledge exchange, sharing of best practices, and a common level of understanding, and in which Member States should promote policies that clarify available funding options and that can leverage private-sector expertise to develop services and processes.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAD-10",
+        "evidence_ids": [
+          "E_02_F60155CA81B80881"
+        ],
+        "scope": "GENERAL",
+        "statement": "Verizon DBIR reports that password dumpers appeared in 2% of breaches, that this malware can reside in places with limited visibility such as personal computers not work-related, and that a two-day sample from one market found more than 1,000 credentials per day being posted for sale with an average price of $10.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAD-11",
+        "evidence_ids": [
+          "E_08_197B243FDF3AA15A",
+          "E_08_FEE46219AABDA967"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA KEV records document CVE-2017-8540 for Microsoft Malware Protection Engine and CVE-2013-7331 for Internet Explorer as known exploited vulnerability entries, and include the mitigation statement 'Apply updates per vendor instructions.'",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAD-12",
+        "evidence_ids": [
+          "E_20_BF167BDA75891A3B"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-161 Rev.1 C-SCRM guidance states that enterprises should explicitly authorize, track, and audit any removal of systems and network maintenance tools to reduce supply chain risks such as unauthorized modification, replacement with counterfeit, or malware insertion.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "Confirm whether edge devices or custom-malware ecosystems are in scope and whether off-the-shelf products support them.",
+      "Confirm budget, staffing, tooling, data-integration, and maintenance model for anomaly detection.",
+      "If ML-based anomaly detection is used, define adversarial-ML robustness and data-integrity controls for documented poisoning and evasion risks.",
+      "If external funding or PPP support is being considered, confirm jurisdiction and eligibility; the supplied EU NIS2 record cannot be generalized to an unknown region.",
+      "Assess whether existing threat intelligence, SIEM, TIP, or anomaly-detection tooling is present and whether open-source or free options can be used.",
+      "Assess whether infostealer and identity-abuse trends relevant to the organization are likely to affect detection timelines, as flagged in FAD-5."
+    ],
+    "constraints": [
+      "Deployment-specific financial feasibility cannot be asserted because the frozen DecisionObject has null budget_context, infrastructure_context, organization_type, and region.",
+      "No supplied Stage 0 evidence provides direct cost, TCO, budget, ROI, payback, exact staffing/resource values, exact implementation timelines, or exact control effectiveness for ANOMALY DETECTION.",
+      "Where edge devices are in scope, FAD-4 indicates an adoption constraint because off-the-shelf security products typically will not support edge devices and monitoring/detection means may be limited.",
+      "Where ML-based anomaly detection uses unsupervised clustering, FAD-3 indicates a constraint from documented poisoning attacks on network traffic anomaly detection.",
+      "Where detection or threat-intelligence capabilities are being adopted, FAD-6 and FAD-7 indicate possible staffing, tooling, and integration burdens and possible open-source or free options, but they do not establish a net financial effect.",
+      "Any PPP funding or knowledge-exchange benefit is conditional and jurisdiction-specific; FAD-9 is an EU policy record and the frozen region is unknown."
+    ],
+    "decision_object_id": "decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28",
+    "evidence_gaps": [
+      "budget_context, infrastructure_context, organization_type, and region are missing.",
+      "Direct financial metrics for ANOMALY DETECTION are missing: cost, TCO, budget, ROI, payback, staffing cost, opportunity cost, vendor licensing, and maintenance cost.",
+      "Deployment status and operational effectiveness are missing: current anomaly-detection tooling, deployment maturity, detection coverage, data visibility, and maintenance model.",
+      "Environment details are missing: presence of edge devices, custom malware ecosystems, existing SIEM/TIP/integration, and data-source availability.",
+      "Funding eligibility is missing: whether EU NIS2 PPPs or other funding mechanisms apply to the deployment.",
+      "Quantified threat impact is missing: financial impact of the reported malware, credential, infostealer, or edge-device threat context.",
+      "Exact implementation timelines are missing for the 2025-2027 window."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied records present mixed and mostly general signals for the financial and adoption feasibility of ANOMALY DETECTION, but they do not support a deployment-specific financial conclusion. Some records indicate context or potential enablers: Crossref publication activity for ANOMALY DETECTION increased from 2021 through 2024, although the record explicitly states it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness; academic metadata records show published approaches to network anomaly detection; MITRE M1019 lists open-source or free threat-intelligence implementation options; CISA insider-threat guidance describes potential avoided-loss benefits of an effective program; and EU NIS2 describes PPPs as a conditional policy framework that can involve funding options. At the same time, records document adoption burdens and constraints: NIST AI guidance documents poisoning of unsupervised clustering for network traffic anomaly detection; Mandiant reports edge-device visibility gaps and that off-the-shelf security products typically will not support edge devices; X-Force expects infostealer and identity-abuse trends to impact defenders' detection timelines; MITRE M1019 describes staffing, tooling, and integration work; Verizon DBIR reports limited visibility for some malware and active credential marketplaces; CISA KEV records document exploited vulnerabilities with vendor update guidance; and NIST C-SCRM guidance describes maintenance-tool governance burdens. Because budget_context, infrastructure_context, organization_type, and region are null, and no supplied record provides direct cost, TCO, ROI, payback, exact staffing/resource values, exact implementation timelines, or deployment effectiveness for ANOMALY DETECTION, the financial/adoption feasibility under the frozen scenario is indeterminate rather than clearly supported or materially challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "4e5412bca1ad7fb8a2a2685c91ffe000af993d2d872d2ab70b7b912cec93f848",
+  "checkpoint_sha256": "1c6d9512b1c3170729dbed989d531e7bcd23573e492b81baffc280b423747647",
+  "created_at": "2026-11-06T10:50:41.534319+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "5829ef17bf9bd5c950bcd602e3f0d2b574c0c1e2ada3a72ec8dd5adf07d077e9",
+    "base_stage3_input_fingerprint": "85f5d5bb621f66fbf82b5be92eb41719b2a167ec11dc3ee6901a1d8fc9428bd3",
+    "base_stage3_output_sha256": "a5ce30b9c7b30338270a3f1d160af279549cbdd2f76cbe5b3acf5b9618a9a370",
+    "case_id": "main__malware__anomaly_detection",
+    "evidence_ids": [
+      "E_02_F60155CA81B80881",
+      "E_03_F1CA4CD00581F628",
+      "E_04_270A1E7C47ACC4FF",
+      "E_04_58956777A1075C28",
+      "E_08_197B243FDF3AA15A",
+      "E_08_FEE46219AABDA967",
+      "E_12_842A9CCD6A194A93",
+      "E_12_DC3A7F14C38A9DF2",
+      "E_15_556E817722D16E74",
+      "E_15_D3680C31BEE2C0F8",
+      "E_20_BF167BDA75891A3B",
+      "E_22_04CC5D97FEA06DDE",
+      "E_29_C2D0AFA5060E4ED3",
+      "E_29_EB10E20E98625441",
+      "E_29_EC3B9CB419FEA81B",
+      "E_31_6C5988FD2D0D8867",
+      "E_33_D28EA285670B0D01"
+    ],
+    "input_fingerprint": "8a1e5a57adc763aeddef12d7914e88eac4a51d47ea51dc2d50a3ffca3f58034c",
+    "lens_type": "financial_adoption",
+    "response_schema_sha256": "e8594fad81d1ad0be835c027efe45bfa6d7eb9a57a0c2ec8ca84fb957353af6e",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "a1be70c855d702b7fb11d2664113a8b726343461c6e9d463ba901b11ff19d9f2",
+    "user_prompt_sha256": "50285706bebe3e4adfc73309f572992a3202de58266a8566bc22f73c9f517512",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

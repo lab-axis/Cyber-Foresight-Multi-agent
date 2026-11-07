@@ -1,0 +1,140 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_CLAIM_001",
+        "evidence_ids": [
+          "DE_DE14_575D613F0598EF5E",
+          "DE_DE18_20A979A3238D1DE6"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied governance_enablement records provide a concrete institutional pathway for HTTPS/TLS-related deployment, including lifecycle governance, event logging for incident response, prototype and pilot testing, phased migration, documentation, and ongoing monitoring, patching, and certificate renewal.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLAIM_002",
+        "evidence_ids": [
+          "DE_DE10_4BE87A62A6676C99",
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied compliance_constraint records impose session, transport, cookie, and TLS implementation requirements that create real technical and governance constraints, but they do not by themselves establish that the action is infeasible or legally prohibited in the frozen scenario.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLAIM_003",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The CIS IG2 reference-enterprise profile describes possible regulatory burdens and specialized expertise for some safeguards, but it does not establish jurisdiction-specific legal applicability or exact deployment burden.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC institutional/regional support or challenge would require jurisdiction-specific regulatory_applicability evidence for the masked region, in addition to the eligible governance_enablement or compliance_constraint record.",
+      "A positive institutional feasibility conclusion remains conditional on the organization being able to meet the session, protected-channel, secure-cookie, and TLS implementation requirements identified in DE_DE13_055FC5E35FA61DD5 and DE_DE10_4BE87A62A6676C99.",
+      "If the CIS IG2 profile's possible regulatory burdens or specialized-expertise needs are material to this deployment, additional deployment-specific evidence would be required; CTX_CIS_IG2_9F94838146D9C3A4 alone is not sufficient.",
+      "A GENERAL direction should not be changed merely because the frozen region is masked; any region-driven change in feasibility direction requires exact jurisdiction-specific evidence."
+    ],
+    "constraints": [
+      "DE_DE13_055FC5E35FA61DD5 requires authenticated protected channels, prohibits authenticated sessions from falling back to insecure transport such as http after authentication, and requires cookies to be tagged accessible only on secure HTTPS sessions.",
+      "DE_DE10_4BE87A62A6676C99 imposes implementation-specific TLS requirements for supported CBC cipher suites, truncated HMAC use, and TLS 1.3 pre-shared-key session resumption, adding configuration and verification obligations.",
+      "DE_DE14_575D613F0598EF5E recommends institutional lifecycle practices such as event logging, prototype testing, pilot programs, phased migration, technical documentation, and ongoing monitoring, patching, and certificate renewal.",
+      "DE_DE18_20A979A3238D1DE6 identifies trusted CA deployment and DNS security considerations as prerequisites for SSL/TLS retrofitting, implying that adoption requires trust-infrastructure planning.",
+      "CTX_CIS_IG2_9F94838146D9C3A4 indicates the reference profile may involve regulatory burdens and specialized expertise, but it does not specify the legal regime, jurisdiction, or exact compliance burden."
+    ],
+    "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+    "evidence_gaps": [
+      "No jurisdiction-specific regulatory_applicability evidence is supplied for the masked region, so a DEPLOYMENT_SPECIFIC institutional/regional feasibility direction cannot be grounded.",
+      "No supplied record establishes that HTTPS, TLS, or SSL/TLS controls have already been deployed, enforced, or operationally effective in the reference enterprise.",
+      "No exact budget, staffing count, procurement ceiling, price, ROI, TCO, payback period, or implementation timeline is supplied, so resource-specific institutional feasibility cannot be grounded.",
+      "No jurisdiction-specific data-sovereignty, cross-border transfer, or reporting-format obligation is supplied; E_02_3AE1561299B667F5 mentions regulatory reporting pressure and the absence of a common reporting format but does not establish applicability to the masked region.",
+      "The directional contract for this lens does not list any regulatory_applicability evidence, so the narrower legal applicability question remains an evidence gap rather than a basis for a deployment-specific direction."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Evidence-first inventory: E_33_13A684B424C1D15B can support only a Crossref cutoff-constrained HTTPS publication trend and cannot establish deployment maturity, operational effectiveness, or institutional/regional feasibility. E_02_3AE1561299B667F5 can support DBIR mapping and general regulatory reporting pressure context, but it is not directionally eligible under this lens and does not establish applicability to the masked region. E_29_5608502338822397, E_29_2B4FE56914E3B676, and E_29_B82ABFE7422C38D1 are bibliographic metadata and cannot support institutional/regional direction. DE_DE10_A086B3193CD6440B provides TLS client-authentication context but is not in the institutional_regional directional contract, so it cannot set direction here. E_19_A61B74B0F1435639, E_20_88F8C63B0AC62BEC, E_03_6B1B12ABFD14313F, E_10_AC5A58AF5E015229, E_12_9B8ECD82AD844621, E_22_808618C790A7133A, E_23_6C42FC29A05ADCAE, E_25_99857C4681E8FEE5, E_12_CFEC6517865F0563, E_04_B9A3190D9CA152A3, and E_26_2A6B7965607F1AAF are neutral control, threat, advisory, assessment, or publication context and are not directionally eligible for this lens. AE07S_C1EF15B9628497F0 and AE07C_9CBF5980D3BA474A are technical action findings about HTTPS/TLS and session-token limitations, not institutional/regional contract-eligible direction. DE_DE10_4BE87A62A6676C99 and DE_DE13_055FC5E35FA61DD5 are eligible GENERAL challenge records in the compliance_constraint slot. DE_DE14_575D613F0598EF5E and DE_DE18_20A979A3238D1DE6 are eligible GENERAL support records in the governance_enablement slot. DE_DE18_CDC975345637E009, DE_DE14_EDCA207577B4607A, and DE_DE14_5FC183B8D7DD961A are supplementary SSL, IPSec, or SSL-VPN context not listed for directional grounding in this lens. CTX_CIS_IG2_9F94838146D9C3A4 supports only the standardized reference-enterprise profile, including possible regulatory burdens and specialized expertise, and cannot by itself establish legal obligations, resource capacity, or regional feasibility. The directional contract permits GENERAL support only from governance_enablement records and GENERAL challenge only from compliance_constraint records; DEPLOYMENT_SPECIFIC direction would additionally require regulatory_applicability, which is absent because the region is masked. Weighing: the support records directly address institutional governance and accountability by documenting lifecycle practices, event logging for incident response, prototype and pilot testing, phased migration, technical documentation, and ongoing monitoring, patching, and certificate renewal, and they identify an SSL/TLS retrofit path with prerequisites. The challenge records establish real technical compliance constraints for session authenticity, protected channels, secure cookies, and TLS implementation features, but they do not demonstrate insurmountable burden, legal prohibition, or jurisdiction-specific infeasibility. On balance, the supplied records support GENERAL institutional/regional feasibility, while deployment-specific legal/regional feasibility remains ungrounded due to missing jurisdiction-specific regulatory_applicability and other deployment details.",
+    "stance": 1
+  },
+  "assessment_sha256": "d543678295d9992b99e71b4859e42f3ed6978ec4ba25623a69c41c070a8e8ac0",
+  "checkpoint_sha256": "2d569d0c9e29db473ddd7f5ad668aebaaf9b315dba8ae75f467993e7401f7e23",
+  "created_at": "2026-11-06T07:15:10.386502+00:00",
+  "identity": {
+    "axis": "PROMPT_SEED_ROBUSTNESS",
+    "case_id": "main__session_hijacking__https",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE10_4BE87A62A6676C99",
+        "DE_DE13_055FC5E35FA61DD5",
+        "DE_DE14_575D613F0598EF5E",
+        "DE_DE18_20A979A3238D1DE6"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "b00ad80d5043fdb197321d06f85bf8e0b9ef611c854ddc4ed4d46a5ba9741fc4",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051"
+    ],
+    "payload_sha256": "c1cf5c69175c60e5dcb4a8f6d97116aad5f23cac868608b21ee566b381ad9825",
+    "payload_transform_id": null,
+    "prompt_variant": "P2_EVIDENCE_FIRST",
+    "repeat_index": 43,
+    "response_schema_sha256": "97f8c458eaa0e68f3f93c07b0bb2cbb2e813715c199b81a479238bc03a1bc2c5",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "6208e49da56712226cf28f67fa688361779134001c0ab7e725f5c74b8a9a1a6a",
+    "variant_id": "P2_EVIDENCE_FIRST"
+  }
+}

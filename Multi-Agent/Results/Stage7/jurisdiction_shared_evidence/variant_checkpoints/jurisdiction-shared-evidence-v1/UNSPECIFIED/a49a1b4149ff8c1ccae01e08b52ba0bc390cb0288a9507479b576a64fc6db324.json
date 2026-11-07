@@ -1,0 +1,104 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_GEN_SUPPORT_01",
+        "evidence_ids": [
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE17_567DDA7CFBC62829"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied governance-enablement records describe institutional pathways that can support access control, including enterprise/federated policy alignment, attribute definition and lifecycle management, exception handling for access failures, zero-trust policy enforcement with compliance-system inputs, and governance for defining and enforcing cybersecurity policies.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_GEN_CHALLENGE_01",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied compliance-constraint record imposes strict session, token, and cookie requirements for identity/session management, creating a compliance burden that can challenge institutional feasibility if the organization cannot meet those requirements.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "If ABAC or federated access policies are used, consistent attribute definitions, lifecycle ownership, documentation, and access-failure/exception handling processes must be established (DE_DE11_1E4AAE06CC3795D7).",
+      "If zero-trust policy enforcement is used, policy administration/enforcement components and data sources, including compliance-system and threat-intelligence inputs, must be available (DE_DE12_E6F93E4AB8722379).",
+      "If identity/session controls are deployed, they must meet the supplied session/token/cookie requirements (DE_DE13_055FC5E35FA61DD5).",
+      "A deployment-specific regional/legal feasibility conclusion would require jurisdiction-specific regulatory applicability evidence for the frozen scenario; without it, this lens remains at GENERAL scope."
+    ],
+    "constraints": [
+      "Access-control policy governance must reflect enterprise policy, use consistent attribute values, assign attribute lifecycle responsibility, and establish exception handling for access failures (DE_DE11_1E4AAE06CC3795D7).",
+      "Zero-trust access decisions depend on policy administration/enforcement components and data sources, including compliance-system inputs that ensure compliance with applicable regulatory regimes (DE_DE12_E6F93E4AB8722379).",
+      "Identity/session implementation must satisfy the supplied session, token, and cookie requirements, including authenticated protected channels, timeouts, no insecure fallback, and session identifier verification (DE_DE13_055FC5E35FA61DD5).",
+      "The supplied maturity-model governance record states that its model does not address incident response, operational technologies, certain IoT devices, or emerging technologies (DE_DE17_567DDA7CFBC62829)."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__targeted_attack__access_control__UNSPECIFIED",
+    "evidence_gaps": [
+      "No directionally eligible regulatory_applicability evidence is supplied for the frozen masked jurisdiction, so DEPLOYMENT_SPECIFIC regional/legal feasibility cannot be established.",
+      "No supplied decision evidence confirms actual governance capacity, systems, staffing, budget, or expertise of the frozen reference enterprise; the CTX record only defines the reference profile (CTX_CIS_IG2_9F94838146D9C3A4).",
+      "No supplied evidence quantifies compliance burden, implementation cost, staffing, timeline, or exact control effectiveness for the frozen action.",
+      "No supplied evidence maps a specific regulatory regime or legal obligation to the frozen masked region for ACCESS CONTROL.",
+      "No supplied directionally eligible evidence addresses data sovereignty or cross-border constraints for the frozen scenario."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "On balance, the supplied directionally eligible institutional evidence supports GENERAL feasibility more than it challenges it. The governance-enablement records describe usable institutional pathways for access-control governance, policy alignment, attribute management, exception handling, zero-trust policy enforcement, and compliance-system integration. The compliance-constraint record adds a bounded technical-compliance burden related to session, token, and cookie requirements. Deployment-specific regional or legal feasibility is not established because the frozen region is masked and no directionally eligible regulatory-applicability evidence is supplied for that narrower scope.",
+    "stance": 1
+  },
+  "assessment_sha256": "bf3ceaef24b1222557d01b05ab34617f0c3bc24617c34381e16e010b8d4e479f",
+  "checkpoint_sha256": "6bc332be137df4c6924617a748da48baa41a5cf2c2cd1a747c1e6b0dc14cd3a7",
+  "created_at": "2026-11-06T16:54:20.380725+00:00",
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "UNSPECIFIED",
+    "decision_object_sha256": "e3b9878dcb339186aaf54fd9196c9b7ad9169dd116cad5ac7158ec4b6cfb4fc7",
+    "evidence_content_sha256": "6681d8d141722dd7c750a770868fe87894ac89ad6084200a015bf1bff0400f6e",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "4e4f36e9de0c845cce3c650c5f32c845603ca11670a941e045ea00165150010d",
+    "response_schema_sha256": "99120de530cb4d41215ce30cf96cf435f2d4124eb5c06afe2a7f13955f4cc5f6",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 42,
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "42f3e0b3ae10860fb044db43125c57bfbb9872e3253121be5a914049037f4fae"
+  }
+}

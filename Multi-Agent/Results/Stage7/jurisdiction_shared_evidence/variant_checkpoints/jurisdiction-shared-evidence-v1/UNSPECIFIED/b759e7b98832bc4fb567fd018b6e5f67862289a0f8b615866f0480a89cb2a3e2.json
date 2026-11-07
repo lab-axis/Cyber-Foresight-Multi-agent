@@ -1,0 +1,118 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-G-SUP-1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen PMT_CRYPTOGRAPHY action has a grounded GENERAL governance-enablement pathway: the supplied key-management guidance describes accountability/traceability for cryptographic key generation, access, use, and destruction, including identification of authorized entities, access-control mechanisms, and audit logs to help prevent key compromises and reduce their impact.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-G-SUP-2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen PMT_CRYPTOGRAPHY action has a grounded GENERAL implementation-practice pathway: the supplied performance-goal record recommends properly configured and up-to-date SSL/TLS when technically feasible, identifies outdated or weak encryption, updates it to sufficiently strong algorithms, and considers post-quantum implications.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-G-CHAL-1",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen PMT_CRYPTOGRAPHY action faces a GENERAL compliance constraint from cryptographic algorithm-lifecycle requirements: the supplied algorithm-transition record marks two-key TDEA encryption as disallowed, three-key TDEA encryption as disallowed after 31 December 2023 unless specifically allowed by other guidance, and SKIPJACK encryption as disallowed, while identifying AES-128, AES-192, and AES-256 encryption as acceptable, creating a compliance burden for algorithm selection and migration where disallowed or deprecated algorithms are present.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-G-CTX-1",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles, where some safeguards depend on enterprise-grade technology and specialized expertise; this profile is context only and does not by itself establish feasibility, burden, cost, or legal obligation.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC institutional/regional feasibility conclusion would require jurisdiction-specific regulatory_applicability evidence for the frozen masked region plus matching governance_enablement or compliance_constraint evidence.",
+      "Practical institutional feasibility would be supported by evidence that key-management accountability, access-control/traceability, audit logging, and algorithm-lifecycle management can be established within the 2025-2027 window.",
+      "Threat-specific institutional feasibility would require evidence that cryptography is incorporated into the insider-threat governance program and mapped to the relevant insider-threat mechanism.",
+      "Compliance-burden assessment would require evidence of the current cryptographic algorithm inventory and any migration constraints."
+    ],
+    "constraints": [
+      "A GENERAL compliance constraint exists for algorithm selection and lifecycle management because the supplied algorithm-transition record designates some encryption algorithms as disallowed or deprecated and identifies acceptable alternatives.",
+      "The directional enablement records provide guidance and recommended practices, not measured deployment, adoption, or insider-threat effectiveness for the frozen 2025-2027 window.",
+      "The frozen region is masked and no regulatory_applicability evidence is available in the supplied directional grounding contract, so institutional/regional feasibility cannot be treated as DEPLOYMENT_SPECIFIC legal feasibility."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__insider_threat__cryptography__UNSPECIFIED",
+    "evidence_gaps": [
+      "Missing jurisdiction-specific regulatory_applicability evidence for the frozen masked region, which is required for any DEPLOYMENT_SPECIFIC institutional/regional legal direction.",
+      "Missing evidence that the CIS IG2 reference enterprise has existing key-management governance, cryptographic inventory, algorithm-lifecycle management, audit/traceability controls, or the personnel/expertise needed for implementation.",
+      "Missing budget, staffing, procurement, or technology-inventory evidence; the frozen context explicitly assumes no numeric quantities.",
+      "Missing evidence that cryptography is integrated into the frozen Insider Threat mitigation program or addresses a specific insider-threat exploitation mechanism."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied records support GENERAL institutional feasibility of the frozen PMT_CRYPTOGRAPHY action because the eligible governance_enablement records describe institutional mechanisms for implementing and auditing cryptography: key-management accountability/traceability and a recommended encryption implementation pathway. A GENERAL compliance_constraint also exists because the eligible algorithm-transition record imposes algorithm-lifecycle constraints and a compliance burden. On balance, the support is weighted more strongly because it directly addresses institutional enablement for the frozen action, while the challenge describes a manageable compliance constraint rather than evidence that the institution cannot implement cryptography. Because the region is masked and no regulatory_applicability evidence is available in the supplied directional grounding contract, no DEPLOYMENT_SPECIFIC legal/regional direction is drawn. Sufficiency is PARTIAL because deployment-specific jurisdictional applicability, resource capacity, current cryptographic inventory, and insider-threat program integration evidence are absent.",
+    "stance": 1
+  },
+  "assessment_sha256": "56d5db848ac74fafa0cce98ad775c6e4dd921b021abd92376150ccd406cbb023",
+  "checkpoint_sha256": "e4c7b9866b83d55e33dc8a6b74ce428995a33f0f81d9e598efa540c651e9e1f1",
+  "created_at": "2026-11-06T18:13:56.515774+00:00",
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "condition": "UNSPECIFIED",
+    "decision_object_sha256": "a852ba21f4d1bb58047f4f92f75a326ae09bc17e6f1c8b78d88e9ae88de5ab65",
+    "evidence_content_sha256": "4a651fdb7404341db0ccc07b34e2992734ce80dd40fff15487f30efc84bdf2e2",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "bb995315bedfdddde2761ba9e34120eb8aa47eb17296692f6e0fc4591a490499",
+    "response_schema_sha256": "a4d4c25d6b39ea8ae10ac799a2e1471d32f81ff7f6c6f48b2d85ae7ff487f94e",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 44,
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "e67397fe971d78b0ea1db0042b0f41163e933b4d45b6e5fd9cb27e4fe40feef1"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-57 key-management guidance supports institutional enablement for CRYPTOGRAPHY by describing accountability and traceability for entities authorized to generate, access, destroy, or otherwise use keys, and by requiring that key access be recorded and audited.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CPG record supports an institutional control pathway for CRYPTOGRAPHY by describing effective encryption as maintaining confidentiality of sensitive data and integrity of IT/OT traffic, and by recommending properly configured and up-to-date SSL/TLS with remediation of outdated or weak encryption.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-3",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-131A imposes algorithm-transition compliance constraints on CRYPTOGRAPHY, including disallowing two-key TDEA encryption, restricting three-key TDEA encryption after 2023, and restricting or disallowing certain legacy algorithm uses, which adds a compliance burden to implementation.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A KR-specific regulatory applicability assessment is required before any DEPLOYMENT_SPECIFIC Institutional/Regional feasibility claim can be made.",
+      "If CRYPTOGRAPHY is adopted, the organization should implement key-management accountability, traceability, access control, and audit logging consistent with the supplied NIST SP 800-57 guidance (DE_DE08_031120C53EF050F3).",
+      "If CRYPTOGRAPHY is adopted, the organization should include an algorithm transition or allowlisting process consistent with the supplied NIST SP 800-131A restrictions (DE_DE09_6719137897848A9E).",
+      "If CRYPTOGRAPHY is adopted for data in transit, the organization should align SSL/TLS configuration and weak-encryption remediation with the supplied CPG recommended action (E_23_534489D29C38B327)."
+    ],
+    "constraints": [
+      "Algorithm-transition compliance is a constraint: NIST SP 800-131A disallows or restricts certain TDEA and SKIPJACK encryption uses, so CRYPTOGRAPHY deployment would need an algorithm-allowlist or transition process (DE_DE09_6719137897848A9E).",
+      "Key-management governance is a capability to address: NIST SP 800-57 describes accountability, traceability, access control, and audit logging for key generation, access, and destruction (DE_DE08_031120C53EF050F3).",
+      "Encryption-control maintenance is a condition: the supplied CPG record recommends properly configured and up-to-date SSL/TLS and remediation of outdated or weak encryption (E_23_534489D29C38B327)."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__insider_threat__cryptography__KR",
+    "evidence_gaps": [
+      "No KR-specific regulatory_applicability evidence is available in the supplied Institutional/Regional directional grounding contract, so jurisdiction-specific legal compatibility for the frozen Republic of Korea deployment cannot be established.",
+      "No supplied evidence establishes the reference enterprise's actual key-management maturity, current algorithm inventory, legacy use of disallowed cryptography, data sovereignty, cross-border processing, or KR-specific obligations.",
+      "No supplied evidence quantifies budget, staffing, procurement, or implementation-timeline constraints for CRYPTOGRAPHY in the frozen scenario."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Under the frozen Institutional/Regional feasibility lens, the supplied directional grounding contract permits a GENERAL institutional direction from governance_enablement and compliance_constraint records. The support-side records establish institutional enablement for CRYPTOGRAPHY: DE_DE08_031120C53EF050F3 describes key-management accountability, traceability, access control, and audit logging; E_23_534489D29C38B327 describes an institutional recommended control pathway for effective encryption and TLS maintenance. The challenge-side record DE_DE09_6719137897848A9E establishes algorithm-transition compliance constraints, including disallowed and restricted cryptographic algorithm uses. Weighed by directness to institutional feasibility, the governance-enablement records are directly relevant to the ability to implement, account for, and audit cryptography, whereas the compliance-constraint record limits algorithm choices and adds transition/compliance burden but does not show that institutional governance, auditability, or deployment is unavailable. Therefore, on balance, the supplied records support GENERAL institutional/regional feasibility for the frozen CRYPTOGRAPHY action. A DEPLOYMENT_SPECIFIC KR legal conclusion is not made because no KR-specific regulatory_applicability evidence is available in the supplied directional grounding contract.",
+    "stance": 1
+  },
+  "assessment_sha256": "5f4f7a0e80b1adac05edab3d1ed923630e71a204433b29ec8fc67c60e40cb5f5",
+  "checkpoint_sha256": "c4f39fa81eff78e7f7dd8030cd1e027c47d4dc63fd1073ee193e597b57d4a0af",
+  "created_at": "2026-11-06T17:29:50.668994+00:00",
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "condition": "KR",
+    "decision_object_sha256": "32be7fa15642bbf20664e2a57598d72e16b84cf07f2c6ea4e1c770a78cc863d3",
+    "evidence_content_sha256": "4a651fdb7404341db0ccc07b34e2992734ce80dd40fff15487f30efc84bdf2e2",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "bb995315bedfdddde2761ba9e34120eb8aa47eb17296692f6e0fc4591a490499",
+    "response_schema_sha256": "28f1913c9d1011a6592af41ac9ef7a38d7fccc4cbf8b1e6cd63e3a8660e08f96",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 43,
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "7546238325246ce33a3fcb26d9c3af41c23e8b253602661d5e37af22c5f8b672"
+  }
+}

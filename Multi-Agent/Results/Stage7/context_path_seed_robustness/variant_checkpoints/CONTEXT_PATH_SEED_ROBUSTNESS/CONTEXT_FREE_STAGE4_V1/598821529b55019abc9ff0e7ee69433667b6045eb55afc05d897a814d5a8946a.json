@@ -1,0 +1,226 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF_C1",
+        "evidence_ids": [
+          "E_25_8F4D567857A97316"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 defines access control as the process of granting or denying specific requests for obtaining and using information and related information processing services and for entering specific physical facilities.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C2",
+        "evidence_ids": [
+          "E_02_BE48A23ABD77A19C"
+        ],
+        "scope": "GENERAL",
+        "statement": "DBIR describes Control 5, Access Control Management, as using processes and tools to create, assign, manage, and revoke access credentials and privileges for user, administrator, and service accounts for enterprise assets and software.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C3",
+        "evidence_ids": [
+          "E_02_BE48A23ABD77A19C"
+        ],
+        "scope": "GENERAL",
+        "statement": "DBIR reports that, in the IG1 System Intrusion pattern mapping, Control 5 Access Control Management is listed at 67%.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C4",
+        "evidence_ids": [
+          "E_12_F6120325C44B5EA9"
+        ],
+        "scope": "GENERAL",
+        "statement": "MITRE ATT&CK M1015 describes Active Directory configuration measures that secure accounts, control access, minimize attack surface, and enable centralized control over account settings, logon policies, and permissions; it lists implementation tools including Group Policy Management Console, PowerShell, and Active Directory Administrative Center.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C5",
+        "evidence_ids": [
+          "E_26_22D6C8ED91C81D37"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A includes assessment test actions that may include testing access control, identification and authentication, audit mechanisms, security and privacy configuration settings, and physical access control devices.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C6",
+        "evidence_ids": [
+          "E_20_7FC83A095DEEBF69"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-161 Rev.1 includes control mapping rows for AC-22, AC-23, and AC-24 in a supply-chain governance context.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C7",
+        "evidence_ids": [
+          "E_23_42E9198B388BAA83"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG context describes NIST SP 800-53 as a comprehensive and flexible catalog of security and privacy controls and defines Operational Technology examples that include physical access control mechanisms.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C8",
+        "evidence_ids": [
+          "E_10_5C0B9AC35F2420B3",
+          "E_10_CEB460BC4092B2D3"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA/Siemens advisories describe Mendix modules that improperly handle access control for some module entities and could allow authenticated remote attackers to read, delete, or manipulate sensitive information; vendor updates are recommended.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C9",
+        "evidence_ids": [
+          "E_10_B4F773BEC65685CC"
+        ],
+        "scope": "GENERAL",
+        "statement": "A CISA Kastle Systems advisory describes firmware vulnerabilities whose successful exploitation could allow an attacker to access sensitive information and states that no known public exploitation specifically targeting those vulnerabilities had been reported to CISA at the advisory time.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C10",
+        "evidence_ids": [
+          "E_03_F0CD4F1DE74CC7AD"
+        ],
+        "scope": "GENERAL",
+        "statement": "Mandiant reports opportunistic compromise being leveraged into targeted attack activity in 6% of 2022 intrusions, compared with 4% in 2021 and 3% in 2020.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C11",
+        "evidence_ids": [
+          "E_33_F4FC25CE90264812"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref publication trend for ACCESS CONTROL reports annual counts of 1040 in 2021, 1005 in 2022, 1115 in 2023, and 1070 in 2024, with a positive OLS slope and first-to-last delta, but explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C12",
+        "evidence_ids": [
+          "E_29_4ED97777A686537A",
+          "E_29_951AF8A7281A822E",
+          "E_29_A8790308F8A745BD"
+        ],
+        "scope": "GENERAL",
+        "statement": "Crossref metadata records identify access-control-related publications in the Electronic Access Control venue.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C13",
+        "evidence_ids": [
+          "E_31_96F42990F3AEAC86"
+        ],
+        "scope": "GENERAL",
+        "statement": "The EU NIS2 source states that essential and important entities should, as part of cybersecurity risk-management measures, have appropriate access control policies; this is jurisdiction-specific and should not be generalized beyond the record's scope.",
+        "status": "SUPPORTS_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "If the deployment includes Active Directory, the M1015 AD configuration measures can be evaluated for applicability; if not, an equivalent identity and access management infrastructure must be specified [E_12_F6120325C44B5EA9].",
+      "If Mendix or Kastle products are in scope, vendor updates and recommended network protections should be considered as part of access-control feasibility [E_10_5C0B9AC35F2420B3, E_10_CEB460BC4092B2D3, E_10_B4F773BEC65685CC].",
+      "If the deployment falls within the EU NIS2 source's scope, appropriate access control policies should be part of cybersecurity risk-management measures [E_31_96F42990F3AEAC86].",
+      "If the threat posture includes opportunistic compromise being leveraged into targeted activity, access-control design should address account compromise, privilege restrictions, and access revocation [E_03_F0CD4F1DE74CC7AD]."
+    ],
+    "constraints": [
+      "General feasibility is supported by control definitions, implementation guidance, and assessment methods [E_25_8F4D567857A97316, E_12_F6120325C44B5EA9, E_26_22D6C8ED91C81D37].",
+      "Deployment-specific compatibility cannot be assessed because infrastructure_context, organization_type, region, and budget_context are unknown in the frozen object.",
+      "Publication trend evidence is limited to publication activity and explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness [E_33_F4FC25CE90264812].",
+      "Access-control-related vulnerabilities in Mendix and Kastle products require vendor updates and network protections, indicating that access-control feasibility depends on patching, network exposure control, and product-specific configuration [E_10_5C0B9AC35F2420B3, E_10_CEB460BC4092B2D3, E_10_B4F773BEC65685CC].",
+      "EU NIS2 access-control policy expectations are jurisdiction-specific and cannot be generalized to all deployment contexts [E_31_96F42990F3AEAC86]."
+    ],
+    "decision_object_id": "decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567",
+    "evidence_gaps": [
+      "Missing infrastructure_context: identity and account infrastructure, Active Directory or equivalent, network segmentation, application and OT/ICS dependencies, physical access systems, remote access architecture, patch state, and logging/monitoring capabilities are unknown.",
+      "Missing current access-control implementation state, maturity, account inventory, privilege model, and existing control baseline.",
+      "Missing measured operational effectiveness evidence for access control against targeted attacks in this specific deployment.",
+      "Missing integration and operability evidence for the unknown target environment, including how access-control changes would be deployed, tested, and maintained.",
+      "Missing exploitation-signal evidence connecting the cited access-control vulnerabilities to realized targeted-attack exploitation trends within the 2025-2027 window."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "technical_feasibility",
+    "rationale": "The supplied records support general technical feasibility of ACCESS CONTROL as a recognized, implementable security-control category: access control is defined in NIST SP 800-53 [E_25_8F4D567857A97316], described as credential and privilege management for user, administrator, and service accounts [E_02_BE48A23ABD77A19C], and described through Active Directory configuration measures with implementation tools [E_12_F6120325C44B5EA9]. Assessment methods for access control are also present [E_26_22D6C8ED91C81D37]. However, the frozen deployment context has unknown infrastructure, organization type, region, and budget context, so a deployment-specific technical feasibility conclusion cannot be made. The records do not establish realized operational effectiveness for this deployment [E_33_F4FC25CE90264812], and product advisories show access-control-related vulnerabilities that require vendor updates and network protections [E_10_5C0B9AC35F2420B3, E_10_CEB460BC4092B2D3, E_10_B4F773BEC65685CC]. Therefore the balance is mixed: general feasibility is supported, deployment-specific feasibility is indeterminate.",
+    "stance": 0
+  },
+  "assessment_sha256": "9cbd49c578efad4ae2590d86f9c56180849fa60ac446f5dfb32a9caacc56bcd4",
+  "checkpoint_sha256": "64bb9f173837b4dd3ed6f3202217cdd2c4b705848a8f24ae74ec98aa3840a836",
+  "created_at": "2026-11-06T11:40:01.553748+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "8dc45948c9a5fafa1e072407edadc9b50e058ecc7304cbda3de1064da4f8ea8a",
+    "base_stage3_input_fingerprint": "d258fb231d7b878ec139955f8b6c305ddfd64bd11ef3d81fc629e909837f5d13",
+    "base_stage3_output_sha256": "52a43d3a673cc8ab023b4726616257c27608a8e654371c0d22375d8ba68a4d2a",
+    "case_id": "main__targeted_attack__access_control",
+    "evidence_ids": [
+      "E_02_BE48A23ABD77A19C",
+      "E_03_B4E8A797813EC72F",
+      "E_03_F0CD4F1DE74CC7AD",
+      "E_10_5C0B9AC35F2420B3",
+      "E_10_B4F773BEC65685CC",
+      "E_10_CEB460BC4092B2D3",
+      "E_12_F6120325C44B5EA9",
+      "E_15_195FD353ADC8E8B0",
+      "E_20_4D81D3799E4826F0",
+      "E_20_7FC83A095DEEBF69",
+      "E_23_42E9198B388BAA83",
+      "E_25_8F4D567857A97316",
+      "E_26_22D6C8ED91C81D37",
+      "E_29_4ED97777A686537A",
+      "E_29_951AF8A7281A822E",
+      "E_29_A8790308F8A745BD",
+      "E_31_96F42990F3AEAC86",
+      "E_33_F4FC25CE90264812"
+    ],
+    "input_fingerprint": "598821529b55019abc9ff0e7ee69433667b6045eb55afc05d897a814d5a8946a",
+    "lens_type": "technical_feasibility",
+    "response_schema_sha256": "a36d5d80caca740c1cd1892b41ddff28f9623475db3149f5d5cf68d34e103c35",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "2833380ddb4f7f2d1782146cc9b7e57dd6c0462d066bcaa3308784ff3521bdae",
+    "user_prompt_sha256": "0bd2c056117d5f8bb31b9615b69b28d706a79120a11cb2b0ed48c3a8e88cba95",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

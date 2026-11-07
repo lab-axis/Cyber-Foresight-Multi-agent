@@ -1,0 +1,187 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF-C1",
+        "evidence_ids": [
+          "AE02S_61C8065AA576E7C5"
+        ],
+        "scope": "GENERAL",
+        "statement": "Anomaly-style behavioral detection for malware has been directly evaluated on Android and reports high malware detection rates, including temporally different and previously unseen APKs; the record states that it demonstrates anomaly-style behavioral detection can be implemented as an on-device malware defense.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C2",
+        "evidence_ids": [
+          "AE02C_E333FEC17F65B4E1"
+        ],
+        "scope": "GENERAL",
+        "statement": "The same action-specific malware study identifies a direct deployment limitation: anomaly-based algorithms can consume substantial energy and computing resources on constrained devices, and the proposed design required feature reduction and server-side training before on-device use.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C3",
+        "evidence_ids": [
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE06_0380E777894ACF9A"
+        ],
+        "scope": "GENERAL",
+        "statement": "NISTIR 8219 describes anomaly detection as supporting incident detection, visibility, monitoring, and response in a manufacturing ICS context, while noting that organizations should identify products that best integrate with existing tools, processes, and system infrastructure. NIST SP 1800-10B describes a behavioral anomaly detection test configuration in an ICS scenario.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-C4",
+        "evidence_ids": [
+          "E_15_D3680C31BEE2C0F8"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST AI 100-2 records that poisoning of unsupervised learning models has been shown for clustering used in malware classification and network traffic anomaly detection, and that evasion attacks have been shown for malware classification, PDF malware classification, Android malicious app detection, and network intrusion detection, but the supplied record does not document evasion attacks specifically for network traffic anomaly detection.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-C5",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen deployment context is a CIS IG2 reference enterprise with personnel responsible for managing and protecting infrastructure across multiple departments; the context states that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-C6",
+        "evidence_ids": [
+          "E_03_F1CA4CD00581F628"
+        ],
+        "scope": "GENERAL",
+        "statement": "Mandiant reports that China-nexus attackers have exploited edge devices, deployed custom malware ecosystems, and that custom malware may go undetected for long periods; it also reports that off-the-shelf security products typically will not support edge devices and that monitoring and forensics can be limited.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-C7",
+        "evidence_ids": [
+          "DE_DE16_CEA1C38E613068F8"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA/ICS-CERT guidance contrasts signature and anomaly detection, stating that anomaly-based detection can deal with unknown threats but is subject to false negatives, sensitive to changes in network devices, and has unpredictable behavior; it also notes the computer resource penalty incurred by host-based IDS in ICS environments.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-C8",
+        "evidence_ids": [
+          "DE_DE04_C6F46FCDE66BFAC7",
+          "DE_DE04_0B77B88875745973"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST IDPS guidance states that multiple IDPS technology types may be needed for comprehensive detection, and that IDPS implementation, operation, and maintenance require skills, training, testing of software and signature updates, and the ability to disable or reconfigure problematic detection components.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If constrained endpoints are in scope, adopt feature reduction or server-side training before on-device anomaly-detection use. [AE02C_E333FEC17F65B4E1]",
+      "If edge devices are in scope, confirm device-specific monitoring, forensic, and product-support requirements before relying on anomaly detection. [E_03_F1CA4CD00581F628]",
+      "Integrate the anomaly-detection approach with existing monitoring, IDS/IPS, or equivalent tooling and evaluate multiple detection technology types for comprehensive coverage. [DE_DE05_105D0030778F41BC, DE_DE04_0B77B88875745973]",
+      "Test and tune detection software, models, or signatures before production deployment and maintain the ability to disable or reconfigure problematic detection components. [DE_DE04_C6F46FCDE66BFAC7]",
+      "Evaluate protections against adversarial ML, including poisoning of unsupervised clustering used in anomaly detection, where such techniques are in scope. [E_15_D3680C31BEE2C0F8]"
+    ],
+    "constraints": [
+      "General feasibility is qualified by constrained-device resource use: where constrained endpoints are in scope, feature reduction or server-side training is required before on-device anomaly-detection use. [AE02C_E333FEC17F65B4E1]",
+      "Operability is conditioned on integration with existing tools and processes; the supplied records do not identify a specific vendor, product version, or enterprise architecture. [DE_DE05_105D0030778F41BC, CTX_CIS_IG2_9F94838146D9C3A4]",
+      "If edge devices are within the deployment scope, feasibility is conditioned on additional visibility, monitoring, and forensic support because off-the-shelf security products may not support those devices. [E_03_F1CA4CD00581F628]",
+      "Anomaly detection must be evaluated against known technical limitations, including sensitivity to network changes, unpredictability, false-negative risk, and host-based resource penalty. [DE_DE16_CEA1C38E613068F8]",
+      "Implementation and maintenance require relevant skills, testing of software/models/signatures, and likely multiple detection technology types for comprehensive coverage. [DE_DE04_C6F46FCDE66BFAC7, DE_DE04_0B77B88875745973]",
+      "Adversarial ML risks, including poisoning of unsupervised clustering for network traffic anomaly detection, should be considered in design and operation, but this record is not used as a direction-carrying challenge under the supplied grounding contract. [E_15_D3680C31BEE2C0F8]"
+    ],
+    "decision_object_id": "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+    "evidence_gaps": [
+      "Exact endpoint and network architecture, endpoint mix, data sources, log availability, scale, and performance/resource budgets are not supplied, so deployment-specific technical compatibility cannot be concluded.",
+      "Existing monitoring, IDS/IPS, SIEM, threat-intelligence, and incident-response tooling and integration interfaces are not specified.",
+      "It is unknown whether constrained endpoints, edge devices, or custom/edge malware environments are in scope for the frozen action.",
+      "No exact vendor, product version, deployment architecture, budget, staffing count, or operational resource quantity is supplied.",
+      "Jurisdiction-specific technical or regulatory requirements are masked and absent for this lens; no jurisdiction-specific feasibility direction is made."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "technical_feasibility",
+    "rationale": "Under the supplied directional_grounding_contract, AE02S_61C8065AA576E7C5 is the direction-carrying technical_enablement record and supports GENERAL technical feasibility: anomaly-style behavioral malware detection has been directly evaluated on Android and reports high malware detection rates, including temporally different and previously unseen APKs. AE02C_E333FEC17F65B4E1 is the direction-carrying technical_limitation record and challenges feasibility in resource-constrained deployments because anomaly-based algorithms can consume substantial energy and computing resources and required feature reduction and server-side training before on-device use. DE_DE05_105D0030778F41BC and DE_DE06_0380E777894ACF9A are deployment_maturity context only and do not create direction by themselves. The remaining supplied records are not directionally eligible under this lens contract; they can support neutral technical, operational, threat, or deployment-profile context, but they cannot reverse the grounded direction. The support evidence is direct and action-specific. The challenge evidence is also direct but is conditional and design-oriented rather than absolute: it identifies a resource constraint for constrained devices and a workaround path. Neutral records on adversarial ML, edge-device visibility, IDPS operability, anomaly-detection characteristics, and the CIS IG2 profile impose constraints and conditions, but they do not establish that the action is technically infeasible. Because exact enterprise architecture, endpoint mix, data sources, scale, and operational tooling are missing, deployment-specific compatibility remains unresolved. The grounded GENERAL direction is therefore preserved with PARTIAL sufficiency and stance +1.",
+    "stance": 1
+  },
+  "assessment_sha256": "c850c9faed2ec217797071807e35ecc9f6a5db015603b8c44cd8b018e4f9acd3",
+  "checkpoint_sha256": "d365cf2cea7c0a81cd6099e8581c2ff0ca1ae63043a87cb9cdedd05f03610493",
+  "created_at": "2026-11-06T08:29:27.555286+00:00",
+  "identity": {
+    "axis": "PROMPT_SEED_ROBUSTNESS",
+    "case_id": "main__malware__anomaly_detection",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "AE02C_E333FEC17F65B4E1",
+        "AE02S_61C8065AA576E7C5",
+        "DE_DE05_105D0030778F41BC",
+        "DE_DE06_0380E777894ACF9A"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "2e4f3f68547f6c27beec824b5acf81721180f4ed44f3fc72d675bb6b148fe318",
+    "lens_type": "technical_feasibility",
+    "member_decision_object_ids": [
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__eu__cis_ig2__7b3abb36d94e3682",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__us__cis_ig2__72ba6e0d3d843499"
+    ],
+    "payload_sha256": "e77e8944ad2f18475351594774f39c6a068dfce2618431d7c03708fb42d689c8",
+    "payload_transform_id": null,
+    "prompt_variant": "P2_EVIDENCE_FIRST",
+    "repeat_index": 44,
+    "response_schema_sha256": "03165dfbbbed623db79f36e9f8f2456a9d56eeb41d5d3795653a5934d4e43248",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+    "system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882",
+    "user_prompt_sha256": "da41b35b53c62a05f8b9566f31bb61c9f43aa0d16cccec43e7411ce506a54633",
+    "variant_id": "P2_EVIDENCE_FIRST"
+  }
+}

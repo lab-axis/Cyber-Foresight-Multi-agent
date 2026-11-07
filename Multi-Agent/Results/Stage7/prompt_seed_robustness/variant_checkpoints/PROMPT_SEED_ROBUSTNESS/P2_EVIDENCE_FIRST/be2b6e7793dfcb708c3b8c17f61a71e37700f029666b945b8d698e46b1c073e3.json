@@ -1,0 +1,161 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF-1",
+        "evidence_ids": [
+          "AE07S_C1EF15B9628497F0"
+        ],
+        "scope": "GENERAL",
+        "statement": "The 2024 session-hijacking countermeasures study treats encrypted web communication and related secure-session practices as concrete countermeasures against interception-oriented hijacking and supports HTTPS/TLS as an important transport-layer control within a broader session-protection strategy.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-2",
+        "evidence_ids": [
+          "AE07C_9CBF5980D3BA474A"
+        ],
+        "scope": "GENERAL",
+        "statement": "The OIPM session-token finding states that session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists and that HTTPS alone cannot cover all session-hijacking paths, challenging treatment of HTTPS as a complete standalone mitigation.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-3",
+        "evidence_ids": [
+          "DE_DE14_5FC183B8D7DD961A"
+        ],
+        "scope": "GENERAL",
+        "statement": "A NIST SSL VPN case study describes a planning scenario in which a medium-sized organization with remote users evaluates an SSL VPN architecture as a complementary remote-access solution, and notes the existing IPsec host-to-gateway solution requires significant IT labor to install and support client software.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-4",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-63B requires browser session cookies to be tagged to be accessible only on secure (HTTPS) sessions and requires authenticated sessions to be sent and received using an authenticated protected channel without fallback to insecure transport after authentication.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-5",
+        "evidence_ids": [
+          "E_25_99857C4681E8FEE5"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 session-authenticity control guidance describes protecting communications sessions against man-in-the-middle attacks, session hijacking, and insertion of false information, and includes an enhancement discussion on invalidating session identifiers at logout.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-6",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref cutoff-constrained PMT publication trend reports annual HTTPS security publication counts for 2021 through 2024 and explicitly states that the trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If HTTPS is relied on for session-hijacking mitigation, it should be combined with additional session-protection controls because the supplied finding states that HTTPS alone cannot cover all session-hijacking paths. Evidence: AE07C_9CBF5980D3BA474A.",
+      "Before any deployment-specific technical feasibility conclusion, supply exact target architecture, application/session-cookie behavior, TLS support, certificate trust model, and existing network controls.",
+      "If session cookies are in scope, confirm that they are accessible only on secure (HTTPS) sessions and that authenticated sessions do not fall back to insecure transport, consistent with the supplied NIST session guidance. Evidence: DE_DE13_055FC5E35FA61DD5."
+    ],
+    "constraints": [
+      "HTTPS/TLS is supported as an important transport-layer control within a broader session-protection strategy, not as a self-contained solution for all session-hijacking paths. Evidence: AE07S_C1EF15B9628497F0.",
+      "HTTPS alone cannot cover all session-hijacking paths; session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists. Evidence: AE07C_9CBF5980D3BA474A.",
+      "The supplied SSL VPN case study provides deployment-maturity context for SSL/HTTPS-based remote-access planning and IT labor, but it does not establish exact compatibility with the frozen CIS IG2 reference enterprise environment. Evidence: DE_DE14_5FC183B8D7DD961A.",
+      "No supplied record establishes exact current deployment, enforceability, implementation timeline, staffing, cost, or product-version compatibility for HTTPS in the frozen scenario."
+    ],
+    "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+    "evidence_gaps": [
+      "Exact target architecture, application inventory, session-cookie behavior, TLS support, certificate trust model, proxy/load-balancing behavior, and existing session-management controls are not supplied, so deployment-specific technical feasibility cannot be concluded.",
+      "No supplied evidence reports whether PMT_HTTPS is currently deployed, enforced, or technically implementable in the frozen reference enterprise within the 2025-2027 window.",
+      "No supplied evidence reports measured residual risk reduction for XSS or malicious browser extension token theft after HTTPS deployment.",
+      "No supplied evidence reports exact implementation effort, operational burden, staffing, cost, or procurement constraints for HTTPS deployment."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "technical_feasibility",
+    "rationale": "Inventory of directional grounding: AE07S_C1EF15B9628497F0 is eligible under support_slots as technical_enablement. It can support a GENERAL statement that HTTPS/TLS is an important transport-layer control for interception-oriented session hijacking within a broader session-protection strategy. It cannot, by itself, establish local deployment, implementation effort, exact compatibility, operational effectiveness, or complete mitigation. AE07C_9CBF5980D3BA474A is eligible under challenge_slots as technical_limitation. It can challenge treating HTTPS as a complete standalone mitigation because session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists. It does not state that HTTPS is technically impossible, unimplementable, or outside the enterprise's technical capability. DE_DE14_5FC183B8D7DD961A is eligible only as deployment_maturity. It can provide supplementary context about SSL/HTTPS-based remote-access planning and IT labor, but it cannot create a directional feasibility claim by itself. The remaining supplied records are context, static guidance, publication metadata, or threat context and cannot create a directional technical-feasibility claim under the supplied contract. Weighing the direct records, the support record is direct to the Threat x PMT action and supports feasibility of HTTPS as a technical session-protection component. The challenge record is also direct but is best read as a residual-risk limitation on standalone completeness rather than an implementation barrier. Therefore the GENERAL technical feasibility direction is supported. Deployment-specific feasibility is not concluded because exact target architecture, application/session-cookie behavior, TLS support, certificate trust model, proxy behavior, and existing session-management controls are not supplied.",
+    "stance": 1
+  },
+  "assessment_sha256": "3c592a81bebf769351ebd0ea766a51f05c1988e1e925a36dbd88fdf12ec7a519",
+  "checkpoint_sha256": "0bcda6443d0f6b27745695cd5fe0d3e37828c41fb49396cc9c0ed30b85f7aa4e",
+  "created_at": "2026-11-06T08:44:44.850349+00:00",
+  "identity": {
+    "axis": "PROMPT_SEED_ROBUSTNESS",
+    "case_id": "main__session_hijacking__https",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "AE07C_9CBF5980D3BA474A",
+        "AE07S_C1EF15B9628497F0",
+        "DE_DE14_5FC183B8D7DD961A"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "be2b6e7793dfcb708c3b8c17f61a71e37700f029666b945b8d698e46b1c073e3",
+    "lens_type": "technical_feasibility",
+    "member_decision_object_ids": [
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051"
+    ],
+    "payload_sha256": "25d733ad81d08637efd5f2461ac855920126361a00f6bfe21672a66335e3fdba",
+    "payload_transform_id": null,
+    "prompt_variant": "P2_EVIDENCE_FIRST",
+    "repeat_index": 44,
+    "response_schema_sha256": "861f8378e4d0c581dc1985dfd63b54984fc8f42accb084ab13c3a73c8240202e",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+    "system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882",
+    "user_prompt_sha256": "59871bdba6296d76d1dfa0d7aa61ed8b49ec056fa76a5b206413d3d4204e6930",
+    "variant_id": "P2_EVIDENCE_FIRST"
+  }
+}

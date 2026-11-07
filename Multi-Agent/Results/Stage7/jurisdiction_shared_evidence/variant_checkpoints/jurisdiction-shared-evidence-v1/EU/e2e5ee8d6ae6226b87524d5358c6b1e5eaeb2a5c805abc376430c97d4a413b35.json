@@ -1,0 +1,113 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_CLM_001",
+        "evidence_ids": [
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE17_567DDA7CFBC62829"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied governance-enablement records support institutional feasibility of ACCESS CONTROL by describing policy, governance, monitoring, and compliance-integration pathways for access-control implementation.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_002",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied compliance-constraint record challenges institutional feasibility in a limited way by requiring session and access-token security properties, including authenticated protected channels, timeout behavior, and prevention of insecure fallback.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_003",
+        "evidence_ids": [
+          "E_31_52DCE9554453ADEF",
+          "E_31_96F42990F3AEAC86"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "EU primary-law records provide regulatory-applicability context for the frozen EU scenario, including risk-management expectations and promotion of access-policy and access-management concepts, but they do not by themselves establish that the frozen CIS IG2 reference enterprise has a particular EU legal obligation.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If the enterprise is subject to EU risk-management expectations, access-control policies and human-resources security should be incorporated into the cybersecurity risk-management measures.",
+      "If attribute-based or policy-driven access decisions are used, enterprise policy, attribute definitions, attribute lifecycle management, and access-failure procedures should be established.",
+      "If zero-trust-style access decisions are used, policy enforcement, monitoring, diagnostics, and compliance inputs should be maintained.",
+      "If session or access-token mechanisms are used, secure-channel, timeout, no-insecure-fallback, and token/session validation requirements should be satisfied.",
+      "If EU-specific legal applicability is to be judged, additional evidence identifying the enterprise's regulated status and applicable EU obligations is required."
+    ],
+    "constraints": [
+      "The GENERAL feasibility support is grounded in governance-enablement guidance and does not establish EU-specific legal applicability, deployment maturity, or operational effectiveness.",
+      "The EU primary-law records are regulatory-applicability context only and do not establish that the frozen CIS IG2 reference enterprise is an essential or important entity, a regulated sector, or a data processor with specific EU obligations.",
+      "The compliance-constraint record is a general technical session and access-token requirement; it is not evidence of an EU legal prohibition or of overall infeasibility.",
+      "The frozen CIS IG2 reference profile may involve regulatory burdens, enterprise-grade technology, and specialized expertise, but no exact staffing, budget, vendor, sector, or architecture is supplied."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__targeted_attack__access_control__EU",
+    "evidence_gaps": [
+      "Missing EU legal-status evidence for the frozen CIS IG2 reference enterprise, including whether it is an essential or important entity, a regulated sector, or subject to specific data-residency or cross-border obligations.",
+      "Missing deployment-specific EU compliance-burden, accountability, auditability, data-sovereignty, and cross-border constraint evidence needed to support a DEPLOYMENT_SPECIFIC institutional direction.",
+      "Missing evidence linking the general governance-enablement pathways to realized access-control deployment maturity or operational effectiveness in the frozen EU scenario."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied evidence supports GENERAL institutional feasibility of ACCESS CONTROL. Governance-enablement records describe implementable policy, governance, visibility, compliance-integration, and access-failure pathways. A compliance-constraint record introduces limited technical constraints related to session and access-token management, but does not establish infeasibility or outweigh the governance enablement. EU primary-law records provide regulatory-applicability context for the frozen EU scenario, but they do not by themselves establish the legal status of the frozen CIS IG2 reference enterprise or a deployment-specific EU legal direction. Therefore, a GENERAL +1 stance is preserved while deployment-specific EU legal feasibility remains context-limited.",
+    "stance": 1
+  },
+  "assessment_sha256": "4473951b0faba94c79b88c92cbb57a182cc47164b016611d05b3cae48d2ad2e5",
+  "checkpoint_sha256": "b127d2459b49c166b0b558e2913ea658fcf839b07229c1bac935d29a1b511bc6",
+  "created_at": "2026-11-06T17:02:46.140728+00:00",
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "EU",
+    "decision_object_sha256": "a959c85323037925410d3b552e54237e68ade89112e50402ea80d7b8ea540199",
+    "evidence_content_sha256": "6681d8d141722dd7c750a770868fe87894ac89ad6084200a015bf1bff0400f6e",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "9680a96de9c78d7fe9f3495aa6539e9088f4b93b97773b57f875125d6d288a5a",
+    "response_schema_sha256": "5581768e7fca4dcb8b430773e97adb95f1f2e56780aa3729f8161b56c9aa0da0",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 42,
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "535ae2933c4dc6e2a3bf4189d6f147c52fda27058de7fefbdd6e22fa99aa9c09"
+  }
+}

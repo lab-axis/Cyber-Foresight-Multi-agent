@@ -1,0 +1,155 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_C1",
+        "evidence_ids": [
+          "DE_DE01_0B9728FE19095FD0"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied AI risk-management guidance defines GOVERN practices, including defined roles and responsibilities, training, executive leadership responsibility, AI system inventory, and safe decommissioning, which can support institutional governance of NLP/LLM systems.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_C2",
+        "evidence_ids": [
+          "DE_DE15_271AFADC7B3D5999"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied secure-AI development guidance requires security-relevant documentation, including training-data sources, intended scope and limitations, guardrails, retention time, review frequency, failure modes, and structures such as model cards, data cards, and SBOMs, which support transparency and accountability for NLP/LLM systems.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_C3",
+        "evidence_ids": [
+          "DE_DE15_7C1849B1FD93975C"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied secure operation and maintenance guidance requires monitoring system behavior and inputs, logging inputs to support compliance obligations, audit, investigation, and remediation, secure update management, and information sharing, which support institutional auditability and lifecycle control for NLP/LLM systems.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_C4",
+        "evidence_ids": [
+          "DE_DE02_007F05150CB46131"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied generative-AI profile guidance requires reporting GAI incidents in compliance with legal and regulatory requirements, including the record's named example reporting requirements, creating a GENERAL compliance constraint for NLP/LLM deployment.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_C5",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen reference enterprise profile is CIS IG2, described as multi-department enterprise IT with personnel responsible for managing and protecting infrastructure, possible sensitive client or enterprise information processing, possible regulatory burdens, and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "Supply exact jurisdiction-specific regulatory applicability evidence before making a DEPLOYMENT_SPECIFIC institutional/regional conclusion for the masked region.",
+      "Assess whether any legal or regulatory incident-reporting obligations apply to GAI incidents for this deployment and implement corresponding reporting processes.",
+      "Establish governance roles, responsibilities, training, inventory, decommissioning, and executive accountability for NLP/LLM systems.",
+      "Implement documentation, monitoring, logging, secure update management, and incident-response/reporting processes consistent with the supplied guidance.",
+      "Confirm availability of any required enterprise-grade technology and specialized expertise without assuming exact staffing, budget, or vendor."
+    ],
+    "constraints": [
+      "The assessment is limited to GENERAL institutional feasibility because the frozen region is masked and no regulatory_applicability evidence is supplied.",
+      "The supplied compliance record states an example-dependent legal/regulatory reporting requirement; it does not establish that any specific named reporting regime applies to this deployment.",
+      "The supplied governance and operation records are framework-level guidance; they do not establish an existing implementation, exact staffing, budget, vendor, or operational effectiveness for the frozen NLP/LLM DDoS action.",
+      "The reference profile may involve enterprise-grade technology and specialized expertise, but no exact resource quantities are supplied."
+    ],
+    "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+    "evidence_gaps": [
+      "No supplied evidence provides regulatory_applicability for the masked deployment region.",
+      "No supplied evidence identifies the specific data categories, incident triggers, sector, or legal reporting obligations that would make the generative-AI incident-reporting requirement applicable to this deployment.",
+      "No supplied evidence establishes current institutional AI governance maturity, audit capability, or resourcing in the CIS IG2 reference enterprise.",
+      "No supplied evidence distinguishes institutional feasibility for NLP/LLM applied to the DDoS forecast pair from GENERAL NLP/LLM AI deployment."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Claims IR_C1 through IR_C3 ground GENERAL institutional support. The supplied decision-evidence records define governance/accountability structures, transparency and documentation practices, and secure operation, monitoring, logging, audit, remediation, and update-management practices for NLP/LLM systems. Claim IR_C4 grounds a GENERAL compliance constraint: the supplied generative-AI profile record requires GAI incident reporting in compliance with legal and regulatory requirements. This creates a compliance obligation, but the record is example-dependent and does not establish that a specific legal or regulatory reporting regime applies to this deployment, nor does it establish conflict, resource infeasibility, or a blocking institutional barrier. Because the frozen region is masked and no regulatory_applicability evidence is supplied, a DEPLOYMENT_SPECIFIC regional/legal conclusion is not grounded. The missing legal scope is recorded as an evidence gap rather than converted into a directional challenge. On balance, the directly grounded GENERAL governance-enablement evidence outweighs the generic compliance constraint, so the supplied records support GENERAL institutional feasibility under this lens.",
+    "stance": 1
+  },
+  "assessment_sha256": "586cc7b9b742162b2c02f594a9f7c4d1d9783ab395f8b69c6c50ce31f0857423",
+  "checkpoint_sha256": "45be7241c490d9470fe80c8526dcf3b84efebd7d05788559070d62b978ccc685",
+  "created_at": "2026-11-06T07:30:43.113161+00:00",
+  "identity": {
+    "axis": "PROMPT_SEED_ROBUSTNESS",
+    "case_id": "main__ddos__nlp_llm",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE01_0B9728FE19095FD0",
+        "DE_DE02_007F05150CB46131",
+        "DE_DE15_271AFADC7B3D5999",
+        "DE_DE15_7C1849B1FD93975C"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "81098199d6813f3caeebf4fce03d2bdb72c1fba266ee9c53eb0efc5a2de33ac8",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__fec82e228776b427"
+    ],
+    "payload_sha256": "fc89ade14bc934fe6fc0c0ea471cce486176f605af227dc7bb1203680708b08d",
+    "payload_transform_id": null,
+    "prompt_variant": "P3_DECISION_FIRST",
+    "repeat_index": 43,
+    "response_schema_sha256": "2765ceeab5b9512e5881af286dbd75df1553f279b395dc9b7c1582f9af16fbc4",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "27de00534a18289301e4dad3502179401a4ba7c502a40443752ae5ff91c0b387",
+    "variant_id": "P3_DECISION_FIRST"
+  }
+}

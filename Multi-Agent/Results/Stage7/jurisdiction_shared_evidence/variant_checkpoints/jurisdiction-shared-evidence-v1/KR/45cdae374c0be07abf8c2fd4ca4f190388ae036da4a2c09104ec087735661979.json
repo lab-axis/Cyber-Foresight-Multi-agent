@@ -1,0 +1,118 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-C1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST key-management guidance provides governance enablement for cryptographic deployments by describing accountability and traceability for key generation, access, use, and destruction, requiring access-control mechanisms and audit logging for key actions.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-C2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG Strong and Agile Encryption provides governance enablement by recommending properly configured and up-to-date SSL/TLS for data in transit when technically feasible, with an outcome of effective encryption deployed to maintain confidentiality of sensitive data and integrity of IT and remote OT traffic.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-C3",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST algorithm-transition guidance creates a compliance constraint for cryptographic deployments by disallowing two-key TDEA encryption, disallowing three-key TDEA encryption after December 31, 2023 unless specifically allowed by other NIST guidance, and listing AES-128, AES-192, and AES-256 as acceptable, which imposes algorithm-selection and migration obligations relevant to the 2025-2027 timing window.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-C4",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CIS IG2 reference-enterprise context describes such enterprises as having personnel responsible for managing and protecting IT infrastructure, often processing sensitive client or enterprise information, possibly facing regulatory burdens, and sometimes relying on enterprise-grade technology and specialized expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC institutional/regional conclusion would require KR-specific regulatory_applicability evidence showing whether jurisdictional rules require, permit, or restrict the planned cryptography controls for this enterprise.",
+      "Deployment-specific feasibility would require evidence of the existing cryptographic inventory and algorithm status, including whether disallowed or deprecated algorithms must be migrated within the 2025-2027 window.",
+      "Deployment-specific feasibility would require evidence of organizational governance for key management, including roles accountable for key generation, access, destruction, and audit-log review.",
+      "If data-sovereignty or cross-border constraints are material, the payload would need jurisdiction-specific evidence about data location, transfer, and supervisory obligations; no such evidence is supplied."
+    ],
+    "constraints": [
+      "Implementation must be able to demonstrate key-management accountability and traceability, including identification of entities authorized to generate, access, use, or destroy keys, and auditability of key actions.",
+      "Encryption deployment must align with the CPG expectation of properly configured and up-to-date SSL/TLS where technically feasible, including identifying and updating weak or outdated encryption.",
+      "Algorithm selection must avoid disallowed or deprecated ciphers under the NIST transition guidance for the 2025-2027 window, such as two-key TDEA and post-2023 three-key TDEA encryption unless specifically allowed by other NIST guidance, while acceptable algorithms include AES-128, AES-192, and AES-256.",
+      "The CIS IG2 reference profile suggests possible regulatory burdens and dependence on enterprise-grade technology or specialized expertise, but these are profile-level conditions and are not established as deployment-specific obligations without further evidence."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__insider_threat__cryptography__KR",
+    "evidence_gaps": [
+      "No supplied record provides KR-specific regulatory_applicability evidence establishing which Korean legal, data-sovereignty, cross-border, or sectoral obligations apply to the frozen CIS IG2 reference enterprise.",
+      "No supplied record establishes whether the frozen enterprise has existing cryptography, legacy TDEA use, key-management capabilities, or an institutional governance assignment for key custody and audit.",
+      "No supplied record establishes exact resource capacity, staffing, organizational ownership, or budget required to implement and audit cryptography during the 2025-2027 window."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "At GENERAL scope, the supplied action-specific institutional records support feasibility of the CRYPTOGRAPHY action. DE_DE08_031120C53EF050F3 provides governance enablement for cryptographic deployments through key-management accountability, traceability, access control, and audit logging. E_23_534489D29C38B327 provides governance enablement through a CISA CPG recommended encryption control for properly configured SSL/TLS in transit, with an outcome of effective encryption for confidentiality and integrity. DE_DE09_6719137897848A9E provides a compliance constraint by requiring avoidance of disallowed or deprecated cryptographic algorithms and alignment with acceptable algorithms, which is a bounded institutional challenge for the 2025-2027 window. No supplied record establishes KR-specific regulatory applicability, data-sovereignty obligations, cross-border constraints, or a jurisdiction-specific legal bar. Therefore, a jurisdiction-specific KR direction is not made; the grounded GENERAL institutional direction remains supported, while deployment-specific regional feasibility remains conditional on missing jurisdictional evidence.",
+    "stance": 1
+  },
+  "assessment_sha256": "d1dc4b12aeb641a71c17b3e18b9bdcfc2108f90bb89f1b3f17aa8134372bae01",
+  "checkpoint_sha256": "e5c83ad5c8c4e608c95855979a7e9430a4ede2b106a91836d31ffad377ff25e9",
+  "created_at": "2026-11-06T18:17:31.104945+00:00",
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "condition": "KR",
+    "decision_object_sha256": "32be7fa15642bbf20664e2a57598d72e16b84cf07f2c6ea4e1c770a78cc863d3",
+    "evidence_content_sha256": "4a651fdb7404341db0ccc07b34e2992734ce80dd40fff15487f30efc84bdf2e2",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "bb995315bedfdddde2761ba9e34120eb8aa47eb17296692f6e0fc4591a490499",
+    "response_schema_sha256": "28f1913c9d1011a6592af41ac9ef7a38d7fccc4cbf8b1e6cd63e3a8660e08f96",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 44,
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "7546238325246ce33a3fcb26d9c3af41c23e8b253602661d5e37af22c5f8b672"
+  }
+}

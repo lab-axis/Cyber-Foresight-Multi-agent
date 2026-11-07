@@ -1,0 +1,119 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-57 Part 1 Rev. 5 guidance describes key-management governance practices, including accountability/traceability, identification of authorized key entities, recording of key actions, and audit of logs, which provides a GENERAL institutional enablement pathway for CRYPTOGRAPHY.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA Cybersecurity Performance Goals include a recommended strong/agile encryption action, with an outcome of effective encryption for confidentiality of sensitive data and integrity of IT and OT traffic, and implementation expectations such as properly configured SSL/TLS where technically feasible, identifying outdated or weak encryption, updating to sufficiently strong algorithms, and considering post-quantum implications; this provides a GENERAL implementation pathway for CRYPTOGRAPHY.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-131A Rev. 2 states cryptographic algorithm approval statuses that constrain CRYPTOGRAPHY implementation, including disallowed two-key TDEA encryption and SKIPJACK encryption, deprecation of three-key TDEA encryption through 2023 and disallowance after 2023 unless specifically allowed, and acceptable AES; this creates a GENERAL algorithm-selection and transition compliance burden.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C4",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen CIS IG2 reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments, potential sensitive information and regulatory burdens, and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC KR institutional/regional conclusion would require KR-specific regulatory_applicability evidence plus a matching direction-carrying governance_enablement or compliance_constraint record.",
+      "Deployment-specific resource feasibility would require evidence of budget, staffing, procurement ceiling, vendor/product, architecture, or capacity.",
+      "To address the GENERAL compliance challenge, CRYPTOGRAPHY implementation would need to select acceptable-status algorithms and manage transition from disallowed or deprecated algorithms (DE_DE09_6719137897848A9E).",
+      "To operationalize the GENERAL governance support factor, the enterprise would need to implement key-management accountability/traceability and audit practices (DE_DE08_031120C53EF050F3).",
+      "To follow the GENERAL encryption control pathway, implementation would need properly configured SSL/TLS and plans for weak-encryption replacement and post-quantum implications (E_23_534489D29C38B327)."
+    ],
+    "constraints": [
+      "Implementation of CRYPTOGRAPHY would need to account for cryptographic algorithm approval/disallowance and transition statuses, including avoiding disallowed algorithms and managing deprecated algorithm sunset (DE_DE09_6719137897848A9E).",
+      "Institutional governance for CRYPTOGRAPHY would require key-management accountability/traceability, access controls, identification of authorized key entities, recording of key actions, and audit of logs (DE_DE08_031120C53EF050F3).",
+      "Use of encryption as a control would require properly configured SSL/TLS where technically feasible, identification of outdated or weak encryption, updates to sufficiently strong algorithms, and consideration of post-quantum implications (E_23_534489D29C38B327)."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__insider_threat__cryptography__KR",
+    "evidence_gaps": [
+      "No KR-specific regulatory_applicability evidence is supplied; therefore Korea-specific legal compatibility, data-sovereignty obligations, cross-border constraints, sector-specific compliance burden, and deployment-specific legal obligations cannot be assessed.",
+      "No numeric budget, staffing count, procurement ceiling, vendor, product version, sector, or architecture is supplied; deployment-specific resource and implementation feasibility cannot be assessed.",
+      "No supplied record establishes that CRYPTOGRAPHY has been deployed, adopted, or operationally performed in the frozen enterprise during the 2025-2027 forecast window; the supplied institutional records are guidance/control standards.",
+      "No supplied record establishes whether the frozen CIS IG2 reference enterprise has actual regulatory burdens, personal-data processing activities, or cross-border data flows."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied institutional evidence contains a GENERAL governance-enablement pathway for CRYPTOGRAPHY and one GENERAL compliance constraint. DE_DE08_031120C53EF050F3 supports feasibility by describing key-management accountability, traceability, authorization, recording, and audit practices. E_23_534489D29C38B327 supports feasibility by providing a recommended strong/agile encryption control pathway, including properly configured SSL/TLS where technically feasible, replacement of outdated or weak encryption, and consideration of post-quantum implications. DE_DE09_6719137897848A9E challenges feasibility in a bounded way by establishing algorithm approval/disallowance and transition constraints, such as disallowed weak algorithms and acceptable AES. On balance, the support factors are more directly aligned with institutional enablement for a broad CRYPTOGRAPHY action, while the constraint is a manageable compliance/implementation condition rather than evidence that institutional adoption is infeasible. No KR-specific regulatory_applicability record is supplied, so the supported direction is GENERAL only; the frozen KR region is treated as a scenario parameter and does not by itself change the GENERAL weighing.",
+    "stance": 1
+  },
+  "assessment_sha256": "252d83e9c5a58e81d2b7e06fd1e7cb763e0c51dce49321ea5a8244fc75522c50",
+  "checkpoint_sha256": "2ff2b09da8643e66409d737841aa88e4cf5bee1b0f9b9a5376860e273058d7f2",
+  "created_at": "2026-11-06T16:44:04.287123+00:00",
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "condition": "KR",
+    "decision_object_sha256": "32be7fa15642bbf20664e2a57598d72e16b84cf07f2c6ea4e1c770a78cc863d3",
+    "evidence_content_sha256": "4a651fdb7404341db0ccc07b34e2992734ce80dd40fff15487f30efc84bdf2e2",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "bb995315bedfdddde2761ba9e34120eb8aa47eb17296692f6e0fc4591a490499",
+    "response_schema_sha256": "28f1913c9d1011a6592af41ac9ef7a38d7fccc4cbf8b1e6cd63e3a8660e08f96",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 42,
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "7546238325246ce33a3fcb26d9c3af41c23e8b253602661d5e37af22c5f8b672"
+  }
+}

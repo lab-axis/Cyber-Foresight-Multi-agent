@@ -1,0 +1,147 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF_C1",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied Crossref publication-trend record for PMT_HTTPS reports annual publication counts of 2021=14, 2022=8, 2023=8, 2024=15, OLS_slope=0.300000 works/year, first_to_last_delta=1, total_results=45, and states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C2",
+        "evidence_ids": [
+          "E_25_99857C4681E8FEE5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST SP 800-53 Rev. 5 record describes a control to protect the authenticity of communications sessions and states that such protection addresses man-in-the-middle attacks, session hijacking, and insertion of false information, with an enhancement to invalidate session identifiers at logout.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C3",
+        "evidence_ids": [
+          "E_10_AC5A58AF5E015229"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied advisory states that a cross-site scripting vulnerability in the affected products could result in stealing session cookies and session hijacking, and recommends product updates and network-access protections.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C4",
+        "evidence_ids": [
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied IBM X-Force record reports that security misconfigurations accounted for 30% of total findings, that allowing concurrent user sessions accounted for 15% of those misconfigurations and could weaken MFA through session hijacking, and that exploitation of public-facing applications was identified in 29% of incidents.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C5",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied HTTPS publication-trend record is constrained to Crossref records first deposited on or before 2024-12-31 and reports annual counts only through 2024, not through the 2025-2027 forecast window.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "Deployment-specific technical feasibility cannot be assessed until infrastructure_context is supplied, including the relevant application/web architecture, communication-session protection, session identifier handling, and network access controls.",
+      "HTTPS-specific implementation and operability evidence for the relevant environment would be required to support a deployment-specific feasibility conclusion.",
+      "Evidence linking the HTTPS control to the observed session-hijacking mechanisms would be required to establish threat-mitigation fit."
+    ],
+    "constraints": [
+      "Technical feasibility must be assessed only at the GENERAL level because deployment_context is unknown.",
+      "The only HTTPS-specific quantitative evidence is a publication-activity trend that explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+      "Supplied session-hijacking mechanisms include XSS-based session cookie stealing and web-application session misconfiguration, so HTTPS-specific technical fit must be evaluated against those mechanisms rather than assumed."
+    ],
+    "decision_object_id": "decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2",
+    "evidence_gaps": [
+      "No supplied record establishes HTTPS-specific implementation, integration, operability, scalability, maintainability, or compatibility evidence.",
+      "No supplied record establishes that HTTPS was deployed, enforced, or implemented in relevant environments by the 2024-12-31 cutoff.",
+      "No supplied record directly links HTTPS to reduced session-hijacking success for the XSS cookie-stealing mechanism reported in E_10_AC5A58AF5E015229 or the web-application session misconfiguration context reported in E_04_B9A3190D9CA152A3.",
+      "No supplied record provides post-cutoff session-hijacking exploitation signal or technical trajectory for the 2025-2027 window.",
+      "Deployment context fields are unknown: region, organization_type, infrastructure_context, and budget_context."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+    "lens_type": "technical_feasibility",
+    "rationale": "The supplied records provide some general technical relevance to session-hijacking mitigation but do not establish that the frozen HTTPS action is technically feasible in a deployment or across the 2025-2027 window. E_25_99857C4681E8FEE5 supports the existence of a communications-session authenticity control category relevant to session hijacking and man-in-the-middle protection, but it does not identify HTTPS or establish HTTPS deployment, operability, or effectiveness. E_10_AC5A58AF5E015229 and E_04_B9A3190D9CA152A3 identify observed technical mechanisms and risk contexts for session hijacking, including XSS-based session cookie stealing and web-application session misconfiguration, but they do not demonstrate that HTTPS implements, integrates with, or is sufficient for those mechanisms. E_33_13A684B424C1D15B is the only HTTPS-specific quantitative record and shows publication activity through 2024, but it explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. No supplied record provides HTTPS-specific implementation, integration, operability, scalability, maintainability, or deployment-context compatibility evidence. Because deployment context is unknown, deployment-specific feasibility cannot be judged; however, the supplied material also does not materially challenge technical feasibility, only fails to support it. The appropriate stance is therefore indeterminate.",
+    "stance": 0
+  },
+  "assessment_sha256": "c8472c196129ba10190572d28d4be93845c4c0fe3ae54a3e75761a4ad81e56d4",
+  "checkpoint_sha256": "fcd0d929e0cf1afa579f131acdd752778f90e9095226da412edf02633cbdbda4",
+  "created_at": "2026-11-06T13:33:43.960590+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "8cbf609b1a0d7e51b91d7b153f0e4beabeb29c8ab5e339c4a1ae6911801acc3e",
+    "base_stage3_input_fingerprint": "13e1f696777533a58c7b3a267384ff9a72bfbcdcf73feae811f1626308c8a589",
+    "base_stage3_output_sha256": "4eb586fd629f7e886172255798473e9ecf9d48ada2ef4f48d39c9c6c4bf13bfd",
+    "case_id": "main__session_hijacking__https",
+    "evidence_ids": [
+      "E_02_3AE1561299B667F5",
+      "E_03_6B1B12ABFD14313F",
+      "E_04_B9A3190D9CA152A3",
+      "E_10_AC5A58AF5E015229",
+      "E_12_9B8ECD82AD844621",
+      "E_12_CFEC6517865F0563",
+      "E_19_A61B74B0F1435639",
+      "E_19_E896356AEE4DB2CD",
+      "E_20_88F8C63B0AC62BEC",
+      "E_22_808618C790A7133A",
+      "E_23_6C42FC29A05ADCAE",
+      "E_25_99857C4681E8FEE5",
+      "E_26_2A6B7965607F1AAF",
+      "E_29_2B4FE56914E3B676",
+      "E_29_5608502338822397",
+      "E_29_B82ABFE7422C38D1",
+      "E_33_13A684B424C1D15B"
+    ],
+    "input_fingerprint": "d7a3317b6e84d771e8e0c3c85dd17941f1256deedd62aebaa6643d3b3988da39",
+    "lens_type": "technical_feasibility",
+    "response_schema_sha256": "b8f8cca2fee4f1f1c92a7e428e329f2d00a0714e25a7968d015c01393d39d87a",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "2833380ddb4f7f2d1782146cc9b7e57dd6c0462d066bcaa3308784ff3521bdae",
+    "user_prompt_sha256": "f65d8f6bd31189297fc36a6963116ceee690a55da8efa2d276ac4981f6bd6fd8",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

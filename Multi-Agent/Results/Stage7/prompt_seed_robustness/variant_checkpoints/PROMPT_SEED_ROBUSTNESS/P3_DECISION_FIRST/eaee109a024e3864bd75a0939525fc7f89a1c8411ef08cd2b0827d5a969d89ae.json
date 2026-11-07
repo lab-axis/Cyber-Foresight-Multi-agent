@@ -1,0 +1,147 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FA_CLAIM_1",
+        "evidence_ids": [
+          "DE_DE14_EDCA207577B4607A"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied SSL VPN decision-guidance record documents operational and resource burdens associated with SSL/encrypted transport deployment: session establishment can be affected by back-end authentication demands and certificate key size; encapsulated traffic may require packet fragmentation or MTU tuning; testing may be needed; and addressing performance problems may involve upgrading or replacing hardware, using an SSL accelerator to offload processing, or reducing processing demands.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLAIM_2",
+        "evidence_ids": [
+          "DE_DE10_A086B3193CD6440B"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied TLS implementation guidance identifies a limited efficiency pathway: the optional TLS Raw Public Keys extension can reduce the size of the public key structure and simplify processing, although it removes certificate-based entity assurance and requires an out-of-band binding between a public key and entity.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLAIM_3",
+        "evidence_ids": [
+          "DE_DE18_CDC975345637E009"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied control-systems encryption guidance states that IPSec transport mode has less overhead than tunnel mode because it does not add an additional per-packet header, which is a resource-saving option for encrypted communications in some deployment contexts.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLAIM_4",
+        "evidence_ids": [
+          "DE_DE14_5FC183B8D7DD961A"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied SSL VPN case-study record describes a medium-sized organization with remote users and an existing host-to-gateway IPsec remote-access solution that had required significant IT labor to install and support client software, motivating evaluation of a complementary remote-access architecture.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If organization-specific budget, staffing, and infrastructure evidence shows the performance burden is material and unaffordable, the GENERAL challenge would support a DEPLOYMENT_SPECIFIC infeasibility conclusion.",
+      "If organization-specific evidence shows sufficient existing capacity, budget, or offsetting cost savings, the challenge could be mitigated and stance could change toward 0 or +1.",
+      "A DEPLOYMENT_SPECIFIC financial feasibility conclusion requires supplied evidence tying HTTPS implementation to the frozen enterprise's actual systems, resources, and costs.",
+      "Direct adoption-benefit evidence for HTTPS, such as measurable resource savings or cost avoidance, would be required to outweigh the documented performance/resource burden."
+    ],
+    "constraints": [
+      "No deployment-specific financial conclusion is possible because the supplied scenario contains no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling.",
+      "DE_DE14_EDCA207577B4607A indicates possible performance mitigation paths, including hardware upgrade/replacement, SSL accelerator, or reduced processing demands, so the burden must be assessed against unknown enterprise capacity before treating HTTPS as unaffordable.",
+      "DE_DE10_A086B3193CD6440B makes the TLS efficiency pathway conditional on using an out-of-band binding, so it cannot be treated as a general cost-saving enabler.",
+      "DE_DE18_CDC975345637E009 is about IPSec transport/tunnel overhead, not HTTPS-specific cost, so its support weight is limited.",
+      "Jurisdiction is masked; no jurisdiction-specific financial, procurement, or regulatory adoption constraint or enabler is supplied for this lens."
+    ],
+    "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+    "evidence_gaps": [
+      "Missing deployment-specific budget, cost, price, ROI, TCO, payback period, and procurement ceiling for HTTPS/TLS deployment.",
+      "Missing current infrastructure, traffic volume, application portfolio, certificate management capacity, and existing transport-security baseline needed to size the performance and staffing burden.",
+      "Missing exact staffing or operational maintenance counts for configuring, testing, migrating, and maintaining HTTPS/SSL-related controls.",
+      "Missing direct evidence that HTTPS deployment reduces incident, operational, or recovery costs related to session hijacking in the frozen enterprise.",
+      "Missing deployment-specific evidence that the documented SSL performance burden would be material or immaterial to the CIS IG2 reference enterprise's capacity."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "Assigned question: on balance, do the supplied records support or challenge the frozen HTTPS action's financial/adoption feasibility under the frozen scenario? Direction +1 was tested: the supplied adoption-benefit records provide only limited, conditional efficiency pathways. One describes an optional TLS Raw Public Keys extension that can reduce public-key structure size and simplify processing, but requires out-of-band entity binding and does not establish general cost savings. Another describes IPSec transport mode as having less per-packet overhead than tunnel mode, which is resource-relevant but not HTTPS-specific. Direction -1 was tested: the supplied adoption-burden record directly documents performance, testing, MTU, fragmentation, and possible hardware-upgrade or offloading burdens associated with SSL/encrypted transport deployment. This is a general financial/adoption constraint even without exact dollar values. Direction 0 was considered, but the burden evidence is more direct to resource feasibility than the weak, indirect benefit evidence, and missing exact budget, staffing, or ROI data do not erase a surviving grounded general challenge. The deployment-maturity record only qualifies the enterprise implementation context and cannot carry direction alone. Therefore the records support a GENERAL CHALLENGES_FEASIBILITY stance, while deployment-specific affordability remains unresolved.",
+    "stance": -1
+  },
+  "assessment_sha256": "b0f6be2ce1076227b03048b86cb8afb0810c9df3b0a6236fb043252cb04bf418",
+  "checkpoint_sha256": "a28d1713e9de4dae360be34440085316086c9c6f2d2e7806aa6312504cc6003d",
+  "created_at": "2026-11-06T09:27:31.783713+00:00",
+  "identity": {
+    "axis": "PROMPT_SEED_ROBUSTNESS",
+    "case_id": "main__session_hijacking__https",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE10_A086B3193CD6440B",
+        "DE_DE14_5FC183B8D7DD961A",
+        "DE_DE14_EDCA207577B4607A",
+        "DE_DE18_CDC975345637E009"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "eaee109a024e3864bd75a0939525fc7f89a1c8411ef08cd2b0827d5a969d89ae",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051"
+    ],
+    "payload_sha256": "262b35e37b90bb31f7356c537907b37ecf1def9669d73cbec3ba4a5b8313d8a7",
+    "payload_transform_id": null,
+    "prompt_variant": "P3_DECISION_FIRST",
+    "repeat_index": 44,
+    "response_schema_sha256": "b0545cdd0e2cfc6469d2177f29a48152385ab8fb7d990acedf74355a2dd0c682",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "68da68bec10ba01c1d3e74220b26cf0727c11a07dead008c4d85f633389292d7",
+    "variant_id": "P3_DECISION_FIRST"
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-CLAIM-1",
+        "evidence_ids": [
+          "E_23_312B9513BCEE9B9D"
+        ],
+        "scope": "GENERAL",
+        "statement": "The CISA CPG record recommends prioritizing MFA for IT and OT accounts and maps the control to Brute Force (T1110), Remote Services, Valid Accounts, and External Remote Services.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-CLAIM-2",
+        "evidence_ids": [
+          "E_23_B21FAA9377991F05"
+        ],
+        "scope": "GENERAL",
+        "statement": "The CISA CPG record recommends alerting after consecutive unsuccessful login attempts and system-enforced login prevention, mapped to Brute Force subtechniques T1110.001 through T1110.004.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-CLAIM-3",
+        "evidence_ids": [
+          "E_23_EBCAB9508641E703"
+        ],
+        "scope": "GENERAL",
+        "statement": "The CISA CPG record recommends unique credentials for IT and OT assets, mapped to Valid Accounts and Brute Force subtechniques, and notes that some low-risk OT assets in remote locations may not be technically feasible.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-CLAIM-4",
+        "evidence_ids": [
+          "E_25_FE58E4FCF044EDE3"
+        ],
+        "scope": "GENERAL",
+        "statement": "The NIST SP 800-53 Rev.5 record discusses automatic account lockout or delay, and alternative actions if lockout or delay is not implemented, to help prevent brute force attacks.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-CLAIM-5",
+        "evidence_ids": [
+          "E_12_D8076704AE363FE2"
+        ],
+        "scope": "GENERAL",
+        "statement": "The MITRE ATT&CK M1029 record describes remote data storage measures, including centralized log management, forwarding logs from IDS/IPS systems to a remote security information system, encryption, and immutable backup configurations.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-CLAIM-6",
+        "evidence_ids": [
+          "E_03_C54C5F099169E020"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Mandiant M-Trends record reports observed password guessing attacks against cloud sign-in portals to identify accounts that do not have MFA configured.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-CLAIM-7",
+        "evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref publication trend for IDS/IPS reports annual publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, and explicitly states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-CLAIM-8",
+        "evidence_ids": [
+          "E_29_BAD6581A8E96027C"
+        ],
+        "scope": "GENERAL",
+        "statement": "A Crossref metadata record describes an article testing Suricata in IDS and IPS modes using a cloud segment of the data center of the Institute of Physics of the National Academy of Sciences of Azerbaijan, which is part of JINR LIT's cloud infrastructure.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-CLAIM-9",
+        "evidence_ids": [
+          "E_29_CA00E63DF08A6FC1"
+        ],
+        "scope": "GENERAL",
+        "statement": "A Crossref metadata record identifies an Indonesian Journal of Computer Science article analyzing IDS/IPS with Telegram notifications.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-CLAIM-10",
+        "evidence_ids": [
+          "E_29_8E495DC2A98305B1"
+        ],
+        "scope": "GENERAL",
+        "statement": "A Crossref metadata record identifies an article titled 'Efficiency test of IDS/IPS systems against DOS and DDOS attacks' in Scientific Journals of Rzeszów University of Technology, Series: Electrotechnics.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If region is supplied, assess applicable regional or sector-specific legal, regulatory, and data-sovereignty requirements before treating the supplied CISA CPG or NIST SP 800-53 controls as regulatory compliance.",
+      "If the organization or infrastructure includes OT or remote assets, verify whether the CISA CPG technical-feasibility caveat applies to those assets. [E_23_EBCAB9508641E703]",
+      "If auditability requires remote log storage, confirm that the target environment can implement the centralized logging, IDS/IPS log forwarding, encryption, and immutable backup measures described in the MITRE record. [E_12_D8076704AE363FE2]",
+      "If compliance with the supplied official guidance controls is intended, map MFA, unique credential, and unsuccessful-login alerting or lockout controls to the actual account and asset scope. [E_23_312B9513BCEE9B9D, E_23_B21FAA9377991F05, E_23_EBCAB9508641E703, E_25_FE58E4FCF044EDE3]"
+    ],
+    "constraints": [
+      "The CISA CPG unique-credential control includes a feasibility caveat for some low-risk OT assets in remote locations, so control deployment may be limited where such assets are in scope. [E_23_EBCAB9508641E703]",
+      "The IDS/IPS Crossref publication trend is limited to publication activity and cannot be used as evidence of deployment maturity, operational effectiveness, or causal mitigation effectiveness. [E_33_A707006877BFD1C2]",
+      "The Crossref academic metadata records are publication metadata and do not establish institutional or regional feasibility for the target deployment. [E_29_8E495DC2A98305B1, E_29_BAD6581A8E96027C, E_29_CA00E63DF08A6FC1]",
+      "The supplied CISA CPG and NIST SP 800-53 records are official guidance/control records, but the frozen deployment context does not establish that they are target-jurisdiction obligations."
+    ],
+    "decision_object_id": "decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c",
+    "evidence_gaps": [
+      "The frozen deployment_context has no region value, so target-jurisdiction regulatory compatibility, data sovereignty, cross-border constraints, and local compliance burden cannot be evaluated.",
+      "The frozen deployment_context has no organization_type, so institutional ownership, approval authority, and the organizational role of IDS/IPS operators cannot be evaluated.",
+      "The frozen deployment_context has no infrastructure_context, so network placement, logging destinations, OT/remote asset feasibility, and technical constraints cannot be evaluated.",
+      "The frozen deployment_context has no budget_context, so funding and cost constraints for implementation or compliance cannot be evaluated.",
+      "No supplied evidence record specifies a target-region legal, regulatory, or data-sovereignty requirement for IDS/IPS deployment."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied records provide some general institutional enablement for the frozen IDS/IPS action. The CISA CPG and NIST SP 800-53 Rev.5 records describe official control pathways relevant to brute-force-relevant account protection, including MFA prioritization, unique credentials, unsuccessful-login alerting, and automatic lockout or delay. The MITRE ATT&CK M1029 record also describes an IDS/IPS-related log-forwarding and remote-storage practice that touches auditability. However, the frozen deployment_context has no region, organization_type, infrastructure_context, or budget_context. The records do not establish target-jurisdiction regulatory compatibility, data sovereignty, cross-border constraints, compliance burden, or implementation barriers. The academic records are limited to publication metadata, and the Crossref publication trend is explicitly limited to publication activity rather than deployment maturity, operational effectiveness, or causal mitigation effectiveness. Therefore, the institutional/regional feasibility assessment is mixed and deployment-specific regional feasibility is indeterminate rather than materially challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "a15411dcd426d82edf25bb1c379e600220534eab12bebf0d20e47badbbdf517a",
+  "checkpoint_sha256": "4b2f89e00a02c437287d5c2d18385eb25a22f6d9b188bd9ef0712ff9ec7c38c4",
+  "created_at": "2026-11-06T13:04:29.767293+00:00",
+  "identity": {
+    "axis": "CONTEXT_PATH_SEED_ROBUSTNESS",
+    "base_stage3_artifact_sha256": "577799c73a613d52e2d7d92d673cb2cbeb7d998e4ba82ef8ade093548ee53466",
+    "base_stage3_input_fingerprint": "40634fab0e4340b0e2daea7aec502d04dd39579f3be02f628153d13292e1a815",
+    "base_stage3_output_sha256": "39986484dc1b69948531ef36d4c6d2d4cace4c3afd4c7520c5b2a4f020d29817",
+    "case_id": "main__brute_force__ids_ips",
+    "evidence_ids": [
+      "E_02_669F59880AF52688",
+      "E_03_C54C5F099169E020",
+      "E_03_F2B2EBA86BEEFDC5",
+      "E_04_02D425B67E57F32D",
+      "E_12_D8076704AE363FE2",
+      "E_23_312B9513BCEE9B9D",
+      "E_23_B21FAA9377991F05",
+      "E_23_EBCAB9508641E703",
+      "E_25_FE58E4FCF044EDE3",
+      "E_29_8E495DC2A98305B1",
+      "E_29_BAD6581A8E96027C",
+      "E_29_CA00E63DF08A6FC1",
+      "E_33_A707006877BFD1C2"
+    ],
+    "input_fingerprint": "85e1e9f34a5ae3382ce01f72e8d9744161840d56fa2dc1ceaf87e19a64445be2",
+    "lens_type": "institutional_regional",
+    "response_schema_sha256": "1867503adffd55536b85c5e76d1166165ba709f144b93d6ad3d0a5ae49756455",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "061fee6c798b1c8b402519d2ed9ebd6de85bcb567838e1f3108bc84c36bbd6ac",
+    "user_prompt_sha256": "76e26387bdba12b875605230c4122e3e9b23ad8edc15abbc7a91939925aa71d9",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

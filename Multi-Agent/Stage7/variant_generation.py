@@ -127,12 +127,11 @@ def _prompt_texts(*, lens_type: LensType, prompt_variant: str, payload: dict[str
     return system_prompt, prefix + user_prompt
 
 
-def _checkpoint_path(root: Path, *, axis: str, variant_id: str, fingerprint: str) -> Path:
+def _checkpoint_path(
+    root: Path, *, axis: str, variant_id: str, fingerprint: str, results_dir: Path | None = None
+) -> Path:
     return (
-        root
-        / "Multi-Agent"
-        / "Results"
-        / "Stage7"
+        (results_dir if results_dir is not None else root / "Multi-Agent" / "Results" / "Stage7")
         / "variant_checkpoints"
         / axis
         / variant_id
@@ -176,9 +175,12 @@ def _freeze_checkpoint(
     path.write_text(serialized, encoding="utf-8", newline="\n")
 
 
-def _variant_output_path(root: Path, *, axis: str, variant_id: str, repeat_index: int | None) -> Path:
+def _variant_output_path(
+    root: Path, *, axis: str, variant_id: str, repeat_index: int | None, results_dir: Path | None = None
+) -> Path:
     suffix = f"__repeat-{repeat_index}" if repeat_index is not None else ""
-    return root / "Multi-Agent" / "Results" / "Stage7" / "variants" / axis / f"{variant_id}{suffix}.json"
+    output = results_dir if results_dir is not None else root / "Multi-Agent" / "Results" / "Stage7"
+    return output / "variants" / axis / f"{variant_id}{suffix}.json"
 
 
 def _freeze_variant_records(
@@ -190,8 +192,11 @@ def _freeze_variant_records(
     records: list[VariantResultRecord],
     provenance: dict[str, Any],
     runner_version: str = STAGE7_DECISION_VARIANT_RUNNER_VERSION,
+    results_dir: Path | None = None,
 ) -> Path:
-    path = _variant_output_path(root, axis=axis, variant_id=variant_id, repeat_index=repeat_index)
+    path = _variant_output_path(
+        root, axis=axis, variant_id=variant_id, repeat_index=repeat_index, results_dir=results_dir
+    )
     payload = {
         "schema_version": STAGE7_VARIANT_RECORD_VERSION,
         "runner_version": runner_version,
@@ -664,6 +669,7 @@ async def _run_one_case_variant(
     prompt_variant: str,
     seed: int | None = None,
     runner_version: str = FROZEN_A1_VARIANT_RUNNER_VERSION,
+    results_dir: Path | None = None,
 ) -> tuple[list[VariantResultRecord], dict[str, Any]]:
     client, runtime = _variant_client(runner_version=runner_version, seed=seed)
     objects = [ContextualDecisionObject.model_validate(item) for item in bundle.contextual_objects]
@@ -758,6 +764,7 @@ async def _run_one_case_variant(
             axis=axis,
             variant_id=variant_id,
             fingerprint=identity["input_fingerprint"],
+            results_dir=results_dir,
         )
         identities[(lens_type, key)] = (identity, path)
         checkpoint = _load_checkpoint(path, identity)
@@ -1049,8 +1056,11 @@ async def _run_context_free_case(
     root: Path,
     *,
     bundle: CaseBundle,
+    seed: int | None = None,
+    results_dir: Path | None = None,
+    axis: str = "C2_CONTEXTUALIZED_PATH_COMPARISON",
 ) -> tuple[list[VariantResultRecord], dict[str, Any]]:
-    client, runtime = _variant_client()
+    client, runtime = _variant_client(seed=seed)
     obj, stage3_artifact = _load_base_stage3_decision_object(root, bundle)
     evidence_pack = _context_free_evidence_pack(bundle, obj)
     pending: asyncio.Queue[LensType] = asyncio.Queue()
@@ -1074,7 +1084,7 @@ async def _run_context_free_case(
         )
         identity = {
             "runner_version": STAGE7_DECISION_VARIANT_RUNNER_VERSION,
-            "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+            "axis": axis,
             "variant_id": CONTEXT_FREE_VARIANT_ID,
             "case_id": bundle.case_id,
             "lens_type": lens_type.value,
@@ -1090,9 +1100,10 @@ async def _run_context_free_case(
         identity["input_fingerprint"] = sha256_json(identity)
         path = _checkpoint_path(
             root,
-            axis="C2_CONTEXTUALIZED_PATH_COMPARISON",
+            axis=axis,
             variant_id=CONTEXT_FREE_VARIANT_ID,
             fingerprint=identity["input_fingerprint"],
+            results_dir=results_dir,
         )
         identities[lens_type] = (identity, path)
         prompt_hashes[lens_type.value] = sha256_json({"system": system_prompt, "user": user_prompt})
@@ -1173,8 +1184,9 @@ async def _run_context_free_case(
         scenario_id = str(contextual["scenario_id"])
         records.append(
             VariantResultRecord(
-                axis="C2_CONTEXTUALIZED_PATH_COMPARISON",
+                axis=axis,
                 variant_id=CONTEXT_FREE_VARIANT_ID,
+                repeat_index=seed,
                 case_id=bundle.case_id,
                 scenario_id=scenario_id,
                 decision_object_id=obj.decision_object_id,

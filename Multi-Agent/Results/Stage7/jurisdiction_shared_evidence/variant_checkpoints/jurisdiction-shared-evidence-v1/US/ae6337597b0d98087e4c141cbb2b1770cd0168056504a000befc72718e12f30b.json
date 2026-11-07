@@ -1,0 +1,102 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_C1",
+        "evidence_ids": [
+          "E_23_534489D29C38B327",
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL institutional feasibility is supported because the CISA CPGs provide a recommended-action pathway for strong agile encryption, including properly configured and up-to-date SSL/TLS to protect data in transit when technically feasible, and planning to identify and update outdated or weak encryption to sufficiently strong algorithms; the NIST key-management record provides an accountability/traceability pathway for cryptographic key management by identifying authorized key entities, using access-control mechanisms, recording key operations, and auditing logs for security violations.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_C2",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL institutional feasibility is challenged by a compliance constraint because the NIST SP 800-131A Rev. 2 record assigns disallowed or restricted transition statuses to some legacy cryptographic algorithms and identifies acceptable AES variants, requiring algorithm-selection, legacy-inventory, and migration planning when implementing the frozen CRYPTOGRAPHY action.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC institutional/regional feasibility judgment would require supplied jurisdiction-specific regulatory applicability evidence for the relevant frozen United States enterprise, sector, data-processing activity, or data location.",
+      "To preserve the supported GENERAL institutional feasibility, the deployment must select cryptographic algorithms within the supplied acceptable transition statuses and avoid disallowed or restricted legacy algorithms.",
+      "To maintain the governance-enablement pathway, the deployment must be able to identify authorized key entities, apply access controls to cryptographic key access, record key operations, and audit key-access logs.",
+      "To align with the supplied CPGs pathway, the deployment should include a plan to identify and remediate weak or outdated encryption and to use properly configured and up-to-date SSL/TLS for data in transit where technically feasible.",
+      "If cross-border data flows, sector-specific obligations, or data-sovereignty restrictions are introduced, supplied jurisdiction-specific evidence for those constraints would be required before a deployment-specific regional feasibility conclusion."
+    ],
+    "constraints": [
+      "The frozen action must account for the supplied algorithm-transition constraint: two-key TDEA encryption is disallowed; three-key TDEA encryption is deprecated through 2023 and disallowed after 2023 unless specifically allowed by other NIST guidance; AES-128, AES-192, and AES-256 encryption and decryption are acceptable.",
+      "Cryptographic key governance must support accountability/traceability: entities authorized to generate, access, destroy, or use keys must be identified; access to plaintext cryptographic keys must be traceable; access-control mechanisms and audit logging for key operations are part of the supplied traceability pathway.",
+      "Encryption deployment should align with the supplied CPGs recommended action: properly configured and up-to-date SSL/TLS should be utilized to protect data in transit when technically feasible, and organizations should plan to identify outdated or weak encryption, update it to sufficiently strong algorithms, and consider managing implications of post-quantum cryptography."
+    ],
+    "decision_object_id": "jurisdiction-shared-evidence-v1__main__ransomware__cryptography__US",
+    "evidence_gaps": [
+      "No supplied record establishes jurisdiction-specific regulatory applicability for the frozen United States scenario, including whether the reference enterprise's sector, data-processing activities, or service-provider arrangements trigger particular legal obligations.",
+      "No supplied record establishes deployment-specific cryptographic control maturity, including existing algorithm inventory, legacy algorithm usage, key-management access-control and audit capabilities, or current TLS/SSL configuration state.",
+      "No supplied record addresses cross-border data-flow or data-sovereignty constraints for the frozen United States scenario.",
+      "No supplied record establishes exact staffing, expertise, or budget capacity for implementing and operating the cryptographic governance controls; the frozen deployment context only provides a CIS IG2 reference-enterprise description."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied direction-carrying records support a GENERAL institutional feasibility pathway for the frozen CRYPTOGRAPHY action. The CISA CPGs record provides a governance-enablement pathway by recommending strong agile encryption, properly configured and up-to-date SSL/TLS where technically feasible, and planning to identify and update weak or outdated encryption. The NIST key-management record provides an accountability/traceability pathway for cryptographic key governance, including identification of authorized entities, access controls, recording of key operations, and audit of key-access logs. The NIST algorithm-transition record supplies a compliance constraint: some legacy algorithms are disallowed or restricted, while AES variants are acceptable. This constraint creates algorithm-selection and migration requirements but does not, on the supplied records, remove the available institutional pathway. Therefore, under this lens, the balance of supplied directional evidence supports institutional/regional feasibility at the GENERAL scope. Sufficiency is PARTIAL because no supplied record establishes jurisdiction-specific regulatory applicability, sector-specific legal obligations, cross-border or data-sovereignty constraints, or deployment-specific control maturity for the frozen United States scenario.",
+    "stance": 1
+  },
+  "assessment_sha256": "def9cabca0735ff84aab75b670e305126bfcab1b709cbd32c5580a4ffb98e6bd",
+  "checkpoint_sha256": "70197f822731ab9b754bf689a8baffa42ba6739959ac04f6f9f13cb9b6d0e2ee",
+  "created_at": "2026-11-06T18:04:45.940445+00:00",
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "US",
+    "decision_object_sha256": "68ff2f0fa653edf0e6b70f6709efde942fcf2dca6b441a6412053177d437bd18",
+    "evidence_content_sha256": "6cac15ea8d654b8ad3dcf00328817c8ad97355901db8652a23eb2c41ba8f799f",
+    "experiment": "jurisdiction-shared-evidence-v1",
+    "grounding_contract_sha256": "bb995315bedfdddde2761ba9e34120eb8aa47eb17296692f6e0fc4591a490499",
+    "response_schema_sha256": "56042004357fbd12ec25130fb660408f5609670eb4367f262ebb91b6f40979d1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "jurisdiction-shared-evidence-v1"
+    },
+    "seed": 44,
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "8979c43b74105fdf523c32f4e112270a567ac0ba340342598b7c3ef86f4e1b23",
+    "user_prompt_sha256": "3745c3c74cd79eff00bc2d45706d0de330f801aa29e273d8d5db81fa40e29559"
+  }
+}
