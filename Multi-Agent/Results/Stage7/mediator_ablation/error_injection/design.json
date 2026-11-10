@@ -1,0 +1,72 @@
+{
+  "probes": [
+    {
+      "anchor": "1.4 Gbps to 2.2 Gbps",
+      "claim_id": "AF_C1",
+      "clean_input_sha256": "46f8160211b4f25a163a0e1668039d26b2e9c5e6352a861c4c88478335a71de0",
+      "corrupted_input_sha256": "f7810f124a36e0ca7afb01629593e3a62da22eb93689a224988ca20b1b26d3c1",
+      "error_type": "wrong_numeric_value",
+      "id": "ddos_bandwidth",
+      "original_condition": "with_mediator",
+      "replacement": "1.4 Gbps to 22.2 Gbps",
+      "review_id": "main__ddos__nlp_llm__attack_feasibility"
+    },
+    {
+      "anchor": "2023-01-18",
+      "claim_id": "C5",
+      "clean_input_sha256": "226fafcfc8cb3c35cf169150ecd43683583fe2fa2fdcf262b11a32570105a7f5",
+      "corrupted_input_sha256": "f1905d5b7734afe10aa154dfbabdc15c212c01b7f47dd15bc124efe0db3b648a",
+      "error_type": "wrong_provenance_date",
+      "id": "cryptography_publication_date",
+      "original_condition": "with_mediator",
+      "replacement": "2023-07-18",
+      "review_id": "main__insider_threat__cryptography__attack_feasibility"
+    },
+    {
+      "anchor": "NIST SP 800-161 Rev.1 C-SCRM guidance",
+      "claim_id": "C2",
+      "clean_input_sha256": "b58169d3b712b0079e91d67cd735d8228922f67474e71ece1b383292a9bbe698",
+      "corrupted_input_sha256": "c52d1b947d350df330e3b951f9b897b67aefea5786f4819b0dab3ed2a6a055a3",
+      "error_type": "wrong_source_attribution",
+      "id": "nist_source_attribution",
+      "original_condition": "with_mediator",
+      "replacement": "NIST SP 800-53 Rev.5 C-SCRM guidance",
+      "review_id": "main__insider_threat__cryptography__attack_feasibility"
+    },
+    {
+      "anchor": "no known public exploitation specifically targeting",
+      "claim_id": "ATK_C4",
+      "clean_input_sha256": "d395420b40da489a7c9e808c9fd9bdabe365ca97a8478dcfe5a5846b7e19f7e4",
+      "corrupted_input_sha256": "9283c73fda86dd507c0706340a736c8e9da7b1d091edcb53437b1e27fdc8224a",
+      "error_type": "reversed_observation",
+      "id": "kastle_exploitation_polarity",
+      "original_condition": "without_mediator",
+      "replacement": "confirmed public exploitation specifically targeting",
+      "review_id": "main__targeted_attack__access_control__attack_feasibility"
+    },
+    {
+      "anchor": "while also reporting extortion at 27% and phishing at 41%.",
+      "claim_id": "C2",
+      "clean_input_sha256": "471a7374e44c96bd856811f1e570857367da376595fa04f5795c2bfb58716fe4",
+      "corrupted_input_sha256": "5299446d98567a2c7d1d28321c499fcf3f9f50a6d115f727d0044c6b319e5c38",
+      "error_type": "unsupported_incident_count_trend",
+      "id": "ransomware_noi_modality",
+      "original_condition": "without_mediator",
+      "replacement": "while also reporting extortion at 27% and phishing at 41%. These shares prove that ransomware incident counts increased every year from 2020 through 2022.",
+      "review_id": "main__ransomware__cryptography__attack_feasibility"
+    },
+    {
+      "anchor": "with a positive OLS slope of 37.8 works per year.",
+      "claim_id": "C5",
+      "clean_input_sha256": "df3bfbce0e81fb9b048fd366e37de3921cfc161095f0fc1084c6e6ba2417ee05",
+      "corrupted_input_sha256": "b84863028be6e7c376c445af8275deb92eed46ff740bbcead6648e059441d471",
+      "error_type": "unsupported_causal_effectiveness",
+      "id": "cryptography_causal_effectiveness",
+      "original_condition": "without_mediator",
+      "replacement": "with a positive OLS slope of 37.8 works per year. This demonstrates that cryptographic controls reduced ransomware incidents by 90%.",
+      "review_id": "main__ransomware__cryptography__attack_feasibility"
+    }
+  ],
+  "sha256": "182ad9f1a6c3b7b1797cc9168e24868d7ce04a05b8f7bbc27f679daacb6fd7a6",
+  "version": "mediator-gemma-error-injection-v1"
+}

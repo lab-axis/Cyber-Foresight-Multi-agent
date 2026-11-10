@@ -1,0 +1,169 @@
+{
+  "all_predeclared_checks_passed": true,
+  "balanced_accuracy": 1.0,
+  "controls_accepted": 6,
+  "design": "6 predeclared claim pairs; independent blinded 1-claim calls; exact original evidence",
+  "false_negative_count": 0,
+  "false_positive_count": 0,
+  "injected_errors": 6,
+  "injected_errors_detected": 6,
+  "limitations": "Synthetic, hand-selected perturbations with known source contradictions or unsupported extensions; small sample and single fixed seed. Original controls were previously scored DIRECT_SUPPORT by this same verifier, so specificity is not independent expert validation. A non-DIRECT_SUPPORT verdict can be for the wrong reason; inspect each rationale before publication. This does not prove all 229 claims are correct.",
+  "original_controls": 6,
+  "rows": [
+    {
+      "claim_id": "AF_C1",
+      "clean": {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim accurately reports the median bandwidth increase (1.4 Gbps to 2.2 Gbps) and the 97.5th percentile increase (99 Gbps to 124 Gbps) from E_02_066AFE8300EDCEBB. It correctly attributes the trend to the accessibility of bandwidth and CPU processing and notes the conditional effectiveness of contracted services. Finally, it correctly qualifies that bandwidth/magnitude data is distinct from incident count/频率 (NoI)",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      "clean_accepted": true,
+      "corrupted": {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim accurately captures most of the bandwidth trends and the analytical context from E_02_066AFE8300EDCEBB. However, it contains a material factual error regarding the median bandwidth increase: the source states the median grew from 1.4 Gbps to 2.2 Gbps, whereas the claim asserts it rose to 22.2 Gbps.",
+        "unsupported_specificity": true,
+        "verdict": "PARTIAL_SUPPORT"
+      },
+      "corrupted_statement": "E_02_066AFE8300EDCEBB reports that DDoS attack bandwidth increased in 2023, with median bits per second rising from 1.4 Gbps to 22.2 Gbps and the 97.5th percentile rising from 99 Gbps to 124 Gbps, and describes this as a trend that is hard to break as bandwidth and CPU processing become more accessible; it also notes that a contracted service able to clear that bar can likely absorb much of the impact. This is observed attack-size/bandwidth and mitigation-readiness context, not direct evidence of DDoS incident count/frequency (NoI) direction.",
+      "corruption_detected": true,
+      "error_type": "wrong_numeric_value",
+      "id": "ddos_bandwidth",
+      "original_statement": "E_02_066AFE8300EDCEBB reports that DDoS attack bandwidth increased in 2023, with median bits per second rising from 1.4 Gbps to 2.2 Gbps and the 97.5th percentile rising from 99 Gbps to 124 Gbps, and describes this as a trend that is hard to break as bandwidth and CPU processing become more accessible; it also notes that a contracted service able to clear that bar can likely absorb much of the impact. This is observed attack-size/bandwidth and mitigation-readiness context, not direct evidence of DDoS incident count/frequency (NoI) direction.",
+      "review_id": "main__ddos__nlp_llm__attack_feasibility",
+      "source_condition": "with_mediator"
+    },
+    {
+      "claim_id": "C5",
+      "clean": {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The cited Crossref metadata records (E_29_185B62FFF51926EC, E_29_3C1B7B4F9532A5F2, E_29_7C01F6CA0D982DFF) are indeed review-acknowledgment publications for the Cryptography journal with publication_dates of 2021-01-30, 2023-01-18, and 2018-01-16 respectively. The assertion that these static records do not constitute directional publication-activity evidence is a valid logical boundary inference, as isolated metadata’",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      "clean_accepted": true,
+      "corrupted": {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim correctly identifies three Crossref metadata records for review-acknowledgment publications in the 'Cryptography' journal and correctly assesses them as static metadata. However, it lists the date for one record as 2023-07-18, whereas the cited record E_29_3C1B7B4F9532A5F2 explicitly lists the publication_date and available_at date as 2023-01-18.",
+        "unsupported_specificity": true,
+        "verdict": "PARTIAL_SUPPORT"
+      },
+      "corrupted_statement": "Three Crossref metadata records establish static publication metadata for Cryptography journal review-acknowledgment publications dated 2021-01-30, 2023-07-18, and 2018-01-16. These are static metadata records; they do not constitute directional publication-activity evidence for either PMT_CRYPTOGRAPHY or THREAT_INSIDER_THREAT.",
+      "corruption_detected": true,
+      "error_type": "wrong_provenance_date",
+      "id": "cryptography_publication_date",
+      "original_statement": "Three Crossref metadata records establish static publication metadata for Cryptography journal review-acknowledgment publications dated 2021-01-30, 2023-01-18, and 2018-01-16. These are static metadata records; they do not constitute directional publication-activity evidence for either PMT_CRYPTOGRAPHY or THREAT_INSIDER_THREAT.",
+      "review_id": "main__insider_threat__cryptography__attack_feasibility",
+      "source_condition": "with_mediator"
+    },
+    {
+      "claim_id": "C2",
+      "clean": {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim accurately represents the content of E_20_913B6F999A0F1458, which states that 'Predefined frequencies for data collection should be less predictable in order to reduce the risk of an insider threat bypassing security mechanisms' within the context of NIST SP 800-161 Rev.1 C-SCRM guidance. The qualification that this is operational-control guidance and does not establish a directional threat (NoP/NoI) or PMT",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      "clean_accepted": true,
+      "corrupted": {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim correctly describes the guidance content (reducing risk of insider-threat bypass via less predictable data-collection frequencies) found in evidence E_20_913B6F999A0F1458. However, the claim misattributes this guidance to 'NIST SP 800-53 Rev.5', whereas the source metadata for E_20_913B6F999A0F1458 explicitly identifies the document as 'NIST SP 800-161 Rev.1 Cybersecurity Supply Chain Risk Management' (nist",
+        "unsupported_specificity": true,
+        "verdict": "PARTIAL_SUPPORT"
+      },
+      "corrupted_statement": "NIST SP 800-53 Rev.5 C-SCRM guidance identifies insider-threat bypass of security mechanisms as a risk and recommends less predictable predefined frequencies for automated component-inventory data collection. This is operational-control guidance; it does not establish a directional THREAT_INSIDER_THREAT NoP or NoI trajectory and does not establish a PMT trajectory.",
+      "corruption_detected": true,
+      "error_type": "wrong_source_attribution",
+      "id": "nist_source_attribution",
+      "original_statement": "NIST SP 800-161 Rev.1 C-SCRM guidance identifies insider-threat bypass of security mechanisms as a risk and recommends less predictable predefined frequencies for automated component-inventory data collection. This is operational-control guidance; it does not establish a directional THREAT_INSIDER_THREAT NoP or NoI trajectory and does not establish a PMT trajectory.",
+      "review_id": "main__insider_threat__cryptography__attack_feasibility",
+      "source_condition": "with_mediator"
+    },
+    {
+      "claim_id": "ATK_C4",
+      "clean": {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The cited CISA advisory ICSA-24-263-05 explicitly states, 'No known public exploitation specifically targeting these vulnerabilities have been reported to CISA at this time,' referring to the Kastle Systems Access Control System Firmware vulnerabilities. The claim's qualification that this is a point-in-time observation limited to specific CVEs and does not establish a broader trend is a legitimate logical boundary.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      "clean_accepted": true,
+      "corrupted": {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim asserts that CISA advisory ICSA-24-263-05 states that confirmed public exploitation targeting the Kastle firmware vulnerabilities 'had been reported to CISA'. However, the cited record E_10_B4F773BEC65685CC explicitly states the opposite: 'No known public exploitation specifically targeting these vulnerabilities have been reported to CISA at this time.'",
+        "unsupported_specificity": false,
+        "verdict": "CONTRADICTS"
+      },
+      "corrupted_statement": "CISA ICS advisory ICSA-24-263-05 states that confirmed public exploitation specifically targeting the listed Kastle firmware vulnerabilities had been reported to CISA at the time of the advisory; this is a point-in-time observation limited to those specific CVEs and does not establish a broader absence of targeted-attack exploitation or a declining threat trajectory.",
+      "corruption_detected": true,
+      "error_type": "reversed_observation",
+      "id": "kastle_exploitation_polarity",
+      "original_statement": "CISA ICS advisory ICSA-24-263-05 states that no known public exploitation specifically targeting the listed Kastle firmware vulnerabilities had been reported to CISA at the time of the advisory; this is a point-in-time observation limited to those specific CVEs and does not establish a broader absence of targeted-attack exploitation or a declining threat trajectory.",
+      "review_id": "main__targeted_attack__access_control__attack_feasibility",
+      "source_condition": "without_mediator"
+    },
+    {
+      "claim_id": "C2",
+      "clean": {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The IBM X-Force report (E_04) explicitly states that ransomware constituted 17% of incidents remediated in 2022 and had held the top spot since at least 2020, reinforcing its status as an 'enduring threat.' The report also explicitly lists extortion at 27% (as the most common attack impact) and phishing at 41% (as the top initial access vector).",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      "clean_accepted": true,
+      "corrupted": {
+        "index": 0,
+        "modality_error": true,
+        "rationale": "The claim accurately reports the percentages for ransomware (17%), extortion (27%), and phishing (41%) and the observation that ransomware held a top position since 2020, as stated in E_04_270A1E7C47ACC4FF. However, the conclusion that 'these shares prove that ransomware incident counts increased every year from 2020 through 2022' is unsupported. E_04 provides share-based prevalence for 2022 and a general persistence",
+        "unsupported_specificity": true,
+        "verdict": "PARTIAL_SUPPORT"
+      },
+      "corrupted_statement": "The IBM X-Force report reports that ransomware constituted 17% of incidents remediated in 2022 and describes it as an enduring threat that had held a top position since at least 2020, while also reporting extortion at 27% and phishing at 41%. These shares prove that ransomware incident counts increased every year from 2020 through 2022.",
+      "corruption_detected": true,
+      "error_type": "unsupported_incident_count_trend",
+      "id": "ransomware_noi_modality",
+      "original_statement": "The IBM X-Force report reports that ransomware constituted 17% of incidents remediated in 2022 and describes it as an enduring threat that had held a top position since at least 2020, while also reporting extortion at 27% and phishing at 41%.",
+      "review_id": "main__ransomware__cryptography__attack_feasibility",
+      "source_condition": "without_mediator"
+    },
+    {
+      "claim_id": "C5",
+      "clean": {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim accurately reports the annual publication counts (2021: 210, 2022: 254, 2023: 272, 2024: 330) and the OLS slope (37.8) provided in E_33_CDE0F421E4D797ED. The source content confirms these values are derived from a Crossref cutoff-constrained trend for PMT=CRYPTOGRAPHY with query parameters for 'CRYPTOGRAPHY' and 'security'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      "clean_accepted": true,
+      "corrupted": {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The first part of the claim accurately reflects the data in E_33 (counts for 2021-2024 and the OLS slope). However, the second part claims this data 'demonstrates that cryptographic controls reduced ransomware incidents by 90%'. This is a direct contradiction of E_33, which explicitly states: 'It does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.' Additionally, the ",
+        "unsupported_specificity": true,
+        "verdict": "CONTRADICTS"
+      },
+      "corrupted_statement": "The Crossref cutoff-constrained publication trend reports annual cryptography/security publication counts of 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, with a positive OLS slope of 37.8 works per year. This demonstrates that cryptographic controls reduced ransomware incidents by 90%.",
+      "corruption_detected": true,
+      "error_type": "unsupported_causal_effectiveness",
+      "id": "cryptography_causal_effectiveness",
+      "original_statement": "The Crossref cutoff-constrained publication trend reports annual cryptography/security publication counts of 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, with a positive OLS slope of 37.8 works per year.",
+      "review_id": "main__ransomware__cryptography__attack_feasibility",
+      "source_condition": "without_mediator"
+    }
+  ],
+  "sensitivity": 1.0,
+  "sha256": "6ab625b034b1223d9dd253daa18bc1202921a4bd67f2c0dd35b1c922a8d7f05a",
+  "specificity": 1.0,
+  "total_claims_evaluated": 12,
+  "version": "mediator-gemma-error-injection-v1"
+}

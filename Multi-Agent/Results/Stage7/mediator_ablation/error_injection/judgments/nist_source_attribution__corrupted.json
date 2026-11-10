@@ -1,0 +1,35 @@
+{
+  "identity": {
+    "gemma": {
+      "input_sha256": "c52d1b947d350df330e3b951f9b897b67aefea5786f4819b0dab3ed2a6a055a3",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__insider_threat__cryptography__attack_feasibility__nist_source_attribution",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    },
+    "probe_id": "nist_source_attribution",
+    "variant": "corrupted",
+    "version": "mediator-gemma-error-injection-v1"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim correctly describes the guidance content (reducing risk of insider-threat bypass via less predictable data-collection frequencies) found in evidence E_20_913B6F999A0F1458. However, the claim misattributes this guidance to 'NIST SP 800-53 Rev.5', whereas the source metadata for E_20_913B6F999A0F1458 explicitly identifies the document as 'NIST SP 800-161 Rev.1 Cybersecurity Supply Chain Risk Management' (nist",
+        "unsupported_specificity": true,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "d6d488674134657239193bc7fbc78de84ba326c0206337477e4be9e9637d4c00"
+}

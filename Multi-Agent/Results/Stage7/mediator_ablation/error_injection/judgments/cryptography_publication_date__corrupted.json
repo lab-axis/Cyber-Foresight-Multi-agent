@@ -1,0 +1,35 @@
+{
+  "identity": {
+    "gemma": {
+      "input_sha256": "f1905d5b7734afe10aa154dfbabdc15c212c01b7f47dd15bc124efe0db3b648a",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__insider_threat__cryptography__attack_feasibility__cryptography_publication_date",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    },
+    "probe_id": "cryptography_publication_date",
+    "variant": "corrupted",
+    "version": "mediator-gemma-error-injection-v1"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim correctly identifies three Crossref metadata records for review-acknowledgment publications in the 'Cryptography' journal and correctly assesses them as static metadata. However, it lists the date for one record as 2023-07-18, whereas the cited record E_29_3C1B7B4F9532A5F2 explicitly lists the publication_date and available_at date as 2023-01-18.",
+        "unsupported_specificity": true,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "c4ed411ad39d91b18aed29c8586d9103e6759ab00b1947b45f2aed33979222ba"
+}

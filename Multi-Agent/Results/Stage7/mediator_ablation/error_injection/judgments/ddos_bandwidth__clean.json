@@ -1,0 +1,35 @@
+{
+  "identity": {
+    "gemma": {
+      "input_sha256": "46f8160211b4f25a163a0e1668039d26b2e9c5e6352a861c4c88478335a71de0",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__ddos__nlp_llm__attack_feasibility__ddos_bandwidth",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    },
+    "probe_id": "ddos_bandwidth",
+    "variant": "clean",
+    "version": "mediator-gemma-error-injection-v1"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim accurately reports the median bandwidth increase (1.4 Gbps to 2.2 Gbps) and the 97.5th percentile increase (99 Gbps to 124 Gbps) from E_02_066AFE8300EDCEBB. It correctly attributes the trend to the accessibility of bandwidth and CPU processing and notes the conditional effectiveness of contracted services. Finally, it correctly qualifies that bandwidth/magnitude data is distinct from incident count/频率 (NoI)",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "7cbf0c8e14779a7709a8fd6c2d23c4c5bd6fc22e16d0c30a595b8d5c5d844e71"
+}

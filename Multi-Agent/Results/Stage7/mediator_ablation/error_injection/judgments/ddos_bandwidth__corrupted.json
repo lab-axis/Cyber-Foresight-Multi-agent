@@ -1,0 +1,35 @@
+{
+  "identity": {
+    "gemma": {
+      "input_sha256": "f7810f124a36e0ca7afb01629593e3a62da22eb93689a224988ca20b1b26d3c1",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__ddos__nlp_llm__attack_feasibility__ddos_bandwidth",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    },
+    "probe_id": "ddos_bandwidth",
+    "variant": "corrupted",
+    "version": "mediator-gemma-error-injection-v1"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim accurately captures most of the bandwidth trends and the analytical context from E_02_066AFE8300EDCEBB. However, it contains a material factual error regarding the median bandwidth increase: the source states the median grew from 1.4 Gbps to 2.2 Gbps, whereas the claim asserts it rose to 22.2 Gbps.",
+        "unsupported_specificity": true,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "a04200b76dc61cd954b160a9da5fed634c74a292159817305947f607785eae4a"
+}
