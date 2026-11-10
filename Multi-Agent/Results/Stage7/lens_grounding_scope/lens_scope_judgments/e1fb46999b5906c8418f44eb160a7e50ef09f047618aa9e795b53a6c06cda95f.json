@@ -1,0 +1,47 @@
+{
+  "identity": {
+    "input_sha256": "d1993b1ceb102294a0cac9326cac71fee75992ce7344e22462d29b741a56094e",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "22f384e1c4b86a4e35c478129f987c9f4a48d77dcf8fbf24b9511ada5370996f",
+    "schema_sha256": "725f64bbf333a0c250a54054e7ff67da637deb789530e3ac7b7a44f6e3bfcaa5",
+    "version": "r2-c5-lens-scope-audit-v1"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 0,
+        "rationale": "The factual propositions are directly supported by the text of the cited records. However, both sources are specifically focused on Industrial Control Systems (ICS) and Manufacturing environments (NISTIR 8219 and CISA ICS Defense-in-Depth), whereas the claim presents these benefits as general properties of anomaly detection tools without specifying the industrial context, constituting an overgeneralization to the general enterprise context.",
+        "scope_verdict": "OVERGENERALIZED",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE05_105D0030778F41BC",
+            "role": "ACTION_SPECIFIC"
+          },
+          {
+            "evidence_id": "DE_DE16_E455D97291B61E2A",
+            "role": "ADJACENT"
+          }
+        ],
+        "unsupported_economics": false
+      },
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 1,
+        "rationale": "The claim accurately lists the skills and requirements for IDPS/anomaly detection implementation and maintenance as detailed in the NIST Guide to Intrusion Detection and Prevention Systems. The source is a general guidance document, supporting the general scope of the claim.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE04_C6F46FCDE66BFAC7",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      }
+    ]
+  },
+  "sha256": "6335ba1123775e62fa978c0c570ebc05d7468419439e450cef28b1304ba1441a"
+}

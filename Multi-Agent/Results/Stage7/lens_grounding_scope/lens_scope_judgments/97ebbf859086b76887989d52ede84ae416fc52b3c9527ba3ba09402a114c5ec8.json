@@ -1,0 +1,79 @@
+{
+  "identity": {
+    "input_sha256": "7f20a5eacf1809331284e76b3a36c66fe1832556df4a930ecb29961a39a71f47",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "22f384e1c4b86a4e35c478129f987c9f4a48d77dcf8fbf24b9511ada5370996f",
+    "schema_sha256": "725f64bbf333a0c250a54054e7ff67da637deb789530e3ac7b7a44f6e3bfcaa5",
+    "version": "r2-c5-lens-scope-audit-v1"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 0,
+        "rationale": "The evidence explicitly defines accountability/traceability as identifying authorized entities, recording actions, and auditing logs, and states that these are effective tools to prevent key compromises and reduce their impact. The claim's assertion that this provides an institutional enablement pathway is a direct semantic reflection of the guidance's purpose.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE08_031120C53EF050F3",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      },
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 1,
+        "rationale": "The CISA CPG record explicitly recommends the use of properly configured SSL/TLS, the identification and updating of outdated or weak encryption, and the consideration of post-quantum cryptography, matching the claim's stated control pathway.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "E_23_534489D29C38B327",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      },
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "PARTIAL",
+        "index": 2,
+        "rationale": "While the factual propositions are supported (GDPR Article 32 names encryption as a measure, and the other records provide general governance pathways), the claim asserts 'DEPLOYMENT_SPECIFIC' feasibility for a 'frozen EU scenario' involving the reference enterprise. The evidence consists of general laws and guidelines; it does not provide evidence of the specific operational feasibility or deployment success for the CIS_IG2 reference enterprise in that specific scenario.",
+        "scope_verdict": "OVERGENERALIZED",
+        "source_roles": [
+          {
+            "evidence_id": "E_31_A0893427DD4F5B04",
+            "role": "ACTION_SPECIFIC"
+          },
+          {
+            "evidence_id": "DE_DE08_031120C53EF050F3",
+            "role": "ACTION_SPECIFIC"
+          },
+          {
+            "evidence_id": "E_23_534489D29C38B327",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      },
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 3,
+        "rationale": "The evidence lists specific algorithms as 'Disallowed' or 'Deprecated' with specific time-bounds (e.g., Three-key TDEA disallowed after 2023). This confirms the existence of algorithm-status constraints that necessitate ongoing governance and transition planning, which logically challenges the feasibility of a static deployment during the 2025-2027 window.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE09_6719137897848A9E",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      }
+    ]
+  },
+  "sha256": "12d30b5480caf97fe6ff24aac6d5a2c3a8d511cb94569fe393f8fe6fb3a6b643"
+}

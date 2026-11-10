@@ -1,0 +1,51 @@
+{
+  "identity": {
+    "input_sha256": "c52c62239b27465d1dc0ca27390b1f42610e180e3e406cb96f91f7b27ed9b925",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "22f384e1c4b86a4e35c478129f987c9f4a48d77dcf8fbf24b9511ada5370996f",
+    "schema_sha256": "725f64bbf333a0c250a54054e7ff67da637deb789530e3ac7b7a44f6e3bfcaa5",
+    "version": "r2-c5-lens-scope-audit-v1"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "action_relevance": "MIXED_ACTION_AND_ADJACENT",
+        "factual_verdict": "SUPPORTED",
+        "index": 0,
+        "rationale": "The claim accurately lists deployment practices found in DE_DE14 (event logging, prototype testing, pilot programs, phased migration, technical documentation, ongoing monitoring, and certificate renewal) and retrofitting prerequisites found in DE_DE18 (trusted CA and DNS security). While DE_DE14 specifically addresses SSL VPNs, the claim correctly frames these as general governance practices for SSL/TLS environments that support the general feasibility of adopting HTTPS.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE14_575D613F0598EF5E",
+            "role": "ADJACENT"
+          },
+          {
+            "evidence_id": "DE_DE18_20A979A3238D1DE6",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      },
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 1,
+        "rationale": "The claim correctly identifies specific mandatory requirements ('SHALL') from DE_DE13 regarding secure cookies, prohibition of fallback to insecure transport, and session identifier verification, as well as technical constraints from DE_DE10 regarding Encrypt-then-MAC for CBC suites, restrictions on truncated MAC with variable-length padding, and TLS 1.3 PSK exchange-mode requirements. The assertion that these increase the compliance burden and thus challenge general feasibility (without making it infeasible) is a direct reflection of the provided NIST's",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE13_055FC5E35FA61DD5",
+            "role": "ACTION_SPECIFIC"
+          },
+          {
+            "evidence_id": "DE_DE10_4BE87A62A6676C99",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      }
+    ]
+  },
+  "sha256": "fca926c1d7927b1a16a0904bff45ec76efc68f5acc4e33e506f6c63e81468377"
+}

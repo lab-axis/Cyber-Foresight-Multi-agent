@@ -1,0 +1,71 @@
+{
+  "identity": {
+    "input_sha256": "21ceadbd08e051304a5cc87f6ab9b4115f6f2101114c2003670bc15f5a588973",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "22f384e1c4b86a4e35c478129f987c9f4a48d77dcf8fbf24b9511ada5370996f",
+    "schema_sha256": "725f64bbf333a0c250a54054e7ff67da637deb789530e3ac7b7a44f6e3bfcaa5",
+    "version": "r2-c5-lens-scope-audit-v1"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 0,
+        "rationale": "The evidence (NIST AI RMF 1.0) explicitly lists governance categories and subcategories that match every element of the claim: ongoing monitoring (GOVERN 1.5), AI-system inventory (GOVERN 1.6), decommissioning (GOVERN 1.7), accountability (GOVERN 2), documented roles and responsibilities (GOVERN 2.1), training (GOVERN 2.2), executive leadership responsibility (GOVERN 2.3), and human-AI oversight (GOVERN 3.2). The claim correctly identifies these as supporting general feasibility for AI governance, which applies to NLP/LLM.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE01_0B9728FE19095FD0",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      },
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 1,
+        "rationale": "The evidence explicitly identifies model cards, data cards, and SBOMs as useful structures and states that comprehensive documentation supports transparency and accountability. The claim's extension to 'institutional auditability' is a direct logical consequence of transparency and accountability in a governance context.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE15_271AFADC7B3D5999",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      },
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 2,
+        "rationale": "The evidence explicitly recommends monitoring system behavior and logging inputs specifically to 'enable compliance obligations, audit, investigation and remediation'. This directly supports the claim's assertion regarding institutional control and auditability.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE15_7C1849B1FD93975C",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      },
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 3,
+        "rationale": "The evidence requires reporting GAI incidents in compliance with legal and regulatory requirements and provides sector-specific examples (HIPAA, NHTSA). The claim correctly identifies that these requirements introduce regulatory compatibility and compliance-reporting considerations, which act as constraints/challenges to institutional feasibility.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE02_007F05150CB46131",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      }
+    ]
+  },
+  "sha256": "e34c371a77b61c0e7cf034c3afc7134f880a91d2b20d49669d4c70cee9c6261f"
+}

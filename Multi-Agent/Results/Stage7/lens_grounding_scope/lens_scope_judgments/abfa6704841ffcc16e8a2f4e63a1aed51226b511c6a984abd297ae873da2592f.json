@@ -1,0 +1,43 @@
+{
+  "identity": {
+    "input_sha256": "171bba528513d463c8d5b92671d8e1b292a15e78106f67e4ea2862361f15d1fc",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "22f384e1c4b86a4e35c478129f987c9f4a48d77dcf8fbf24b9511ada5370996f",
+    "schema_sha256": "725f64bbf333a0c250a54054e7ff67da637deb789530e3ac7b7a44f6e3bfcaa5",
+    "version": "r2-c5-lens-scope-audit-v1"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "action_relevance": "MIXED_ACTION_AND_ADJACENT",
+        "factual_verdict": "SUPPORTED",
+        "index": 0,
+        "rationale": "The evidence from NIST SP 800-137 explicitly states that an organization-wide approach to continuous monitoring (ISCM) supports risk-related decision making at the organization level (Tier 1) and that security controls, security status, and metrics at this tier are designed to provide information for risk management decisions in support of governance.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE07_E2C403C2FF05BA09",
+            "role": "BACKGROUND"
+          }
+        ],
+        "unsupported_economics": false
+      },
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 1,
+        "rationale": "The evidence from NIST SP 800-94 directly supports all listed implementation practices: multiple technology types (network-based, wireless, NBA, host-based), protected accounts (separate accounts for users/admins), protected management communications (encryption/separate networks), ongoing monitoring, update testing, vulnerability assessments, and configuration backups.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE04_0B77B88875745973",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      }
+    ]
+  },
+  "sha256": "caa40933ffd790c13afa43c6b52ae9f1cd87607a3beb443d6ebe371e85b1fc29"
+}

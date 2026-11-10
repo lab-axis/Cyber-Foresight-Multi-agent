@@ -1,0 +1,47 @@
+{
+  "identity": {
+    "input_sha256": "ac2653fb27d6c409d58d4b0a16abcb06d0066b6a9868992b80adb5a3aac74f6d",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "22f384e1c4b86a4e35c478129f987c9f4a48d77dcf8fbf24b9511ada5370996f",
+    "schema_sha256": "725f64bbf333a0c250a54054e7ff67da637deb789530e3ac7b7a44f6e3bfcaa5",
+    "version": "r2-c5-lens-scope-audit-v1"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 0,
+        "rationale": "The claim is supported by the cited records: DE_DE08_031120C53EF050F3 explicitly describes governance for key-management accountability, traceability, and auditing, while E_23_534489D29C38B327 recommends the deployment and updating of SSL/TLS as an organizational control.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE08_031120C53EF050F3",
+            "role": "ACTION_SPECIFIC"
+          },
+          {
+            "evidence_id": "E_23_534489D29C38B327",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      },
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "PARTIAL",
+        "index": 1,
+        "rationale": "The evidence supports that NIST assigns 'disallowed', 'deprecated', and 'acceptable' statuses to algorithms, creating transition conditions. However, the specific '2025–2027 timing window' mentioned in the claim is not present in the source; the source specifically references transitions occurring 'through 2023' and 'after 2023'.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE09_6719137897848A9E",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      }
+    ]
+  },
+  "sha256": "2c3f9039d89725a8cd170795e8247f17c0267194dcae156e46469d8f78ad4b72"
+}

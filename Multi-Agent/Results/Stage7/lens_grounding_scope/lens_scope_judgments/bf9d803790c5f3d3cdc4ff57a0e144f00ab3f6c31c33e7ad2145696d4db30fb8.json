@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "input_sha256": "132412239658d3449d8474e14d099fac0a5e120aba7177234287a2119e51361d",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "22f384e1c4b86a4e35c478129f987c9f4a48d77dcf8fbf24b9511ada5370996f",
+    "schema_sha256": "725f64bbf333a0c250a54054e7ff67da637deb789530e3ac7b7a44f6e3bfcaa5",
+    "version": "r2-c5-lens-scope-audit-v1"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 0,
+        "rationale": "The evidence (NIST SP 800-52 Rev. 2) explicitly details requirements for TLS implementations, including client certificate authentication, X.509 path validation, trust-anchor stores, revocation status validation (via OCSP), and configurable 'handshake failure' alerts. These constitute a technical pathway for HTTPS/TLS deployment.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE10_A086B3193CD6440B",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      },
+      {
+        "action_relevance": "ADJACENT_ONLY",
+        "factual_verdict": "PARTIAL",
+        "index": 1,
+        "rationale": "While the evidence does state that transport mode has less overhead than tunnel mode because it lacks an additional header, this discussion pertains specifically to IPSec, not HTTPS/TLS. The claim overgeneralizes IPSec-specific architectural modes to 'encrypted transport' in the context of HTTPS.",
+        "scope_verdict": "OVERGENERALIZED",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE18_CDC975345637E009",
+            "role": "ADJACENT"
+          }
+        ],
+        "unsupported_economics": false
+      },
+      {
+        "action_relevance": "MIXED_ACTION_AND_ADJACENT",
+        "factual_verdict": "SUPPORTED",
+        "index": 2,
+        "rationale": "The evidence (NIST Guide to SSL VPNs) explicitly lists session-establishment time, back-end authentication demand, certificate key size, packet fragmentation, and MTU as performance factors. It also lists upgrading hardware, using SSL accelerators, and reducing simultaneous users or traffic as mitigation strategies.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE14_EDCA207577B4607A",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      }
+    ]
+  },
+  "sha256": "1501a7515c5108858139eb31a506049c7fe3dd3a64953eebb391d507bf38651d"
+}

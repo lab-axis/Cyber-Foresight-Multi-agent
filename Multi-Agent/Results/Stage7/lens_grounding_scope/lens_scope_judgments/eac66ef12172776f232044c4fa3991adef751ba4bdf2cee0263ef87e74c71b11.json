@@ -1,0 +1,51 @@
+{
+  "identity": {
+    "input_sha256": "15aa06dfc231a88795463afa605d18d7c13366d9611293020b8148b9fcc098ad",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "22f384e1c4b86a4e35c478129f987c9f4a48d77dcf8fbf24b9511ada5370996f",
+    "schema_sha256": "725f64bbf333a0c250a54054e7ff67da637deb789530e3ac7b7a44f6e3bfcaa5",
+    "version": "r2-c5-lens-scope-audit-v1"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 0,
+        "rationale": "The claim accurately synthesizes components from three sources: DE_DE12 describes Policy Enforcement Points (PEP) and industry compliance systems as inputs for access decisions; DE_DE17 defines governance as the enforcement of cybersecurity policies/procedures and recommends monitoring/assessing security capabilities; and DE_DE11 details ABAC requirements including consistent attribute values, lifecycle management, policy alignment in federated enterprises, and procedures for access failures.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE12_E6F93E4AB8722379",
+            "role": "ACTION_SPECIFIC"
+          },
+          {
+            "evidence_id": "DE_DE17_567DDA7CFBC62829",
+            "role": "ACTION_SPECIFIC"
+          },
+          {
+            "evidence_id": "DE_DE11_1E4AAE06CC3795D7",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      },
+      {
+        "action_relevance": "DIRECT_ACTION",
+        "factual_verdict": "SUPPORTED",
+        "index": 1,
+        "rationale": "The claim precisely lists the requirements found in DE_DE13: secure storage (avoiding HTML5 Local Storage), secure transport (authenticated protected channel), session timeout, prohibition of insecure fallback (https to http), session-identifier verification, cookie restrictions (HTTPS only, minimum hostnames, HttpOnly), and the restriction that OAuth access tokens alone do not imply subscriber presence.",
+        "scope_verdict": "GENERAL_ONLY",
+        "source_roles": [
+          {
+            "evidence_id": "DE_DE13_055FC5E35FA61DD5",
+            "role": "ACTION_SPECIFIC"
+          }
+        ],
+        "unsupported_economics": false
+      }
+    ]
+  },
+  "sha256": "be4c8570571018f442876476dca6d859954073468103af6a4bb4f51ecce20efe"
+}
