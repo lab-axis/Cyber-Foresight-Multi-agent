@@ -1,0 +1,395 @@
+{
+  "artifact_sha256": "d95db1e0269d62455d3f2d93c07b02491688b6ead0406825ab79948064610a5f",
+  "candidate_selection_rule": "case-forecast-pmt-only-v1",
+  "case_id": "main__ransomware__cryptography",
+  "created_at": "2026-11-07T17:28:45.427100+00:00",
+  "decision_bundle": {
+    "candidate_selection_rule": "case-forecast-pmt-only-v1",
+    "case_id": "main__ransomware__cryptography",
+    "decision_objects": [
+      {
+        "candidate_action": {
+          "action_id": "PMT_CRYPTOGRAPHY",
+          "action_name": "CRYPTOGRAPHY",
+          "source": "B_MTGNN_CASE_PMT",
+          "source_evidence_ids": [
+            "E_15_0A98378FC609EF7E",
+            "E_16_E7BB108A85B71262",
+            "E_19_4E69D255F61736DB",
+            "E_26_A710FE8084614182",
+            "E_29_185B62FFF51926EC",
+            "E_29_3C1B7B4F9532A5F2",
+            "E_29_7C01F6CA0D982DFF",
+            "E_33_CDE0F421E4D797ED"
+          ]
+        },
+        "candidate_action_source": "B_MTGNN_CASE_PMT",
+        "candidate_selection_rule": "case-forecast-pmt-only-v1",
+        "case_id": "main__ransomware__cryptography",
+        "contradictory_evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "decision_object_id": "decision__main__ransomware__cryptography__pmt_cryptography__869ae9e9e0ebd529",
+        "deployment_context": {
+          "budget_context": null,
+          "infrastructure_context": null,
+          "organization_type": null,
+          "region": null
+        },
+        "evaluation_evidence_ids": [
+          "E_02_066AFE8300EDCEBB",
+          "E_03_0BAA7B22596028F4",
+          "E_04_270A1E7C47ACC4FF",
+          "E_08_510579F0D776F3BE",
+          "E_15_0A98378FC609EF7E",
+          "E_16_E7BB108A85B71262",
+          "E_19_4E69D255F61736DB",
+          "E_23_AC2A498B747552DF",
+          "E_24_223CAC714FDE427B",
+          "E_25_95744996E05BA6E9",
+          "E_26_A710FE8084614182",
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF",
+          "E_31_6C5988FD2D0D8867",
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "forecast_interpretation": {
+          "gap_by_year": {
+            "2025": -0.16013649999213284,
+            "2026": 1.1973917295513952,
+            "2027": 1.9736211683458935
+          },
+          "gap_direction": "threat_minus_pmt_increasing",
+          "gap_direction_semantics": "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, not absolute-distance widening/narrowing",
+          "gap_semantics": "yearly_mean_zscore_node_state_gap",
+          "gap_slope_per_year": 1.0668788341690132,
+          "pmt_state": {
+            "confidence_95_half_width_z_mean": 0.13487590619322182,
+            "direction": "decreasing",
+            "forecast_field_ids": [
+              "FCE_8cb35aeb9c5aff03_PMT_2025-01",
+              "FCE_8cb35aeb9c5aff03_PMT_2025-02",
+              "FCE_8cb35aeb9c5aff03_PMT_2025-03",
+              "FCE_8cb35aeb9c5aff03_PMT_2025-04",
+              "FCE_8cb35aeb9c5aff03_PMT_2025-05",
+              "FCE_8cb35aeb9c5aff03_PMT_2025-06",
+              "FCE_8cb35aeb9c5aff03_PMT_2025-07",
+              "FCE_8cb35aeb9c5aff03_PMT_2025-08",
+              "FCE_8cb35aeb9c5aff03_PMT_2025-09",
+              "FCE_8cb35aeb9c5aff03_PMT_2025-10",
+              "FCE_8cb35aeb9c5aff03_PMT_2025-11",
+              "FCE_8cb35aeb9c5aff03_PMT_2025-12",
+              "FCE_8cb35aeb9c5aff03_PMT_2026-01",
+              "FCE_8cb35aeb9c5aff03_PMT_2026-02",
+              "FCE_8cb35aeb9c5aff03_PMT_2026-03",
+              "FCE_8cb35aeb9c5aff03_PMT_2026-04",
+              "FCE_8cb35aeb9c5aff03_PMT_2026-05",
+              "FCE_8cb35aeb9c5aff03_PMT_2026-06",
+              "FCE_8cb35aeb9c5aff03_PMT_2026-07",
+              "FCE_8cb35aeb9c5aff03_PMT_2026-08",
+              "FCE_8cb35aeb9c5aff03_PMT_2026-09",
+              "FCE_8cb35aeb9c5aff03_PMT_2026-10",
+              "FCE_8cb35aeb9c5aff03_PMT_2026-11",
+              "FCE_8cb35aeb9c5aff03_PMT_2026-12",
+              "FCE_8cb35aeb9c5aff03_PMT_2027-01",
+              "FCE_8cb35aeb9c5aff03_PMT_2027-02",
+              "FCE_8cb35aeb9c5aff03_PMT_2027-03",
+              "FCE_8cb35aeb9c5aff03_PMT_2027-04",
+              "FCE_8cb35aeb9c5aff03_PMT_2027-05",
+              "FCE_8cb35aeb9c5aff03_PMT_2027-06",
+              "FCE_8cb35aeb9c5aff03_PMT_2027-07",
+              "FCE_8cb35aeb9c5aff03_PMT_2027-08",
+              "FCE_8cb35aeb9c5aff03_PMT_2027-09",
+              "FCE_8cb35aeb9c5aff03_PMT_2027-10",
+              "FCE_8cb35aeb9c5aff03_PMT_2027-11",
+              "FCE_8cb35aeb9c5aff03_PMT_2027-12"
+            ],
+            "forecast_mean_z": -0.1190687827003756,
+            "state_modality": "NoP"
+          },
+          "threat_state": {
+            "confidence_95_half_width_z_mean": 0.10195786341611426,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_THREAT_RANSOMWARE_2025-01",
+              "YF_THREAT_RANSOMWARE_2025-02",
+              "YF_THREAT_RANSOMWARE_2025-03",
+              "YF_THREAT_RANSOMWARE_2025-04",
+              "YF_THREAT_RANSOMWARE_2025-05",
+              "YF_THREAT_RANSOMWARE_2025-06",
+              "YF_THREAT_RANSOMWARE_2025-07",
+              "YF_THREAT_RANSOMWARE_2025-08",
+              "YF_THREAT_RANSOMWARE_2025-09",
+              "YF_THREAT_RANSOMWARE_2025-10",
+              "YF_THREAT_RANSOMWARE_2025-11",
+              "YF_THREAT_RANSOMWARE_2025-12",
+              "YF_THREAT_RANSOMWARE_2026-01",
+              "YF_THREAT_RANSOMWARE_2026-02",
+              "YF_THREAT_RANSOMWARE_2026-03",
+              "YF_THREAT_RANSOMWARE_2026-04",
+              "YF_THREAT_RANSOMWARE_2026-05",
+              "YF_THREAT_RANSOMWARE_2026-06",
+              "YF_THREAT_RANSOMWARE_2026-07",
+              "YF_THREAT_RANSOMWARE_2026-08",
+              "YF_THREAT_RANSOMWARE_2026-09",
+              "YF_THREAT_RANSOMWARE_2026-10",
+              "YF_THREAT_RANSOMWARE_2026-11",
+              "YF_THREAT_RANSOMWARE_2026-12",
+              "YF_THREAT_RANSOMWARE_2027-01",
+              "YF_THREAT_RANSOMWARE_2027-02",
+              "YF_THREAT_RANSOMWARE_2027-03",
+              "YF_THREAT_RANSOMWARE_2027-04",
+              "YF_THREAT_RANSOMWARE_2027-05",
+              "YF_THREAT_RANSOMWARE_2027-06",
+              "YF_THREAT_RANSOMWARE_2027-07",
+              "YF_THREAT_RANSOMWARE_2027-08",
+              "YF_THREAT_RANSOMWARE_2027-09",
+              "YF_THREAT_RANSOMWARE_2027-10",
+              "YF_THREAT_RANSOMWARE_2027-11",
+              "YF_THREAT_RANSOMWARE_2027-12"
+            ],
+            "forecast_mean_z": 0.8845566832680096,
+            "state_modality": "NoI"
+          }
+        },
+        "intended_goal": "Evaluate the feasibility and decision relevance of CRYPTOGRAPHY for the frozen Ransomware forecast pair without changing the action set after observing downstream lens outputs.",
+        "known_constraints": [
+          "Candidate action is frozen before downstream lens evaluation under case-forecast-pmt-only-v1.",
+          "Stage 2 adjudications are reasoning provenance and are not promoted to external evidence.",
+          "Organization/deployment-specific feasibility must remain conditional where deployment context is unknown."
+        ],
+        "pmt_or_mitigation": "CRYPTOGRAPHY",
+        "pmt_or_mitigation_id": "PMT_CRYPTOGRAPHY",
+        "predictive_uncertainty": {
+          "legacy_variance_warning": "legacy inverse scaling uses scale rather than scale^2; retained as raw provenance only",
+          "pmt_confidence_95_half_width_z_mean": 0.13487590619322182,
+          "status": "PAPER_124_NODE_Y",
+          "threat_confidence_95_half_width_z_mean": 0.10195786341611426
+        },
+        "stage2_critique_summary": {
+          "attack_post_stance": 0,
+          "attack_post_unresolved_questions": [
+            "Mandiant dwell-time and external-notification changes may reflect detection or reporting shifts rather than changes in ransomware incident frequency, and the supplied payload does not separate those effects.",
+            "No supplied record with an allowed directional_threat_trend contract explicitly reports a temporal increase or decrease in global ransomware incident count or frequency for the Threat NoI state.",
+            "The Crossref publication trend measures cryptography publication activity and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+            "The EU NIS2 recital is Union-scoped legal/regulatory context, so its transferability to the global Threat NoI forecast remains unresolved."
+          ],
+          "defense_post_stance": -1,
+          "defense_post_unresolved_questions": [
+            "Whether any surfaced evidence directly measures deployment or adoption of cryptographic PMT capabilities, rather than publication activity, remains unresolved.",
+            "Whether the Crossref query used for E_33_CDE0F421E4D797ED corresponds exactly to the Scopus-derived NoP model input remains unresolved, because the record is described as an independent validation axis.",
+            "Whether the threat-side NoI direction is supported by direct incident-count evidence remains unresolved for the overall object, but it does not change the Defense PMT-trajectory challenge."
+          ],
+          "final_mediator_adjudications": [
+            {
+              "adjudication_id": "MA-001",
+              "attack_claim_ids": [
+                "C006"
+              ],
+              "defense_claim_ids": [
+                "C1",
+                "C2"
+              ],
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_33_CDE0F421E4D797ED directly supports the reported 2021-2024 Crossref cryptography publication counts and OLS slope. It is an allowed directional_publication_trend record and therefore supports the bounded claim that the PMT publication-activity trajectory is increasing. The same record also states that this axis is independent of the Scopus-derived NoP model input and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness, which matches the limitation asserted by C2 and the response by Attack on C1/C2. The adjudication accepts the factual trend and its bounded challenge value while preserving the publication-activity limitation.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-002",
+              "attack_claim_ids": [
+                "C001",
+                "C002",
+                "C003",
+                "C004"
+              ],
+              "defense_claim_ids": [
+                "C7",
+                "C8",
+                "C9",
+                "C10"
+              ],
+              "evidence_ids": [
+                "E_31_6C5988FD2D0D8867",
+                "E_04_270A1E7C47ACC4FF",
+                "E_08_510579F0D776F3BE",
+                "E_03_0BAA7B22596028F4"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "The source-specific threat-side claims are each supported by the cited records: E_31_6C5988FD2D0D8867 supports the EU NIS2 recital characterization of an exponential increase in ransomware attacks within the Union; E_04_270A1E7C47ACC4FF supports IBM X-Force's 17% ransomware share and top-spot persistence; E_08_510579F0D776F3BE supports the CISA KEV record that CVE-2022-27593 was utilized in a Deadbolt ransomware campaign; E_03_0BAA7B22596028F4 supports Mandiant's reported ransomware-related dwell-time figures. These records are adequately grounded as written, but none supplies an explicit global ransomware incident-count or frequency NoI trajectory: the NIS2 record is EU-scoped legal context, IBM is share/persistence, CISA is a single exploitation record, and Mandiant is dwell time rather than incident frequency.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-003",
+              "attack_claim_ids": [
+                "C005"
+              ],
+              "defense_claim_ids": [],
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "outcome": "ACCEPT_ATTACK",
+              "rationale": "E_02_066AFE8300EDCEBB supports the stated Verizon DBIR DDoS magnitude trend, including the median growth from 1.4 Gbps to 2.2 Gbps and the 97.5 percentile growth from 99 Gbps to 124 Gbps. No Defense claim addresses this DDoS magnitude point. The claim is supported as written, but it does not bear on ransomware NoI trajectory or PMT NoP trajectory.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-004",
+              "attack_claim_ids": [
+                "C007"
+              ],
+              "defense_claim_ids": [
+                "C4"
+              ],
+              "evidence_ids": [
+                "E_16_E7BB108A85B71262"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_16_E7BB108A85B71262 supports the technical provenance and metadata-authentication context described by both critics. It discusses cryptographic hashes/checksums, perceptual hashing, content identifiers, and digital signatures in the context of linking content to metadata and authenticating metadata or provenance. Both claims are supported as contextual, non-deployment, non-causal descriptions of cryptographic approaches.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-005",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "C3"
+              ],
+              "evidence_ids": [
+                "E_15_0A98378FC609EF7E"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "E_15_0A98378FC609EF7E directly states that, unlike cryptography, widely used machine learning algorithms lack information-theoretic security proofs. The Defense claim is supported as written and is appropriately framed as operational/technical context rather than a deployment-effectiveness or prevalence claim.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-006",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "C5"
+              ],
+              "evidence_ids": [
+                "E_26_A710FE8084614182"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "E_26_A710FE8084614182 supports the Defense claim that NIST SP 800-53A Rev.5 defines assessment procedures for cryptographic key establishment and management and cryptographic protection, including examination, interview, and testing methods. The claim is bounded to assessment procedures and does not assert implementation or effectiveness.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-007",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "C6"
+              ],
+              "evidence_ids": [
+                "E_25_95744996E05BA6E9"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "E_25_95744996E05BA6E9 supports the Defense claim that NIST SP 800-53 Rev.5 references ransomware attacks that encrypt organizational data on servers and includes contingency training and contingency plan testing controls. The claim is supported as a control-context statement and does not assert operational effectiveness.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-008",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "C11"
+              ],
+              "evidence_ids": [
+                "E_23_AC2A498B747552DF"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "E_23_AC2A498B747552DF supports the Defense claim that CISA CPGs describe an approach for identifying and prioritizing cybersecurity practices aimed at common and impactful cyber risks, and the director's letter references ransomware among cyber threats. The claim is supported as written and is a prioritized-defensive-practice context rather than a threat-trajectory claim.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-009",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "C12"
+              ],
+              "evidence_ids": [
+                "E_24_223CAC714FDE427B"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "E_24_223CAC714FDE427B supports the Defense claim that NIST CSF 2.0 describes organizational profiles, gap analysis, and action plans, and gives countering ransomware threats and handling ransomware incidents as an example scope. The claim is supported as a governance and scope context and does not assert effectiveness or trajectory.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-010",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "C13"
+              ],
+              "evidence_ids": [
+                "E_29_7C01F6CA0D982DFF",
+                "E_29_185B62FFF51926EC",
+                "E_29_3C1B7B4F9532A5F2"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "The three Crossref metadata records confirm the existence of corresponding 2017, 2020, and 2022 Cryptography reviewer-acknowledgment items. Minor title wording differences are present in the surfaced records, but the substantive claim that Crossref metadata records confirm the existence of these publication items for the stated years is supported. The claim is appropriately limited to publication metadata and does not establish deployment maturity or operational effectiveness.",
+              "required_revision": null
+            }
+          ],
+          "matched_resolved_claim_ids": [],
+          "matched_unresolved_claim_ids": [],
+          "required_revisions": []
+        },
+        "supporting_evidence_ids": [],
+        "threat": "Ransomware",
+        "threat_id": "THREAT_RANSOMWARE",
+        "timing_window": {
+          "end_year": 2027,
+          "start_year": 2025
+        },
+        "unknown_context_fields": [
+          "region",
+          "organization_type",
+          "infrastructure_context",
+          "budget_context"
+        ],
+        "unresolved_evidence_gaps": []
+      }
+    ],
+    "eligible_action_set": [
+      {
+        "action_id": "PMT_CRYPTOGRAPHY",
+        "action_name": "CRYPTOGRAPHY",
+        "source": "B_MTGNN_CASE_PMT",
+        "source_evidence_ids": [
+          "E_15_0A98378FC609EF7E",
+          "E_16_E7BB108A85B71262",
+          "E_19_4E69D255F61736DB",
+          "E_26_A710FE8084614182",
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF",
+          "E_33_CDE0F421E4D797ED"
+        ]
+      }
+    ],
+    "excluded_actions_and_reason": [
+      {
+        "action_id": "PMT_HTTPS",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      }
+    ]
+  },
+  "decision_bundle_schema_sha256": "bcd029d15adbfe35ae50ee75fc2ac8731f73baa4897e7265fac3b44b692c9003",
+  "input_fingerprint": "c4b4a8522269c7699d28fb1457284d54c44e61fa12a231b873f195b06a05af74",
+  "schema_version": "stage3-artifact-v2",
+  "semantic_validation_version": "stage3-semantic-validation-v2",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "3e169cb016728c4c4f61305d23e31c452c6c1845f9c8f3e02996355912107bc0",
+  "stage2_artifact_sha256": "f5db953aeb25281ef77a5e402d0bbe9f321a102606bd5419fb9883a91301a15f",
+  "stage2_output_sha256": "12b536b552fa11baee1f7130d0e2874ea5a1fe3a20b7c3a4458dec3b723eb170",
+  "stage3_context": {
+    "budget_context": null,
+    "infrastructure_context": null,
+    "organization_type": null,
+    "pmt": "CRYPTOGRAPHY",
+    "region": null,
+    "threat": "Ransomware"
+  },
+  "stage3_output_sha256": "23ebf7b76264ceb540e7f1a26dd1be38ae65dee0b56b1898758f0b1ccc8e4618"
+}

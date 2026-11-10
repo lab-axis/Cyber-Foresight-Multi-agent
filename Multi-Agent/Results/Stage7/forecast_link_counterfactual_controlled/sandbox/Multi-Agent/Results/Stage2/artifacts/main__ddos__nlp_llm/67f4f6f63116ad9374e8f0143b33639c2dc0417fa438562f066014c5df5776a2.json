@@ -1,0 +1,950 @@
+{
+  "artifact_sha256": "b331a0ad8cbd5d155b1e92167af718c0c478f3a44d737dd587160cc857a2eb8a",
+  "case_id": "main__ddos__nlp_llm",
+  "constrained_output_schema_hashes": {
+    "post_attack_base_sha256": "e62a97fd7625c88fe8ee6bf27d0c115e16e255b19a8b2501eadd0877af0a4165",
+    "post_defense_base_sha256": "699e4480c7c47bc1f12e7d7556bef89c7c416f85d54cb255bbe389b895cd2dd9",
+    "round1_attack_sha256": "ab222a72f7f67442f27aa66cf257bdf5d2465504e5ad24d0a9e1b61679c982a8",
+    "round1_defense_sha256": "5db840d609e04937ba272bd50f92775b211daa97b223541990b22007b7d901be",
+    "round1_mediator_base_sha256": "475f186ded5735e83602f32c130a6c67fee6e9bcaec13fa519f5c228d281044e",
+    "round2_attack_base_sha256": "04c20501b2a355895d7ab0ff2277116cbd6492d8734c4a7d866c72083f8faba4",
+    "round2_defense_base_sha256": "00ef43066354fa2746d80b6ced8898ca3e3ad7992ceeedb473107196c76371ee",
+    "round2_mediator_base_sha256": "7632cacc39dfd8eec2081c080130431bff07a38d85e6a3bab07775312f8e23c5"
+  },
+  "created_at": "2026-11-07T13:10:14.954104+00:00",
+  "debate_result": {
+    "attack_post_assessment": {
+      "case_id": "main__ddos__nlp_llm",
+      "claims": [
+        {
+          "claim_id": "AF_CRITIC_001",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The DBIR chunk reports directional growth in DDoS incident bandwidth, with the median increasing from 1.4 Gbps to 2.2 Gbps and the 97.5 percentile increasing from 99 Gbps to 124 Gbps."
+        },
+        {
+          "claim_id": "AF_CRITIC_002",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The DBIR chunk reports growth in distributed DNS Water Torture attacks as a DDoS resource-exhaustion pattern associated with shared DNS infrastructure."
+        },
+        {
+          "claim_id": "AF_CRITIC_003",
+          "evidence_ids": [
+            "E_03_06E6ABC42DA3AC77"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends reports that 9% of 2022 observed threat groups were assessed as having other motivations, including destructive operations, and defines destructive operations as including DDoS or destructive ICS attacks."
+        },
+        {
+          "claim_id": "AF_CRITIC_004",
+          "evidence_ids": [
+            "E_03_F13F996D181217BA"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends reports a significant increase in hacktivism after the invasion of Ukraine and states that such threat actors claimed traditional hacktivist activity such as DDoS attacks."
+        },
+        {
+          "claim_id": "AF_CRITIC_005",
+          "evidence_ids": [
+            "E_04_892BBCAA3CE5CC92"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force reports claimed hacktivist operations linked to the Israel-Hamas crisis and recommends readiness against malicious hacktivist activity, including DDoS."
+        },
+        {
+          "claim_id": "AF_CRITIC_006",
+          "evidence_ids": [
+            "E_08_3453329306E149CB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA KEV records CVE-2023-44487, an HTTP/2 Rapid Reset vulnerability, as a DDoS-related known exploited vulnerability."
+        },
+        {
+          "claim_id": "AF_CRITIC_007",
+          "evidence_ids": [
+            "E_33_ADC8BC66D812799F"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The Crossref cutoff-constrained publication trend reports NLP/LLM security-related annual publication counts of 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024, with an OLS slope of 23.4 works per year."
+        }
+      ],
+      "critic_type": "attack_feasibility",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 0,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "NO_DIRECTIONAL_EVIDENCE",
+        "rationale": "The completed debate confirms that the surfaced DDoS records establish relevant operational context, including bandwidth growth, DNS Water Torture, hacktivist DDoS claims, and a known exploited HTTP/2 Rapid Reset DDoS vector. However, none of the supplied records directly reports a temporal increase or decrease in DDoS incident count or frequency, which is the threat NoI forecast modality. The Crossref NoP trend directly supports the PMT-side publication-activity axis only and is explicitly bounded away from deployment maturity, operational effectiveness, and causal mitigation effectiveness. Because no direct THREAT_TRAJECTORY evidence exists and no direct evidence exists for both threat NoI and PMT NoP modalities required for GAP_DIRECTION, no decisive Attack-side support or challenge can be grounded.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "Does any supplied record explicitly report a temporal increase or decrease in DDoS incident count or frequency for the threat state?",
+        "Does the DBIR increase in DDoS bandwidth percentiles reflect an increase in incident frequency, larger incidents only, or changes in measurement and reporting?",
+        "What direct evidence exists for the missing threat_capability_or_mechanism, mitigation_relation_or_control, and mitigation_implementation slots?",
+        "How should the forecast threat NoI increasing direction be reconciled with the supplied historical threat NoI recent_direction being decreasing and latest z-score -0.8976?",
+        "How should the reported positive gap slope be reconciled with the 2026-to-2027 gap value becoming more negative?",
+        "Whether the bounded PMT NoP publication trend can support GAP_DIRECTION without direct threat NoI evidence, given that one-sided PMT movement is insufficient for a direct gap interpretation."
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "attack_pre_assessment": {
+      "case_id": "main__ddos__nlp_llm",
+      "claims": [
+        {
+          "claim_id": "AF_CRITIC_001",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The DBIR chunk reports a directional increase in DDoS attack bandwidth, with the median growing from 1.4 Gbps to 2.2 Gbps and the 97.5 percentile from 99 Gbps to 124 Gbps."
+        },
+        {
+          "claim_id": "AF_CRITIC_002",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The DBIR chunk reports growth in distributed DNS Water Torture attacks as a DDoS resource-exhaustion pattern associated with shared DNS infrastructure."
+        },
+        {
+          "claim_id": "AF_CRITIC_003",
+          "evidence_ids": [
+            "E_03_06E6ABC42DA3AC77"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends reports that DDoS is cited as an example of destructive operations within the 9% of 2022 observed threat groups assessed as having other motivations."
+        },
+        {
+          "claim_id": "AF_CRITIC_004",
+          "evidence_ids": [
+            "E_03_F13F996D181217BA"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends reports that Russian-associated hacktivist groups claimed DDoS attacks as part of cyber-enabled information operations during the Ukraine conflict period."
+        },
+        {
+          "claim_id": "AF_CRITIC_005",
+          "evidence_ids": [
+            "E_04_892BBCAA3CE5CC92"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force reports hacktivist operations linked to the Israel-Hamas crisis and identifies DDoS as one activity against which organizations should be prepared."
+        },
+        {
+          "claim_id": "AF_CRITIC_006",
+          "evidence_ids": [
+            "E_08_3453329306E149CB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA KEV records CVE-2023-44487, an HTTP/2 Rapid Reset vulnerability, as a DDoS-related known exploited vulnerability."
+        },
+        {
+          "claim_id": "AF_CRITIC_007",
+          "evidence_ids": [
+            "E_33_ADC8BC66D812799F"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The Crossref publication trend reports NLP/LLM security-related annual publication counts of 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024, with an OLS slope of 23.4 works per year."
+        }
+      ],
+      "critic_type": "attack_feasibility",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 0,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "NO_DIRECTIONAL_EVIDENCE",
+        "rationale": "The supplied evidence establishes DDoS relevance, DDoS attack-vector growth, confirmed exploitation mechanism, and a strong PMT publication trend, but no supplied record directly reports a temporal increase or decrease in DDoS incident count or frequency, which is the forecast threat modality NoI. Therefore no decisive THREAT_TRAJECTORY or GAP_DIRECTION directional claim can be grounded for the Attack stance.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "Does any supplied record explicitly report a temporal increase or decrease in DDoS incident count or frequency for the threat state?",
+        "Does the DBIR increase in DDoS bandwidth percentiles reflect an increase in incident frequency, larger incidents only, or changes in measurement and reporting?",
+        "What direct evidence exists for the missing threat_capability_or_mechanism, mitigation_relation_or_control, and mitigation_implementation slots?",
+        "How should the forecast threat NoI increasing direction be reconciled with the supplied historical threat NoI recent_direction being decreasing and latest z-score -0.8976?",
+        "How should the reported positive gap slope be reconciled with the 2026-to-2027 gap value becoming more negative?",
+        "How should the model predictive uncertainty for the threat state be kept distinct from real-world evidence when assessing threat trajectory plausibility?"
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "case_id": "main__ddos__nlp_llm",
+    "defense_post_assessment": {
+      "case_id": "main__ddos__nlp_llm",
+      "claims": [
+        {
+          "claim_id": "DEF_PMT_NOP_INCREASING",
+          "evidence_ids": [
+            "E_33_ADC8BC66D812799F"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The Crossref cutoff-constrained PMT publication trend for PMT=NLP/LLM with bibliographic query 'security' reports annual publication counts of 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024, with an OLS slope of 23.4 works/year and a first-to-last delta of 73."
+        },
+        {
+          "claim_id": "DEF_PMT_NOP_EVIDENCE_BOUNDARY",
+          "evidence_ids": [
+            "E_33_ADC8BC66D812799F"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The Crossref cutoff-constrained PMT publication trend record explicitly states that this publication-activity validation axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        },
+        {
+          "claim_id": "DEF_LLM_NLP_METADATA_EXISTENCE",
+          "evidence_ids": [
+            "E_29_CD092D34A1331D02"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Crossref records provide publication metadata for DOI 10.2139/ssrn.4996945, titled 'Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case.'"
+        },
+        {
+          "claim_id": "DEF_DDOS_ATTACK_SIZE_TREND",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "DBIR 2023 reports observed growth in DDoS attack size, with median bits per second in DDoS incidents growing from 1.4 Gbps to 2.2 Gbps and the 97.5 percentile growing from 99 Gbps to 124 Gbps."
+        },
+        {
+          "claim_id": "DEF_DDOS_DNS_WATER_TORTURE_PATTERN",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "DBIR 2023 describes distributed DNS Water Torture attacks as a resource-exhaustion attack achieved by querying random name prefixes on a DNS cache server so that it misses and forwards queries to the authoritative server, and recommends checking DNS infrastructure resiliency and mitigation service options."
+        },
+        {
+          "claim_id": "DEF_MANDIANT_THREAT_GROUP_GOALS",
+          "evidence_ids": [
+            "E_03_06E6ABC42DA3AC77"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends reports observed threat groups by goal in 2022 as 48% financially motivated, 18% espionage-related, 9% other, and 27% unknown, and defines destructive operations to include DDoS or destructive ICS attacks."
+        },
+        {
+          "claim_id": "DEF_MANDIANT_HACKTIVISM_DDOS",
+          "evidence_ids": [
+            "E_03_F13F996D181217BA"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends observed a significant increase in hacktivism after the invasion of Ukraine, including activity from Russian-backed groups, and reports claimed traditional hacktivist activity such as DDoS attacks, website defacements, and hack-and-leak operations."
+        },
+        {
+          "claim_id": "DEF_XFORCE_HACKTIVISM_DDOS_READINESS",
+          "evidence_ids": [
+            "E_04_892BBCAA3CE5CC92"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force reports claimed hacktivism related to the Israel-Hamas crisis, with most targets in the financial, government, travel, and transportation sectors, and recommends contacting a DDoS mitigation provider, having and practicing a DDoS incident response plan, and maintaining current DDoS mitigation and ISP contact information."
+        },
+        {
+          "claim_id": "DEF_HTTP2_RAPID_RESET_EXPLOIT",
+          "evidence_ids": [
+            "E_08_3453329306E149CB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA KEV records CVE-2023-44487 as a known exploited HTTP/2 Rapid Reset attack vulnerability that allows a distributed denial-of-service attack, with remediation per vendor instructions, applicable BOD 22-01 cloud guidance, or discontinuation if mitigations are unavailable."
+        }
+      ],
+      "critic_type": "defense_robustness",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 1,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "SUPPORT_DOMINATES",
+        "rationale": "The decisive defense-side support is the cutoff-constrained Crossref publication-trend record, which directly reports an increasing annual publication-activity series for PMT=NLP/LLM and therefore supports the forecast PMT state modality NoP and its increasing direction. This support is bounded to publication activity and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. The DDoS threat-side records are relevant context but do not directly establish NoI incident-count/frequency direction and therefore are not used as decisive basis.",
+        "supporting_claim_ids": [
+          "DEF_PMT_NOP_INCREASING"
+        ]
+      },
+      "unresolved_questions": [
+        "Whether the increasing NLP/LLM publication activity for PMT_NLP_LLM is accompanied by deployment maturity, production implementation, or operational mitigation effectiveness for DDoS is not established by the supplied evidence.",
+        "Whether the forecasted threat state's NoI incident-count/frequency direction is directly supported by incident-count/frequency data, rather than by attack-size percentiles, hacktivism claims, or exploitation records, is not resolved by the supplied evidence.",
+        "Whether the forecasted gap_direction 'threat_minus_pmt_increasing' is directly supported by evidence of relative movement between threat NoI and PMT NoP state modalities is not resolved, because the supplied evidence does not report a relative trend between those two modalities."
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "defense_pre_assessment": {
+      "case_id": "main__ddos__nlp_llm",
+      "claims": [
+        {
+          "claim_id": "DEF_PMT_NOP_INCREASING",
+          "evidence_ids": [
+            "E_33_ADC8BC66D812799F"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The Crossref cutoff-constrained PMT publication trend for PMT=NLP/LLM with bibliographic query 'security' reports annual publication counts of 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024, with an OLS slope of 23.4 works/year and a first-to-last delta of 73."
+        },
+        {
+          "claim_id": "DEF_PMT_NOP_EVIDENCE_BOUNDARY",
+          "evidence_ids": [
+            "E_33_ADC8BC66D812799F"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The Crossref cutoff-constrained PMT publication trend record explicitly states that this publication-activity validation axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        },
+        {
+          "claim_id": "DEF_LLM_NLP_METADATA_EXISTENCE",
+          "evidence_ids": [
+            "E_29_CD092D34A1331D02"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Crossref records provide publication metadata for DOI 10.2139/ssrn.4996945, titled 'Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case.'"
+        },
+        {
+          "claim_id": "DEF_DDOS_ATTACK_SIZE_TREND",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "DBIR 2023 reports observed growth in DDoS attack size, with median bits per second in DDoS incidents growing from 1.4 Gbps to 2.2 Gbps and the 97.5 percentile growing from 99 Gbps to 124 Gbps."
+        },
+        {
+          "claim_id": "DEF_DDOS_DNS_WATER_TORTURE_PATTERN",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "DBIR 2023 describes distributed DNS Water Torture attacks as a resource-exhaustion attack achieved by querying random name prefixes on a DNS cache server so that it misses and forwards queries to the authoritative server, and recommends checking DNS infrastructure resiliency and mitigation service options."
+        },
+        {
+          "claim_id": "DEF_MANDIANT_THREAT_GROUP_GOALS",
+          "evidence_ids": [
+            "E_03_06E6ABC42DA3AC77"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends reports observed threat groups by goal in 2022 as 48% financially motivated, 18% espionage-related, 9% other, and 27% unknown, and defines destructive operations to include DDoS or destructive ICS attacks."
+        },
+        {
+          "claim_id": "DEF_MANDIANT_HACKTIVISM_DDOS",
+          "evidence_ids": [
+            "E_03_F13F996D181217BA"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends observed a significant increase in hacktivism after the invasion of Ukraine, including activity from Russian-backed groups, and reports claimed traditional hacktivist activity such as DDoS attacks, website defacements, and hack-and-leak operations."
+        },
+        {
+          "claim_id": "DEF_XFORCE_HACKTIVISM_DDOS_READINESS",
+          "evidence_ids": [
+            "E_04_892BBCAA3CE5CC92"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force reports claimed hacktivism related to the Israel-Hamas crisis, with most targets in the financial, government, travel, and transportation sectors, and recommends contacting a DDoS mitigation provider, having and practicing a DDoS incident response plan, and maintaining current DDoS mitigation and ISP contact information."
+        },
+        {
+          "claim_id": "DEF_HTTP2_RAPID_RESET_EXPLOIT",
+          "evidence_ids": [
+            "E_08_3453329306E149CB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA KEV records CVE-2023-44487 as a known exploited HTTP/2 Rapid Reset attack vulnerability that allows a distributed denial-of-service attack, with remediation per vendor instructions, applicable BOD 22-01 cloud guidance, or discontinuation if mitigations are unavailable."
+        }
+      ],
+      "critic_type": "defense_robustness",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 1,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "SUPPORT_DOMINATES",
+        "rationale": "The decisive defense-side evidence directly supports the forecasted PMT state modality NoP and its increasing direction: the supplied Crossref trend reports a clear upward temporal publication-activity trend for PMT=NLP/LLM. This is not direct evidence of deployment maturity, operational effectiveness, or causal mitigation effectiveness, so the support is bounded to the publication-activity trajectory.",
+        "supporting_claim_ids": [
+          "DEF_PMT_NOP_INCREASING"
+        ]
+      },
+      "unresolved_questions": [
+        "Whether the increasing NLP/LLM publication activity for PMT_NLP_LLM is accompanied by deployment maturity, production implementation, or operational mitigation effectiveness for DDoS is not established by the supplied evidence.",
+        "Whether the forecasted threat state's NoI incident-count/frequency direction is directly supported by incident-count/frequency data, rather than by attack-size percentiles, hacktivism claims, or exploitation records, is not resolved by the supplied evidence.",
+        "Whether the forecasted gap_direction 'threat_minus_pmt_increasing' is directly supported by evidence of relative movement between threat NoI and PMT NoP state modalities is not resolved, because the supplied evidence does not report a relative trend between those two modalities."
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "evidence_conflicts": [],
+    "evidence_gaps": [],
+    "exchanges": [
+      {
+        "claim_id": "DEF_PMT_NOP_INCREASING",
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "note": "E_33_ADC8BC66D812799F explicitly supports the stated annual publication counts, OLS slope, and first-to-last delta for the cutoff-constrained NLP/LLM security publication trend. The support remains bounded to directional publication activity and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_PMT_NOP_EVIDENCE_BOUNDARY",
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "note": "E_33_ADC8BC66D812799F explicitly states that the publication-trend validation axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_LLM_NLP_METADATA_EXISTENCE",
+        "evidence_ids": [
+          "E_29_CD092D34A1331D02"
+        ],
+        "note": "E_29_CD092D34A1331D02 supports the existence of the cited Crossref publication metadata, including the DOI and title. It is static metadata and is not used here as directional publication-trend evidence.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_DDOS_ATTACK_SIZE_TREND",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "note": "E_02_066AFE8300EDCEBB supports the reported growth in DDoS attack bandwidth percentiles, including the median and 97.5 percentile changes. This is operational context about attack magnitude, not direct evidence of DDoS incident-count or frequency direction.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_DDOS_DNS_WATER_TORTURE_PATTERN",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "note": "E_02_066AFE8300EDCEBB supports the description of distributed DNS Water Torture as a resource-exhaustion DDoS pattern and the recommendation to check DNS infrastructure resiliency and mitigation options.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_MANDIANT_THREAT_GROUP_GOALS",
+        "evidence_ids": [
+          "E_03_06E6ABC42DA3AC77"
+        ],
+        "note": "E_03_06E6ABC42DA3AC77 supports the reported 2022 threat-group goal percentages and the definition of destructive operations as including DDoS or destructive ICS attacks.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_MANDIANT_HACKTIVISM_DDOS",
+        "evidence_ids": [
+          "E_03_F13F996D181217BA"
+        ],
+        "note": "E_03_F13F996D181217BA supports the reported increase in hacktivism after the invasion of Ukraine and the claim that such activity included traditional hacktivist operations such as DDoS. This remains adversary-behavior context, not direct DDoS incident-count or frequency evidence.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_XFORCE_HACKTIVISM_DDOS_READINESS",
+        "evidence_ids": [
+          "E_04_892BBCAA3CE5CC92"
+        ],
+        "note": "E_04_892BBCAA3CE5CC92 supports the reported claimed hacktivism related to the Israel-Hamas crisis, the named target sectors, and the DDoS-related readiness recommendations. These recommendations are context and do not establish mitigation effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_HTTP2_RAPID_RESET_EXPLOIT",
+        "evidence_ids": [
+          "E_08_3453329306E149CB"
+        ],
+        "note": "E_08_3453329306E149CB supports the CISA KEV record for CVE-2023-44487 as an HTTP/2 Rapid Reset vulnerability allowing a DDoS attack, along with the listed remediation guidance. It does not establish prevalence magnitude, severity, or incident-count direction.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "AF_CRITIC_001",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "note": "The cited DBIR chunk explicitly reports a directional increase in DDoS bandwidth percentiles, with median and 97.5th percentile values as stated. This is accepted as neutral operational context about attack magnitude, not as direct NoI incident-count or incident-frequency evidence.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "AF_CRITIC_002",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "note": "The cited DBIR chunk explicitly describes growth in distributed DNS Water Torture attacks as a resource-exhaustion pattern associated with shared DNS infrastructure. This is accepted as neutral operational context, not as direct NoI incident-count or incident-frequency evidence.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "AF_CRITIC_003",
+        "evidence_ids": [
+          "E_03_06E6ABC42DA3AC77"
+        ],
+        "note": "The cited M-Trends chunk associates the 9% of 2022 observed threat groups assessed with other motivations with categories including destructive operations, and gives DDoS as an example of destructive operations. This is accepted as contextual threat-motivation information, not as DDoS-specific incident-frequency evidence.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "AF_CRITIC_004",
+        "evidence_ids": [
+          "E_03_F13F996D181217BA"
+        ],
+        "note": "The cited M-Trends chunk reports Russian-backed or Russian-intelligence-associated hacktivist activity in the Ukraine period and states that such threat actors claimed DDoS attacks as part of influence-oriented activity. This is accepted as neutral operational context, not as direct NoI incident-count or incident-frequency evidence.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "AF_CRITIC_005",
+        "evidence_ids": [
+          "E_04_892BBCAA3CE5CC92"
+        ],
+        "note": "The cited X-Force chunk reports hacktivist operations linked to the Israel-Hamas crisis and recommends readiness against malicious hacktivist activity including DDoS. This is accepted as neutral operational context, not as direct NoI incident-count or incident-frequency evidence.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "AF_CRITIC_006",
+        "evidence_ids": [
+          "E_08_3453329306E149CB"
+        ],
+        "note": "The cited CISA KEV record identifies CVE-2023-44487 as a known exploited HTTP/2 Rapid Reset vulnerability that allows DDoS. This is accepted as neutral exploitation context, not as direct NoI incident-count or incident-frequency evidence.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "AF_CRITIC_007",
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "note": "The cited Crossref trend record directly reports the stated NLP/LLM security-related annual publication counts and OLS slope. This is the direct NoP publication-activity support for the PMT increasing trajectory and is properly bounded away from deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      }
+    ],
+    "final_adjudications": [
+      {
+        "adjudication_id": "MA_001_PMT_NOP_INCREASING_TREND",
+        "attack_claim_ids": [
+          "AF_CRITIC_007"
+        ],
+        "defense_claim_ids": [
+          "DEF_PMT_NOP_INCREASING"
+        ],
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "outcome": "ACCEPT_BOTH",
+        "rationale": "E_33_ADC8BC66D812799F explicitly reports the cutoff-constrained Crossref publication trend for PMT=NLP/LLM with bibliographic query 'security': annual counts 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024; OLS slope 23.4 works/year; first-to-last delta 73. This directly grounds an increasing NoP publication-activity trajectory within the surfaced evidence boundary. The Attack and Defense claims converge on the reported trend, so both are evidence-grounded for this bounded PMT axis.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "MA_002_PMT_PUBLICATION_TREND_BOUNDARY",
+        "attack_claim_ids": [],
+        "defense_claim_ids": [
+          "DEF_PMT_NOP_EVIDENCE_BOUNDARY"
+        ],
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "outcome": "ACCEPT_DEFENSE",
+        "rationale": "E_33_ADC8BC66D812799F explicitly states that the publication-activity validation axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. The Defense claim is therefore properly bounded and better grounded than any interpretation that would extend the Crossref trend to operational effectiveness.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "MA_003_LLM_NLP_METADATA_EXISTENCE",
+        "attack_claim_ids": [],
+        "defense_claim_ids": [
+          "DEF_LLM_NLP_METADATA_EXISTENCE"
+        ],
+        "evidence_ids": [
+          "E_29_CD092D34A1331D02"
+        ],
+        "outcome": "ACCEPT_DEFENSE",
+        "rationale": "E_29_CD092D34A1331D02 provides Crossref publication metadata for DOI 10.2139/ssrn.4996945, titled 'Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case.' This supports the Defense claim that the cited publication metadata exists. The claim is bounded to metadata existence and does not establish deployment or operational effectiveness.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "MA_004_DDOS_CONTEXT_NOT_DIRECT_NOI_DIRECTION",
+        "attack_claim_ids": [
+          "AF_CRITIC_001",
+          "AF_CRITIC_002",
+          "AF_CRITIC_003",
+          "AF_CRITIC_004",
+          "AF_CRITIC_005",
+          "AF_CRITIC_006"
+        ],
+        "defense_claim_ids": [
+          "DEF_DDOS_ATTACK_SIZE_TREND",
+          "DEF_DDOS_DNS_WATER_TORTURE_PATTERN",
+          "DEF_MANDIANT_THREAT_GROUP_GOALS",
+          "DEF_MANDIANT_HACKTIVISM_DDOS",
+          "DEF_XFORCE_HACKTIVISM_DDOS_READINESS",
+          "DEF_HTTP2_RAPID_RESET_EXPLOIT"
+        ],
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB",
+          "E_03_06E6ABC42DA3AC77",
+          "E_03_F13F996D181217BA",
+          "E_04_892BBCAA3CE5CC92",
+          "E_08_3453329306E149CB"
+        ],
+        "outcome": "ACCEPT_BOTH",
+        "rationale": "The surfaced DDoS-related records support the factual claims made by both critics: E_02 reports growth in DDoS attack-size percentiles and DNS Water Torture context; E_03 reports Mandiant threat-group goal percentages and hacktivism/DDoS-related claims; E_04 reports Israel-Hamas-related hacktivism and DDoS readiness recommendations; E_08 records CVE-2023-44487 as a KEV-listed HTTP/2 Rapid Reset DDoS exploitation record. However, none of these surfaced records directly reports a temporal increase or decrease in DDoS incident count or incident frequency, which is the threat NoI directional axis. Therefore the factual context claims are grounded, and the Attack framing that these records do not by themselves establish a decisive NoI directional threat trajectory is also grounded within the surfaced boundary.",
+        "required_revision": null
+      }
+    ],
+    "resolved_claims": [],
+    "rounds": [
+      {
+        "attack_turn": {
+          "case_id": "main__ddos__nlp_llm",
+          "responder_critic": "attack_feasibility",
+          "responses": [
+            {
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "note": "E_33_ADC8BC66D812799F explicitly supports the stated annual publication counts, OLS slope, and first-to-last delta for the cutoff-constrained NLP/LLM security publication trend. The support remains bounded to directional publication activity and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_PMT_NOP_INCREASING"
+            },
+            {
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "note": "E_33_ADC8BC66D812799F explicitly states that the publication-trend validation axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_PMT_NOP_EVIDENCE_BOUNDARY"
+            },
+            {
+              "evidence_ids": [
+                "E_29_CD092D34A1331D02"
+              ],
+              "note": "E_29_CD092D34A1331D02 supports the existence of the cited Crossref publication metadata, including the DOI and title. It is static metadata and is not used here as directional publication-trend evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_LLM_NLP_METADATA_EXISTENCE"
+            },
+            {
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "note": "E_02_066AFE8300EDCEBB supports the reported growth in DDoS attack bandwidth percentiles, including the median and 97.5 percentile changes. This is operational context about attack magnitude, not direct evidence of DDoS incident-count or frequency direction.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_DDOS_ATTACK_SIZE_TREND"
+            },
+            {
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "note": "E_02_066AFE8300EDCEBB supports the description of distributed DNS Water Torture as a resource-exhaustion DDoS pattern and the recommendation to check DNS infrastructure resiliency and mitigation options.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_DDOS_DNS_WATER_TORTURE_PATTERN"
+            },
+            {
+              "evidence_ids": [
+                "E_03_06E6ABC42DA3AC77"
+              ],
+              "note": "E_03_06E6ABC42DA3AC77 supports the reported 2022 threat-group goal percentages and the definition of destructive operations as including DDoS or destructive ICS attacks.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_MANDIANT_THREAT_GROUP_GOALS"
+            },
+            {
+              "evidence_ids": [
+                "E_03_F13F996D181217BA"
+              ],
+              "note": "E_03_F13F996D181217BA supports the reported increase in hacktivism after the invasion of Ukraine and the claim that such activity included traditional hacktivist operations such as DDoS. This remains adversary-behavior context, not direct DDoS incident-count or frequency evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_MANDIANT_HACKTIVISM_DDOS"
+            },
+            {
+              "evidence_ids": [
+                "E_04_892BBCAA3CE5CC92"
+              ],
+              "note": "E_04_892BBCAA3CE5CC92 supports the reported claimed hacktivism related to the Israel-Hamas crisis, the named target sectors, and the DDoS-related readiness recommendations. These recommendations are context and do not establish mitigation effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_XFORCE_HACKTIVISM_DDOS_READINESS"
+            },
+            {
+              "evidence_ids": [
+                "E_08_3453329306E149CB"
+              ],
+              "note": "E_08_3453329306E149CB supports the CISA KEV record for CVE-2023-44487 as an HTTP/2 Rapid Reset vulnerability allowing a DDoS attack, along with the listed remediation guidance. It does not establish prevalence magnitude, severity, or incident-count direction.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_HTTP2_RAPID_RESET_EXPLOIT"
+            }
+          ],
+          "round_index": 1,
+          "target_critic": "defense_robustness"
+        },
+        "defense_turn": {
+          "case_id": "main__ddos__nlp_llm",
+          "responder_critic": "defense_robustness",
+          "responses": [
+            {
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "note": "The cited DBIR chunk explicitly reports a directional increase in DDoS bandwidth percentiles, with median and 97.5th percentile values as stated. This is accepted as neutral operational context about attack magnitude, not as direct NoI incident-count or incident-frequency evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "AF_CRITIC_001"
+            },
+            {
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "note": "The cited DBIR chunk explicitly describes growth in distributed DNS Water Torture attacks as a resource-exhaustion pattern associated with shared DNS infrastructure. This is accepted as neutral operational context, not as direct NoI incident-count or incident-frequency evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "AF_CRITIC_002"
+            },
+            {
+              "evidence_ids": [
+                "E_03_06E6ABC42DA3AC77"
+              ],
+              "note": "The cited M-Trends chunk associates the 9% of 2022 observed threat groups assessed with other motivations with categories including destructive operations, and gives DDoS as an example of destructive operations. This is accepted as contextual threat-motivation information, not as DDoS-specific incident-frequency evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "AF_CRITIC_003"
+            },
+            {
+              "evidence_ids": [
+                "E_03_F13F996D181217BA"
+              ],
+              "note": "The cited M-Trends chunk reports Russian-backed or Russian-intelligence-associated hacktivist activity in the Ukraine period and states that such threat actors claimed DDoS attacks as part of influence-oriented activity. This is accepted as neutral operational context, not as direct NoI incident-count or incident-frequency evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "AF_CRITIC_004"
+            },
+            {
+              "evidence_ids": [
+                "E_04_892BBCAA3CE5CC92"
+              ],
+              "note": "The cited X-Force chunk reports hacktivist operations linked to the Israel-Hamas crisis and recommends readiness against malicious hacktivist activity including DDoS. This is accepted as neutral operational context, not as direct NoI incident-count or incident-frequency evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "AF_CRITIC_005"
+            },
+            {
+              "evidence_ids": [
+                "E_08_3453329306E149CB"
+              ],
+              "note": "The cited CISA KEV record identifies CVE-2023-44487 as a known exploited HTTP/2 Rapid Reset vulnerability that allows DDoS. This is accepted as neutral exploitation context, not as direct NoI incident-count or incident-frequency evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "AF_CRITIC_006"
+            },
+            {
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "note": "The cited Crossref trend record directly reports the stated NLP/LLM security-related annual publication counts and OLS slope. This is the direct NoP publication-activity support for the PMT increasing trajectory and is properly bounded away from deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "AF_CRITIC_007"
+            }
+          ],
+          "round_index": 1,
+          "target_critic": "attack_feasibility"
+        },
+        "mediator_summary": {
+          "adjudications": [
+            {
+              "adjudication_id": "MA_001_PMT_NOP_INCREASING_TREND",
+              "attack_claim_ids": [
+                "AF_CRITIC_007"
+              ],
+              "defense_claim_ids": [
+                "DEF_PMT_NOP_INCREASING"
+              ],
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_33_ADC8BC66D812799F explicitly reports the cutoff-constrained Crossref publication trend for PMT=NLP/LLM with bibliographic query 'security': annual counts 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024; OLS slope 23.4 works/year; first-to-last delta 73. This directly grounds an increasing NoP publication-activity trajectory within the surfaced evidence boundary. The Attack and Defense claims converge on the reported trend, so both are evidence-grounded for this bounded PMT axis.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA_002_PMT_PUBLICATION_TREND_BOUNDARY",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "DEF_PMT_NOP_EVIDENCE_BOUNDARY"
+              ],
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "E_33_ADC8BC66D812799F explicitly states that the publication-activity validation axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. The Defense claim is therefore properly bounded and better grounded than any interpretation that would extend the Crossref trend to operational effectiveness.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA_003_LLM_NLP_METADATA_EXISTENCE",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "DEF_LLM_NLP_METADATA_EXISTENCE"
+              ],
+              "evidence_ids": [
+                "E_29_CD092D34A1331D02"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "E_29_CD092D34A1331D02 provides Crossref publication metadata for DOI 10.2139/ssrn.4996945, titled 'Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case.' This supports the Defense claim that the cited publication metadata exists. The claim is bounded to metadata existence and does not establish deployment or operational effectiveness.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA_004_DDOS_CONTEXT_NOT_DIRECT_NOI_DIRECTION",
+              "attack_claim_ids": [
+                "AF_CRITIC_001",
+                "AF_CRITIC_002",
+                "AF_CRITIC_003",
+                "AF_CRITIC_004",
+                "AF_CRITIC_005",
+                "AF_CRITIC_006"
+              ],
+              "defense_claim_ids": [
+                "DEF_DDOS_ATTACK_SIZE_TREND",
+                "DEF_DDOS_DNS_WATER_TORTURE_PATTERN",
+                "DEF_MANDIANT_THREAT_GROUP_GOALS",
+                "DEF_MANDIANT_HACKTIVISM_DDOS",
+                "DEF_XFORCE_HACKTIVISM_DDOS_READINESS",
+                "DEF_HTTP2_RAPID_RESET_EXPLOIT"
+              ],
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB",
+                "E_03_06E6ABC42DA3AC77",
+                "E_03_F13F996D181217BA",
+                "E_04_892BBCAA3CE5CC92",
+                "E_08_3453329306E149CB"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "The surfaced DDoS-related records support the factual claims made by both critics: E_02 reports growth in DDoS attack-size percentiles and DNS Water Torture context; E_03 reports Mandiant threat-group goal percentages and hacktivism/DDoS-related claims; E_04 reports Israel-Hamas-related hacktivism and DDoS readiness recommendations; E_08 records CVE-2023-44487 as a KEV-listed HTTP/2 Rapid Reset DDoS exploitation record. However, none of these surfaced records directly reports a temporal increase or decrease in DDoS incident count or incident frequency, which is the threat NoI directional axis. Therefore the factual context claims are grounded, and the Attack framing that these records do not by themselves establish a decisive NoI directional threat trajectory is also grounded within the surfaced boundary.",
+              "required_revision": null
+            }
+          ],
+          "case_id": "main__ddos__nlp_llm",
+          "claim_matches": [],
+          "evidence_conflicts": [],
+          "evidence_gaps": [],
+          "next_round_focus": [],
+          "overall_rationale": "Both critics converged on the surfaced evidence: the Crossref record directly supports the bounded increasing PMT NoP publication-activity trajectory, while the DDoS threat records support relevant operational context but do not directly establish a temporal DDoS incident-count/frequency direction. No unresolved challenge, revision, or materially competing interpretation remains that an additional bounded round would clarify.",
+          "round_action": "STOP",
+          "round_index": 1
+        },
+        "round_index": 1
+      }
+    ],
+    "stance_changes": {
+      "attack_feasibility": 0,
+      "defense_robustness": 0
+    },
+    "unresolved_claims": []
+  },
+  "execution_order_version": "attack-defense-mediator-post-attack-defense-v1",
+  "followup_rule_version": "mediator-adjudication-routes-round2-v1",
+  "forecast_data_sha256": "70e1c1bdfed94b2a8e4e5004e2b7ef32f974370f0f52bb7903984153b536e8ca",
+  "input_fingerprint": "67f4f6f63116ad9374e8f0143b33639c2dc0417fa438562f066014c5df5776a2",
+  "max_rounds": 2,
+  "output_schema_hashes": {
+    "critic_debate_turn_sha256": "cfeff667e1e2404b1a65de1d5b854c2436a3ae52f6f67010474638a813f12760",
+    "mediator_summary_sha256": "ccc54c2be82dfc86a61d35c60a4fed7acc93854fa8339520828a291e07b4d550",
+    "stage2_result_sha256": "67173d52fa6bde8dd367e131809d34a218d209e2e778771ec0c05981260b9a80"
+  },
+  "prompt_hashes": {
+    "debate_appendix_sha256": "bed650d112e9246cb612f05735d8f1bcd3b1e0cac81452dfefaa18841063347f",
+    "debate_user_prompt_sha256": "0f71384c4d2663f44231aac78961d15ec66aee761fa0f15f6bba7e49a05aa168",
+    "mediator_system_prompt_sha256": "9a8540efcc67868e45e2288c8293853f4714c47fcc2e9da729f21366b2c4f7b2",
+    "mediator_user_prompt_sha256": "a79719c372de805daa710f4be29681f4115cf4e9edf4bf927f2ee4d7b4ec91cd",
+    "post_appendix_sha256": "dbafcf3212623902892def956e19af67053f33fd2f258bcb348d91df777a0a7b",
+    "post_user_prompt_sha256": "64b2a02b322884c7dd8700bfa6aa5d5725f9ae06459207eb221d9dcc757d7673",
+    "stage2_attack_role_context_sha256": "728c94692c122e34eba32fad0dfa9f8a63a52c667d412b3ce44d05542f8c94e1",
+    "stage2_defense_role_context_sha256": "7a4501539002af93df15a454fbba90082cc0e234febf3306db4dde8c464b4a3b"
+  },
+  "prompt_visibility_rule_version": "mediator-round2-post-surfaced-evidence-view-v2",
+  "round2_evidence_rule_version": "round2-surfaced-evidence-only-v1",
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 43,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage2-artifact-v9",
+  "semantic_validation_version": "stage2-semantic-validation-v9",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "20388218760c7150b87de2501091410506399dee6243bacdf00193d9d8afd42d",
+  "stage1_artifact_sha256": "30d972552d3666a7d99424030195deef390db2504913fe5c771f2dc0745a33f1",
+  "stage1_input_fingerprint": "91cd2f3d525e90cf5416593c7657c57d00dd4f593809018ec13a3484613205a3",
+  "stage2_output_sha256": "3cb2d7c5241270269bb4fbd9e392ddde63452847a08d7fb724f8fcbfd85cb28e"
+}

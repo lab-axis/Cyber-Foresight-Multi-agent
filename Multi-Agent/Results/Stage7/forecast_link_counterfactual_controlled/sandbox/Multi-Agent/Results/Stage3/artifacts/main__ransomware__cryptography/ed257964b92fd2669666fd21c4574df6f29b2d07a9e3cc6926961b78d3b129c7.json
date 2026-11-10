@@ -1,0 +1,451 @@
+{
+  "artifact_sha256": "34314673d6a92a888951c029794c10da4c30caf26f327db46252bc23ee251085",
+  "candidate_selection_rule": "case-forecast-pmt-only-v1",
+  "case_id": "main__ransomware__cryptography",
+  "created_at": "2026-11-07T19:22:41.029917+00:00",
+  "decision_bundle": {
+    "candidate_selection_rule": "case-forecast-pmt-only-v1",
+    "case_id": "main__ransomware__cryptography",
+    "decision_objects": [
+      {
+        "candidate_action": {
+          "action_id": "PMT_CRYPTOGRAPHY",
+          "action_name": "CRYPTOGRAPHY",
+          "source": "B_MTGNN_CASE_PMT",
+          "source_evidence_ids": [
+            "E_15_0A98378FC609EF7E",
+            "E_16_E7BB108A85B71262",
+            "E_19_4E69D255F61736DB",
+            "E_26_A710FE8084614182",
+            "E_29_185B62FFF51926EC",
+            "E_29_3C1B7B4F9532A5F2",
+            "E_29_7C01F6CA0D982DFF",
+            "E_33_CDE0F421E4D797ED"
+          ]
+        },
+        "candidate_action_source": "B_MTGNN_CASE_PMT",
+        "candidate_selection_rule": "case-forecast-pmt-only-v1",
+        "case_id": "main__ransomware__cryptography",
+        "contradictory_evidence_ids": [],
+        "decision_object_id": "decision__main__ransomware__cryptography__pmt_cryptography__59feaddf389047af",
+        "deployment_context": {
+          "budget_context": null,
+          "infrastructure_context": null,
+          "organization_type": null,
+          "region": null
+        },
+        "evaluation_evidence_ids": [
+          "E_02_066AFE8300EDCEBB",
+          "E_03_0BAA7B22596028F4",
+          "E_04_270A1E7C47ACC4FF",
+          "E_08_510579F0D776F3BE",
+          "E_15_0A98378FC609EF7E",
+          "E_16_E7BB108A85B71262",
+          "E_19_4E69D255F61736DB",
+          "E_23_AC2A498B747552DF",
+          "E_24_223CAC714FDE427B",
+          "E_25_95744996E05BA6E9",
+          "E_26_A710FE8084614182",
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF",
+          "E_31_6C5988FD2D0D8867",
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "forecast_interpretation": {
+          "gap_by_year": {
+            "2025": 0.663427057030276,
+            "2026": 1.1973917295513952,
+            "2027": 1.1500576113234848
+          },
+          "gap_direction": "threat_minus_pmt_increasing",
+          "gap_direction_semantics": "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, not absolute-distance widening/narrowing",
+          "gap_semantics": "yearly_mean_zscore_node_state_gap",
+          "gap_slope_per_year": 0.2433152771466044,
+          "pmt_state": {
+            "confidence_95_half_width_z_mean": 0.13487590619322182,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_PMT_CRYPTOGRAPHY_2025-01",
+              "YF_PMT_CRYPTOGRAPHY_2025-02",
+              "YF_PMT_CRYPTOGRAPHY_2025-03",
+              "YF_PMT_CRYPTOGRAPHY_2025-04",
+              "YF_PMT_CRYPTOGRAPHY_2025-05",
+              "YF_PMT_CRYPTOGRAPHY_2025-06",
+              "YF_PMT_CRYPTOGRAPHY_2025-07",
+              "YF_PMT_CRYPTOGRAPHY_2025-08",
+              "YF_PMT_CRYPTOGRAPHY_2025-09",
+              "YF_PMT_CRYPTOGRAPHY_2025-10",
+              "YF_PMT_CRYPTOGRAPHY_2025-11",
+              "YF_PMT_CRYPTOGRAPHY_2025-12",
+              "YF_PMT_CRYPTOGRAPHY_2026-01",
+              "YF_PMT_CRYPTOGRAPHY_2026-02",
+              "YF_PMT_CRYPTOGRAPHY_2026-03",
+              "YF_PMT_CRYPTOGRAPHY_2026-04",
+              "YF_PMT_CRYPTOGRAPHY_2026-05",
+              "YF_PMT_CRYPTOGRAPHY_2026-06",
+              "YF_PMT_CRYPTOGRAPHY_2026-07",
+              "YF_PMT_CRYPTOGRAPHY_2026-08",
+              "YF_PMT_CRYPTOGRAPHY_2026-09",
+              "YF_PMT_CRYPTOGRAPHY_2026-10",
+              "YF_PMT_CRYPTOGRAPHY_2026-11",
+              "YF_PMT_CRYPTOGRAPHY_2026-12",
+              "YF_PMT_CRYPTOGRAPHY_2027-01",
+              "YF_PMT_CRYPTOGRAPHY_2027-02",
+              "YF_PMT_CRYPTOGRAPHY_2027-03",
+              "YF_PMT_CRYPTOGRAPHY_2027-04",
+              "YF_PMT_CRYPTOGRAPHY_2027-05",
+              "YF_PMT_CRYPTOGRAPHY_2027-06",
+              "YF_PMT_CRYPTOGRAPHY_2027-07",
+              "YF_PMT_CRYPTOGRAPHY_2027-08",
+              "YF_PMT_CRYPTOGRAPHY_2027-09",
+              "YF_PMT_CRYPTOGRAPHY_2027-10",
+              "YF_PMT_CRYPTOGRAPHY_2027-11",
+              "YF_PMT_CRYPTOGRAPHY_2027-12"
+            ],
+            "forecast_mean_z": -0.1190687827003756,
+            "state_modality": "NoP"
+          },
+          "threat_state": {
+            "confidence_95_half_width_z_mean": 0.10195786341611426,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_THREAT_RANSOMWARE_2025-01",
+              "YF_THREAT_RANSOMWARE_2025-02",
+              "YF_THREAT_RANSOMWARE_2025-03",
+              "YF_THREAT_RANSOMWARE_2025-04",
+              "YF_THREAT_RANSOMWARE_2025-05",
+              "YF_THREAT_RANSOMWARE_2025-06",
+              "YF_THREAT_RANSOMWARE_2025-07",
+              "YF_THREAT_RANSOMWARE_2025-08",
+              "YF_THREAT_RANSOMWARE_2025-09",
+              "YF_THREAT_RANSOMWARE_2025-10",
+              "YF_THREAT_RANSOMWARE_2025-11",
+              "YF_THREAT_RANSOMWARE_2025-12",
+              "YF_THREAT_RANSOMWARE_2026-01",
+              "YF_THREAT_RANSOMWARE_2026-02",
+              "YF_THREAT_RANSOMWARE_2026-03",
+              "YF_THREAT_RANSOMWARE_2026-04",
+              "YF_THREAT_RANSOMWARE_2026-05",
+              "YF_THREAT_RANSOMWARE_2026-06",
+              "YF_THREAT_RANSOMWARE_2026-07",
+              "YF_THREAT_RANSOMWARE_2026-08",
+              "YF_THREAT_RANSOMWARE_2026-09",
+              "YF_THREAT_RANSOMWARE_2026-10",
+              "YF_THREAT_RANSOMWARE_2026-11",
+              "YF_THREAT_RANSOMWARE_2026-12",
+              "YF_THREAT_RANSOMWARE_2027-01",
+              "YF_THREAT_RANSOMWARE_2027-02",
+              "YF_THREAT_RANSOMWARE_2027-03",
+              "YF_THREAT_RANSOMWARE_2027-04",
+              "YF_THREAT_RANSOMWARE_2027-05",
+              "YF_THREAT_RANSOMWARE_2027-06",
+              "YF_THREAT_RANSOMWARE_2027-07",
+              "YF_THREAT_RANSOMWARE_2027-08",
+              "YF_THREAT_RANSOMWARE_2027-09",
+              "YF_THREAT_RANSOMWARE_2027-10",
+              "YF_THREAT_RANSOMWARE_2027-11",
+              "YF_THREAT_RANSOMWARE_2027-12"
+            ],
+            "forecast_mean_z": 0.8845566832680096,
+            "state_modality": "NoI"
+          }
+        },
+        "intended_goal": "Evaluate the feasibility and decision relevance of CRYPTOGRAPHY for the frozen Ransomware forecast pair without changing the action set after observing downstream lens outputs.",
+        "known_constraints": [
+          "Candidate action is frozen before downstream lens evaluation under case-forecast-pmt-only-v1.",
+          "Stage 2 adjudications are reasoning provenance and are not promoted to external evidence.",
+          "Organization/deployment-specific feasibility must remain conditional where deployment context is unknown."
+        ],
+        "pmt_or_mitigation": "CRYPTOGRAPHY",
+        "pmt_or_mitigation_id": "PMT_CRYPTOGRAPHY",
+        "predictive_uncertainty": {
+          "legacy_variance_warning": "legacy inverse scaling uses scale rather than scale^2; retained as raw provenance only",
+          "pmt_confidence_95_half_width_z_mean": 0.13487590619322182,
+          "status": "PAPER_124_NODE_Y",
+          "threat_confidence_95_half_width_z_mean": 0.10195786341611426
+        },
+        "stage2_critique_summary": {
+          "attack_post_stance": 0,
+          "attack_post_unresolved_questions": [
+            "What 2024-12 exploitation or incident signals beyond the 2022 CISA KEV record and the 2023 annual-report chunks (IBM X-Force, Mandiant M-Trends, Verizon DBIR) bear on the 2025-2027 THREAT_RANSOMWARE NoI trajectory.",
+            "What direct evidence supports the forecasted GAP_DIRECTION (threat NoI state minus PMT NoP state increasing, with gap values 0.663 in 2025, 1.197 in 2026, and 1.150 in 2027), rather than only separate evidence about ransomware operational context on the Threat side and PMT publication-activity on the PMT side.",
+            "What is the recent global or case-scope ransomware incident count/frequency (NoI) direction as of 2024-12, because the Stage 0 historical input lists threat NoI recent_direction as decreasing while the forecast direction is increasing, and no supplied evidence record directly measures an admissible recent NoI change for the unscoped THREAT_RANSOMWARE threat."
+          ],
+          "defense_post_stance": 1,
+          "defense_post_unresolved_questions": [
+            "Does the increasing Crossref publication trend for cryptography/security correspond to actual deployment, implementation, or operational use of cryptographic controls, or primarily to research and academic activity?",
+            "How should the frozen historical PMT NoP recent_direction decreasing be reconciled with the E_33_CDE0F421E4D797ED cutoff-constrained increasing publication-activity trend for PMT_CRYPTOGRAPHY?",
+            "Is there direct evidence linking cryptographic control implementation to reduced ransomware impact, improved recovery, or measurable mitigation effectiveness?",
+            "Is there direct evidence quantifying the relative movement between THREAT_RANSOMWARE NoI and PMT_CRYPTOGRAPHY NoP needed to support the forecasted threat-minus-PMT GAP_DIRECTION?"
+          ],
+          "final_mediator_adjudications": [
+            {
+              "adjudication_id": "ADJ-R2-01",
+              "attack_claim_ids": [
+                "C1"
+              ],
+              "defense_claim_ids": [
+                "C6"
+              ],
+              "evidence_ids": [
+                "E_31_6C5988FD2D0D8867"
+              ],
+              "outcome": "REVISE_BOTH",
+              "rationale": "FOCUS-R2-01 confirmed. Both sides have now explicitly converged on the correct interpretation of E_31_6C5988FD2D0D8867. The verbatim recital text states 'Member States should develop a policy addressing the rise of ransomware attacks as part of their national cybersecurity strategy.' Attack C1's Stage 1 forecast_relation of SUPPORTS_FORECAST is not defensible: E_31's source contract lists cross_jurisdiction_generalization in prohibited_claim_types, the record is EU-scoped primary law, and the 'should' modality is a regulatory expectation rather than a measured temporal change in ransomware incident count/frequency for the unscoped THREAT_RANSOMWARE NoI modality. Attack's own Stage 1 stance_basis concedes the record was 'reclassified as contextual legal/regulatory background,' contradicting the SUPPORTS_FORECAST label. Defense C6's Stage 1 statement uses 'require,' which overstates the exact legal modality; the verbatim text says 'should.' Defense's Round 2 response explicitly accepts the 'should' correction and confirms NEUTRAL_CONTEXT. Both corrections are required for the final post-assessment.",
+              "required_revision": "Attack C1: change forecast_relation from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. E_31_6C5988FD2D0D8867 is EU-scoped primary law whose source contract prohibits cross_jurisdiction_generalization; the recital's 'should develop a policy' wording is a regulatory-scope expectation, not a measured directional change in ransomware incident count/frequency for the unscoped THREAT_RANSOMWARE NoI forecast. Retain the factual statement but classify as EU-scoped contextual regulatory background only. Defense C6: replace 'require' with 'should' to match the exact NIS2 recital wording ('Member States should develop a policy addressing the rise of ransomware attacks as part of their national cybersecurity strategy'). Retain NEUTRAL_CONTEXT classification."
+            },
+            {
+              "adjudication_id": "ADJ-R2-02",
+              "attack_claim_ids": [
+                "C2"
+              ],
+              "defense_claim_ids": [
+                "C9"
+              ],
+              "evidence_ids": [
+                "E_08_510579F0D776F3BE"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "FOCUS-R2-02 confirmed. Both sides have explicitly converged. E_08_510579F0D776F3BE is a CISA KEV record with allowed_claim_types strictly [confirmed_exploitation] and prohibited_claim_types [prevalence_magnitude, vulnerability_severity]. The record documents that CVE-2022-27593 in QNAP Photo Station was observed being utilized in a Deadbolt ransomware campaign, dated 2022-09-08. It is a single point signal confirming one vulnerability exploitation in one campaign. It does not report a temporal change in ransomware incident count or frequency, does not measure NoI trajectory for 2025-2027, and does not support the forecasted GAP_DIRECTION. Attack's own Stage 1 stance_basis states 'No supplied record satisfies the strict requirements for an admissible THREAT_TRAJECTORY claim on the Threat NoI modality,' which is inconsistent with labeling C2 as SUPPORTS_FORECAST. Attack's Round 2 AGREE with Defense C9 explicitly states 'any SUPPORTS_FORECAST use of this record is not admissible.' Defense's Round 2 REVISE confirms NEUTRAL_CONTEXT is the correct label. The factual statement is accurate; only the forecast_relation needs correction.",
+              "required_revision": "Attack C2: change forecast_relation from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. Retain the factual statement that CVE-2022-27593 in QNAP Photo Station was observed being utilized in a Deadbolt ransomware campaign, but classify it as a confirmed-exploitation point signal from 2022-09-08. E_08's source contract permits only confirmed_exploitation and prohibits prevalence_magnitude and vulnerability_severity claims; a single 2022 point signal cannot support a 2025-2027 THREAT_RANSOMWARE NoI directional trajectory or GAP_DIRECTION."
+            },
+            {
+              "adjudication_id": "ADJ-R2-03",
+              "attack_claim_ids": [
+                "C5"
+              ],
+              "defense_claim_ids": [
+                "C1"
+              ],
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both claims reference E_33_CDE0F421E4D797ED (Crossref cutoff-constrained PMT publication trend). Both correctly report annual counts 210 (2021), 254 (2022), 272 (2023), 330 (2024), OLS slope +37.8 works/year, and the deposit-cutoff restriction to records first deposited on or before 2024-12-31. Both assign SUPPORTS_FORECAST on PMT_TRAJECTORY for the NoP modality. Both acknowledge the explicit disclaimer that the trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Both critics AGREE in Round 2. This is the only admissible directional SUPPORTS_FORECAST evidence in the surfaced set, and both sides converge on its proper scope as a publication-activity validation axis only.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-04",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "C2"
+              ],
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "Defense C2 references E_33_CDE0F421E4D797ED and correctly notes the explicit disclaimer that the publication trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. The E_33 record verbatim states: 'It does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.' NEUTRAL_CONTEXT on OPERATIONAL_INTERPRETATION is appropriate as a boundary-setting claim. Attack AGREEs in Round 2, confirming the boundary-setting characterization is accurate and should limit any use of the publication trend. No defect identified.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-05",
+              "attack_claim_ids": [
+                "C3"
+              ],
+              "defense_claim_ids": [
+                "C7"
+              ],
+              "evidence_ids": [
+                "E_04_270A1E7C47ACC4FF"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both claims reference E_04_270A1E7C47ACC4FF (IBM X-Force Threat Intelligence Index 2023). Both correctly state the 2022 figures: ransomware at 17% of remediated incidents (top action-on-objective since at least 2020), extortion at 27% as the most common attack impact, and phishing as the leading initial access vector at 41%. Both assign NEUTRAL_CONTEXT and OPERATIONAL_INTERPRETATION. Neither asserts a NoI directional trajectory. Both critics AGREE in Round 2. No defect identified.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-06",
+              "attack_claim_ids": [
+                "C4"
+              ],
+              "defense_claim_ids": [
+                "C8"
+              ],
+              "evidence_ids": [
+                "E_03_0BAA7B22596028F4"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both claims reference E_03_0BAA7B22596028F4 (Mandiant M-Trends 2023). Both correctly report the 2022 global median dwell time of 16 days (down from 21 in M-Trends 2022) and ransomware-involved intrusion median dwell time of 9 days (versus 5 days in M-Trends 2022). Both correctly note that Mandiant credits ransomware attacks as a driving factor in reduced dwell time. Both assign NEUTRAL_CONTEXT. Both critics AGREE in Round 2. No defect identified.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-07",
+              "attack_claim_ids": [
+                "C6"
+              ],
+              "defense_claim_ids": [],
+              "evidence_ids": [
+                "E_23_AC2A498B747552DF"
+              ],
+              "outcome": "ACCEPT_ATTACK",
+              "rationale": "One-sided. Attack C6 references E_23_AC2A498B747552DF (CISA CPG director's letter). The claim correctly states that CISA CPG identifies ransomware among organizational cyber threats and frames prioritized cybersecurity practices for reducing cyber risk. The E_23 content verbatim states 'as our nation has faced unprecedented cyber threats from ransomware to nation-state espionage' and describes the CPGs as 'aimed at addressing some of the most common and impactful cyber risks.' NEUTRAL_CONTEXT is appropriate; no directional or effectiveness claim is made. Defense AGREEs in Round 2. No defect identified.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-08",
+              "attack_claim_ids": [
+                "C7"
+              ],
+              "defense_claim_ids": [],
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "outcome": "ACCEPT_ATTACK",
+              "rationale": "One-sided. Attack C7 references E_02_066AFE8300EDCEBB (DBIR 2023 chunk). The claim accurately states the chunk discusses DDoS and DNS attacks and includes the verbatim observation 'it is a respite to not have to write about Ransomware for a couple of pages.' NEUTRAL_CONTEXT is appropriate; the statement is a qualitative editorial observation, not a measured incident count or frequency. Defense AGREEs in Round 2. No defect identified.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-09",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "C3"
+              ],
+              "evidence_ids": [
+                "E_26_A710FE8084614182"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "One-sided. Defense C3 references E_26_A710FE8084614182 (NIST SP 800-53A Rev.5). The claim correctly identifies assessment objectives for SC-12(06) cryptographic key establishment and management and SC-13 cryptographic protection, including the withdrawn SC-13(01) FIPS-validated cryptography entry. NEUTRAL_CONTEXT is appropriate; no deployment or effectiveness claim is made. Attack AGREEs in Round 2. No defect identified.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-10",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "C4"
+              ],
+              "evidence_ids": [
+                "E_16_E7BB108A85B71262"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "One-sided. Defense C4 references E_16_E7BB108A85B71262 (NIST AI 100-4). The claim correctly describes cryptographic hashes, perceptual hashing, and digital signatures as technical approaches for linking content to metadata and authenticating metadata. NEUTRAL_CONTEXT is appropriate; no ransomware-mitigation effectiveness is claimed. Attack AGREEs in Round 2. No defect identified.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-11",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "C5"
+              ],
+              "evidence_ids": [
+                "E_15_0A98378FC609EF7E"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "One-sided. Defense C5 references E_15_0A98378FC609EF7E (NIST AI 100-2 AML Taxonomy). The claim accurately characterizes the contrast between AML mitigations (empirical, limited, with information-theoretic impossibility results) and cryptography. The E_15 content verbatim states 'Unlike cryptography, there are no information-theoretic security proofs for the widely used machine learning algorithms' and notes 'many of the advances in developing mitigations against different classes of attacks tend to be empirical and limited in nature.' NEUTRAL_CONTEXT is appropriate; this is AML taxonomy context, not direct PMT deployment or ransomware-mitigation effectiveness evidence. Attack AGREEs in Round 2. No defect identified.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-12",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "C10"
+              ],
+              "evidence_ids": [
+                "E_29_185B62FFF51926EC",
+                "E_29_3C1B7B4F9532A5F2",
+                "E_29_7C01F6CA0D982DFF"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "One-sided. Defense C10 references E_29_185B62FFF51926EC, E_29_3C1B7B4F9532A5F2, and E_29_7C01F6CA0D982DFF (Crossref Cryptography journal metadata records). The claim correctly states these records show published Cryptography journal reviewer-acknowledgment items with DOIs dated 2018, 2021, and 2023, establishing continued academic publication metadata without establishing a directional trajectory. The E_29 records' allowed_claim_types are [doi_verification, publisher_metadata, publication_metadata] and prohibited_claim_types are [deployment_maturity, operational_effectiveness]. NEUTRAL_CONTEXT is appropriate. Attack AGREEs in Round 2. No defect identified.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-13",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "C11"
+              ],
+              "evidence_ids": [
+                "E_19_4E69D255F61736DB"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "One-sided. Defense C11 references E_19_4E69D255F61736DB (NISTIR 8259 IoT Device Cybersecurity). The claim correctly notes the reference to NIST SP 800-56A Rev. 3 for pair-wise key-establishment schemes using discrete logarithm cryptography. The E_19 content verbatim includes 'Recommendation for Pair-Wise Key-Establishment Schemes Using Discrete Logarithm Cryptography. (National Institute of Standards and Technology, Gaithersburg, MD), NIST Special Publication (SP) 800-56A, Rev. 3.' NEUTRAL_CONTEXT is appropriate; no deployment or ransomware-mitigation effectiveness is claimed. Attack AGREEs in Round 2. No defect identified.",
+              "required_revision": null
+            }
+          ],
+          "matched_resolved_claim_ids": [],
+          "matched_unresolved_claim_ids": [],
+          "required_revisions": [
+            {
+              "adjudication_id": "ADJ-R2-01",
+              "attack_claim_ids": [
+                "C1"
+              ],
+              "defense_claim_ids": [
+                "C6"
+              ],
+              "outcome": "REVISE_BOTH",
+              "required_revision": "Attack C1: change forecast_relation from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. E_31_6C5988FD2D0D8867 is EU-scoped primary law whose source contract prohibits cross_jurisdiction_generalization; the recital's 'should develop a policy' wording is a regulatory-scope expectation, not a measured directional change in ransomware incident count/frequency for the unscoped THREAT_RANSOMWARE NoI forecast. Retain the factual statement but classify as EU-scoped contextual regulatory background only. Defense C6: replace 'require' with 'should' to match the exact NIS2 recital wording ('Member States should develop a policy addressing the rise of ransomware attacks as part of their national cybersecurity strategy'). Retain NEUTRAL_CONTEXT classification."
+            },
+            {
+              "adjudication_id": "ADJ-R2-02",
+              "attack_claim_ids": [
+                "C2"
+              ],
+              "defense_claim_ids": [
+                "C9"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Attack C2: change forecast_relation from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. Retain the factual statement that CVE-2022-27593 in QNAP Photo Station was observed being utilized in a Deadbolt ransomware campaign, but classify it as a confirmed-exploitation point signal from 2022-09-08. E_08's source contract permits only confirmed_exploitation and prohibits prevalence_magnitude and vulnerability_severity claims; a single 2022 point signal cannot support a 2025-2027 THREAT_RANSOMWARE NoI directional trajectory or GAP_DIRECTION."
+            }
+          ]
+        },
+        "supporting_evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "threat": "Ransomware",
+        "threat_id": "THREAT_RANSOMWARE",
+        "timing_window": {
+          "end_year": 2027,
+          "start_year": 2025
+        },
+        "unknown_context_fields": [
+          "region",
+          "organization_type",
+          "infrastructure_context",
+          "budget_context"
+        ],
+        "unresolved_evidence_gaps": []
+      }
+    ],
+    "eligible_action_set": [
+      {
+        "action_id": "PMT_CRYPTOGRAPHY",
+        "action_name": "CRYPTOGRAPHY",
+        "source": "B_MTGNN_CASE_PMT",
+        "source_evidence_ids": [
+          "E_15_0A98378FC609EF7E",
+          "E_16_E7BB108A85B71262",
+          "E_19_4E69D255F61736DB",
+          "E_26_A710FE8084614182",
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF",
+          "E_33_CDE0F421E4D797ED"
+        ]
+      }
+    ],
+    "excluded_actions_and_reason": [
+      {
+        "action_id": "PMT_HTTPS",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      }
+    ]
+  },
+  "decision_bundle_schema_sha256": "bcd029d15adbfe35ae50ee75fc2ac8731f73baa4897e7265fac3b44b692c9003",
+  "input_fingerprint": "ed257964b92fd2669666fd21c4574df6f29b2d07a9e3cc6926961b78d3b129c7",
+  "schema_version": "stage3-artifact-v2",
+  "semantic_validation_version": "stage3-semantic-validation-v2",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "db2e665ae71d97282a4b48a4abd6396098c789528cfee3fecd69e225b52cf4af",
+  "stage2_artifact_sha256": "389edd1ee9b0adacc9de4e494d756afa1fae5322c426cf3b241acc52eff9a4b0",
+  "stage2_output_sha256": "6b7bdab97ea8e20f2ed0cfa69319436c4bda7ac3f835e0b23472a667ce51e6bb",
+  "stage3_context": {
+    "budget_context": null,
+    "infrastructure_context": null,
+    "organization_type": null,
+    "pmt": "CRYPTOGRAPHY",
+    "region": null,
+    "threat": "Ransomware"
+  },
+  "stage3_output_sha256": "f2cc73f2b956b10ecaf48c0f98f396a79f7734505fd0b256be7468e6219d98d3"
+}

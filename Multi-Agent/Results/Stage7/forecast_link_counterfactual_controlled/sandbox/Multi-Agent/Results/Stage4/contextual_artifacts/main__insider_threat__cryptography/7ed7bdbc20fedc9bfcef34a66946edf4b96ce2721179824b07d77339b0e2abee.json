@@ -1,0 +1,652 @@
+{
+  "artifact_sha256": "577b1626e8041dc2767e1dd3eb8d6cf52c087c1bfc3a5cd9aad5aeebaa7d02d2",
+  "case_id": "main__insider_threat__cryptography",
+  "constrained_output_schema_sha256": {
+    "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__eu__cis_ig2__05fe9afded549f15": {
+      "financial_adoption": "247b80ff565fd578dcf62ca0d2f2569db3145f7ab9d7e5c2213c2d69e32c284b",
+      "institutional_regional": "4ca2b7633a40849e4418c64b71b8e31058269067b3f73cec04715e387487e218",
+      "technical_feasibility": "5c798b24e6fc878448e18a8c2fcbe92946bcc35b38d9a179893168c21e0d0dac"
+    },
+    "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__kr__cis_ig2__ee050ecfe9c98898": {
+      "financial_adoption": "c15b38cd7058717c32a209a353805708e7a9c0fb3c29fc8c1f3f708c39214c94",
+      "institutional_regional": "44a3511355dc91cdd33efe424193be2bea503626f9f6ca9b215aead06de7f254",
+      "technical_feasibility": "a937174d48b18680a43a1ea1530bd721aa03a83636c3ac64a2242ee74d442992"
+    },
+    "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__us__cis_ig2__930513cc931a59fc": {
+      "financial_adoption": "e18c8cda5da9ab218a6261019f3fabc5919374fad857d165a43440801b54c6ae",
+      "institutional_regional": "303492f3043f3f003705531111933ac0ff683b2550b5da2c18f5e10eb120aba7",
+      "technical_feasibility": "635037e4dc24e8ff7feaf03e3b92376da7d7b6eecd549af63bdf9671585fb5f9"
+    }
+  },
+  "created_at": "2026-11-08T10:49:48.176171+00:00",
+  "decision_object_payload_sha256": {
+    "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__eu__cis_ig2__05fe9afded549f15": {
+      "financial_adoption": "beda903ff2ba3c0db399c4c3c84ba32f19bab59d528c3d3e19bec6a4588ae292",
+      "institutional_regional": "dd3a1aa64aa28124c1e1c4f1c850695372f9bb600f8ee41acdf8fa0608e85d96",
+      "technical_feasibility": "7afc2c964050d0b1bcd8efd8e238860c59238acf4364ded08760bfa32a936c16"
+    },
+    "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__kr__cis_ig2__ee050ecfe9c98898": {
+      "financial_adoption": "8b19cb574c21dc46956261eaf707dbb00469e1f936824130baa8df8ae6c83cb6",
+      "institutional_regional": "55a07e1ff2110457616e3d02e10563fc02ecb1194b94e4f49418027244a91244",
+      "technical_feasibility": "42c87e67b257df68123579677350ec5a86c3d6c35d83e09e77fc5fb19cc4e2d3"
+    },
+    "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__us__cis_ig2__930513cc931a59fc": {
+      "financial_adoption": "d0a5872c8f33c19e87bf1ced7adfbb342c1447454f0fd2511030194dd92bd808",
+      "institutional_regional": "872bc3bd57640efe2d0fba2e35a246353da820dcc71d219e410bb3f073cc83bb",
+      "technical_feasibility": "056ea5460a91105074c3927cbb7364758600119af421776b1e131cfaeab2d7e1"
+    }
+  },
+  "evaluation_bundle": {
+    "case_id": "main__insider_threat__cryptography",
+    "evaluations": [
+      {
+        "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__kr__cis_ig2__ee050ecfe9c98898",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FIN_CLM_001",
+              "evidence_ids": [
+                "DE_DE10_A086B3193CD6440B"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied TLS implementation guidance describes certificate-based client authentication as an option where strong cryptographic client authentication is required, including PIV authentication as a suitable option, indicating a recognized technical adoption pathway for cryptographic safeguards.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLM_002",
+              "evidence_ids": [
+                "DE_DE18_CDC975345637E009"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied IPSec guidance describes deployment options and states that transport mode has less overhead than tunnel mode because it does not add an additional per-packet tunnel header; it also states that data sensitivity should govern whether encryption is added. This provides a qualitative efficiency/scoping consideration for adoption.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLM_003",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CPG guidance requires properly configured and up-to-date SSL/TLS for data in transit when technically feasible, requires identifying and updating outdated or weak encryption to sufficiently strong algorithms, and requires considering post-quantum implications; for OT it states encryption is used when feasible to minimize latency and availability impact. These are documented implementation and operational adoption burdens.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLM_004",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4",
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "Under the frozen CIS IG2 reference-enterprise profile, the enterprise is described as managing and protecting IT infrastructure across multiple departments with differing risk profiles, and some IG2 safeguards address increased operational complexity and depend on enterprise-grade technology and specialized expertise to install and configure. This makes the CPG-described encryption configuration, update, feasibility, and latency/availability burdens deployment-relevant, though no budget or staffing quantities are established.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLM_005",
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref publication-trend record reports increasing cryptography publication counts over 2021-2024 but explicitly states it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness; it is treated as neutral context and does not by itself support or challenge financial/adoption feasibility.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific support conclusion would require supplied evidence of budget fit, resource capacity, implementation cost, existing cryptographic deployment maturity, and measurable efficiency or cost-saving benefit.",
+            "A deployment-specific challenge conclusion with quantified severity would require supplied evidence of actual implementation scope, staffing burden, migration duration, latency/availability impact in the relevant environment, and post-quantum transition effort or cost.",
+            "If exact financial quantities remain absent, the financial/adoption judgment should remain GENERAL and mixed or indeterminate rather than assigned a deployment-specific positive or negative stance."
+          ],
+          "constraints": [
+            "No exact budget, price, ROI, TCO, payback period, staffing count, procurement ceiling, vendor, product version, implementation timeline, or monetary cost value is asserted because no supplied record provides them.",
+            "The support evidence is qualitative technical enablement from standardized TLS/IPSec guidance; it does not establish financial benefit, cost avoidance, budget fit, or demonstrated adoption success.",
+            "The challenge evidence is a documented operational and implementation burden; it does not prove that adoption is infeasible, nor does it quantify the burden in financial or staffing terms.",
+            "Jurisdiction is masked and no jurisdiction-specific financial or regulatory cost evidence is supplied; therefore no jurisdiction-specific financial feasibility conclusion is drawn."
+          ],
+          "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__kr__cis_ig2__ee050ecfe9c98898",
+          "evidence_gaps": [
+            "No supplied record provides exact deployment budget, cost, price, ROI, TCO, payback period, procurement ceiling, or affordability evidence for CRYPTOGRAPHY.",
+            "No supplied record provides deployment-specific current-state evidence such as existing cryptographic deployment maturity, number of weak or outdated encryption components, migration scope, or implementation duration.",
+            "No supplied record provides staffing, vendor, licensing, hardware, operational overhead, or training costs associated with configuring, updating, or maintaining SSL/TLS or IPSec.",
+            "No supplied record quantifies realized efficiency savings, latency impact, availability impact, or resource savings from the described transport-mode overhead difference or data-sensitivity-based scoping.",
+            "No supplied record provides jurisdiction-specific regulatory cost, compliance cost, or legal obligation evidence under the masked jurisdiction."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied records contain grounded adoption enablers and grounded adoption burdens. Support is limited to standardized technical pathways: TLS client-authentication guidance and IPSec deployment/configuration guidance, including a qualitative overhead difference between transport and tunnel modes and a data-sensitivity-based scoping consideration. Challenge is grounded in CPG guidance requiring properly configured and current SSL/TLS, identification and update of outdated or weak encryption, consideration of post-quantum implications, and feasibility constraints related to latency and availability in OT contexts. The frozen CIS IG2 reference-enterprise profile adds deployment-relevant operational-complexity and specialized-expertise context, but no supplied record provides budget, price, ROI, TCO, payback, staffing counts, procurement ceilings, implementation duration, vendor/product assumptions, or observed adoption cost savings. On balance, the evidence is mixed: adoption is technically enabled by standards and protocol guidance, but documented operational burden is not offset by supplied financial or measured efficiency-benefit evidence. Therefore the stance is 0, with partial sufficiency for a general mixed judgment and insufficient detail for a deployment-specific financial conclusion.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR_CLM_001",
+              "evidence_ids": [
+                "DE_DE08_031120C53EF050F3"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied decision-evidence provides GENERAL governance_enablement for CRYPTOGRAPHY by describing institutional key-management governance: DE_DE08_031120C53EF050F3 states that accountability/traceability involves identifying entities authorized to generate, access, destroy, or use keys, recording who or what performs key actions, employing access-control mechanisms, and auditing logs for security violations; it also states that accountability/traceability can be an effective tool to help prevent key compromises and reduce the impact of compromises when detected.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CLM_002",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied decision-evidence provides GENERAL governance_enablement for CRYPTOGRAPHY by describing an operational encryption performance pathway: E_23_534489D29C38B327 describes a recommended action for effective encryption, including use of properly configured and up-to-date SSL/TLS to protect data in transit when technically feasible, planning to identify use of outdated or weak encryption, updating such encryption to sufficiently strong algorithms, and considering managing implications of post-quantum cryptography.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CLM_003",
+              "evidence_ids": [
+                "DE_DE09_6719137897848A9E"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied decision-evidence provides a GENERAL compliance_constraint for CRYPTOGRAPHY: DE_DE09_6719137897848A9E states that two-key TDEA encryption is disallowed, three-key TDEA encryption is disallowed after 2023 unless specifically allowed, SKIPJACK encryption is disallowed, and AES-128, AES-192, and AES-256 encryption/decryption are acceptable. This creates an institutional and implementation constraint to manage cryptographic algorithm transition, avoid disallowed or deprecated primitives, and maintain acceptable algorithms.",
+              "status": "CHALLENGES_FEASIBILITY"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC institutional/regional direction would require exact supplied jurisdiction-specific regulatory_applicability evidence for the frozen region in addition to the available governance_enablement and compliance_constraint evidence.",
+            "Feasibility of CRYPTOGRAPHY would depend on implementing the key-management accountability/traceability and access-control mechanisms described in DE_DE08_031120C53EF050F3.",
+            "Feasibility of CRYPTOGRAPHY would depend on managing cryptographic algorithm transitions and avoiding disallowed or deprecated algorithms described in DE_DE09_6719137897848A9E.",
+            "If outdated or weak encryption is present, the performance-goal record in E_23_534489D29C38B327 requires planning to identify and update it and to consider post-quantum implications."
+          ],
+          "constraints": [
+            "Cryptographic governance would require key-management accountability/traceability, identification of authorized key entities, access-control mechanisms, and auditing of key access, as described in DE_DE08_031120C53EF050F3.",
+            "Cryptographic implementation would require managing algorithm transition and avoiding disallowed or deprecated cryptographic primitives while maintaining acceptable ones, as described in DE_DE09_6719137897848A9E.",
+            "The encryption performance pathway in E_23_534489D29C38B327 is conditional on technical feasibility and requires ongoing identification and update of outdated or weak encryption."
+          ],
+          "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__kr__cis_ig2__ee050ecfe9c98898",
+          "evidence_gaps": [
+            "No supplied evaluation_evidence record provides regulatory_applicability for the frozen masked jurisdiction; therefore jurisdiction-specific legal obligations, regional regulatory compatibility, data sovereignty, and cross-border constraints remain unresolved.",
+            "No supplied evaluation_evidence record establishes the actual governance maturity, implementation capacity, or operational effectiveness of the frozen reference-enterprise profile for key-management accountability/traceability or cryptographic algorithm transition.",
+            "No supplied evaluation_evidence record quantifies whether the described key-management and algorithm-transition requirements can be met within the frozen timing window under the frozen resource context.",
+            "No supplied evaluation_evidence record connects the described institutional cryptography governance controls to measured insider-threat mitigation effectiveness for the 2025-2027 forecast window.",
+            "No supplied evaluation_evidence record provides a DEPLOYMENT_SPECIFIC regulatory_applicability record required to support a jurisdiction-specific institutional/regional feasibility direction."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "Under the Institutional / Regional lens, the GENERAL institutional direction is mixed. The supplied decision-evidence provides grounded governance_enablement for cryptography: DE_DE08_031120C53EF050F3 describes key-management accountability/traceability, identification of authorized key entities, access-control mechanisms, and auditing of key access as mechanisms that can help prevent key compromises and reduce their impact. E_23_534489D29C38B327 provides a performance-goal pathway for using properly configured and up-to-date SSL/TLS where technically feasible, identifying outdated or weak encryption, updating to sufficiently strong algorithms, and considering post-quantum implications. These records support institutional pathways for accountability, auditability, and lifecycle governance of cryptographic controls. However, DE_DE09_6719137897848A9E provides a grounded compliance_constraint: certain cryptographic algorithms/modes are disallowed or deprecated, while acceptable alternatives such as AES are identified, creating a compliance and implementation burden to manage algorithm transitions and avoid disallowed primitives. The support direction is not sufficient to declare feasibility on balance because the supplied enablement evidence describes governance pathways and control expectations rather than actual deployment capacity, measured effectiveness, or jurisdictional applicability. The challenge direction is not sufficient to declare material infeasibility because the compliance burden does not establish a prohibitive institutional, regional, or legal barrier. Because the frozen region is masked and no regulatory_applicability evidence is supplied, no DEPLOYMENT_SPECIFIC institutional/regional direction can be grounded. The appropriate result is therefore stance=0 with PARTIAL sufficiency.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_CLM_001",
+              "evidence_ids": [
+                "AE04S_2674461DBC059388"
+              ],
+              "scope": "GENERAL",
+              "statement": "A specialized cryptographic protection approach for insider-threat data leakage is technically feasible in principle because the cited prototype incorporated context-based key generation and file marking and passed most of the reported NIST randomness tests, indicating that cryptography can be engineered for this threat model.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_002",
+              "evidence_ids": [
+                "AE04C_F084D028D8E2AE06"
+              ],
+              "scope": "GENERAL",
+              "statement": "Generic or conventional cryptographic deployment is not automatically technically sufficient for insider-threat data leakage because authorized insiders have stronger attack capabilities, including known- or chosen-plaintext style attack opportunities, and effectiveness depends on the cryptographic design and the insider-access model.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_003",
+              "evidence_ids": [
+                "E_23_534489D29C38B327",
+                "DE_DE18_EAA59A9B7CEAD276",
+                "DE_DE18_CDC975345637E009"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied deployment-maturity guidance describes implementation practices for encryption, TLS/SSL, and IPsec-related cryptographic communication controls, but it is supplementary implementation context rather than direct evidence of operational effectiveness against insider threat.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific feasibility conclusion would require evidence of the intended cryptographic design, key-management and access-control integration, and the insider-access assumptions under which the control is expected to operate.",
+            "If the frozen action is interpreted as generic encryption rather than a specialized insider-threat cryptographic construction, feasibility would require evidence that the selected conventional controls remain effective against insider known- or chosen-plaintext style attack opportunities (AE04C_F084D028D8E2AE06).",
+            "Assessment of scalability and maintainability within the 2025-2027 window would require evidence about implementation status, operational testing, or production deployment of the relevant cryptographic controls."
+          ],
+          "constraints": [
+            "Technical feasibility is conditional on selecting a cryptographic design that accounts for the insider-access model; the supplied limitation record states that conventional encryption should not be treated as automatically sufficient (AE04C_F084D028D8E2AE06).",
+            "The positive feasibility signal is limited to a specialized prototype for insider-threat data leakage and does not by itself establish enterprise-wide integration, scalability, maintainability, or operational effectiveness against real insider activity (AE04S_2674461DBC059388).",
+            "Deployment-maturity records provide implementation context for encryption, TLS/SSL, and IPsec-related controls but do not by themselves establish deployment maturity or operational effectiveness for insider-threat mitigation (E_23_534489D29C38B327, DE_DE18_EAA59A9B7CEAD276, DE_DE18_CDC975345637E009)."
+          ],
+          "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__kr__cis_ig2__ee050ecfe9c98898",
+          "evidence_gaps": [
+            "No supplied evidence reports measured operational effectiveness or deployment maturity of cryptographic controls against insider-threat activity in a production enterprise environment.",
+            "No supplied evidence connects the reported specialized cryptographic prototype to a complete implementation/integration pathway, scalability/maintainability evidence, or the exact insider-access model of the frozen deployment context.",
+            "No supplied evidence demonstrates whether the specific conventional cryptographic controls present in the frozen enterprise context would be sufficient under the insider-threat model, beyond the general warning that effectiveness is design-dependent."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The supplied action-specific records present materially mixed general technical-feasibility signals for CRYPTOGRAPHY against insider threat. One curated action finding supports feasibility by describing a specialized cryptographic protection approach for insider-threat data leakage, with a prototype that included context-based key generation and file marking and passed most reported NIST randomness tests. The other curated action finding challenges feasibility by stating that the insider-threat setting gives an authorized attacker stronger capabilities, including known- or chosen-plaintext style attack opportunities, and that conventional encryption is not automatically sufficient; effectiveness depends on cryptographic design and the insider-access model. Deployment-maturity records describe implementation practices for encryption, TLS/SSL, and IPsec-related controls but do not by themselves establish operational effectiveness or deployment maturity. Because the positive signal is prototype- and design-specific while the negative signal directly qualifies generic cryptography for insider threat, neither direction dominates. Deployment-specific compatibility cannot be concluded because the supplied records do not establish the exact target architecture, product/version, key-management implementation, identity/access controls, or insider-access model for the frozen enterprise context.",
+          "stance": 0
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__eu__cis_ig2__05fe9afded549f15",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FIN_CLM_001",
+              "evidence_ids": [
+                "DE_DE10_A086B3193CD6440B"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied TLS implementation guidance describes certificate-based client authentication as an option where strong cryptographic client authentication is required, including PIV authentication as a suitable option, indicating a recognized technical adoption pathway for cryptographic safeguards.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLM_002",
+              "evidence_ids": [
+                "DE_DE18_CDC975345637E009"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied IPSec guidance describes deployment options and states that transport mode has less overhead than tunnel mode because it does not add an additional per-packet tunnel header; it also states that data sensitivity should govern whether encryption is added. This provides a qualitative efficiency/scoping consideration for adoption.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLM_003",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CPG guidance requires properly configured and up-to-date SSL/TLS for data in transit when technically feasible, requires identifying and updating outdated or weak encryption to sufficiently strong algorithms, and requires considering post-quantum implications; for OT it states encryption is used when feasible to minimize latency and availability impact. These are documented implementation and operational adoption burdens.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLM_004",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4",
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "Under the frozen CIS IG2 reference-enterprise profile, the enterprise is described as managing and protecting IT infrastructure across multiple departments with differing risk profiles, and some IG2 safeguards address increased operational complexity and depend on enterprise-grade technology and specialized expertise to install and configure. This makes the CPG-described encryption configuration, update, feasibility, and latency/availability burdens deployment-relevant, though no budget or staffing quantities are established.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLM_005",
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref publication-trend record reports increasing cryptography publication counts over 2021-2024 but explicitly states it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness; it is treated as neutral context and does not by itself support or challenge financial/adoption feasibility.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific support conclusion would require supplied evidence of budget fit, resource capacity, implementation cost, existing cryptographic deployment maturity, and measurable efficiency or cost-saving benefit.",
+            "A deployment-specific challenge conclusion with quantified severity would require supplied evidence of actual implementation scope, staffing burden, migration duration, latency/availability impact in the relevant environment, and post-quantum transition effort or cost.",
+            "If exact financial quantities remain absent, the financial/adoption judgment should remain GENERAL and mixed or indeterminate rather than assigned a deployment-specific positive or negative stance."
+          ],
+          "constraints": [
+            "No exact budget, price, ROI, TCO, payback period, staffing count, procurement ceiling, vendor, product version, implementation timeline, or monetary cost value is asserted because no supplied record provides them.",
+            "The support evidence is qualitative technical enablement from standardized TLS/IPSec guidance; it does not establish financial benefit, cost avoidance, budget fit, or demonstrated adoption success.",
+            "The challenge evidence is a documented operational and implementation burden; it does not prove that adoption is infeasible, nor does it quantify the burden in financial or staffing terms.",
+            "Jurisdiction is masked and no jurisdiction-specific financial or regulatory cost evidence is supplied; therefore no jurisdiction-specific financial feasibility conclusion is drawn."
+          ],
+          "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__eu__cis_ig2__05fe9afded549f15",
+          "evidence_gaps": [
+            "No supplied record provides exact deployment budget, cost, price, ROI, TCO, payback period, procurement ceiling, or affordability evidence for CRYPTOGRAPHY.",
+            "No supplied record provides deployment-specific current-state evidence such as existing cryptographic deployment maturity, number of weak or outdated encryption components, migration scope, or implementation duration.",
+            "No supplied record provides staffing, vendor, licensing, hardware, operational overhead, or training costs associated with configuring, updating, or maintaining SSL/TLS or IPSec.",
+            "No supplied record quantifies realized efficiency savings, latency impact, availability impact, or resource savings from the described transport-mode overhead difference or data-sensitivity-based scoping.",
+            "No supplied record provides jurisdiction-specific regulatory cost, compliance cost, or legal obligation evidence under the masked jurisdiction."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied records contain grounded adoption enablers and grounded adoption burdens. Support is limited to standardized technical pathways: TLS client-authentication guidance and IPSec deployment/configuration guidance, including a qualitative overhead difference between transport and tunnel modes and a data-sensitivity-based scoping consideration. Challenge is grounded in CPG guidance requiring properly configured and current SSL/TLS, identification and update of outdated or weak encryption, consideration of post-quantum implications, and feasibility constraints related to latency and availability in OT contexts. The frozen CIS IG2 reference-enterprise profile adds deployment-relevant operational-complexity and specialized-expertise context, but no supplied record provides budget, price, ROI, TCO, payback, staffing counts, procurement ceilings, implementation duration, vendor/product assumptions, or observed adoption cost savings. On balance, the evidence is mixed: adoption is technically enabled by standards and protocol guidance, but documented operational burden is not offset by supplied financial or measured efficiency-benefit evidence. Therefore the stance is 0, with partial sufficiency for a general mixed judgment and insufficient detail for a deployment-specific financial conclusion.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR_CLM_001",
+              "evidence_ids": [
+                "DE_DE08_031120C53EF050F3",
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied governance_enablement records provide institutional pathways for cryptography by describing accountability and traceability for key generation, access, use, and destruction, including recording key actions and auditing logs, and by recommending effective encryption, properly configured TLS/SSL, and management of outdated or weak encryption.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CLM_002",
+              "evidence_ids": [
+                "DE_DE09_6719137897848A9E"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied compliance_constraint record challenges the institutional implementation burden by imposing algorithm-transition restrictions: certain legacy encryption algorithms are disallowed or restricted to legacy decryption, limiting their use for new encryption unless specifically allowed by other NIST guidance.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CLM_003",
+              "evidence_ids": [
+                "E_31_A0893427DD4F5B04",
+                "E_31_C1CFA326F0420DCA",
+                "E_31_6BBE82F2BAC198B3"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The supplied EU primary-law records reference encryption in GDPR security-of-processing measures, NIS2 procurement cybersecurity requirements, and privacy-preserving measures for special-category data, but they do not by themselves establish a positive or negative feasibility direction or entity-specific legal applicability to the CIS IG2 reference enterprise.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "If the deployment processes personal data within the scope of the supplied GDPR chunk, the institution must demonstrate appropriate technical and organisational security measures, including consideration of encryption and a process for regularly testing, assessing, and evaluating the effectiveness of those measures.",
+            "For a stronger EU-specific feasibility conclusion, supplied evidence must establish the organization's EU regulatory role or sectoral applicability in addition to the EU primary-law records.",
+            "To resolve the algorithm-compliance challenge, the deployment must identify whether any current cryptographic use involves disallowed or legacy-only algorithms and determine whether migration or a specifically allowed exception is required.",
+            "To operationalize the institutional enablement claim, the deployment must define key-management accountability/traceability roles, key-access recording, and audit processes."
+          ],
+          "constraints": [
+            "Cryptographic deployment should support identification of authorized key entities, recording of key actions, and auditing of key-access logs to maintain accountability and traceability.",
+            "Implementation must respect the algorithm-transition constraint that disallowed or legacy-only encryption algorithms cannot be used for new encryption unless specifically allowed by other NIST guidance.",
+            "The EU primary-law records show encryption is within the regulatory context, but they do not establish that the CIS IG2 reference enterprise has a specific GDPR or NIS2 legal role.",
+            "No numeric budget, staffing count, vendor, product version, or exact implementation timeline is established by the supplied evidence."
+          ],
+          "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__eu__cis_ig2__05fe9afded549f15",
+          "evidence_gaps": [
+            "No supplied evidence establishes whether the CIS IG2 reference enterprise is a GDPR controller or processor, or an NIS2 essential or important entity, so entity-specific EU legal applicability remains unresolved.",
+            "No EU-specific governance_enablement or compliance_constraint record is supplied that ties the generic NIST/CISA cryptography governance guidance to an EU institutional framework or to this frozen deployment.",
+            "No supplied evidence details the deployment's data classification, data-sovereignty requirements, cross-border transfer posture, key-management roles, audit-log retention, or vendor/product architecture.",
+            "No supplied empirical evidence quantifies the institutional adoption burden or operational effectiveness of cryptography for insider threat within the frozen 2025-2027 timing window."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "The supplied decision-evidence contains grounded institutional enablement for the frozen PMT_CRYPTOGRAPHY action: key-management guidance describes accountability, traceability, recording, and audit requirements for cryptographic keys, and CISA guidance recommends effective encryption, properly configured TLS/SSL, and management of outdated or weak encryption. These records provide general governance pathways and accountability mechanisms for deploying cryptographic controls. The frozen scenario is EU, and supplied EU primary-law records reference encryption in GDPR security-of-processing, NIS2 procurement cybersecurity requirements, and privacy-preserving measures, but those records are regulatory_applicability context and do not themselves carry a positive or negative feasibility direction. The principal grounded challenge is a compliance_constraint record establishing algorithm-transition restrictions on certain legacy encryption algorithms. On balance, the enablement evidence provides a stronger institutional feasibility pathway than the bounded algorithm-transition constraint, so this lens supports the frozen action at a GENERAL level. Evidence remains PARTIAL because the supplied material does not establish entity-specific EU legal applicability to the CIS IG2 reference enterprise, nor does it supply EU-specific governance_enablement or compliance_constraint evidence tying the generic governance records to the frozen EU deployment.",
+          "stance": 1
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_CLM_001",
+              "evidence_ids": [
+                "AE04S_2674461DBC059388"
+              ],
+              "scope": "GENERAL",
+              "statement": "A specialized cryptographic protection approach for insider-threat data leakage is technically feasible in principle because the cited prototype incorporated context-based key generation and file marking and passed most of the reported NIST randomness tests, indicating that cryptography can be engineered for this threat model.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_002",
+              "evidence_ids": [
+                "AE04C_F084D028D8E2AE06"
+              ],
+              "scope": "GENERAL",
+              "statement": "Generic or conventional cryptographic deployment is not automatically technically sufficient for insider-threat data leakage because authorized insiders have stronger attack capabilities, including known- or chosen-plaintext style attack opportunities, and effectiveness depends on the cryptographic design and the insider-access model.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_003",
+              "evidence_ids": [
+                "E_23_534489D29C38B327",
+                "DE_DE18_EAA59A9B7CEAD276",
+                "DE_DE18_CDC975345637E009"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied deployment-maturity guidance describes implementation practices for encryption, TLS/SSL, and IPsec-related cryptographic communication controls, but it is supplementary implementation context rather than direct evidence of operational effectiveness against insider threat.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific feasibility conclusion would require evidence of the intended cryptographic design, key-management and access-control integration, and the insider-access assumptions under which the control is expected to operate.",
+            "If the frozen action is interpreted as generic encryption rather than a specialized insider-threat cryptographic construction, feasibility would require evidence that the selected conventional controls remain effective against insider known- or chosen-plaintext style attack opportunities (AE04C_F084D028D8E2AE06).",
+            "Assessment of scalability and maintainability within the 2025-2027 window would require evidence about implementation status, operational testing, or production deployment of the relevant cryptographic controls."
+          ],
+          "constraints": [
+            "Technical feasibility is conditional on selecting a cryptographic design that accounts for the insider-access model; the supplied limitation record states that conventional encryption should not be treated as automatically sufficient (AE04C_F084D028D8E2AE06).",
+            "The positive feasibility signal is limited to a specialized prototype for insider-threat data leakage and does not by itself establish enterprise-wide integration, scalability, maintainability, or operational effectiveness against real insider activity (AE04S_2674461DBC059388).",
+            "Deployment-maturity records provide implementation context for encryption, TLS/SSL, and IPsec-related controls but do not by themselves establish deployment maturity or operational effectiveness for insider-threat mitigation (E_23_534489D29C38B327, DE_DE18_EAA59A9B7CEAD276, DE_DE18_CDC975345637E009)."
+          ],
+          "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__eu__cis_ig2__05fe9afded549f15",
+          "evidence_gaps": [
+            "No supplied evidence reports measured operational effectiveness or deployment maturity of cryptographic controls against insider-threat activity in a production enterprise environment.",
+            "No supplied evidence connects the reported specialized cryptographic prototype to a complete implementation/integration pathway, scalability/maintainability evidence, or the exact insider-access model of the frozen deployment context.",
+            "No supplied evidence demonstrates whether the specific conventional cryptographic controls present in the frozen enterprise context would be sufficient under the insider-threat model, beyond the general warning that effectiveness is design-dependent."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The supplied action-specific records present materially mixed general technical-feasibility signals for CRYPTOGRAPHY against insider threat. One curated action finding supports feasibility by describing a specialized cryptographic protection approach for insider-threat data leakage, with a prototype that included context-based key generation and file marking and passed most reported NIST randomness tests. The other curated action finding challenges feasibility by stating that the insider-threat setting gives an authorized attacker stronger capabilities, including known- or chosen-plaintext style attack opportunities, and that conventional encryption is not automatically sufficient; effectiveness depends on cryptographic design and the insider-access model. Deployment-maturity records describe implementation practices for encryption, TLS/SSL, and IPsec-related controls but do not by themselves establish operational effectiveness or deployment maturity. Because the positive signal is prototype- and design-specific while the negative signal directly qualifies generic cryptography for insider threat, neither direction dominates. Deployment-specific compatibility cannot be concluded because the supplied records do not establish the exact target architecture, product/version, key-management implementation, identity/access controls, or insider-access model for the frozen enterprise context.",
+          "stance": 0
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__us__cis_ig2__930513cc931a59fc",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FIN_CLM_001",
+              "evidence_ids": [
+                "DE_DE10_A086B3193CD6440B"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied TLS implementation guidance describes certificate-based client authentication as an option where strong cryptographic client authentication is required, including PIV authentication as a suitable option, indicating a recognized technical adoption pathway for cryptographic safeguards.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLM_002",
+              "evidence_ids": [
+                "DE_DE18_CDC975345637E009"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied IPSec guidance describes deployment options and states that transport mode has less overhead than tunnel mode because it does not add an additional per-packet tunnel header; it also states that data sensitivity should govern whether encryption is added. This provides a qualitative efficiency/scoping consideration for adoption.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLM_003",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CPG guidance requires properly configured and up-to-date SSL/TLS for data in transit when technically feasible, requires identifying and updating outdated or weak encryption to sufficiently strong algorithms, and requires considering post-quantum implications; for OT it states encryption is used when feasible to minimize latency and availability impact. These are documented implementation and operational adoption burdens.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLM_004",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4",
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "Under the frozen CIS IG2 reference-enterprise profile, the enterprise is described as managing and protecting IT infrastructure across multiple departments with differing risk profiles, and some IG2 safeguards address increased operational complexity and depend on enterprise-grade technology and specialized expertise to install and configure. This makes the CPG-described encryption configuration, update, feasibility, and latency/availability burdens deployment-relevant, though no budget or staffing quantities are established.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLM_005",
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref publication-trend record reports increasing cryptography publication counts over 2021-2024 but explicitly states it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness; it is treated as neutral context and does not by itself support or challenge financial/adoption feasibility.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific support conclusion would require supplied evidence of budget fit, resource capacity, implementation cost, existing cryptographic deployment maturity, and measurable efficiency or cost-saving benefit.",
+            "A deployment-specific challenge conclusion with quantified severity would require supplied evidence of actual implementation scope, staffing burden, migration duration, latency/availability impact in the relevant environment, and post-quantum transition effort or cost.",
+            "If exact financial quantities remain absent, the financial/adoption judgment should remain GENERAL and mixed or indeterminate rather than assigned a deployment-specific positive or negative stance."
+          ],
+          "constraints": [
+            "No exact budget, price, ROI, TCO, payback period, staffing count, procurement ceiling, vendor, product version, implementation timeline, or monetary cost value is asserted because no supplied record provides them.",
+            "The support evidence is qualitative technical enablement from standardized TLS/IPSec guidance; it does not establish financial benefit, cost avoidance, budget fit, or demonstrated adoption success.",
+            "The challenge evidence is a documented operational and implementation burden; it does not prove that adoption is infeasible, nor does it quantify the burden in financial or staffing terms.",
+            "Jurisdiction is masked and no jurisdiction-specific financial or regulatory cost evidence is supplied; therefore no jurisdiction-specific financial feasibility conclusion is drawn."
+          ],
+          "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__us__cis_ig2__930513cc931a59fc",
+          "evidence_gaps": [
+            "No supplied record provides exact deployment budget, cost, price, ROI, TCO, payback period, procurement ceiling, or affordability evidence for CRYPTOGRAPHY.",
+            "No supplied record provides deployment-specific current-state evidence such as existing cryptographic deployment maturity, number of weak or outdated encryption components, migration scope, or implementation duration.",
+            "No supplied record provides staffing, vendor, licensing, hardware, operational overhead, or training costs associated with configuring, updating, or maintaining SSL/TLS or IPSec.",
+            "No supplied record quantifies realized efficiency savings, latency impact, availability impact, or resource savings from the described transport-mode overhead difference or data-sensitivity-based scoping.",
+            "No supplied record provides jurisdiction-specific regulatory cost, compliance cost, or legal obligation evidence under the masked jurisdiction."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied records contain grounded adoption enablers and grounded adoption burdens. Support is limited to standardized technical pathways: TLS client-authentication guidance and IPSec deployment/configuration guidance, including a qualitative overhead difference between transport and tunnel modes and a data-sensitivity-based scoping consideration. Challenge is grounded in CPG guidance requiring properly configured and current SSL/TLS, identification and update of outdated or weak encryption, consideration of post-quantum implications, and feasibility constraints related to latency and availability in OT contexts. The frozen CIS IG2 reference-enterprise profile adds deployment-relevant operational-complexity and specialized-expertise context, but no supplied record provides budget, price, ROI, TCO, payback, staffing counts, procurement ceilings, implementation duration, vendor/product assumptions, or observed adoption cost savings. On balance, the evidence is mixed: adoption is technically enabled by standards and protocol guidance, but documented operational burden is not offset by supplied financial or measured efficiency-benefit evidence. Therefore the stance is 0, with partial sufficiency for a general mixed judgment and insufficient detail for a deployment-specific financial conclusion.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR_CLM_001",
+              "evidence_ids": [
+                "DE_DE08_031120C53EF050F3"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied decision-evidence provides GENERAL governance_enablement for CRYPTOGRAPHY by describing institutional key-management governance: DE_DE08_031120C53EF050F3 states that accountability/traceability involves identifying entities authorized to generate, access, destroy, or use keys, recording who or what performs key actions, employing access-control mechanisms, and auditing logs for security violations; it also states that accountability/traceability can be an effective tool to help prevent key compromises and reduce the impact of compromises when detected.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CLM_002",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied decision-evidence provides GENERAL governance_enablement for CRYPTOGRAPHY by describing an operational encryption performance pathway: E_23_534489D29C38B327 describes a recommended action for effective encryption, including use of properly configured and up-to-date SSL/TLS to protect data in transit when technically feasible, planning to identify use of outdated or weak encryption, updating such encryption to sufficiently strong algorithms, and considering managing implications of post-quantum cryptography.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CLM_003",
+              "evidence_ids": [
+                "DE_DE09_6719137897848A9E"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied decision-evidence provides a GENERAL compliance_constraint for CRYPTOGRAPHY: DE_DE09_6719137897848A9E states that two-key TDEA encryption is disallowed, three-key TDEA encryption is disallowed after 2023 unless specifically allowed, SKIPJACK encryption is disallowed, and AES-128, AES-192, and AES-256 encryption/decryption are acceptable. This creates an institutional and implementation constraint to manage cryptographic algorithm transition, avoid disallowed or deprecated primitives, and maintain acceptable algorithms.",
+              "status": "CHALLENGES_FEASIBILITY"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC institutional/regional direction would require exact supplied jurisdiction-specific regulatory_applicability evidence for the frozen region in addition to the available governance_enablement and compliance_constraint evidence.",
+            "Feasibility of CRYPTOGRAPHY would depend on implementing the key-management accountability/traceability and access-control mechanisms described in DE_DE08_031120C53EF050F3.",
+            "Feasibility of CRYPTOGRAPHY would depend on managing cryptographic algorithm transitions and avoiding disallowed or deprecated algorithms described in DE_DE09_6719137897848A9E.",
+            "If outdated or weak encryption is present, the performance-goal record in E_23_534489D29C38B327 requires planning to identify and update it and to consider post-quantum implications."
+          ],
+          "constraints": [
+            "Cryptographic governance would require key-management accountability/traceability, identification of authorized key entities, access-control mechanisms, and auditing of key access, as described in DE_DE08_031120C53EF050F3.",
+            "Cryptographic implementation would require managing algorithm transition and avoiding disallowed or deprecated cryptographic primitives while maintaining acceptable ones, as described in DE_DE09_6719137897848A9E.",
+            "The encryption performance pathway in E_23_534489D29C38B327 is conditional on technical feasibility and requires ongoing identification and update of outdated or weak encryption."
+          ],
+          "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__us__cis_ig2__930513cc931a59fc",
+          "evidence_gaps": [
+            "No supplied evaluation_evidence record provides regulatory_applicability for the frozen masked jurisdiction; therefore jurisdiction-specific legal obligations, regional regulatory compatibility, data sovereignty, and cross-border constraints remain unresolved.",
+            "No supplied evaluation_evidence record establishes the actual governance maturity, implementation capacity, or operational effectiveness of the frozen reference-enterprise profile for key-management accountability/traceability or cryptographic algorithm transition.",
+            "No supplied evaluation_evidence record quantifies whether the described key-management and algorithm-transition requirements can be met within the frozen timing window under the frozen resource context.",
+            "No supplied evaluation_evidence record connects the described institutional cryptography governance controls to measured insider-threat mitigation effectiveness for the 2025-2027 forecast window.",
+            "No supplied evaluation_evidence record provides a DEPLOYMENT_SPECIFIC regulatory_applicability record required to support a jurisdiction-specific institutional/regional feasibility direction."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "Under the Institutional / Regional lens, the GENERAL institutional direction is mixed. The supplied decision-evidence provides grounded governance_enablement for cryptography: DE_DE08_031120C53EF050F3 describes key-management accountability/traceability, identification of authorized key entities, access-control mechanisms, and auditing of key access as mechanisms that can help prevent key compromises and reduce their impact. E_23_534489D29C38B327 provides a performance-goal pathway for using properly configured and up-to-date SSL/TLS where technically feasible, identifying outdated or weak encryption, updating to sufficiently strong algorithms, and considering post-quantum implications. These records support institutional pathways for accountability, auditability, and lifecycle governance of cryptographic controls. However, DE_DE09_6719137897848A9E provides a grounded compliance_constraint: certain cryptographic algorithms/modes are disallowed or deprecated, while acceptable alternatives such as AES are identified, creating a compliance and implementation burden to manage algorithm transitions and avoid disallowed primitives. The support direction is not sufficient to declare feasibility on balance because the supplied enablement evidence describes governance pathways and control expectations rather than actual deployment capacity, measured effectiveness, or jurisdictional applicability. The challenge direction is not sufficient to declare material infeasibility because the compliance burden does not establish a prohibitive institutional, regional, or legal barrier. Because the frozen region is masked and no regulatory_applicability evidence is supplied, no DEPLOYMENT_SPECIFIC institutional/regional direction can be grounded. The appropriate result is therefore stance=0 with PARTIAL sufficiency.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_CLM_001",
+              "evidence_ids": [
+                "AE04S_2674461DBC059388"
+              ],
+              "scope": "GENERAL",
+              "statement": "A specialized cryptographic protection approach for insider-threat data leakage is technically feasible in principle because the cited prototype incorporated context-based key generation and file marking and passed most of the reported NIST randomness tests, indicating that cryptography can be engineered for this threat model.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_002",
+              "evidence_ids": [
+                "AE04C_F084D028D8E2AE06"
+              ],
+              "scope": "GENERAL",
+              "statement": "Generic or conventional cryptographic deployment is not automatically technically sufficient for insider-threat data leakage because authorized insiders have stronger attack capabilities, including known- or chosen-plaintext style attack opportunities, and effectiveness depends on the cryptographic design and the insider-access model.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_003",
+              "evidence_ids": [
+                "E_23_534489D29C38B327",
+                "DE_DE18_EAA59A9B7CEAD276",
+                "DE_DE18_CDC975345637E009"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied deployment-maturity guidance describes implementation practices for encryption, TLS/SSL, and IPsec-related cryptographic communication controls, but it is supplementary implementation context rather than direct evidence of operational effectiveness against insider threat.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific feasibility conclusion would require evidence of the intended cryptographic design, key-management and access-control integration, and the insider-access assumptions under which the control is expected to operate.",
+            "If the frozen action is interpreted as generic encryption rather than a specialized insider-threat cryptographic construction, feasibility would require evidence that the selected conventional controls remain effective against insider known- or chosen-plaintext style attack opportunities (AE04C_F084D028D8E2AE06).",
+            "Assessment of scalability and maintainability within the 2025-2027 window would require evidence about implementation status, operational testing, or production deployment of the relevant cryptographic controls."
+          ],
+          "constraints": [
+            "Technical feasibility is conditional on selecting a cryptographic design that accounts for the insider-access model; the supplied limitation record states that conventional encryption should not be treated as automatically sufficient (AE04C_F084D028D8E2AE06).",
+            "The positive feasibility signal is limited to a specialized prototype for insider-threat data leakage and does not by itself establish enterprise-wide integration, scalability, maintainability, or operational effectiveness against real insider activity (AE04S_2674461DBC059388).",
+            "Deployment-maturity records provide implementation context for encryption, TLS/SSL, and IPsec-related controls but do not by themselves establish deployment maturity or operational effectiveness for insider-threat mitigation (E_23_534489D29C38B327, DE_DE18_EAA59A9B7CEAD276, DE_DE18_CDC975345637E009)."
+          ],
+          "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__7163573e66c9aac5__us__cis_ig2__930513cc931a59fc",
+          "evidence_gaps": [
+            "No supplied evidence reports measured operational effectiveness or deployment maturity of cryptographic controls against insider-threat activity in a production enterprise environment.",
+            "No supplied evidence connects the reported specialized cryptographic prototype to a complete implementation/integration pathway, scalability/maintainability evidence, or the exact insider-access model of the frozen deployment context.",
+            "No supplied evidence demonstrates whether the specific conventional cryptographic controls present in the frozen enterprise context would be sufficient under the insider-threat model, beyond the general warning that effectiveness is design-dependent."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The supplied action-specific records present materially mixed general technical-feasibility signals for CRYPTOGRAPHY against insider threat. One curated action finding supports feasibility by describing a specialized cryptographic protection approach for insider-threat data leakage, with a prototype that included context-based key generation and file marking and passed most reported NIST randomness tests. The other curated action finding challenges feasibility by stating that the insider-threat setting gives an authorized attacker stronger capabilities, including known- or chosen-plaintext style attack opportunities, and that conventional encryption is not automatically sufficient; effectiveness depends on cryptographic design and the insider-access model. Deployment-maturity records describe implementation practices for encryption, TLS/SSL, and IPsec-related controls but do not by themselves establish operational effectiveness or deployment maturity. Because the positive signal is prototype- and design-specific while the negative signal directly qualifies generic cryptography for insider threat, neither direction dominates. Deployment-specific compatibility cannot be concluded because the supplied records do not establish the exact target architecture, product/version, key-management implementation, identity/access controls, or insider-access model for the frozen enterprise context.",
+          "stance": 0
+        }
+      }
+    ]
+  },
+  "generation_contract_version": "jurisdiction-neutral-equivalence-dedup-v1",
+  "input_fingerprint": "7ed7bdbc20fedc9bfcef34a66946edf4b96ce2721179824b07d77339b0e2abee",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "institutional_regional_system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "client_request_concurrency": 2,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 65536,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 2,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 44,
+    "server_total_context_size": 131072,
+    "stage4_context_runtime_profile_version": "stage4-context-runtime-128k-total-2slot-v3",
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "scenario_set_version": "stage3-context-scenarios-v1",
+  "schema_version": "stage4-artifact-v4",
+  "semantic_validation_version": "stage4-semantic-validation-v6",
+  "stage3_context_artifact_sha256": "91a88c75d08f6460b7026be3e307574fdf09d048f48a4522084311507895e27c",
+  "stage3_context_input_fingerprint": "c08dd9fc25e99b893be1bf24f0021a0adc36db938b16a834572376626fd9d674",
+  "stage3_context_output_sha256": "9bfd452d50b1b29658053f223971d740e9d8926d60b64f374e510dedfbd60ac9",
+  "stage4_output_sha256": "4e518c11df9dc733506850ffdfd028b4e92a5484f434c9a2c4e5bebedb08130d"
+}

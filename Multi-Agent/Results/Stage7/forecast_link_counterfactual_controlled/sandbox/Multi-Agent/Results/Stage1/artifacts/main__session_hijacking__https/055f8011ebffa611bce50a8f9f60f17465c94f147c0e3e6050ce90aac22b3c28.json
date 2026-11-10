@@ -1,0 +1,225 @@
+{
+  "artifact_sha256": "b0a5bebeaf9e56628cb7b51f45266e0cb5607bc997694e0387172a14335b0edf",
+  "assessments": {
+    "attack_feasibility": {
+      "case_id": "main__session_hijacking__https",
+      "claims": [
+        {
+          "claim_id": "ATK_CLM_001",
+          "evidence_ids": [
+            "E_10_AC5A58AF5E015229"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "ICSA-22-286-15 states that a cross-site scripting vulnerability in affected Siemens SCALANCE products could, if used by a threat actor, result in stealing of session cookies and session hijacking, and that Siemens has released updates for the affected products."
+        },
+        {
+          "claim_id": "ATK_CLM_002",
+          "evidence_ids": [
+            "E_04_B9A3190D9CA152A3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The IBM X-Force 2024 chunk reports that allowing concurrent user sessions accounted for 15% of security-misconfiguration findings and that this configuration could weaken MFA through session hijacking."
+        },
+        {
+          "claim_id": "ATK_CLM_003",
+          "evidence_ids": [
+            "E_04_B9A3190D9CA152A3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The IBM X-Force 2024 chunk reports that exploitation of public-facing applications was identified in 29% of incidents and describes that figure as slightly higher than what was observed in 2022."
+        },
+        {
+          "claim_id": "ATK_CLM_004",
+          "evidence_ids": [
+            "E_25_99857C4681E8FEE5"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53 Rev. 5 describes protecting the authenticity of communications sessions as addressing protection against man-in-the-middle attacks, session hijacking, and insertion of false information, with an enhancement to invalidate session identifiers at logout."
+        },
+        {
+          "claim_id": "ATK_CLM_005",
+          "evidence_ids": [
+            "E_33_13A684B424C1D15B"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "The Crossref cutoff-constrained PMT publication trend for HTTPS security reports annual publication counts of 14 in 2021, 8 in 2022, 8 in 2023, and 15 in 2024, with an OLS slope of 0.3 works/year and first-to-last delta of 1."
+        }
+      ],
+      "critic_type": "attack_feasibility",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 0,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "NO_DIRECTIONAL_EVIDENCE",
+        "rationale": "The supplied records establish session-hijacking mechanism and operational relevance, but no supplied record directly grounds the threat state's stated NoP modality and increasing direction for 2025-2027. The PMT publication trend is directional only for the PMT side and cannot determine the Attack stance.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "No supplied record reports realized exploitation signals for CVE-2022-40631 or for other session-hijacking activity relevant to the forecast horizon, and the Stage 0 retrieval summary marks exploitation_signal as missing.",
+        "No supplied record reports a temporal publication-activity trend for THREAT_SESSION_HIJACKING that would directly support or challenge the threat state's stated NoP modality and increasing direction.",
+        "It is unresolved whether the 2024 X-Force observation about public-facing application exploitation and concurrent-session misconfigurations translates into increased session-hijacking incidents, publications, or the forecast NoP modality.",
+        "No supplied record quantifies implementation status or operational effectiveness of session-authenticity controls such as NIST SP 800-53 session identifier invalidation for the relevant HTTPS or SCALANCE deployment."
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "defense_robustness": {
+      "case_id": "main__session_hijacking__https",
+      "claims": [
+        {
+          "claim_id": "DEF_1",
+          "evidence_ids": [
+            "E_33_13A684B424C1D15B"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The cutoff-constrained Crossref PMT publication trend for HTTPS reports a decrease in annual HTTPS-security publication counts from 14 in 2021 to 8 in 2022, followed by a flat count of 8 in 2023, within a total result set of 45 records."
+        },
+        {
+          "claim_id": "DEF_2",
+          "evidence_ids": [
+            "E_33_13A684B424C1D15B"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "The same cutoff-constrained Crossref PMT publication trend for HTTPS reports a 2024 count of 15, an OLS slope of 0.3 works/year, and a first-to-last delta of 1, indicating a weak positive and nonmonotonic publication trend rather than a clearly decreasing publication trend."
+        },
+        {
+          "claim_id": "DEF_3",
+          "evidence_ids": [
+            "E_25_99857C4681E8FEE5"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53 Rev. 5 defines SC-8, Protect the Authenticity of Communications Sessions, as addressing man-in-the-middle attacks, session hijacking, and insertion of false information into sessions, with an enhancement to invalidate session identifiers at logout."
+        },
+        {
+          "claim_id": "DEF_4",
+          "evidence_ids": [
+            "E_10_AC5A58AF5E015229"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The Siemens ProductCERT/CISA advisory records an XSS vulnerability in listed Siemens SCALANCE switch products that could be used to steal session cookies and hijack sessions, and it recommends updating to the latest versions, protecting network access, isolating control-system networks, and using more secure remote-access methods such as VPNs."
+        },
+        {
+          "claim_id": "DEF_5",
+          "evidence_ids": [
+            "E_04_B9A3190D9CA152A3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2024 reports that security misconfigurations were the most observed OWASP web application risk, including concurrent user sessions that could weaken MFA through session hijacking, and that exploitation of public-facing applications was observed in 29% of incidents, slightly higher than in 2022."
+        },
+        {
+          "claim_id": "DEF_6",
+          "evidence_ids": [
+            "E_23_6C42FC29A05ADCAE"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA describes the Cybersecurity Performance Goals as a voluntary, prioritized subset of cybersecurity practices for IT and OT critical infrastructure, intended to be adopted with broader frameworks such as NIST CSF and informed by observed threats."
+        },
+        {
+          "claim_id": "DEF_7",
+          "evidence_ids": [
+            "E_03_6B1B12ABFD14313F",
+            "E_12_9B8ECD82AD844621",
+            "E_12_CFEC6517865F0563",
+            "E_19_A61B74B0F1435639",
+            "E_19_E896356AEE4DB2CD",
+            "E_20_88F8C63B0AC62BEC",
+            "E_22_808618C790A7133A",
+            "E_26_2A6B7965607F1AAF",
+            "E_29_2B4FE56914E3B676",
+            "E_29_5608502338822397",
+            "E_29_B82ABFE7422C38D1"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied Mandiant record describes DPRK cybercrime and cryptocurrency-related activity; the MITRE ATT&CK records describe BOOTRASH and ASPXSpy; the NIST records describe IoT baseline guidance, supply-chain risk management, insider-threat risk rubric material, and control-assessment procedures; and the Crossref metadata records list publication metadata for various titles and venues."
+        }
+      ],
+      "critic_type": "defense_robustness",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 0,
+      "stance_basis": {
+        "challenging_claim_ids": [
+          "DEF_2"
+        ],
+        "decision": "BALANCED",
+        "rationale": "The only direct PMT NoP directional evidence is nonmonotonic: it contains a 2021-to-2022 publication decline that supports a decreasing PMT NoP trajectory, but it also contains a 2024 rise and a weak positive OLS slope that challenge a clear decreasing trajectory. No supplied evidence establishes HTTPS deployment maturity, implementation scale, or operational mitigation effectiveness, so the PMT forecast remains directionally mixed rather than clearly supported or refuted.",
+        "supporting_claim_ids": [
+          "DEF_1"
+        ]
+      },
+      "unresolved_questions": [
+        "How should the 2021-to-2022 decline in Crossref HTTPS publication counts be weighted against the 2023-to-2024 rise and weak positive OLS slope when assessing the 2025-2027 PMT NoP direction?",
+        "What direct evidence is available for HTTPS deployment maturity, implementation, or operational effectiveness against session hijacking, given that publication-activity trends do not establish deployment or causal mitigation effectiveness?",
+        "Can the missing exploitation_signal evidence be supplied with observations of active exploitation of the Siemens SCALANCE session-hijacking vulnerability or of HTTPS-specific session-hijacking exploitation?",
+        "What evidence is available for the threat NoP trajectory, given that threat NoP is masked and no threat publication-trend evidence is supplied?",
+        "How should the Stage 0 historical PMT NoP decreasing z-score be reconciled with the Crossref 2024 HTTPS publication count increase from 8 to 15?"
+      ],
+      "unsupported_specificity_detected": false
+    }
+  },
+  "case_id": "main__session_hijacking__https",
+  "constrained_output_schema_sha256": {
+    "attack_feasibility": "ddb2991b98aba74822531b7643edcd0cd5163b2cd88cfecdbfcd0d58b79aabd0",
+    "defense_robustness": "36a6c2e64346b399d94a371212a8a47d80254e02a476f4f82cbbe387af767b25"
+  },
+  "created_at": "2026-11-08T05:20:11.134744+00:00",
+  "forecast_data_sha256": "b78eac7432c8a903578b419f1ea1377f73349a50dcc8a513fb331523a828360b",
+  "input_fingerprint": "055f8011ebffa611bce50a8f9f60f17465c94f147c0e3e6050ce90aac22b3c28",
+  "output_schema_sha256": "178543c2e5a6753427c6effb6c69990e298f93c3f0a1aa11722d0f6380408ab9",
+  "prompt_hashes": {
+    "attack_feasibility_system_prompt_sha256": "49ec516d07355d1939571df13a9809c3da768d37bb2a09e00b3250dbea8371ae",
+    "defense_robustness_system_prompt_sha256": "aa9daa39d565b348267acbc5e87919d2949842f681597d5cb50e82629c80805f",
+    "stage1_user_prompt_sha256": "9a3058bf0340fe8b3346e7410195f297d60731817473b481bbd8e7a5640d1b55"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage1-artifact-v4",
+  "semantic_validation_version": "stage1-semantic-validation-v4",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "b83c1d1d4dd07822503cf510f371da5cc0fa1634428351309ec65bfca0009618",
+  "stage1_output_sha256": "b28eb8c2db5f4336120d759b817ce1de6514163aee75f0a9522f66fafe5f8383"
+}

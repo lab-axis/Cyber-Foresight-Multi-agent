@@ -1,0 +1,308 @@
+{
+  "artifact_sha256": "2dbe07373ffa7d3455267ab5d8070c63ece0cd036ed4b3e3aa1f90f18f57bfdc",
+  "candidate_selection_rule": "case-forecast-pmt-only-v1",
+  "case_id": "main__brute_force__ids_ips",
+  "created_at": "2026-11-08T02:00:46.864308+00:00",
+  "decision_bundle": {
+    "candidate_selection_rule": "case-forecast-pmt-only-v1",
+    "case_id": "main__brute_force__ids_ips",
+    "decision_objects": [
+      {
+        "candidate_action": {
+          "action_id": "PMT_IDS_IPS",
+          "action_name": "IDS/IPS",
+          "source": "B_MTGNN_CASE_PMT",
+          "source_evidence_ids": [
+            "E_12_D8076704AE363FE2",
+            "E_29_8E495DC2A98305B1",
+            "E_29_BAD6581A8E96027C",
+            "E_29_CA00E63DF08A6FC1",
+            "E_33_A707006877BFD1C2"
+          ]
+        },
+        "candidate_action_source": "B_MTGNN_CASE_PMT",
+        "candidate_selection_rule": "case-forecast-pmt-only-v1",
+        "case_id": "main__brute_force__ids_ips",
+        "contradictory_evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "decision_object_id": "decision__main__brute_force__ids_ips__pmt_ids_ips__fcd98c5694211900",
+        "deployment_context": {
+          "budget_context": null,
+          "infrastructure_context": null,
+          "organization_type": null,
+          "region": null
+        },
+        "evaluation_evidence_ids": [
+          "E_02_669F59880AF52688",
+          "E_03_C54C5F099169E020",
+          "E_03_F2B2EBA86BEEFDC5",
+          "E_04_02D425B67E57F32D",
+          "E_12_D8076704AE363FE2",
+          "E_23_312B9513BCEE9B9D",
+          "E_23_B21FAA9377991F05",
+          "E_23_EBCAB9508641E703",
+          "E_25_FE58E4FCF044EDE3",
+          "E_29_8E495DC2A98305B1",
+          "E_29_BAD6581A8E96027C",
+          "E_29_CA00E63DF08A6FC1",
+          "E_33_A707006877BFD1C2"
+        ],
+        "forecast_interpretation": {
+          "gap_by_year": {
+            "2025": -1.0152207266627227,
+            "2026": 0.33360196353894556,
+            "2027": 1.001306230128012
+          },
+          "gap_direction": "threat_minus_pmt_increasing",
+          "gap_direction_semantics": "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, not absolute-distance widening/narrowing",
+          "gap_semantics": "yearly_mean_zscore_node_state_gap",
+          "gap_slope_per_year": 1.0082634783953672,
+          "pmt_state": {
+            "confidence_95_half_width_z_mean": 0.1444477323116293,
+            "direction": "decreasing",
+            "forecast_field_ids": [
+              "FCE_e772b0120247f8dd_PMT_2025-01",
+              "FCE_e772b0120247f8dd_PMT_2025-02",
+              "FCE_e772b0120247f8dd_PMT_2025-03",
+              "FCE_e772b0120247f8dd_PMT_2025-04",
+              "FCE_e772b0120247f8dd_PMT_2025-05",
+              "FCE_e772b0120247f8dd_PMT_2025-06",
+              "FCE_e772b0120247f8dd_PMT_2025-07",
+              "FCE_e772b0120247f8dd_PMT_2025-08",
+              "FCE_e772b0120247f8dd_PMT_2025-09",
+              "FCE_e772b0120247f8dd_PMT_2025-10",
+              "FCE_e772b0120247f8dd_PMT_2025-11",
+              "FCE_e772b0120247f8dd_PMT_2025-12",
+              "FCE_e772b0120247f8dd_PMT_2026-01",
+              "FCE_e772b0120247f8dd_PMT_2026-02",
+              "FCE_e772b0120247f8dd_PMT_2026-03",
+              "FCE_e772b0120247f8dd_PMT_2026-04",
+              "FCE_e772b0120247f8dd_PMT_2026-05",
+              "FCE_e772b0120247f8dd_PMT_2026-06",
+              "FCE_e772b0120247f8dd_PMT_2026-07",
+              "FCE_e772b0120247f8dd_PMT_2026-08",
+              "FCE_e772b0120247f8dd_PMT_2026-09",
+              "FCE_e772b0120247f8dd_PMT_2026-10",
+              "FCE_e772b0120247f8dd_PMT_2026-11",
+              "FCE_e772b0120247f8dd_PMT_2026-12",
+              "FCE_e772b0120247f8dd_PMT_2027-01",
+              "FCE_e772b0120247f8dd_PMT_2027-02",
+              "FCE_e772b0120247f8dd_PMT_2027-03",
+              "FCE_e772b0120247f8dd_PMT_2027-04",
+              "FCE_e772b0120247f8dd_PMT_2027-05",
+              "FCE_e772b0120247f8dd_PMT_2027-06",
+              "FCE_e772b0120247f8dd_PMT_2027-07",
+              "FCE_e772b0120247f8dd_PMT_2027-08",
+              "FCE_e772b0120247f8dd_PMT_2027-09",
+              "FCE_e772b0120247f8dd_PMT_2027-10",
+              "FCE_e772b0120247f8dd_PMT_2027-11",
+              "FCE_e772b0120247f8dd_PMT_2027-12"
+            ],
+            "forecast_mean_z": 1.0192261919390517,
+            "state_modality": "NoP"
+          },
+          "threat_state": {
+            "confidence_95_half_width_z_mean": 0.10241186776763442,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-01",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-02",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-03",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-04",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-05",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-06",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-07",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-08",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-09",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-10",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-11",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-12",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-01",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-02",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-03",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-04",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-05",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-06",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-07",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-08",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-09",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-10",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-11",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-12",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-01",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-02",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-03",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-04",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-05",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-06",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-07",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-08",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-09",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-10",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-11",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-12"
+            ],
+            "forecast_mean_z": 1.1257886809404631,
+            "state_modality": "NoI"
+          }
+        },
+        "intended_goal": "Evaluate the feasibility and decision relevance of IDS/IPS for the frozen Brute Force Attack forecast pair without changing the action set after observing downstream lens outputs.",
+        "known_constraints": [
+          "Candidate action is frozen before downstream lens evaluation under case-forecast-pmt-only-v1.",
+          "Stage 2 adjudications are reasoning provenance and are not promoted to external evidence.",
+          "Organization/deployment-specific feasibility must remain conditional where deployment context is unknown."
+        ],
+        "pmt_or_mitigation": "IDS/IPS",
+        "pmt_or_mitigation_id": "PMT_IDS_IPS",
+        "predictive_uncertainty": {
+          "legacy_variance_warning": "legacy inverse scaling uses scale rather than scale^2; retained as raw provenance only",
+          "pmt_confidence_95_half_width_z_mean": 0.1444477323116293,
+          "status": "PAPER_124_NODE_Y",
+          "threat_confidence_95_half_width_z_mean": 0.10241186776763442
+        },
+        "stage2_critique_summary": {
+          "attack_post_stance": 0,
+          "attack_post_unresolved_questions": [
+            "Does the increasing IDS/IPS publication trend reflect deployment maturity, operational use, or realized brute-force mitigation effectiveness for the forecast horizon?",
+            "Is there cutoff-constrained evidence explicitly reporting a temporal increase or decrease in brute-force incident count or frequency for THREAT_BRUTE_FORCE_ATTACK?",
+            "Is there direct evidence for both the threat NoI and PMT NoP modalities sufficient to support a decisive GAP_DIRECTION interpretation?",
+            "Would CISA-recommended MFA, lockout, and unique-credential practices materially reduce brute-force incident success, and is that reduction reflected in the forecast NoI state?"
+          ],
+          "defense_post_stance": -1,
+          "defense_post_unresolved_questions": [
+            "No supplied cutoff-constrained record provides a multi-year brute-force incident-count or frequency trend; the DBIR and Mandiant records are single-year or persistence observations and therefore do not directly establish the forecast threat NoI direction or a direct GAP_DIRECTION.",
+            "No supplied evidence provides 2025-2027 IDS/IPS deployment, procurement, operational use, or implementation observations for the forecast horizon.",
+            "Publication-activity growth in E_33_A707006877BFD1C2 does not by itself establish IDS/IPS deployment maturity or realized brute-force mitigation effectiveness.",
+            "The supplied exploitation_signal slot is missing, so the direction of active brute-force exploitation or IDS/IPS-relevant exploitation signals remains unresolved.",
+            "The supplied official guidance on MFA, lockout, and unique credentials does not resolve the PMT NoP publication trajectory or a PMT deployment trajectory."
+          ],
+          "final_mediator_adjudications": [
+            {
+              "adjudication_id": "ADJ-001",
+              "attack_claim_ids": [
+                "AF-1"
+              ],
+              "defense_claim_ids": [],
+              "evidence_ids": [
+                "E_02_669F59880AF52688"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "The Defense's REVISE is well-grounded. Evidence E_02_669F59880AF52688 reports a single-year count of 1,997 basic web application attack incidents (881 with confirmed data disclosure) and states that threat actors 'continue to take advantage of assets with default, simplistic and easily guessable credentials via brute forcing them, buying them or reusing them from previous breaches.' The word 'continue' indicates persistence of a known pattern, not a temporal increase. The chunk contains no prior-year comparison, no multi-year incident-count series, and no trend slope for brute-force-specific incidents. Labeling this claim as SUPPORTS_FORECAST for the forecast's increasing NoI direction overstates what the single-year snapshot establishes. The factual content of the claim is accurate; the forecast_relation is the element requiring correction.",
+              "required_revision": "Reclassify AF-1 forecast_relation from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. Retain the factual statement as reported from E_02_669F59880AF52688 (1,997 incidents, 881 with confirmed data disclosure, credential-abuse narrative). In the final post-assessment, state explicitly that the DBIR 2024 chunk is a single-year observed-threat-context record indicating persistence of brute-force/credential-guessing activity, and that it does not by itself establish a temporal increase in brute-force incident count or frequency sufficient to support the forecast's increasing NoI direction."
+            },
+            {
+              "adjudication_id": "ADJ-002",
+              "attack_claim_ids": [
+                "AF-2"
+              ],
+              "defense_claim_ids": [],
+              "evidence_ids": [
+                "E_03_C54C5F099169E020"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "The Defense's REVISE is well-grounded. Evidence E_03_C54C5F099169E020 states 'Mandiant continues to observe attackers perform password guessing attacks against cloud sign-in portals to identify accounts that do not have MFA configured.' The phrasing 'continues to observe' reports persistence of an observed adversary behavior. The chunk describes specific tactics (targeting dormant accounts, service accounts without MFA) but provides no multi-year count, frequency trend, or percentage-point change for password guessing specifically. The claim's factual content is accurate; the SUPPORTS_FORECAST relation overstates the evidentiary role of a persistence observation for the forecast's increasing NoI direction.",
+              "required_revision": "Reclassify AF-2 forecast_relation from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. Retain the factual statement as reported from E_03_C54C5F099169E020 (continued observation of password guessing against cloud sign-in portals, targeting accounts without MFA including dormant and service accounts). In the final post-assessment, state explicitly that the Mandiant M-Trends chunk reports persistence of observed adversary behavior, not a temporal increase in password-guessing incident count or frequency, and therefore serves as observed-threat context rather than directional support for the increasing NoI forecast."
+            },
+            {
+              "adjudication_id": "ADJ-003",
+              "attack_claim_ids": [
+                "AF-8"
+              ],
+              "defense_claim_ids": [
+                "DEF_PMT_001"
+              ],
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both critics agree on the factual content and interpretive significance of E_33_A707006877BFD1C2. The Crossref cutoff-constrained PMT publication trend reports annual IDS/IPS publication counts of 44 (2021), 43 (2022), 52 (2023), 58 (2024), OLS slope +5.10 works/year, and first-to-last delta +14. The forecast pmt_state specifies direction='decreasing' and state_modality='NoP'. A positive publication-activity trend over the observation window is a direct challenge to the forecasted decreasing PMT state. Both critics correctly and explicitly note the evidentiary boundary: the record is described as 'an external publication-activity validation axis independent of the Scopus-derived NoP model input' and 'does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.' The evidence's own prohibited_claim_types (deployment_maturity, operational_effectiveness, causal_effectiveness) reinforce this boundary. This is a genuine cross-critic semantic match with full convergence on both the factual report and the interpretive limitation.",
+              "required_revision": null
+            }
+          ],
+          "matched_resolved_claim_ids": [],
+          "matched_unresolved_claim_ids": [],
+          "required_revisions": [
+            {
+              "adjudication_id": "ADJ-001",
+              "attack_claim_ids": [
+                "AF-1"
+              ],
+              "defense_claim_ids": [],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Reclassify AF-1 forecast_relation from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. Retain the factual statement as reported from E_02_669F59880AF52688 (1,997 incidents, 881 with confirmed data disclosure, credential-abuse narrative). In the final post-assessment, state explicitly that the DBIR 2024 chunk is a single-year observed-threat-context record indicating persistence of brute-force/credential-guessing activity, and that it does not by itself establish a temporal increase in brute-force incident count or frequency sufficient to support the forecast's increasing NoI direction."
+            },
+            {
+              "adjudication_id": "ADJ-002",
+              "attack_claim_ids": [
+                "AF-2"
+              ],
+              "defense_claim_ids": [],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Reclassify AF-2 forecast_relation from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. Retain the factual statement as reported from E_03_C54C5F099169E020 (continued observation of password guessing against cloud sign-in portals, targeting accounts without MFA including dormant and service accounts). In the final post-assessment, state explicitly that the Mandiant M-Trends chunk reports persistence of observed adversary behavior, not a temporal increase in password-guessing incident count or frequency, and therefore serves as observed-threat context rather than directional support for the increasing NoI forecast."
+            }
+          ]
+        },
+        "supporting_evidence_ids": [],
+        "threat": "Brute Force Attack",
+        "threat_id": "THREAT_BRUTE_FORCE_ATTACK",
+        "timing_window": {
+          "end_year": 2027,
+          "start_year": 2025
+        },
+        "unknown_context_fields": [
+          "region",
+          "organization_type",
+          "infrastructure_context",
+          "budget_context"
+        ],
+        "unresolved_evidence_gaps": []
+      }
+    ],
+    "eligible_action_set": [
+      {
+        "action_id": "PMT_IDS_IPS",
+        "action_name": "IDS/IPS",
+        "source": "B_MTGNN_CASE_PMT",
+        "source_evidence_ids": [
+          "E_12_D8076704AE363FE2",
+          "E_29_8E495DC2A98305B1",
+          "E_29_BAD6581A8E96027C",
+          "E_29_CA00E63DF08A6FC1",
+          "E_33_A707006877BFD1C2"
+        ]
+      }
+    ],
+    "excluded_actions_and_reason": [
+      {
+        "action_id": "PMT_ACCESS_CONTROL",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      },
+      {
+        "action_id": "PMT_ENCRYPTION",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      },
+      {
+        "action_id": "PMT_SIEM",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      }
+    ]
+  },
+  "decision_bundle_schema_sha256": "bcd029d15adbfe35ae50ee75fc2ac8731f73baa4897e7265fac3b44b692c9003",
+  "input_fingerprint": "8d450de5893e92a41131b36bbf401d43d33c88e63849e43a0f78f33f6b73668d",
+  "schema_version": "stage3-artifact-v2",
+  "semantic_validation_version": "stage3-semantic-validation-v2",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "f644dd2084a1585f04343a634161efd66240e37c60f71f51bc7b235ffe556f37",
+  "stage2_artifact_sha256": "44f50cebfc3839a9acbe0b45887c273971374ce2d31580174a331e9233f31ffb",
+  "stage2_output_sha256": "56af4ad17cf06f05473bde4b3bd9d2006a6badab10576be895f97472b24cafa2",
+  "stage3_context": {
+    "budget_context": null,
+    "infrastructure_context": null,
+    "organization_type": null,
+    "pmt": "IDS/IPS",
+    "region": null,
+    "threat": "Brute Force Attack"
+  },
+  "stage3_output_sha256": "0367dce9173d1ce1a5749ea24d13444d53eaa1213bc9a841c813291547c2333e"
+}

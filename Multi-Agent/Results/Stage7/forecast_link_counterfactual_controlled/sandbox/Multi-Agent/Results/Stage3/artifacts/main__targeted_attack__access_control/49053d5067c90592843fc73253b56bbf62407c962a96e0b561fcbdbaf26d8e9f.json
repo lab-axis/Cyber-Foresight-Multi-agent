@@ -1,0 +1,458 @@
+{
+  "artifact_sha256": "740a871b64ae20d3ee9be258329c0cef549f37c853ba1fff89b7de646b5159cf",
+  "candidate_selection_rule": "case-forecast-pmt-only-v1",
+  "case_id": "main__targeted_attack__access_control",
+  "created_at": "2026-11-08T02:46:44.766092+00:00",
+  "decision_bundle": {
+    "candidate_selection_rule": "case-forecast-pmt-only-v1",
+    "case_id": "main__targeted_attack__access_control",
+    "decision_objects": [
+      {
+        "candidate_action": {
+          "action_id": "PMT_ACCESS_CONTROL",
+          "action_name": "ACCESS CONTROL",
+          "source": "B_MTGNN_CASE_PMT",
+          "source_evidence_ids": [
+            "E_02_BE48A23ABD77A19C",
+            "E_10_5C0B9AC35F2420B3",
+            "E_10_B4F773BEC65685CC",
+            "E_10_CEB460BC4092B2D3",
+            "E_12_F6120325C44B5EA9",
+            "E_20_4D81D3799E4826F0",
+            "E_20_7FC83A095DEEBF69",
+            "E_23_42E9198B388BAA83",
+            "E_25_8F4D567857A97316",
+            "E_26_22D6C8ED91C81D37",
+            "E_29_4ED97777A686537A",
+            "E_29_951AF8A7281A822E",
+            "E_29_A8790308F8A745BD",
+            "E_31_96F42990F3AEAC86",
+            "E_33_F4FC25CE90264812"
+          ]
+        },
+        "candidate_action_source": "B_MTGNN_CASE_PMT",
+        "candidate_selection_rule": "case-forecast-pmt-only-v1",
+        "case_id": "main__targeted_attack__access_control",
+        "contradictory_evidence_ids": [
+          "E_33_F4FC25CE90264812"
+        ],
+        "decision_object_id": "decision__main__targeted_attack__access_control__pmt_access_control__b80957e7b6aa6bde",
+        "deployment_context": {
+          "budget_context": null,
+          "infrastructure_context": null,
+          "organization_type": null,
+          "region": null
+        },
+        "evaluation_evidence_ids": [
+          "E_02_BE48A23ABD77A19C",
+          "E_03_B4E8A797813EC72F",
+          "E_03_F0CD4F1DE74CC7AD",
+          "E_10_5C0B9AC35F2420B3",
+          "E_10_B4F773BEC65685CC",
+          "E_10_CEB460BC4092B2D3",
+          "E_12_F6120325C44B5EA9",
+          "E_15_195FD353ADC8E8B0",
+          "E_20_4D81D3799E4826F0",
+          "E_20_7FC83A095DEEBF69",
+          "E_23_42E9198B388BAA83",
+          "E_25_8F4D567857A97316",
+          "E_26_22D6C8ED91C81D37",
+          "E_29_4ED97777A686537A",
+          "E_29_951AF8A7281A822E",
+          "E_29_A8790308F8A745BD",
+          "E_31_96F42990F3AEAC86",
+          "E_33_F4FC25CE90264812"
+        ],
+        "forecast_interpretation": {
+          "gap_by_year": {
+            "2025": -0.5318060564426293,
+            "2026": -0.028235161103523757,
+            "2027": 0.4599792225392161
+          },
+          "gap_direction": "threat_minus_pmt_increasing",
+          "gap_direction_semantics": "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, not absolute-distance widening/narrowing",
+          "gap_semantics": "yearly_mean_zscore_node_state_gap",
+          "gap_slope_per_year": 0.4958926394909227,
+          "pmt_state": {
+            "confidence_95_half_width_z_mean": 0.1386505407970026,
+            "direction": "decreasing",
+            "forecast_field_ids": [
+              "FCE_31e1b9fae7c3def3_PMT_2025-01",
+              "FCE_31e1b9fae7c3def3_PMT_2025-02",
+              "FCE_31e1b9fae7c3def3_PMT_2025-03",
+              "FCE_31e1b9fae7c3def3_PMT_2025-04",
+              "FCE_31e1b9fae7c3def3_PMT_2025-05",
+              "FCE_31e1b9fae7c3def3_PMT_2025-06",
+              "FCE_31e1b9fae7c3def3_PMT_2025-07",
+              "FCE_31e1b9fae7c3def3_PMT_2025-08",
+              "FCE_31e1b9fae7c3def3_PMT_2025-09",
+              "FCE_31e1b9fae7c3def3_PMT_2025-10",
+              "FCE_31e1b9fae7c3def3_PMT_2025-11",
+              "FCE_31e1b9fae7c3def3_PMT_2025-12",
+              "FCE_31e1b9fae7c3def3_PMT_2026-01",
+              "FCE_31e1b9fae7c3def3_PMT_2026-02",
+              "FCE_31e1b9fae7c3def3_PMT_2026-03",
+              "FCE_31e1b9fae7c3def3_PMT_2026-04",
+              "FCE_31e1b9fae7c3def3_PMT_2026-05",
+              "FCE_31e1b9fae7c3def3_PMT_2026-06",
+              "FCE_31e1b9fae7c3def3_PMT_2026-07",
+              "FCE_31e1b9fae7c3def3_PMT_2026-08",
+              "FCE_31e1b9fae7c3def3_PMT_2026-09",
+              "FCE_31e1b9fae7c3def3_PMT_2026-10",
+              "FCE_31e1b9fae7c3def3_PMT_2026-11",
+              "FCE_31e1b9fae7c3def3_PMT_2026-12",
+              "FCE_31e1b9fae7c3def3_PMT_2027-01",
+              "FCE_31e1b9fae7c3def3_PMT_2027-02",
+              "FCE_31e1b9fae7c3def3_PMT_2027-03",
+              "FCE_31e1b9fae7c3def3_PMT_2027-04",
+              "FCE_31e1b9fae7c3def3_PMT_2027-05",
+              "FCE_31e1b9fae7c3def3_PMT_2027-06",
+              "FCE_31e1b9fae7c3def3_PMT_2027-07",
+              "FCE_31e1b9fae7c3def3_PMT_2027-08",
+              "FCE_31e1b9fae7c3def3_PMT_2027-09",
+              "FCE_31e1b9fae7c3def3_PMT_2027-10",
+              "FCE_31e1b9fae7c3def3_PMT_2027-11",
+              "FCE_31e1b9fae7c3def3_PMT_2027-12"
+            ],
+            "forecast_mean_z": 0.5591148721080367,
+            "state_modality": "NoP"
+          },
+          "threat_state": {
+            "confidence_95_half_width_z_mean": 0.144812121401182,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_THREAT_TARGETED_ATTACK_2025-01",
+              "YF_THREAT_TARGETED_ATTACK_2025-02",
+              "YF_THREAT_TARGETED_ATTACK_2025-03",
+              "YF_THREAT_TARGETED_ATTACK_2025-04",
+              "YF_THREAT_TARGETED_ATTACK_2025-05",
+              "YF_THREAT_TARGETED_ATTACK_2025-06",
+              "YF_THREAT_TARGETED_ATTACK_2025-07",
+              "YF_THREAT_TARGETED_ATTACK_2025-08",
+              "YF_THREAT_TARGETED_ATTACK_2025-09",
+              "YF_THREAT_TARGETED_ATTACK_2025-10",
+              "YF_THREAT_TARGETED_ATTACK_2025-11",
+              "YF_THREAT_TARGETED_ATTACK_2025-12",
+              "YF_THREAT_TARGETED_ATTACK_2026-01",
+              "YF_THREAT_TARGETED_ATTACK_2026-02",
+              "YF_THREAT_TARGETED_ATTACK_2026-03",
+              "YF_THREAT_TARGETED_ATTACK_2026-04",
+              "YF_THREAT_TARGETED_ATTACK_2026-05",
+              "YF_THREAT_TARGETED_ATTACK_2026-06",
+              "YF_THREAT_TARGETED_ATTACK_2026-07",
+              "YF_THREAT_TARGETED_ATTACK_2026-08",
+              "YF_THREAT_TARGETED_ATTACK_2026-09",
+              "YF_THREAT_TARGETED_ATTACK_2026-10",
+              "YF_THREAT_TARGETED_ATTACK_2026-11",
+              "YF_THREAT_TARGETED_ATTACK_2026-12",
+              "YF_THREAT_TARGETED_ATTACK_2027-01",
+              "YF_THREAT_TARGETED_ATTACK_2027-02",
+              "YF_THREAT_TARGETED_ATTACK_2027-03",
+              "YF_THREAT_TARGETED_ATTACK_2027-04",
+              "YF_THREAT_TARGETED_ATTACK_2027-05",
+              "YF_THREAT_TARGETED_ATTACK_2027-06",
+              "YF_THREAT_TARGETED_ATTACK_2027-07",
+              "YF_THREAT_TARGETED_ATTACK_2027-08",
+              "YF_THREAT_TARGETED_ATTACK_2027-09",
+              "YF_THREAT_TARGETED_ATTACK_2027-10",
+              "YF_THREAT_TARGETED_ATTACK_2027-11",
+              "YF_THREAT_TARGETED_ATTACK_2027-12"
+            ],
+            "forecast_mean_z": 0.525760873772391,
+            "state_modality": "NoI"
+          }
+        },
+        "intended_goal": "Evaluate the feasibility and decision relevance of ACCESS CONTROL for the frozen Targeted Attack forecast pair without changing the action set after observing downstream lens outputs.",
+        "known_constraints": [
+          "Candidate action is frozen before downstream lens evaluation under case-forecast-pmt-only-v1.",
+          "Stage 2 adjudications are reasoning provenance and are not promoted to external evidence.",
+          "Organization/deployment-specific feasibility must remain conditional where deployment context is unknown."
+        ],
+        "pmt_or_mitigation": "ACCESS CONTROL",
+        "pmt_or_mitigation_id": "PMT_ACCESS_CONTROL",
+        "predictive_uncertainty": {
+          "legacy_variance_warning": "legacy inverse scaling uses scale rather than scale^2; retained as raw provenance only",
+          "pmt_confidence_95_half_width_z_mean": 0.1386505407970026,
+          "status": "PAPER_124_NODE_Y",
+          "threat_confidence_95_half_width_z_mean": 0.144812121401182
+        },
+        "stage2_critique_summary": {
+          "attack_post_stance": 0,
+          "attack_post_unresolved_questions": [
+            "Can any defensible GAP_DIRECTION interpretation be made while the threat NoI modality lacks direct directional evidence and the only direct PMT-direction evidence remains on the opponent-side publication axis?",
+            "Can the M-Trends opportunistic-compromise share increase be combined with any surfaced denominator evidence to infer an absolute NoI increase?",
+            "Does any supplied record report a temporal change in absolute targeted-attack incident count or frequency that would directly ground the forecasted NoI increasing threat state?",
+            "Does the missing exploitation_signal slot prevent confirmation that the specific access-control vulnerabilities are being actively exploited in broader targeted campaigns?"
+          ],
+          "defense_post_stance": -1,
+          "defense_post_unresolved_questions": [
+            "No supplied evidence directly observes 2025-2027 access-control deployment, implementation, or operational effectiveness; the Crossref trend is publication activity only and does not establish whether the positive 2021-2024 NoP trend will persist or reverse in the forecast window.",
+            "No supplied evidence establishes the direction of the threat NoI incident-count modality; Mandiant percentages describe shares of intrusions or detection-source composition, not a direct NoI count trend, so the threat side of the gap direction remains ungrounded.",
+            "The NIST AI 100-2 adversarial ML taxonomy record (E_15_195FD353ADC8E8B0) was surfaced in the Stage 0 evidence but does not directly measure access-control NoP publication activity or targeted-attack NoI incident count; its relevance to the access-control PMT forecast remains tangential.",
+            "The mapping between the model's NoP z-score (forecast_mean_z 0.559, direction 'decreasing') and the Crossref publication-count trend (positive OLS slope) is not specified in the supplied evidence; the 2023-to-2024 count decrease from 1115 to 1070 and the positive first-to-last delta of +30 are not reconciled, leaving ambiguity about which temporal window the model's 'decreasing' direction refers to.",
+            "The missing exploitation_signal slot prevents direct assessment of whether targeted access-control vulnerabilities are being actively exploited in a way that would alter the PMT gap or the overall threat-minus-PMT trajectory."
+          ],
+          "final_mediator_adjudications": [
+            {
+              "adjudication_id": "ADJ-R2-1",
+              "attack_claim_ids": [
+                "AF-07"
+              ],
+              "defense_claim_ids": [
+                "CLM_1"
+              ],
+              "evidence_ids": [
+                "E_33_F4FC25CE90264812"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both critics correctly ground AF-07 and CLM_1 in the same surfaced Crossref record: annual access-control publication counts of 1040, 1005, 1115, and 1070 for 2021-2024, an OLS slope of +20 works/year, and a first-to-last delta of +30. This is a directional publication-activity signal for the PMT NoP modality and is inconsistent with the forecasted PMT NoP direction of 'decreasing.' Both critics also correctly bound the claim to publication activity only and do not extend it to deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-2",
+              "attack_claim_ids": [
+                "AF-01"
+              ],
+              "defense_claim_ids": [
+                "CLM_5"
+              ],
+              "evidence_ids": [
+                "E_03_F0CD4F1DE74CC7AD"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "The surfaced M-Trends record reports opportunistic compromise leveraged as targeted attack activity in 6% of 2022 intrusions, compared with 4% in 2021 and 3% in 2020. This is a composition/share observation within Mandiant's intrusion sample, not an absolute targeted-attack incident count or frequency. The surfaced evidence does not provide the total intrusion denominator needed to infer an absolute NoI count trend, so the SUPPORTS_FORECAST label on AF-01 is not adequately grounded. The defense critic's NEUTRAL_CONTEXT interpretation of CLM_5 is better grounded.",
+              "required_revision": "Reclassify AF-01 from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. The M-Trends evidence reports increasing shares of intrusions attributable to opportunistic compromise leveraged as targeted attack activity, but it does not report absolute targeted-attack incident counts or frequencies. The claim must explicitly state that this is a composition/share observation and cannot by itself establish the forecasted threat NoI increasing direction or the threat-minus-PMT gap direction."
+            },
+            {
+              "adjudication_id": "ADJ-R2-3",
+              "attack_claim_ids": [
+                "AF-03"
+              ],
+              "defense_claim_ids": [
+                "CLM_4"
+              ],
+              "evidence_ids": [
+                "E_10_B4F773BEC65685CC",
+                "E_10_5C0B9AC35F2420B3",
+                "E_10_CEB460BC4092B2D3"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "The Kastle Systems CISA advisory states that successful exploitation of the identified firmware vulnerabilities could allow access to sensitive information and that no known public exploitation specifically targeting these vulnerabilities had been reported to CISA at the advisory time. This is a point-in-time statement about specific Kastle Systems firmware CVEs, not evidence about the broader targeted-attack threat landscape, other access-control vulnerabilities, active exploitation_signal, or the PMT NoP trajectory. The defense critic's NEUTRAL_CONTEXT treatment of CLM_4 is better grounded.",
+              "required_revision": "Reclassify AF-03 from CHALLENGES_FORECAST to NEUTRAL_CONTEXT. The claim must explicitly bound the no-known-public-exploitation statement to the specific Kastle Systems Access Control System firmware vulnerabilities addressed in ICSA-24-263-05 and state that it provides point-in-time vulnerability context rather than a challenge to the broader forecasted threat NoI direction or the PMT NoP trajectory."
+            },
+            {
+              "adjudication_id": "ADJ-R2-4",
+              "attack_claim_ids": [
+                "AF-05"
+              ],
+              "defense_claim_ids": [
+                "CLM_2"
+              ],
+              "evidence_ids": [
+                "E_02_BE48A23ABD77A19C"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "rationale": "The DBIR record describes System Intrusion as a common pattern and maps CIS IG1 controls 14, 11, and 5 to that pattern at 89%, 80%, and 67%. This is a static relevance association between a threat pattern and control categories. It does not report a temporal change in access-control deployment, operational effectiveness, or threat frequency. Therefore the SUPPORTS_FORECAST label on CLM_2 is not adequately grounded, while the attack critic's NEUTRAL_CONTEXT treatment of AF-05 is better grounded.",
+              "required_revision": "Reclassify CLM_2 from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. The claim must explicitly state that the DBIR IG1 control mapping provides static access-control relevance context for the System Intrusion pattern and does not establish a temporal direction for the threat NoI state, the PMT NoP state, or the threat-minus-PMT gap."
+            },
+            {
+              "adjudication_id": "ADJ-R2-5",
+              "attack_claim_ids": [
+                "AF-06"
+              ],
+              "defense_claim_ids": [
+                "CLM_3"
+              ],
+              "evidence_ids": [
+                "E_12_F6120325C44B5EA9"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "rationale": "The MITRE ATT&CK M1015 record describes recommended Active Directory configuration measures, including domain account configuration, interactive logon restrictions, RDP access limits, dedicated administrative accounts, and authentication silos. This is prescriptive mitigation guidance, not evidence that those measures are deployed, operationally effective, or changing over time. The SUPPORTS_FORECAST label on CLM_3 is therefore not adequately grounded, while the neutral-context treatment within AF-06 is better grounded.",
+              "required_revision": "Reclassify CLM_3 from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. The claim must explicitly state that MITRE ATT&CK M1015 provides prescriptive AD configuration mitigation context for the access-control PMT without establishing deployment status, operational effectiveness, or a forecast direction."
+            },
+            {
+              "adjudication_id": "ADJ-R2-6",
+              "attack_claim_ids": [
+                "AF-06"
+              ],
+              "defense_claim_ids": [
+                "CLM_7"
+              ],
+              "evidence_ids": [
+                "E_26_22D6C8ED91C81D37"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "rationale": "The NIST SP 800-53A Rev. 5 record describes the Test assessment method, including typical assessor actions such as testing access control, identification and authentication, audit mechanisms, and configuration settings. This is an assessment procedure, not evidence that access-control mechanisms are deployed, operationally effective, or moving in any temporal direction. The SUPPORTS_FORECAST label on CLM_7 is therefore not adequately grounded, while the neutral-context treatment within AF-06 is better grounded.",
+              "required_revision": "Reclassify CLM_7 from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. The claim must explicitly state that the NIST SP 800-53A Test methodology provides assessment-procedure context for the access-control PMT without establishing deployment status, operational effectiveness, or a forecast trajectory."
+            },
+            {
+              "adjudication_id": "ADJ-R2-7",
+              "attack_claim_ids": [
+                "AF-04"
+              ],
+              "defense_claim_ids": [
+                "CLM_4"
+              ],
+              "evidence_ids": [
+                "E_10_5C0B9AC35F2420B3",
+                "E_10_CEB460BC4092B2D3"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both critics correctly characterize the Siemens Mendix advisories as describing improper access-control vulnerabilities in Mendix Workflow Commons and Mendix Email Connector, with vendor update recommendations and network-isolation guidance. The surfaced records do not establish active exploitation, a broader targeted-attack NoI trend, or a PMT NoP trajectory. The NEUTRAL_CONTEXT labels are well grounded.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-8",
+              "attack_claim_ids": [
+                "AF-08"
+              ],
+              "defense_claim_ids": [
+                "CLM_6"
+              ],
+              "evidence_ids": [
+                "E_29_4ED97777A686537A",
+                "E_29_951AF8A7281A822E",
+                "E_29_A8790308F8A745BD"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both critics correctly characterize the surfaced Crossref metadata records as static bibliographic entries for access-control-related titles. The records do not provide directional publication activity, deployment maturity, operational effectiveness, or forecast trajectory evidence. The NEUTRAL_CONTEXT labels are well grounded.",
+              "required_revision": null
+            }
+          ],
+          "matched_resolved_claim_ids": [],
+          "matched_unresolved_claim_ids": [],
+          "required_revisions": [
+            {
+              "adjudication_id": "ADJ-R2-2",
+              "attack_claim_ids": [
+                "AF-01"
+              ],
+              "defense_claim_ids": [
+                "CLM_5"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Reclassify AF-01 from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. The M-Trends evidence reports increasing shares of intrusions attributable to opportunistic compromise leveraged as targeted attack activity, but it does not report absolute targeted-attack incident counts or frequencies. The claim must explicitly state that this is a composition/share observation and cannot by itself establish the forecasted threat NoI increasing direction or the threat-minus-PMT gap direction."
+            },
+            {
+              "adjudication_id": "ADJ-R2-3",
+              "attack_claim_ids": [
+                "AF-03"
+              ],
+              "defense_claim_ids": [
+                "CLM_4"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Reclassify AF-03 from CHALLENGES_FORECAST to NEUTRAL_CONTEXT. The claim must explicitly bound the no-known-public-exploitation statement to the specific Kastle Systems Access Control System firmware vulnerabilities addressed in ICSA-24-263-05 and state that it provides point-in-time vulnerability context rather than a challenge to the broader forecasted threat NoI direction or the PMT NoP trajectory."
+            },
+            {
+              "adjudication_id": "ADJ-R2-4",
+              "attack_claim_ids": [
+                "AF-05"
+              ],
+              "defense_claim_ids": [
+                "CLM_2"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "required_revision": "Reclassify CLM_2 from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. The claim must explicitly state that the DBIR IG1 control mapping provides static access-control relevance context for the System Intrusion pattern and does not establish a temporal direction for the threat NoI state, the PMT NoP state, or the threat-minus-PMT gap."
+            },
+            {
+              "adjudication_id": "ADJ-R2-5",
+              "attack_claim_ids": [
+                "AF-06"
+              ],
+              "defense_claim_ids": [
+                "CLM_3"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "required_revision": "Reclassify CLM_3 from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. The claim must explicitly state that MITRE ATT&CK M1015 provides prescriptive AD configuration mitigation context for the access-control PMT without establishing deployment status, operational effectiveness, or a forecast direction."
+            },
+            {
+              "adjudication_id": "ADJ-R2-6",
+              "attack_claim_ids": [
+                "AF-06"
+              ],
+              "defense_claim_ids": [
+                "CLM_7"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "required_revision": "Reclassify CLM_7 from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. The claim must explicitly state that the NIST SP 800-53A Test methodology provides assessment-procedure context for the access-control PMT without establishing deployment status, operational effectiveness, or a forecast trajectory."
+            }
+          ]
+        },
+        "supporting_evidence_ids": [],
+        "threat": "Targeted Attack",
+        "threat_id": "THREAT_TARGETED_ATTACK",
+        "timing_window": {
+          "end_year": 2027,
+          "start_year": 2025
+        },
+        "unknown_context_fields": [
+          "region",
+          "organization_type",
+          "infrastructure_context",
+          "budget_context"
+        ],
+        "unresolved_evidence_gaps": []
+      }
+    ],
+    "eligible_action_set": [
+      {
+        "action_id": "PMT_ACCESS_CONTROL",
+        "action_name": "ACCESS CONTROL",
+        "source": "B_MTGNN_CASE_PMT",
+        "source_evidence_ids": [
+          "E_02_BE48A23ABD77A19C",
+          "E_10_5C0B9AC35F2420B3",
+          "E_10_B4F773BEC65685CC",
+          "E_10_CEB460BC4092B2D3",
+          "E_12_F6120325C44B5EA9",
+          "E_20_4D81D3799E4826F0",
+          "E_20_7FC83A095DEEBF69",
+          "E_23_42E9198B388BAA83",
+          "E_25_8F4D567857A97316",
+          "E_26_22D6C8ED91C81D37",
+          "E_29_4ED97777A686537A",
+          "E_29_951AF8A7281A822E",
+          "E_29_A8790308F8A745BD",
+          "E_31_96F42990F3AEAC86",
+          "E_33_F4FC25CE90264812"
+        ]
+      }
+    ],
+    "excluded_actions_and_reason": [
+      {
+        "action_id": "PMT_HTTPS",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      },
+      {
+        "action_id": "PMT_PENETRATION_TESTING",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      },
+      {
+        "action_id": "PMT_RISK_ASSESSMENT",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      },
+      {
+        "action_id": "PMT_VPN",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      }
+    ]
+  },
+  "decision_bundle_schema_sha256": "bcd029d15adbfe35ae50ee75fc2ac8731f73baa4897e7265fac3b44b692c9003",
+  "input_fingerprint": "49053d5067c90592843fc73253b56bbf62407c962a96e0b561fcbdbaf26d8e9f",
+  "schema_version": "stage3-artifact-v2",
+  "semantic_validation_version": "stage3-semantic-validation-v2",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "92f7516f88821c24854b007131ede2b5ae91616ee605a1442e83bfed931f7a35",
+  "stage2_artifact_sha256": "f3aefbff9fe827f423c5ac65eb59c488a85e9cf16a04937c5a8895da531048dc",
+  "stage2_output_sha256": "eb8abbaf93d8193c53220a7d1ca753be30b2cfee51757fe852bb7219ed971577",
+  "stage3_context": {
+    "budget_context": null,
+    "infrastructure_context": null,
+    "organization_type": null,
+    "pmt": "ACCESS CONTROL",
+    "region": null,
+    "threat": "Targeted Attack"
+  },
+  "stage3_output_sha256": "33b06a8050e55e3cd92128e0098e5d26228c37bfe1a4452374d9fc2c3d014f30"
+}

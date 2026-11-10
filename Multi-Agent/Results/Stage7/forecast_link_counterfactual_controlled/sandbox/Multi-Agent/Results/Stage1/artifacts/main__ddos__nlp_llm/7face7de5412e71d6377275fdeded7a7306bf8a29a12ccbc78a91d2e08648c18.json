@@ -1,0 +1,251 @@
+{
+  "artifact_sha256": "e7c0216cbc03ff5bddcece9c02eecaab7f6385d00e0de1811cdb10597cce40f3",
+  "assessments": {
+    "attack_feasibility": {
+      "case_id": "main__ddos__nlp_llm",
+      "claims": [
+        {
+          "claim_id": "AC_001",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The DBIR 2023 chunk reports that DDoS attack size percentiles increased, with the median rising from 1.4 Gbps to 2.2 Gbps and the 97.5th percentile rising from 99 Gbps to 124 Gbps."
+        },
+        {
+          "claim_id": "AC_002",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The DBIR 2023 chunk identifies growth in distributed DNS Water Torture DDoS attacks in shared DNS infrastructure."
+        },
+        {
+          "claim_id": "AC_003",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The DBIR 2023 chunk reports DDoS attack magnitude as bits-per-second percentiles for 10,622 incidents."
+        },
+        {
+          "claim_id": "AC_004",
+          "evidence_ids": [
+            "E_03_06E6ABC42DA3AC77",
+            "E_03_F13F996D181217BA"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "Mandiant M-Trends 2023 includes DDoS among destructive-operation tactics and describes hacktivist personas claiming DDoS and other disruptive activity."
+        },
+        {
+          "claim_id": "AC_005",
+          "evidence_ids": [
+            "E_04_892BBCAA3CE5CC92"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2024 reports claimed hacktivism operations related to the Israel-Hamas conflict and recommends DDoS mitigation readiness for organizations in the region."
+        },
+        {
+          "claim_id": "AC_006",
+          "evidence_ids": [
+            "E_08_3453329306E149CB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "CISA KEV lists CVE-2023-44487 as a known exploited HTTP/2 rapid reset vulnerability that allows a distributed denial-of-service attack."
+        },
+        {
+          "claim_id": "AC_007",
+          "evidence_ids": [
+            "E_33_ADC8BC66D812799F"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The Crossref record reports NLP/LLM security publication counts of 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024."
+        },
+        {
+          "claim_id": "AC_008",
+          "evidence_ids": [
+            "E_29_CD092D34A1331D02"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The Crossref metadata record identifies DOI 10.2139/ssrn.4996945 for an NLP/LLM literature-review publication."
+        }
+      ],
+      "critic_type": "attack_feasibility",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 0,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "NO_DIRECTIONAL_EVIDENCE",
+        "rationale": "The supplied DDoS evidence directly supports operational plausibility: DBIR reports increasing DDoS bits-per-second percentiles and growth in DNS Water Torture attacks, Mandiant associates DDoS with destructive and hacktivist activity, and CISA KEV lists a known exploited DDoS vulnerability. However, none of the supplied DDoS records directly reports a temporal increase or decrease in overall DDoS incident count or frequency, which is the stated Threat NoI modality. The Crossref record directly supports the PMT NoP publication trend, but a one-sided PMT trend cannot ground the Threat-PMT gap direction. Therefore no THREAT_TRAJECTORY or GAP_DIRECTION claim supplies direct directional evidence for the Attack forecast.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "Does the DBIR growth in distributed DNS Water Torture attacks represent a sustained increase in overall DDoS incident counts or frequency through 2025-2027?",
+        "Is there independent DDoS incident-count or frequency data available before 2024-12-31 that directly supports or contradicts the forecast's increasing NoI direction?",
+        "How should the forecast's historical_input value for threat NoI recent_direction='decreasing' be reconciled with its forecast direction='increasing'?",
+        "What direct evidence supports the forecast gap direction threat_minus_pmt_increasing given that only the PMT NoP side has a direct publication-trend record?",
+        "Are the IBM X-Force claimed hacktivist operations involving DDoS confirmed attacks, and if so, do they indicate a change in DDoS incident frequency?",
+        "What portion of CVE-2023-44487 exploitation translates into measurable DDoS incident activity in 2024-2027?"
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "defense_robustness": {
+      "case_id": "main__ddos__nlp_llm",
+      "claims": [
+        {
+          "claim_id": "DPC_001",
+          "evidence_ids": [
+            "E_33_ADC8BC66D812799F"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "Crossref records first deposited on or before 2024-12-31 report a cutoff-constrained temporal increase in NLP/LLM publication activity with a bibliographic security query: 14 works in 2021, 18 works in 2022, 33 works in 2023, and 87 works in 2024, with an OLS slope of 23.4 works per year."
+        },
+        {
+          "claim_id": "DPC_002",
+          "evidence_ids": [
+            "E_33_ADC8BC66D812799F"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "The Crossref publication-trend record explicitly states that the publication-activity validation axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        },
+        {
+          "claim_id": "DPC_003",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Verizon DBIR reports that DDoS bits-per-second percentiles increased, with the median growing from 1.4 Gbps to 2.2 Gbps and the 97.5 percentile from 99 Gbps to 124 Gbps, and describes distributed DNS cache resource-exhaustion attacks in shared DNS infrastructure."
+        },
+        {
+          "claim_id": "DPC_004",
+          "evidence_ids": [
+            "E_04_892BBCAA3CE5CC92"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force reported hacktivist activity associated with the Israel-Hamas conflict, including claimed DDoS and website defacement, and recommended contacting a DDoS mitigation provider and practicing a DDoS incident response plan."
+        },
+        {
+          "claim_id": "DPC_005",
+          "evidence_ids": [
+            "E_08_3453329306E149CB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA KEV lists CVE-2023-44487, HTTP/2 Rapid Reset, as a confirmed exploitation record for an HTTP/2 DDoS vulnerability, with mitigation guidance to apply vendor instructions or discontinue use if mitigations are unavailable."
+        },
+        {
+          "claim_id": "DPC_006",
+          "evidence_ids": [
+            "E_03_06E6ABC42DA3AC77"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends observed that DDoS is included among destructive operations and reported 2022 threat-group goals, with 48% financially motivated, 18% espionage-related, 9% other, and 27% not assessed."
+        },
+        {
+          "claim_id": "DPC_007",
+          "evidence_ids": [
+            "E_03_F13F996D181217BA"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends reported renewed Russian ICS disruption capability and an increase in hacktivist operations after the Ukraine invasion, with claimed DDoS, website defacements, and hack-and-leak operations."
+        },
+        {
+          "claim_id": "DPC_008",
+          "evidence_ids": [
+            "E_29_CD092D34A1331D02"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "A Crossref metadata record verifies an NLP/LLM literature-review paper titled Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case., and its permitted claims are limited to publication metadata without establishing deployment maturity or operational effectiveness."
+        }
+      ],
+      "critic_type": "defense_robustness",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 1,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "SUPPORT_DOMINATES",
+        "rationale": "The decisive ex-ante directional evidence for the PMT state is a cutoff-constrained NLP/LLM publication-activity trend that directly supports an increasing NoP publication trajectory. The absence of deployment, implementation, or causal mitigation-effectiveness evidence limits operational interpretation but does not materially negate the PMT publication-trajectory forecast.",
+        "supporting_claim_ids": [
+          "DPC_001"
+        ]
+      },
+      "unresolved_questions": [
+        "Does any supplied evidence directly observe or forecast DDoS incident count or frequency direction, corresponding to the threat state NoI modality, for the 2025-2027 horizon?",
+        "Is there any supplied mitigation_implementation or mitigation_relation_or_control evidence linking NLP/LLM publication activity to deployed DDoS mitigation controls or realized operational effectiveness?",
+        "What DDoS-specific technical maturity or deployability does the NLP/LLM publication trend have, given that the payload contains only publication-activity and bibliographic evidence for the PMT side?",
+        "Is the predicted threat-minus-PMT gap direction supported by direct comparative evidence for both the threat NoI state and the PMT NoP state, rather than only by one-sided PMT publication activity?"
+      ],
+      "unsupported_specificity_detected": false
+    }
+  },
+  "case_id": "main__ddos__nlp_llm",
+  "constrained_output_schema_sha256": {
+    "attack_feasibility": "e62a97fd7625c88fe8ee6bf27d0c115e16e255b19a8b2501eadd0877af0a4165",
+    "defense_robustness": "699e4480c7c47bc1f12e7d7556bef89c7c416f85d54cb255bbe389b895cd2dd9"
+  },
+  "created_at": "2026-11-07T11:58:41.239739+00:00",
+  "forecast_data_sha256": "70e1c1bdfed94b2a8e4e5004e2b7ef32f974370f0f52bb7903984153b536e8ca",
+  "input_fingerprint": "7face7de5412e71d6377275fdeded7a7306bf8a29a12ccbc78a91d2e08648c18",
+  "output_schema_sha256": "178543c2e5a6753427c6effb6c69990e298f93c3f0a1aa11722d0f6380408ab9",
+  "prompt_hashes": {
+    "attack_feasibility_system_prompt_sha256": "49ec516d07355d1939571df13a9809c3da768d37bb2a09e00b3250dbea8371ae",
+    "defense_robustness_system_prompt_sha256": "aa9daa39d565b348267acbc5e87919d2949842f681597d5cb50e82629c80805f",
+    "stage1_user_prompt_sha256": "9a3058bf0340fe8b3346e7410195f297d60731817473b481bbd8e7a5640d1b55"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage1-artifact-v4",
+  "semantic_validation_version": "stage1-semantic-validation-v4",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "20388218760c7150b87de2501091410506399dee6243bacdf00193d9d8afd42d",
+  "stage1_output_sha256": "2235653569f0cc4f140f551f73a04c213b4282f679a515d173295b3e990886b0"
+}

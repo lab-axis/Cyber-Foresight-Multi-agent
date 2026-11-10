@@ -1,0 +1,1343 @@
+{
+  "artifact_sha256": "7b6f059f5db22e77daacfe9615a5aff1f7ecd4db69da689386bc22435a681c53",
+  "case_id": "main__session_hijacking__https",
+  "constrained_output_schema_hashes": {
+    "post_attack_base_sha256": "ddb2991b98aba74822531b7643edcd0cd5163b2cd88cfecdbfcd0d58b79aabd0",
+    "post_defense_base_sha256": "36a6c2e64346b399d94a371212a8a47d80254e02a476f4f82cbbe387af767b25",
+    "round1_attack_sha256": "f877a35540eefd1c29f906cfc744749635ecb4678959b4aa00cdc07725b1a856",
+    "round1_defense_sha256": "839206e38c3cb2da6a873774e9a8ec1b8b17d469ea4bb6cb1e503094462fd83c",
+    "round1_mediator_base_sha256": "d4277c43acb47f6a1db0fdb3bb6793947a11a67594c85585072fc7bc45b0b0c7",
+    "round2_attack_base_sha256": "3729f73c54012b36ee15f1b6e3a30dd0fd8c3e8fca6d7f3cb2ed4a1a21e21db0",
+    "round2_defense_base_sha256": "344a7e2063c7bf5371a38803967305b22c9f8264f550f99471cd1cc78f24f7cf",
+    "round2_mediator_base_sha256": "1e383673d6da2977a790192cf6b8df8257969fa8d76d781d09765f939d2dc395"
+  },
+  "created_at": "2026-11-08T07:09:21.273636+00:00",
+  "debate_result": {
+    "attack_post_assessment": {
+      "case_id": "main__session_hijacking__https",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "evidence_ids": [
+            "E_10_AC5A58AF5E015229"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The CISA/Siemens advisory for CVE-2022-40631 states that cross-site scripting in affected SCALANCE products could allow a threat actor to steal session cookies and perform session hijacking, and it recommends product updates and network protection."
+        },
+        {
+          "claim_id": "C2",
+          "evidence_ids": [
+            "E_04_B9A3190D9CA152A3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2024 identifies security misconfigurations as the most observed OWASP web application risk and specifically notes that allowing concurrent user sessions could weaken MFA through session hijacking."
+        },
+        {
+          "claim_id": "C3",
+          "evidence_ids": [
+            "E_04_B9A3190D9CA152A3"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2024 reports exploitation of public-facing applications in 29% of incidents, slightly higher than in 2022, and discusses 2023 MFT tool exploitation as a high-risk attack path."
+        },
+        {
+          "claim_id": "C4",
+          "evidence_ids": [
+            "E_25_99857C4681E8FEE5"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53 Rev. 5 describes session authenticity protection as including protection against session hijacking and includes invalidating session identifiers at logout or session termination."
+        },
+        {
+          "claim_id": "C5",
+          "evidence_ids": [
+            "E_33_13A684B424C1D15B"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The Crossref cutoff-constrained PMT publication trend for PMT_HTTPS reports annual publication counts of 14 in 2021, 8 in 2022, 8 in 2023, and 15 in 2024, with an OLS slope of 0.30 works per year."
+        },
+        {
+          "claim_id": "C6",
+          "evidence_ids": [
+            "E_33_13A684B424C1D15B"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The Crossref PMT_HTTPS trend record states that it is a publication-activity validation axis independent of the Scopus-derived NoP model input and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        },
+        {
+          "claim_id": "C7",
+          "evidence_ids": [
+            "E_02_3AE1561299B667F5"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied DBIR appendix excerpt is a VERIS-to-ATT&CK mapping discussion and functions as contextual framework material for this review."
+        },
+        {
+          "claim_id": "C8",
+          "evidence_ids": [
+            "E_03_6B1B12ABFD14313F"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied Mandiant M-Trends 2023 excerpt discusses North Korean threat groups and cryptocurrency targeting as observed adversary-trend material."
+        },
+        {
+          "claim_id": "C9",
+          "evidence_ids": [
+            "E_12_9B8ECD82AD844621",
+            "E_12_CFEC6517865F0563"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied MITRE ATT&CK records describe BOOTRASH as a Windows bootkit and ASPXSpy as a web shell, providing capability context for this review."
+        }
+      ],
+      "critic_type": "attack_feasibility",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 0,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "NO_DIRECTIONAL_EVIDENCE",
+        "rationale": "The threat-side forecast is in the NoP modality with direction increasing. No surfaced record provides a session-hijacking-specific temporal NoP publication trend, a realized session-hijacking exploitation signal, or direct evidence of a THREAT_TRAJECTORY. E_33_13A684B424C1D15B provides a PMT_HTTPS publication-activity trajectory, but it is explicitly limited to publication activity and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness; it is not threat-side directional evidence and cannot become decisive for the Attack stance. E_10_AC5A58AF5E015229, E_04_B9A3190D9CA152A3, E_25_99857C4681E8FEE5, and E_23_6C42FC29A05ADCAE provide mechanism, observed misconfiguration context, control guidance, and CPG context, but none directly measures the threat-side NoP direction. E_02_3AE1561299B667F5, E_03_6B1B12ABFD14313F, and the MITRE records are neutral context. A direct GAP_DIRECTION interpretation also remains unavailable because direct evidence for both forecast-state modalities is absent. Predictive uncertainty remains model uncertainty, not real-world evidence.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "What is the session-hijacking-specific NoP publication trend, if any, around the 2024-12-31 cutoff for THREAT_SESSION_HIJACKING?",
+        "Is there direct exploitation-signal evidence for realized session-hijacking activity that would validate the threat trajectory beyond mechanism availability?",
+        "Do the 2024 IBM X-Force web-application findings indicate a temporal increase in session hijacking itself rather than a persistent misconfiguration risk factor?",
+        "Can the positive Crossref PMT_HTTPS publication trend be used to infer the threat-minus-PMT gap direction without a matching threat-side NoP trend?",
+        "How should the unavailable historical threat NoI and NoP fields be interpreted when the threat state is forecast as NoP increasing?"
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "attack_pre_assessment": {
+      "case_id": "main__session_hijacking__https",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "evidence_ids": [
+            "E_10_AC5A58AF5E015229"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The CISA/Siemens advisory for CVE-2022-40631 states that cross-site scripting in affected SCALANCE products could allow a threat actor to steal session cookies and perform session hijacking, and it recommends product updates and network protection."
+        },
+        {
+          "claim_id": "C2",
+          "evidence_ids": [
+            "E_04_B9A3190D9CA152A3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2024 identifies security misconfigurations as the most observed OWASP web application risk and specifically notes that allowing concurrent user sessions could weaken MFA through session hijacking."
+        },
+        {
+          "claim_id": "C3",
+          "evidence_ids": [
+            "E_04_B9A3190D9CA152A3"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2024 reports exploitation of public-facing applications in 29% of incidents, slightly higher than in 2022, and discusses 2023 MFT tool exploitation as a high-risk attack path."
+        },
+        {
+          "claim_id": "C4",
+          "evidence_ids": [
+            "E_25_99857C4681E8FEE5"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53 Rev. 5 describes session authenticity protection as including protection against session hijacking and includes invalidating session identifiers at logout or session termination."
+        },
+        {
+          "claim_id": "C5",
+          "evidence_ids": [
+            "E_33_13A684B424C1D15B"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The Crossref cutoff-constrained PMT publication trend for PMT_HTTPS reports annual publication counts of 14 in 2021, 8 in 2022, 8 in 2023, and 15 in 2024, with an OLS slope of 0.30 works per year."
+        },
+        {
+          "claim_id": "C6",
+          "evidence_ids": [
+            "E_33_13A684B424C1D15B"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The Crossref PMT_HTTPS trend record states that it is a publication-activity validation axis independent of the Scopus-derived NoP model input and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        },
+        {
+          "claim_id": "C7",
+          "evidence_ids": [
+            "E_02_3AE1561299B667F5"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied DBIR appendix excerpt is a VERIS-to-ATT&CK mapping discussion and functions as contextual framework material for this review."
+        },
+        {
+          "claim_id": "C8",
+          "evidence_ids": [
+            "E_03_6B1B12ABFD14313F"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied Mandiant M-Trends 2023 excerpt discusses North Korean threat groups and cryptocurrency targeting as observed adversary-trend material."
+        },
+        {
+          "claim_id": "C9",
+          "evidence_ids": [
+            "E_12_9B8ECD82AD844621",
+            "E_12_CFEC6517865F0563"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied MITRE ATT&CK records describe BOOTRASH as a Windows bootkit and ASPXSpy as a web shell, providing capability context for this review."
+        }
+      ],
+      "critic_type": "attack_feasibility",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 0,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "NO_DIRECTIONAL_EVIDENCE",
+        "rationale": "The threat forecast is expressed in the NoP modality, but the supplied evidence does not contain a session-hijacking-specific temporal publication trend or an equivalent NoP trajectory signal. Supplied mechanism and observed web-application misconfiguration evidence supports operational plausibility, while the Crossref HTTPS trend supports the PMT side only; neither supplies a decisive THREAT_TRAJECTORY or GAP_DIRECTION claim for the Attack Critic.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "What is the session-hijacking-specific NoP publication trend, if any, around the 2024-12-31 cutoff for THREAT_SESSION_HIJACKING?",
+        "Is there direct exploitation-signal evidence for realized session-hijacking activity that would validate the threat trajectory beyond mechanism availability?",
+        "Do the 2024 IBM X-Force web-application findings indicate a temporal increase in session hijacking itself rather than a persistent misconfiguration risk factor?",
+        "Can the positive Crossref PMT_HTTPS publication trend be used to infer the threat-minus-PMT gap direction without a matching threat-side NoP trend?",
+        "How should the unavailable historical threat NoI and NoP fields be interpreted when the threat state is forecast as NoP increasing?"
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "case_id": "main__session_hijacking__https",
+    "defense_post_assessment": {
+      "case_id": "main__session_hijacking__https",
+      "claims": [
+        {
+          "claim_id": "DEF_CLM_1",
+          "evidence_ids": [
+            "E_33_13A684B424C1D15B"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The cutoff-constrained Crossref publication trend for PMT_HTTPS reports annual HTTPS security publication counts of 14 in 2021, 8 in 2022, 8 in 2023, and 15 in 2024, with an OLS slope of 0.3 works/year and a first-to-last delta of 1."
+        },
+        {
+          "claim_id": "DEF_CLM_2",
+          "evidence_ids": [
+            "E_33_13A684B424C1D15B"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The Crossref HTTPS publication trend is described as an external publication-activity validation axis independent of the Scopus-derived NoP model input, and explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. This limitation constrains the interpretive reach of the E_33 signal beyond publication activity; it does not negate the NoP publication-trajectory direction that the same record supports."
+        },
+        {
+          "claim_id": "DEF_CLM_3",
+          "evidence_ids": [
+            "E_25_99857C4681E8FEE5"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53 Rev.5 describes session authenticity protection as protecting communications sessions against man-in-the-middle attacks, session hijacking, and insertion of false information, with an enhancement to invalidate session identifiers at logout or session termination. This is operational control guidance relevant to the session-hijacking threat domain and the HTTPS PMT domain, not direct evidence of PMT_HTTPS NoP publication-activity trajectory, deployment adoption, or mitigation effectiveness."
+        },
+        {
+          "claim_id": "DEF_CLM_4",
+          "evidence_ids": [
+            "E_04_B9A3190D9CA152A3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2024 reports that security misconfigurations were the most observed OWASP web application risk globally, with allowing concurrent user sessions cited as a misconfiguration that could weaken MFA through session hijacking."
+        },
+        {
+          "claim_id": "DEF_CLM_5",
+          "evidence_ids": [
+            "E_10_AC5A58AF5E015229"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA/Siemens advisory ICSA-22-286-15 states that an XSS vulnerability in affected Siemens SCALANCE switches could result in stealing session cookies and session hijacking, and recommends updating devices, minimizing network exposure, isolating control networks, and using VPNs for remote access."
+        },
+        {
+          "claim_id": "DEF_CLM_6",
+          "evidence_ids": [
+            "E_23_6C42FC29A05ADCAE"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG describes prioritized cybersecurity practices for IT and OT that are voluntarily adopted and informed by threats observed by CISA and its partners."
+        }
+      ],
+      "critic_type": "defense_robustness",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 1,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "SUPPORT_DOMINATES",
+        "rationale": "After deliberation, the sole remaining SUPPORTS_FORECAST basis for the PMT_HTTPS NoP publication-trajectory forecast is DEF_CLM_1, which is directly grounded in E_33_13A684B424C1D15B and confirmed by both critics in Round 2 as accurately reporting the 14/8/8/15 annual counts, 0.30 works/year OLS slope, and first-to-last delta of 1. The former challenging claim DEF_CLM_2 was resolved in ADJ-1/ADJ-R2 as a scope boundary on inference (publication activity does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness) rather than a challenge to the NoP publication-trajectory direction that the same record supports; it is now NEUTRAL_CONTEXT. The former supporting claim DEF_CLM_3 (NIST SP 800-53 session-authenticity control) was resolved in ADJ-2/ADJ-R2 as operational control guidance rather than direct evidence of PMT_HTTPS NoP trajectory; it is now NEUTRAL_CONTEXT. With no remaining CHALLENGES_FORECAST claims and one decisive, directly grounded, mutually confirmed SUPPORTS_FORECAST claim for the PMT_TRAJECTORY component, support dominates. The scope boundary in DEF_CLM_2 and the operational context in DEF_CLM_3 do not negate the publication-activity trajectory signal; they constrain what can be inferred beyond it. The forecasted PMT_HTTPS NoP increase is a publication-activity forecast, and the Crossref trend is the only direct directional evidence for that modality in the surfaced evidence set.",
+        "supporting_claim_ids": [
+          "DEF_CLM_1"
+        ]
+      },
+      "unresolved_questions": [
+        "How should the payload's PMT_HTTPS NoP recent_direction value of decreasing for 2024-12 be reconciled with the Crossref trend's 2024 publication count increase from 8 to 15, given that E_33 is an external validation axis independent of the Scopus-derived NoP model input?",
+        "What exploitation-signal evidence is missing that would distinguish increased session-hijacking opportunity from increased HTTPS mitigation adoption or publication activity?",
+        "What direct evidence would establish HTTPS deployment maturity or implementation for session-hijacking mitigation through 2025-2027, as distinct from publication activity?",
+        "What evidence would establish that the forecasted decrease in threat-minus-PMT gap is caused by HTTPS-specific mitigation movement rather than unrelated changes in threat activity or publication activity, given that no session-hijacking-specific NoP threat trajectory or NoI data is available in the surfaced evidence?"
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "defense_pre_assessment": {
+      "case_id": "main__session_hijacking__https",
+      "claims": [
+        {
+          "claim_id": "DEF_CLM_1",
+          "evidence_ids": [
+            "E_33_13A684B424C1D15B"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The cutoff-constrained Crossref publication trend for PMT_HTTPS reports annual HTTPS security publication counts of 14 in 2021, 8 in 2022, 8 in 2023, and 15 in 2024, with an OLS slope of 0.3 works/year and a first-to-last delta of 1."
+        },
+        {
+          "claim_id": "DEF_CLM_2",
+          "evidence_ids": [
+            "E_33_13A684B424C1D15B"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "The Crossref HTTPS publication trend is described as an external publication-activity validation axis and explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        },
+        {
+          "claim_id": "DEF_CLM_3",
+          "evidence_ids": [
+            "E_25_99857C4681E8FEE5"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "NIST SP 800-53 Rev.5 describes session authenticity protection as protecting communications sessions against man-in-the-middle attacks, session hijacking, and insertion of false information, with an enhancement to invalidate session identifiers at logout."
+        },
+        {
+          "claim_id": "DEF_CLM_4",
+          "evidence_ids": [
+            "E_04_B9A3190D9CA152A3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2024 reports that security misconfigurations were the most observed OWASP web application risk globally, with allowing concurrent user sessions cited as a misconfiguration that could weaken MFA through session hijacking."
+        },
+        {
+          "claim_id": "DEF_CLM_5",
+          "evidence_ids": [
+            "E_10_AC5A58AF5E015229"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA/Siemens advisory ICSA-22-286-15 states that an XSS vulnerability in affected Siemens SCALANCE switches could result in stealing session cookies and session hijacking, and recommends updating devices, minimizing network exposure, isolating control networks, and using VPNs for remote access."
+        },
+        {
+          "claim_id": "DEF_CLM_6",
+          "evidence_ids": [
+            "E_23_6C42FC29A05ADCAE"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG describes prioritized cybersecurity practices for IT and OT that are voluntarily adopted and informed by threats observed by CISA and its partners."
+        }
+      ],
+      "critic_type": "defense_robustness",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 1,
+      "stance_basis": {
+        "challenging_claim_ids": [
+          "DEF_CLM_2"
+        ],
+        "decision": "SUPPORT_DOMINATES",
+        "rationale": "The only direct directional evidence for the forecasted PMT_HTTPS NoP increase is the cutoff-constrained HTTPS security publication trend, which shows a 2024 rebound and a positive OLS slope. This supports the PMT trajectory component, although it is explicitly limited to publication activity and does not prove deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "supporting_claim_ids": [
+          "DEF_CLM_1"
+        ]
+      },
+      "unresolved_questions": [
+        "What direct evidence would establish HTTPS deployment maturity or implementation for session-hijacking mitigation through 2025–2027?",
+        "What evidence would establish that the forecasted decrease in threat-minus-PMT gap is caused by HTTPS-specific mitigation movement rather than unrelated changes in threat activity or publication activity?",
+        "How should the payload’s PMT_HTTPS NoP recent_direction value of decreasing for 2024-12 be reconciled with the Crossref trend’s 2024 publication count increase?",
+        "What exploitation-signal evidence is missing that would distinguish increased session-hijacking opportunity from increased HTTPS mitigation adoption?"
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "evidence_conflicts": [],
+    "evidence_gaps": [],
+    "exchanges": [
+      {
+        "claim_id": "DEF_CLM_1",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "note": "The cited Crossref trend record explicitly states the 2021–2024 publication counts, OLS slope of 0.3 works/year, and first-to-last delta of 1 for PMT_HTTPS. This directly grounds the stated publication-activity trajectory, subject to the record’s own limitation to publication activity rather than deployment or operational effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_CLM_2",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "note": "The cited record does support the limitation that the trend is an external publication-activity axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. However, as written with forecast_relation CHALLENGES_FORECAST, the claim is overbroad: the limitation constrains interpretation of the PMT signal and does not materially challenge the NoP publication-trajectory forecast itself. It should be treated as a boundary/contextual limitation rather than a direct challenge to the PMT trajectory.",
+        "response_type": "REVISE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_CLM_3",
+        "evidence_ids": [
+          "E_25_99857C4681E8FEE5"
+        ],
+        "note": "The cited NIST SP 800-53 record supports the factual description of session-authenticity protection and the logout invalidation enhancement. But as a SUPPORTS_FORECAST claim for the PMT_HTTPS forecast, it is overbroad: this is operational control context, not direct evidence of increasing HTTPS publication activity, deployment maturity, or mitigation effectiveness.",
+        "response_type": "REVISE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_CLM_4",
+        "evidence_ids": [
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "note": "The cited IBM X-Force 2024 excerpt states that security misconfigurations were the most observed OWASP web application risk globally and that allowing concurrent user sessions could weaken MFA through session hijacking. This supports the claim as neutral operational context.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_CLM_5",
+        "evidence_ids": [
+          "E_10_AC5A58AF5E015229"
+        ],
+        "note": "The cited CISA/Siemens advisory states that the cross-site scripting vulnerability could enable session-cookie stealing and session hijacking, and it recommends updates, minimizing network exposure, isolating control-system networks, and using VPNs for remote access. This supports the claim as neutral operational context.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_CLM_6",
+        "evidence_ids": [
+          "E_23_6C42FC29A05ADCAE"
+        ],
+        "note": "The cited CISA CPG excerpt describes the CPGs as a prioritized subset of cybersecurity practices for IT and OT, voluntarily adopted, and informed by threats observed by CISA and its partners. This supports the claim as contextual material.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "E_10_AC5A58AF5E015229"
+        ],
+        "note": "E_10_AC5A58AF5E015229 directly supports the stated XSS/session-cookie theft/session-hijacking mechanism and update/network-exposure guidance. It remains operational context and does not establish NoI or NoP trajectory.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "note": "E_04_B9A3190D9CA152A3 directly supports the stated IBM X-Force 2024 finding that security misconfigurations were the most observed OWASP web application risk and that allowing concurrent user sessions could weaken MFA through session hijacking. This is observed operational context, not a temporal NoI/NoP trajectory for session hijacking.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "note": "E_04_B9A3190D9CA152A3 directly supports the stated 29% public-facing application exploitation share, the comparison to 2022, and the 2023 MFT risk discussion. These are incident/context shares and do not by themselves establish session-hijacking-specific NoI, threat trajectory, or GAP_DIRECTION.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C4",
+        "evidence_ids": [
+          "E_25_99857C4681E8FEE5"
+        ],
+        "note": "E_25_99857C4681E8FEE5 directly supports the stated NIST SP 800-53 Rev.5 session-authenticity language, including protection against session hijacking and invalidation of session identifiers at logout or session termination. This is control guidance, not measured operational effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C5",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "note": "E_33_13A684B424C1D15B reports the stated HTTPS security publication counts and OLS slope. As written, it supports only the PMT_HTTPS NoP publication-activity axis and does not establish deployment maturity, operational effectiveness, causal mitigation effectiveness, or threat-side trajectory.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C6",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "note": "E_33_13A684B424C1D15B explicitly frames the record as an external publication-activity validation axis and disclaims deployment maturity, operational effectiveness, and causal mitigation effectiveness. This limitation is material to any PMT interpretation.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C7",
+        "evidence_ids": [
+          "E_02_3AE1561299B667F5"
+        ],
+        "note": "E_02_3AE1561299B667F5 is a VERIS-to-ATT&CK mapping discussion and supports the claim only as neutral framework context. It does not provide session-hijacking-specific threat trajectory, NoP trend, or PMT effectiveness evidence.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C8",
+        "evidence_ids": [
+          "E_03_6B1B12ABFD14313F"
+        ],
+        "note": "E_03_6B1B12ABFD14313F supports the claim that the supplied Mandiant M-Trends excerpt discusses North Korean threat groups and cryptocurrency targeting. It is neutral adversary-trend context and is not session-hijacking-specific or directly tied to the frozen Threat-PMT forecast modalities.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C9",
+        "evidence_ids": [
+          "E_12_9B8ECD82AD844621",
+          "E_12_CFEC6517865F0563"
+        ],
+        "note": "E_12_9B8ECD82AD844621 and E_12_CFEC6517865F0563 directly support the described MITRE ATT&CK records. They provide only weak capability context; neither record is direct session-hijacking-specific NoI/NoP trajectory evidence.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "DEF_CLM_1",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "note": "E_33_13A684B424C1D15B explicitly reports the stated PMT_HTTPS annual publication counts of 14 in 2021, 8 in 2022, 8 in 2023, and 15 in 2024, with an OLS slope of 0.3 works/year and a first-to-last delta of 1. The claim is accurate as a cutoff-constrained publication-activity trajectory. It remains PMT-side publication-activity support only; it does not establish deployment maturity, operational effectiveness, causal mitigation effectiveness, threat-side NoP or NoI trajectory, or direct GAP_DIRECTION.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_CLM_2",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "note": "Addressing FR-1: E_33_13A684B424C1D15B supports the stated limitation that the record is an external publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. However, that limitation is best read as a scope boundary on inference rather than a direct challenge to the NoP publication-trajectory direction supported by the same record. The defensible core is factual, but the claim needs a narrower interpretation as a boundary or context limitation, not as a material challenge to the PMT publication-trajectory forecast. This also resolves the internal tension with DEF_CLM_1: E_33 can support the publication-activity trajectory while simultaneously stating that the evidence does not reach deployment, operational, or causal effectiveness claims. It still does not become decisive threat-side evidence.",
+        "response_type": "REVISE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_CLM_3",
+        "evidence_ids": [
+          "E_25_99857C4681E8FEE5"
+        ],
+        "note": "Addressing FR-2: E_25_99857C4681E8FEE5 directly supports the factual description of NIST SP 800-53 Rev.5 session-authenticity protection, including protection against man-in-the-middle attacks, session hijacking, and insertion of false information, with an enhancement to invalidate session identifiers at logout or session termination. But the claim needs a narrower interpretation: E_25 is operational control guidance, not direct evidence of PMT_HTTPS NoP publication-activity trajectory, deployment adoption, or mitigation effectiveness. No specific aspect of E_25 provides trajectory-direction evidence beyond describing the control, so it should be treated as neutral operational context for the session-hijacking domain rather than support for the forecasted PMT trajectory.",
+        "response_type": "REVISE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_CLM_4",
+        "evidence_ids": [
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "note": "E_04_B9A3190D9CA152A3 directly states that security misconfigurations were the most observed OWASP web application risk globally and that allowing concurrent user sessions could weaken MFA through session hijacking. The claim is accurate as neutral operational context. It does not, by itself, establish a session-hijacking-specific temporal NoI or NoP threat trajectory or direct GAP_DIRECTION.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_CLM_5",
+        "evidence_ids": [
+          "E_10_AC5A58AF5E015229"
+        ],
+        "note": "E_10_AC5A58AF5E015229 directly supports the stated CISA/Siemens advisory content: an XSS vulnerability in affected SCALANCE products could enable stealing of session cookies and session hijacking, with recommendations including updates, minimizing network exposure, isolating control-system networks, and using VPNs for remote access. The claim is accurate as neutral operational context for mechanism and mitigation guidance. It does not establish realized exploitation frequency, temporal threat trajectory, or direct NoI/NoP direction.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "DEF_CLM_6",
+        "evidence_ids": [
+          "E_23_6C42FC29A05ADCAE"
+        ],
+        "note": "E_23_6C42FC29A05ADCAE directly supports the stated characterization of CISA CPGs as prioritized cybersecurity practices for IT and OT, intended for voluntary adoption and informed by threats observed by CISA and partners. The claim is accurate as contextual guidance. It does not establish HTTPS deployment maturity, operational effectiveness, mitigation causality, or threat-side trajectory.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "E_10_AC5A58AF5E015229"
+        ],
+        "note": "E_10_AC5A58AF5E015229 directly supports the stated CISA/Siemens advisory content, including the XSS-to-session-cookie-stealing/session-hijacking mechanism and the update/network-exposure recommendations. This remains operational context and does not establish NoI or NoP trajectory.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "note": "E_04_B9A3190D9CA152A3 directly supports the IBM X-Force 2024 finding that security misconfigurations were the most observed OWASP web application risk and that allowing concurrent user sessions could weaken MFA through session hijacking. This is observed operational context, not a temporal session-hijacking NoI or NoP trajectory.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "note": "E_04_B9A3190D9CA152A3 directly supports the stated 29% public-facing application exploitation share, the comparison to 2022, and the 2023 MFT exploitation discussion. These are incident shares and operational context; they do not establish session-hijacking-specific NoI, threat trajectory, or GAP_DIRECTION.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C4",
+        "evidence_ids": [
+          "E_25_99857C4681E8FEE5"
+        ],
+        "note": "E_25_99857C4681E8FEE5 supports the factual NIST SP 800-53 Rev.5 session-authenticity control description, including protection against session hijacking and invalidating session identifiers at logout or session termination. In light of ADJ-2 and FR-2, I accept that E_25 is operational control guidance, not direct evidence of the PMT_HTTPS NoP publication-trajectory direction. It does not establish increasing HTTPS publication activity, deployment maturity, or mitigation effectiveness. For the post-assessment, the corrected characterization of my DEF_CLM_3 should be NEUTRAL_CONTEXT; this preserves the operational relevance of the control while removing an unsupported trajectory-direction claim. I am not rewriting the frozen Stage 1 claim in this debate turn.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C5",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "note": "E_33_13A684B424C1D15B reports the stated HTTPS security publication counts for 2021-2024 and the OLS slope of 0.30 works/year. As written, it supports only the PMT_HTTPS NoP publication-activity axis and does not establish deployment maturity, operational effectiveness, causal mitigation effectiveness, or threat-side trajectory.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C6",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "note": "E_33_13A684B424C1D15B states the limitation language: the trend is an external publication-activity validation axis independent of the Scopus-derived NoP model input and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. In light of ADJ-1 and FR-1, I accept that this language is a scope boundary on inference rather than a direct challenge to the NoP publication-trajectory direction supported by the same record. The record simultaneously supports the publication-activity trajectory, as reflected in C5 and DEF_CLM_1, and limits what can be inferred beyond publication activity. For the post-assessment, the corrected characterization of my DEF_CLM_2 should be NEUTRAL_CONTEXT; this resolves the overbreadth concern while preserving the substantive limitation that publication activity is not deployment maturity or effectiveness. I am not rewriting the frozen Stage 1 claim in this debate turn.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C7",
+        "evidence_ids": [
+          "E_02_3AE1561299B667F5"
+        ],
+        "note": "E_02_3AE1561299B667F5 is the supplied VERIS-to-ATT&CK mapping discussion and supports C7 as neutral framework context. It does not provide session-hijacking-specific NoP trend, threat trajectory, or PMT effectiveness evidence.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C8",
+        "evidence_ids": [
+          "E_03_6B1B12ABFD14313F"
+        ],
+        "note": "E_03_6B1B12ABFD14313F supports the supplied Mandiant M-Trends excerpt discussing North Korean threat groups and cryptocurrency targeting. This is neutral adversary-trend context and is not session-hijacking-specific or directly tied to the frozen Threat-PMT forecast modalities.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "C9",
+        "evidence_ids": [
+          "E_12_9B8ECD82AD844621",
+          "E_12_CFEC6517865F0563"
+        ],
+        "note": "E_12_9B8ECD82AD844621 and E_12_CFEC6517865F0563 support the described MITRE ATT&CK records for BOOTRASH and ASPXSpy. They provide only weak capability context; neither record is direct session-hijacking-specific NoI or NoP trajectory evidence.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      }
+    ],
+    "final_adjudications": [
+      {
+        "adjudication_id": "ADJ-R2-DEF_CLM_2-RESOLVED",
+        "attack_claim_ids": [
+          "C6"
+        ],
+        "defense_claim_ids": [
+          "DEF_CLM_2"
+        ],
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "outcome": "ACCEPT_ATTACK",
+        "rationale": "The Round 1 dispute over DEF_CLM_2's forecast_relation is now fully resolved. E_33_13A684B424C1D15B contains both the publication-activity trajectory data (14/8/8/15, OLS 0.30, delta 1) and the explicit limitation language ('does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness'). The Attack's characterization (C6, NEUTRAL_CONTEXT) correctly treats the limitation language as a scope boundary on inference rather than a direct challenge to the NoP publication-trajectory direction that the same record independently supports (as confirmed by C5 and DEF_CLM_1, both of which label the trajectory data as SUPPORTS_FORECAST from the identical E_33 record). In Round 2, the Attack issued a REVISE noting the limitation is a boundary/contextual constraint, and the Defense explicitly agreed with C6 and stated: 'the corrected characterization of my DEF_CLM_2 should be NEUTRAL_CONTEXT; this resolves the overbreadth concern while preserving the substantive limitation that publication activity is not deployment maturity or effectiveness.' Both sides converge on the same evidentiary reading: E_33 simultaneously supports the PMT publication-activity trajectory and constrains what can be inferred beyond it. The Attack's NEUTRAL_CONTEXT label for the limitation language is the better-grounded interpretation because the record's own structure (trajectory data + scope disclaimer) is internally coherent under NEUTRAL_CONTEXT but incoherent under CHALLENGES_FORECAST, which would require the same record to both support and challenge the trajectory it reports. The Defense's post-assessment should reflect DEF_CLM_2 as NEUTRAL_CONTEXT, preserving the factual limitation content while removing the overbroad CHALLENGES_FORECAST label.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ-R2-DEF_CLM_3-RESOLVED",
+        "attack_claim_ids": [
+          "C4"
+        ],
+        "defense_claim_ids": [
+          "DEF_CLM_3"
+        ],
+        "evidence_ids": [
+          "E_25_99857C4681E8FEE5"
+        ],
+        "outcome": "ACCEPT_ATTACK",
+        "rationale": "The Round 1 dispute over DEF_CLM_3's forecast_relation is now fully resolved. E_25_99857C4681E8FEE5 is a static security control specification from NIST SP 800-53 Rev. 5 that describes what session-authenticity protection should include (protection against man-in-the-middle attacks, session hijacking, insertion of false information) and specifies an enhancement to invalidate session identifiers at logout. The factual description in both C4 and DEF_CLM_3 is accurate. However, a control specification does not constitute direct evidence of a dynamic publication-activity trajectory for PMT_HTTPS. It does not measure increasing HTTPS publication counts, deployment adoption rates, or mitigation effectiveness. The Attack's characterization (C4, NEUTRAL_CONTEXT) correctly treats E_25 as operational control guidance relevant to the session-hijacking threat domain without overreaching into trajectory-direction support. In Round 2, the Attack issued a REVISE stating E_25 provides no trajectory-direction evidence beyond describing the control, and the Defense explicitly agreed with C4 and stated: 'the corrected characterization of my DEF_CLM_3 should be NEUTRAL_CONTEXT; this preserves the operational relevance of the control while removing an unsupported trajectory-direction claim.' Both sides converge. The Defense's post-assessment should reflect DEF_CLM_3 as NEUTRAL_CONTEXT, retaining the accurate factual description of the NIST control while removing the unsupported SUPPORTS_FORECAST label for the PMT_HTTPS NoP trajectory.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ-R2-C5-DEF_CLM_1-CONFIRMED",
+        "attack_claim_ids": [
+          "C5"
+        ],
+        "defense_claim_ids": [
+          "DEF_CLM_1"
+        ],
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "outcome": "ACCEPT_BOTH",
+        "rationale": "Both C5 (Attack, PMT_TRAJECTORY, SUPPORTS_FORECAST) and DEF_CLM_1 (Defense, PMT_TRAJECTORY, SUPPORTS_FORECAST) cite E_33_13A684B424C1D15B and report identical publication counts (14 in 2021, 8 in 2022, 8 in 2023, 15 in 2024), OLS slope of 0.30 works/year, and first-to-last delta of 1. Both critics AGREE on this claim in Round 2. The E_33 content directly and explicitly states these figures. Both claims are properly bounded to the publication-activity axis and do not overreach into deployment maturity or operational effectiveness. No dispute remains. This confirms the Round 1 ADJ-3 acceptance.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ-R2-C1-DEF_CLM_5-CONFIRMED",
+        "attack_claim_ids": [
+          "C1"
+        ],
+        "defense_claim_ids": [
+          "DEF_CLM_5"
+        ],
+        "evidence_ids": [
+          "E_10_AC5A58AF5E015229"
+        ],
+        "outcome": "ACCEPT_BOTH",
+        "rationale": "Both C1 (Attack, NEUTRAL_CONTEXT) and DEF_CLM_5 (Defense, NEUTRAL_CONTEXT) cite E_10_AC5A58AF5E015229 (ICSA-22-286-15) and accurately describe the CISA/Siemens advisory: XSS in affected SCALANCE products could enable session-cookie stealing and session hijacking, with recommendations for updates, minimizing network exposure, isolating control-system networks, and using VPNs. Both critics AGREE in Round 2. The E_10 content directly supports every factual element in both claims. Both are properly classified as neutral operational context and do not overreach into threat trajectory or mitigation effectiveness. No dispute remains. This confirms the Round 1 ADJ-4 acceptance.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ-R2-C2-DEF_CLM_4-CONFIRMED",
+        "attack_claim_ids": [
+          "C2"
+        ],
+        "defense_claim_ids": [
+          "DEF_CLM_4"
+        ],
+        "evidence_ids": [
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "outcome": "ACCEPT_BOTH",
+        "rationale": "Both C2 (Attack, NEUTRAL_CONTEXT) and DEF_CLM_4 (Defense, NEUTRAL_CONTEXT) cite E_04_B9A3190D9CA152A3 (IBM X-Force 2024) and accurately describe the finding that security misconfigurations were the most observed OWASP web application risk globally (30% of findings), with allowing concurrent user sessions at 15% cited as a path to weaken MFA through session hijacking. Both critics AGREE in Round 2. The E_04 content directly supports every factual element. Both are properly classified as neutral operational context and do not establish session-hijacking-specific temporal NoI/NoP trajectory or GAP_DIRECTION. No dispute remains. This confirms the Round 1 ADJ-5 acceptance.",
+        "required_revision": null
+      }
+    ],
+    "resolved_claims": [],
+    "rounds": [
+      {
+        "attack_turn": {
+          "case_id": "main__session_hijacking__https",
+          "responder_critic": "attack_feasibility",
+          "responses": [
+            {
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "note": "The cited Crossref trend record explicitly states the 2021–2024 publication counts, OLS slope of 0.3 works/year, and first-to-last delta of 1 for PMT_HTTPS. This directly grounds the stated publication-activity trajectory, subject to the record’s own limitation to publication activity rather than deployment or operational effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_CLM_1"
+            },
+            {
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "note": "The cited record does support the limitation that the trend is an external publication-activity axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. However, as written with forecast_relation CHALLENGES_FORECAST, the claim is overbroad: the limitation constrains interpretation of the PMT signal and does not materially challenge the NoP publication-trajectory forecast itself. It should be treated as a boundary/contextual limitation rather than a direct challenge to the PMT trajectory.",
+              "response_type": "REVISE",
+              "target_claim_id": "DEF_CLM_2"
+            },
+            {
+              "evidence_ids": [
+                "E_25_99857C4681E8FEE5"
+              ],
+              "note": "The cited NIST SP 800-53 record supports the factual description of session-authenticity protection and the logout invalidation enhancement. But as a SUPPORTS_FORECAST claim for the PMT_HTTPS forecast, it is overbroad: this is operational control context, not direct evidence of increasing HTTPS publication activity, deployment maturity, or mitigation effectiveness.",
+              "response_type": "REVISE",
+              "target_claim_id": "DEF_CLM_3"
+            },
+            {
+              "evidence_ids": [
+                "E_04_B9A3190D9CA152A3"
+              ],
+              "note": "The cited IBM X-Force 2024 excerpt states that security misconfigurations were the most observed OWASP web application risk globally and that allowing concurrent user sessions could weaken MFA through session hijacking. This supports the claim as neutral operational context.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_CLM_4"
+            },
+            {
+              "evidence_ids": [
+                "E_10_AC5A58AF5E015229"
+              ],
+              "note": "The cited CISA/Siemens advisory states that the cross-site scripting vulnerability could enable session-cookie stealing and session hijacking, and it recommends updates, minimizing network exposure, isolating control-system networks, and using VPNs for remote access. This supports the claim as neutral operational context.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_CLM_5"
+            },
+            {
+              "evidence_ids": [
+                "E_23_6C42FC29A05ADCAE"
+              ],
+              "note": "The cited CISA CPG excerpt describes the CPGs as a prioritized subset of cybersecurity practices for IT and OT, voluntarily adopted, and informed by threats observed by CISA and its partners. This supports the claim as contextual material.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_CLM_6"
+            }
+          ],
+          "round_index": 1,
+          "target_critic": "defense_robustness"
+        },
+        "defense_turn": {
+          "case_id": "main__session_hijacking__https",
+          "responder_critic": "defense_robustness",
+          "responses": [
+            {
+              "evidence_ids": [
+                "E_10_AC5A58AF5E015229"
+              ],
+              "note": "E_10_AC5A58AF5E015229 directly supports the stated XSS/session-cookie theft/session-hijacking mechanism and update/network-exposure guidance. It remains operational context and does not establish NoI or NoP trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "C1"
+            },
+            {
+              "evidence_ids": [
+                "E_04_B9A3190D9CA152A3"
+              ],
+              "note": "E_04_B9A3190D9CA152A3 directly supports the stated IBM X-Force 2024 finding that security misconfigurations were the most observed OWASP web application risk and that allowing concurrent user sessions could weaken MFA through session hijacking. This is observed operational context, not a temporal NoI/NoP trajectory for session hijacking.",
+              "response_type": "AGREE",
+              "target_claim_id": "C2"
+            },
+            {
+              "evidence_ids": [
+                "E_04_B9A3190D9CA152A3"
+              ],
+              "note": "E_04_B9A3190D9CA152A3 directly supports the stated 29% public-facing application exploitation share, the comparison to 2022, and the 2023 MFT risk discussion. These are incident/context shares and do not by themselves establish session-hijacking-specific NoI, threat trajectory, or GAP_DIRECTION.",
+              "response_type": "AGREE",
+              "target_claim_id": "C3"
+            },
+            {
+              "evidence_ids": [
+                "E_25_99857C4681E8FEE5"
+              ],
+              "note": "E_25_99857C4681E8FEE5 directly supports the stated NIST SP 800-53 Rev.5 session-authenticity language, including protection against session hijacking and invalidation of session identifiers at logout or session termination. This is control guidance, not measured operational effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "C4"
+            },
+            {
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "note": "E_33_13A684B424C1D15B reports the stated HTTPS security publication counts and OLS slope. As written, it supports only the PMT_HTTPS NoP publication-activity axis and does not establish deployment maturity, operational effectiveness, causal mitigation effectiveness, or threat-side trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "C5"
+            },
+            {
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "note": "E_33_13A684B424C1D15B explicitly frames the record as an external publication-activity validation axis and disclaims deployment maturity, operational effectiveness, and causal mitigation effectiveness. This limitation is material to any PMT interpretation.",
+              "response_type": "AGREE",
+              "target_claim_id": "C6"
+            },
+            {
+              "evidence_ids": [
+                "E_02_3AE1561299B667F5"
+              ],
+              "note": "E_02_3AE1561299B667F5 is a VERIS-to-ATT&CK mapping discussion and supports the claim only as neutral framework context. It does not provide session-hijacking-specific threat trajectory, NoP trend, or PMT effectiveness evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "C7"
+            },
+            {
+              "evidence_ids": [
+                "E_03_6B1B12ABFD14313F"
+              ],
+              "note": "E_03_6B1B12ABFD14313F supports the claim that the supplied Mandiant M-Trends excerpt discusses North Korean threat groups and cryptocurrency targeting. It is neutral adversary-trend context and is not session-hijacking-specific or directly tied to the frozen Threat-PMT forecast modalities.",
+              "response_type": "AGREE",
+              "target_claim_id": "C8"
+            },
+            {
+              "evidence_ids": [
+                "E_12_9B8ECD82AD844621",
+                "E_12_CFEC6517865F0563"
+              ],
+              "note": "E_12_9B8ECD82AD844621 and E_12_CFEC6517865F0563 directly support the described MITRE ATT&CK records. They provide only weak capability context; neither record is direct session-hijacking-specific NoI/NoP trajectory evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "C9"
+            }
+          ],
+          "round_index": 1,
+          "target_critic": "attack_feasibility"
+        },
+        "mediator_summary": {
+          "adjudications": [
+            {
+              "adjudication_id": "ADJ-1-DEF_CLM_2-FORECAST_RELATION",
+              "attack_claim_ids": [
+                "C6"
+              ],
+              "defense_claim_ids": [
+                "DEF_CLM_2"
+              ],
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "rationale": "Both C6 (Attack, NEUTRAL_CONTEXT) and DEF_CLM_2 (Defense, CHALLENGES_FORECAST) reference the identical E_33 limitation language: 'This is an external publication-activity validation axis independent of the Scopus-derived NoP model input. It does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.' The factual content of the limitation is uncontested. The dispute is solely over the forecast_relation label. E_33 simultaneously supports the NoP publication-trajectory axis (as DEF_CLM_1 and C5 both confirm with the 14/8/8/15 counts and 0.30 OLS slope) and states scope boundaries on what can be inferred beyond publication activity. Labeling the scope-boundary language as CHALLENGES_FORECAST is overbroad because it does not challenge the NoP publication-trajectory direction itself; it constrains the interpretive reach of the signal. The Attack's characterization as a boundary/contextual limitation (NEUTRAL_CONTEXT) is better grounded in the evidence text. The Defense must narrow DEF_CLM_2 to reflect that E_33's limitation language defines the scope of inference (no deployment maturity, operational effectiveness, or causal mitigation effectiveness) without negating or challenging the NoP publication-trajectory support that the same record provides.",
+              "required_revision": "Revise DEF_CLM_2 forecast_relation from CHALLENGES_FORECAST to NEUTRAL_CONTEXT. The claim statement may retain the factual limitation language from E_33, but the rationale must clarify that the limitation constrains the scope of inference (deployment maturity, operational effectiveness, causal mitigation effectiveness) rather than challenging the NoP publication-trajectory direction that E_33 independently supports. Acknowledge the internal tension with DEF_CLM_1, which draws SUPPORTS_FORECAST from the same E_33 record, and explain that the two claims address different aspects of the same evidence (trajectory support vs. interpretive scope boundary)."
+            },
+            {
+              "adjudication_id": "ADJ-2-DEF_CLM_3-FORECAST_RELATION",
+              "attack_claim_ids": [
+                "C4"
+              ],
+              "defense_claim_ids": [
+                "DEF_CLM_3"
+              ],
+              "evidence_ids": [
+                "E_25_99857C4681E8FEE5"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "rationale": "Both C4 (Attack, NEUTRAL_CONTEXT) and DEF_CLM_3 (Defense, SUPPORTS_FORECAST) reference E_25, the NIST SP 800-53 Rev.5 session-authenticity control. The factual description in both claims is accurate: the control protects against man-in-the-middle attacks, session hijacking, and insertion of false information, with an enhancement to invalidate session identifiers at logout. However, E_25 is a security control specification. It defines what the control should do, not evidence that HTTPS-related publications are increasing, that deployment maturity is rising, or that the PMT_HTTPS NoP trajectory is moving in the forecast direction. The Attack's characterization as operational control context (NEUTRAL_CONTEXT) is better grounded: the control is topically relevant to the session-hijacking threat and the HTTPS PMT domain, but it does not constitute direct evidence of the PMT_HTTPS NoP publication trajectory. Labeling it SUPPORTS_FORECAST for the PMT_HTTPS trajectory overstates the evidentiary contribution of a static control document to a dynamic publication-activity forecast.",
+              "required_revision": "Revise DEF_CLM_3 forecast_relation from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. The claim statement may retain the accurate factual description of the NIST SP 800-53 session-authenticity control and its session-hijacking protection language, but the rationale must clarify that this is operational control guidance relevant to the session-hijacking threat domain, not direct evidence of the PMT_HTTPS NoP publication-trajectory direction. The control's existence and specification do not establish increasing HTTPS publication activity, deployment adoption, or mitigation effectiveness."
+            },
+            {
+              "adjudication_id": "ADJ-3-C5-DEF_CLM_1-AGREED",
+              "attack_claim_ids": [
+                "C5"
+              ],
+              "defense_claim_ids": [
+                "DEF_CLM_1"
+              ],
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "C5 (Attack, PMT_TRAJECTORY, SUPPORTS_FORECAST) and DEF_CLM_1 (Defense, PMT_TRAJECTORY, SUPPORTS_FORECAST) both cite E_33 and report identical publication counts (14 in 2021, 8 in 2022, 8 in 2023, 15 in 2024), OLS slope of 0.30 works/year, and first-to-last delta of 1. Both critics agree this supports the PMT_HTTPS NoP publication-trajectory axis. The Attack explicitly AGREEs with DEF_CLM_1, and the Defense explicitly AGREEs with C5. No substantive dispute remains. Both claims are properly bounded to publication activity and do not overreach into deployment maturity or operational effectiveness.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-4-C1-DEF_CLM_5-AGREED",
+              "attack_claim_ids": [
+                "C1"
+              ],
+              "defense_claim_ids": [
+                "DEF_CLM_5"
+              ],
+              "evidence_ids": [
+                "E_10_AC5A58AF5E015229"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "C1 (Attack, NEUTRAL_CONTEXT) and DEF_CLM_5 (Defense, NEUTRAL_CONTEXT) both cite E_10 (ICSA-22-286-15) and accurately describe the CISA/Siemens advisory: XSS in SCALANCE products could enable session-cookie stealing and session hijacking, with recommendations for updates, network exposure minimization, network isolation, and VPN use. Both critics classify this as neutral operational context. The Attack AGREEs with DEF_CLM_5, and the Defense AGREEs with C1. No substantive dispute remains.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-5-C2-DEF_CLM_4-AGREED",
+              "attack_claim_ids": [
+                "C2"
+              ],
+              "defense_claim_ids": [
+                "DEF_CLM_4"
+              ],
+              "evidence_ids": [
+                "E_04_B9A3190D9CA152A3"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "C2 (Attack, NEUTRAL_CONTEXT) and DEF_CLM_4 (Defense, NEUTRAL_CONTEXT) both cite E_04 (IBM X-Force 2024) and accurately describe the finding that security misconfigurations were the most observed OWASP web application risk globally (30% of findings), with allowing concurrent user sessions at 15% of misconfiguration findings cited as a path to weaken MFA through session hijacking. Both critics classify this as neutral operational context. The Attack AGREEs with DEF_CLM_4, and the Defense AGREEs with C2. No substantive dispute remains.",
+              "required_revision": null
+            }
+          ],
+          "case_id": "main__session_hijacking__https",
+          "claim_matches": [],
+          "evidence_conflicts": [],
+          "evidence_gaps": [],
+          "next_round_focus": [
+            {
+              "attack_claim_ids": [
+                "C6"
+              ],
+              "defense_claim_ids": [
+                "DEF_CLM_2"
+              ],
+              "focus_id": "FR-1-DEF_CLM_2",
+              "instruction": "Defense should re-examine DEF_CLM_2 in light of ADJ-1. Specifically: (a) confirm whether the E_33 limitation language ('does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness') is a scope boundary on inference rather than a direct challenge to the NoP publication-trajectory direction that the same record supports in DEF_CLM_1; (b) if so, revise the forecast_relation to NEUTRAL_CONTEXT and adjust the rationale to explain the distinction between trajectory support and interpretive scope limitation; (c) address the internal tension with DEF_CLM_1 explicitly. Attack should review whether the revised characterization adequately resolves the overbreadth concern without losing the substantive point that publication activity is not deployment or effectiveness."
+            },
+            {
+              "attack_claim_ids": [
+                "C4"
+              ],
+              "defense_claim_ids": [
+                "DEF_CLM_3"
+              ],
+              "focus_id": "FR-2-DEF_CLM_3",
+              "instruction": "Defense should re-examine DEF_CLM_3 in light of ADJ-2. Specifically: (a) confirm whether E_25 (NIST SP 800-53 session-authenticity control specification) constitutes direct evidence of the PMT_HTTPS NoP publication-trajectory direction or whether it is operational control guidance topically related to the session-hijacking threat and HTTPS PMT domain; (b) if the latter, revise the forecast_relation to NEUTRAL_CONTEXT and adjust the rationale to reflect that the control's existence and specification do not establish increasing HTTPS publication activity or deployment adoption; (c) if the Defense maintains SUPPORTS_FORECAST, identify which specific aspect of E_25's content provides trajectory-direction evidence beyond the factual description of the control. Attack should review whether the revised characterization preserves the operational relevance of the NIST control while removing the unsupported trajectory-direction claim."
+            }
+          ],
+          "overall_rationale": "The two critics converged on all factual content across every shared evidence record (E_33 publication trend, E_10 CISA/Siemens advisory, E_04 IBM X-Force findings, E_25 NIST control). The only substantive disputes are over forecast_relation labels on two Defense claims: DEF_CLM_2 (CHALLENGES_FORECAST vs. NEUTRAL_CONTEXT for E_33's scope-boundary language) and DEF_CLM_3 (SUPPORTS_FORECAST vs. NEUTRAL_CONTEXT for E_25's control specification). Both Attack challenges are well-grounded in the evidence text. In DEF_CLM_2, the same E_33 record that the Defense uses as SUPPORTS_FORECAST in DEF_CLM_1 cannot simultaneously CHALLENGE the NoP publication trajectory; the limitation language constrains inference scope (deployment, effectiveness, causality) rather than negating the trajectory signal. In DEF_CLM_3, a static security control specification does not constitute direct evidence of a dynamic publication-activity trajectory. The fundamental evidence gap acknowledged by both sides—absence of a session-hijacking-specific NoP threat trajectory and absence of exploitation_signal evidence—remains unchanged and is not in dispute. One more round is warranted to allow the Defense to revise the two forecast_relation labels and for the Attack to confirm the revised characterizations before post-assessment.",
+          "round_action": "CONTINUE",
+          "round_index": 1
+        },
+        "round_index": 1
+      },
+      {
+        "attack_turn": {
+          "case_id": "main__session_hijacking__https",
+          "responder_critic": "attack_feasibility",
+          "responses": [
+            {
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "note": "E_33_13A684B424C1D15B explicitly reports the stated PMT_HTTPS annual publication counts of 14 in 2021, 8 in 2022, 8 in 2023, and 15 in 2024, with an OLS slope of 0.3 works/year and a first-to-last delta of 1. The claim is accurate as a cutoff-constrained publication-activity trajectory. It remains PMT-side publication-activity support only; it does not establish deployment maturity, operational effectiveness, causal mitigation effectiveness, threat-side NoP or NoI trajectory, or direct GAP_DIRECTION.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_CLM_1"
+            },
+            {
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "note": "Addressing FR-1: E_33_13A684B424C1D15B supports the stated limitation that the record is an external publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. However, that limitation is best read as a scope boundary on inference rather than a direct challenge to the NoP publication-trajectory direction supported by the same record. The defensible core is factual, but the claim needs a narrower interpretation as a boundary or context limitation, not as a material challenge to the PMT publication-trajectory forecast. This also resolves the internal tension with DEF_CLM_1: E_33 can support the publication-activity trajectory while simultaneously stating that the evidence does not reach deployment, operational, or causal effectiveness claims. It still does not become decisive threat-side evidence.",
+              "response_type": "REVISE",
+              "target_claim_id": "DEF_CLM_2"
+            },
+            {
+              "evidence_ids": [
+                "E_25_99857C4681E8FEE5"
+              ],
+              "note": "Addressing FR-2: E_25_99857C4681E8FEE5 directly supports the factual description of NIST SP 800-53 Rev.5 session-authenticity protection, including protection against man-in-the-middle attacks, session hijacking, and insertion of false information, with an enhancement to invalidate session identifiers at logout or session termination. But the claim needs a narrower interpretation: E_25 is operational control guidance, not direct evidence of PMT_HTTPS NoP publication-activity trajectory, deployment adoption, or mitigation effectiveness. No specific aspect of E_25 provides trajectory-direction evidence beyond describing the control, so it should be treated as neutral operational context for the session-hijacking domain rather than support for the forecasted PMT trajectory.",
+              "response_type": "REVISE",
+              "target_claim_id": "DEF_CLM_3"
+            },
+            {
+              "evidence_ids": [
+                "E_04_B9A3190D9CA152A3"
+              ],
+              "note": "E_04_B9A3190D9CA152A3 directly states that security misconfigurations were the most observed OWASP web application risk globally and that allowing concurrent user sessions could weaken MFA through session hijacking. The claim is accurate as neutral operational context. It does not, by itself, establish a session-hijacking-specific temporal NoI or NoP threat trajectory or direct GAP_DIRECTION.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_CLM_4"
+            },
+            {
+              "evidence_ids": [
+                "E_10_AC5A58AF5E015229"
+              ],
+              "note": "E_10_AC5A58AF5E015229 directly supports the stated CISA/Siemens advisory content: an XSS vulnerability in affected SCALANCE products could enable stealing of session cookies and session hijacking, with recommendations including updates, minimizing network exposure, isolating control-system networks, and using VPNs for remote access. The claim is accurate as neutral operational context for mechanism and mitigation guidance. It does not establish realized exploitation frequency, temporal threat trajectory, or direct NoI/NoP direction.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_CLM_5"
+            },
+            {
+              "evidence_ids": [
+                "E_23_6C42FC29A05ADCAE"
+              ],
+              "note": "E_23_6C42FC29A05ADCAE directly supports the stated characterization of CISA CPGs as prioritized cybersecurity practices for IT and OT, intended for voluntary adoption and informed by threats observed by CISA and partners. The claim is accurate as contextual guidance. It does not establish HTTPS deployment maturity, operational effectiveness, mitigation causality, or threat-side trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "DEF_CLM_6"
+            }
+          ],
+          "round_index": 2,
+          "target_critic": "defense_robustness"
+        },
+        "defense_turn": {
+          "case_id": "main__session_hijacking__https",
+          "responder_critic": "defense_robustness",
+          "responses": [
+            {
+              "evidence_ids": [
+                "E_10_AC5A58AF5E015229"
+              ],
+              "note": "E_10_AC5A58AF5E015229 directly supports the stated CISA/Siemens advisory content, including the XSS-to-session-cookie-stealing/session-hijacking mechanism and the update/network-exposure recommendations. This remains operational context and does not establish NoI or NoP trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "C1"
+            },
+            {
+              "evidence_ids": [
+                "E_04_B9A3190D9CA152A3"
+              ],
+              "note": "E_04_B9A3190D9CA152A3 directly supports the IBM X-Force 2024 finding that security misconfigurations were the most observed OWASP web application risk and that allowing concurrent user sessions could weaken MFA through session hijacking. This is observed operational context, not a temporal session-hijacking NoI or NoP trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "C2"
+            },
+            {
+              "evidence_ids": [
+                "E_04_B9A3190D9CA152A3"
+              ],
+              "note": "E_04_B9A3190D9CA152A3 directly supports the stated 29% public-facing application exploitation share, the comparison to 2022, and the 2023 MFT exploitation discussion. These are incident shares and operational context; they do not establish session-hijacking-specific NoI, threat trajectory, or GAP_DIRECTION.",
+              "response_type": "AGREE",
+              "target_claim_id": "C3"
+            },
+            {
+              "evidence_ids": [
+                "E_25_99857C4681E8FEE5"
+              ],
+              "note": "E_25_99857C4681E8FEE5 supports the factual NIST SP 800-53 Rev.5 session-authenticity control description, including protection against session hijacking and invalidating session identifiers at logout or session termination. In light of ADJ-2 and FR-2, I accept that E_25 is operational control guidance, not direct evidence of the PMT_HTTPS NoP publication-trajectory direction. It does not establish increasing HTTPS publication activity, deployment maturity, or mitigation effectiveness. For the post-assessment, the corrected characterization of my DEF_CLM_3 should be NEUTRAL_CONTEXT; this preserves the operational relevance of the control while removing an unsupported trajectory-direction claim. I am not rewriting the frozen Stage 1 claim in this debate turn.",
+              "response_type": "AGREE",
+              "target_claim_id": "C4"
+            },
+            {
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "note": "E_33_13A684B424C1D15B reports the stated HTTPS security publication counts for 2021-2024 and the OLS slope of 0.30 works/year. As written, it supports only the PMT_HTTPS NoP publication-activity axis and does not establish deployment maturity, operational effectiveness, causal mitigation effectiveness, or threat-side trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "C5"
+            },
+            {
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "note": "E_33_13A684B424C1D15B states the limitation language: the trend is an external publication-activity validation axis independent of the Scopus-derived NoP model input and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. In light of ADJ-1 and FR-1, I accept that this language is a scope boundary on inference rather than a direct challenge to the NoP publication-trajectory direction supported by the same record. The record simultaneously supports the publication-activity trajectory, as reflected in C5 and DEF_CLM_1, and limits what can be inferred beyond publication activity. For the post-assessment, the corrected characterization of my DEF_CLM_2 should be NEUTRAL_CONTEXT; this resolves the overbreadth concern while preserving the substantive limitation that publication activity is not deployment maturity or effectiveness. I am not rewriting the frozen Stage 1 claim in this debate turn.",
+              "response_type": "AGREE",
+              "target_claim_id": "C6"
+            },
+            {
+              "evidence_ids": [
+                "E_02_3AE1561299B667F5"
+              ],
+              "note": "E_02_3AE1561299B667F5 is the supplied VERIS-to-ATT&CK mapping discussion and supports C7 as neutral framework context. It does not provide session-hijacking-specific NoP trend, threat trajectory, or PMT effectiveness evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "C7"
+            },
+            {
+              "evidence_ids": [
+                "E_03_6B1B12ABFD14313F"
+              ],
+              "note": "E_03_6B1B12ABFD14313F supports the supplied Mandiant M-Trends excerpt discussing North Korean threat groups and cryptocurrency targeting. This is neutral adversary-trend context and is not session-hijacking-specific or directly tied to the frozen Threat-PMT forecast modalities.",
+              "response_type": "AGREE",
+              "target_claim_id": "C8"
+            },
+            {
+              "evidence_ids": [
+                "E_12_9B8ECD82AD844621",
+                "E_12_CFEC6517865F0563"
+              ],
+              "note": "E_12_9B8ECD82AD844621 and E_12_CFEC6517865F0563 support the described MITRE ATT&CK records for BOOTRASH and ASPXSpy. They provide only weak capability context; neither record is direct session-hijacking-specific NoI or NoP trajectory evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "C9"
+            }
+          ],
+          "round_index": 2,
+          "target_critic": "attack_feasibility"
+        },
+        "mediator_summary": {
+          "adjudications": [
+            {
+              "adjudication_id": "ADJ-R2-DEF_CLM_2-RESOLVED",
+              "attack_claim_ids": [
+                "C6"
+              ],
+              "defense_claim_ids": [
+                "DEF_CLM_2"
+              ],
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "outcome": "ACCEPT_ATTACK",
+              "rationale": "The Round 1 dispute over DEF_CLM_2's forecast_relation is now fully resolved. E_33_13A684B424C1D15B contains both the publication-activity trajectory data (14/8/8/15, OLS 0.30, delta 1) and the explicit limitation language ('does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness'). The Attack's characterization (C6, NEUTRAL_CONTEXT) correctly treats the limitation language as a scope boundary on inference rather than a direct challenge to the NoP publication-trajectory direction that the same record independently supports (as confirmed by C5 and DEF_CLM_1, both of which label the trajectory data as SUPPORTS_FORECAST from the identical E_33 record). In Round 2, the Attack issued a REVISE noting the limitation is a boundary/contextual constraint, and the Defense explicitly agreed with C6 and stated: 'the corrected characterization of my DEF_CLM_2 should be NEUTRAL_CONTEXT; this resolves the overbreadth concern while preserving the substantive limitation that publication activity is not deployment maturity or effectiveness.' Both sides converge on the same evidentiary reading: E_33 simultaneously supports the PMT publication-activity trajectory and constrains what can be inferred beyond it. The Attack's NEUTRAL_CONTEXT label for the limitation language is the better-grounded interpretation because the record's own structure (trajectory data + scope disclaimer) is internally coherent under NEUTRAL_CONTEXT but incoherent under CHALLENGES_FORECAST, which would require the same record to both support and challenge the trajectory it reports. The Defense's post-assessment should reflect DEF_CLM_2 as NEUTRAL_CONTEXT, preserving the factual limitation content while removing the overbroad CHALLENGES_FORECAST label.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-DEF_CLM_3-RESOLVED",
+              "attack_claim_ids": [
+                "C4"
+              ],
+              "defense_claim_ids": [
+                "DEF_CLM_3"
+              ],
+              "evidence_ids": [
+                "E_25_99857C4681E8FEE5"
+              ],
+              "outcome": "ACCEPT_ATTACK",
+              "rationale": "The Round 1 dispute over DEF_CLM_3's forecast_relation is now fully resolved. E_25_99857C4681E8FEE5 is a static security control specification from NIST SP 800-53 Rev. 5 that describes what session-authenticity protection should include (protection against man-in-the-middle attacks, session hijacking, insertion of false information) and specifies an enhancement to invalidate session identifiers at logout. The factual description in both C4 and DEF_CLM_3 is accurate. However, a control specification does not constitute direct evidence of a dynamic publication-activity trajectory for PMT_HTTPS. It does not measure increasing HTTPS publication counts, deployment adoption rates, or mitigation effectiveness. The Attack's characterization (C4, NEUTRAL_CONTEXT) correctly treats E_25 as operational control guidance relevant to the session-hijacking threat domain without overreaching into trajectory-direction support. In Round 2, the Attack issued a REVISE stating E_25 provides no trajectory-direction evidence beyond describing the control, and the Defense explicitly agreed with C4 and stated: 'the corrected characterization of my DEF_CLM_3 should be NEUTRAL_CONTEXT; this preserves the operational relevance of the control while removing an unsupported trajectory-direction claim.' Both sides converge. The Defense's post-assessment should reflect DEF_CLM_3 as NEUTRAL_CONTEXT, retaining the accurate factual description of the NIST control while removing the unsupported SUPPORTS_FORECAST label for the PMT_HTTPS NoP trajectory.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-C5-DEF_CLM_1-CONFIRMED",
+              "attack_claim_ids": [
+                "C5"
+              ],
+              "defense_claim_ids": [
+                "DEF_CLM_1"
+              ],
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both C5 (Attack, PMT_TRAJECTORY, SUPPORTS_FORECAST) and DEF_CLM_1 (Defense, PMT_TRAJECTORY, SUPPORTS_FORECAST) cite E_33_13A684B424C1D15B and report identical publication counts (14 in 2021, 8 in 2022, 8 in 2023, 15 in 2024), OLS slope of 0.30 works/year, and first-to-last delta of 1. Both critics AGREE on this claim in Round 2. The E_33 content directly and explicitly states these figures. Both claims are properly bounded to the publication-activity axis and do not overreach into deployment maturity or operational effectiveness. No dispute remains. This confirms the Round 1 ADJ-3 acceptance.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-C1-DEF_CLM_5-CONFIRMED",
+              "attack_claim_ids": [
+                "C1"
+              ],
+              "defense_claim_ids": [
+                "DEF_CLM_5"
+              ],
+              "evidence_ids": [
+                "E_10_AC5A58AF5E015229"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both C1 (Attack, NEUTRAL_CONTEXT) and DEF_CLM_5 (Defense, NEUTRAL_CONTEXT) cite E_10_AC5A58AF5E015229 (ICSA-22-286-15) and accurately describe the CISA/Siemens advisory: XSS in affected SCALANCE products could enable session-cookie stealing and session hijacking, with recommendations for updates, minimizing network exposure, isolating control-system networks, and using VPNs. Both critics AGREE in Round 2. The E_10 content directly supports every factual element in both claims. Both are properly classified as neutral operational context and do not overreach into threat trajectory or mitigation effectiveness. No dispute remains. This confirms the Round 1 ADJ-4 acceptance.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ-R2-C2-DEF_CLM_4-CONFIRMED",
+              "attack_claim_ids": [
+                "C2"
+              ],
+              "defense_claim_ids": [
+                "DEF_CLM_4"
+              ],
+              "evidence_ids": [
+                "E_04_B9A3190D9CA152A3"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both C2 (Attack, NEUTRAL_CONTEXT) and DEF_CLM_4 (Defense, NEUTRAL_CONTEXT) cite E_04_B9A3190D9CA152A3 (IBM X-Force 2024) and accurately describe the finding that security misconfigurations were the most observed OWASP web application risk globally (30% of findings), with allowing concurrent user sessions at 15% cited as a path to weaken MFA through session hijacking. Both critics AGREE in Round 2. The E_04 content directly supports every factual element. Both are properly classified as neutral operational context and do not establish session-hijacking-specific temporal NoI/NoP trajectory or GAP_DIRECTION. No dispute remains. This confirms the Round 1 ADJ-5 acceptance.",
+              "required_revision": null
+            }
+          ],
+          "case_id": "main__session_hijacking__https",
+          "claim_matches": [],
+          "evidence_conflicts": [],
+          "evidence_gaps": [],
+          "next_round_focus": [],
+          "overall_rationale": "The two critics have achieved full convergence on all disputed claims. The two remaining disputes from Round 1—DEF_CLM_2's forecast_relation (CHALLENGES_FORECAST vs. NEUTRAL_CONTEXT for E_33's limitation language) and DEF_CLM_3's forecast_relation (SUPPORTS_FORECAST vs. NEUTRAL_CONTEXT for E_25's control specification)—are now resolved. The Attack issued REVISE on both in Round 2, and the Defense explicitly accepted both corrections in its Round 2 responses, stating the corrected NEUTRAL_CONTEXT characterizations for DEF_CLM_2 and DEF_CLM_3. All other claims (C1–C9, DEF_CLM_1, DEF_CLM_4, DEF_CLM_5, DEF_CLM_6) are agreed upon by both sides with no residual factual or interpretive dispute. The fundamental evidence gap—absence of a session-hijacking-specific NoP threat trajectory, absence of exploitation-signal evidence, and the distinction between Crossref publication-activity data and the Scopus-derived NoP model input—remains acknowledged by both sides and is not in dispute. No further round would materially clarify any remaining question.",
+          "round_action": "STOP",
+          "round_index": 2
+        },
+        "round_index": 2
+      }
+    ],
+    "stance_changes": {
+      "attack_feasibility": 0,
+      "defense_robustness": 0
+    },
+    "unresolved_claims": []
+  },
+  "execution_order_version": "attack-defense-mediator-post-attack-defense-v1",
+  "followup_rule_version": "mediator-adjudication-routes-round2-v1",
+  "forecast_data_sha256": "eebdff04a3bcb6f57bb4759c5f98440bf42938efab274022b5e3ac2cd868f833",
+  "input_fingerprint": "3c51162e7ed349a0b646e0c5cba4e334dce9ebc10cc2dcee4b4fcc9819119db5",
+  "max_rounds": 2,
+  "output_schema_hashes": {
+    "critic_debate_turn_sha256": "cfeff667e1e2404b1a65de1d5b854c2436a3ae52f6f67010474638a813f12760",
+    "mediator_summary_sha256": "ccc54c2be82dfc86a61d35c60a4fed7acc93854fa8339520828a291e07b4d550",
+    "stage2_result_sha256": "67173d52fa6bde8dd367e131809d34a218d209e2e778771ec0c05981260b9a80"
+  },
+  "prompt_hashes": {
+    "debate_appendix_sha256": "bed650d112e9246cb612f05735d8f1bcd3b1e0cac81452dfefaa18841063347f",
+    "debate_user_prompt_sha256": "0f71384c4d2663f44231aac78961d15ec66aee761fa0f15f6bba7e49a05aa168",
+    "mediator_system_prompt_sha256": "9a8540efcc67868e45e2288c8293853f4714c47fcc2e9da729f21366b2c4f7b2",
+    "mediator_user_prompt_sha256": "a79719c372de805daa710f4be29681f4115cf4e9edf4bf927f2ee4d7b4ec91cd",
+    "post_appendix_sha256": "dbafcf3212623902892def956e19af67053f33fd2f258bcb348d91df777a0a7b",
+    "post_user_prompt_sha256": "64b2a02b322884c7dd8700bfa6aa5d5725f9ae06459207eb221d9dcc757d7673",
+    "stage2_attack_role_context_sha256": "728c94692c122e34eba32fad0dfa9f8a63a52c667d412b3ce44d05542f8c94e1",
+    "stage2_defense_role_context_sha256": "7a4501539002af93df15a454fbba90082cc0e234febf3306db4dde8c464b4a3b"
+  },
+  "prompt_visibility_rule_version": "mediator-round2-post-surfaced-evidence-view-v2",
+  "round2_evidence_rule_version": "round2-surfaced-evidence-only-v1",
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 44,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage2-artifact-v9",
+  "semantic_validation_version": "stage2-semantic-validation-v9",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "6a4b7cb10d09f6b120e2783bf1bb0957dd7cd53c66243135af329756876c5170",
+  "stage1_artifact_sha256": "027ed1be593519918bbd8fb7ab18f0701af53b9b6f5705e7168a5064e86c4d4f",
+  "stage1_input_fingerprint": "8240bbe50a1e431e878a164b5a8d810e306ce13b9cba59c4de7637ba2cc0fa96",
+  "stage2_output_sha256": "b5d39ae90a344b0bef7d914d093468374eb0f8f3d7af482070d747e5b383a036"
+}

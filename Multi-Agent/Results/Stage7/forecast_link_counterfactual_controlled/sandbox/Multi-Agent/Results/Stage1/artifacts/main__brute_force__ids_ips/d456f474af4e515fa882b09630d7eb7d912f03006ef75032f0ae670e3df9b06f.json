@@ -1,0 +1,273 @@
+{
+  "artifact_sha256": "b328fca971dedd1ee93826b1d22c7773eaf2546119b24b8de17c725074ec916f",
+  "assessments": {
+    "attack_feasibility": {
+      "case_id": "main__brute_force__ids_ips",
+      "claims": [
+        {
+          "claim_id": "AF-1",
+          "evidence_ids": [
+            "E_02_669F59880AF52688"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "DBIR 2024 reports 1,997 incidents under basic web application attacks and states that threat actors continue to take advantage of assets with default, simplistic, or easily guessable credentials by brute forcing them, buying credentials, or reusing them from previous breaches."
+        },
+        {
+          "claim_id": "AF-2",
+          "evidence_ids": [
+            "E_03_C54C5F099169E020"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "Mandiant M-Trends reports that Mandiant continues to observe attackers perform password guessing attacks against cloud sign-in portals to identify accounts without MFA, including dormant accounts and service accounts."
+        },
+        {
+          "claim_id": "AF-3",
+          "evidence_ids": [
+            "E_02_669F59880AF52688"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "DBIR 2024 reports that basic web application attacks were attributed to external actors for 100% of breaches, with financial motive reported for 85% of breaches and credentials reported as compromised in 71% of breaches."
+        },
+        {
+          "claim_id": "AF-4",
+          "evidence_ids": [
+            "E_03_F2B2EBA86BEEFDC5"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends reports that exploit, phishing, and prior compromise were the top three initial infection vectors when identified in 2023, with exploit at 38%, phishing at 17%, and prior compromise at 15%."
+        },
+        {
+          "claim_id": "AF-5",
+          "evidence_ids": [
+            "E_03_C54C5F099169E020"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends reports an increase in the use of targeted SIM swapping in 2023 to access accounts where SMS messages were used for MFA codes or account-ownership verification."
+        },
+        {
+          "claim_id": "AF-6",
+          "evidence_ids": [
+            "E_23_312B9513BCEE9B9D",
+            "E_23_B21FAA9377991F05",
+            "E_23_EBCAB9508641E703"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG guidance recommends MFA, unique credentials, and account lockout or alerting after failed logins as controls mapped to brute-force techniques."
+        },
+        {
+          "claim_id": "AF-7",
+          "evidence_ids": [
+            "E_25_FE58E4FCF044EDE3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53 Rev.5 discusses automatic system lockout or delay algorithms and notes that organizations can use other actions to help prevent brute force attacks when lockout or delay is not implemented."
+        },
+        {
+          "claim_id": "AF-8",
+          "evidence_ids": [
+            "E_33_A707006877BFD1C2"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "Crossref cutoff-constrained data report IDS/IPS publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works per year."
+        },
+        {
+          "claim_id": "AF-9",
+          "evidence_ids": [
+            "E_04_02D425B67E57F32D"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2023 notes that vulnerabilities can make brute force attacks easier and that widespread internal and external vulnerability scanning was common in OT-related industries."
+        }
+      ],
+      "critic_type": "attack_feasibility",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 0,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "NO_DIRECTIONAL_EVIDENCE",
+        "rationale": "The supplied evidence supports persistent brute-force and credential-guessing activity, but no cutoff-constrained record explicitly reports a temporal increase or decrease in brute-force incident count or frequency for THREAT_BRUTE_FORCE_ATTACK. The Crossref publication trend is PMT-side and does not determine the Attack stance.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "Is there cutoff-constrained evidence explicitly reporting a temporal increase or decrease in brute-force incident count or frequency for THREAT_BRUTE_FORCE_ATTACK?",
+        "What exploitation-signal evidence links observed brute-force or credential-guessing activity to successful account compromises in the environment relevant to PMT_IDS_IPS?",
+        "Would CISA-recommended MFA, lockout, and unique-credential practices materially reduce brute-force incident success, and is that reduction reflected in the forecast NoI state?",
+        "Does the increasing IDS/IPS publication trend reflect deployment or operational effectiveness that would offset the forecast threat-minus-PMT gap?"
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "defense_robustness": {
+      "case_id": "main__brute_force__ids_ips",
+      "claims": [
+        {
+          "claim_id": "DEF_PMT_001",
+          "evidence_ids": [
+            "E_33_A707006877BFD1C2"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "The cutoff-constrained Crossref trend for PMT IDS/IPS reports annual publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.10 works/year and a first-to-last delta of 14."
+        },
+        {
+          "claim_id": "DEF_PMT_002",
+          "evidence_ids": [
+            "E_33_A707006877BFD1C2"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied Crossref trend record is described as an external publication-activity validation axis that does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        },
+        {
+          "claim_id": "DEF_PMT_003",
+          "evidence_ids": [
+            "E_29_8E495DC2A98305B1",
+            "E_29_BAD6581A8E96027C",
+            "E_29_CA00E63DF08A6FC1"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied DOI metadata records for IDS/IPS include publication titles, DOIs, venues, and dates for 2016, 2017, and 2024."
+        },
+        {
+          "claim_id": "DEF_PMT_004",
+          "evidence_ids": [
+            "E_23_312B9513BCEE9B9D",
+            "E_23_B21FAA9377991F05",
+            "E_23_EBCAB9508641E703"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied CISA CPG guidance records recommend MFA prioritization, failed-login alerting and account lockout, and unique credential provisioning as controls mapped to brute-force techniques."
+        },
+        {
+          "claim_id": "DEF_PMT_005",
+          "evidence_ids": [
+            "E_25_FE58E4FCF044EDE3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied NIST SP 800-53 Rev.5 record discusses automatic account lock or delay algorithms to help prevent brute force attacks, with exceptions possible based on operational mission or need."
+        },
+        {
+          "claim_id": "DEF_PMT_006",
+          "evidence_ids": [
+            "E_02_669F59880AF52688"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied DBIR chunk reports 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and states that threat actors continue to exploit default, simplistic, or easily guessable credentials via brute forcing, buying, or reuse from previous breaches."
+        },
+        {
+          "claim_id": "DEF_PMT_007",
+          "evidence_ids": [
+            "E_03_F2B2EBA86BEEFDC5"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied Mandiant M-Trends chunk reports that in 2023 intrusions where the initial infection vector was identified, exploit was the most prevalent vector at 38% and phishing was the second most common vector at 17%."
+        },
+        {
+          "claim_id": "DEF_PMT_008",
+          "evidence_ids": [
+            "E_03_C54C5F099169E020"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied Mandiant M-Trends chunk reports observed password guessing against cloud sign-in portals to identify accounts without MFA and reports an increase in targeted SIM swapping used to obtain SMS MFA codes or account takeover in 2023."
+        },
+        {
+          "claim_id": "DEF_PMT_009",
+          "evidence_ids": [
+            "E_04_02D425B67E57F32D"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied IBM X-Force chunk reports that vulnerabilities can make brute force attacks easier, that old vulnerabilities and threats remain relevant to OT, and that widespread vulnerability scanning was the most common attack attempt against OT-related industries."
+        }
+      ],
+      "critic_type": "defense_robustness",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": -1,
+      "stance_basis": {
+        "challenging_claim_ids": [
+          "DEF_PMT_001"
+        ],
+        "decision": "CHALLENGE_DOMINATES",
+        "rationale": "The only supplied directional evidence for the PMT NoP modality is a positive IDS/IPS publication-activity trend, which conflicts with the forecasted decreasing PMT state. The other supplied records are static publication metadata, official control guidance, or threat context and do not provide direct evidence of PMT deployment decline, PMT effectiveness against brute force, or a forecasted widening threat-minus-PMT gap.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "No supplied evidence provides 2025-2027 IDS/IPS deployment, procurement, operational use, or implementation observations for the forecast horizon.",
+        "The supplied exploitation_signal slot is missing, so the direction of active brute-force exploitation or IDS/IPS-relevant exploitation signals is unresolved.",
+        "Publication-activity growth from Crossref does not by itself establish IDS/IPS deployment maturity or realized brute-force mitigation effectiveness.",
+        "The supplied official guidance emphasizes MFA, lockout, and unique credentials, but it does not resolve how that affects IDS/IPS publication or deployment trajectory.",
+        "The threat-side NoI direction is not directly evidenced by supplied incident-count trend data; single-year incident counts and vector shares do not establish an increasing NoI trajectory."
+      ],
+      "unsupported_specificity_detected": false
+    }
+  },
+  "case_id": "main__brute_force__ids_ips",
+  "constrained_output_schema_sha256": {
+    "attack_feasibility": "1fee893effedd9d2b574dbf43d72d486b7d64dcba4e5dd5ffaf62fd247b6193b",
+    "defense_robustness": "98e6f619cafe5ce172c00a9c5536072fb70202aeb12c631c8d2d6a7081bd0f69"
+  },
+  "created_at": "2026-11-08T01:46:19.703641+00:00",
+  "forecast_data_sha256": "5cd838db46fe30107f922f1101dd5ad8d3780276ebf865e2539598c8b658325d",
+  "input_fingerprint": "d456f474af4e515fa882b09630d7eb7d912f03006ef75032f0ae670e3df9b06f",
+  "output_schema_sha256": "178543c2e5a6753427c6effb6c69990e298f93c3f0a1aa11722d0f6380408ab9",
+  "prompt_hashes": {
+    "attack_feasibility_system_prompt_sha256": "49ec516d07355d1939571df13a9809c3da768d37bb2a09e00b3250dbea8371ae",
+    "defense_robustness_system_prompt_sha256": "aa9daa39d565b348267acbc5e87919d2949842f681597d5cb50e82629c80805f",
+    "stage1_user_prompt_sha256": "9a3058bf0340fe8b3346e7410195f297d60731817473b481bbd8e7a5640d1b55"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 44,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage1-artifact-v4",
+  "semantic_validation_version": "stage1-semantic-validation-v4",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "f644dd2084a1585f04343a634161efd66240e37c60f71f51bc7b235ffe556f37",
+  "stage1_output_sha256": "6691773674549765711988bb59918c697916238a2fcabb12d95f8a4ee3b829c0"
+}

@@ -1,0 +1,308 @@
+{
+  "artifact_sha256": "71f248c17784c1cb6c5887c6f6bfd9ce44441ab07c39c32261711ac2cbdd2e15",
+  "assessments": {
+    "attack_feasibility": {
+      "case_id": "main__insider_threat__cryptography",
+      "claims": [
+        {
+          "claim_id": "AF_001",
+          "evidence_ids": [
+            "E_22_C239828119FC69CD"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "CISA insider threat mitigation guidance states that an insider threat mitigation program should span the organization and should deter, detect, and prevent wrongdoing, and should mitigate impacts of insider acts such as sabotage, theft, espionage, or physical harm."
+        },
+        {
+          "claim_id": "AF_002",
+          "evidence_ids": [
+            "E_20_913B6F999A0F1458"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "NIST SP 800-161 Rev. 1 supplemental supply chain guidance recommends that predefined frequencies for automated component inventory data collection be less predictable in order to reduce the risk of an insider threat bypassing security mechanisms."
+        },
+        {
+          "claim_id": "AF_003",
+          "evidence_ids": [
+            "E_16_E7BB108A85B71262"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST AI 100-4 describes cryptographic hashing and digital signatures as technical approaches for linking content to metadata and providing tamper-evidence, while noting that a simple fingerprint can be recomputed and overwritten if content or metadata is modified."
+        },
+        {
+          "claim_id": "AF_004",
+          "evidence_ids": [
+            "E_33_CDE0F421E4D797ED"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "A cutoff-constrained Crossref trend for PMT=CRYPTOGRAPHY with bibliographic=security reports annual publication counts of 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, with an OLS slope of 37.8 works per year and a first-to-last delta of 120."
+        },
+        {
+          "claim_id": "AF_005",
+          "evidence_ids": [
+            "E_29_7C01F6CA0D982DFF",
+            "E_29_185B62FFF51926EC",
+            "E_29_3C1B7B4F9532A5F2"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied Crossref metadata records identify three Cryptography journal acknowledgment publications with DOIs 10.3390/cryptography2010002, 10.3390/cryptography5010005, and 10.3390/cryptography7010003."
+        },
+        {
+          "claim_id": "AF_006",
+          "evidence_ids": [
+            "E_25_746173685B235ED2"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53 Rev. 5 discusses cryptography for security solutions, including digital signatures and information separation, and references FIPS-validated cryptography for digital signatures."
+        },
+        {
+          "claim_id": "AF_007",
+          "evidence_ids": [
+            "E_15_0A98378FC609EF7E"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST AI 100-2 states that widely used machine learning algorithms lack information-theoretic security proofs, that information-theoretic impossibility results have started to appear limiting some widely used mitigations, and that AML mitigation advances tend to be empirical and limited."
+        },
+        {
+          "claim_id": "AF_008",
+          "evidence_ids": [
+            "E_19_4E69D255F61736DB"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NISTIR 8259 includes references to NIST SP 800-128 on security-focused configuration management and NIST SP 800-56A Rev. 3 on pairwise key-establishment schemes using discrete logarithm cryptography."
+        },
+        {
+          "claim_id": "AF_009",
+          "evidence_ids": [
+            "E_23_A793FAF5B393EFE3"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG glossary material defines encryption and hashing as cryptographic processes and provides related cybersecurity terms such as firewall and firmware."
+        },
+        {
+          "claim_id": "AF_010",
+          "evidence_ids": [
+            "E_26_92664A4339CF24C9"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53A Rev. 5 references personnel responsible for the insider threat program and members of the cross-discipline insider threat incident handling team in the context of control assessment."
+        }
+      ],
+      "critic_type": "attack_feasibility",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 0,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "NO_DIRECTIONAL_EVIDENCE",
+        "rationale": "The strongest attack-relevant evidence does not directly establish the forecasted increasing threat trajectory or the widening threat-minus-PMT gap. The supplied Crossref trend is directional for the PMT cryptography publication axis and conflicts with the forecasted decreasing PMT direction, but it is not a threat-trajectory or gap-direction observation for the insider threat side. The remaining evidence describes static controls, mechanisms, and contextual cryptography references, which do not by themselves establish future threat growth.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "Does any supplied pre-cutoff evidence report a temporal increase or decrease in insider-threat incident count/frequency (NoI) or insider-threat publication activity (NoP) for THREAT_INSIDER_THREAT?",
+        "Are there supplied exploitation signals showing insider threats actually exploiting cryptography-related controls, key material, metadata provenance, inventory processes, or AI/ML systems during the forecast window?",
+        "Is the Crossref PMT publication trend comparable in scope and measurement to the NoP feature used for PMT_CRYPTOGRAPHY, and how does it reconcile with the forecast's decreasing PMT direction?",
+        "What observed adversary capability or activity, beyond static control guidance, grounds the forecast's threat state modality (NoP) and increasing direction when the historical threat NoP feature is unavailable?",
+        "Do the insider-threat mitigation and supply-chain control documents indicate an increasing threat trend, or merely stable threat recognition and control improvements?"
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "defense_robustness": {
+      "case_id": "main__insider_threat__cryptography",
+      "claims": [
+        {
+          "claim_id": "D1",
+          "evidence_ids": [
+            "E_33_CDE0F421E4D797ED"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "The Crossref cutoff-constrained PMT publication trend for PMT=CRYPTOGRAPHY with bibliographic security reports annual publication counts of 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, with an OLS slope of +37.8 works/year and a first-to-last delta of 120."
+        },
+        {
+          "claim_id": "D2",
+          "evidence_ids": [
+            "E_33_CDE0F421E4D797ED"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "The Crossref trend reports an increasing 2021–2024 publication-activity signal for the cryptography PMT."
+        },
+        {
+          "claim_id": "D3",
+          "evidence_ids": [
+            "E_33_CDE0F421E4D797ED"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The Crossref trend evidence is scoped as a publication-activity validation axis and explicitly states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        },
+        {
+          "claim_id": "D4",
+          "evidence_ids": [
+            "E_15_0A98378FC609EF7E"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST AI 100-2 contrasts widely used machine learning algorithms with cryptography by stating that ML algorithms lack information-theoretic security proofs, and it reports information-theoretic impossibility results that limit the effectiveness of widely used AML mitigation techniques."
+        },
+        {
+          "claim_id": "D5",
+          "evidence_ids": [
+            "E_16_E7BB108A85B71262"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST AI 100-4 describes cryptographic hashes and digital signatures as approaches for linking and authenticating synthetic-content metadata, noting that simple hashes can be recomputed after modification while digital signatures provide stronger tamper-evidence and signer association."
+        },
+        {
+          "claim_id": "D6",
+          "evidence_ids": [
+            "E_25_746173685B235ED2"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53 Rev.5 presents cryptography as a control mechanism for digital signatures, information separation, and hash or random number generation, with references to FIPS-validated and NSA-approved cryptography."
+        },
+        {
+          "claim_id": "D7",
+          "evidence_ids": [
+            "E_22_C239828119FC69CD"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA insider threat mitigation guidance describes an organization-wide insider threat program spanning training, policy, multi-disciplinary detection and identification, assessment, and management rather than a specific cryptographic deployment trajectory."
+        },
+        {
+          "claim_id": "D8",
+          "evidence_ids": [
+            "E_20_913B6F999A0F1458"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-161 Rev.1 provides supplemental C-SCRM guidance for automated system component inventory maintenance and recommends less predictable predefined update frequencies to reduce the risk of an insider threat bypassing security mechanisms."
+        },
+        {
+          "claim_id": "D9",
+          "evidence_ids": [
+            "E_29_7C01F6CA0D982DFF",
+            "E_29_185B62FFF51926EC",
+            "E_29_3C1B7B4F9532A5F2"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied Crossref records are publisher/DOI metadata entries for the venue Cryptography with reviewer-acknowledgment content for 2017, 2020, and 2022."
+        },
+        {
+          "claim_id": "D10",
+          "evidence_ids": [
+            "E_19_4E69D255F61736DB"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NISTIR 8259 cites NIST SP 800-128 configuration management and NIST SP 800-56A pairwise key-establishment as IoT security references, providing context for cryptographic key-establishment standards."
+        },
+        {
+          "claim_id": "D11",
+          "evidence_ids": [
+            "E_23_A793FAF5B393EFE3"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG includes glossary definitions for encryption and hashing as cryptographic transformations of data."
+        },
+        {
+          "claim_id": "D12",
+          "evidence_ids": [
+            "E_26_92664A4339CF24C9"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53A Rev.5 lists personnel responsible for the insider threat program, cross-discipline incident handling team members, legal counsel, and organizational personnel with information security and privacy responsibilities as insider-threat assessment references."
+        }
+      ],
+      "critic_type": "defense_robustness",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": -1,
+      "stance_basis": {
+        "challenging_claim_ids": [
+          "D1"
+        ],
+        "decision": "CHALLENGE_DOMINATES",
+        "rationale": "The decisive directional evidence bearing on the PMT NoP modality is the Crossref publication trend, which reports increasing cryptography/security publication activity from 2021 through 2024. This materially challenges the supplied PMT state direction of decreasing NoP and weakens the PMT side of the forecasted increasing threat-minus-PMT gap. The remaining evidence is contextual or operational and does not provide a decisive supporting PMT or gap trajectory.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "No supplied evidence directly observes 2025–2027 cryptography deployment, implementation maturity, or operational effectiveness; the Crossref trend is publication activity only.",
+        "No supplied evidence gives a threat-side NoP or NoI direction for insider threat; the threat NoP field is masked, so the threat leg of the gap cannot be independently validated.",
+        "The reconciliation between the Crossref query trend and the model’s latest decreasing PMT NoP z-score is not specified, including possible differences in source, normalization, and timescale.",
+        "The required exploitation_signal slot is missing, leaving direct adversary exploitation evidence unresolved.",
+        "No supplied evidence specifically ties cryptographic controls to mitigation of insider threats as opposed to broader insider-threat programs, supply-chain controls, or synthetic-content provenance."
+      ],
+      "unsupported_specificity_detected": false
+    }
+  },
+  "case_id": "main__insider_threat__cryptography",
+  "constrained_output_schema_sha256": {
+    "attack_feasibility": "6427e4608265e983a847cd422aedaa1b2af4040550af35415b49dd52d2666b60",
+    "defense_robustness": "611cca344263b61dccdb4dddb895fce3b309ea65fe59676f09bafee25af368a9"
+  },
+  "created_at": "2026-11-07T21:15:46.061549+00:00",
+  "forecast_data_sha256": "85cbadc437aa9471636e5a27d55126d8f3487ae88459df903b53e91f63ac0d1f",
+  "input_fingerprint": "e3fa01c776c93776062b8d3322fcb279f1b5868762b2c1e96942e7cbb5290e91",
+  "output_schema_sha256": "178543c2e5a6753427c6effb6c69990e298f93c3f0a1aa11722d0f6380408ab9",
+  "prompt_hashes": {
+    "attack_feasibility_system_prompt_sha256": "49ec516d07355d1939571df13a9809c3da768d37bb2a09e00b3250dbea8371ae",
+    "defense_robustness_system_prompt_sha256": "aa9daa39d565b348267acbc5e87919d2949842f681597d5cb50e82629c80805f",
+    "stage1_user_prompt_sha256": "9a3058bf0340fe8b3346e7410195f297d60731817473b481bbd8e7a5640d1b55"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 43,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage1-artifact-v4",
+  "semantic_validation_version": "stage1-semantic-validation-v4",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "70550d3a98ed0ecdfb131de478006e7382883cfbf5db1e0f682360e9d063dca2",
+  "stage1_output_sha256": "4eadff98d7aebacda78d1da4c7d01ca8c835611124c86f2c2fcc5786dd379c44"
+}

@@ -1,0 +1,622 @@
+{
+  "artifact_sha256": "ce2c2ad1a91b56f3992dcfd9f4e2312ea295a8315df140501388446b4cf87993",
+  "case_id": "main__session_hijacking__https",
+  "constrained_output_schema_sha256": {
+    "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__eu__cis_ig2__98e2aa0b30784942": {
+      "financial_adoption": "c102abc7076c4791cf68220b2282b89cead43f3402eeb8d34e33129c0c203c73",
+      "institutional_regional": "5bcea39a4426e1babe1d0d6459597343788466b7cca6b51ecbe13c88b3c1d1a2",
+      "technical_feasibility": "dd8213e5ba37e66c1f263cd4b7a7cd26f711c0628df574c3d2cdd76f2bbf44bb"
+    },
+    "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__kr__cis_ig2__2ec6a31b3f272115": {
+      "financial_adoption": "a0033b3def5ddd46eee17e885592890c35f852095c11dde0a2eb11ad683501af",
+      "institutional_regional": "f316f1ce7c599c0ac772ca7bc26c5a0af4701faddb44822dcd7e8c7688c88c79",
+      "technical_feasibility": "df02dbdd4288413c30430172d7316ee9b88fc589b304804d25591a3e4c8ddf72"
+    },
+    "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__us__cis_ig2__7b5eca85a31c11fc": {
+      "financial_adoption": "853ee37a066977f24b6e1d29f6c101e30dd90b1fc71c9875d743a33e995ee516",
+      "institutional_regional": "ead488802e5f686e52a7452b435786f1e2dd8567d5340c1f6988cce5a3dcd384",
+      "technical_feasibility": "aafbe511ff702b95f56ca74b75200cc19a4127c574c2ff7f8ded5549ad1746c8"
+    }
+  },
+  "created_at": "2026-11-08T13:00:09.969166+00:00",
+  "decision_object_payload_sha256": {
+    "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__eu__cis_ig2__98e2aa0b30784942": {
+      "financial_adoption": "66f134bd50975ccff7c8838fbc94001eb8adf1f60bfd9b338e276d061e25043d",
+      "institutional_regional": "6b358bfbe6bcec28c7c59698f55ce85b78704742af61e57dfd07568d219728f0",
+      "technical_feasibility": "1235e9260704662b50bcfcb7ec754f75c5faafdbf3a898c04cfe30f4d5080189"
+    },
+    "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__kr__cis_ig2__2ec6a31b3f272115": {
+      "financial_adoption": "1baef5aab00bfab8020be57016afcb88ffb1540fb8f35b7b3537e0be60cc7670",
+      "institutional_regional": "cc7bd5af03541a244ac16e5f8dff080675076c07c9ddce085e1dc907379654ff",
+      "technical_feasibility": "1f0fb8cc904c1c45da1078f3165af80b29880194e225471f43b132a68cdcea10"
+    },
+    "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__us__cis_ig2__7b5eca85a31c11fc": {
+      "financial_adoption": "1df293690527bfd813e040114b05185e827712d0a70a222da2de6675d9dd1e90",
+      "institutional_regional": "1aa7025e1e8d0f98b0d9897686e14adae45e5c7e123e77ef844668cf74905dde",
+      "technical_feasibility": "5d51f42d3a46e6916e2e1727220bc60da52abf31ada89d34f43bd50ab3797c73"
+    }
+  },
+  "evaluation_bundle": {
+    "case_id": "main__session_hijacking__https",
+    "evaluations": [
+      {
+        "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__kr__cis_ig2__2ec6a31b3f272115",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FA_CLM_001",
+              "evidence_ids": [
+                "DE_DE14_EDCA207577B4607A"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied SSL/TLS-related adoption-burden evidence identifies resource and implementation burdens for SSL/TLS-encapsulated deployments: session establishment can depend on back-end authentication and certificate key size, SSL-encapsulated traffic may be fragmented and slow network activity, and performance remediation can involve upgrading or replacing hardware, using an SSL accelerator, or reducing processing demands.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA_CLM_002",
+              "evidence_ids": [
+                "DE_DE10_A086B3193CD6440B",
+                "DE_DE18_CDC975345637E009"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied adoption-benefit evidence provides implementation enablers for encrypted transport: NIST TLS guidance gives concrete TLS configuration pathways for client authentication, path validation, and revocation-status validation, and the DHS encryption primer notes that transport-mode encrypted transport can have less header overhead than tunnel mode while tying encryption decisions to data sensitivity.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA_CLM_003",
+              "evidence_ids": [
+                "DE_DE14_5FC183B8D7DD961A"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied deployment-maturity evidence describes a medium-sized organization with an existing IPsec remote-access solution that required significant IT labor to install and support client software, while the organization sought a complementary remote-access architecture. This is supplementary context and does not by itself establish financial/adoption direction.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial/adoption feasibility judgment would require organization-specific budget, staffing, infrastructure, procurement, and performance-capacity information.",
+            "If the deployment requires hardware upgrade, replacement, or an SSL/TLS accelerator, exact capex/opex, vendor/product options, and implementation timing would be needed to reassess feasibility.",
+            "If the existing infrastructure already supports the identified TLS deployment pathways without material performance remediation, the GENERAL burden-based challenge would need to be reweighted."
+          ],
+          "constraints": [
+            "The burden claim is conditional: the supplied record states that addressing performance problems generally can involve hardware upgrades, accelerators, or reduced processing, not that a specific deployment must incur those costs.",
+            "The benefit claim is an implementation/enabler pathway and a general overhead consideration; it does not establish exact affordability, ROI, budget fit, payback period, or vendor-specific cost.",
+            "No exact budget, price, ROI, TCO, staffing count, procurement ceiling, vendor, product version, or deployment architecture is supplied for the frozen scenario, so the assessment remains GENERAL rather than DEPLOYMENT_SPECIFIC.",
+            "Jurisdiction-specific financial or regulatory evidence is not supplied to this lens, so the direction remains GENERAL and jurisdiction-invariant."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__kr__cis_ig2__2ec6a31b3f272115",
+          "evidence_gaps": [
+            "No supplied evaluation_evidence record provides exact HTTPS adoption budget, price, ROI, TCO, payback period, procurement timeline, or staffing count for the frozen deployment context.",
+            "No supplied record specifies current HTTPS/TLS coverage, existing TLS certificate lifecycle capacity, network performance baseline, hardware refresh constraints, or whether SSL/TLS acceleration is required for this deployment.",
+            "No supplied record quantifies the cost, staffing, or opportunity-cost impact of the performance-remediation pathways identified in DE_DE14_EDCA207577B4607A.",
+            "No supplied record quantifies the implementation timeline or organizational workload required to deploy the TLS pathways described in DE_DE10_A086B3193CD6440B and DE_DE18_CDC975345637E009."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied records contain one directly relevant adoption-burden record and two adoption-benefit records for general HTTPS/TLS adoption. The burden record is more direct for the financial/adoption lens because it identifies concrete resource-related implementation risks: SSL/TLS-encapsulated performance problems can require hardware upgrade/replacement, an SSL accelerator, or reduced processing demands. The benefit records provide implementation enablers and a lower-overhead encrypted-transport consideration, but they do not establish exact affordability, ROI, budget fit, payback period, or deployment-specific cost advantage. On balance, the documented resource burden is the more financially salient evidence, so the action’s financial/adoption feasibility is materially challenged at the GENERAL level. This is not a deployment-specific infeasibility conclusion because exact budget, staffing, infrastructure baseline, procurement, and cost data are absent.",
+          "stance": -1
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR_CLM_001",
+              "evidence_ids": [
+                "DE_DE14_575D613F0598EF5E",
+                "DE_DE18_20A979A3238D1DE6"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied guidance provides an institutional implementation pathway for SSL/TLS-based secure transport, including event logging for successful and failed logins, prototype and pilot testing, phased migration, technical documentation, complementary controls, ongoing monitoring/updating, certificate renewal, and policy adaptation.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CLM_002",
+              "evidence_ids": [
+                "DE_DE13_055FC5E35FA61DD5",
+                "DE_DE10_4BE87A62A6676C99"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied guidance identifies HTTPS/TLS-related implementation constraints, including authenticated protected channels for session identifiers, no authenticated-session fallback from HTTPS to HTTP, browser cookies accessible only on secure HTTPS sessions, and TLS extension obligations for certain CBC cipher-suite or TLS 1.3 pre-shared-key configurations.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CLM_003",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The frozen reference enterprise profile is CIS IG2, described as a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure, differing risk profiles, and IG2 safeguards that address increased operational complexity, with some safeguards depending on enterprise-grade technology and specialized expertise.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR_CLM_004",
+              "evidence_ids": [
+                "AE07S_C1EF15B9628497F0",
+                "AE07C_9CBF5980D3BA474A"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied action-specific findings state that HTTPS/TLS is treated as an important transport-layer control within a broader session-protection strategy, while also noting that HTTPS alone cannot cover all session-hijacking paths because session tokens may still be stolen through XSS or malicious browser extensions.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC institutional/regional direction would require supplied evidence covering regulatory_applicability for the frozen jurisdiction together with a direction-carrying governance_enablement or compliance_constraint record.",
+            "The GENERAL mixed stance remains conditional on the organization’s ability to implement the cited governance lifecycle and satisfy the cited HTTPS/TLS implementation constraints.",
+            "Any future jurisdiction-specific assessment must rely only on exact supplied jurisdiction-specific evidence and must not import conclusions from another jurisdictional scenario."
+          ],
+          "constraints": [
+            "Institutional adoption would need to align with supplied lifecycle governance practices for SSL/TLS deployments, including logging, testing, phased rollout, documentation, monitoring, certificate renewal, and policy adaptation [DE_DE14_575D613F0598EF5E].",
+            "Secure-session implementation would need to satisfy supplied HTTPS/session constraints, including authenticated protected channels, no HTTPS-to-HTTP fallback, and HTTPS-only browser cookies [DE_DE13_055FC5E35FA61DD5].",
+            "TLS implementation would need to satisfy supplied extension-related constraints for certain CBC or TLS 1.3 pre-shared-key configurations [DE_DE10_4BE87A62A6676C99].",
+            "HTTPS alone is not represented as covering all session-hijacking paths; the supplied action-specific finding notes residual session-token theft paths through XSS or malicious browser extensions [AE07C_9CBF5980D3BA474A]."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__kr__cis_ig2__2ec6a31b3f272115",
+          "evidence_gaps": [
+            "No jurisdiction-specific regulatory_applicability evidence is supplied for the frozen masked region, so a DEPLOYMENT_SPECIFIC legal/regional feasibility direction cannot be grounded.",
+            "No supplied evidence establishes whether the frozen CIS IG2 reference enterprise can meet the cited HTTPS/TLS constraints within its actual architecture, staffing, or operational context.",
+            "No supplied evidence quantifies compliance burden, cross-border constraints, data-sovereignty obligations, or region-specific implementation barriers for HTTPS in this frozen scenario."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "Under the GENERAL institutional scope, the supplied records present mixed directional grounding. They provide a governance/implementation pathway for SSL/TLS-based secure transport, including lifecycle controls and auditability practices that support institutional feasibility. At the same time, they identify HTTPS/TLS-related implementation constraints around session protection and TLS configuration that challenge feasibility by adding compliance and implementation obligations. The frozen region is masked and no jurisdiction-specific regulatory_applicability evidence is supplied, so a DEPLOYMENT_SPECIFIC regional or legal feasibility direction cannot be grounded. The remaining judgment is therefore mixed at the GENERAL level rather than directional.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_CLM_001",
+              "evidence_ids": [
+                "AE07S_C1EF15B9628497F0"
+              ],
+              "scope": "GENERAL",
+              "statement": "A 2024 session-hijacking countermeasures record supports HTTPS/TLS as an important transport-layer control against interception-oriented hijacking, while characterizing it as part of a broader session-protection strategy.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_002",
+              "evidence_ids": [
+                "AE07C_9CBF5980D3BA474A"
+              ],
+              "scope": "GENERAL",
+              "statement": "A 2024 session-token abuse record states that session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists, and that HTTPS alone cannot cover all session-hijacking paths.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_003",
+              "evidence_ids": [
+                "DE_DE14_5FC183B8D7DD961A"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied SSL VPN case study describes planning and implementation decisions for an SSL VPN solution, providing supplementary deployment-planning context rather than direct evidence of HTTPS operational effectiveness or deployment-specific compatibility for the frozen action.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC technical feasibility judgment would require exact infrastructure context, current TLS/HTTPS configuration, certificate/CA and termination details, application session-token mechanisms, and integration/test evidence.",
+            "To support sufficiency against session hijacking, evidence would need to address the residual token-theft paths identified in AE07C_9CBF5980D3BA474A.",
+            "To support deployment-specific maintainability, evidence would need to address current monitoring, update, certificate-renewal, and incident-response processes for the target environment."
+          ],
+          "constraints": [
+            "HTTPS/TLS should be treated as a transport-layer component of a broader session-protection strategy, not as a complete standalone session-hijacking control, consistent with the supported and challenged technical claims.",
+            "HTTPS alone should not be assumed to cover session-token theft via XSS or malicious browser extensions; additional session-protection controls are required for full threat-mitigation fit.",
+            "No DEPLOYMENT_SPECIFIC technical compatibility or maintainability conclusion can be made without exact infrastructure, product/version, TLS termination, certificate/CA, and application session-management details."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__kr__cis_ig2__2ec6a31b3f272115",
+          "evidence_gaps": [
+            "Current HTTPS/TLS deployment status, certificate/CA configuration, and TLS termination points are not supplied.",
+            "Exact application inventory, session-token implementation, cookie configuration, and integration points are not supplied.",
+            "Measured operational effectiveness or residual-risk reduction for session hijacking in the frozen reference enterprise is not supplied.",
+            "Observed exploitation or active session-hijacking signals for the 2025-2027 forecast horizon are not supplied.",
+            "Exact architecture or product/version details needed for a DEPLOYMENT_SPECIFIC feasibility judgment are missing."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "On balance, the supplied action-specific evidence supports the GENERAL technical feasibility of HTTPS as a technical control for the frozen Session Hijacking threat within the 2025-2027 forecast horizon, while also limiting its threat-mitigation scope. AE07S_C1EF15B9628497F0 provides the required technical_enablement grounding by supporting HTTPS/TLS as an important transport-layer control against interception-oriented session hijacking, but it does so within a broader session-protection strategy rather than as a standalone complete solution. AE07C_9CBF5980D3BA474A provides the required technical_limitation grounding by stating that session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists, and that HTTPS alone cannot cover all session-hijacking paths. This limitation materially constrains the expected threat-mitigation fit of HTTPS as a standalone control, but it does not make HTTPS technically infeasible to implement or irrelevant to the threat. Deployment-specific feasibility remains unresolved because the supplied evidence does not report exact current architecture, product/version, TLS termination points, application session-token mechanisms, certificate/CA configuration, or measured operational effectiveness in the frozen reference enterprise. Therefore the GENERAL direction survives as supported, but the assessment is PARTIAL rather than SUFFICIENT.",
+          "stance": 1
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__eu__cis_ig2__98e2aa0b30784942",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FA_CLM_001",
+              "evidence_ids": [
+                "DE_DE14_EDCA207577B4607A"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied SSL/TLS-related adoption-burden evidence identifies resource and implementation burdens for SSL/TLS-encapsulated deployments: session establishment can depend on back-end authentication and certificate key size, SSL-encapsulated traffic may be fragmented and slow network activity, and performance remediation can involve upgrading or replacing hardware, using an SSL accelerator, or reducing processing demands.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA_CLM_002",
+              "evidence_ids": [
+                "DE_DE10_A086B3193CD6440B",
+                "DE_DE18_CDC975345637E009"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied adoption-benefit evidence provides implementation enablers for encrypted transport: NIST TLS guidance gives concrete TLS configuration pathways for client authentication, path validation, and revocation-status validation, and the DHS encryption primer notes that transport-mode encrypted transport can have less header overhead than tunnel mode while tying encryption decisions to data sensitivity.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA_CLM_003",
+              "evidence_ids": [
+                "DE_DE14_5FC183B8D7DD961A"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied deployment-maturity evidence describes a medium-sized organization with an existing IPsec remote-access solution that required significant IT labor to install and support client software, while the organization sought a complementary remote-access architecture. This is supplementary context and does not by itself establish financial/adoption direction.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial/adoption feasibility judgment would require organization-specific budget, staffing, infrastructure, procurement, and performance-capacity information.",
+            "If the deployment requires hardware upgrade, replacement, or an SSL/TLS accelerator, exact capex/opex, vendor/product options, and implementation timing would be needed to reassess feasibility.",
+            "If the existing infrastructure already supports the identified TLS deployment pathways without material performance remediation, the GENERAL burden-based challenge would need to be reweighted."
+          ],
+          "constraints": [
+            "The burden claim is conditional: the supplied record states that addressing performance problems generally can involve hardware upgrades, accelerators, or reduced processing, not that a specific deployment must incur those costs.",
+            "The benefit claim is an implementation/enabler pathway and a general overhead consideration; it does not establish exact affordability, ROI, budget fit, payback period, or vendor-specific cost.",
+            "No exact budget, price, ROI, TCO, staffing count, procurement ceiling, vendor, product version, or deployment architecture is supplied for the frozen scenario, so the assessment remains GENERAL rather than DEPLOYMENT_SPECIFIC.",
+            "Jurisdiction-specific financial or regulatory evidence is not supplied to this lens, so the direction remains GENERAL and jurisdiction-invariant."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__eu__cis_ig2__98e2aa0b30784942",
+          "evidence_gaps": [
+            "No supplied evaluation_evidence record provides exact HTTPS adoption budget, price, ROI, TCO, payback period, procurement timeline, or staffing count for the frozen deployment context.",
+            "No supplied record specifies current HTTPS/TLS coverage, existing TLS certificate lifecycle capacity, network performance baseline, hardware refresh constraints, or whether SSL/TLS acceleration is required for this deployment.",
+            "No supplied record quantifies the cost, staffing, or opportunity-cost impact of the performance-remediation pathways identified in DE_DE14_EDCA207577B4607A.",
+            "No supplied record quantifies the implementation timeline or organizational workload required to deploy the TLS pathways described in DE_DE10_A086B3193CD6440B and DE_DE18_CDC975345637E009."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied records contain one directly relevant adoption-burden record and two adoption-benefit records for general HTTPS/TLS adoption. The burden record is more direct for the financial/adoption lens because it identifies concrete resource-related implementation risks: SSL/TLS-encapsulated performance problems can require hardware upgrade/replacement, an SSL accelerator, or reduced processing demands. The benefit records provide implementation enablers and a lower-overhead encrypted-transport consideration, but they do not establish exact affordability, ROI, budget fit, payback period, or deployment-specific cost advantage. On balance, the documented resource burden is the more financially salient evidence, so the action’s financial/adoption feasibility is materially challenged at the GENERAL level. This is not a deployment-specific infeasibility conclusion because exact budget, staffing, infrastructure baseline, procurement, and cost data are absent.",
+          "stance": -1
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR_CLM_001",
+              "evidence_ids": [
+                "DE_DE14_575D613F0598EF5E",
+                "DE_DE18_20A979A3238D1DE6"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied guidance provides an institutional implementation pathway for SSL/TLS-based secure transport, including event logging for successful and failed logins, prototype and pilot testing, phased migration, technical documentation, complementary controls, ongoing monitoring/updating, certificate renewal, and policy adaptation.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CLM_002",
+              "evidence_ids": [
+                "DE_DE13_055FC5E35FA61DD5",
+                "DE_DE10_4BE87A62A6676C99"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied guidance identifies HTTPS/TLS-related implementation constraints, including authenticated protected channels for session identifiers, no authenticated-session fallback from HTTPS to HTTP, browser cookies accessible only on secure HTTPS sessions, and TLS extension obligations for certain CBC cipher-suite or TLS 1.3 pre-shared-key configurations.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CLM_003",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The frozen reference enterprise profile is CIS IG2, described as a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure, differing risk profiles, and IG2 safeguards that address increased operational complexity, with some safeguards depending on enterprise-grade technology and specialized expertise.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR_CLM_004",
+              "evidence_ids": [
+                "AE07S_C1EF15B9628497F0",
+                "AE07C_9CBF5980D3BA474A"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied action-specific findings state that HTTPS/TLS is treated as an important transport-layer control within a broader session-protection strategy, while also noting that HTTPS alone cannot cover all session-hijacking paths because session tokens may still be stolen through XSS or malicious browser extensions.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC institutional/regional direction would require supplied evidence covering regulatory_applicability for the frozen jurisdiction together with a direction-carrying governance_enablement or compliance_constraint record.",
+            "The GENERAL mixed stance remains conditional on the organization’s ability to implement the cited governance lifecycle and satisfy the cited HTTPS/TLS implementation constraints.",
+            "Any future jurisdiction-specific assessment must rely only on exact supplied jurisdiction-specific evidence and must not import conclusions from another jurisdictional scenario."
+          ],
+          "constraints": [
+            "Institutional adoption would need to align with supplied lifecycle governance practices for SSL/TLS deployments, including logging, testing, phased rollout, documentation, monitoring, certificate renewal, and policy adaptation [DE_DE14_575D613F0598EF5E].",
+            "Secure-session implementation would need to satisfy supplied HTTPS/session constraints, including authenticated protected channels, no HTTPS-to-HTTP fallback, and HTTPS-only browser cookies [DE_DE13_055FC5E35FA61DD5].",
+            "TLS implementation would need to satisfy supplied extension-related constraints for certain CBC or TLS 1.3 pre-shared-key configurations [DE_DE10_4BE87A62A6676C99].",
+            "HTTPS alone is not represented as covering all session-hijacking paths; the supplied action-specific finding notes residual session-token theft paths through XSS or malicious browser extensions [AE07C_9CBF5980D3BA474A]."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__eu__cis_ig2__98e2aa0b30784942",
+          "evidence_gaps": [
+            "No jurisdiction-specific regulatory_applicability evidence is supplied for the frozen masked region, so a DEPLOYMENT_SPECIFIC legal/regional feasibility direction cannot be grounded.",
+            "No supplied evidence establishes whether the frozen CIS IG2 reference enterprise can meet the cited HTTPS/TLS constraints within its actual architecture, staffing, or operational context.",
+            "No supplied evidence quantifies compliance burden, cross-border constraints, data-sovereignty obligations, or region-specific implementation barriers for HTTPS in this frozen scenario."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "Under the GENERAL institutional scope, the supplied records present mixed directional grounding. They provide a governance/implementation pathway for SSL/TLS-based secure transport, including lifecycle controls and auditability practices that support institutional feasibility. At the same time, they identify HTTPS/TLS-related implementation constraints around session protection and TLS configuration that challenge feasibility by adding compliance and implementation obligations. The frozen region is masked and no jurisdiction-specific regulatory_applicability evidence is supplied, so a DEPLOYMENT_SPECIFIC regional or legal feasibility direction cannot be grounded. The remaining judgment is therefore mixed at the GENERAL level rather than directional.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_CLM_001",
+              "evidence_ids": [
+                "AE07S_C1EF15B9628497F0"
+              ],
+              "scope": "GENERAL",
+              "statement": "A 2024 session-hijacking countermeasures record supports HTTPS/TLS as an important transport-layer control against interception-oriented hijacking, while characterizing it as part of a broader session-protection strategy.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_002",
+              "evidence_ids": [
+                "AE07C_9CBF5980D3BA474A"
+              ],
+              "scope": "GENERAL",
+              "statement": "A 2024 session-token abuse record states that session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists, and that HTTPS alone cannot cover all session-hijacking paths.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_003",
+              "evidence_ids": [
+                "DE_DE14_5FC183B8D7DD961A"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied SSL VPN case study describes planning and implementation decisions for an SSL VPN solution, providing supplementary deployment-planning context rather than direct evidence of HTTPS operational effectiveness or deployment-specific compatibility for the frozen action.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC technical feasibility judgment would require exact infrastructure context, current TLS/HTTPS configuration, certificate/CA and termination details, application session-token mechanisms, and integration/test evidence.",
+            "To support sufficiency against session hijacking, evidence would need to address the residual token-theft paths identified in AE07C_9CBF5980D3BA474A.",
+            "To support deployment-specific maintainability, evidence would need to address current monitoring, update, certificate-renewal, and incident-response processes for the target environment."
+          ],
+          "constraints": [
+            "HTTPS/TLS should be treated as a transport-layer component of a broader session-protection strategy, not as a complete standalone session-hijacking control, consistent with the supported and challenged technical claims.",
+            "HTTPS alone should not be assumed to cover session-token theft via XSS or malicious browser extensions; additional session-protection controls are required for full threat-mitigation fit.",
+            "No DEPLOYMENT_SPECIFIC technical compatibility or maintainability conclusion can be made without exact infrastructure, product/version, TLS termination, certificate/CA, and application session-management details."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__eu__cis_ig2__98e2aa0b30784942",
+          "evidence_gaps": [
+            "Current HTTPS/TLS deployment status, certificate/CA configuration, and TLS termination points are not supplied.",
+            "Exact application inventory, session-token implementation, cookie configuration, and integration points are not supplied.",
+            "Measured operational effectiveness or residual-risk reduction for session hijacking in the frozen reference enterprise is not supplied.",
+            "Observed exploitation or active session-hijacking signals for the 2025-2027 forecast horizon are not supplied.",
+            "Exact architecture or product/version details needed for a DEPLOYMENT_SPECIFIC feasibility judgment are missing."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "On balance, the supplied action-specific evidence supports the GENERAL technical feasibility of HTTPS as a technical control for the frozen Session Hijacking threat within the 2025-2027 forecast horizon, while also limiting its threat-mitigation scope. AE07S_C1EF15B9628497F0 provides the required technical_enablement grounding by supporting HTTPS/TLS as an important transport-layer control against interception-oriented session hijacking, but it does so within a broader session-protection strategy rather than as a standalone complete solution. AE07C_9CBF5980D3BA474A provides the required technical_limitation grounding by stating that session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists, and that HTTPS alone cannot cover all session-hijacking paths. This limitation materially constrains the expected threat-mitigation fit of HTTPS as a standalone control, but it does not make HTTPS technically infeasible to implement or irrelevant to the threat. Deployment-specific feasibility remains unresolved because the supplied evidence does not report exact current architecture, product/version, TLS termination points, application session-token mechanisms, certificate/CA configuration, or measured operational effectiveness in the frozen reference enterprise. Therefore the GENERAL direction survives as supported, but the assessment is PARTIAL rather than SUFFICIENT.",
+          "stance": 1
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__us__cis_ig2__7b5eca85a31c11fc",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FA_CLM_001",
+              "evidence_ids": [
+                "DE_DE14_EDCA207577B4607A"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied SSL/TLS-related adoption-burden evidence identifies resource and implementation burdens for SSL/TLS-encapsulated deployments: session establishment can depend on back-end authentication and certificate key size, SSL-encapsulated traffic may be fragmented and slow network activity, and performance remediation can involve upgrading or replacing hardware, using an SSL accelerator, or reducing processing demands.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA_CLM_002",
+              "evidence_ids": [
+                "DE_DE10_A086B3193CD6440B",
+                "DE_DE18_CDC975345637E009"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied adoption-benefit evidence provides implementation enablers for encrypted transport: NIST TLS guidance gives concrete TLS configuration pathways for client authentication, path validation, and revocation-status validation, and the DHS encryption primer notes that transport-mode encrypted transport can have less header overhead than tunnel mode while tying encryption decisions to data sensitivity.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA_CLM_003",
+              "evidence_ids": [
+                "DE_DE14_5FC183B8D7DD961A"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied deployment-maturity evidence describes a medium-sized organization with an existing IPsec remote-access solution that required significant IT labor to install and support client software, while the organization sought a complementary remote-access architecture. This is supplementary context and does not by itself establish financial/adoption direction.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial/adoption feasibility judgment would require organization-specific budget, staffing, infrastructure, procurement, and performance-capacity information.",
+            "If the deployment requires hardware upgrade, replacement, or an SSL/TLS accelerator, exact capex/opex, vendor/product options, and implementation timing would be needed to reassess feasibility.",
+            "If the existing infrastructure already supports the identified TLS deployment pathways without material performance remediation, the GENERAL burden-based challenge would need to be reweighted."
+          ],
+          "constraints": [
+            "The burden claim is conditional: the supplied record states that addressing performance problems generally can involve hardware upgrades, accelerators, or reduced processing, not that a specific deployment must incur those costs.",
+            "The benefit claim is an implementation/enabler pathway and a general overhead consideration; it does not establish exact affordability, ROI, budget fit, payback period, or vendor-specific cost.",
+            "No exact budget, price, ROI, TCO, staffing count, procurement ceiling, vendor, product version, or deployment architecture is supplied for the frozen scenario, so the assessment remains GENERAL rather than DEPLOYMENT_SPECIFIC.",
+            "Jurisdiction-specific financial or regulatory evidence is not supplied to this lens, so the direction remains GENERAL and jurisdiction-invariant."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__us__cis_ig2__7b5eca85a31c11fc",
+          "evidence_gaps": [
+            "No supplied evaluation_evidence record provides exact HTTPS adoption budget, price, ROI, TCO, payback period, procurement timeline, or staffing count for the frozen deployment context.",
+            "No supplied record specifies current HTTPS/TLS coverage, existing TLS certificate lifecycle capacity, network performance baseline, hardware refresh constraints, or whether SSL/TLS acceleration is required for this deployment.",
+            "No supplied record quantifies the cost, staffing, or opportunity-cost impact of the performance-remediation pathways identified in DE_DE14_EDCA207577B4607A.",
+            "No supplied record quantifies the implementation timeline or organizational workload required to deploy the TLS pathways described in DE_DE10_A086B3193CD6440B and DE_DE18_CDC975345637E009."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied records contain one directly relevant adoption-burden record and two adoption-benefit records for general HTTPS/TLS adoption. The burden record is more direct for the financial/adoption lens because it identifies concrete resource-related implementation risks: SSL/TLS-encapsulated performance problems can require hardware upgrade/replacement, an SSL accelerator, or reduced processing demands. The benefit records provide implementation enablers and a lower-overhead encrypted-transport consideration, but they do not establish exact affordability, ROI, budget fit, payback period, or deployment-specific cost advantage. On balance, the documented resource burden is the more financially salient evidence, so the action’s financial/adoption feasibility is materially challenged at the GENERAL level. This is not a deployment-specific infeasibility conclusion because exact budget, staffing, infrastructure baseline, procurement, and cost data are absent.",
+          "stance": -1
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR_CLM_001",
+              "evidence_ids": [
+                "DE_DE14_575D613F0598EF5E",
+                "DE_DE18_20A979A3238D1DE6"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied guidance provides an institutional implementation pathway for SSL/TLS-based secure transport, including event logging for successful and failed logins, prototype and pilot testing, phased migration, technical documentation, complementary controls, ongoing monitoring/updating, certificate renewal, and policy adaptation.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CLM_002",
+              "evidence_ids": [
+                "DE_DE13_055FC5E35FA61DD5",
+                "DE_DE10_4BE87A62A6676C99"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied guidance identifies HTTPS/TLS-related implementation constraints, including authenticated protected channels for session identifiers, no authenticated-session fallback from HTTPS to HTTP, browser cookies accessible only on secure HTTPS sessions, and TLS extension obligations for certain CBC cipher-suite or TLS 1.3 pre-shared-key configurations.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CLM_003",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The frozen reference enterprise profile is CIS IG2, described as a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure, differing risk profiles, and IG2 safeguards that address increased operational complexity, with some safeguards depending on enterprise-grade technology and specialized expertise.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR_CLM_004",
+              "evidence_ids": [
+                "AE07S_C1EF15B9628497F0",
+                "AE07C_9CBF5980D3BA474A"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied action-specific findings state that HTTPS/TLS is treated as an important transport-layer control within a broader session-protection strategy, while also noting that HTTPS alone cannot cover all session-hijacking paths because session tokens may still be stolen through XSS or malicious browser extensions.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC institutional/regional direction would require supplied evidence covering regulatory_applicability for the frozen jurisdiction together with a direction-carrying governance_enablement or compliance_constraint record.",
+            "The GENERAL mixed stance remains conditional on the organization’s ability to implement the cited governance lifecycle and satisfy the cited HTTPS/TLS implementation constraints.",
+            "Any future jurisdiction-specific assessment must rely only on exact supplied jurisdiction-specific evidence and must not import conclusions from another jurisdictional scenario."
+          ],
+          "constraints": [
+            "Institutional adoption would need to align with supplied lifecycle governance practices for SSL/TLS deployments, including logging, testing, phased rollout, documentation, monitoring, certificate renewal, and policy adaptation [DE_DE14_575D613F0598EF5E].",
+            "Secure-session implementation would need to satisfy supplied HTTPS/session constraints, including authenticated protected channels, no HTTPS-to-HTTP fallback, and HTTPS-only browser cookies [DE_DE13_055FC5E35FA61DD5].",
+            "TLS implementation would need to satisfy supplied extension-related constraints for certain CBC or TLS 1.3 pre-shared-key configurations [DE_DE10_4BE87A62A6676C99].",
+            "HTTPS alone is not represented as covering all session-hijacking paths; the supplied action-specific finding notes residual session-token theft paths through XSS or malicious browser extensions [AE07C_9CBF5980D3BA474A]."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__us__cis_ig2__7b5eca85a31c11fc",
+          "evidence_gaps": [
+            "No jurisdiction-specific regulatory_applicability evidence is supplied for the frozen masked region, so a DEPLOYMENT_SPECIFIC legal/regional feasibility direction cannot be grounded.",
+            "No supplied evidence establishes whether the frozen CIS IG2 reference enterprise can meet the cited HTTPS/TLS constraints within its actual architecture, staffing, or operational context.",
+            "No supplied evidence quantifies compliance burden, cross-border constraints, data-sovereignty obligations, or region-specific implementation barriers for HTTPS in this frozen scenario."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "Under the GENERAL institutional scope, the supplied records present mixed directional grounding. They provide a governance/implementation pathway for SSL/TLS-based secure transport, including lifecycle controls and auditability practices that support institutional feasibility. At the same time, they identify HTTPS/TLS-related implementation constraints around session protection and TLS configuration that challenge feasibility by adding compliance and implementation obligations. The frozen region is masked and no jurisdiction-specific regulatory_applicability evidence is supplied, so a DEPLOYMENT_SPECIFIC regional or legal feasibility direction cannot be grounded. The remaining judgment is therefore mixed at the GENERAL level rather than directional.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_CLM_001",
+              "evidence_ids": [
+                "AE07S_C1EF15B9628497F0"
+              ],
+              "scope": "GENERAL",
+              "statement": "A 2024 session-hijacking countermeasures record supports HTTPS/TLS as an important transport-layer control against interception-oriented hijacking, while characterizing it as part of a broader session-protection strategy.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_002",
+              "evidence_ids": [
+                "AE07C_9CBF5980D3BA474A"
+              ],
+              "scope": "GENERAL",
+              "statement": "A 2024 session-token abuse record states that session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists, and that HTTPS alone cannot cover all session-hijacking paths.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_003",
+              "evidence_ids": [
+                "DE_DE14_5FC183B8D7DD961A"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied SSL VPN case study describes planning and implementation decisions for an SSL VPN solution, providing supplementary deployment-planning context rather than direct evidence of HTTPS operational effectiveness or deployment-specific compatibility for the frozen action.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC technical feasibility judgment would require exact infrastructure context, current TLS/HTTPS configuration, certificate/CA and termination details, application session-token mechanisms, and integration/test evidence.",
+            "To support sufficiency against session hijacking, evidence would need to address the residual token-theft paths identified in AE07C_9CBF5980D3BA474A.",
+            "To support deployment-specific maintainability, evidence would need to address current monitoring, update, certificate-renewal, and incident-response processes for the target environment."
+          ],
+          "constraints": [
+            "HTTPS/TLS should be treated as a transport-layer component of a broader session-protection strategy, not as a complete standalone session-hijacking control, consistent with the supported and challenged technical claims.",
+            "HTTPS alone should not be assumed to cover session-token theft via XSS or malicious browser extensions; additional session-protection controls are required for full threat-mitigation fit.",
+            "No DEPLOYMENT_SPECIFIC technical compatibility or maintainability conclusion can be made without exact infrastructure, product/version, TLS termination, certificate/CA, and application session-management details."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__781d7de0d60c1e28__us__cis_ig2__7b5eca85a31c11fc",
+          "evidence_gaps": [
+            "Current HTTPS/TLS deployment status, certificate/CA configuration, and TLS termination points are not supplied.",
+            "Exact application inventory, session-token implementation, cookie configuration, and integration points are not supplied.",
+            "Measured operational effectiveness or residual-risk reduction for session hijacking in the frozen reference enterprise is not supplied.",
+            "Observed exploitation or active session-hijacking signals for the 2025-2027 forecast horizon are not supplied.",
+            "Exact architecture or product/version details needed for a DEPLOYMENT_SPECIFIC feasibility judgment are missing."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "On balance, the supplied action-specific evidence supports the GENERAL technical feasibility of HTTPS as a technical control for the frozen Session Hijacking threat within the 2025-2027 forecast horizon, while also limiting its threat-mitigation scope. AE07S_C1EF15B9628497F0 provides the required technical_enablement grounding by supporting HTTPS/TLS as an important transport-layer control against interception-oriented session hijacking, but it does so within a broader session-protection strategy rather than as a standalone complete solution. AE07C_9CBF5980D3BA474A provides the required technical_limitation grounding by stating that session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists, and that HTTPS alone cannot cover all session-hijacking paths. This limitation materially constrains the expected threat-mitigation fit of HTTPS as a standalone control, but it does not make HTTPS technically infeasible to implement or irrelevant to the threat. Deployment-specific feasibility remains unresolved because the supplied evidence does not report exact current architecture, product/version, TLS termination points, application session-token mechanisms, certificate/CA configuration, or measured operational effectiveness in the frozen reference enterprise. Therefore the GENERAL direction survives as supported, but the assessment is PARTIAL rather than SUFFICIENT.",
+          "stance": 1
+        }
+      }
+    ]
+  },
+  "generation_contract_version": "jurisdiction-neutral-equivalence-dedup-v1",
+  "input_fingerprint": "3b04f98f7e17d7003f8a50995fdae4657536e073067dfe608570bd55fb8c7e43",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "institutional_regional_system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "client_request_concurrency": 2,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 65536,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 2,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "server_total_context_size": 131072,
+    "stage4_context_runtime_profile_version": "stage4-context-runtime-128k-total-2slot-v3",
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "scenario_set_version": "stage3-context-scenarios-v1",
+  "schema_version": "stage4-artifact-v4",
+  "semantic_validation_version": "stage4-semantic-validation-v6",
+  "stage3_context_artifact_sha256": "fe943e2f0f0ab8ddba8b909754eb0ad3e9b86c81dd6772cced5959ff0ab5202d",
+  "stage3_context_input_fingerprint": "fb3f7d831e81ee3e52a3ca76885beb19c14480933314f8e1f55d14772b3c4143",
+  "stage3_context_output_sha256": "be8f61ee59d9282e524e6b292d34f1c0d0eef0ba6896df33de19137fbfacd659",
+  "stage4_output_sha256": "c131eb3e3b6eb23f9197292f34fa77b6f106d67ceaffb2319b6a5cb1a1923cd2"
+}

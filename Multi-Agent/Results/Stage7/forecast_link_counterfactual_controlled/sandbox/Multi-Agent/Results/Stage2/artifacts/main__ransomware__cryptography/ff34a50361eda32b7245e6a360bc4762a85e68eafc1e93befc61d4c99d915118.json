@@ -1,0 +1,1492 @@
+{
+  "artifact_sha256": "921938932f7d76caa31ee38bd08725cedde53918e50d415a52611033665f612c",
+  "case_id": "main__ransomware__cryptography",
+  "constrained_output_schema_hashes": {
+    "post_attack_base_sha256": "393c4cfe34d9f4b8ca1795d628c87bed5792fa9a9b250adddde3a96139ce9018",
+    "post_defense_base_sha256": "d0ec52a92b19b2dff01a6ef845dd40c90bf549bd9aa5e7684facbc5fc5314788",
+    "round1_attack_sha256": "1a7006750e5370165cfbcc67e9967bd67305479c7d036bdbb34e3826b741f42d",
+    "round1_defense_sha256": "b43415f724d97a185674da38bb11de3ea3b2301786507da08df9e58f2abce21e",
+    "round1_mediator_base_sha256": "3a45eb2d3362be341f4f05b0df16236fbb7a91426f318b0fc873e214557b9b97",
+    "round2_attack_base_sha256": "21226f9c01121474c5dd8f4ed400ce86935358c2a95773f6e0fa719c5bf295cb",
+    "round2_defense_base_sha256": "37ef39e0b2f98822aebe9f3f17e8898a80d17d44e11b13dfff513c0b6c8822be",
+    "round2_mediator_base_sha256": "33a7ece413ab514db9fb687cb82734298482ec030d6a3e1cfc0a360c251656e1"
+  },
+  "created_at": "2026-11-07T18:38:59.702248+00:00",
+  "debate_result": {
+    "attack_post_assessment": {
+      "case_id": "main__ransomware__cryptography",
+      "claims": [
+        {
+          "claim_id": "A_001",
+          "evidence_ids": [
+            "E_31_6C5988FD2D0D8867"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The EU NIS2 recital, within its EU regulatory scope, states that the Union has faced an exponential increase in ransomware attacks and refers to the increasing frequency and severity of ransomware attacks; the source contract for this record permits only legal_requirement, regulatory_scope, and eu_legal_requirement claim types and does not permit directional_threat_trend claims."
+        },
+        {
+          "claim_id": "A_002",
+          "evidence_ids": [
+            "E_04_270A1E7C47ACC4FF"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2023 reports that backdoors were the top action on objective at 21% in almost one-quarter of remediated 2022 incidents, ransomware constituted 17% of incidents and is described as having held the top spot since at least 2020, extortion was the most common impact at 27%, and phishing was the top initial access vector at 41%; these are incident-share and tactic-prevalence observations, not a direct NoI incident-count or frequency direction."
+        },
+        {
+          "claim_id": "A_003",
+          "evidence_ids": [
+            "E_08_510579F0D776F3BE"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA KEV records that CVE-2022-27593 in QNAP Photo Station was observed being utilized in a Deadbolt ransomware campaign; this constitutes a single confirmed exploitation signal for a specific CVE and campaign under a source contract that permits only the confirmed_exploitation claim type, and it does not measure a temporal incident-count or frequency direction for THREAT_RANSOMWARE NoI."
+        },
+        {
+          "claim_id": "A_004",
+          "evidence_ids": [
+            "E_03_0BAA7B22596028F4"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2023 reports a 2022 global median dwell time of 16 days, down from 21 days in M-Trends 2022, and reports that intrusions involving ransomware had a median dwell time of 9 days in 2022 compared with 5 days reported in M-Trends 2022; dwell time is a temporal intrusion-detection metric and does not directly measure ransomware incident count or frequency."
+        },
+        {
+          "claim_id": "A_005",
+          "evidence_ids": [
+            "E_33_CDE0F421E4D797ED"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "Crossref cutoff-constrained records report a temporal increase in cryptography-security publication counts, with 210 works in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, and an OLS slope of 37.8 works per year; this record is an external publication-activity validation axis independent of the Scopus-derived NoP model input and does not establish deployment maturity, operational effectiveness, causal mitigation effectiveness, or ransomware NoI direction."
+        },
+        {
+          "claim_id": "A_006",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied DBIR excerpt reports increased DDoS incident volume percentiles, including a median increase from 1.4 Gbps to 2.2 Gbps and a 97.5 percentile increase from 99 Gbps to 124 Gbps, and discusses distributed DNS cache-exhaustion attacks; it does not report ransomware incident count or frequency."
+        },
+        {
+          "claim_id": "A_007",
+          "evidence_ids": [
+            "E_24_223CAC714FDE427B"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST CSF 2.0 describes Organizational Profiles that can be scoped to countering ransomware threats and handling ransomware incidents involving financial systems, and outlines gap analysis and action-plan development; this is framework guidance context and does not provide direct trajectory evidence for NoI or NoP."
+        },
+        {
+          "claim_id": "A_008",
+          "evidence_ids": [
+            "E_25_95744996E05BA6E9"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The NIST SP 800-53 Rev. 5 chunk references ransomware attacks that encrypt organizational data on servers as an example of actual threat events in a discussion section, and separately includes the CP-4 CONTINGENCY PLAN TESTING control and the (2) CONTINGENCY TRAINING sub-element; the surfaced text does not explicitly link the ransomware reference to a contingency-training example."
+        }
+      ],
+      "critic_type": "attack_feasibility",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 0,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "NO_DIRECTIONAL_EVIDENCE",
+        "rationale": "No supplied record with a permitted directional_threat_trend contract explicitly reports a temporal change in ransomware incident count or frequency for THREAT_RANSOMWARE NoI. The EU NIS2 recital (E_31) is EU regulatory context whose source contract does not permit directional_threat_trend claims. The IBM X-Force data (E_04) reports 2022 incident shares, the Mandiant data (E_03) reports dwell time, the DBIR excerpt (E_02) reports DDoS volume, and the CISA KEV record (E_08) reports a single confirmed exploitation event; none measures temporal NoI count or frequency direction. The Crossref PMT publication trend (E_33) addresses the PMT NoP publication-activity axis and constitutes a bounded challenge to the forecast PMT 'decreasing' label, but it is a PMT_TRAJECTORY component and cannot serve as decisive Attack stance-basis evidence, which is restricted to THREAT_TRAJECTORY or GAP_DIRECTION. No direct evidence for both forecast-state modalities (threat NoI and PMT NoP) exists to support a decisive GAP_DIRECTION interpretation, and the historical input's recorded recent NoI direction of 'decreasing' is a model field, not external directional evidence. The deliberation confirmed these boundaries: the mediator adjudicated that the threat side genuinely lacks any permitted directional_threat_trend observation for THREAT_RANSOMWARE NoI, and the two required revisions to A_003 and A_008 are framing corrections that do not alter the absence of directional threat-axis evidence. Therefore, the available evidence does not directionally determine the attack-feasibility threat trajectory, and the stance remains unchanged from Stage 1.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "What 2023-2024 observed ransomware incident count or frequency data exist within the supplied cutoff that would confirm or refute the forecasted NoI increase, especially given that the historical input records recent NoI direction as 'decreasing' (latest_value_z = 0.6072) while the forecast projects an increasing direction (forecast_mean_z = 0.8846)? No such data is present in the supplied evidence.",
+        "How should the forecasted gap_direction 'threat_minus_pmt_increasing' (gap_slope_per_year = 1.067) be interpreted given that no direct evidence supports the threat NoI increasing direction and the only bounded PMT-side challenge (E_33 publication activity) does not establish deployment, operational effectiveness, or causal mitigation effectiveness? A decisive GAP_DIRECTION interpretation requires direct evidence for both forecast-state modalities, which is absent.",
+        "Whether the Crossref cryptography-security publication trend (E_33) uses the same scope, denominator, and normalization as the NoP model input, so that its increasing 2021-2024 counts directly contradict or merely contextualize the forecast NoP decreasing z-score; E_33 explicitly states it is an external validation axis independent of the Scopus-derived NoP model input.",
+        "What direct evidence, if any, connects the cryptography PMT (data protection, key management, provenance) to measured ransomware defense outcomes over 2025-2027, given that the supplied evidence contains guidance, control-assessment procedures, and publication activity but no measured deployment or operational-effectiveness trend for cryptography-based controls in ransomware defense."
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "attack_pre_assessment": {
+      "case_id": "main__ransomware__cryptography",
+      "claims": [
+        {
+          "claim_id": "A_001",
+          "evidence_ids": [
+            "E_31_6C5988FD2D0D8867"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The EU NIS2 recital, within its EU regulatory scope, states that the Union has faced an exponential increase in ransomware attacks and refers to the increasing frequency and severity of ransomware attacks."
+        },
+        {
+          "claim_id": "A_002",
+          "evidence_ids": [
+            "E_04_270A1E7C47ACC4FF"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force reports that backdoors were the top action on objective in almost one-quarter of remediated 2022 incidents, while ransomware constituted 17% of incidents and is described as having held the top spot since at least 2020."
+        },
+        {
+          "claim_id": "A_003",
+          "evidence_ids": [
+            "E_08_510579F0D776F3BE"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "CISA KEV records that CVE-2022-27593 in QNAP Photo Station was observed being utilized in a Deadbolt ransomware campaign."
+        },
+        {
+          "claim_id": "A_004",
+          "evidence_ids": [
+            "E_03_0BAA7B22596028F4"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends reports a 2022 global median dwell time of 16 days, down from 21 days, and reports that intrusions involving ransomware had a median dwell time of 9 days in 2022, compared with 5 days reported in M-Trends 2022."
+        },
+        {
+          "claim_id": "A_005",
+          "evidence_ids": [
+            "E_33_CDE0F421E4D797ED"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "Crossref cutoff-constrained records report a temporal increase in cryptography-security publication counts, with 210 works in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, and an OLS slope of 37.8 works per year."
+        },
+        {
+          "claim_id": "A_006",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied DBIR excerpt reports increased DDoS incident volume percentiles, including a median increase from 1.4 Gbps to 2.2 Gbps, but it does not report ransomware incident count or frequency."
+        },
+        {
+          "claim_id": "A_007",
+          "evidence_ids": [
+            "E_24_223CAC714FDE427B"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST CSF 2.0 describes Organizational Profiles that can be scoped to countering ransomware threats and handling ransomware incidents involving financial systems."
+        },
+        {
+          "claim_id": "A_008",
+          "evidence_ids": [
+            "E_25_95744996E05BA6E9"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53 Rev. 5 includes contingency training examples that reference ransomware attacks that encrypt organizational data on servers."
+        }
+      ],
+      "critic_type": "attack_feasibility",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 0,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "NO_DIRECTIONAL_EVIDENCE",
+        "rationale": "No supplied record with an allowed directional_threat_trend contract explicitly reports a temporal change in ransomware incident count or frequency for THREAT_RANSOMWARE. The EU NIS2 recital is reclassified as CONTEXT because its source contract does not permit directional threat-trend claims and its scope is EU regulatory. The Crossref record supplies PMT publication activity only and does not establish the threat NoI trajectory. Therefore, the supplied Stage 0 records do not directionally determine the attack-feasibility threat trajectory.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "Whether the EU NIS2 recital's characterization of exponential ransomware growth can be used as a directional THREAT_TRAJECTORY observation for THREAT_RANSOMWARE NoI, given that its source contract permits only legal/regulatory claim types and not directional_threat_trend.",
+        "What 2023-2024 observed ransomware incident count or frequency data exist within the supplied cutoff that would confirm or refute the forecasted NoI increase, especially given the historical input's recent NoI direction is recorded as decreasing.",
+        "Whether the Crossref cryptography-security publication trend should be treated as a direct proxy for operational PMT NoP activity in the forecast, since the record explicitly does not establish deployment maturity, operational effectiveness, or causal effectiveness.",
+        "How the forecasted gap_direction 'threat_minus_pmt_increasing' should be interpreted in light of rising Crossref publication activity on the PMT axis and the absence of direct 2025-2027 relative observations between threat NoI and PMT NoP."
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "case_id": "main__ransomware__cryptography",
+    "defense_post_assessment": {
+      "case_id": "main__ransomware__cryptography",
+      "claims": [
+        {
+          "claim_id": "D1",
+          "evidence_ids": [
+            "E_33_CDE0F421E4D797ED"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "The Crossref cutoff-constrained PMT publication trend for PMT=CRYPTOGRAPHY reports annual publication counts of 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, with an OLS slope of 37.8 works per year."
+        },
+        {
+          "claim_id": "D2",
+          "evidence_ids": [
+            "E_26_A710FE8084614182"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53A Rev. 5 defines assessment objectives for SC-12(06) physical control of cryptographic keys and SC-13 cryptographic protection, including examination of cryptographic module validation certificates and testing of mechanisms supporting cryptographic protection."
+        },
+        {
+          "claim_id": "D3",
+          "evidence_ids": [
+            "E_15_0A98378FC609EF7E"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The NIST AI 100-2 chunk states that, unlike cryptography, widely used machine learning algorithms do not have information-theoretic security proofs, and that information-theoretic impossibility results have set limits on the effectiveness of widely used ML mitigation techniques."
+        },
+        {
+          "claim_id": "D4",
+          "evidence_ids": [
+            "E_16_E7BB108A85B71262"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The NIST AI 100-4 chunk describes digital signatures as a more robust solution for authenticating content and metadata, with signature generation using a private key and verification by recipients."
+        },
+        {
+          "claim_id": "D5",
+          "evidence_ids": [
+            "E_08_510579F0D776F3BE"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA KEV records that CVE-2022-27593 in QNAP Photo Station, when the product is internet-exposed, was observed being utilized in a Deadbolt ransomware campaign and that the remediation is to apply updates per vendor instructions."
+        },
+        {
+          "claim_id": "D6",
+          "evidence_ids": [
+            "E_03_0BAA7B22596028F4"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2023 reports that the global median dwell time for 2022 was 16 days, down from 21 days in M-Trends 2022, and that ransomware intrusions had a median dwell time of 9 days in 2022 compared with 5 days reported in M-Trends 2022."
+        },
+        {
+          "claim_id": "D7",
+          "evidence_ids": [
+            "E_04_270A1E7C47ACC4FF"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2023 reports that in 2022 backdoors were the top action on objective at 21%, ransomware was 17%, extortion was the most common impact at 27%, and phishing was the top initial access vector at 41%."
+        },
+        {
+          "claim_id": "D8",
+          "evidence_ids": [
+            "E_23_AC2A498B747552DF"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The CISA CPG chunk describes the CPGs as an approachable common set of IT and OT cybersecurity protections intended to help organizations prioritize impactful practices and communicate with non-technical leadership."
+        },
+        {
+          "claim_id": "D9",
+          "evidence_ids": [
+            "E_24_223CAC714FDE427B"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The NIST CSF 2.0 chunk describes creating Current and Target Organizational Profiles, performing gap analysis, and gives an example profile scoped to countering ransomware threats and handling ransomware incidents."
+        },
+        {
+          "claim_id": "D10",
+          "evidence_ids": [
+            "E_25_95744996E05BA6E9"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The NIST SP 800-53 Rev. 5 chunk includes CP-4 contingency plan testing and references ransomware attacks that encrypt organizational data on servers as actual threat events."
+        },
+        {
+          "claim_id": "D11",
+          "evidence_ids": [
+            "E_19_4E69D255F61736DB"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The NISTIR 8259a chunk indicates IoT device cybersecurity literature references NIST SP 800-56A Rev. 3 for pairwise key establishment using discrete logarithm cryptography."
+        },
+        {
+          "claim_id": "D12",
+          "evidence_ids": [
+            "E_29_185B62FFF51926EC",
+            "E_29_3C1B7B4F9532A5F2",
+            "E_29_7C01F6CA0D982DFF"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied Crossref metadata records include Cryptography venue reviewer-acknowledgment items for 2017, 2020, and 2022."
+        },
+        {
+          "claim_id": "D13",
+          "evidence_ids": [
+            "E_31_6C5988FD2D0D8867"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The EU NIS2 chunk states that Member States should develop a policy addressing the rise in ransomware attacks as part of their national cybersecurity strategy."
+        },
+        {
+          "claim_id": "D14",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The Verizon DBIR 2023 chunk reports that the median DDoS volume grew from 1.4 Gbps to 2.2 Gbps and the 97.5 percentile grew from 99 Gbps to 124 Gbps, and it discusses distributed DNS cache-exhaustion attacks."
+        }
+      ],
+      "critic_type": "defense_robustness",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": -1,
+      "stance_basis": {
+        "challenging_claim_ids": [
+          "D1"
+        ],
+        "decision": "CHALLENGE_DOMINATES",
+        "rationale": "The decisive defense-side challenge remains the Crossref cutoff-constrained PMT publication trend in E_33_CDE0F421E4D797ED. It provides explicit temporal publication-activity evidence for PMT=CRYPTOGRAPHY, with increasing annual counts from 210 in 2021 to 330 in 2024 and an OLS slope of 37.8 works/year. Because NoP is preserved literally as publication activity, this increasing publication trend is directionally inconsistent with the frozen PMT state’s NoP direction of decreasing. The debate confirmed that E_33 is an independent publication-activity validation axis and does not establish deployment maturity, operational effectiveness, causal mitigation effectiveness, or threat NoI direction; those limitations do not remove its status as NoP-relevant temporal publication-activity evidence. No surfaced defense-relevant claim provides decisive support for a decreasing NoP trajectory. Threat-side exploitation, dwell-time, incident-share, regulatory, and guidance records remain context or operational interpretation and cannot become decisive defense stance-basis components.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "Does the Crossref cutoff-constrained query for PMT=CRYPTOGRAPHY use the same scope, denominator, and normalization as the NoP model input, so that its increasing 2021-2024 publication counts directly conflict with the forecast NoP direction rather than merely contextualize it?",
+        "How should E_33’s independence from the Scopus-derived NoP model input affect its weight as decisive NoP publication-activity evidence, while preserving its explicit temporal direction?",
+        "What deployment, adoption, or operational-effectiveness evidence exists for cryptography-based controls in ransomware defense over 2025-2027, given that the payload contains guidance and publication activity but no measured deployment trend?",
+        "What direct evidence supports the forecast Threat NoI count/frequency direction, since the supplied threat records report dwell time, incident shares, exploitation examples, and legal context rather than incident count/frequency?",
+        "How should the forecast Threat-PMT gap be interpreted if the PMT publication trajectory is increasing while threat-side NoI evidence remains indirect?"
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "defense_pre_assessment": {
+      "case_id": "main__ransomware__cryptography",
+      "claims": [
+        {
+          "claim_id": "D1",
+          "evidence_ids": [
+            "E_33_CDE0F421E4D797ED"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "The Crossref cutoff-constrained PMT publication trend for PMT=CRYPTOGRAPHY reports annual security/cryptography publication counts of 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, with an OLS slope of 37.8 works per year."
+        },
+        {
+          "claim_id": "D2",
+          "evidence_ids": [
+            "E_26_A710FE8084614182"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53A Rev. 5 defines assessment objectives for SC-12(06) physical control of cryptographic keys and SC-13 cryptographic protection, including examination of cryptographic module validation certificates and testing of mechanisms supporting cryptographic protection."
+        },
+        {
+          "claim_id": "D3",
+          "evidence_ids": [
+            "E_15_0A98378FC609EF7E"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The NIST AI 100-2 chunk states that, unlike cryptography, widely used machine learning algorithms do not have information-theoretic security proofs, and that information-theoretic impossibility results have set limits on the effectiveness of widely used ML mitigation techniques."
+        },
+        {
+          "claim_id": "D4",
+          "evidence_ids": [
+            "E_16_E7BB108A85B71262"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The NIST AI 100-4 chunk describes digital signatures as a more robust solution for authenticating content and metadata, with signature generation using a private key and verification by recipients."
+        },
+        {
+          "claim_id": "D5",
+          "evidence_ids": [
+            "E_08_510579F0D776F3BE"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA KEV records that CVE-2022-27593 in QNAP Photo Station, when the product is internet-exposed, was observed being utilized in a Deadbolt ransomware campaign and that the remediation is to apply updates per vendor instructions."
+        },
+        {
+          "claim_id": "D6",
+          "evidence_ids": [
+            "E_03_0BAA7B22596028F4"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2023 reports that the global median dwell time for 2022 was 16 days, down from 21 days in M-Trends 2022, and that ransomware intrusions had a median dwell time of 9 days in 2022 compared with 5 days reported in M-Trends 2022."
+        },
+        {
+          "claim_id": "D7",
+          "evidence_ids": [
+            "E_04_270A1E7C47ACC4FF"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2023 reports that in 2022 backdoors were the top action on objective at 21%, ransomware was 17%, extortion was the most common impact at 27%, and phishing was the top initial access vector at 41%."
+        },
+        {
+          "claim_id": "D8",
+          "evidence_ids": [
+            "E_23_AC2A498B747552DF"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The CISA CPG chunk describes the CPGs as an approachable common set of IT and OT cybersecurity protections intended to help organizations prioritize impactful practices and communicate with non-technical leadership."
+        },
+        {
+          "claim_id": "D9",
+          "evidence_ids": [
+            "E_24_223CAC714FDE427B"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The NIST CSF 2.0 chunk describes creating Current and Target Organizational Profiles, performing gap analysis, and gives an example profile scoped to countering ransomware threats and handling ransomware incidents."
+        },
+        {
+          "claim_id": "D10",
+          "evidence_ids": [
+            "E_25_95744996E05BA6E9"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The NIST SP 800-53 Rev. 5 chunk includes CP-4 contingency plan testing and references ransomware attacks that encrypt organizational data on servers as actual threat events."
+        },
+        {
+          "claim_id": "D11",
+          "evidence_ids": [
+            "E_19_4E69D255F61736DB"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The NISTIR 8259a chunk indicates IoT device cybersecurity literature references NIST SP 800-56A Rev. 3 for pairwise key establishment using discrete logarithm cryptography."
+        },
+        {
+          "claim_id": "D12",
+          "evidence_ids": [
+            "E_29_185B62FFF51926EC",
+            "E_29_3C1B7B4F9532A5F2",
+            "E_29_7C01F6CA0D982DFF"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied Crossref metadata records include Cryptography venue reviewer-acknowledgment items for 2017, 2020, and 2022."
+        },
+        {
+          "claim_id": "D13",
+          "evidence_ids": [
+            "E_31_6C5988FD2D0D8867"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The EU NIS2 chunk states that Member States should develop a policy addressing the rise in ransomware attacks as part of their national cybersecurity strategy."
+        },
+        {
+          "claim_id": "D14",
+          "evidence_ids": [
+            "E_02_066AFE8300EDCEBB"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The Verizon DBIR 2023 chunk reports that the median DDoS volume grew from 1.4 Gbps to 2.2 Gbps and the 97.5 percentile grew from 99 Gbps to 124 Gbps, and it discusses distributed DNS cache-exhaustion attacks."
+        }
+      ],
+      "critic_type": "defense_robustness",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": -1,
+      "stance_basis": {
+        "challenging_claim_ids": [
+          "D1"
+        ],
+        "decision": "CHALLENGE_DOMINATES",
+        "rationale": "The decisive challenge is the Crossref PMT publication trend, which reports increasing cryptography/security publication activity through 2024 and therefore conflicts with the forecast PMT state’s stated NoP direction of decreasing. The remaining evidence provides context on ransomware, cryptographic controls, guidance, and technical maturity, but no temporal deployment or implementation evidence that supports a decreasing NoP mitigation trajectory.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "Does the Crossref publication-count trend use the same scope, denominator, and normalization as the NoP model input, so that its increasing 2021-2024 counts directly contradict or merely contextualize the forecast NoP decreasing z-score?",
+        "What deployment, adoption, or operational-effectiveness evidence exists for cryptography-based controls in ransomware defense over 2025-2027, given that the payload contains guidance and publication activity but no measured deployment trend?",
+        "What direct evidence supports the forecast Threat NoI count/frequency direction, since the supplied threat records report dwell time, incident shares, exploitation examples, and legal context rather than incident count/frequency?",
+        "How should the forecast Threat-PMT gap be interpreted if the PMT publication trajectory is increasing while threat-side NoI evidence remains indirect?",
+        "Is cryptography in this case intended as a mitigation class such as data protection, key management, or provenance, or as a general technical-literature PMT, and what applicability evidence connects it to ransomware outcomes?"
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "evidence_conflicts": [],
+    "evidence_gaps": [],
+    "exchanges": [
+      {
+        "claim_id": "D1",
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "note": "The claim is directly grounded in the cited Crossref cutoff-constrained PMT publication trend record. It reports temporal publication-activity counts and an OLS slope for the PMT_CRYPTOGRAPHY axis. This may inform the PMT NoP publication-activity direction, but the record itself does not establish deployment maturity, operational effectiveness, causal mitigation effectiveness, or ransomware NoI direction, so it cannot serve as decisive attack-feasibility basis on its own.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D2",
+        "evidence_ids": [
+          "E_26_A710FE8084614182"
+        ],
+        "note": "The claim is accurately grounded in the cited NIST SP 800-53A Rev. 5 chunk. It describes assessment objectives for cryptographic key control and cryptographic protection, including examination of cryptographic module validation certificates and testing of cryptographic protection mechanisms. This is control-assessment context and does not by itself measure forecast NoI or NoP direction.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D3",
+        "evidence_ids": [
+          "E_15_0A98378FC609EF7E"
+        ],
+        "note": "The claim is supported by the cited NIST AI 100-2 chunk. The record contrasts cryptography with machine learning regarding information-theoretic security proofs and states that impossibility results set limits on the effectiveness of widely used mitigation techniques in the adversarial ML context. This is technical-literature context, not evidence of ransomware incident frequency or PMT deployment trajectory.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D4",
+        "evidence_ids": [
+          "E_16_E7BB108A85B71262"
+        ],
+        "note": "The claim is grounded in the cited NIST AI 100-4 chunk. The record describes digital signatures as a more robust solution for authenticating content and metadata, with private-key signature generation and recipient-side verification. This is provenance/control context and does not establish measured deployment or operational effectiveness for ransomware defense.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D5",
+        "evidence_ids": [
+          "E_08_510579F0D776F3BE"
+        ],
+        "note": "The claim is grounded in the cited CISA KEV record. The record states that CVE-2022-27593 in QNAP Photo Station with internet exposure was observed being utilized in a Deadbolt ransomware campaign and gives the remediation as applying vendor updates. This is an observed exploitation signal, not direct evidence of ransomware incident count or frequency direction.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D6",
+        "evidence_ids": [
+          "E_03_0BAA7B22596028F4"
+        ],
+        "note": "The claim is accurately grounded in the cited Mandiant M-Trends chunk. The record reports the 2022 global median dwell time as 16 days, down from 21 days, and reports ransomware-related intrusion dwell time as 9 days in 2022 compared with 5 days in M-Trends 2022. Dwell time is operational context and does not directly measure ransomware incident count or frequency.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D7",
+        "evidence_ids": [
+          "E_04_270A1E7C47ACC4FF"
+        ],
+        "note": "The claim is grounded in the cited IBM X-Force chunk. The record reports 2022 incident shares for backdoors, ransomware, extortion, and phishing as the top initial access vector. These are incident-share and tactic-prevalence observations, not direct NoI incident-count or frequency direction evidence.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D8",
+        "evidence_ids": [
+          "E_23_AC2A498B747552DF"
+        ],
+        "note": "The claim is grounded in the cited CISA CPG chunk. The record describes the CPGs as an approachable common set of IT and OT cybersecurity protections intended to help organizations prioritize impactful practices and communicate with non-technical leadership. This is guidance context only and does not measure threat or PMT trajectory.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D9",
+        "evidence_ids": [
+          "E_24_223CAC714FDE427B"
+        ],
+        "note": "The claim is grounded in the cited NIST CSF 2.0 chunk. The record describes Current and Target Organizational Profiles, gap analysis, and includes an example profile scoped to countering ransomware threats and handling ransomware incidents. This is framework context and does not provide direct trajectory evidence for NoI or NoP.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D10",
+        "evidence_ids": [
+          "E_25_95744996E05BA6E9"
+        ],
+        "note": "The claim is grounded in the cited NIST SP 800-53 Rev. 5 chunk. The record includes CP-4 contingency plan testing and references ransomware attacks that encrypt organizational data on servers as actual threat events. This is contingency-planning context, not observed ransomware incident count or frequency trend.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D11",
+        "evidence_ids": [
+          "E_19_4E69D255F61736DB"
+        ],
+        "note": "The claim is grounded in the cited NISTIR 8259a chunk. The chunk references NIST SP 800-56A Rev. 3 for pairwise key-establishment schemes using discrete logarithm cryptography. This is cryptographic reference context and does not establish deployment maturity or forecast trajectory.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D12",
+        "evidence_ids": [
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF"
+        ],
+        "note": "The claim is grounded in the three cited Crossref academic metadata records. They identify Cryptography venue reviewer-acknowledgment items for 2017, 2020, and 2022. These are static publication metadata records and, by themselves, are not directional publication-activity evidence.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D13",
+        "evidence_ids": [
+          "E_31_6C5988FD2D0D8867"
+        ],
+        "note": "The claim is grounded in the cited EU NIS2 chunk. The record states that Member States should develop a policy addressing the rise in ransomware attacks as part of national cybersecurity strategy. This is EU regulatory context and is not a permitted directional THREAT_RANSOMWARE NoI observation under the source contract.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D14",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "note": "The claim is grounded in the cited Verizon DBIR chunk. The record reports DDoS volume percentile growth, including median and 97.5 percentile increases, and discusses distributed DNS resource-exhaustion attacks. This is DDoS-related threat context and does not establish ransomware incident count or frequency direction.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "A_001",
+        "evidence_ids": [
+          "E_31_6C5988FD2D0D8867"
+        ],
+        "note": "The supplied EU NIS2 recital text does state an exponential increase in ransomware attacks and refers to increasing frequency and severity. The claim is accurately scoped to the EU regulatory context in E_31. This remains legal/regulatory context and does not itself establish a global ransomware NoI count/frequency trajectory.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A_002",
+        "evidence_ids": [
+          "E_04_270A1E7C47ACC4FF"
+        ],
+        "note": "E_04 reports backdoors at 21% as the top action on objective in almost one-quarter of remediated 2022 incidents and ransomware at 17%, with ransomware described as having held the top spot since at least 2020. The statement is supported. It remains tactic-share/incident-share context, not a direct NoI count/frequency observation.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A_003",
+        "evidence_ids": [
+          "E_08_510579F0D776F3BE"
+        ],
+        "note": "The factual KEV record is supported: CVE-2022-27593 in QNAP Photo Station was observed being utilized in a Deadbolt ransomware campaign. However, the supplied record is a confirmed-exploitation signal, not a temporal incident-count/frequency measure. If the claim is read as supporting the forecast trajectory, it should be narrowed to confirmed exploitation context rather than direct NoI trajectory evidence.",
+        "response_type": "REVISE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A_004",
+        "evidence_ids": [
+          "E_03_0BAA7B22596028F4"
+        ],
+        "note": "E_03 reports the 2022 global median dwell time as 16 days, down from 21 days, and ransomware intrusion dwell time as 9 days in 2022 versus 5 days reported in M-Trends 2022. The claim is supported. Dwell time is a temporal intrusion metric and does not directly establish ransomware NoI count/frequency.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A_005",
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "note": "E_33 directly reports cutoff-constrained publication counts of 210, 254, 272, and 330 for 2021-2024 and an OLS slope of 37.8 works/year. This is direct directional publication-activity evidence for PMT=CRYPTOGRAPHY and is directionally inconsistent with a decreasing NoP publication-activity label. It does not establish deployment, adoption, operational effectiveness, or causal mitigation effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A_006",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "note": "The DBIR excerpt reports DDoS bits-per-second growth, including median volume increasing from 1.4 Gbps to 2.2 Gbps, and it does not report ransomware incident count or frequency. The claim is supported. DDoS volume percentiles are not ransomware NoI evidence.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A_007",
+        "evidence_ids": [
+          "E_24_223CAC714FDE427B"
+        ],
+        "note": "E_24 explicitly gives an Organizational Profile example scoped to countering ransomware threats and handling ransomware incidents involving financial systems. The claim is supported as guidance context.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A_008",
+        "evidence_ids": [
+          "E_25_95744996E05BA6E9"
+        ],
+        "note": "E_25 contains a reference to ransomware attacks that encrypt organizational data on servers and also includes contingency training and contingency plan testing content. However, the supplied text does not explicitly tie the ransomware sentence to a contingency-training example. The claim should be narrowed to say that the SP 800-53 Rev. 5 chunk references ransomware as an actual threat event and separately includes contingency training/testing controls.",
+        "response_type": "REVISE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      }
+    ],
+    "final_adjudications": [
+      {
+        "adjudication_id": "ADJ_R1_001",
+        "attack_claim_ids": [
+          "A_005"
+        ],
+        "defense_claim_ids": [
+          "D1"
+        ],
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "outcome": "ACCEPT_BOTH",
+        "rationale": "Both critics independently ground the Crossref PMT publication trend in E_33 and correctly label it CHALLENGES_FORECAST for PMT_TRAJECTORY. E_33 reports annual counts 210→254→272→330 (2021–2024) with OLS slope 37.8 works/year, which is directionally inconsistent with the forecast PMT NoP 'decreasing' label. Both sides appropriately acknowledge that E_33 is an external publication-activity validation axis independent of the Scopus-derived NoP model input and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. The factual content and its bounded significance as a PMT-activity challenge are convergent. The attack is simultaneously correct that no surfaced record provides a permitted directional_threat_trend observation for THREAT_RANSOMWARE NoI, so the two stances (attack: NO_DIRECTIONAL_EVIDENCE on the threat axis; defense: CHALLENGE_DOMINATES on the PMT axis) are not in direct conflict but address different forecast components.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ_R1_002",
+        "attack_claim_ids": [
+          "A_003"
+        ],
+        "defense_claim_ids": [
+          "D5"
+        ],
+        "evidence_ids": [
+          "E_08_510579F0D776F3BE"
+        ],
+        "outcome": "REVISE_ATTACK",
+        "rationale": "The factual content of A_003 is accurate: E_08 records that CVE-2022-27593 in QNAP Photo Station was observed being utilized in a Deadbolt ransomware campaign. However, E_08 is a confirmed_exploitation_record whose only allowed claim type is confirmed_exploitation; it does not permit prevalence_magnitude or vulnerability_severity claims, and it contains no temporal incident-count or frequency measure. The attack's forecast_relation of SUPPORTS_FORECAST overstates what this single exploitation event can support. The defense's D5 correctly frames it as NEUTRAL_CONTEXT operational exploitation signal. The attack should narrow A_003 to reflect that E_08 provides a confirmed exploitation signal for a specific CVE in a specific campaign, not direct evidence of a directional NoI threat trajectory.",
+        "required_revision": "Narrow A_003's forecast_relation from SUPPORTS_FORECAST to NEUTRAL_CONTEXT (or OPERATIONAL_INTERPRETATION with a confirmed-exploitation-signal scope). The claim statement should specify that E_08 records a confirmed exploitation event for CVE-2022-27593 in a Deadbolt ransomware campaign and that this constitutes a single exploitation signal, not a temporal incident-count or frequency observation for THREAT_RANSOMWARE NoI direction."
+      },
+      {
+        "adjudication_id": "ADJ_R1_003",
+        "attack_claim_ids": [
+          "A_008"
+        ],
+        "defense_claim_ids": [
+          "D10"
+        ],
+        "evidence_ids": [
+          "E_25_95744996E05BA6E9"
+        ],
+        "outcome": "REVISE_ATTACK",
+        "rationale": "A_008 states that NIST SP 800-53 Rev. 5 'includes contingency training examples that reference ransomware attacks that encrypt organizational data on servers.' Examining E_25, the ransomware sentence appears in a discussion of 'actual threat events' (which includes cyber-attacks, ransomware, hurricanes, and hardware/software failures) preceding the '(2) CONTINGENCY TRAINING' sub-element. The contingency training sub-element's discussion references 'mechanisms used in operations' and 'simulated events' but does not explicitly cite the ransomware example as a contingency-training illustration. CP-4 CONTINGENCY PLAN TESTING is a separate control element that follows. The defense's D10 more accurately describes the chunk as including CP-4 and separately referencing ransomware as an actual threat event. The attack should correct the conflation.",
+        "required_revision": "Narrow A_008 to state that the NIST SP 800-53 Rev. 5 chunk (E_25) references ransomware attacks that encrypt organizational data on servers as an example of actual threat events in a discussion section, and separately includes the CP-4 CONTINGENCY PLAN TESTING control and the (2) CONTINGENCY TRAINING sub-element. Do not assert that the ransomware reference is explicitly part of a contingency-training example, as the surfaced text does not make that explicit linkage."
+      },
+      {
+        "adjudication_id": "ADJ_R1_004",
+        "attack_claim_ids": [
+          "A_001"
+        ],
+        "defense_claim_ids": [
+          "D13"
+        ],
+        "evidence_ids": [
+          "E_31_6C5988FD2D0D8867"
+        ],
+        "outcome": "ACCEPT_BOTH",
+        "rationale": "Both critics correctly ground the EU NIS2 recital in E_31 and agree it is EU regulatory context. E_31's allowed claim types are legal_requirement, regulatory_scope, and eu_legal_requirement; it does not permit directional_threat_trend claims. Both sides correctly note that the recital's characterization of an 'exponential increase in ransomware attacks' and 'increasing frequency and severity' cannot serve as a permitted directional THREAT_RANSOMWARE NoI observation under the source contract. D13 additionally notes the policy-development obligation for Member States, which is accurately supported by E_31's text. The claims are convergent and well-scoped.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ_R1_005",
+        "attack_claim_ids": [
+          "A_002"
+        ],
+        "defense_claim_ids": [
+          "D7"
+        ],
+        "evidence_ids": [
+          "E_04_270A1E7C47ACC4FF"
+        ],
+        "outcome": "ACCEPT_BOTH",
+        "rationale": "Both critics accurately ground the IBM X-Force 2023 data in E_04. E_04 reports backdoors at 21% as top action on objective in almost one-quarter of remediated 2022 incidents, ransomware at 17% (held top spot since at least 2020), extortion at 27% as most common impact, and phishing at 41% as top initial access vector. Both sides correctly characterize these as incident-share and tactic-prevalence observations, not direct NoI count/frequency direction evidence. The claims are convergent.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ_R1_006",
+        "attack_claim_ids": [
+          "A_004"
+        ],
+        "defense_claim_ids": [
+          "D6"
+        ],
+        "evidence_ids": [
+          "E_03_0BAA7B22596028F4"
+        ],
+        "outcome": "ACCEPT_BOTH",
+        "rationale": "Both critics accurately ground the Mandiant M-Trends data in E_03. E_03 reports the 2022 global median dwell time as 16 days (down from 21) and ransomware intrusion median dwell time as 9 days in 2022 versus 5 days in M-Trends 2022. Both sides correctly note that dwell time is a temporal intrusion-detection metric, not a direct ransomware NoI count/frequency measure. The claims are convergent and well-supported.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ_R1_007",
+        "attack_claim_ids": [
+          "A_006"
+        ],
+        "defense_claim_ids": [
+          "D14"
+        ],
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "outcome": "ACCEPT_BOTH",
+        "rationale": "Both critics correctly ground the Verizon DBIR 2023 data in E_02. E_02 reports median DDoS volume growth from 1.4 to 2.2 Gbps and 97.5 percentile growth from 99 to 124 Gbps, along with discussion of distributed DNS cache-exhaustion attacks. Both sides correctly note this is DDoS-related threat context and does not report ransomware incident count or frequency. A_006's explicit negative claim (the DBIR does not report ransomware incident count/frequency) is accurately supported by the E_02 content, which is confined to the DDoS section. The claims are convergent.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ_R1_008",
+        "attack_claim_ids": [
+          "A_007"
+        ],
+        "defense_claim_ids": [
+          "D9"
+        ],
+        "evidence_ids": [
+          "E_24_223CAC714FDE427B"
+        ],
+        "outcome": "ACCEPT_BOTH",
+        "rationale": "Both critics accurately ground the NIST CSF 2.0 content in E_24. E_24 describes scoping Organizational Profiles, creating Current and Target Profiles, performing gap analysis, and provides an explicit example of a Profile scoped to 'countering ransomware threats and handling ransomware incidents involving those financial systems.' Both sides correctly characterize this as framework/guidance context, not trajectory evidence. The claims are convergent.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ_R1_009",
+        "attack_claim_ids": [],
+        "defense_claim_ids": [
+          "D2"
+        ],
+        "evidence_ids": [
+          "E_26_A710FE8084614182"
+        ],
+        "outcome": "ACCEPT_DEFENSE",
+        "rationale": "D2 is accurately grounded in E_26, which defines assessment objectives for SC-12(06) (physical control of cryptographic keys when stored information is encrypted by external service providers) and SC-13 (cryptographic protection), including examination of cryptographic module validation certificates, FIPS-validated modules, and testing of mechanisms supporting cryptographic protection. The attack agreed with this claim in Round 1. The evidence type is official_guidance_chunk with allowed claim types control_assessment_procedure and implementation_assessment; D2 correctly frames it as control-assessment context, not deployment or effectiveness evidence.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ_R1_010",
+        "attack_claim_ids": [],
+        "defense_claim_ids": [
+          "D3"
+        ],
+        "evidence_ids": [
+          "E_15_0A98378FC609EF7E"
+        ],
+        "outcome": "ACCEPT_DEFENSE",
+        "rationale": "D3 is accurately grounded in E_15, which states that unlike cryptography, widely used ML algorithms lack information-theoretic security proofs, and that information-theoretic impossibility results have set limits on the effectiveness of widely used mitigation techniques. The attack agreed in Round 1. E_15's allowed claim types are adversarial_ml_taxonomy and ai_mitigation_class; D3 correctly frames it as technical-literature context, not ransomware-specific or deployment evidence.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ_R1_011",
+        "attack_claim_ids": [],
+        "defense_claim_ids": [
+          "D4"
+        ],
+        "evidence_ids": [
+          "E_16_E7BB108A85B71262"
+        ],
+        "outcome": "ACCEPT_DEFENSE",
+        "rationale": "D4 is accurately grounded in E_16, which describes digital signatures as a more robust solution for authenticating content and metadata, with signature generation using a private key and verification by recipients. The attack agreed in Round 1. E_16's allowed claim types include provenance_approach; D3 correctly frames it as provenance/control context. The evidence does not establish measured deployment or operational effectiveness for ransomware defense.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ_R1_012",
+        "attack_claim_ids": [],
+        "defense_claim_ids": [
+          "D5"
+        ],
+        "evidence_ids": [
+          "E_08_510579F0D776F3BE"
+        ],
+        "outcome": "ACCEPT_DEFENSE",
+        "rationale": "D5 is accurately grounded in E_08. The claim correctly identifies the KEV record for CVE-2022-27593 in QNAP Photo Station, the Deadbolt ransomware campaign exploitation, the internet-exposure condition, and the remediation of applying vendor updates. The attack agreed in Round 1. D5's NEUTRAL_CONTEXT framing is more appropriate than A_003's SUPPORTS_FORECAST framing (see ADJ_R1_002), as E_08 is a confirmed_exploitation_record that does not measure temporal incident trends.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ_R1_013",
+        "attack_claim_ids": [],
+        "defense_claim_ids": [
+          "D8"
+        ],
+        "evidence_ids": [
+          "E_23_AC2A498B747552DF"
+        ],
+        "outcome": "ACCEPT_DEFENSE",
+        "rationale": "D8 is accurately grounded in E_23, which describes the CISA CPGs as an approachable common set of IT and OT cybersecurity protections intended to help organizations prioritize impactful practices and communicate with non-technical leadership. The attack agreed in Round 1. E_23's allowed claim types include recommended_control, organizational_applicability, and prioritized_defensive_practice; D8 correctly frames it as guidance context only.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ_R1_014",
+        "attack_claim_ids": [],
+        "defense_claim_ids": [
+          "D10"
+        ],
+        "evidence_ids": [
+          "E_25_95744996E05BA6E9"
+        ],
+        "outcome": "ACCEPT_DEFENSE",
+        "rationale": "D10 is accurately grounded in E_25. The claim correctly identifies that the SP 800-53 Rev. 5 chunk includes CP-4 CONTINGENCY PLAN TESTING and references ransomware attacks that encrypt organizational data on servers as actual threat events. The attack agreed in Round 1. D10's framing is more precise than A_008's (see ADJ_R1_003) in not conflating the ransomware reference with the contingency training sub-element.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ_R1_015",
+        "attack_claim_ids": [],
+        "defense_claim_ids": [
+          "D11"
+        ],
+        "evidence_ids": [
+          "E_19_4E69D255F61736DB"
+        ],
+        "outcome": "ACCEPT_DEFENSE",
+        "rationale": "D11 is accurately grounded in E_19, which references NIST SP 800-56A Rev. 3 for pairwise key-establishment schemes using discrete logarithm cryptography in the context of IoT device cybersecurity literature. The attack agreed in Round 1. E_19's allowed claim types are iot_security_capability and iot_manufacturer_support_baseline; D11 correctly frames it as cryptographic reference context, not deployment maturity or forecast trajectory evidence.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "ADJ_R1_016",
+        "attack_claim_ids": [],
+        "defense_claim_ids": [
+          "D12"
+        ],
+        "evidence_ids": [
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF"
+        ],
+        "outcome": "ACCEPT_DEFENSE",
+        "rationale": "D12 is accurately grounded in the three Crossref academic_metadata_record entries (E_29_185B62FFF51926EC for 2017, E_29_3C1B7B4F9532A5F2 for 2022, E_29_7C01F6CA0D982DFF for 2020). These are static publication metadata records identifying Cryptography venue reviewer-acknowledgment items. The attack agreed in Round 1. None of these records carry allowed claim types for deployment_maturity or operational_effectiveness (both are explicitly prohibited), and they are not directional publication-activity evidence by themselves.",
+        "required_revision": null
+      }
+    ],
+    "resolved_claims": [],
+    "rounds": [
+      {
+        "attack_turn": {
+          "case_id": "main__ransomware__cryptography",
+          "responder_critic": "attack_feasibility",
+          "responses": [
+            {
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "note": "The claim is directly grounded in the cited Crossref cutoff-constrained PMT publication trend record. It reports temporal publication-activity counts and an OLS slope for the PMT_CRYPTOGRAPHY axis. This may inform the PMT NoP publication-activity direction, but the record itself does not establish deployment maturity, operational effectiveness, causal mitigation effectiveness, or ransomware NoI direction, so it cannot serve as decisive attack-feasibility basis on its own.",
+              "response_type": "AGREE",
+              "target_claim_id": "D1"
+            },
+            {
+              "evidence_ids": [
+                "E_26_A710FE8084614182"
+              ],
+              "note": "The claim is accurately grounded in the cited NIST SP 800-53A Rev. 5 chunk. It describes assessment objectives for cryptographic key control and cryptographic protection, including examination of cryptographic module validation certificates and testing of cryptographic protection mechanisms. This is control-assessment context and does not by itself measure forecast NoI or NoP direction.",
+              "response_type": "AGREE",
+              "target_claim_id": "D2"
+            },
+            {
+              "evidence_ids": [
+                "E_15_0A98378FC609EF7E"
+              ],
+              "note": "The claim is supported by the cited NIST AI 100-2 chunk. The record contrasts cryptography with machine learning regarding information-theoretic security proofs and states that impossibility results set limits on the effectiveness of widely used mitigation techniques in the adversarial ML context. This is technical-literature context, not evidence of ransomware incident frequency or PMT deployment trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "D3"
+            },
+            {
+              "evidence_ids": [
+                "E_16_E7BB108A85B71262"
+              ],
+              "note": "The claim is grounded in the cited NIST AI 100-4 chunk. The record describes digital signatures as a more robust solution for authenticating content and metadata, with private-key signature generation and recipient-side verification. This is provenance/control context and does not establish measured deployment or operational effectiveness for ransomware defense.",
+              "response_type": "AGREE",
+              "target_claim_id": "D4"
+            },
+            {
+              "evidence_ids": [
+                "E_08_510579F0D776F3BE"
+              ],
+              "note": "The claim is grounded in the cited CISA KEV record. The record states that CVE-2022-27593 in QNAP Photo Station with internet exposure was observed being utilized in a Deadbolt ransomware campaign and gives the remediation as applying vendor updates. This is an observed exploitation signal, not direct evidence of ransomware incident count or frequency direction.",
+              "response_type": "AGREE",
+              "target_claim_id": "D5"
+            },
+            {
+              "evidence_ids": [
+                "E_03_0BAA7B22596028F4"
+              ],
+              "note": "The claim is accurately grounded in the cited Mandiant M-Trends chunk. The record reports the 2022 global median dwell time as 16 days, down from 21 days, and reports ransomware-related intrusion dwell time as 9 days in 2022 compared with 5 days in M-Trends 2022. Dwell time is operational context and does not directly measure ransomware incident count or frequency.",
+              "response_type": "AGREE",
+              "target_claim_id": "D6"
+            },
+            {
+              "evidence_ids": [
+                "E_04_270A1E7C47ACC4FF"
+              ],
+              "note": "The claim is grounded in the cited IBM X-Force chunk. The record reports 2022 incident shares for backdoors, ransomware, extortion, and phishing as the top initial access vector. These are incident-share and tactic-prevalence observations, not direct NoI incident-count or frequency direction evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "D7"
+            },
+            {
+              "evidence_ids": [
+                "E_23_AC2A498B747552DF"
+              ],
+              "note": "The claim is grounded in the cited CISA CPG chunk. The record describes the CPGs as an approachable common set of IT and OT cybersecurity protections intended to help organizations prioritize impactful practices and communicate with non-technical leadership. This is guidance context only and does not measure threat or PMT trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "D8"
+            },
+            {
+              "evidence_ids": [
+                "E_24_223CAC714FDE427B"
+              ],
+              "note": "The claim is grounded in the cited NIST CSF 2.0 chunk. The record describes Current and Target Organizational Profiles, gap analysis, and includes an example profile scoped to countering ransomware threats and handling ransomware incidents. This is framework context and does not provide direct trajectory evidence for NoI or NoP.",
+              "response_type": "AGREE",
+              "target_claim_id": "D9"
+            },
+            {
+              "evidence_ids": [
+                "E_25_95744996E05BA6E9"
+              ],
+              "note": "The claim is grounded in the cited NIST SP 800-53 Rev. 5 chunk. The record includes CP-4 contingency plan testing and references ransomware attacks that encrypt organizational data on servers as actual threat events. This is contingency-planning context, not observed ransomware incident count or frequency trend.",
+              "response_type": "AGREE",
+              "target_claim_id": "D10"
+            },
+            {
+              "evidence_ids": [
+                "E_19_4E69D255F61736DB"
+              ],
+              "note": "The claim is grounded in the cited NISTIR 8259a chunk. The chunk references NIST SP 800-56A Rev. 3 for pairwise key-establishment schemes using discrete logarithm cryptography. This is cryptographic reference context and does not establish deployment maturity or forecast trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "D11"
+            },
+            {
+              "evidence_ids": [
+                "E_29_185B62FFF51926EC",
+                "E_29_3C1B7B4F9532A5F2",
+                "E_29_7C01F6CA0D982DFF"
+              ],
+              "note": "The claim is grounded in the three cited Crossref academic metadata records. They identify Cryptography venue reviewer-acknowledgment items for 2017, 2020, and 2022. These are static publication metadata records and, by themselves, are not directional publication-activity evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "D12"
+            },
+            {
+              "evidence_ids": [
+                "E_31_6C5988FD2D0D8867"
+              ],
+              "note": "The claim is grounded in the cited EU NIS2 chunk. The record states that Member States should develop a policy addressing the rise in ransomware attacks as part of national cybersecurity strategy. This is EU regulatory context and is not a permitted directional THREAT_RANSOMWARE NoI observation under the source contract.",
+              "response_type": "AGREE",
+              "target_claim_id": "D13"
+            },
+            {
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "note": "The claim is grounded in the cited Verizon DBIR chunk. The record reports DDoS volume percentile growth, including median and 97.5 percentile increases, and discusses distributed DNS resource-exhaustion attacks. This is DDoS-related threat context and does not establish ransomware incident count or frequency direction.",
+              "response_type": "AGREE",
+              "target_claim_id": "D14"
+            }
+          ],
+          "round_index": 1,
+          "target_critic": "defense_robustness"
+        },
+        "defense_turn": {
+          "case_id": "main__ransomware__cryptography",
+          "responder_critic": "defense_robustness",
+          "responses": [
+            {
+              "evidence_ids": [
+                "E_31_6C5988FD2D0D8867"
+              ],
+              "note": "The supplied EU NIS2 recital text does state an exponential increase in ransomware attacks and refers to increasing frequency and severity. The claim is accurately scoped to the EU regulatory context in E_31. This remains legal/regulatory context and does not itself establish a global ransomware NoI count/frequency trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "A_001"
+            },
+            {
+              "evidence_ids": [
+                "E_04_270A1E7C47ACC4FF"
+              ],
+              "note": "E_04 reports backdoors at 21% as the top action on objective in almost one-quarter of remediated 2022 incidents and ransomware at 17%, with ransomware described as having held the top spot since at least 2020. The statement is supported. It remains tactic-share/incident-share context, not a direct NoI count/frequency observation.",
+              "response_type": "AGREE",
+              "target_claim_id": "A_002"
+            },
+            {
+              "evidence_ids": [
+                "E_08_510579F0D776F3BE"
+              ],
+              "note": "The factual KEV record is supported: CVE-2022-27593 in QNAP Photo Station was observed being utilized in a Deadbolt ransomware campaign. However, the supplied record is a confirmed-exploitation signal, not a temporal incident-count/frequency measure. If the claim is read as supporting the forecast trajectory, it should be narrowed to confirmed exploitation context rather than direct NoI trajectory evidence.",
+              "response_type": "REVISE",
+              "target_claim_id": "A_003"
+            },
+            {
+              "evidence_ids": [
+                "E_03_0BAA7B22596028F4"
+              ],
+              "note": "E_03 reports the 2022 global median dwell time as 16 days, down from 21 days, and ransomware intrusion dwell time as 9 days in 2022 versus 5 days reported in M-Trends 2022. The claim is supported. Dwell time is a temporal intrusion metric and does not directly establish ransomware NoI count/frequency.",
+              "response_type": "AGREE",
+              "target_claim_id": "A_004"
+            },
+            {
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "note": "E_33 directly reports cutoff-constrained publication counts of 210, 254, 272, and 330 for 2021-2024 and an OLS slope of 37.8 works/year. This is direct directional publication-activity evidence for PMT=CRYPTOGRAPHY and is directionally inconsistent with a decreasing NoP publication-activity label. It does not establish deployment, adoption, operational effectiveness, or causal mitigation effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "A_005"
+            },
+            {
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "note": "The DBIR excerpt reports DDoS bits-per-second growth, including median volume increasing from 1.4 Gbps to 2.2 Gbps, and it does not report ransomware incident count or frequency. The claim is supported. DDoS volume percentiles are not ransomware NoI evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "A_006"
+            },
+            {
+              "evidence_ids": [
+                "E_24_223CAC714FDE427B"
+              ],
+              "note": "E_24 explicitly gives an Organizational Profile example scoped to countering ransomware threats and handling ransomware incidents involving financial systems. The claim is supported as guidance context.",
+              "response_type": "AGREE",
+              "target_claim_id": "A_007"
+            },
+            {
+              "evidence_ids": [
+                "E_25_95744996E05BA6E9"
+              ],
+              "note": "E_25 contains a reference to ransomware attacks that encrypt organizational data on servers and also includes contingency training and contingency plan testing content. However, the supplied text does not explicitly tie the ransomware sentence to a contingency-training example. The claim should be narrowed to say that the SP 800-53 Rev. 5 chunk references ransomware as an actual threat event and separately includes contingency training/testing controls.",
+              "response_type": "REVISE",
+              "target_claim_id": "A_008"
+            }
+          ],
+          "round_index": 1,
+          "target_critic": "attack_feasibility"
+        },
+        "mediator_summary": {
+          "adjudications": [
+            {
+              "adjudication_id": "ADJ_R1_001",
+              "attack_claim_ids": [
+                "A_005"
+              ],
+              "defense_claim_ids": [
+                "D1"
+              ],
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both critics independently ground the Crossref PMT publication trend in E_33 and correctly label it CHALLENGES_FORECAST for PMT_TRAJECTORY. E_33 reports annual counts 210→254→272→330 (2021–2024) with OLS slope 37.8 works/year, which is directionally inconsistent with the forecast PMT NoP 'decreasing' label. Both sides appropriately acknowledge that E_33 is an external publication-activity validation axis independent of the Scopus-derived NoP model input and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. The factual content and its bounded significance as a PMT-activity challenge are convergent. The attack is simultaneously correct that no surfaced record provides a permitted directional_threat_trend observation for THREAT_RANSOMWARE NoI, so the two stances (attack: NO_DIRECTIONAL_EVIDENCE on the threat axis; defense: CHALLENGE_DOMINATES on the PMT axis) are not in direct conflict but address different forecast components.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_002",
+              "attack_claim_ids": [
+                "A_003"
+              ],
+              "defense_claim_ids": [
+                "D5"
+              ],
+              "evidence_ids": [
+                "E_08_510579F0D776F3BE"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "The factual content of A_003 is accurate: E_08 records that CVE-2022-27593 in QNAP Photo Station was observed being utilized in a Deadbolt ransomware campaign. However, E_08 is a confirmed_exploitation_record whose only allowed claim type is confirmed_exploitation; it does not permit prevalence_magnitude or vulnerability_severity claims, and it contains no temporal incident-count or frequency measure. The attack's forecast_relation of SUPPORTS_FORECAST overstates what this single exploitation event can support. The defense's D5 correctly frames it as NEUTRAL_CONTEXT operational exploitation signal. The attack should narrow A_003 to reflect that E_08 provides a confirmed exploitation signal for a specific CVE in a specific campaign, not direct evidence of a directional NoI threat trajectory.",
+              "required_revision": "Narrow A_003's forecast_relation from SUPPORTS_FORECAST to NEUTRAL_CONTEXT (or OPERATIONAL_INTERPRETATION with a confirmed-exploitation-signal scope). The claim statement should specify that E_08 records a confirmed exploitation event for CVE-2022-27593 in a Deadbolt ransomware campaign and that this constitutes a single exploitation signal, not a temporal incident-count or frequency observation for THREAT_RANSOMWARE NoI direction."
+            },
+            {
+              "adjudication_id": "ADJ_R1_003",
+              "attack_claim_ids": [
+                "A_008"
+              ],
+              "defense_claim_ids": [
+                "D10"
+              ],
+              "evidence_ids": [
+                "E_25_95744996E05BA6E9"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "A_008 states that NIST SP 800-53 Rev. 5 'includes contingency training examples that reference ransomware attacks that encrypt organizational data on servers.' Examining E_25, the ransomware sentence appears in a discussion of 'actual threat events' (which includes cyber-attacks, ransomware, hurricanes, and hardware/software failures) preceding the '(2) CONTINGENCY TRAINING' sub-element. The contingency training sub-element's discussion references 'mechanisms used in operations' and 'simulated events' but does not explicitly cite the ransomware example as a contingency-training illustration. CP-4 CONTINGENCY PLAN TESTING is a separate control element that follows. The defense's D10 more accurately describes the chunk as including CP-4 and separately referencing ransomware as an actual threat event. The attack should correct the conflation.",
+              "required_revision": "Narrow A_008 to state that the NIST SP 800-53 Rev. 5 chunk (E_25) references ransomware attacks that encrypt organizational data on servers as an example of actual threat events in a discussion section, and separately includes the CP-4 CONTINGENCY PLAN TESTING control and the (2) CONTINGENCY TRAINING sub-element. Do not assert that the ransomware reference is explicitly part of a contingency-training example, as the surfaced text does not make that explicit linkage."
+            },
+            {
+              "adjudication_id": "ADJ_R1_004",
+              "attack_claim_ids": [
+                "A_001"
+              ],
+              "defense_claim_ids": [
+                "D13"
+              ],
+              "evidence_ids": [
+                "E_31_6C5988FD2D0D8867"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both critics correctly ground the EU NIS2 recital in E_31 and agree it is EU regulatory context. E_31's allowed claim types are legal_requirement, regulatory_scope, and eu_legal_requirement; it does not permit directional_threat_trend claims. Both sides correctly note that the recital's characterization of an 'exponential increase in ransomware attacks' and 'increasing frequency and severity' cannot serve as a permitted directional THREAT_RANSOMWARE NoI observation under the source contract. D13 additionally notes the policy-development obligation for Member States, which is accurately supported by E_31's text. The claims are convergent and well-scoped.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_005",
+              "attack_claim_ids": [
+                "A_002"
+              ],
+              "defense_claim_ids": [
+                "D7"
+              ],
+              "evidence_ids": [
+                "E_04_270A1E7C47ACC4FF"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both critics accurately ground the IBM X-Force 2023 data in E_04. E_04 reports backdoors at 21% as top action on objective in almost one-quarter of remediated 2022 incidents, ransomware at 17% (held top spot since at least 2020), extortion at 27% as most common impact, and phishing at 41% as top initial access vector. Both sides correctly characterize these as incident-share and tactic-prevalence observations, not direct NoI count/frequency direction evidence. The claims are convergent.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_006",
+              "attack_claim_ids": [
+                "A_004"
+              ],
+              "defense_claim_ids": [
+                "D6"
+              ],
+              "evidence_ids": [
+                "E_03_0BAA7B22596028F4"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both critics accurately ground the Mandiant M-Trends data in E_03. E_03 reports the 2022 global median dwell time as 16 days (down from 21) and ransomware intrusion median dwell time as 9 days in 2022 versus 5 days in M-Trends 2022. Both sides correctly note that dwell time is a temporal intrusion-detection metric, not a direct ransomware NoI count/frequency measure. The claims are convergent and well-supported.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_007",
+              "attack_claim_ids": [
+                "A_006"
+              ],
+              "defense_claim_ids": [
+                "D14"
+              ],
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both critics correctly ground the Verizon DBIR 2023 data in E_02. E_02 reports median DDoS volume growth from 1.4 to 2.2 Gbps and 97.5 percentile growth from 99 to 124 Gbps, along with discussion of distributed DNS cache-exhaustion attacks. Both sides correctly note this is DDoS-related threat context and does not report ransomware incident count or frequency. A_006's explicit negative claim (the DBIR does not report ransomware incident count/frequency) is accurately supported by the E_02 content, which is confined to the DDoS section. The claims are convergent.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_008",
+              "attack_claim_ids": [
+                "A_007"
+              ],
+              "defense_claim_ids": [
+                "D9"
+              ],
+              "evidence_ids": [
+                "E_24_223CAC714FDE427B"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both critics accurately ground the NIST CSF 2.0 content in E_24. E_24 describes scoping Organizational Profiles, creating Current and Target Profiles, performing gap analysis, and provides an explicit example of a Profile scoped to 'countering ransomware threats and handling ransomware incidents involving those financial systems.' Both sides correctly characterize this as framework/guidance context, not trajectory evidence. The claims are convergent.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_009",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "D2"
+              ],
+              "evidence_ids": [
+                "E_26_A710FE8084614182"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "D2 is accurately grounded in E_26, which defines assessment objectives for SC-12(06) (physical control of cryptographic keys when stored information is encrypted by external service providers) and SC-13 (cryptographic protection), including examination of cryptographic module validation certificates, FIPS-validated modules, and testing of mechanisms supporting cryptographic protection. The attack agreed with this claim in Round 1. The evidence type is official_guidance_chunk with allowed claim types control_assessment_procedure and implementation_assessment; D2 correctly frames it as control-assessment context, not deployment or effectiveness evidence.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_010",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "D3"
+              ],
+              "evidence_ids": [
+                "E_15_0A98378FC609EF7E"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "D3 is accurately grounded in E_15, which states that unlike cryptography, widely used ML algorithms lack information-theoretic security proofs, and that information-theoretic impossibility results have set limits on the effectiveness of widely used mitigation techniques. The attack agreed in Round 1. E_15's allowed claim types are adversarial_ml_taxonomy and ai_mitigation_class; D3 correctly frames it as technical-literature context, not ransomware-specific or deployment evidence.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_011",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "D4"
+              ],
+              "evidence_ids": [
+                "E_16_E7BB108A85B71262"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "D4 is accurately grounded in E_16, which describes digital signatures as a more robust solution for authenticating content and metadata, with signature generation using a private key and verification by recipients. The attack agreed in Round 1. E_16's allowed claim types include provenance_approach; D3 correctly frames it as provenance/control context. The evidence does not establish measured deployment or operational effectiveness for ransomware defense.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_012",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "D5"
+              ],
+              "evidence_ids": [
+                "E_08_510579F0D776F3BE"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "D5 is accurately grounded in E_08. The claim correctly identifies the KEV record for CVE-2022-27593 in QNAP Photo Station, the Deadbolt ransomware campaign exploitation, the internet-exposure condition, and the remediation of applying vendor updates. The attack agreed in Round 1. D5's NEUTRAL_CONTEXT framing is more appropriate than A_003's SUPPORTS_FORECAST framing (see ADJ_R1_002), as E_08 is a confirmed_exploitation_record that does not measure temporal incident trends.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_013",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "D8"
+              ],
+              "evidence_ids": [
+                "E_23_AC2A498B747552DF"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "D8 is accurately grounded in E_23, which describes the CISA CPGs as an approachable common set of IT and OT cybersecurity protections intended to help organizations prioritize impactful practices and communicate with non-technical leadership. The attack agreed in Round 1. E_23's allowed claim types include recommended_control, organizational_applicability, and prioritized_defensive_practice; D8 correctly frames it as guidance context only.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_014",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "D10"
+              ],
+              "evidence_ids": [
+                "E_25_95744996E05BA6E9"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "D10 is accurately grounded in E_25. The claim correctly identifies that the SP 800-53 Rev. 5 chunk includes CP-4 CONTINGENCY PLAN TESTING and references ransomware attacks that encrypt organizational data on servers as actual threat events. The attack agreed in Round 1. D10's framing is more precise than A_008's (see ADJ_R1_003) in not conflating the ransomware reference with the contingency training sub-element.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_015",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "D11"
+              ],
+              "evidence_ids": [
+                "E_19_4E69D255F61736DB"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "D11 is accurately grounded in E_19, which references NIST SP 800-56A Rev. 3 for pairwise key-establishment schemes using discrete logarithm cryptography in the context of IoT device cybersecurity literature. The attack agreed in Round 1. E_19's allowed claim types are iot_security_capability and iot_manufacturer_support_baseline; D11 correctly frames it as cryptographic reference context, not deployment maturity or forecast trajectory evidence.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_016",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "D12"
+              ],
+              "evidence_ids": [
+                "E_29_185B62FFF51926EC",
+                "E_29_3C1B7B4F9532A5F2",
+                "E_29_7C01F6CA0D982DFF"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "D12 is accurately grounded in the three Crossref academic_metadata_record entries (E_29_185B62FFF51926EC for 2017, E_29_3C1B7B4F9532A5F2 for 2022, E_29_7C01F6CA0D982DFF for 2020). These are static publication metadata records identifying Cryptography venue reviewer-acknowledgment items. The attack agreed in Round 1. None of these records carry allowed claim types for deployment_maturity or operational_effectiveness (both are explicitly prohibited), and they are not directional publication-activity evidence by themselves.",
+              "required_revision": null
+            }
+          ],
+          "case_id": "main__ransomware__cryptography",
+          "claim_matches": [],
+          "evidence_conflicts": [],
+          "evidence_gaps": [],
+          "next_round_focus": [],
+          "overall_rationale": "The surfaced evidence boundary is well-characterized by both critics. The two substantive disputes—A_003's over-scoped SUPPORTS_FORECAST relation and A_008's conflation of the ransomware threat-event reference with contingency training—are clearly specified in the defense's REVISE responses and the required revisions above are concrete and unambiguous. The core PMT-activity challenge (A_005/D1) is convergent on both sides with appropriate caveats about E_33's independence from the NoP model input. The threat side genuinely lacks any permitted directional_threat_trend observation for THREAT_RANSOMWARE NoI, confirming the attack's NO_DIRECTIONAL_EVIDENCE position on that axis. The PMT side has a real but bounded publication-activity challenge to the NoP 'decreasing' label, confirming the defense's CHALLENGE_DOMINATES position on that axis with the important caveat that E_33 does not establish deployment, operational effectiveness, or causal mitigation effectiveness. Additional debate rounds over the same frozen evidence are unlikely to materially clarify these well-bounded positions. The two REVISE items require the attack to refine claim framing in its post-assessment but do not require a further opponent review round to resolve.",
+          "round_action": "STOP",
+          "round_index": 1
+        },
+        "round_index": 1
+      }
+    ],
+    "stance_changes": {
+      "attack_feasibility": 0,
+      "defense_robustness": 0
+    },
+    "unresolved_claims": []
+  },
+  "execution_order_version": "attack-defense-mediator-post-attack-defense-v1",
+  "followup_rule_version": "mediator-adjudication-routes-round2-v1",
+  "forecast_data_sha256": "ffc8b257b3071504fbb801b35afe6a308f06762b6ec1be765ed09576f6d78aff",
+  "input_fingerprint": "ff34a50361eda32b7245e6a360bc4762a85e68eafc1e93befc61d4c99d915118",
+  "max_rounds": 2,
+  "output_schema_hashes": {
+    "critic_debate_turn_sha256": "cfeff667e1e2404b1a65de1d5b854c2436a3ae52f6f67010474638a813f12760",
+    "mediator_summary_sha256": "ccc54c2be82dfc86a61d35c60a4fed7acc93854fa8339520828a291e07b4d550",
+    "stage2_result_sha256": "67173d52fa6bde8dd367e131809d34a218d209e2e778771ec0c05981260b9a80"
+  },
+  "prompt_hashes": {
+    "debate_appendix_sha256": "bed650d112e9246cb612f05735d8f1bcd3b1e0cac81452dfefaa18841063347f",
+    "debate_user_prompt_sha256": "0f71384c4d2663f44231aac78961d15ec66aee761fa0f15f6bba7e49a05aa168",
+    "mediator_system_prompt_sha256": "9a8540efcc67868e45e2288c8293853f4714c47fcc2e9da729f21366b2c4f7b2",
+    "mediator_user_prompt_sha256": "a79719c372de805daa710f4be29681f4115cf4e9edf4bf927f2ee4d7b4ec91cd",
+    "post_appendix_sha256": "dbafcf3212623902892def956e19af67053f33fd2f258bcb348d91df777a0a7b",
+    "post_user_prompt_sha256": "64b2a02b322884c7dd8700bfa6aa5d5725f9ae06459207eb221d9dcc757d7673",
+    "stage2_attack_role_context_sha256": "728c94692c122e34eba32fad0dfa9f8a63a52c667d412b3ce44d05542f8c94e1",
+    "stage2_defense_role_context_sha256": "7a4501539002af93df15a454fbba90082cc0e234febf3306db4dde8c464b4a3b"
+  },
+  "prompt_visibility_rule_version": "mediator-round2-post-surfaced-evidence-view-v2",
+  "round2_evidence_rule_version": "round2-surfaced-evidence-only-v1",
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 43,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage2-artifact-v9",
+  "semantic_validation_version": "stage2-semantic-validation-v9",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "3e169cb016728c4c4f61305d23e31c452c6c1845f9c8f3e02996355912107bc0",
+  "stage1_artifact_sha256": "f090b98b62e521b63ab497826c0b8793fd9aae5d030c6ac6423f32cb98b27467",
+  "stage1_input_fingerprint": "612fe896881074310f5ad06993ed0194c2b96729404a9f52c7a4b8d610c1c1ca",
+  "stage2_output_sha256": "54b72fb8107e9d2f2e3fb660753aff101cfe5bdf031438230e2fed5e75ab1803"
+}

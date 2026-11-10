@@ -1,0 +1,721 @@
+{
+  "artifact_sha256": "0adb6ac28e6184bb9a9e34b9afb4cc3e4569a557226a257219b068b158d5b850",
+  "case_id": "main__ddos__nlp_llm",
+  "constrained_output_schema_sha256": {
+    "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__eu__cis_ig2__f65ce64b959274c5": {
+      "financial_adoption": "2faa62419e415ae37c58b5f529404010773d0998f87d321341d11c4465440ba4",
+      "institutional_regional": "8c448d0abd0cd406125f8bdfe59cdd93e7d11272e0ce2925788b57534d9df650",
+      "technical_feasibility": "4f0b54852c5cd2e2514a18a0a185fa8abd4fcdaf2decf0d4a2bd28d97bb8c54c"
+    },
+    "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__kr__cis_ig2__93786016d66c34e5": {
+      "financial_adoption": "60aaf825874db087a392f8b1129cf3513f94b3d2e9c2c048d7a22278b4227ff4",
+      "institutional_regional": "24bd109f6988d62b917b878614bb6680b5e514daed59825718c7ecf88590c02c",
+      "technical_feasibility": "1049d658e4491c694697cf5631decd23a8b0423d72eeab086cae964920cf1722"
+    },
+    "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__us__cis_ig2__82c000d326708813": {
+      "financial_adoption": "3afd4a6def20b25dc100bec276d81e9743e4ededa87e31feeb06de4d98099662",
+      "institutional_regional": "02f6c6d9b3fd5adee27d0355b14f5c31c2cfbf9848986d3afd6386f14f301b7e",
+      "technical_feasibility": "59dec67236606aa82e4020d47ace7a40f60d2375380b98d72c69096a67639473"
+    }
+  },
+  "created_at": "2026-11-08T07:58:32.964935+00:00",
+  "decision_object_payload_sha256": {
+    "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__eu__cis_ig2__f65ce64b959274c5": {
+      "financial_adoption": "f7ce296e7b963f3be9163b33d0297898074e312027e92935a7a760b41df9466c",
+      "institutional_regional": "3cd9a2e881106ceba1a8e065a296e9777119f5e3fefc8726781f11e31fa78b0a",
+      "technical_feasibility": "b317fa10e26bf030422b66c5eed88fb57a88956c33c5557b2c41ccfe22372082"
+    },
+    "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__kr__cis_ig2__93786016d66c34e5": {
+      "financial_adoption": "2a9cda25aad2b1552e48056d8163869c58f9391713d25fdcfeb486a1a4b200f6",
+      "institutional_regional": "3a2d3d1cd51b2b41c2d423fdc2fc642987e51ec6e884a0bcd701b848386204ae",
+      "technical_feasibility": "f14663f0536ff35200d98b49637bb24530c70ab66246d7fcd98d7e58593d50e6"
+    },
+    "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__us__cis_ig2__82c000d326708813": {
+      "financial_adoption": "0c9af693c4fab901ef7856c4b6b49ef40e41fd6f84a4027c86cb79e88633d02c",
+      "institutional_regional": "b52ec459d3a855c8a4679f9bd320696b16a0e617ed9cad8f5d4b6fdf34b9cee0",
+      "technical_feasibility": "491b53f64fc8bc9dd67862e2d8e85fe03699b1cd94c55f627c4134903bfddc1e"
+    }
+  },
+  "evaluation_bundle": {
+    "case_id": "main__ddos__nlp_llm",
+    "evaluations": [
+      {
+        "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__kr__cis_ig2__93786016d66c34e5",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FA-1",
+              "evidence_ids": [
+                "DE_DE03_6786A7AB93821D48",
+                "DE_DE03_912FC8A63179A943"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-218A states that using automated methods lowers the effort and resources needed to detect vulnerabilities, and it identifies secure-by-design practices as helpful for improving development efficiency and recommends, where appropriate, using standardized security features and services for log management, identity management, access control, and vulnerability management instead of creating proprietary implementations.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-2",
+              "evidence_ids": [
+                "DE_DE15_1AEC6DDD669756FF",
+                "DE_DE01_E85CB6412740EF20"
+              ],
+              "scope": "GENERAL",
+              "statement": "UK NCSC secure AI guidelines state that following secure-by-design principles requires significant resources throughout a system's life cycle and that developers must invest in prioritizing features, mechanisms, and implementation of tools across system design layers and development stages; NIST AI RMF indicates that AI risk management requires gauging the staffing and funding resources needed to achieve risk-management goals.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-3",
+              "evidence_ids": [
+                "DE_DE02_CFF4EAB2C4BEC522",
+                "DE_DE15_7C1849B1FD93975C"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST GAI profile and UK NCSC operation/maintenance guidance describe ongoing monitoring of model behavior and inputs, update management, provenance and feedback processes, incident disclosure, and information sharing; these are deployment-maturity and operational practices relevant to adoption workload but do not by themselves establish a financial direction.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FA-4",
+              "evidence_ids": [
+                "AE01S_6E6099FA4C2D13D4",
+                "AE01C_A6798E23EEB1E487",
+                "E_33_ADC8BC66D812799F"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied DDoS LLM study reports that few-shot and fine-tuned LLM variants detected DDoS traffic on CICIDS 2017 and an Urban IoT dataset, with fine-tuned variants reporting roughly mid-90-percent accuracy and outperforming a compared MLP, but the study does not establish turnkey production deployment and its evidence is benchmark-based rather than an enterprise operational deployment or cost study; the Crossref trend reports annual NLP/LLM security publication counts of 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024, but explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FA-5",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The standardized reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles, states that IG2 safeguards address increased operational complexity, and notes that some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Deployment-specific financial feasibility can be evaluated if explicit evidence supplies budget fit, price/TCO/ROI/payback, staffing/resource allocation, and procurement/contract timing for the NLP/LLM DDoS action in the reference enterprise.",
+            "If evidence shows the enterprise can integrate with standardized log, identity, access, and vulnerability management systems and use automated scanning, the resource-saving pathway can be assessed against the specific deployment.",
+            "If evidence shows the secure-by-design lifecycle and AI risk-management resource requirements can be met with available staffing and funding, the adoption burden can be re-weighted.",
+            "If an enterprise deployment or cost study for LLM-based DDoS detection is supplied, the benchmark-only limitation can be resolved."
+          ],
+          "constraints": [
+            "Exact financial quantities are not supplied: no budget, price, ROI, TCO, payback period, staffing count, vendor/product version, or procurement ceiling can be inferred.",
+            "Financial/adoption direction is assessed at GENERAL scope; DEPLOYMENT_SPECIFIC affordability is not established because deployment-specific budget, staffing, contract, and architecture context is missing.",
+            "Publication-activity and benchmark-detection records are treated as neutral context because they do not establish enterprise deployment cost, turnkey availability, or financial return.",
+            "Deployment-maturity records are supplementary context and do not by themselves create a financial direction.",
+            "No region-specific financial or procurement conclusion is drawn from the masked jurisdiction label."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__kr__cis_ig2__93786016d66c34e5",
+          "evidence_gaps": [
+            "Missing exact budget, price, vendor/product version, contract/procurement timing, staffing count, and infrastructure architecture needed to determine deployment-specific financial feasibility.",
+            "Missing direct, action-specific cost or resource-saving measurement for NLP/LLM DDoS mitigation in the reference enterprise, such as TCO, ROI, payback, or lifecycle staffing/funding estimates.",
+            "Missing evidence quantifying the operational/adoption workload of NLP/LLM deployment beyond general AI development guidance, including monitoring, update, incident response, and integration costs.",
+            "Missing jurisdiction-specific financial, procurement, or procurement-timing evidence; therefore no region-specific adoption conclusion is possible."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied financial/adoption evidence contains both a grounded SUPPORTS_FEASIBILITY direction and a grounded CHALLENGES_FEASIBILITY direction, so the net GENERAL feasibility judgment is mixed. NIST SP 800-218A records provide adoption-benefit grounding by stating that automated methods lower the effort and resources needed to detect vulnerabilities and by connecting secure-by-design practices with improved development efficiency and standardized integration rather than proprietary implementations. UK NCSC secure AI guidance and NIST AI RMF provide adoption-burden grounding by describing significant lifecycle resources and staffing/funding needs associated with secure AI development and AI risk management. Deployment-maturity records are supplementary operational context and do not by themselves establish a financial direction. Benchmark and publication-trend records are action-relevant context but do not supply enterprise cost, budget, ROI, TCO, payback, staffing, or procurement timing evidence. Exact deployment-specific financial quantities are absent, so the conclusion remains GENERAL and PARTIAL rather than deployment-specific.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR-GEN-SUPP-1",
+              "evidence_ids": [
+                "DE_DE01_0B9728FE19095FD0"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST AI RMF record describes governance mechanisms for AI systems, including ongoing risk-management monitoring and review, AI system inventory, safe decommissioning, documented accountability roles and responsibilities, training, executive leadership responsibility, and defined human-AI oversight, which provide an institutional pathway for accountable NLP/LLM adoption.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-GEN-SUPP-2",
+              "evidence_ids": [
+                "DE_DE15_271AFADC7B3D5999",
+                "DE_DE15_7C1849B1FD93975C"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied secure-AI guidance records describe documentation, transparency, accountability, secure operation and maintenance, monitoring of system behavior and inputs, logging to support audit and investigation, and update management practices that can support institutional governance of NLP/LLM systems.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-GEN-CHAL-1",
+              "evidence_ids": [
+                "DE_DE02_007F05150CB46131"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST GAI Profile identifies a GAI incident-reporting task requiring compliance with legal and regulatory requirements, with examples such as HIPAA breach reporting and NHTSA autonomous vehicle crash reporting, indicating that GAI deployments may face legal/regulatory reporting constraints and associated compliance work.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-CTX-NEUTRAL-1",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen reference-enterprise profile describes a CIS IG2 enterprise with multi-department IT infrastructure, differing risk profiles, possible sensitive information processing, possible regulatory burdens, and safeguards that may require enterprise-grade technology and specialized expertise.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "If an applicable legal/regulatory regime is identified, the organization must map GAI incident-reporting and related compliance requirements (DE_DE02_007F05150CB46131).",
+            "If NLP/LLM systems are deployed, roles/responsibilities, AI inventory, decommissioning, monitoring, and accountability should be defined (DE_DE01_0B9728FE19095FD0, DE_DE15_271AFADC7B3D5999, DE_DE15_7C1849B1FD93975C).",
+            "If the reference-enterprise's regulatory burden materializes, deployment must include compliance processes appropriate to the applicable requirements (CTX_CIS_IG2_9F94838146D9C3A4)."
+          ],
+          "constraints": [
+            "Institutional adoption of NLP/LLM would need to address governance, accountability, documentation, monitoring, inventory, decommissioning, and secure-operation capabilities described in the supplied NIST and secure-AI guidance records (DE_DE01_0B9728FE19095FD0, DE_DE15_271AFADC7B3D5999, DE_DE15_7C1849B1FD93975C).",
+            "Any applicable legal/regulatory GAI incident-reporting obligation would add compliance work; the supplied record provides domain-specific examples but does not establish applicability to the masked frozen jurisdiction (DE_DE02_007F05150CB46131).",
+            "The reference-enterprise profile indicates possible regulatory burdens and specialized expertise needs, but these are profile conditions rather than established obligations or staffing facts (CTX_CIS_IG2_9F94838146D9C3A4)."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__kr__cis_ig2__93786016d66c34e5",
+          "evidence_gaps": [
+            "No supplied evidence establishes which jurisdiction's legal/regulatory regime applies to the masked region.",
+            "No supplied evidence establishes data-sovereignty, cross-border, or sector-specific regulatory obligations for the frozen deployment.",
+            "No supplied evidence establishes the magnitude of compliance, staffing, or governance investment required for NLP/LLM in the CIS IG2 profile.",
+            "No supplied evidence directly links NLP/LLM DDoS mitigation implementation to an operational governance or compliance outcome in the frozen scenario."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "The frozen deployment context uses a masked jurisdiction and supplies no jurisdiction-specific regulatory_applicability evidence, so a DEPLOYMENT_SPECIFIC institutional/regional feasibility direction cannot be grounded. The assessment therefore remains GENERAL. Under the institutional lens, the supplied governance_enablement records directly support institutional feasibility pathways for NLP/LLM adoption. The NIST AI RMF record describes governance, accountability, risk-management monitoring, inventory, decommissioning, documented roles, training, executive responsibility, and human-AI oversight. The supplied secure-AI guidance records describe documentation, transparency, accountability, monitoring, logging for audit and investigation, and secure operation and update management. These are directly relevant to governance enablement, auditability, and institutional control of an NLP/LLM capability. The supplied compliance_constraint record identifies a GAI incident-reporting task subject to legal and regulatory requirements, which is a real institutional constraint. However, the record provides domain-specific examples and does not establish which legal regime applies in the masked frozen scenario, nor the magnitude of the compliance burden. On balance, the governance enablement evidence is more directly supportive of institutional feasibility, while the compliance constraint remains a conditional gap rather than a decisive institutional barrier.",
+          "stance": 1
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF-GEN-SUP-01",
+              "evidence_ids": [
+                "AE01S_6E6099FA4C2D13D4"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied direct experimental evidence supports general technical feasibility of using NLP/LLM methods for DDoS detection: fine-tuned LLM variants detected DDoS traffic on CICIDS 2017 and an Urban IoT dataset and reported roughly mid-90-percent accuracy while outperforming the compared MLP baseline.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-GEN-CHL-01",
+              "evidence_ids": [
+                "AE01C_A6798E23EEB1E487"
+              ],
+              "scope": "GENERAL",
+              "statement": "The same action-specific curated finding materially limits the feasibility interpretation: the DDoS study does not establish turnkey production deployment, performance depended on prompt context or fine-tuning, few-shot results were materially weaker on the harder Urban IoT setting, and the evidence is benchmark-based rather than an enterprise operational deployment or cost study.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-DEP-CTX-01",
+              "evidence_ids": [
+                "DE_DE02_CFF4EAB2C4BEC522",
+                "DE_DE15_7C1849B1FD93975C"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied deployment-maturity guidance indicates that operationally feasible AI system deployment would involve lifecycle monitoring, input and behavior monitoring, secure update handling, and provenance or feedback processes, but this guidance does not by itself establish NLP/LLM effectiveness against DDoS.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-DEPLOY-CTX-01",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen deployment context is a CIS IG2 reference enterprise profile describing multi-department enterprise IT with personnel responsible for managing and protecting infrastructure, where some safeguards may depend on enterprise-grade technology and specialized expertise, but the context does not provide exact local architecture or integration detail.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific technical feasibility conclusion would require exact local architecture, telemetry/data availability, and integration context for the reference enterprise.",
+            "Operational feasibility would require evidence or assumptions that the necessary fine-tuning, prompt engineering, model monitoring, and secure update processes can be supported within the CIS IG2 profile.",
+            "Threat-mitigation fit would require evidence that the NLP/LLM capability maps to the frozen DDoS threat modality and can be maintained through the 2025-2027 forecast horizon."
+          ],
+          "constraints": [
+            "The positive feasibility signal is limited to benchmark-based DDoS detection evidence and does not establish production deployment, operational effectiveness, scalability, maintainability, or cost (AE01S_6E6099FA4C2D13D4; AE01C_A6798E23EEB1E487).",
+            "Technical operability is conditional on prompt context engineering or fine-tuning, and the evidence reports materially weaker few-shot performance in the harder Urban IoT setting (AE01C_A6798E23EEB1E487).",
+            "Deployment-specific compatibility cannot be asserted because the frozen context does not supply exact architecture, product, vendor, integration surface, telemetry format, or staffing/specialized-expertise detail (CTX_CIS_IG2_9F94838146D9C3A4).",
+            "Deployment-maturity guidance is relevant to operability and maintainability but does not itself establish direction for NLP/LLM DDoS mitigation feasibility (DE_DE02_CFF4EAB2C4BEC522; DE_DE15_7C1849B1FD93975C)."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__kr__cis_ig2__93786016d66c34e5",
+          "evidence_gaps": [
+            "No enterprise operational deployment, pilot, or production integration evidence for NLP/LLM-based DDoS detection or mitigation in the frozen CIS IG2 reference environment.",
+            "No evidence linking LLM detection output to realized DDoS mitigation, containment, or response actions.",
+            "No exact infrastructure architecture, telemetry pipeline, integration interface, product/vendor/version, or staffing/specialized-expertise detail needed for a deployment-specific technical feasibility conclusion.",
+            "No evidence of scalability, latency, throughput, operational drift handling, or maintainability under the frozen DDoS threat horizon.",
+            "No jurisdiction-specific technical evidence is supplied, and the jurisdiction is masked for this lens."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "Under the Technical Feasibility lens, the directionally eligible records provide a grounded general support signal and a material general limitation. AE01S_6E6099FA4C2D13D4 supports general technical feasibility because it reports direct DDoS experiments in which LLM variants detected DDoS traffic on benchmark datasets, with fine-tuned variants reporting roughly mid-90-percent accuracy and outperforming the compared MLP baseline. AE01C_A6798E23EEB1E487 challenges the same action as a turnkey or production-ready technical option because it states that the study does not establish turnkey production deployment, performance depended on prompt context or fine-tuning, few-shot results were materially weaker on the harder Urban IoT setting, and the evidence is benchmark-based rather than an enterprise operational deployment or cost study. The deployed-maturity records DE_DE02_CFF4EAB2C4BEC522 and DE_DE15_7C1849B1FD93975C supply lifecycle monitoring and operation context but cannot create technical feasibility direction by themselves. The frozen CIS IG2 deployment context supports only a general reference-enterprise profile and does not supply exact architecture, product, vendor, integration, or staffing detail needed for a deployment-specific conclusion. On balance, the direct experimental enablement evidence supports GENERAL technical feasibility, while the benchmark-only and non-turnkey limitation makes the assessment PARTIAL rather than fully sufficient.",
+          "stance": 1
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__eu__cis_ig2__f65ce64b959274c5",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FA-1",
+              "evidence_ids": [
+                "DE_DE03_6786A7AB93821D48",
+                "DE_DE03_912FC8A63179A943"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-218A states that using automated methods lowers the effort and resources needed to detect vulnerabilities, and it identifies secure-by-design practices as helpful for improving development efficiency and recommends, where appropriate, using standardized security features and services for log management, identity management, access control, and vulnerability management instead of creating proprietary implementations.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-2",
+              "evidence_ids": [
+                "DE_DE15_1AEC6DDD669756FF",
+                "DE_DE01_E85CB6412740EF20"
+              ],
+              "scope": "GENERAL",
+              "statement": "UK NCSC secure AI guidelines state that following secure-by-design principles requires significant resources throughout a system's life cycle and that developers must invest in prioritizing features, mechanisms, and implementation of tools across system design layers and development stages; NIST AI RMF indicates that AI risk management requires gauging the staffing and funding resources needed to achieve risk-management goals.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-3",
+              "evidence_ids": [
+                "DE_DE02_CFF4EAB2C4BEC522",
+                "DE_DE15_7C1849B1FD93975C"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST GAI profile and UK NCSC operation/maintenance guidance describe ongoing monitoring of model behavior and inputs, update management, provenance and feedback processes, incident disclosure, and information sharing; these are deployment-maturity and operational practices relevant to adoption workload but do not by themselves establish a financial direction.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FA-4",
+              "evidence_ids": [
+                "AE01S_6E6099FA4C2D13D4",
+                "AE01C_A6798E23EEB1E487",
+                "E_33_ADC8BC66D812799F"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied DDoS LLM study reports that few-shot and fine-tuned LLM variants detected DDoS traffic on CICIDS 2017 and an Urban IoT dataset, with fine-tuned variants reporting roughly mid-90-percent accuracy and outperforming a compared MLP, but the study does not establish turnkey production deployment and its evidence is benchmark-based rather than an enterprise operational deployment or cost study; the Crossref trend reports annual NLP/LLM security publication counts of 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024, but explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FA-5",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The standardized reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles, states that IG2 safeguards address increased operational complexity, and notes that some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Deployment-specific financial feasibility can be evaluated if explicit evidence supplies budget fit, price/TCO/ROI/payback, staffing/resource allocation, and procurement/contract timing for the NLP/LLM DDoS action in the reference enterprise.",
+            "If evidence shows the enterprise can integrate with standardized log, identity, access, and vulnerability management systems and use automated scanning, the resource-saving pathway can be assessed against the specific deployment.",
+            "If evidence shows the secure-by-design lifecycle and AI risk-management resource requirements can be met with available staffing and funding, the adoption burden can be re-weighted.",
+            "If an enterprise deployment or cost study for LLM-based DDoS detection is supplied, the benchmark-only limitation can be resolved."
+          ],
+          "constraints": [
+            "Exact financial quantities are not supplied: no budget, price, ROI, TCO, payback period, staffing count, vendor/product version, or procurement ceiling can be inferred.",
+            "Financial/adoption direction is assessed at GENERAL scope; DEPLOYMENT_SPECIFIC affordability is not established because deployment-specific budget, staffing, contract, and architecture context is missing.",
+            "Publication-activity and benchmark-detection records are treated as neutral context because they do not establish enterprise deployment cost, turnkey availability, or financial return.",
+            "Deployment-maturity records are supplementary context and do not by themselves create a financial direction.",
+            "No region-specific financial or procurement conclusion is drawn from the masked jurisdiction label."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__eu__cis_ig2__f65ce64b959274c5",
+          "evidence_gaps": [
+            "Missing exact budget, price, vendor/product version, contract/procurement timing, staffing count, and infrastructure architecture needed to determine deployment-specific financial feasibility.",
+            "Missing direct, action-specific cost or resource-saving measurement for NLP/LLM DDoS mitigation in the reference enterprise, such as TCO, ROI, payback, or lifecycle staffing/funding estimates.",
+            "Missing evidence quantifying the operational/adoption workload of NLP/LLM deployment beyond general AI development guidance, including monitoring, update, incident response, and integration costs.",
+            "Missing jurisdiction-specific financial, procurement, or procurement-timing evidence; therefore no region-specific adoption conclusion is possible."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied financial/adoption evidence contains both a grounded SUPPORTS_FEASIBILITY direction and a grounded CHALLENGES_FEASIBILITY direction, so the net GENERAL feasibility judgment is mixed. NIST SP 800-218A records provide adoption-benefit grounding by stating that automated methods lower the effort and resources needed to detect vulnerabilities and by connecting secure-by-design practices with improved development efficiency and standardized integration rather than proprietary implementations. UK NCSC secure AI guidance and NIST AI RMF provide adoption-burden grounding by describing significant lifecycle resources and staffing/funding needs associated with secure AI development and AI risk management. Deployment-maturity records are supplementary operational context and do not by themselves establish a financial direction. Benchmark and publication-trend records are action-relevant context but do not supply enterprise cost, budget, ROI, TCO, payback, staffing, or procurement timing evidence. Exact deployment-specific financial quantities are absent, so the conclusion remains GENERAL and PARTIAL rather than deployment-specific.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR-GEN-SUPP-1",
+              "evidence_ids": [
+                "DE_DE01_0B9728FE19095FD0"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST AI RMF record describes governance mechanisms for AI systems, including ongoing risk-management monitoring and review, AI system inventory, safe decommissioning, documented accountability roles and responsibilities, training, executive leadership responsibility, and defined human-AI oversight, which provide an institutional pathway for accountable NLP/LLM adoption.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-GEN-SUPP-2",
+              "evidence_ids": [
+                "DE_DE15_271AFADC7B3D5999",
+                "DE_DE15_7C1849B1FD93975C"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied secure-AI guidance records describe documentation, transparency, accountability, secure operation and maintenance, monitoring of system behavior and inputs, logging to support audit and investigation, and update management practices that can support institutional governance of NLP/LLM systems.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-GEN-CHAL-1",
+              "evidence_ids": [
+                "DE_DE02_007F05150CB46131"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST GAI Profile identifies a GAI incident-reporting task requiring compliance with legal and regulatory requirements, with examples such as HIPAA breach reporting and NHTSA autonomous vehicle crash reporting, indicating that GAI deployments may face legal/regulatory reporting constraints and associated compliance work.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-CTX-NEUTRAL-1",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen reference-enterprise profile describes a CIS IG2 enterprise with multi-department IT infrastructure, differing risk profiles, possible sensitive information processing, possible regulatory burdens, and safeguards that may require enterprise-grade technology and specialized expertise.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "If an applicable legal/regulatory regime is identified, the organization must map GAI incident-reporting and related compliance requirements (DE_DE02_007F05150CB46131).",
+            "If NLP/LLM systems are deployed, roles/responsibilities, AI inventory, decommissioning, monitoring, and accountability should be defined (DE_DE01_0B9728FE19095FD0, DE_DE15_271AFADC7B3D5999, DE_DE15_7C1849B1FD93975C).",
+            "If the reference-enterprise's regulatory burden materializes, deployment must include compliance processes appropriate to the applicable requirements (CTX_CIS_IG2_9F94838146D9C3A4)."
+          ],
+          "constraints": [
+            "Institutional adoption of NLP/LLM would need to address governance, accountability, documentation, monitoring, inventory, decommissioning, and secure-operation capabilities described in the supplied NIST and secure-AI guidance records (DE_DE01_0B9728FE19095FD0, DE_DE15_271AFADC7B3D5999, DE_DE15_7C1849B1FD93975C).",
+            "Any applicable legal/regulatory GAI incident-reporting obligation would add compliance work; the supplied record provides domain-specific examples but does not establish applicability to the masked frozen jurisdiction (DE_DE02_007F05150CB46131).",
+            "The reference-enterprise profile indicates possible regulatory burdens and specialized expertise needs, but these are profile conditions rather than established obligations or staffing facts (CTX_CIS_IG2_9F94838146D9C3A4)."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__eu__cis_ig2__f65ce64b959274c5",
+          "evidence_gaps": [
+            "No supplied evidence establishes which jurisdiction's legal/regulatory regime applies to the masked region.",
+            "No supplied evidence establishes data-sovereignty, cross-border, or sector-specific regulatory obligations for the frozen deployment.",
+            "No supplied evidence establishes the magnitude of compliance, staffing, or governance investment required for NLP/LLM in the CIS IG2 profile.",
+            "No supplied evidence directly links NLP/LLM DDoS mitigation implementation to an operational governance or compliance outcome in the frozen scenario."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "The frozen deployment context uses a masked jurisdiction and supplies no jurisdiction-specific regulatory_applicability evidence, so a DEPLOYMENT_SPECIFIC institutional/regional feasibility direction cannot be grounded. The assessment therefore remains GENERAL. Under the institutional lens, the supplied governance_enablement records directly support institutional feasibility pathways for NLP/LLM adoption. The NIST AI RMF record describes governance, accountability, risk-management monitoring, inventory, decommissioning, documented roles, training, executive responsibility, and human-AI oversight. The supplied secure-AI guidance records describe documentation, transparency, accountability, monitoring, logging for audit and investigation, and secure operation and update management. These are directly relevant to governance enablement, auditability, and institutional control of an NLP/LLM capability. The supplied compliance_constraint record identifies a GAI incident-reporting task subject to legal and regulatory requirements, which is a real institutional constraint. However, the record provides domain-specific examples and does not establish which legal regime applies in the masked frozen scenario, nor the magnitude of the compliance burden. On balance, the governance enablement evidence is more directly supportive of institutional feasibility, while the compliance constraint remains a conditional gap rather than a decisive institutional barrier.",
+          "stance": 1
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF-GEN-SUP-01",
+              "evidence_ids": [
+                "AE01S_6E6099FA4C2D13D4"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied direct experimental evidence supports general technical feasibility of using NLP/LLM methods for DDoS detection: fine-tuned LLM variants detected DDoS traffic on CICIDS 2017 and an Urban IoT dataset and reported roughly mid-90-percent accuracy while outperforming the compared MLP baseline.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-GEN-CHL-01",
+              "evidence_ids": [
+                "AE01C_A6798E23EEB1E487"
+              ],
+              "scope": "GENERAL",
+              "statement": "The same action-specific curated finding materially limits the feasibility interpretation: the DDoS study does not establish turnkey production deployment, performance depended on prompt context or fine-tuning, few-shot results were materially weaker on the harder Urban IoT setting, and the evidence is benchmark-based rather than an enterprise operational deployment or cost study.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-DEP-CTX-01",
+              "evidence_ids": [
+                "DE_DE02_CFF4EAB2C4BEC522",
+                "DE_DE15_7C1849B1FD93975C"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied deployment-maturity guidance indicates that operationally feasible AI system deployment would involve lifecycle monitoring, input and behavior monitoring, secure update handling, and provenance or feedback processes, but this guidance does not by itself establish NLP/LLM effectiveness against DDoS.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-DEPLOY-CTX-01",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen deployment context is a CIS IG2 reference enterprise profile describing multi-department enterprise IT with personnel responsible for managing and protecting infrastructure, where some safeguards may depend on enterprise-grade technology and specialized expertise, but the context does not provide exact local architecture or integration detail.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific technical feasibility conclusion would require exact local architecture, telemetry/data availability, and integration context for the reference enterprise.",
+            "Operational feasibility would require evidence or assumptions that the necessary fine-tuning, prompt engineering, model monitoring, and secure update processes can be supported within the CIS IG2 profile.",
+            "Threat-mitigation fit would require evidence that the NLP/LLM capability maps to the frozen DDoS threat modality and can be maintained through the 2025-2027 forecast horizon."
+          ],
+          "constraints": [
+            "The positive feasibility signal is limited to benchmark-based DDoS detection evidence and does not establish production deployment, operational effectiveness, scalability, maintainability, or cost (AE01S_6E6099FA4C2D13D4; AE01C_A6798E23EEB1E487).",
+            "Technical operability is conditional on prompt context engineering or fine-tuning, and the evidence reports materially weaker few-shot performance in the harder Urban IoT setting (AE01C_A6798E23EEB1E487).",
+            "Deployment-specific compatibility cannot be asserted because the frozen context does not supply exact architecture, product, vendor, integration surface, telemetry format, or staffing/specialized-expertise detail (CTX_CIS_IG2_9F94838146D9C3A4).",
+            "Deployment-maturity guidance is relevant to operability and maintainability but does not itself establish direction for NLP/LLM DDoS mitigation feasibility (DE_DE02_CFF4EAB2C4BEC522; DE_DE15_7C1849B1FD93975C)."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__eu__cis_ig2__f65ce64b959274c5",
+          "evidence_gaps": [
+            "No enterprise operational deployment, pilot, or production integration evidence for NLP/LLM-based DDoS detection or mitigation in the frozen CIS IG2 reference environment.",
+            "No evidence linking LLM detection output to realized DDoS mitigation, containment, or response actions.",
+            "No exact infrastructure architecture, telemetry pipeline, integration interface, product/vendor/version, or staffing/specialized-expertise detail needed for a deployment-specific technical feasibility conclusion.",
+            "No evidence of scalability, latency, throughput, operational drift handling, or maintainability under the frozen DDoS threat horizon.",
+            "No jurisdiction-specific technical evidence is supplied, and the jurisdiction is masked for this lens."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "Under the Technical Feasibility lens, the directionally eligible records provide a grounded general support signal and a material general limitation. AE01S_6E6099FA4C2D13D4 supports general technical feasibility because it reports direct DDoS experiments in which LLM variants detected DDoS traffic on benchmark datasets, with fine-tuned variants reporting roughly mid-90-percent accuracy and outperforming the compared MLP baseline. AE01C_A6798E23EEB1E487 challenges the same action as a turnkey or production-ready technical option because it states that the study does not establish turnkey production deployment, performance depended on prompt context or fine-tuning, few-shot results were materially weaker on the harder Urban IoT setting, and the evidence is benchmark-based rather than an enterprise operational deployment or cost study. The deployed-maturity records DE_DE02_CFF4EAB2C4BEC522 and DE_DE15_7C1849B1FD93975C supply lifecycle monitoring and operation context but cannot create technical feasibility direction by themselves. The frozen CIS IG2 deployment context supports only a general reference-enterprise profile and does not supply exact architecture, product, vendor, integration, or staffing detail needed for a deployment-specific conclusion. On balance, the direct experimental enablement evidence supports GENERAL technical feasibility, while the benchmark-only and non-turnkey limitation makes the assessment PARTIAL rather than fully sufficient.",
+          "stance": 1
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__us__cis_ig2__82c000d326708813",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FA-1",
+              "evidence_ids": [
+                "DE_DE03_6786A7AB93821D48",
+                "DE_DE03_912FC8A63179A943"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-218A states that using automated methods lowers the effort and resources needed to detect vulnerabilities, and it identifies secure-by-design practices as helpful for improving development efficiency and recommends, where appropriate, using standardized security features and services for log management, identity management, access control, and vulnerability management instead of creating proprietary implementations.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-2",
+              "evidence_ids": [
+                "DE_DE15_1AEC6DDD669756FF",
+                "DE_DE01_E85CB6412740EF20"
+              ],
+              "scope": "GENERAL",
+              "statement": "UK NCSC secure AI guidelines state that following secure-by-design principles requires significant resources throughout a system's life cycle and that developers must invest in prioritizing features, mechanisms, and implementation of tools across system design layers and development stages; NIST AI RMF indicates that AI risk management requires gauging the staffing and funding resources needed to achieve risk-management goals.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-3",
+              "evidence_ids": [
+                "DE_DE02_CFF4EAB2C4BEC522",
+                "DE_DE15_7C1849B1FD93975C"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST GAI profile and UK NCSC operation/maintenance guidance describe ongoing monitoring of model behavior and inputs, update management, provenance and feedback processes, incident disclosure, and information sharing; these are deployment-maturity and operational practices relevant to adoption workload but do not by themselves establish a financial direction.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FA-4",
+              "evidence_ids": [
+                "AE01S_6E6099FA4C2D13D4",
+                "AE01C_A6798E23EEB1E487",
+                "E_33_ADC8BC66D812799F"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied DDoS LLM study reports that few-shot and fine-tuned LLM variants detected DDoS traffic on CICIDS 2017 and an Urban IoT dataset, with fine-tuned variants reporting roughly mid-90-percent accuracy and outperforming a compared MLP, but the study does not establish turnkey production deployment and its evidence is benchmark-based rather than an enterprise operational deployment or cost study; the Crossref trend reports annual NLP/LLM security publication counts of 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024, but explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FA-5",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The standardized reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles, states that IG2 safeguards address increased operational complexity, and notes that some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Deployment-specific financial feasibility can be evaluated if explicit evidence supplies budget fit, price/TCO/ROI/payback, staffing/resource allocation, and procurement/contract timing for the NLP/LLM DDoS action in the reference enterprise.",
+            "If evidence shows the enterprise can integrate with standardized log, identity, access, and vulnerability management systems and use automated scanning, the resource-saving pathway can be assessed against the specific deployment.",
+            "If evidence shows the secure-by-design lifecycle and AI risk-management resource requirements can be met with available staffing and funding, the adoption burden can be re-weighted.",
+            "If an enterprise deployment or cost study for LLM-based DDoS detection is supplied, the benchmark-only limitation can be resolved."
+          ],
+          "constraints": [
+            "Exact financial quantities are not supplied: no budget, price, ROI, TCO, payback period, staffing count, vendor/product version, or procurement ceiling can be inferred.",
+            "Financial/adoption direction is assessed at GENERAL scope; DEPLOYMENT_SPECIFIC affordability is not established because deployment-specific budget, staffing, contract, and architecture context is missing.",
+            "Publication-activity and benchmark-detection records are treated as neutral context because they do not establish enterprise deployment cost, turnkey availability, or financial return.",
+            "Deployment-maturity records are supplementary context and do not by themselves create a financial direction.",
+            "No region-specific financial or procurement conclusion is drawn from the masked jurisdiction label."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__us__cis_ig2__82c000d326708813",
+          "evidence_gaps": [
+            "Missing exact budget, price, vendor/product version, contract/procurement timing, staffing count, and infrastructure architecture needed to determine deployment-specific financial feasibility.",
+            "Missing direct, action-specific cost or resource-saving measurement for NLP/LLM DDoS mitigation in the reference enterprise, such as TCO, ROI, payback, or lifecycle staffing/funding estimates.",
+            "Missing evidence quantifying the operational/adoption workload of NLP/LLM deployment beyond general AI development guidance, including monitoring, update, incident response, and integration costs.",
+            "Missing jurisdiction-specific financial, procurement, or procurement-timing evidence; therefore no region-specific adoption conclusion is possible."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied financial/adoption evidence contains both a grounded SUPPORTS_FEASIBILITY direction and a grounded CHALLENGES_FEASIBILITY direction, so the net GENERAL feasibility judgment is mixed. NIST SP 800-218A records provide adoption-benefit grounding by stating that automated methods lower the effort and resources needed to detect vulnerabilities and by connecting secure-by-design practices with improved development efficiency and standardized integration rather than proprietary implementations. UK NCSC secure AI guidance and NIST AI RMF provide adoption-burden grounding by describing significant lifecycle resources and staffing/funding needs associated with secure AI development and AI risk management. Deployment-maturity records are supplementary operational context and do not by themselves establish a financial direction. Benchmark and publication-trend records are action-relevant context but do not supply enterprise cost, budget, ROI, TCO, payback, staffing, or procurement timing evidence. Exact deployment-specific financial quantities are absent, so the conclusion remains GENERAL and PARTIAL rather than deployment-specific.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR-GEN-SUPP-1",
+              "evidence_ids": [
+                "DE_DE01_0B9728FE19095FD0"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST AI RMF record describes governance mechanisms for AI systems, including ongoing risk-management monitoring and review, AI system inventory, safe decommissioning, documented accountability roles and responsibilities, training, executive leadership responsibility, and defined human-AI oversight, which provide an institutional pathway for accountable NLP/LLM adoption.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-GEN-SUPP-2",
+              "evidence_ids": [
+                "DE_DE15_271AFADC7B3D5999",
+                "DE_DE15_7C1849B1FD93975C"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied secure-AI guidance records describe documentation, transparency, accountability, secure operation and maintenance, monitoring of system behavior and inputs, logging to support audit and investigation, and update management practices that can support institutional governance of NLP/LLM systems.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-GEN-CHAL-1",
+              "evidence_ids": [
+                "DE_DE02_007F05150CB46131"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST GAI Profile identifies a GAI incident-reporting task requiring compliance with legal and regulatory requirements, with examples such as HIPAA breach reporting and NHTSA autonomous vehicle crash reporting, indicating that GAI deployments may face legal/regulatory reporting constraints and associated compliance work.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-CTX-NEUTRAL-1",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen reference-enterprise profile describes a CIS IG2 enterprise with multi-department IT infrastructure, differing risk profiles, possible sensitive information processing, possible regulatory burdens, and safeguards that may require enterprise-grade technology and specialized expertise.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "If an applicable legal/regulatory regime is identified, the organization must map GAI incident-reporting and related compliance requirements (DE_DE02_007F05150CB46131).",
+            "If NLP/LLM systems are deployed, roles/responsibilities, AI inventory, decommissioning, monitoring, and accountability should be defined (DE_DE01_0B9728FE19095FD0, DE_DE15_271AFADC7B3D5999, DE_DE15_7C1849B1FD93975C).",
+            "If the reference-enterprise's regulatory burden materializes, deployment must include compliance processes appropriate to the applicable requirements (CTX_CIS_IG2_9F94838146D9C3A4)."
+          ],
+          "constraints": [
+            "Institutional adoption of NLP/LLM would need to address governance, accountability, documentation, monitoring, inventory, decommissioning, and secure-operation capabilities described in the supplied NIST and secure-AI guidance records (DE_DE01_0B9728FE19095FD0, DE_DE15_271AFADC7B3D5999, DE_DE15_7C1849B1FD93975C).",
+            "Any applicable legal/regulatory GAI incident-reporting obligation would add compliance work; the supplied record provides domain-specific examples but does not establish applicability to the masked frozen jurisdiction (DE_DE02_007F05150CB46131).",
+            "The reference-enterprise profile indicates possible regulatory burdens and specialized expertise needs, but these are profile conditions rather than established obligations or staffing facts (CTX_CIS_IG2_9F94838146D9C3A4)."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__us__cis_ig2__82c000d326708813",
+          "evidence_gaps": [
+            "No supplied evidence establishes which jurisdiction's legal/regulatory regime applies to the masked region.",
+            "No supplied evidence establishes data-sovereignty, cross-border, or sector-specific regulatory obligations for the frozen deployment.",
+            "No supplied evidence establishes the magnitude of compliance, staffing, or governance investment required for NLP/LLM in the CIS IG2 profile.",
+            "No supplied evidence directly links NLP/LLM DDoS mitigation implementation to an operational governance or compliance outcome in the frozen scenario."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "The frozen deployment context uses a masked jurisdiction and supplies no jurisdiction-specific regulatory_applicability evidence, so a DEPLOYMENT_SPECIFIC institutional/regional feasibility direction cannot be grounded. The assessment therefore remains GENERAL. Under the institutional lens, the supplied governance_enablement records directly support institutional feasibility pathways for NLP/LLM adoption. The NIST AI RMF record describes governance, accountability, risk-management monitoring, inventory, decommissioning, documented roles, training, executive responsibility, and human-AI oversight. The supplied secure-AI guidance records describe documentation, transparency, accountability, monitoring, logging for audit and investigation, and secure operation and update management. These are directly relevant to governance enablement, auditability, and institutional control of an NLP/LLM capability. The supplied compliance_constraint record identifies a GAI incident-reporting task subject to legal and regulatory requirements, which is a real institutional constraint. However, the record provides domain-specific examples and does not establish which legal regime applies in the masked frozen scenario, nor the magnitude of the compliance burden. On balance, the governance enablement evidence is more directly supportive of institutional feasibility, while the compliance constraint remains a conditional gap rather than a decisive institutional barrier.",
+          "stance": 1
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF-GEN-SUP-01",
+              "evidence_ids": [
+                "AE01S_6E6099FA4C2D13D4"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied direct experimental evidence supports general technical feasibility of using NLP/LLM methods for DDoS detection: fine-tuned LLM variants detected DDoS traffic on CICIDS 2017 and an Urban IoT dataset and reported roughly mid-90-percent accuracy while outperforming the compared MLP baseline.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-GEN-CHL-01",
+              "evidence_ids": [
+                "AE01C_A6798E23EEB1E487"
+              ],
+              "scope": "GENERAL",
+              "statement": "The same action-specific curated finding materially limits the feasibility interpretation: the DDoS study does not establish turnkey production deployment, performance depended on prompt context or fine-tuning, few-shot results were materially weaker on the harder Urban IoT setting, and the evidence is benchmark-based rather than an enterprise operational deployment or cost study.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-DEP-CTX-01",
+              "evidence_ids": [
+                "DE_DE02_CFF4EAB2C4BEC522",
+                "DE_DE15_7C1849B1FD93975C"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied deployment-maturity guidance indicates that operationally feasible AI system deployment would involve lifecycle monitoring, input and behavior monitoring, secure update handling, and provenance or feedback processes, but this guidance does not by itself establish NLP/LLM effectiveness against DDoS.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-DEPLOY-CTX-01",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen deployment context is a CIS IG2 reference enterprise profile describing multi-department enterprise IT with personnel responsible for managing and protecting infrastructure, where some safeguards may depend on enterprise-grade technology and specialized expertise, but the context does not provide exact local architecture or integration detail.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific technical feasibility conclusion would require exact local architecture, telemetry/data availability, and integration context for the reference enterprise.",
+            "Operational feasibility would require evidence or assumptions that the necessary fine-tuning, prompt engineering, model monitoring, and secure update processes can be supported within the CIS IG2 profile.",
+            "Threat-mitigation fit would require evidence that the NLP/LLM capability maps to the frozen DDoS threat modality and can be maintained through the 2025-2027 forecast horizon."
+          ],
+          "constraints": [
+            "The positive feasibility signal is limited to benchmark-based DDoS detection evidence and does not establish production deployment, operational effectiveness, scalability, maintainability, or cost (AE01S_6E6099FA4C2D13D4; AE01C_A6798E23EEB1E487).",
+            "Technical operability is conditional on prompt context engineering or fine-tuning, and the evidence reports materially weaker few-shot performance in the harder Urban IoT setting (AE01C_A6798E23EEB1E487).",
+            "Deployment-specific compatibility cannot be asserted because the frozen context does not supply exact architecture, product, vendor, integration surface, telemetry format, or staffing/specialized-expertise detail (CTX_CIS_IG2_9F94838146D9C3A4).",
+            "Deployment-maturity guidance is relevant to operability and maintainability but does not itself establish direction for NLP/LLM DDoS mitigation feasibility (DE_DE02_CFF4EAB2C4BEC522; DE_DE15_7C1849B1FD93975C)."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__0e0a5fa434466893__us__cis_ig2__82c000d326708813",
+          "evidence_gaps": [
+            "No enterprise operational deployment, pilot, or production integration evidence for NLP/LLM-based DDoS detection or mitigation in the frozen CIS IG2 reference environment.",
+            "No evidence linking LLM detection output to realized DDoS mitigation, containment, or response actions.",
+            "No exact infrastructure architecture, telemetry pipeline, integration interface, product/vendor/version, or staffing/specialized-expertise detail needed for a deployment-specific technical feasibility conclusion.",
+            "No evidence of scalability, latency, throughput, operational drift handling, or maintainability under the frozen DDoS threat horizon.",
+            "No jurisdiction-specific technical evidence is supplied, and the jurisdiction is masked for this lens."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "Under the Technical Feasibility lens, the directionally eligible records provide a grounded general support signal and a material general limitation. AE01S_6E6099FA4C2D13D4 supports general technical feasibility because it reports direct DDoS experiments in which LLM variants detected DDoS traffic on benchmark datasets, with fine-tuned variants reporting roughly mid-90-percent accuracy and outperforming the compared MLP baseline. AE01C_A6798E23EEB1E487 challenges the same action as a turnkey or production-ready technical option because it states that the study does not establish turnkey production deployment, performance depended on prompt context or fine-tuning, few-shot results were materially weaker on the harder Urban IoT setting, and the evidence is benchmark-based rather than an enterprise operational deployment or cost study. The deployed-maturity records DE_DE02_CFF4EAB2C4BEC522 and DE_DE15_7C1849B1FD93975C supply lifecycle monitoring and operation context but cannot create technical feasibility direction by themselves. The frozen CIS IG2 deployment context supports only a general reference-enterprise profile and does not supply exact architecture, product, vendor, integration, or staffing detail needed for a deployment-specific conclusion. On balance, the direct experimental enablement evidence supports GENERAL technical feasibility, while the benchmark-only and non-turnkey limitation makes the assessment PARTIAL rather than fully sufficient.",
+          "stance": 1
+        }
+      }
+    ]
+  },
+  "generation_contract_version": "jurisdiction-neutral-equivalence-dedup-v1",
+  "input_fingerprint": "dc36d1cb985399ea1487b1e0620597162fed32f928789a164fdf2b661adc3a8d",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "institutional_regional_system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "client_request_concurrency": 2,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 65536,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 2,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 43,
+    "server_total_context_size": 131072,
+    "stage4_context_runtime_profile_version": "stage4-context-runtime-128k-total-2slot-v3",
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "scenario_set_version": "stage3-context-scenarios-v1",
+  "schema_version": "stage4-artifact-v4",
+  "semantic_validation_version": "stage4-semantic-validation-v6",
+  "stage3_context_artifact_sha256": "ce6780c65e921687c014583a095d4929f48eca92f39dde2dc9dfc27ea0467a6e",
+  "stage3_context_input_fingerprint": "9544d542a16d4779293de33458264f058a6672b7323b33b6b1692a0b14aa1179",
+  "stage3_context_output_sha256": "adef5f213b22b4bff915ac2a738545e710c613f18596f3c61fac54752e219ae8",
+  "stage4_output_sha256": "9790a375a415d84c23c42be07ea67e863c65b42129f394cee323c8d84e28b4bd"
+}

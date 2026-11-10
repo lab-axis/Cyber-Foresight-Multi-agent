@@ -1,0 +1,594 @@
+{
+  "artifact_sha256": "45fbde556efebca9c29a4a8499b975bad8cf413fdd2746c10244d336de2a5e56",
+  "case_id": "main__ransomware__cryptography",
+  "constrained_output_schema_sha256": {
+    "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__eu__cis_ig2__30d48c63b53db946": {
+      "financial_adoption": "b8353d8ec0ef6218809240a2bb2e3d7496104f34cf67376ce997a0d9ed15f668",
+      "institutional_regional": "f1b2d10eafba799521481d0ce5aa50a08620348e8dce6ec7edcf3515a7838606",
+      "technical_feasibility": "c5668d40886bd9ccd55f4067f15bcfb951c568a28b255e78e0de2c4121feb434"
+    },
+    "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__kr__cis_ig2__fb2867c4d37bffbe": {
+      "financial_adoption": "3dca09e1102ee5c8982157e89574e7baf5af9336cbdbe45955e0473e6dd554f5",
+      "institutional_regional": "f7da6b3ae7a904422a530db5350d7831a717f582a58008a81165bf6e9851d150",
+      "technical_feasibility": "80d9567ab6b42a06ce82008c69e6684db1673c8d57d47df243a9c8b91ab7ca5e"
+    },
+    "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__us__cis_ig2__cc0a8a94ecf693e7": {
+      "financial_adoption": "acd5626331484a27071a46a6ed614ab3c9bdfc2883073707907ea4a9eea4508c",
+      "institutional_regional": "a10c0ce00feae49f97eb4a786cdaf8c154bb9e67a55961991a28fcf764c0adb5",
+      "technical_feasibility": "c4f57d55406dc98d99a98fc688faeaaa4cf5f6c5f21351a417c124d9d5e247ca"
+    }
+  },
+  "created_at": "2026-11-08T17:05:38.446512+00:00",
+  "decision_object_payload_sha256": {
+    "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__eu__cis_ig2__30d48c63b53db946": {
+      "financial_adoption": "2bfeb2713a64f00d71329d45fe625136706d4019b4930ee7d5ac7fb022899422",
+      "institutional_regional": "b972d4454e143ab7a7c0320818398de757792685d432c51754d447a615c34675",
+      "technical_feasibility": "4c36eb0cf2d0903e6bcbc37a19b1633ffc9976367abf4c231c7536bf7465f23b"
+    },
+    "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__kr__cis_ig2__fb2867c4d37bffbe": {
+      "financial_adoption": "7ec795c1d8cb4f21bc29b95d2f6aced05745af8cf135e74244e50f3226c86f96",
+      "institutional_regional": "b627409af7de946b6af7e0dc9e943af1feab4b2ad224358a009bb306c7e11fac",
+      "technical_feasibility": "aa1e80856a9baee8c18d410bc7b45b618fbd3caa962268abe2ed4ed481fbfe41"
+    },
+    "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__us__cis_ig2__cc0a8a94ecf693e7": {
+      "financial_adoption": "9013250af2a6f28ccb820d76e560b8dc1a71f2b05d6c8dd1e8fab068cb493b80",
+      "institutional_regional": "6280564226978fc09b7754339c70f6bc6e38d8cc7778af214c7791cd98b2fa29",
+      "technical_feasibility": "9ae03b84732c71af803869047fd0661630925511bdbe7bfc61e266c7dfe7611d"
+    }
+  },
+  "evaluation_bundle": {
+    "case_id": "main__ransomware__cryptography",
+    "evaluations": [
+      {
+        "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__kr__cis_ig2__fb2867c4d37bffbe",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FIN_ADOPT_SUPPORT_1",
+              "evidence_ids": [
+                "DE_DE10_A086B3193CD6440B"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-52 Rev. 2 excerpt provides implementation guidance for TLS cryptographic authentication, certification path validation, and security-strength requirements, which supports an adoption pathway for PMT_CRYPTOGRAPHY.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_ADOPT_CHALLENGE_1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied CISA CPG excerpt documents adoption burden for cryptography by requiring properly configured and up-to-date SSL/TLS, identifying and updating outdated or weak encryption, considering post-quantum implications, and using encryption when feasible in OT to minimize latency and availability impact.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_ADOPT_CONTEXT_1",
+              "evidence_ids": [
+                "DE_DE18_EAA59A9B7CEAD276"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied TLS primer excerpt describes TLS phases, key exchange, and authentication features as supplementary deployment-maturity context for cryptography deployment.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial/adoption conclusion requires exact or bounded budget/resource data and evidence that cryptography implementation fits those resources.",
+            "A deployment-specific timeline conclusion requires procurement, staffing, and implementation-sequence evidence for the actual deployment scope.",
+            "If jurisdiction-specific obligations or costs become relevant, exact supplied jurisdiction-specific evidence is required; none is present in this equivalence class.",
+            "For the frozen CIS IG2 reference enterprise, deployment-specific feasibility remains conditional until organization-specific scope, staffing, infrastructure, and financial data are supplied."
+          ],
+          "constraints": [
+            "Exact budget, price, ROI, TCO, payback period, staffing count, procurement ceiling, vendor, product version, architecture, and jurisdiction-specific obligation must not be inferred because no supplied evidence supplies them.",
+            "The frozen deployment context explicitly represents resource capacity only by the CIS IG2 reference profile and states exact financial quantities remain unknown.",
+            "The masked jurisdiction does not support any region-specific financial/adoption direction.",
+            "A documented burden does not establish infeasibility, and a documentation pathway does not establish affordability."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__kr__cis_ig2__fb2867c4d37bffbe",
+          "evidence_gaps": [
+            "No supplied evidence provides exact implementation cost, budget fit, ROI, TCO, payback period, or procurement cost for PMT_CRYPTOGRAPHY.",
+            "No supplied evidence provides staffing, expertise, or organizational capacity requirements sufficient for a deployment-specific resource judgment.",
+            "No supplied evidence describes current cryptographic inventory, weak/outdated algorithm usage, OT/IT scope, architecture, contracts, or procurement timing for the frozen deployment.",
+            "No supplied evidence measures ransomware-specific financial or adoption outcome of cryptography."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied records contain a grounded adoption-benefit pathway and a grounded adoption-burden record for PMT_CRYPTOGRAPHY. The adoption-benefit record provides standardized TLS implementation guidance, which can support an adoption pathway, but it does not state cost avoidance, savings, budget fit, staffing reduction, procurement timing, or other financial benefit. The adoption-burden record documents operational and organizational burdens for cryptography: maintaining properly configured and up-to-date SSL/TLS, identifying and updating outdated or weak encryption, considering post-quantum implications, and using encryption when feasible in OT to minimize latency and availability impact. Under the Financial/Adoption scope rules, direct operational resource constraints are weighed more heavily than a generic implementation-pathway record. On balance, the supplied evidence materially challenges GENERAL financial/adoption feasibility, without proving infeasibility. Deployment-specific feasibility is not supported because exact budget, staffing, architecture, current cryptographic inventory, OT/IT scope, contracts, procurement timing, and jurisdiction-specific obligations are absent.",
+          "stance": -1
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR_GEN_SUP_001",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied CPG record describes a recommended encryption action with the outcome of effective encryption deployed to maintain confidentiality of sensitive data and integrity of IT and OT traffic, and it describes properly configured and up-to-date SSL/TLS use when technically feasible plus planning to identify and update outdated or weak encryption and consider post-quantum implications.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_GEN_SUP_002",
+              "evidence_ids": [
+                "DE_DE08_031120C53EF050F3"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-57 Part 1 Rev. 5 record provides governance enablement for cryptographic key management by describing identification of authorized entities for key generation, access, destruction, or use; recording who or what performs key actions; auditing logs for security violations; and stating that accountability/traceability can be an effective tool to help prevent key compromises and reduce impact when they are detected.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_GEN_CHAL_001",
+              "evidence_ids": [
+                "DE_DE09_6719137897848A9E"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-131A Rev. 2 record defines approval statuses that constrain cryptographic algorithm choice: two-key TDEA encryption is disallowed, three-key TDEA encryption is deprecated through 2023 and disallowed after 2023 unless specifically allowed by other NIST guidance, SKIPJACK encryption and decryption are disallowed, and AES-128, AES-192, and AES-256 encryption and decryption are acceptable.",
+              "status": "CHALLENGES_FEASIBILITY"
+            }
+          ],
+          "conditional_requirements": [
+            "If cryptographic algorithm choices are made, the supplied NIST SP 800-131A Rev. 2 statuses should be respected, particularly avoiding disallowed or post-2023-disallowed encryption algorithms for new use (DE_DE09_6719137897848A9E).",
+            "Key-management implementation should include identification of authorized entities, traceability of plaintext key access, and auditable logs for key actions (DE_DE08_031120C53EF050F3).",
+            "Encryption deployment should maintain properly configured and up-to-date SSL/TLS when technically feasible, identify and update outdated or weak encryption, and consider post-quantum implications (E_23_534489D29C38B327)."
+          ],
+          "constraints": [
+            "Cryptographic algorithm selection is constrained by the supplied NIST SP 800-131A Rev. 2 approval statuses, including disallowed two-key TDEA encryption, disallowed SKIPJACK, and three-key TDEA encryption disallowed after 2023 unless specifically allowed by other NIST guidance (DE_DE09_6719137897848A9E).",
+            "The supplied NIST SP 800-57 Part 1 Rev. 5 record requires that access to plaintext cryptographic keys be traceable to the accessing entity and describes audit/log mechanisms for key actions (DE_DE08_031120C53EF050F3).",
+            "The supplied CPG record conditions encryption deployment on properly configured and up-to-date SSL/TLS when technically feasible, and on planning to identify and update outdated or weak encryption (E_23_534489D29C38B327)."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__kr__cis_ig2__fb2867c4d37bffbe",
+          "evidence_gaps": [
+            "No jurisdiction-specific regulatory_applicability evidence is supplied for the frozen masked jurisdiction, so a DEPLOYMENT_SPECIFIC regional/legal feasibility direction is not grounded.",
+            "No supplied evidence addresses data sovereignty, cross-border data-transfer constraints, or jurisdiction-specific data-location requirements for the frozen masked jurisdiction.",
+            "No supplied evidence establishes the reference enterprise's current cryptographic algorithm inventory, key-management tooling, or capacity to transition disallowed or deprecated algorithms.",
+            "No supplied evidence maps the cited CPG or NIST guidance to a binding legal obligation or jurisdiction-specific compliance regime in the frozen masked jurisdiction."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "At the GENERAL level, the balance leans supportive: the direction-eligible governance_enablement records provide a recommended encryption action/outcome and an accountability/auditability pathway for cryptographic key management. The direction-eligible compliance_constraint record identifies an algorithm-transition constraint, but the supplied record does not establish a blocking organizational or legal barrier. Because the frozen region is JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE and no regulatory_applicability record for that frozen jurisdiction is supplied, deployment-specific regional/legal feasibility is not grounded and is retained in evidence_gaps rather than converted into a directional stance.",
+          "stance": 1
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_C1",
+              "evidence_ids": [
+                "AE03S_C5AF41A880A404C2"
+              ],
+              "scope": "GENERAL",
+              "statement": "A direct technical enablement for PMT_CRYPTOGRAPHY against THREAT_RANSOMWARE is documented: CipherTrace uses cryptographic-primitive analysis to identify cipher classes and extract cryptographic keys or state from execution traces across evaluated ransomware specimens, and the record states that this can materially support ransomware neutralization and reverse engineering.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C2",
+              "evidence_ids": [
+                "AE03C_E5522A35F4981027"
+              ],
+              "scope": "GENERAL",
+              "statement": "A direct technical limitation for cryptography-related detection is documented: ransomware can deliberately alter observable entropy patterns of cryptographic operations to evade detectors that rely on high entropy, and the record states that such detection is not universally robust and that some existing approaches impose nontrivial computational cost.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C3",
+              "evidence_ids": [
+                "DE_DE18_EAA59A9B7CEAD276",
+                "DE_DE18_CDC975345637E009",
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "Neutral deployment-maturity context is present: SSL/TLS is described as providing application-level confidentiality, integrity, and authentication through encryption; IPSec deployment is described with transport/tunnel overhead, ISAKMP key negotiation, identity proofing, replay-protection considerations, and a recommendation against manual security-association configuration in production; and CISA CPG states SSL/TLS is used to protect data in transit when technically feasible, with planning for outdated or weak encryption updates, post-quantum implications, and OT encryption when feasible to minimize latency and availability impact.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC support conclusion would require supplied evidence that the selected cryptographic components integrate with the exact local architecture, key-management infrastructure, and OT/IT traffic paths without unassessed compatibility assumptions.",
+            "If cryptography-based detection is used, the implementation must address documented entropy-evasion and computational-cost constraints (AE03C_E5522A35F4981027).",
+            "If encryption deployment is used, the implementation must address documented technical-feasibility limits for OT/remote assets, latency/availability impact, protocol overhead, key negotiation/authentication configuration, and migration from outdated or weak encryption (DE_DE18_CDC975345637E009, DE_DE18_EAA59A9B7CEAD276, E_23_534489D29C38B327).",
+            "Maintainability would require evidence that the chosen implementation can be operated, monitored, and updated in the frozen multi-department enterprise context without assuming unreported staffing counts or budgets."
+          ],
+          "constraints": [
+            "Cryptography-based detection must account for the documented evasion of entropy-based detectors and the nontrivial computational cost of some approaches (AE03C_E5522A35F4981027).",
+            "Encryption deployment must remain conditional on technical feasibility, protocol overhead, key negotiation/authentication configuration, production configuration constraints, and migration from outdated or weak encryption (DE_DE18_EAA59A9B7CEAD276, DE_DE18_CDC975345637E009, E_23_534489D29C38B327)."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__kr__cis_ig2__fb2867c4d37bffbe",
+          "evidence_gaps": [
+            "No supplied record provides the exact local architecture, endpoints, network segmentation, key-management infrastructure, product/version, integration topology, or OT/IT traffic paths needed for a DEPLOYMENT_SPECIFIC technical feasibility conclusion.",
+            "No supplied record quantifies enterprise-scale deployment, integration effort, operational maintainability, scalability, staffing expertise, or resource capacity for the selected cryptographic pathway within the 2025-2027 horizon.",
+            "No supplied record measures whether the CipherTrace-style cryptographic analysis pathway remains effective against future ransomware variants that use entropy-pattern manipulation or against broader deployment constraints beyond the evaluated specimens.",
+            "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied for deployment-specific technical feasibility."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The supplied action-specific technical evidence provides a grounded GENERAL support for technical feasibility. AE03S_C5AF41A880A404C2 documents a direct Threat×PMT technical enablement: cryptographic-primitive analysis of ransomware execution traces can identify cipher classes and extract cryptographic keys or state, and the record states that this can materially support ransomware neutralization and reverse engineering. This supports the general technical feasibility of a cryptography-based capability for the frozen ransomware threat. The opposing record, AE03C_E5522A35F4981027, documents a direct technical limitation: ransomware can manipulate observable entropy patterns to evade entropy-based detectors, and some cryptography-related detection approaches impose nontrivial computational cost. That is a real feasibility constraint, but it is narrower in scope than the documented positive capability because it is specifically tied to entropy-based cryptography-related detection rather than to all cryptography-based ransomware mitigation. Deployment-maturity records (DE_DE18_EAA59A9B7CEAD276, DE_DE18_CDC975345637E009, E_23_534489D29C38B327) provide neutral operational context for TLS/IPSec/encryption deployment, including feasibility conditions, overhead, key negotiation/authentication configuration, production configuration constraints, and weak-encryption update requirements. These records qualify operability but do not by themselves create direction. Because exact local architecture, integration topology, key-management infrastructure, product/version, OT/IT traffic paths, and enterprise-scale deployment details are missing, a DEPLOYMENT_SPECIFIC feasibility conclusion is not available. The surviving grounded direction is therefore GENERAL support, with PARTIAL sufficiency.",
+          "stance": 1
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__eu__cis_ig2__30d48c63b53db946",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FIN_ADOPT_SUPPORT_1",
+              "evidence_ids": [
+                "DE_DE10_A086B3193CD6440B"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-52 Rev. 2 excerpt provides implementation guidance for TLS cryptographic authentication, certification path validation, and security-strength requirements, which supports an adoption pathway for PMT_CRYPTOGRAPHY.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_ADOPT_CHALLENGE_1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied CISA CPG excerpt documents adoption burden for cryptography by requiring properly configured and up-to-date SSL/TLS, identifying and updating outdated or weak encryption, considering post-quantum implications, and using encryption when feasible in OT to minimize latency and availability impact.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_ADOPT_CONTEXT_1",
+              "evidence_ids": [
+                "DE_DE18_EAA59A9B7CEAD276"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied TLS primer excerpt describes TLS phases, key exchange, and authentication features as supplementary deployment-maturity context for cryptography deployment.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial/adoption conclusion requires exact or bounded budget/resource data and evidence that cryptography implementation fits those resources.",
+            "A deployment-specific timeline conclusion requires procurement, staffing, and implementation-sequence evidence for the actual deployment scope.",
+            "If jurisdiction-specific obligations or costs become relevant, exact supplied jurisdiction-specific evidence is required; none is present in this equivalence class.",
+            "For the frozen CIS IG2 reference enterprise, deployment-specific feasibility remains conditional until organization-specific scope, staffing, infrastructure, and financial data are supplied."
+          ],
+          "constraints": [
+            "Exact budget, price, ROI, TCO, payback period, staffing count, procurement ceiling, vendor, product version, architecture, and jurisdiction-specific obligation must not be inferred because no supplied evidence supplies them.",
+            "The frozen deployment context explicitly represents resource capacity only by the CIS IG2 reference profile and states exact financial quantities remain unknown.",
+            "The masked jurisdiction does not support any region-specific financial/adoption direction.",
+            "A documented burden does not establish infeasibility, and a documentation pathway does not establish affordability."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__eu__cis_ig2__30d48c63b53db946",
+          "evidence_gaps": [
+            "No supplied evidence provides exact implementation cost, budget fit, ROI, TCO, payback period, or procurement cost for PMT_CRYPTOGRAPHY.",
+            "No supplied evidence provides staffing, expertise, or organizational capacity requirements sufficient for a deployment-specific resource judgment.",
+            "No supplied evidence describes current cryptographic inventory, weak/outdated algorithm usage, OT/IT scope, architecture, contracts, or procurement timing for the frozen deployment.",
+            "No supplied evidence measures ransomware-specific financial or adoption outcome of cryptography."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied records contain a grounded adoption-benefit pathway and a grounded adoption-burden record for PMT_CRYPTOGRAPHY. The adoption-benefit record provides standardized TLS implementation guidance, which can support an adoption pathway, but it does not state cost avoidance, savings, budget fit, staffing reduction, procurement timing, or other financial benefit. The adoption-burden record documents operational and organizational burdens for cryptography: maintaining properly configured and up-to-date SSL/TLS, identifying and updating outdated or weak encryption, considering post-quantum implications, and using encryption when feasible in OT to minimize latency and availability impact. Under the Financial/Adoption scope rules, direct operational resource constraints are weighed more heavily than a generic implementation-pathway record. On balance, the supplied evidence materially challenges GENERAL financial/adoption feasibility, without proving infeasibility. Deployment-specific feasibility is not supported because exact budget, staffing, architecture, current cryptographic inventory, OT/IT scope, contracts, procurement timing, and jurisdiction-specific obligations are absent.",
+          "stance": -1
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR_GENERAL_SUPPORT_1",
+              "evidence_ids": [
+                "DE_DE08_031120C53EF050F3",
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "Institutional enablement for CRYPTOGRAPHY is supported by governance guidance describing key-management accountability and traceability, and by official guidance providing an encryption/TLS implementation pathway.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_GENERAL_CHALLENGE_1",
+              "evidence_ids": [
+                "DE_DE09_6719137897848A9E"
+              ],
+              "scope": "GENERAL",
+              "statement": "Algorithm-transition compliance constraints challenge institutional feasibility of CRYPTOGRAPHY in the frozen 2025-2027 window by disallowing or restricting certain legacy cryptographic algorithms for encryption and limiting acceptable algorithm choices.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_DEPLOYMENT_SPECIFIC_EU_APPLICABILITY_CONTEXT",
+              "evidence_ids": [
+                "E_31_A0893427DD4F5B04",
+                "E_31_C1CFA326F0420DCA",
+                "E_31_6BBE82F2BAC198B3"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "Supplied EU primary-law records provide jurisdictional applicability context for encryption-related security measures, including encryption of personal data and encryption references in NIS2 strategy, procurement, and special-category processing context, but they do not by themselves establish whether PMT_CRYPTOGRAPHY is institutionally feasible or infeasible in the EU deployment.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC SUPPORTS_FEASIBILITY conclusion requires supplied EU-specific governance_enablement evidence or an EU legal/implementation pathway that directly enables PMT_CRYPTOGRAPHY, in addition to the existing EU applicability context.",
+            "A DEPLOYMENT_SPECIFIC CHALLENGES_FEASIBILITY conclusion requires supplied EU-specific compliance_constraint evidence creating a material institutional or regulatory barrier, not merely EU regulatory applicability.",
+            "Deployment-specific feasibility should be conditioned on establishing the organization's GDPR/NIS2 scope, data sovereignty or cross-border constraints, and available budget, staffing, and expertise.",
+            "Any implementation plan must account for algorithm-transition constraints for cryptographic uses planned or retained during the 2025-2027 window."
+          ],
+          "constraints": [
+            "Key-management deployment requires accountability and traceability for entities that generate, access, destroy, or otherwise use cryptographic keys.",
+            "Encryption implementation must account for algorithm-approval status and transition constraints, including restrictions on disallowed or time-limited legacy algorithms.",
+            "EU regulatory applicability records provide jurisdictional context but are not, by themselves, permission or prohibition for the CRYPTOGRAPHY action."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__eu__cis_ig2__30d48c63b53db946",
+          "evidence_gaps": [
+            "No supplied EU-specific direction-carrying governance_enablement record directly establishes EU institutional enablement for PMT_CRYPTOGRAPHY.",
+            "No supplied EU-specific direction-carrying compliance_constraint record directly establishes a material EU regulatory barrier to PMT_CRYPTOGRAPHY.",
+            "No supplied record establishes whether the frozen CIS IG2 EU deployment is within GDPR or NIS2 scope, including any essential or important entity status.",
+            "No supplied record establishes data sovereignty, cross-border key-management, cross-border data-transfer, or localization constraints for the EU deployment.",
+            "No exact budget, staffing count, procurement capacity, or specialized-expertise quantity is supplied, so deployment-specific resource feasibility remains conditional."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "The GENERAL institutional/regional direction is mixed. Governance_enablement evidence supports an institutional pathway for deploying cryptography through key-management accountability, traceability, and encryption implementation guidance. Compliance_constraint evidence challenges feasibility by imposing algorithm-transition constraints on encryption choices in the 2025-2027 window. Supplied EU primary-law records provide EU jurisdictional applicability context for encryption-related measures, but they do not by themselves carry positive or negative feasibility direction. No EU-specific direction-carrying governance_enablement or compliance_constraint record is supplied, so the DEPLOYMENT_SPECIFIC direction remains ungrounded. The result is a mixed GENERAL assessment with PARTIAL sufficiency for deployment-specific conclusions.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_C1",
+              "evidence_ids": [
+                "AE03S_C5AF41A880A404C2"
+              ],
+              "scope": "GENERAL",
+              "statement": "A direct technical enablement for PMT_CRYPTOGRAPHY against THREAT_RANSOMWARE is documented: CipherTrace uses cryptographic-primitive analysis to identify cipher classes and extract cryptographic keys or state from execution traces across evaluated ransomware specimens, and the record states that this can materially support ransomware neutralization and reverse engineering.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C2",
+              "evidence_ids": [
+                "AE03C_E5522A35F4981027"
+              ],
+              "scope": "GENERAL",
+              "statement": "A direct technical limitation for cryptography-related detection is documented: ransomware can deliberately alter observable entropy patterns of cryptographic operations to evade detectors that rely on high entropy, and the record states that such detection is not universally robust and that some existing approaches impose nontrivial computational cost.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C3",
+              "evidence_ids": [
+                "DE_DE18_EAA59A9B7CEAD276",
+                "DE_DE18_CDC975345637E009",
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "Neutral deployment-maturity context is present: SSL/TLS is described as providing application-level confidentiality, integrity, and authentication through encryption; IPSec deployment is described with transport/tunnel overhead, ISAKMP key negotiation, identity proofing, replay-protection considerations, and a recommendation against manual security-association configuration in production; and CISA CPG states SSL/TLS is used to protect data in transit when technically feasible, with planning for outdated or weak encryption updates, post-quantum implications, and OT encryption when feasible to minimize latency and availability impact.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC support conclusion would require supplied evidence that the selected cryptographic components integrate with the exact local architecture, key-management infrastructure, and OT/IT traffic paths without unassessed compatibility assumptions.",
+            "If cryptography-based detection is used, the implementation must address documented entropy-evasion and computational-cost constraints (AE03C_E5522A35F4981027).",
+            "If encryption deployment is used, the implementation must address documented technical-feasibility limits for OT/remote assets, latency/availability impact, protocol overhead, key negotiation/authentication configuration, and migration from outdated or weak encryption (DE_DE18_CDC975345637E009, DE_DE18_EAA59A9B7CEAD276, E_23_534489D29C38B327).",
+            "Maintainability would require evidence that the chosen implementation can be operated, monitored, and updated in the frozen multi-department enterprise context without assuming unreported staffing counts or budgets."
+          ],
+          "constraints": [
+            "Cryptography-based detection must account for the documented evasion of entropy-based detectors and the nontrivial computational cost of some approaches (AE03C_E5522A35F4981027).",
+            "Encryption deployment must remain conditional on technical feasibility, protocol overhead, key negotiation/authentication configuration, production configuration constraints, and migration from outdated or weak encryption (DE_DE18_EAA59A9B7CEAD276, DE_DE18_CDC975345637E009, E_23_534489D29C38B327)."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__eu__cis_ig2__30d48c63b53db946",
+          "evidence_gaps": [
+            "No supplied record provides the exact local architecture, endpoints, network segmentation, key-management infrastructure, product/version, integration topology, or OT/IT traffic paths needed for a DEPLOYMENT_SPECIFIC technical feasibility conclusion.",
+            "No supplied record quantifies enterprise-scale deployment, integration effort, operational maintainability, scalability, staffing expertise, or resource capacity for the selected cryptographic pathway within the 2025-2027 horizon.",
+            "No supplied record measures whether the CipherTrace-style cryptographic analysis pathway remains effective against future ransomware variants that use entropy-pattern manipulation or against broader deployment constraints beyond the evaluated specimens.",
+            "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied for deployment-specific technical feasibility."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The supplied action-specific technical evidence provides a grounded GENERAL support for technical feasibility. AE03S_C5AF41A880A404C2 documents a direct Threat×PMT technical enablement: cryptographic-primitive analysis of ransomware execution traces can identify cipher classes and extract cryptographic keys or state, and the record states that this can materially support ransomware neutralization and reverse engineering. This supports the general technical feasibility of a cryptography-based capability for the frozen ransomware threat. The opposing record, AE03C_E5522A35F4981027, documents a direct technical limitation: ransomware can manipulate observable entropy patterns to evade entropy-based detectors, and some cryptography-related detection approaches impose nontrivial computational cost. That is a real feasibility constraint, but it is narrower in scope than the documented positive capability because it is specifically tied to entropy-based cryptography-related detection rather than to all cryptography-based ransomware mitigation. Deployment-maturity records (DE_DE18_EAA59A9B7CEAD276, DE_DE18_CDC975345637E009, E_23_534489D29C38B327) provide neutral operational context for TLS/IPSec/encryption deployment, including feasibility conditions, overhead, key negotiation/authentication configuration, production configuration constraints, and weak-encryption update requirements. These records qualify operability but do not by themselves create direction. Because exact local architecture, integration topology, key-management infrastructure, product/version, OT/IT traffic paths, and enterprise-scale deployment details are missing, a DEPLOYMENT_SPECIFIC feasibility conclusion is not available. The surviving grounded direction is therefore GENERAL support, with PARTIAL sufficiency.",
+          "stance": 1
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__us__cis_ig2__cc0a8a94ecf693e7",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FIN_ADOPT_SUPPORT_1",
+              "evidence_ids": [
+                "DE_DE10_A086B3193CD6440B"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-52 Rev. 2 excerpt provides implementation guidance for TLS cryptographic authentication, certification path validation, and security-strength requirements, which supports an adoption pathway for PMT_CRYPTOGRAPHY.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_ADOPT_CHALLENGE_1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied CISA CPG excerpt documents adoption burden for cryptography by requiring properly configured and up-to-date SSL/TLS, identifying and updating outdated or weak encryption, considering post-quantum implications, and using encryption when feasible in OT to minimize latency and availability impact.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_ADOPT_CONTEXT_1",
+              "evidence_ids": [
+                "DE_DE18_EAA59A9B7CEAD276"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied TLS primer excerpt describes TLS phases, key exchange, and authentication features as supplementary deployment-maturity context for cryptography deployment.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial/adoption conclusion requires exact or bounded budget/resource data and evidence that cryptography implementation fits those resources.",
+            "A deployment-specific timeline conclusion requires procurement, staffing, and implementation-sequence evidence for the actual deployment scope.",
+            "If jurisdiction-specific obligations or costs become relevant, exact supplied jurisdiction-specific evidence is required; none is present in this equivalence class.",
+            "For the frozen CIS IG2 reference enterprise, deployment-specific feasibility remains conditional until organization-specific scope, staffing, infrastructure, and financial data are supplied."
+          ],
+          "constraints": [
+            "Exact budget, price, ROI, TCO, payback period, staffing count, procurement ceiling, vendor, product version, architecture, and jurisdiction-specific obligation must not be inferred because no supplied evidence supplies them.",
+            "The frozen deployment context explicitly represents resource capacity only by the CIS IG2 reference profile and states exact financial quantities remain unknown.",
+            "The masked jurisdiction does not support any region-specific financial/adoption direction.",
+            "A documented burden does not establish infeasibility, and a documentation pathway does not establish affordability."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__us__cis_ig2__cc0a8a94ecf693e7",
+          "evidence_gaps": [
+            "No supplied evidence provides exact implementation cost, budget fit, ROI, TCO, payback period, or procurement cost for PMT_CRYPTOGRAPHY.",
+            "No supplied evidence provides staffing, expertise, or organizational capacity requirements sufficient for a deployment-specific resource judgment.",
+            "No supplied evidence describes current cryptographic inventory, weak/outdated algorithm usage, OT/IT scope, architecture, contracts, or procurement timing for the frozen deployment.",
+            "No supplied evidence measures ransomware-specific financial or adoption outcome of cryptography."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied records contain a grounded adoption-benefit pathway and a grounded adoption-burden record for PMT_CRYPTOGRAPHY. The adoption-benefit record provides standardized TLS implementation guidance, which can support an adoption pathway, but it does not state cost avoidance, savings, budget fit, staffing reduction, procurement timing, or other financial benefit. The adoption-burden record documents operational and organizational burdens for cryptography: maintaining properly configured and up-to-date SSL/TLS, identifying and updating outdated or weak encryption, considering post-quantum implications, and using encryption when feasible in OT to minimize latency and availability impact. Under the Financial/Adoption scope rules, direct operational resource constraints are weighed more heavily than a generic implementation-pathway record. On balance, the supplied evidence materially challenges GENERAL financial/adoption feasibility, without proving infeasibility. Deployment-specific feasibility is not supported because exact budget, staffing, architecture, current cryptographic inventory, OT/IT scope, contracts, procurement timing, and jurisdiction-specific obligations are absent.",
+          "stance": -1
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR_GEN_SUP_001",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied CPG record describes a recommended encryption action with the outcome of effective encryption deployed to maintain confidentiality of sensitive data and integrity of IT and OT traffic, and it describes properly configured and up-to-date SSL/TLS use when technically feasible plus planning to identify and update outdated or weak encryption and consider post-quantum implications.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_GEN_SUP_002",
+              "evidence_ids": [
+                "DE_DE08_031120C53EF050F3"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-57 Part 1 Rev. 5 record provides governance enablement for cryptographic key management by describing identification of authorized entities for key generation, access, destruction, or use; recording who or what performs key actions; auditing logs for security violations; and stating that accountability/traceability can be an effective tool to help prevent key compromises and reduce impact when they are detected.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_GEN_CHAL_001",
+              "evidence_ids": [
+                "DE_DE09_6719137897848A9E"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-131A Rev. 2 record defines approval statuses that constrain cryptographic algorithm choice: two-key TDEA encryption is disallowed, three-key TDEA encryption is deprecated through 2023 and disallowed after 2023 unless specifically allowed by other NIST guidance, SKIPJACK encryption and decryption are disallowed, and AES-128, AES-192, and AES-256 encryption and decryption are acceptable.",
+              "status": "CHALLENGES_FEASIBILITY"
+            }
+          ],
+          "conditional_requirements": [
+            "If cryptographic algorithm choices are made, the supplied NIST SP 800-131A Rev. 2 statuses should be respected, particularly avoiding disallowed or post-2023-disallowed encryption algorithms for new use (DE_DE09_6719137897848A9E).",
+            "Key-management implementation should include identification of authorized entities, traceability of plaintext key access, and auditable logs for key actions (DE_DE08_031120C53EF050F3).",
+            "Encryption deployment should maintain properly configured and up-to-date SSL/TLS when technically feasible, identify and update outdated or weak encryption, and consider post-quantum implications (E_23_534489D29C38B327)."
+          ],
+          "constraints": [
+            "Cryptographic algorithm selection is constrained by the supplied NIST SP 800-131A Rev. 2 approval statuses, including disallowed two-key TDEA encryption, disallowed SKIPJACK, and three-key TDEA encryption disallowed after 2023 unless specifically allowed by other NIST guidance (DE_DE09_6719137897848A9E).",
+            "The supplied NIST SP 800-57 Part 1 Rev. 5 record requires that access to plaintext cryptographic keys be traceable to the accessing entity and describes audit/log mechanisms for key actions (DE_DE08_031120C53EF050F3).",
+            "The supplied CPG record conditions encryption deployment on properly configured and up-to-date SSL/TLS when technically feasible, and on planning to identify and update outdated or weak encryption (E_23_534489D29C38B327)."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__us__cis_ig2__cc0a8a94ecf693e7",
+          "evidence_gaps": [
+            "No jurisdiction-specific regulatory_applicability evidence is supplied for the frozen masked jurisdiction, so a DEPLOYMENT_SPECIFIC regional/legal feasibility direction is not grounded.",
+            "No supplied evidence addresses data sovereignty, cross-border data-transfer constraints, or jurisdiction-specific data-location requirements for the frozen masked jurisdiction.",
+            "No supplied evidence establishes the reference enterprise's current cryptographic algorithm inventory, key-management tooling, or capacity to transition disallowed or deprecated algorithms.",
+            "No supplied evidence maps the cited CPG or NIST guidance to a binding legal obligation or jurisdiction-specific compliance regime in the frozen masked jurisdiction."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "At the GENERAL level, the balance leans supportive: the direction-eligible governance_enablement records provide a recommended encryption action/outcome and an accountability/auditability pathway for cryptographic key management. The direction-eligible compliance_constraint record identifies an algorithm-transition constraint, but the supplied record does not establish a blocking organizational or legal barrier. Because the frozen region is JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE and no regulatory_applicability record for that frozen jurisdiction is supplied, deployment-specific regional/legal feasibility is not grounded and is retained in evidence_gaps rather than converted into a directional stance.",
+          "stance": 1
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_C1",
+              "evidence_ids": [
+                "AE03S_C5AF41A880A404C2"
+              ],
+              "scope": "GENERAL",
+              "statement": "A direct technical enablement for PMT_CRYPTOGRAPHY against THREAT_RANSOMWARE is documented: CipherTrace uses cryptographic-primitive analysis to identify cipher classes and extract cryptographic keys or state from execution traces across evaluated ransomware specimens, and the record states that this can materially support ransomware neutralization and reverse engineering.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C2",
+              "evidence_ids": [
+                "AE03C_E5522A35F4981027"
+              ],
+              "scope": "GENERAL",
+              "statement": "A direct technical limitation for cryptography-related detection is documented: ransomware can deliberately alter observable entropy patterns of cryptographic operations to evade detectors that rely on high entropy, and the record states that such detection is not universally robust and that some existing approaches impose nontrivial computational cost.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C3",
+              "evidence_ids": [
+                "DE_DE18_EAA59A9B7CEAD276",
+                "DE_DE18_CDC975345637E009",
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "Neutral deployment-maturity context is present: SSL/TLS is described as providing application-level confidentiality, integrity, and authentication through encryption; IPSec deployment is described with transport/tunnel overhead, ISAKMP key negotiation, identity proofing, replay-protection considerations, and a recommendation against manual security-association configuration in production; and CISA CPG states SSL/TLS is used to protect data in transit when technically feasible, with planning for outdated or weak encryption updates, post-quantum implications, and OT encryption when feasible to minimize latency and availability impact.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC support conclusion would require supplied evidence that the selected cryptographic components integrate with the exact local architecture, key-management infrastructure, and OT/IT traffic paths without unassessed compatibility assumptions.",
+            "If cryptography-based detection is used, the implementation must address documented entropy-evasion and computational-cost constraints (AE03C_E5522A35F4981027).",
+            "If encryption deployment is used, the implementation must address documented technical-feasibility limits for OT/remote assets, latency/availability impact, protocol overhead, key negotiation/authentication configuration, and migration from outdated or weak encryption (DE_DE18_CDC975345637E009, DE_DE18_EAA59A9B7CEAD276, E_23_534489D29C38B327).",
+            "Maintainability would require evidence that the chosen implementation can be operated, monitored, and updated in the frozen multi-department enterprise context without assuming unreported staffing counts or budgets."
+          ],
+          "constraints": [
+            "Cryptography-based detection must account for the documented evasion of entropy-based detectors and the nontrivial computational cost of some approaches (AE03C_E5522A35F4981027).",
+            "Encryption deployment must remain conditional on technical feasibility, protocol overhead, key negotiation/authentication configuration, production configuration constraints, and migration from outdated or weak encryption (DE_DE18_EAA59A9B7CEAD276, DE_DE18_CDC975345637E009, E_23_534489D29C38B327)."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__f4c6640015785dc1__us__cis_ig2__cc0a8a94ecf693e7",
+          "evidence_gaps": [
+            "No supplied record provides the exact local architecture, endpoints, network segmentation, key-management infrastructure, product/version, integration topology, or OT/IT traffic paths needed for a DEPLOYMENT_SPECIFIC technical feasibility conclusion.",
+            "No supplied record quantifies enterprise-scale deployment, integration effort, operational maintainability, scalability, staffing expertise, or resource capacity for the selected cryptographic pathway within the 2025-2027 horizon.",
+            "No supplied record measures whether the CipherTrace-style cryptographic analysis pathway remains effective against future ransomware variants that use entropy-pattern manipulation or against broader deployment constraints beyond the evaluated specimens.",
+            "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied for deployment-specific technical feasibility."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The supplied action-specific technical evidence provides a grounded GENERAL support for technical feasibility. AE03S_C5AF41A880A404C2 documents a direct Threat×PMT technical enablement: cryptographic-primitive analysis of ransomware execution traces can identify cipher classes and extract cryptographic keys or state, and the record states that this can materially support ransomware neutralization and reverse engineering. This supports the general technical feasibility of a cryptography-based capability for the frozen ransomware threat. The opposing record, AE03C_E5522A35F4981027, documents a direct technical limitation: ransomware can manipulate observable entropy patterns to evade entropy-based detectors, and some cryptography-related detection approaches impose nontrivial computational cost. That is a real feasibility constraint, but it is narrower in scope than the documented positive capability because it is specifically tied to entropy-based cryptography-related detection rather than to all cryptography-based ransomware mitigation. Deployment-maturity records (DE_DE18_EAA59A9B7CEAD276, DE_DE18_CDC975345637E009, E_23_534489D29C38B327) provide neutral operational context for TLS/IPSec/encryption deployment, including feasibility conditions, overhead, key negotiation/authentication configuration, production configuration constraints, and weak-encryption update requirements. These records qualify operability but do not by themselves create direction. Because exact local architecture, integration topology, key-management infrastructure, product/version, OT/IT traffic paths, and enterprise-scale deployment details are missing, a DEPLOYMENT_SPECIFIC feasibility conclusion is not available. The surviving grounded direction is therefore GENERAL support, with PARTIAL sufficiency.",
+          "stance": 1
+        }
+      }
+    ]
+  },
+  "generation_contract_version": "jurisdiction-neutral-equivalence-dedup-v1",
+  "input_fingerprint": "f0612cfc885ee207e1b6965f240925a96f682f4073c86375535241cc82960625",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "institutional_regional_system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "client_request_concurrency": 2,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 65536,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 2,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 43,
+    "server_total_context_size": 131072,
+    "stage4_context_runtime_profile_version": "stage4-context-runtime-128k-total-2slot-v3",
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "scenario_set_version": "stage3-context-scenarios-v1",
+  "schema_version": "stage4-artifact-v4",
+  "semantic_validation_version": "stage4-semantic-validation-v6",
+  "stage3_context_artifact_sha256": "8ee0dcdff98782a395893032b763f90d926695ceac5146b20c0d8e505c44d988",
+  "stage3_context_input_fingerprint": "7b0e934cb82192e32b7624282beb2fe46ade85245a242bb0deb66f5a13c3b961",
+  "stage3_context_output_sha256": "4d8004e883c371191427f99fcc63d700731d243b5cffb5ca3382a5dfc5b0ddb5",
+  "stage4_output_sha256": "62dbb384e94d57eb5962910bce3446c4242c999e4e52bcff43dbd46bbf251114"
+}

@@ -1,0 +1,659 @@
+{
+  "artifact_sha256": "f9715516d716daaa0f66b631c04f2591231bbad6b63c2a1e76ec3f0f5b6aecac",
+  "case_id": "main__targeted_attack__access_control",
+  "constrained_output_schema_sha256": {
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__eu__cis_ig2__1311c0945b304412": {
+      "financial_adoption": "3fe6b8e0dad21b8cc5cbbb3b0fb920f13fdb83502d0889d4c8dfb572ca7b5be6",
+      "institutional_regional": "7988fda75f071d64e8dbac9de704c23f37333ace4d4dee293e65d7a801a366f0",
+      "technical_feasibility": "7ed7b780085b40c472ca23ea49e58c0894fd8cd3560a3f95407da40fbe111a83"
+    },
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__kr__cis_ig2__b036aab0e669a1bd": {
+      "financial_adoption": "73a7ad7cd88985ee3bce86d8c2b37b10a1ca5879a630966148436277d99151c2",
+      "institutional_regional": "94526d26fd635301aced770d13eef1852f9c471a2882d76805bf9442952661fe",
+      "technical_feasibility": "a5a0fd3d49bb4e2825b7e6eab419c8be33559879289579ed891e629f792f578b"
+    },
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__us__cis_ig2__05d4670fed3b4130": {
+      "financial_adoption": "97a3b2f225f11735705d76bf2588f29eee7fdd59f665170b0cc7cc0e3d5398a7",
+      "institutional_regional": "5c2dad07e530fd75d3ab785104be9b17c0f0cc6a97ee79a123c023a61f8835db",
+      "technical_feasibility": "a980b9347f5db0e4faad8354f27e6ccfbd756648efc8ea504c7ea13f227ee833"
+    }
+  },
+  "created_at": "2026-11-08T12:30:49.250040+00:00",
+  "decision_object_payload_sha256": {
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__eu__cis_ig2__1311c0945b304412": {
+      "financial_adoption": "2fc90abd3852000e4ebeb844ab6881a524d47cab7266424931e084aa607c7077",
+      "institutional_regional": "0f7aa88b0ca5ea2b416f973568e82e4fdd300d2d58fb23107e847981ca272625",
+      "technical_feasibility": "37fd388c04b7cf40ef08df637fc7f0b3765e29083250282e64b862aac0bd06f0"
+    },
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__kr__cis_ig2__b036aab0e669a1bd": {
+      "financial_adoption": "8dba237afbb034de216fec701ae428bb843af1e026387dc4d5887cf366cf657f",
+      "institutional_regional": "3d2b70f05ec31d205c172efaac94763bb976ecff5746471208b92874a2bd9f07",
+      "technical_feasibility": "2c4ce1b768066de05cdd0777d3b2b02461c75b9596c3ddf78384a3bda1cfd375"
+    },
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__us__cis_ig2__05d4670fed3b4130": {
+      "financial_adoption": "631dfd5fb4387e03a486e434948f72a4fbefb2d618559115104a2ca154db4dd7",
+      "institutional_regional": "ff134a6105a4422c47b79c85736a48e815832f9a864e925226afacb3c191b9f3",
+      "technical_feasibility": "20ed1da042557e25d7b7f08b9882cbd665cc66c3b746b1764176f8e570c5fa8f"
+    }
+  },
+  "evaluation_bundle": {
+    "case_id": "main__targeted_attack__access_control",
+    "evaluations": [
+      {
+        "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__kr__cis_ig2__b036aab0e669a1bd",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FA_CLAIM_1",
+              "evidence_ids": [
+                "DE_DE11_1ECA9795EEF89DFA",
+                "DE_DE12_CBF6FBB1313D37AF",
+                "DE_DE17_429D17A4E11A72C3"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied contract-eligible access-control guidance records document adoption burdens: ABAC development, deployment, and maintenance costs may exceed benefits; retrofitting applications is separate from procuring, setting up, and maintaining an authorization infrastructure; maintenance savings may be offset by the cost of managing and maintaining subject attributes, policies, and additional system support; governance and business-process changes represent a significant transition; service-provider switching can involve extreme cost or a long transition program; and the zero-trust path may take years, initially often leads to additional costs, and may require a change in cybersecurity philosophy and culture.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA_CLAIM_2",
+              "evidence_ids": [
+                "DE_DE17_429D17A4E11A72C3"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied CISA ZTMM record documents a potential long-term adoption benefit: after initial implementation costs, zero trust can enable a more prudent allocation of security investments.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA_CLAIM_3",
+              "evidence_ids": [
+                "DE_DE12_6509E7A6D8467E38"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST ZTA record describes candidate-solution selection, pilot deployment, and initial deployment and monitoring as implementation considerations for access-control-related zero-trust deployment.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "To make a DEPLOYMENT_SPECIFIC financial/adoption conclusion, the scenario must identify the implementation approach and supply sufficient budget, staffing, infrastructure, contract, and timeline information to test whether the documented burdens and benefit apply to this deployment.",
+            "To support feasibility under this lens, evidence must show an affordable adoption pathway or quantified benefit/resource savings sufficient to offset the documented costs, transition effort, and potential service-provider switching burden.",
+            "To support material infeasibility under this lens, evidence must show that the documented adoption burdens would exceed available resources or make adoption unmanageable under the frozen deployment conditions, not merely that costs or transition effort exist.",
+            "To connect the GENERAL direction to the frozen 2025-2027 window, evidence must link the documented initial costs and multi-year transition burden to that timing window rather than to a generic zero-trust path."
+          ],
+          "constraints": [
+            "The directional financial/adoption evidence is limited to the contract-eligible records DE_DE11_1ECA9795EEF89DFA, DE_DE12_6509E7A6D8467E38, DE_DE12_CBF6FBB1313D37AF, and DE_DE17_429D17A4E11A72C3; these records do not supply exact budget, price, ROI, TCO, staffing count, payback period, or procurement ceiling for the frozen action.",
+            "The documented adoption benefit is long-term and unquantified; it does not establish near-term affordability, ROI, or payback within the frozen 2025-2027 timing window.",
+            "The documented burdens are conditional and implementation-approach-specific, including ABAC and zero-trust/access-control deployment contexts; they do not establish that every possible access-control implementation is financially infeasible.",
+            "Deployment maturity is supplementary context in this lens; DE_DE12_6509E7A6D8467E38 does not by itself create a financial or adoption direction."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__kr__cis_ig2__b036aab0e669a1bd",
+          "evidence_gaps": [
+            "Exact budget, price, total cost of ownership, ROI, payback period, staffing count, and procurement timing are missing for the chosen access-control implementation.",
+            "The specific implementation architecture or approach is missing, including whether the action would use ABAC, zero-trust access control, Active Directory group-policy-based controls, or another access-control mechanism.",
+            "Current access-control deployment maturity, existing authorization infrastructure, and service-provider switching conditions are not supplied.",
+            "Quantified efficiency, resource-saving, or maintenance-cost offsetting pathways are missing.",
+            "Organization-specific opportunity-cost information is missing for deploying access control versus alternative safeguards under the frozen CIS IG2 reference profile.",
+            "No jurisdiction-specific financial/adoption evidence is supplied in this masked equivalence class, so a jurisdiction-specific financial feasibility conclusion is not possible."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied Stage-4 financial/adoption evidence grounds a GENERAL challenge to the frozen action's financial/adoption feasibility. The contract-eligible adoption_burden records document cost, transition, retrofit, governance, service-provider switching, and multi-year implementation burdens for access-control-related implementations. The contract-eligible adoption_benefit record documents only a conditional, long-term, unquantified benefit of more prudent security-investment allocation. Exact budget, TCO, ROI, staffing, procurement timing, and chosen implementation architecture are not supplied, so a deployment-specific financial conclusion is not supported; the surviving GENERAL direction is retained as materially challenged, with PARTIAL sufficiency.",
+          "stance": -1
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR_CL_1",
+              "evidence_ids": [
+                "DE_DE11_1E4AAE06CC3795D7"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied ABAC guidance evidences governance pathways for access-control implementation, including enterprise-governed policies, consistent attribute values, lifecycle-management responsibility, attribute documentation, and procedures for access failures.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CL_2",
+              "evidence_ids": [
+                "DE_DE12_E6F93E4AB8722379"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied zero-trust guidance describes an industry compliance system as an input to access-decision policy engines, supporting the institutional integration of compliance rules into access-control operation.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CL_3",
+              "evidence_ids": [
+                "DE_DE17_567DDA7CFBC62829"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied maturity-model guidance defines governance as policy, procedure, and process definition and enforcement, and links mature security posture to monitoring and assessment that detects unauthorized access or changes.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CL_4",
+              "evidence_ids": [
+                "DE_DE13_055FC5E35FA61DD5"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied digital-identity guidance imposes session-management constraints on access-control implementation, including authenticated protected channels, session timeouts, prohibition of fallback to insecure transport, session-identifier verification, and secure minimally scoped browser cookies.",
+              "status": "CHALLENGES_FEASIBILITY"
+            }
+          ],
+          "conditional_requirements": [
+            "If a specific jurisdiction is later supplied, the assessment requires jurisdiction-specific regulatory_applicability evidence before making a DEPLOYMENT_SPECIFIC legal compatibility conclusion.",
+            "If the ABAC-style governance pathway in DE_DE11_1E4AAE06CC3795D7 is used, the enterprise must maintain consistent attribute definitions, lifecycle-management responsibility, attribute documentation, and access-failure procedures.",
+            "If session-based access controls are used, the implementation must satisfy the session/token and cookie constraints in DE_DE13_055FC5E35FA61DD5.",
+            "If compliance rules are to be incorporated into access decisions, the compliance-system input described in DE_DE12_E6F93E4AB8722379 must be maintained and aligned with enterprise policy rules."
+          ],
+          "constraints": [
+            "Access-control implementation must account for the session-management constraints identified in DE_DE13_055FC5E35FA61DD5, including protected authenticated sessions, timeout behavior, no insecure fallback, session-identifier verification, and secure minimally scoped cookies.",
+            "Governance and accountability require the policy, attribute-documentation, lifecycle-management, and access-failure processes described in DE_DE11_1E4AAE06CC3795D7 and the governance/monitoring expectations described in DE_DE17_567DDA7CFBC62829.",
+            "Compliance integration can depend on maintaining the compliance-system policy inputs described in DE_DE12_E6F93E4AB8722379."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__kr__cis_ig2__b036aab0e669a1bd",
+          "evidence_gaps": [
+            "No jurisdiction-specific regulatory_applicability evidence is supplied for the frozen scenario, so DEPLOYMENT_SPECIFIC legal/regional feasibility cannot be established.",
+            "No deployment-specific evidence is supplied that the frozen reference enterprise has the governance maturity, resource capacity, architecture, or organizational processes needed to implement the cited access-control governance or session-management requirements.",
+            "No supplied record addresses data sovereignty or cross-border constraints for access-control deployment in this frozen scenario.",
+            "No record supplied in this lens establishes whether the session-management requirements in DE_DE13_055FC5E35FA61DD5 are binding obligations in the frozen scenario or merely guidance."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "The supplied GENERAL institutional evidence supports the frozen ACCESS CONTROL action more than it challenges it under this lens. SUPPORTS_FEASIBILITY is grounded in governance_enablement records describing governance, compliance integration, and accountability pathways for access-control implementation: DE_DE11_1E4AAE06CC3795D7, DE_DE12_E6F93E4AB8722379, and DE_DE17_567DDA7CFBC62829. CHALLENGES_FEASIBILITY is grounded in compliance_constraint record DE_DE13_055FC5E35FA61DD5, which imposes concrete session-management constraints on access-control implementation. That constraint is relevant to compliance burden, but its existence does not establish material institutional infeasibility. Because the frozen scenario does not provide lens-specific jurisdictional evidence, no DEPLOYMENT_SPECIFIC legal or regional direction is drawn. Missing jurisdiction-specific regulatory applicability and deployment-specific implementation capacity are recorded as gaps rather than converted into a directional stance.",
+          "stance": 1
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_CLM_SUPPORT_1",
+              "evidence_ids": [
+                "AE06S_407DDF87C86BB41B"
+              ],
+              "scope": "GENERAL",
+              "statement": "An action-specific curated finding reports that an ATT&CK-informed zero-trust risk model for advanced persistent threats, integrated with centralized access-control decisions, reports improved ability to respond to sophisticated multi-stage threats, directly supporting adaptive access control as a technical defense mechanism for targeted attacks.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_CHALLENGE_1",
+              "evidence_ids": [
+                "AE06C_8C41709C0D8EE834"
+              ],
+              "scope": "GENERAL",
+              "statement": "The same work explains that conventional perimeter and static access-control assumptions are insufficient for evolving APT behavior, that existing risk assessment can miss dynamic attack progression, and that effective access control depends on continuously updated threat/risk context rather than the control category alone, which challenges a static or standalone access-control implementation model.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_MATURE_1",
+              "evidence_ids": [
+                "DE_DE17_429D17A4E11A72C3"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied zero-trust maturity record states that the path to zero trust is an incremental process that may take years to implement and that initial implementation of required capabilities and services will often lead to additional costs. This is supplementary deployment-maturity context and does not by itself establish a directional technical-feasibility conclusion.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_CLM_MATURE_2",
+              "evidence_ids": [
+                "DE_DE12_6509E7A6D8467E38"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied zero-trust architecture record identifies candidate-solution factors, including client installation, resource location, logging, application/service/protocol support, and subject-behavior changes, and describes using a pilot program before transitioning. This is supplementary deployment-maturity context and does not by itself establish deployment-specific compatibility.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "For a deployment-specific technical-feasibility conclusion, exact information about the existing network/identity/access-control architecture, available threat/risk-intelligence inputs, integration points, logging/monitoring capability, and operational workflows is required.",
+            "If the action is to be treated as sufficient for targeted-attack mitigation, the implementation must incorporate continuously updated threat/risk context rather than rely only on static perimeter assumptions."
+          ],
+          "constraints": [
+            "The supported technical pathway is adaptive, risk-context-aware access control rather than reliance on conventional perimeter or static access-control assumptions.",
+            "Effective access control for evolving APT behavior depends on continuously updated threat/risk context, so implementation feasibility is conditioned on maintaining that context.",
+            "Deployment-maturity guidance indicates that solution fit, logging, protocol/application support, subject-behavior change, and potentially incremental zero-trust implementation are relevant practical constraints, but these records do not by themselves establish a directional feasibility conclusion.",
+            "No deployment-specific product, version, architecture, or integration compatibility can be asserted from the supplied context."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__kr__cis_ig2__b036aab0e669a1bd",
+          "evidence_gaps": [
+            "The supplied records do not provide the frozen enterprise's exact local architecture, product/version, identity/access-management infrastructure, or integration points.",
+            "The supplied records do not directly measure realized implementation, scalability, maintainability, operational effectiveness, or deployment timeline for access control within the 2025-2027 forecast window.",
+            "The supplied records do not establish whether continuously updated threat/risk context is already available or maintainable in the frozen deployment context."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The supplied action-specific decision evidence supports general technical feasibility for ACCESS CONTROL against targeted attacks by documenting a technical enablement pathway: an ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats. A separate action-specific decision record also supplies a technical limitation: conventional perimeter and static access-control assumptions are insufficient for evolving APT behavior, and effective access control depends on continuously updated threat/risk context. This limitation challenges static or standalone access-control design assumptions, but it does not by itself show that access control is technically infeasible; rather, it conditions the feasible implementation model on dynamic risk-aware access control. The deployment-maturity records further qualify the judgment by identifying solution-fit, logging, protocol/application support, behavior change, and potentially incremental zero-trust implementation considerations, but they are supplementary context and do not by themselves create a directional technical-feasibility conclusion. Because the frozen deployment context does not provide exact local architecture, product/version, identity/access infrastructure, integration points, or measured operational effectiveness, the defensible conclusion is a grounded GENERAL support with PARTIAL sufficiency, while deployment-specific compatibility remains unresolved.",
+          "stance": 1
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__eu__cis_ig2__1311c0945b304412",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FA_CLAIM_1",
+              "evidence_ids": [
+                "DE_DE11_1ECA9795EEF89DFA",
+                "DE_DE12_CBF6FBB1313D37AF",
+                "DE_DE17_429D17A4E11A72C3"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied contract-eligible access-control guidance records document adoption burdens: ABAC development, deployment, and maintenance costs may exceed benefits; retrofitting applications is separate from procuring, setting up, and maintaining an authorization infrastructure; maintenance savings may be offset by the cost of managing and maintaining subject attributes, policies, and additional system support; governance and business-process changes represent a significant transition; service-provider switching can involve extreme cost or a long transition program; and the zero-trust path may take years, initially often leads to additional costs, and may require a change in cybersecurity philosophy and culture.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA_CLAIM_2",
+              "evidence_ids": [
+                "DE_DE17_429D17A4E11A72C3"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied CISA ZTMM record documents a potential long-term adoption benefit: after initial implementation costs, zero trust can enable a more prudent allocation of security investments.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA_CLAIM_3",
+              "evidence_ids": [
+                "DE_DE12_6509E7A6D8467E38"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST ZTA record describes candidate-solution selection, pilot deployment, and initial deployment and monitoring as implementation considerations for access-control-related zero-trust deployment.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "To make a DEPLOYMENT_SPECIFIC financial/adoption conclusion, the scenario must identify the implementation approach and supply sufficient budget, staffing, infrastructure, contract, and timeline information to test whether the documented burdens and benefit apply to this deployment.",
+            "To support feasibility under this lens, evidence must show an affordable adoption pathway or quantified benefit/resource savings sufficient to offset the documented costs, transition effort, and potential service-provider switching burden.",
+            "To support material infeasibility under this lens, evidence must show that the documented adoption burdens would exceed available resources or make adoption unmanageable under the frozen deployment conditions, not merely that costs or transition effort exist.",
+            "To connect the GENERAL direction to the frozen 2025-2027 window, evidence must link the documented initial costs and multi-year transition burden to that timing window rather than to a generic zero-trust path."
+          ],
+          "constraints": [
+            "The directional financial/adoption evidence is limited to the contract-eligible records DE_DE11_1ECA9795EEF89DFA, DE_DE12_6509E7A6D8467E38, DE_DE12_CBF6FBB1313D37AF, and DE_DE17_429D17A4E11A72C3; these records do not supply exact budget, price, ROI, TCO, staffing count, payback period, or procurement ceiling for the frozen action.",
+            "The documented adoption benefit is long-term and unquantified; it does not establish near-term affordability, ROI, or payback within the frozen 2025-2027 timing window.",
+            "The documented burdens are conditional and implementation-approach-specific, including ABAC and zero-trust/access-control deployment contexts; they do not establish that every possible access-control implementation is financially infeasible.",
+            "Deployment maturity is supplementary context in this lens; DE_DE12_6509E7A6D8467E38 does not by itself create a financial or adoption direction."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__eu__cis_ig2__1311c0945b304412",
+          "evidence_gaps": [
+            "Exact budget, price, total cost of ownership, ROI, payback period, staffing count, and procurement timing are missing for the chosen access-control implementation.",
+            "The specific implementation architecture or approach is missing, including whether the action would use ABAC, zero-trust access control, Active Directory group-policy-based controls, or another access-control mechanism.",
+            "Current access-control deployment maturity, existing authorization infrastructure, and service-provider switching conditions are not supplied.",
+            "Quantified efficiency, resource-saving, or maintenance-cost offsetting pathways are missing.",
+            "Organization-specific opportunity-cost information is missing for deploying access control versus alternative safeguards under the frozen CIS IG2 reference profile.",
+            "No jurisdiction-specific financial/adoption evidence is supplied in this masked equivalence class, so a jurisdiction-specific financial feasibility conclusion is not possible."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied Stage-4 financial/adoption evidence grounds a GENERAL challenge to the frozen action's financial/adoption feasibility. The contract-eligible adoption_burden records document cost, transition, retrofit, governance, service-provider switching, and multi-year implementation burdens for access-control-related implementations. The contract-eligible adoption_benefit record documents only a conditional, long-term, unquantified benefit of more prudent security-investment allocation. Exact budget, TCO, ROI, staffing, procurement timing, and chosen implementation architecture are not supplied, so a deployment-specific financial conclusion is not supported; the surviving GENERAL direction is retained as materially challenged, with PARTIAL sufficiency.",
+          "stance": -1
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR_C1",
+              "evidence_ids": [
+                "DE_DE11_1E4AAE06CC3795D7"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST ABAC guidance describes institutional mechanisms that can enable access-control governance: local access policies in a federated enterprise should reflect enterprise policy based on mapped attributes; a consistent set of valid subject/object attribute values must be defined and applied; attribute lifecycle management is the responsibility of the provisioning organization; attribute service providers must document definitions, meanings, and usage guidance; and procedures should exist for communicating exception handling, access denials, and errors. These provisions support governance, accountability, and exception-handling pathways for access-control implementation.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_C2",
+              "evidence_ids": [
+                "DE_DE12_E6F93E4AB8722379"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST Zero Trust Architecture describes a policy architecture in which a policy enforcement point enables, monitors, and terminates subject-to-resource connections under policy-administrator communication, and data sources include an industry compliance system that helps an enterprise remain compliant with an applicable regulatory regime. This provides a governance and compliance-aware pathway for policy-driven access decisions.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_C3",
+              "evidence_ids": [
+                "DE_DE17_567DDA7CFBC62829"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA Zero Trust Maturity Model describes governance as a zero-trust pillar involving the definition and enforcement of agency cybersecurity policies, procedures, and processes within and across pillars to manage the agency enterprise and mitigate security risks. Although the record is framed for agencies and federal requirements, it supplies a general institutional governance concept relevant to policy-led access-control implementation.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_C4",
+              "evidence_ids": [
+                "DE_DE13_055FC5E35FA61DD5"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-63B imposes prescriptive session and access-token security requirements, including authenticated protected channels, mandatory session timeouts, prohibition of fallback to insecure transport, secure cookie tagging, minimum practical hostname/path scope, session-identifier verification, and the rule that an OAuth access token's presence must not be interpreted as subscriber presence. These are compliance constraints that increase the requirements an identity/session-based access-control implementation must satisfy.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_C5",
+              "evidence_ids": [
+                "E_31_96F42990F3AEAC86",
+                "E_31_52DCE9554453ADEF"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "EU primary-source text links access control to the EU regulatory context: one passage states that essential and important entities should have appropriate access control policies as part of cybersecurity risk-management measures, and another passage promotes data-centric security concepts such as access policy and access management for providers of public electronic communications networks or publicly available electronic communications services. These records establish that access-control/access-management concepts appear in EU primary-source context for certain entity classes, but they do not by themselves establish that the frozen CIS IG2 reference enterprise falls within those classes.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "To ground a deployment-specific EU legal feasibility direction, evidence must establish that the organization is an essential or important entity under the EU primary source or a provider of public electronic communications networks/services. [E_31_96F42990F3AEAC86, E_31_52DCE9554453ADEF]",
+            "If ABAC is adopted, the enterprise-governed policy, consistent attribute lifecycle, attribute documentation, and access-failure procedures described in the NIST ABAC record must be established. [DE_DE11_1E4AAE06CC3795D7]",
+            "If session or access-token mechanisms are used, the NIST SP 800-63B requirements in the supplied compliance-constraint record must be satisfied. [DE_DE13_055FC5E35FA61DD5]",
+            "If a zero-trust policy architecture is adopted, the policy-administrator/policy-enforcement and compliance-input mechanisms described in the NIST Zero Trust record, and the governance pillar described in the ZTMM record, must be implemented. [DE_DE12_E6F93E4AB8722379, DE_DE17_567DDA7CFBC62829]"
+          ],
+          "constraints": [
+            "Access-control governance may require enterprise-governed policies, consistent attribute values, attribute lifecycle management, attribute documentation, and access-failure procedures. [DE_DE11_1E4AAE06CC3795D7]",
+            "Policy-driven zero-trust access control requires policy-administrator/policy-enforcement components and inputs such as industry compliance-system data for regulatory compliance. [DE_DE12_E6F93E4AB8722379]",
+            "Identity/session-based access control must satisfy NIST SP 800-63B session and access-token requirements, including authenticated channels, timeouts, no insecure fallback, secure cookie handling, and token-interpretation limits. [DE_DE13_055FC5E35FA61DD5]",
+            "Zero-trust maturity governance requires the definition and enforcement of cybersecurity policies, procedures, and processes within and across pillars. [DE_DE17_567DDA7CFBC62829]"
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__eu__cis_ig2__1311c0945b304412",
+          "evidence_gaps": [
+            "EU deployment-specific legal applicability is not established. The EU primary-source access-control expectation is conditioned on essential and important entities, the EU primary-source access-management passage addresses public electronic communications network/service providers, and the frozen reference profile identifies only CIS IG2 rather than an EU legal entity class. Missing: evidence that the organization is an essential or important entity under the EU source, or a provider of public electronic communications networks/services. [E_31_96F42990F3AEAC86, E_31_52DCE9554453ADEF, CTX_CIS_IG2_9F94838146D9C3A4]",
+            "The supplied EU primary-source records do not specify EU-specific data-sovereignty, cross-border transfer, incident-reporting, or audit/oversight obligations applicable to the frozen deployment. Missing: EU operational compliance obligations, if any, that apply to this specific CIS IG2 enterprise and access-control implementation. [E_31_96F42990F3AEAC86, E_31_52DCE9554453ADEF]",
+            "No supplied evaluation evidence quantifies institutional implementation burden, staffing, budget, or procurement capacity for the governance processes identified in the claims; the CIS IG2 profile describes only enterprise complexity and possible need for enterprise-grade technology or specialized expertise. Missing: deployment-specific resource capacity and implementation burden, if a deployment-specific feasibility conclusion is required. [CTX_CIS_IG2_9F94838146D9C3A4]"
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "On balance, the supplied evidence supports GENERAL institutional feasibility for ACCESS CONTROL. Governance-enablement records provide concrete institutional pathways: ABAC governance with enterprise policy alignment, attribute lifecycle management, documentation, and exception-handling procedures; zero-trust policy architecture with compliance-system inputs; and a named governance pillar in the zero-trust maturity model. The principal challenge is a compliance-constraint record imposing detailed session and access-token security requirements, which increases implementation obligations but is not shown to be prohibitive. EU primary-source records place access-control and access-management concepts in an EU regulatory context for certain entity classes, but they do not establish that the frozen CIS IG2 reference enterprise is an essential/important entity or public communications provider. Therefore the direction is GENERAL, while EU deployment-specific legal feasibility remains conditional and partially grounded.",
+          "stance": 1
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_CLM_SUPPORT_1",
+              "evidence_ids": [
+                "AE06S_407DDF87C86BB41B"
+              ],
+              "scope": "GENERAL",
+              "statement": "An action-specific curated finding reports that an ATT&CK-informed zero-trust risk model for advanced persistent threats, integrated with centralized access-control decisions, reports improved ability to respond to sophisticated multi-stage threats, directly supporting adaptive access control as a technical defense mechanism for targeted attacks.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_CHALLENGE_1",
+              "evidence_ids": [
+                "AE06C_8C41709C0D8EE834"
+              ],
+              "scope": "GENERAL",
+              "statement": "The same work explains that conventional perimeter and static access-control assumptions are insufficient for evolving APT behavior, that existing risk assessment can miss dynamic attack progression, and that effective access control depends on continuously updated threat/risk context rather than the control category alone, which challenges a static or standalone access-control implementation model.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_MATURE_1",
+              "evidence_ids": [
+                "DE_DE17_429D17A4E11A72C3"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied zero-trust maturity record states that the path to zero trust is an incremental process that may take years to implement and that initial implementation of required capabilities and services will often lead to additional costs. This is supplementary deployment-maturity context and does not by itself establish a directional technical-feasibility conclusion.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_CLM_MATURE_2",
+              "evidence_ids": [
+                "DE_DE12_6509E7A6D8467E38"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied zero-trust architecture record identifies candidate-solution factors, including client installation, resource location, logging, application/service/protocol support, and subject-behavior changes, and describes using a pilot program before transitioning. This is supplementary deployment-maturity context and does not by itself establish deployment-specific compatibility.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "For a deployment-specific technical-feasibility conclusion, exact information about the existing network/identity/access-control architecture, available threat/risk-intelligence inputs, integration points, logging/monitoring capability, and operational workflows is required.",
+            "If the action is to be treated as sufficient for targeted-attack mitigation, the implementation must incorporate continuously updated threat/risk context rather than rely only on static perimeter assumptions."
+          ],
+          "constraints": [
+            "The supported technical pathway is adaptive, risk-context-aware access control rather than reliance on conventional perimeter or static access-control assumptions.",
+            "Effective access control for evolving APT behavior depends on continuously updated threat/risk context, so implementation feasibility is conditioned on maintaining that context.",
+            "Deployment-maturity guidance indicates that solution fit, logging, protocol/application support, subject-behavior change, and potentially incremental zero-trust implementation are relevant practical constraints, but these records do not by themselves establish a directional feasibility conclusion.",
+            "No deployment-specific product, version, architecture, or integration compatibility can be asserted from the supplied context."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__eu__cis_ig2__1311c0945b304412",
+          "evidence_gaps": [
+            "The supplied records do not provide the frozen enterprise's exact local architecture, product/version, identity/access-management infrastructure, or integration points.",
+            "The supplied records do not directly measure realized implementation, scalability, maintainability, operational effectiveness, or deployment timeline for access control within the 2025-2027 forecast window.",
+            "The supplied records do not establish whether continuously updated threat/risk context is already available or maintainable in the frozen deployment context."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The supplied action-specific decision evidence supports general technical feasibility for ACCESS CONTROL against targeted attacks by documenting a technical enablement pathway: an ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats. A separate action-specific decision record also supplies a technical limitation: conventional perimeter and static access-control assumptions are insufficient for evolving APT behavior, and effective access control depends on continuously updated threat/risk context. This limitation challenges static or standalone access-control design assumptions, but it does not by itself show that access control is technically infeasible; rather, it conditions the feasible implementation model on dynamic risk-aware access control. The deployment-maturity records further qualify the judgment by identifying solution-fit, logging, protocol/application support, behavior change, and potentially incremental zero-trust implementation considerations, but they are supplementary context and do not by themselves create a directional technical-feasibility conclusion. Because the frozen deployment context does not provide exact local architecture, product/version, identity/access infrastructure, integration points, or measured operational effectiveness, the defensible conclusion is a grounded GENERAL support with PARTIAL sufficiency, while deployment-specific compatibility remains unresolved.",
+          "stance": 1
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__us__cis_ig2__05d4670fed3b4130",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FA_CLAIM_1",
+              "evidence_ids": [
+                "DE_DE11_1ECA9795EEF89DFA",
+                "DE_DE12_CBF6FBB1313D37AF",
+                "DE_DE17_429D17A4E11A72C3"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied contract-eligible access-control guidance records document adoption burdens: ABAC development, deployment, and maintenance costs may exceed benefits; retrofitting applications is separate from procuring, setting up, and maintaining an authorization infrastructure; maintenance savings may be offset by the cost of managing and maintaining subject attributes, policies, and additional system support; governance and business-process changes represent a significant transition; service-provider switching can involve extreme cost or a long transition program; and the zero-trust path may take years, initially often leads to additional costs, and may require a change in cybersecurity philosophy and culture.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA_CLAIM_2",
+              "evidence_ids": [
+                "DE_DE17_429D17A4E11A72C3"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied CISA ZTMM record documents a potential long-term adoption benefit: after initial implementation costs, zero trust can enable a more prudent allocation of security investments.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA_CLAIM_3",
+              "evidence_ids": [
+                "DE_DE12_6509E7A6D8467E38"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST ZTA record describes candidate-solution selection, pilot deployment, and initial deployment and monitoring as implementation considerations for access-control-related zero-trust deployment.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "To make a DEPLOYMENT_SPECIFIC financial/adoption conclusion, the scenario must identify the implementation approach and supply sufficient budget, staffing, infrastructure, contract, and timeline information to test whether the documented burdens and benefit apply to this deployment.",
+            "To support feasibility under this lens, evidence must show an affordable adoption pathway or quantified benefit/resource savings sufficient to offset the documented costs, transition effort, and potential service-provider switching burden.",
+            "To support material infeasibility under this lens, evidence must show that the documented adoption burdens would exceed available resources or make adoption unmanageable under the frozen deployment conditions, not merely that costs or transition effort exist.",
+            "To connect the GENERAL direction to the frozen 2025-2027 window, evidence must link the documented initial costs and multi-year transition burden to that timing window rather than to a generic zero-trust path."
+          ],
+          "constraints": [
+            "The directional financial/adoption evidence is limited to the contract-eligible records DE_DE11_1ECA9795EEF89DFA, DE_DE12_6509E7A6D8467E38, DE_DE12_CBF6FBB1313D37AF, and DE_DE17_429D17A4E11A72C3; these records do not supply exact budget, price, ROI, TCO, staffing count, payback period, or procurement ceiling for the frozen action.",
+            "The documented adoption benefit is long-term and unquantified; it does not establish near-term affordability, ROI, or payback within the frozen 2025-2027 timing window.",
+            "The documented burdens are conditional and implementation-approach-specific, including ABAC and zero-trust/access-control deployment contexts; they do not establish that every possible access-control implementation is financially infeasible.",
+            "Deployment maturity is supplementary context in this lens; DE_DE12_6509E7A6D8467E38 does not by itself create a financial or adoption direction."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__us__cis_ig2__05d4670fed3b4130",
+          "evidence_gaps": [
+            "Exact budget, price, total cost of ownership, ROI, payback period, staffing count, and procurement timing are missing for the chosen access-control implementation.",
+            "The specific implementation architecture or approach is missing, including whether the action would use ABAC, zero-trust access control, Active Directory group-policy-based controls, or another access-control mechanism.",
+            "Current access-control deployment maturity, existing authorization infrastructure, and service-provider switching conditions are not supplied.",
+            "Quantified efficiency, resource-saving, or maintenance-cost offsetting pathways are missing.",
+            "Organization-specific opportunity-cost information is missing for deploying access control versus alternative safeguards under the frozen CIS IG2 reference profile.",
+            "No jurisdiction-specific financial/adoption evidence is supplied in this masked equivalence class, so a jurisdiction-specific financial feasibility conclusion is not possible."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied Stage-4 financial/adoption evidence grounds a GENERAL challenge to the frozen action's financial/adoption feasibility. The contract-eligible adoption_burden records document cost, transition, retrofit, governance, service-provider switching, and multi-year implementation burdens for access-control-related implementations. The contract-eligible adoption_benefit record documents only a conditional, long-term, unquantified benefit of more prudent security-investment allocation. Exact budget, TCO, ROI, staffing, procurement timing, and chosen implementation architecture are not supplied, so a deployment-specific financial conclusion is not supported; the surviving GENERAL direction is retained as materially challenged, with PARTIAL sufficiency.",
+          "stance": -1
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR_CL_1",
+              "evidence_ids": [
+                "DE_DE11_1E4AAE06CC3795D7"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied ABAC guidance evidences governance pathways for access-control implementation, including enterprise-governed policies, consistent attribute values, lifecycle-management responsibility, attribute documentation, and procedures for access failures.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CL_2",
+              "evidence_ids": [
+                "DE_DE12_E6F93E4AB8722379"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied zero-trust guidance describes an industry compliance system as an input to access-decision policy engines, supporting the institutional integration of compliance rules into access-control operation.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CL_3",
+              "evidence_ids": [
+                "DE_DE17_567DDA7CFBC62829"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied maturity-model guidance defines governance as policy, procedure, and process definition and enforcement, and links mature security posture to monitoring and assessment that detects unauthorized access or changes.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_CL_4",
+              "evidence_ids": [
+                "DE_DE13_055FC5E35FA61DD5"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied digital-identity guidance imposes session-management constraints on access-control implementation, including authenticated protected channels, session timeouts, prohibition of fallback to insecure transport, session-identifier verification, and secure minimally scoped browser cookies.",
+              "status": "CHALLENGES_FEASIBILITY"
+            }
+          ],
+          "conditional_requirements": [
+            "If a specific jurisdiction is later supplied, the assessment requires jurisdiction-specific regulatory_applicability evidence before making a DEPLOYMENT_SPECIFIC legal compatibility conclusion.",
+            "If the ABAC-style governance pathway in DE_DE11_1E4AAE06CC3795D7 is used, the enterprise must maintain consistent attribute definitions, lifecycle-management responsibility, attribute documentation, and access-failure procedures.",
+            "If session-based access controls are used, the implementation must satisfy the session/token and cookie constraints in DE_DE13_055FC5E35FA61DD5.",
+            "If compliance rules are to be incorporated into access decisions, the compliance-system input described in DE_DE12_E6F93E4AB8722379 must be maintained and aligned with enterprise policy rules."
+          ],
+          "constraints": [
+            "Access-control implementation must account for the session-management constraints identified in DE_DE13_055FC5E35FA61DD5, including protected authenticated sessions, timeout behavior, no insecure fallback, session-identifier verification, and secure minimally scoped cookies.",
+            "Governance and accountability require the policy, attribute-documentation, lifecycle-management, and access-failure processes described in DE_DE11_1E4AAE06CC3795D7 and the governance/monitoring expectations described in DE_DE17_567DDA7CFBC62829.",
+            "Compliance integration can depend on maintaining the compliance-system policy inputs described in DE_DE12_E6F93E4AB8722379."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__us__cis_ig2__05d4670fed3b4130",
+          "evidence_gaps": [
+            "No jurisdiction-specific regulatory_applicability evidence is supplied for the frozen scenario, so DEPLOYMENT_SPECIFIC legal/regional feasibility cannot be established.",
+            "No deployment-specific evidence is supplied that the frozen reference enterprise has the governance maturity, resource capacity, architecture, or organizational processes needed to implement the cited access-control governance or session-management requirements.",
+            "No supplied record addresses data sovereignty or cross-border constraints for access-control deployment in this frozen scenario.",
+            "No record supplied in this lens establishes whether the session-management requirements in DE_DE13_055FC5E35FA61DD5 are binding obligations in the frozen scenario or merely guidance."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "The supplied GENERAL institutional evidence supports the frozen ACCESS CONTROL action more than it challenges it under this lens. SUPPORTS_FEASIBILITY is grounded in governance_enablement records describing governance, compliance integration, and accountability pathways for access-control implementation: DE_DE11_1E4AAE06CC3795D7, DE_DE12_E6F93E4AB8722379, and DE_DE17_567DDA7CFBC62829. CHALLENGES_FEASIBILITY is grounded in compliance_constraint record DE_DE13_055FC5E35FA61DD5, which imposes concrete session-management constraints on access-control implementation. That constraint is relevant to compliance burden, but its existence does not establish material institutional infeasibility. Because the frozen scenario does not provide lens-specific jurisdictional evidence, no DEPLOYMENT_SPECIFIC legal or regional direction is drawn. Missing jurisdiction-specific regulatory applicability and deployment-specific implementation capacity are recorded as gaps rather than converted into a directional stance.",
+          "stance": 1
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_CLM_SUPPORT_1",
+              "evidence_ids": [
+                "AE06S_407DDF87C86BB41B"
+              ],
+              "scope": "GENERAL",
+              "statement": "An action-specific curated finding reports that an ATT&CK-informed zero-trust risk model for advanced persistent threats, integrated with centralized access-control decisions, reports improved ability to respond to sophisticated multi-stage threats, directly supporting adaptive access control as a technical defense mechanism for targeted attacks.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_CHALLENGE_1",
+              "evidence_ids": [
+                "AE06C_8C41709C0D8EE834"
+              ],
+              "scope": "GENERAL",
+              "statement": "The same work explains that conventional perimeter and static access-control assumptions are insufficient for evolving APT behavior, that existing risk assessment can miss dynamic attack progression, and that effective access control depends on continuously updated threat/risk context rather than the control category alone, which challenges a static or standalone access-control implementation model.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_MATURE_1",
+              "evidence_ids": [
+                "DE_DE17_429D17A4E11A72C3"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied zero-trust maturity record states that the path to zero trust is an incremental process that may take years to implement and that initial implementation of required capabilities and services will often lead to additional costs. This is supplementary deployment-maturity context and does not by itself establish a directional technical-feasibility conclusion.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_CLM_MATURE_2",
+              "evidence_ids": [
+                "DE_DE12_6509E7A6D8467E38"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied zero-trust architecture record identifies candidate-solution factors, including client installation, resource location, logging, application/service/protocol support, and subject-behavior changes, and describes using a pilot program before transitioning. This is supplementary deployment-maturity context and does not by itself establish deployment-specific compatibility.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "For a deployment-specific technical-feasibility conclusion, exact information about the existing network/identity/access-control architecture, available threat/risk-intelligence inputs, integration points, logging/monitoring capability, and operational workflows is required.",
+            "If the action is to be treated as sufficient for targeted-attack mitigation, the implementation must incorporate continuously updated threat/risk context rather than rely only on static perimeter assumptions."
+          ],
+          "constraints": [
+            "The supported technical pathway is adaptive, risk-context-aware access control rather than reliance on conventional perimeter or static access-control assumptions.",
+            "Effective access control for evolving APT behavior depends on continuously updated threat/risk context, so implementation feasibility is conditioned on maintaining that context.",
+            "Deployment-maturity guidance indicates that solution fit, logging, protocol/application support, subject-behavior change, and potentially incremental zero-trust implementation are relevant practical constraints, but these records do not by themselves establish a directional feasibility conclusion.",
+            "No deployment-specific product, version, architecture, or integration compatibility can be asserted from the supplied context."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__116a352e7495126d__us__cis_ig2__05d4670fed3b4130",
+          "evidence_gaps": [
+            "The supplied records do not provide the frozen enterprise's exact local architecture, product/version, identity/access-management infrastructure, or integration points.",
+            "The supplied records do not directly measure realized implementation, scalability, maintainability, operational effectiveness, or deployment timeline for access control within the 2025-2027 forecast window.",
+            "The supplied records do not establish whether continuously updated threat/risk context is already available or maintainable in the frozen deployment context."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The supplied action-specific decision evidence supports general technical feasibility for ACCESS CONTROL against targeted attacks by documenting a technical enablement pathway: an ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats. A separate action-specific decision record also supplies a technical limitation: conventional perimeter and static access-control assumptions are insufficient for evolving APT behavior, and effective access control depends on continuously updated threat/risk context. This limitation challenges static or standalone access-control design assumptions, but it does not by itself show that access control is technically infeasible; rather, it conditions the feasible implementation model on dynamic risk-aware access control. The deployment-maturity records further qualify the judgment by identifying solution-fit, logging, protocol/application support, behavior change, and potentially incremental zero-trust implementation considerations, but they are supplementary context and do not by themselves create a directional technical-feasibility conclusion. Because the frozen deployment context does not provide exact local architecture, product/version, identity/access infrastructure, integration points, or measured operational effectiveness, the defensible conclusion is a grounded GENERAL support with PARTIAL sufficiency, while deployment-specific compatibility remains unresolved.",
+          "stance": 1
+        }
+      }
+    ]
+  },
+  "generation_contract_version": "jurisdiction-neutral-equivalence-dedup-v1",
+  "input_fingerprint": "59042b85574e3bba9ea4f7181c2733386f4d255568ce6907a142b50d75bdfbe5",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "institutional_regional_system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "client_request_concurrency": 2,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 65536,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 2,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 44,
+    "server_total_context_size": 131072,
+    "stage4_context_runtime_profile_version": "stage4-context-runtime-128k-total-2slot-v3",
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "scenario_set_version": "stage3-context-scenarios-v1",
+  "schema_version": "stage4-artifact-v4",
+  "semantic_validation_version": "stage4-semantic-validation-v6",
+  "stage3_context_artifact_sha256": "d7100e739153d04fe76a834b93a5bde45993db75cf9f0550ed3d58011d04d7c2",
+  "stage3_context_input_fingerprint": "c45242a0d5ae99cc50b820216fba6b5b87b09e049105412d5d415f9e37272c7f",
+  "stage3_context_output_sha256": "d88e86e69d9eaeb010ea246d8fff2cd30d9c74bd85449902d6cc7f1f7184bdbd",
+  "stage4_output_sha256": "5388494f149acc0e5fc692f29a87020356cb25492adbf0f5ee74e1a119118432"
+}

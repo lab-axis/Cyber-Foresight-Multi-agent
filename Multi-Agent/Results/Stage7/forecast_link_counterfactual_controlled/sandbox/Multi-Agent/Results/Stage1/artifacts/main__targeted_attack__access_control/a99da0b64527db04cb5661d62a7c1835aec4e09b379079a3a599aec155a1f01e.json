@@ -1,0 +1,307 @@
+{
+  "artifact_sha256": "1d99da363376fa750b4ab5c84d7230741a280aacb9594ae32cda3d6bd69de1d2",
+  "assessments": {
+    "attack_feasibility": {
+      "case_id": "main__targeted_attack__access_control",
+      "claims": [
+        {
+          "claim_id": "AF-001",
+          "evidence_ids": [
+            "E_03_F0CD4F1DE74CC7AD"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "Mandiant M-Trends 2023 reports a small uptick in the occurrence of opportunistic compromise leveraged as a source of targeted attack activity, with the identified share of intrusions rising from 3% in 2020 to 4% in 2021 and 6% in 2022."
+        },
+        {
+          "claim_id": "AF-002",
+          "evidence_ids": [
+            "E_10_5C0B9AC35F2420B3",
+            "E_10_CEB460BC4092B2D3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA/Siemens advisories identify access-control mishandling in Mendix Workflow Commons and Mendix Email Connector that could allow authenticated remote attackers to read, delete, or manipulate sensitive information."
+        },
+        {
+          "claim_id": "AF-003",
+          "evidence_ids": [
+            "E_10_B4F773BEC65685CC"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "The Kastle Systems Access Control System Firmware advisory states that no known public exploitation specifically targeting the described vulnerabilities had been reported to CISA at the time."
+        },
+        {
+          "claim_id": "AF-004",
+          "evidence_ids": [
+            "E_33_F4FC25CE90264812"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The Crossref cutoff-constrained publication trend for ACCESS CONTROL reports annual publication counts of 1040 in 2021, 1005 in 2022, 1115 in 2023, and 1070 in 2024, with an OLS slope of 20 works per year."
+        },
+        {
+          "claim_id": "AF-005",
+          "evidence_ids": [
+            "E_02_BE48A23ABD77A19C"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The 2023 Verizon DBIR describes access control management as one of the most commonly relevant controls for the System Intrusion pattern, with Control 5 listed at 67% for Implementation Group 1."
+        },
+        {
+          "claim_id": "AF-006",
+          "evidence_ids": [
+            "E_03_B4E8A797813EC72F"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2023 reports that in 2022 organizations were notified of breaches by external entities in 63% of incidents, continuing a trend observed in 2021."
+        },
+        {
+          "claim_id": "AF-007",
+          "evidence_ids": [
+            "E_12_F6120325C44B5EA9"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "MITRE ATT&CK M1015 describes Active Directory configuration as a mitigation that can secure user accounts, control access, and reduce the risk of unauthorized access and lateral movement."
+        },
+        {
+          "claim_id": "AF-008",
+          "evidence_ids": [
+            "E_25_8F4D567857A97316"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53 Rev.5 defines access control as granting or denying requests for information and related processing services and entry to physical facilities, and defines advanced persistent threat as a sophisticated, resourceful adversary pursuing objectives over an extended period."
+        },
+        {
+          "claim_id": "AF-009",
+          "evidence_ids": [
+            "E_31_96F42990F3AEAC86"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "EU NIS2 states that cybersecurity risk-management measures should include appropriate access control policies for essential and important entities."
+        }
+      ],
+      "critic_type": "attack_feasibility",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 0,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "NO_DIRECTIONAL_EVIDENCE",
+        "rationale": "No supplied evidence directly reports a temporal increase or decrease in targeted-attack incident count or frequency for the Threat NoI state, and no supplied evidence directly reports the relative movement of the Threat NoI and PMT NoP forecast modalities. The strongest threat-side evidence reports a share-of-intrusions trend, which is operational context rather than a direct NoI trajectory observation. Therefore, the available evidence is insufficient to affirm or challenge the forecasted threat trajectory under the attack-stance rules.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "Does the Mandiant-reported uptick in opportunistic-compromise-sourced targeted activity translate into a genuine increase in total targeted-attack incident count or frequency, rather than a change in the share of intrusions attributed to that sourcing path?",
+        "What is the actual exploitation status of the Mendix and Kastle access-control vulnerabilities, given that the Stage 0 evidence set is missing the exploitation_signal slot?",
+        "Does the positive Crossref access-control publication trend reflect deployment, operational maturity, or control effectiveness, or only research and publication activity?",
+        "What comparative evidence is needed to verify the forecast threat-minus-PMT gap movement from negative in 2025 and 2026 to slightly positive in 2027?"
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "defense_robustness": {
+      "case_id": "main__targeted_attack__access_control",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "evidence_ids": [
+            "E_33_F4FC25CE90264812"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "Crossref records first deposited on or before 2024-12-31 show PMT_ACCESS_CONTROL security publication counts of 1040 in 2021, 1005 in 2022, 1115 in 2023, and 1070 in 2024, with an OLS slope of 20 works/year and a first-to-last delta of 30 works, a modest positive directional publication trend."
+        },
+        {
+          "claim_id": "C2",
+          "evidence_ids": [
+            "E_33_F4FC25CE90264812"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The Crossref publication trend is explicitly a publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        },
+        {
+          "claim_id": "C3",
+          "evidence_ids": [
+            "E_10_5C0B9AC35F2420B3",
+            "E_10_CEB460BC4092B2D3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CSAF advisories report that Mendix Workflow Commons and Mendix Email Connector modules improperly handle access control for some module entities, potentially allowing authenticated remote attackers to read, delete, or manipulate sensitive information, and recommend updates and network-access protections."
+        },
+        {
+          "claim_id": "C4",
+          "evidence_ids": [
+            "E_10_B4F773BEC65685CC"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "A CISA CSAF advisory reports that successful exploitation of Kastle Systems Access Control System Firmware vulnerabilities could allow an attacker to access sensitive information on the affected product, and that no known public exploitation specifically targeting these vulnerabilities had been reported to CISA at the time."
+        },
+        {
+          "claim_id": "C5",
+          "evidence_ids": [
+            "E_12_F6120325C44B5EA9"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "MITRE ATT&CK M1015 describes Active Directory configuration measures—domain accounts, interactive logon restrictions, RDP access limits, dedicated administrative accounts, and authentication silos—as a way to secure user accounts, control access, and reduce unauthorized access and lateral movement."
+        },
+        {
+          "claim_id": "C6",
+          "evidence_ids": [
+            "E_26_22D6C8ED91C81D37"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53A Rev.5 identifies assessment actions that may include testing access control, identification and authentication, audit mechanisms, security and privacy configuration settings, and physical access control devices, with basic, focused, and comprehensive testing depths."
+        },
+        {
+          "claim_id": "C7",
+          "evidence_ids": [
+            "E_31_96F42990F3AEAC86"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "EU NIS2 states that essential and important entities should, as part of cybersecurity risk-management measures, have in place appropriate access control policies."
+        },
+        {
+          "claim_id": "C8",
+          "evidence_ids": [
+            "E_03_B4E8A797813EC72F"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2023 reports that external entities notified organizations of breaches in 63% of 2022 targeted-attack incidents, continuing the trend observed in 2021 and bringing global detection rates closer to what defenders experienced in 2014."
+        },
+        {
+          "claim_id": "C9",
+          "evidence_ids": [
+            "E_03_F0CD4F1DE74CC7AD"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2023 reports a small uptick in opportunistic compromise being leveraged as a source of targeted attack activity, with compromised architecture observed in 6% of 2022 intrusions compared with 4% in 2021 and 3% in 2020."
+        },
+        {
+          "claim_id": "C10",
+          "evidence_ids": [
+            "E_02_BE48A23ABD77A19C"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The Verizon DBIR 2023 maps CIS Control 5, Access Control Management, to the System Intrusion pattern for Implementation Group 1, with Control 14 at 89%, Control 11 at 80%, and Control 5 at 67%."
+        },
+        {
+          "claim_id": "C11",
+          "evidence_ids": [
+            "E_29_4ED97777A686537A"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Static Crossref metadata records show the existence of Access Control Design and Access Control Panels and Networks publications in the Electronic Access Control venue from 2012 and 2017."
+        },
+        {
+          "claim_id": "C12",
+          "evidence_ids": [
+            "E_25_8F4D567857A97316"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53 Rev.5 defines access control as the process of granting or denying specific requests for obtaining and using information and related information processing services and to enter specific physical facilities."
+        },
+        {
+          "claim_id": "C13",
+          "evidence_ids": [
+            "E_20_4D81D3799E4826F0",
+            "E_20_7FC83A095DEEBF69",
+            "E_23_42E9198B388BAA83"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-161 references access control decisions in a control mapping and includes physical access control mechanisms in its OT definition, while CISA CPG references NIST SP 800-53, NIST SP 800-82, and OT including physical access control mechanisms."
+        }
+      ],
+      "critic_type": "defense_robustness",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 1,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "SUPPORT_DOMINATES",
+        "rationale": "The strongest PMT-specific directional evidence is the cutoff-constrained Crossref publication trend for access control, which shows a modest positive trend consistent with the forecast PMT NoP increasing. No supplied evidence directly challenges the NoP trajectory. Other evidence is operationally relevant but does not bear directly on the PMT NoP direction or the Threat-PMT gap direction.",
+        "supporting_claim_ids": [
+          "C1"
+        ]
+      },
+      "unresolved_questions": [
+        "The missing exploitation_signal evidence slot means the payload does not provide direct evidence of active exploitation of access-control weaknesses that would bear on mitigation urgency or effectiveness.",
+        "No supplied evidence directly establishes the direction or magnitude of the Threat_TARGETED_ATTACK NoI incident-count trajectory, so the threat side of the forecast and the gap direction are not independently evidenced.",
+        "The Crossref publication trend supports publication activity for access control but does not provide deployment, implementation, or operational effectiveness evidence for access control in 2025-2027.",
+        "The forecast gap direction threat_minus_pmt_increasing is not independently supported because there is no evidence about the future relative movement of threat NoI and PMT NoP beyond the forecast model fields.",
+        "The positive Crossref OLS slope is modest and the annual counts are not monotonic, so the strength of continued NoP increase beyond 2024 remains uncertain."
+      ],
+      "unsupported_specificity_detected": false
+    }
+  },
+  "case_id": "main__targeted_attack__access_control",
+  "constrained_output_schema_sha256": {
+    "attack_feasibility": "2343f3936280a14ae1146e476efe188ca5b47f03ec8c7d976bd17ae272bc7f9a",
+    "defense_robustness": "51a6060840afc3d30d00777f8029ce0f4f929a859de9426a580a7f8c0357017b"
+  },
+  "created_at": "2026-11-08T03:01:22.468934+00:00",
+  "forecast_data_sha256": "06676e6718b8f5bc1f16d9ce0f39cbc63a750b45d444146c8c48361a2d2f08d7",
+  "input_fingerprint": "a99da0b64527db04cb5661d62a7c1835aec4e09b379079a3a599aec155a1f01e",
+  "output_schema_sha256": "178543c2e5a6753427c6effb6c69990e298f93c3f0a1aa11722d0f6380408ab9",
+  "prompt_hashes": {
+    "attack_feasibility_system_prompt_sha256": "49ec516d07355d1939571df13a9809c3da768d37bb2a09e00b3250dbea8371ae",
+    "defense_robustness_system_prompt_sha256": "aa9daa39d565b348267acbc5e87919d2949842f681597d5cb50e82629c80805f",
+    "stage1_user_prompt_sha256": "9a3058bf0340fe8b3346e7410195f297d60731817473b481bbd8e7a5640d1b55"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 43,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage1-artifact-v4",
+  "semantic_validation_version": "stage1-semantic-validation-v4",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "8c4c754ecb9a4dc21d899f6904a24d4b4e1c3f0dbe5ec6ff112d496110b9b29b",
+  "stage1_output_sha256": "c765c68743456c872b49b4ffd264b38ae38f0b8f5a5b185a9ce89d104df03620"
+}

@@ -1,0 +1,339 @@
+{
+  "artifact_sha256": "6b91f2a57c0c2d2a1a7a279772bb6e8c3d7a701baccb5c35bc4c86d5d8fd401d",
+  "candidate_selection_rule": "case-forecast-pmt-only-v1",
+  "case_id": "main__insider_threat__cryptography",
+  "created_at": "2026-11-07T21:01:41.516130+00:00",
+  "decision_bundle": {
+    "candidate_selection_rule": "case-forecast-pmt-only-v1",
+    "case_id": "main__insider_threat__cryptography",
+    "decision_objects": [
+      {
+        "candidate_action": {
+          "action_id": "PMT_CRYPTOGRAPHY",
+          "action_name": "CRYPTOGRAPHY",
+          "source": "B_MTGNN_CASE_PMT",
+          "source_evidence_ids": [
+            "E_15_0A98378FC609EF7E",
+            "E_16_E7BB108A85B71262",
+            "E_19_4E69D255F61736DB",
+            "E_23_A793FAF5B393EFE3",
+            "E_25_746173685B235ED2",
+            "E_29_185B62FFF51926EC",
+            "E_29_3C1B7B4F9532A5F2",
+            "E_29_7C01F6CA0D982DFF",
+            "E_33_CDE0F421E4D797ED"
+          ]
+        },
+        "candidate_action_source": "B_MTGNN_CASE_PMT",
+        "candidate_selection_rule": "case-forecast-pmt-only-v1",
+        "case_id": "main__insider_threat__cryptography",
+        "contradictory_evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "decision_object_id": "decision__main__insider_threat__cryptography__pmt_cryptography__28c81dab1f454c21",
+        "deployment_context": {
+          "budget_context": null,
+          "infrastructure_context": null,
+          "organization_type": null,
+          "region": null
+        },
+        "evaluation_evidence_ids": [
+          "E_15_0A98378FC609EF7E",
+          "E_16_E7BB108A85B71262",
+          "E_19_4E69D255F61736DB",
+          "E_20_913B6F999A0F1458",
+          "E_22_C239828119FC69CD",
+          "E_23_A793FAF5B393EFE3",
+          "E_25_746173685B235ED2",
+          "E_26_92664A4339CF24C9",
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF",
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "forecast_interpretation": {
+          "gap_by_year": {
+            "2025": 0.9766173647127738,
+            "2026": 1.0645615816324334,
+            "2027": 0.9776019362010582
+          },
+          "gap_direction": "threat_minus_pmt_increasing",
+          "gap_direction_semantics": "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, not absolute-distance widening/narrowing",
+          "gap_semantics": "yearly_mean_zscore_node_state_gap",
+          "gap_slope_per_year": 0.0004922857441421735,
+          "pmt_state": {
+            "confidence_95_half_width_z_mean": 0.13487590619322182,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_PMT_CRYPTOGRAPHY_2025-01",
+              "YF_PMT_CRYPTOGRAPHY_2025-02",
+              "YF_PMT_CRYPTOGRAPHY_2025-03",
+              "YF_PMT_CRYPTOGRAPHY_2025-04",
+              "YF_PMT_CRYPTOGRAPHY_2025-05",
+              "YF_PMT_CRYPTOGRAPHY_2025-06",
+              "YF_PMT_CRYPTOGRAPHY_2025-07",
+              "YF_PMT_CRYPTOGRAPHY_2025-08",
+              "YF_PMT_CRYPTOGRAPHY_2025-09",
+              "YF_PMT_CRYPTOGRAPHY_2025-10",
+              "YF_PMT_CRYPTOGRAPHY_2025-11",
+              "YF_PMT_CRYPTOGRAPHY_2025-12",
+              "YF_PMT_CRYPTOGRAPHY_2026-01",
+              "YF_PMT_CRYPTOGRAPHY_2026-02",
+              "YF_PMT_CRYPTOGRAPHY_2026-03",
+              "YF_PMT_CRYPTOGRAPHY_2026-04",
+              "YF_PMT_CRYPTOGRAPHY_2026-05",
+              "YF_PMT_CRYPTOGRAPHY_2026-06",
+              "YF_PMT_CRYPTOGRAPHY_2026-07",
+              "YF_PMT_CRYPTOGRAPHY_2026-08",
+              "YF_PMT_CRYPTOGRAPHY_2026-09",
+              "YF_PMT_CRYPTOGRAPHY_2026-10",
+              "YF_PMT_CRYPTOGRAPHY_2026-11",
+              "YF_PMT_CRYPTOGRAPHY_2026-12",
+              "YF_PMT_CRYPTOGRAPHY_2027-01",
+              "YF_PMT_CRYPTOGRAPHY_2027-02",
+              "YF_PMT_CRYPTOGRAPHY_2027-03",
+              "YF_PMT_CRYPTOGRAPHY_2027-04",
+              "YF_PMT_CRYPTOGRAPHY_2027-05",
+              "YF_PMT_CRYPTOGRAPHY_2027-06",
+              "YF_PMT_CRYPTOGRAPHY_2027-07",
+              "YF_PMT_CRYPTOGRAPHY_2027-08",
+              "YF_PMT_CRYPTOGRAPHY_2027-09",
+              "YF_PMT_CRYPTOGRAPHY_2027-10",
+              "YF_PMT_CRYPTOGRAPHY_2027-11",
+              "YF_PMT_CRYPTOGRAPHY_2027-12"
+            ],
+            "forecast_mean_z": -0.1190687827003756,
+            "state_modality": "NoP"
+          },
+          "threat_state": {
+            "confidence_95_half_width_z_mean": 0.06369521705345892,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_THREAT_INSIDER_THREAT_2025-01",
+              "YF_THREAT_INSIDER_THREAT_2025-02",
+              "YF_THREAT_INSIDER_THREAT_2025-03",
+              "YF_THREAT_INSIDER_THREAT_2025-04",
+              "YF_THREAT_INSIDER_THREAT_2025-05",
+              "YF_THREAT_INSIDER_THREAT_2025-06",
+              "YF_THREAT_INSIDER_THREAT_2025-07",
+              "YF_THREAT_INSIDER_THREAT_2025-08",
+              "YF_THREAT_INSIDER_THREAT_2025-09",
+              "YF_THREAT_INSIDER_THREAT_2025-10",
+              "YF_THREAT_INSIDER_THREAT_2025-11",
+              "YF_THREAT_INSIDER_THREAT_2025-12",
+              "YF_THREAT_INSIDER_THREAT_2026-01",
+              "YF_THREAT_INSIDER_THREAT_2026-02",
+              "YF_THREAT_INSIDER_THREAT_2026-03",
+              "YF_THREAT_INSIDER_THREAT_2026-04",
+              "YF_THREAT_INSIDER_THREAT_2026-05",
+              "YF_THREAT_INSIDER_THREAT_2026-06",
+              "YF_THREAT_INSIDER_THREAT_2026-07",
+              "YF_THREAT_INSIDER_THREAT_2026-08",
+              "YF_THREAT_INSIDER_THREAT_2026-09",
+              "YF_THREAT_INSIDER_THREAT_2026-10",
+              "YF_THREAT_INSIDER_THREAT_2026-11",
+              "YF_THREAT_INSIDER_THREAT_2026-12",
+              "YF_THREAT_INSIDER_THREAT_2027-01",
+              "YF_THREAT_INSIDER_THREAT_2027-02",
+              "YF_THREAT_INSIDER_THREAT_2027-03",
+              "YF_THREAT_INSIDER_THREAT_2027-04",
+              "YF_THREAT_INSIDER_THREAT_2027-05",
+              "YF_THREAT_INSIDER_THREAT_2027-06",
+              "YF_THREAT_INSIDER_THREAT_2027-07",
+              "YF_THREAT_INSIDER_THREAT_2027-08",
+              "YF_THREAT_INSIDER_THREAT_2027-09",
+              "YF_THREAT_INSIDER_THREAT_2027-10",
+              "YF_THREAT_INSIDER_THREAT_2027-11",
+              "YF_THREAT_INSIDER_THREAT_2027-12"
+            ],
+            "forecast_mean_z": 0.8871915114817129,
+            "state_modality": "NoP"
+          }
+        },
+        "intended_goal": "Evaluate the feasibility and decision relevance of CRYPTOGRAPHY for the frozen Insider Threat forecast pair without changing the action set after observing downstream lens outputs.",
+        "known_constraints": [
+          "Candidate action is frozen before downstream lens evaluation under case-forecast-pmt-only-v1.",
+          "Stage 2 adjudications are reasoning provenance and are not promoted to external evidence.",
+          "Organization/deployment-specific feasibility must remain conditional where deployment context is unknown."
+        ],
+        "pmt_or_mitigation": "CRYPTOGRAPHY",
+        "pmt_or_mitigation_id": "PMT_CRYPTOGRAPHY",
+        "predictive_uncertainty": {
+          "legacy_variance_warning": "legacy inverse scaling uses scale rather than scale^2; retained as raw provenance only",
+          "pmt_confidence_95_half_width_z_mean": 0.13487590619322182,
+          "status": "PAPER_124_NODE_Y",
+          "threat_confidence_95_half_width_z_mean": 0.06369521705345892
+        },
+        "stage2_critique_summary": {
+          "attack_post_stance": 0,
+          "attack_post_unresolved_questions": [
+            "Does the Crossref cryptography publication trend in E_33 represent the same PMT NoP measurement used by the forecast, or a different publication-activity axis? The mediator noted they are different measurement axes (Crossref publication-activity vs. Scopus-derived NoP model input), but even if aligned, this evidence is PMT-side and cannot ground the Attack stance.",
+            "How should the masked threat NoP and NoI historical fields affect the credibility of the threat-state NoP increasing forecast (forecast_mean_z=0.887), given that the threat state is the modality for which the Attack critic must find directional support or challenge?",
+            "Is there any evidence in the frozen payload that the threat state rises faster than the PMT state, as required by the forecasted increasing Threat-PMT gap direction (2025 gap 0.977, 2026 gap 1.065, 2027 gap 0.978)?",
+            "What exploitation-signal evidence is available to distinguish realized insider exploitation of cryptography from general insider-threat program or control guidance? The exploitation_signal required evidence slot is missing from the retrieval summary.",
+            "What pre-cutoff evidence, if any, directly reports a temporal change in insider-threat NoP or incident frequency for this specific case? The threat NoP and NoI historical fields are both masked, leaving no pre-cutoff baseline for the threat-side modality I am responsible for assessing."
+          ],
+          "defense_post_stance": 1,
+          "defense_post_unresolved_questions": [
+            "The Stage 0 historical PMT NoP recent_direction is 'decreasing' (Scopus-derived, latest_value_z=0.296), while E_33's Crossref publication-activity axis shows increasing counts (2021–2024). E_33 is explicitly independent of the Scopus-derived NoP model input. The frozen evidence base does not resolve whether the forecasted PMT NoP increasing direction is consistent with the Scopus-derived NoP input or whether the two measurement axes diverge, and no supplied evidence directly reconciles them.",
+            "The exploitation_signal slot is missing from the retrieval summary. No supplied evidence distinguishes realized insider exploitation of cryptography controls from general control-applicability or program-structure guidance, leaving the operational deployment and effectiveness of the PMT_CRYPTOGRAPHY node unmeasured in the frozen evidence base.",
+            "The threat-side NoP historical field is masked and no surfaced evidence provides a temporal threat-side NoP trajectory or a direct Threat-minus-PMT gap-direction measurement. The forecasted 'threat_minus_pmt_increasing' gap direction therefore lacks direct evidentiary support in the frozen evidence base, regardless of the PMT-side publication-activity direction."
+          ],
+          "final_mediator_adjudications": [
+            {
+              "adjudication_id": "ADJ_R2_D02_ATK005",
+              "attack_claim_ids": [
+                "ATK_005"
+              ],
+              "defense_claim_ids": [
+                "D-02"
+              ],
+              "evidence_ids": [
+                "E_25_746173685B235ED2"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both sides now converge on E_25 (NIST SP 800-53 Rev.5 SC-13). The defense explicitly acknowledges in its Round 2 response that D-02's SUPPORTS_FORECAST label should be scoped to NEUTRAL_CONTEXT, consistent with the Round 1 ADJ_R1_D02 instruction. E_25's allowed claim types (security_control, privacy_control) bound the evidence to control-applicability descriptions (organization-defined cryptography types, information separation for authorized individuals without formal access approvals, FIPS-validated/NSA-approved standards). This establishes that cryptography is a recognized control mechanism relevant to the PMT_CRYPTOGRAPHY node, but does not measure or predict PMT NoP trajectory direction or Threat-PMT gap movement. ATK_005's NEUTRAL_CONTEXT labeling is confirmed as the correct evidentiary scope. No remaining dispute.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R2_D05_ATK002",
+              "attack_claim_ids": [
+                "ATK_002"
+              ],
+              "defense_claim_ids": [
+                "D-05"
+              ],
+              "evidence_ids": [
+                "E_16_E7BB108A85B71262"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both sides now converge on E_16 (NIST AI 100-4). The defense explicitly acknowledges in its Round 2 response that D-05's CHALLENGES_FORECAST label should be scoped to NEUTRAL_CONTEXT, consistent with the Round 1 ADJ_R1_D05 instruction. E_16's hash-recomputation limitation (a cryptographic hash or checksum appended as metadata can be recomputed and overwritten if content or metadata is modified) and its presentation of digital signatures as a more robust provenance approach are technique-specific provenance-approach details. E_16's allowed claim types (synthetic_content_risk, deepfake_detection_class, provenance_approach) and prohibited claim types (prevalence_magnitude, deployment_effectiveness) confirm that this evidence does not establish that PMT cryptography publication activity is decreasing, that cryptography controls are ineffective in deployment, or that the Threat-PMT gap is narrowing. ATK_002's NEUTRAL_CONTEXT labeling is confirmed. No remaining dispute.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R2_D06_ATK004",
+              "attack_claim_ids": [
+                "ATK_004"
+              ],
+              "defense_claim_ids": [
+                "D-06"
+              ],
+              "evidence_ids": [
+                "E_22_C239828119FC69CD"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both sides now converge on E_22 (CISA Insider Threat Mitigation Guide). The defense explicitly acknowledges in its Round 2 response that D-06's CHALLENGES_FORECAST label should be scoped to NEUTRAL_CONTEXT, consistent with the Round 1 ADJ_R1_D06 instruction. E_22's description of insider-threat program breadth (training and awareness, policy and procedure, management practices, deterrence, detection, prevention, assessment, management) is program-structure context. E_22's allowed claim types (insider_threat_control, insider_detection_mitigation) and prohibited claim types (exact_effectiveness, product_roi) confirm that this evidence does not provide directional evidence about threat NoI, NoP, threat trajectory, or the relative position of the threat state versus the PMT state. ATK_004's NEUTRAL_CONTEXT labeling is confirmed. No remaining dispute.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R2_ATK003_D10",
+              "attack_claim_ids": [
+                "ATK_003"
+              ],
+              "defense_claim_ids": [
+                "D-10"
+              ],
+              "evidence_ids": [
+                "E_20_913B6F999A0F1458"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "The defense's Round 2 REVISE of ATK_003 is well-founded. E_20 (NIST SP 800-161r1 C-SCRM, page 104) contains a specific supply chain governance recommendation: when automated component-inventory maintenance is performed with a predefined frequency, predefined frequencies for data collection should be less predictable in order to reduce the risk of an insider threat bypassing security mechanisms. E_20's allowed claim types are supply_chain_risk_control and supply_chain_governance; its prohibited claim types are exact_effectiveness and product_roi. The mention of insider threat is confined to one specific risk factor within a supply chain control context, not a general statement about insider-threat trajectory, frequency, or the relative movement between the threat state and the PMT state. ATK_003's SUPPORTS_FORECAST (OPERATIONAL_INTERPRETATION) label overreaches E_20's claim-type contract by implying the supply chain control recommendation provides directional support for the forecasted PMT NoP increasing trajectory or Threat-PMT gap direction. D-10's NEUTRAL_CONTEXT (CONTEXT) labeling is the correct evidentiary scope. The defense's REVISE is accepted.",
+              "required_revision": "Relabel ATK_003 from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. E_20 (NIST SP 800-161r1 C-SCRM) is a supply chain governance recommendation about automated component-inventory data collection frequencies. Its allowed claim types (supply_chain_risk_control, supply_chain_governance) and the specific context of the insider threat mention (predictable collection schedules as a risk factor in one supply chain control) do not extend to PMT NoP trajectory direction or Threat-PMT gap movement. Scope the claim as supply chain control context, not forecast support."
+            },
+            {
+              "adjudication_id": "ADJ_R2_D01_ATK001",
+              "attack_claim_ids": [
+                "ATK_001"
+              ],
+              "defense_claim_ids": [
+                "D-01"
+              ],
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Confirming Round 1 adjudication ADJ_R1_D01. Both sides agree on the E_33 Crossref publication trend data (annual counts 210 in 2021, 254 in 2022, 272 in 2023, 330 in 2024; OLS slope 37.80 works/year; total_results 1066) and its scope as a cutoff-constrained publication-activity validation axis. E_33 explicitly states it is independent of the Scopus-derived NoP model input and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. D-01's SUPPORTS_FORECAST relation is valid at the publication-activity direction level, which is the scope both critics acknowledge. The Stage 0 PMT NoP recent_direction (decreasing, latest_value_z=0.296) represents the Scopus-derived NoP construct, a different measurement axis from the Crossref publication-activity axis. No remaining dispute.",
+              "required_revision": null
+            }
+          ],
+          "matched_resolved_claim_ids": [],
+          "matched_unresolved_claim_ids": [],
+          "required_revisions": [
+            {
+              "adjudication_id": "ADJ_R2_ATK003_D10",
+              "attack_claim_ids": [
+                "ATK_003"
+              ],
+              "defense_claim_ids": [
+                "D-10"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Relabel ATK_003 from SUPPORTS_FORECAST to NEUTRAL_CONTEXT. E_20 (NIST SP 800-161r1 C-SCRM) is a supply chain governance recommendation about automated component-inventory data collection frequencies. Its allowed claim types (supply_chain_risk_control, supply_chain_governance) and the specific context of the insider threat mention (predictable collection schedules as a risk factor in one supply chain control) do not extend to PMT NoP trajectory direction or Threat-PMT gap movement. Scope the claim as supply chain control context, not forecast support."
+            }
+          ]
+        },
+        "supporting_evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "threat": "Insider Threat",
+        "threat_id": "THREAT_INSIDER_THREAT",
+        "timing_window": {
+          "end_year": 2027,
+          "start_year": 2025
+        },
+        "unknown_context_fields": [
+          "region",
+          "organization_type",
+          "infrastructure_context",
+          "budget_context"
+        ],
+        "unresolved_evidence_gaps": []
+      }
+    ],
+    "eligible_action_set": [
+      {
+        "action_id": "PMT_CRYPTOGRAPHY",
+        "action_name": "CRYPTOGRAPHY",
+        "source": "B_MTGNN_CASE_PMT",
+        "source_evidence_ids": [
+          "E_15_0A98378FC609EF7E",
+          "E_16_E7BB108A85B71262",
+          "E_19_4E69D255F61736DB",
+          "E_23_A793FAF5B393EFE3",
+          "E_25_746173685B235ED2",
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF",
+          "E_33_CDE0F421E4D797ED"
+        ]
+      }
+    ],
+    "excluded_actions_and_reason": [
+      {
+        "action_id": "PMT_ENCRYPTION",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      },
+      {
+        "action_id": "PMT_HTTPS",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      }
+    ]
+  },
+  "decision_bundle_schema_sha256": "bcd029d15adbfe35ae50ee75fc2ac8731f73baa4897e7265fac3b44b692c9003",
+  "input_fingerprint": "706e8e0af13e04a3097c3474b5af8e67d79bf68d3a2cf2ba69aa767802b981d8",
+  "schema_version": "stage3-artifact-v2",
+  "semantic_validation_version": "stage3-semantic-validation-v2",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "39cbad1783873b171b466b5b406d4b106b9cdf1afe0ae07fd512bb74c425a355",
+  "stage2_artifact_sha256": "cb255447f024065e9f2e0d019dc6fbeb1e6ca9df5500424bae4c7353f9373e05",
+  "stage2_output_sha256": "a1e7fc3cdef928a124e9c0c4f5fda3fddb15d02c291a92fd4080d36b70256706",
+  "stage3_context": {
+    "budget_context": null,
+    "infrastructure_context": null,
+    "organization_type": null,
+    "pmt": "CRYPTOGRAPHY",
+    "region": null,
+    "threat": "Insider Threat"
+  },
+  "stage3_output_sha256": "71d2cb389af50c11a98f05b5bac28be50fd9bad3debf8b6bf07d54d4d8b92e27"
+}
