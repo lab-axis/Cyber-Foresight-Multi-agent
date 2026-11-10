@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      2,
+      3,
+      10,
+      11
+    ],
+    "input_sha256": "9ea996d7e7414e3bba19993cf64509b4808711631f27e01a9302f72da14d4f15",
+    "pair": {
+      "input_sha256": "d1537af7398be80d8dae161acc3b57857d51d321a69447abda2093b6299b891b",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__targeted_attack__access_control__defense_robustness",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 2,
+        "modality_error": false,
+        "rationale": "Evidence E_12_F6120325C44B5EA9 (MITRE ATT&CK M1015) explicitly lists all the mentioned measures: domain account configuration ('Use domain accounts instead of local accounts'), interactive logon restrictions ('restrict interactive logons'), RDP access limits ('Limit Remote Desktop Protocol (RDP) access'), dedicated administrative accounts ('Create domain-wide administrative accounts'), and authentication silos ('the'",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 3,
+        "modality_error": false,
+        "rationale": "ICSA-22-349-13 (E_10_5C0B9AC35F2420B3) describes Mendix Workflow Commons improperly handling access control, allowing authenticated remote attackers to read or delete sensitive information. ICSA-22-349-17 (E_10_CEB460BC4092B2D3) describes Mendix Email Connector improperly handling access control, allowing authenticated remote attackers to read and manipulate sensitive information. Both records state Mendix recommends",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 10,
+        "modality_error": false,
+        "rationale": "Evidence E_03_F0CD4F1DE74CC7AD from Mandiant M-Trends 2023 explicitly reports a 'small uptick' in opportunistic compromise used as a source of targeted attack activity, citing 6% of intrusions in 2022, 4% in 2021, and 3% in 2020.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 11,
+        "modality_error": false,
+        "rationale": "Evidence E_03_B4E8A797813EC72F from Mandiant M-Trends 2023 states that 'Organizations were notified of breaches by external entities in 63% of incidents' in 2022 and that this 'continues the trend observed in 2021'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "19c53d97c23cdffbdbeed0c69e061fb58189da091997109010e138f72c838529"
+}

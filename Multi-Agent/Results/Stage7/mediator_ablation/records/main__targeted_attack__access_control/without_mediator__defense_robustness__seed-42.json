@@ -1,0 +1,153 @@
+{
+  "assessment": {
+    "case_id": "main__targeted_attack__access_control",
+    "claims": [
+      {
+        "claim_id": "C_PMT_TREND_POSITIVE",
+        "evidence_ids": [
+          "E_33_F4FC25CE90264812"
+        ],
+        "forecast_component": "PMT_TRAJECTORY",
+        "forecast_relation": "SUPPORTS_FORECAST",
+        "statement": "The cutoff-constrained Crossref trend for PMT_ACCESS_CONTROL reports annual publication counts of 1040 in 2021, 1005 in 2022, 1115 in 2023, and 1070 in 2024, with an OLS slope of 20 works/year and a first-to-last delta of 30."
+      },
+      {
+        "claim_id": "C_PMT_TREND_NONMONOTONIC",
+        "evidence_ids": [
+          "E_33_F4FC25CE90264812"
+        ],
+        "forecast_component": "PMT_TRAJECTORY",
+        "forecast_relation": "CHALLENGES_FORECAST",
+        "statement": "The same Crossref trend shows the 2024 count of 1070 is lower than the 2023 count of 1115, so the reported positive OLS slope does not imply a monotonic year-over-year increase."
+      },
+      {
+        "claim_id": "C_AC_TTP_MITIGATION",
+        "evidence_ids": [
+          "E_12_F6120325C44B5EA9"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "MITRE ATT&CK M1015 describes Active Directory configuration measures, including domain account configuration, interactive logon restrictions, RDP access limits, dedicated administrative accounts, and authentication silos, as ways to control access and reduce lateral movement."
+      },
+      {
+        "claim_id": "C_MENDIX_ACCESS_CONTROL_VULN",
+        "evidence_ids": [
+          "E_10_5C0B9AC35F2420B3",
+          "E_10_CEB460BC4092B2D3"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "CISA advisories ICSA-22-349-13 and ICSA-22-349-17 describe Mendix modules that improperly handle access control for some module entities, allowing authenticated remote attackers to read, delete, or manipulate sensitive information, and state that Mendix recommends updating to the latest version."
+      },
+      {
+        "claim_id": "C_KASTLE_ACCESS_CONTROL_VULN",
+        "evidence_ids": [
+          "E_10_B4F773BEC65685CC"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "CISA advisory ICSA-24-263-05 states that successful exploitation of Kastle Systems Access Control System Firmware vulnerabilities could allow an attacker to access sensitive information and that no known public exploitation specifically targeting these vulnerabilities had been reported to CISA at that time."
+      },
+      {
+        "claim_id": "C_DBIR_ACCESS_CONTROL_CONTEXT",
+        "evidence_ids": [
+          "E_02_BE48A23ABD77A19C"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "The 2023 DBIR identifies Access Control Management as CIS Control 5 and, in an IG1 threat-centric example for the System Intrusion pattern, lists Control 5 at 67% after Controls 14 and 11."
+      },
+      {
+        "claim_id": "C_NIS2_ACCESS_CONTROL_POLICY",
+        "evidence_ids": [
+          "E_31_96F42990F3AEAC86"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "EU NIS2 recital 79 states that essential and important entities should, as part of cybersecurity risk-management measures, address human resources security and have in place appropriate access control policies."
+      },
+      {
+        "claim_id": "C_NIST_53A_ACCESS_CONTROL_TEST",
+        "evidence_ids": [
+          "E_26_22D6C8ED91C81D37"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "NIST SP 800-53A Rev. 5 describes assessment test actions that may include testing access control, identification and authentication, and audit mechanisms."
+      }
+    ],
+    "critic_type": "defense_robustness",
+    "evidence_sufficiency": "PARTIAL",
+    "stance": 1,
+    "stance_basis": {
+      "challenging_claim_ids": [
+        "C_PMT_TREND_NONMONOTONIC"
+      ],
+      "decision": "SUPPORT_DOMINATES",
+      "rationale": "The decisive defense-side directional datum is the cutoff-constrained Crossref publication-activity trend for PMT_ACCESS_CONTROL, which directly supports a positive NoP trajectory through its reported positive OLS slope and positive first-to-last delta. The 2024 count being below the 2023 count limits the strength of that support and shows the trend is non-monotonic, but it does not outweigh the reported positive slope. The remaining records provide operational or contextual access-control material, but they do not establish deployment maturity, realized mitigation effectiveness, or threat NoI movement, and they cannot serve as decisive defense-side basis for the PMT trajectory.",
+      "supporting_claim_ids": [
+        "C_PMT_TREND_POSITIVE"
+      ]
+    },
+    "unresolved_questions": [
+      "No supplied evidence directly reports 2025-2027 deployment, adoption, or operational effectiveness of access-control controls, so the publication-trend evidence cannot establish deployment maturity or realized mitigation effectiveness.",
+      "The supplied evidence base is missing the exploitation_signal slot; the CISA advisories only describe potential exploitation and one point-in-time absence-of-exploitation statement, not a broader exploitation trend.",
+      "The aggregate forecast fields do not expose monthly PMT NoP values, so the consistency between the latest historical NoP z-score of 1.365 and the PMT forecast mean z of 0.559 cannot be independently verified from the payload.",
+      "No supplied evidence directly reports the threat NoI direction in incident count/frequency terms; Mandiant percentages and DBIR control-mapping do not establish the NoI modality, so the Threat-PMT gap direction cannot be independently assessed.",
+      "The positive OLS slope is not monotonic at the annual level, leaving open whether the trend should be interpreted as gradual long-run increase or as a 2021-2023 rise partially offset by the 2024 decline."
+    ],
+    "unsupported_specificity_detected": false
+  },
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "mediator": false,
+    "prompt_sha256": "4b21f84110155e22fb88b70c3ebbce7324cc3b88f9f5cf2c2c3eb8e7701f0c17",
+    "role": "defense_robustness",
+    "runtime": {
+      "batch_size": 2048,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 131072,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 1,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512
+    },
+    "schema_sha256": "25590700f8d2f2ada9bfc4dfcc1a181358b915ced7d1e6118e9b64d964e20edc",
+    "seed": 42,
+    "source_hashes": {
+      "evidence_pack": "8c4c754ecb9a4dc21d899f6904a24d4b4e1c3f0dbe5ec6ff112d496110b9b29b",
+      "round1_turns": "aa1f3b84f37bb13aec972906a494823f7e26d6813405e02210fc6f7804e19a21",
+      "stage1": "304807a460c79b97a7c155ac0f3a11e974386cf0363fc072fef87238f7525724",
+      "stage2": "e32d514b41e64ac386fed97a222cbc7fd92d7328e840ea7c0bd6ce0bf758352d"
+    },
+    "version": "mediator-ablation-frozen-round1-v1"
+  },
+  "sha256": "6b4f03bda1b2f1194fb805603d48e15957c2cec1da76ee5b6dda84fcd2d8527a"
+}

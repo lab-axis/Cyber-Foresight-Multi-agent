@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      2,
+      3,
+      10,
+      11
+    ],
+    "input_sha256": "96cdd5d452852683ee56dad05450b47cbe42a7990b351bca7fbe6d0ac8994209",
+    "pair": {
+      "input_sha256": "e18b33d48bf8a8b84a74fe3a1fd69b304f3391c32f6be2a4d70eebe5c638253e",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__insider_threat__cryptography__defense_robustness",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 2,
+        "modality_error": false,
+        "rationale": "E_16_E7BB108A85B71262 from NIST AI 100-4 explicitly defines a cryptographic or digital signature as providing \"assurance that the claimed signatory signed, and the information was not modified after signature generation\" and identifies digital signatures as a \"more robust solution\" compared to cryptographic hashes or checksums, which are described as easily recomputable.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 3,
+        "modality_error": false,
+        "rationale": "E_20_913B6F999A0F1458 from NIST SP 800-161 Rev.1 C-SCRM guidance recommends automated maintenance of component inventory and specifies that \"predefined frequencies for data collection should be less predictable in order to reduce the risk of an insider threat bypassing security mechanisms.\"",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 10,
+        "modality_error": false,
+        "rationale": "E_16_E7BB108A85B71262 from NIST AI 100-4 explicitly defines a cryptographic or digital signature as providing \"assurance that the claimed signatory signed, and the information was not modified after signature generation\" and identifies digital signatures as a \"more robust solution\" compared to cryptographic hashes or checksums, which are described as easily recomputable.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 11,
+        "modality_error": false,
+        "rationale": "E_20_913B6F999A0F1458 from NIST SP 800-161 Rev.1 C-SCRM guidance recommends automated maintenance of component inventory and specifies that \"predefined frequencies for data collection should be less predictable in order to reduce the risk of an insider threat bypassing security mechanisms.\"",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "9f5e75874d803c1ee72d0304ff2c6604459f9288dd0c1c7a8fe09c1902ccb5f1"
+}

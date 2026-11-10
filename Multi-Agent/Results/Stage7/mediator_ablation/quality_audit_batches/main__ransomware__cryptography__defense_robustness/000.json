@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      0,
+      1,
+      8,
+      9
+    ],
+    "input_sha256": "2445c79f618df2f4f146dcba90b7fb09cc0c1d1ba85427a990fcd2103a8460ef",
+    "pair": {
+      "input_sha256": "4e0d14ee5b016b539ea6092986e40aee707b87e2feb2acb8419cf4ff2a7b6c23",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__ransomware__cryptography__defense_robustness",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The stats for PMT_CRYPTOGRAPHY (counts 210, 254, 272, 330; slope 37.80; delta 120; total 1066) are verbatim from E_33. The source contract and content in E_33 explicitly permit 'directional_publication_trend' claims and exclude deployment maturity, operational effectiveness, and causal mitigation effectiveness. The cross-review confirms both critics agreed (attack_feasibility on C01 and defense_robustness on C5) that",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 1,
+        "modality_error": false,
+        "rationale": "E_26 explicitly lists SC-12(06) for physical control of keys with external providers and SC-13 for defining/implementing cryptographic uses and types. The inference that it is an established, assessable security control area in the U.S. federal framework is a valid logical boundary inference from a NIST SP 800-53A assessment guide. The cross-review confirms agreement (attack_feasibility on C02 and defense_robustnessな",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 8,
+        "modality_error": false,
+        "rationale": "The stats are verbatim from E_33. The consistency with the forecast is supported by the forecast summary, which lists the pmt_state direction as 'increasing' with 'NoP' modality. The contract and scope limitations are explicitly stated in E_33.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 9,
+        "modality_error": false,
+        "rationale": "E_26 provides the assessment objectives for SC-12(06) (physical control of keys with external service providers) and SC-13 (identification and implementation of cryptographic uses and types). The interpretation that it is an established, assessable control area is supported by the nature of the NIST document.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "96217d123395bf3cf0328b060c5fcc1e7607eff670af8650d6261a64f49ba05e"
+}

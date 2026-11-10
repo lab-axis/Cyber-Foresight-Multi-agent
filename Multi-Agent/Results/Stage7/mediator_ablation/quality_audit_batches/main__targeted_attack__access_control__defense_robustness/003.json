@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      6,
+      7,
+      14,
+      15
+    ],
+    "input_sha256": "ed739155ff9ba91e21663b5c042416c1cabf38ac2ada49256c6d47518f453751",
+    "pair": {
+      "input_sha256": "d1537af7398be80d8dae161acc3b57857d51d321a69447abda2093b6299b891b",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__targeted_attack__access_control__defense_robustness",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 6,
+        "modality_error": false,
+        "rationale": "The cited record E_31_96F42990F3AEAC86 (EU NIS2) explicitly states in recital (79) that 'essential and important entities should, as part of their cybersecurity risk-management measures, also address human resources security and have in place appropriate access control policies.'",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 7,
+        "modality_error": false,
+        "rationale": "The cited record E_26_22D6C8ED91C81D37 (NIST SP 800-53A Rev. 5) specifies in its supplemental guidance that 'Typical assessor actions may include testing access control, identification and authentication, and audit mechanisms'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 14,
+        "modality_error": false,
+        "rationale": "The cited CISA advisory E_10_B4F773BEC65685CC (ICSA-24-263-05) contains both the statement that successful exploitation 'could allow an attacker to access sensitive information on the affected product' and the statement that 'No known public exploitation specifically targeting these vulnerabilities have been reported to CISA at this time.'",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 15,
+        "modality_error": false,
+        "rationale": "The cited 2023 DBIR record E_02_BE48A23ABD77A19C identifies '5 Access Control Management' and explicitly states that for the System Intrusion pattern in IG1, the results show 'Controls 14 (89%), 11 (80%) and then 5 (67%)'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "1ef98a73066d04b1d293568f46eb4ef88fbb7b5c192738883063c3d9f281e1ef"
+}

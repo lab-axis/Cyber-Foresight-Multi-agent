@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      4,
+      5,
+      16,
+      17
+    ],
+    "input_sha256": "9bdb094265e85423d5eb5d544f0a63b4cf41aa605bd39d1f421148d6475957fd",
+    "pair": {
+      "input_sha256": "ce1b2aaceef2b76cfdfe37304da3234c32d956498e363c32468e680a04179ff3",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__brute_force__ids_ips__defense_robustness",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 4,
+        "modality_error": false,
+        "rationale": "The cited CISA CPG record (E_23_B21FAA9377991F05) explicitly describes alerting security teams after consecutive unsuccessful login attempts and describes system-enforced policies that prevent future logins for suspicious accounts on IT assets. It also explicitly maps these to the four brute-force subtechniques: T1110.001, T1110.002, T1110.003, and T1110.004.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 5,
+        "modality_error": false,
+        "rationale": "The cited CISA CPG record (E_23_312B9513BCEE9B9D) recommends MFA for all IT accounts and for accounts and systems in OT environments that can be accessed remotely. It ranks 'Hardware-based, phishing-resistant MFA' first (highest strength) in its sorted list. It further maps the control to 'Brute Force (T1110)', 'Valid Accounts (T1078, ICS T0859)', and 'External Remote Services (ICS T0822)'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 16,
+        "modality_error": false,
+        "rationale": "The cited CISA CPG record (E_23_B21FAA9377991F05) explicitly describes alerting security teams after consecutive unsuccessful login attempts and describes system-enforced policies that prevent future logins for suspicious accounts on IT assets. It also explicitly maps these to the four brute-force subtechniques: T1110.001, T1110.002, T1110.003, and T1110.004.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 17,
+        "modality_error": false,
+        "rationale": "The cited CISA CPG record (E_23_312B9513BCEE9B9D) recommends MFA for all IT accounts and for accounts and systems in OT environments that can be accessed remotely. It ranks 'Hardware-based, phishing-resistant MFA' first (highest strength) in its sorted list. It further maps the control to 'Brute Force (T1110)', 'Valid Accounts (T1078, ICS T0859)', and 'External Remote Services (ICS T0822)'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "18e8f71ae2ffc74d9475ed2ba4446de631543d5b431c7a62cff49c05aba78540"
+}

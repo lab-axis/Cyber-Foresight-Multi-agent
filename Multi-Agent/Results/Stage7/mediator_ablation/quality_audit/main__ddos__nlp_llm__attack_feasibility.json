@@ -1,0 +1,121 @@
+{
+  "identity": {
+    "input_sha256": "c090c186d6b2846f2724035e153e0168812bd86f7d11e591d4bd54a2a821fc18",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+    "review_id": "main__ddos__nlp_llm__attack_feasibility",
+    "sampling": {
+      "min_p": 0.0,
+      "seed": 42,
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+    "version": "mediator-blind-claim-audit-gemma4-v3"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The record E_02_066AFE8300EDCEBB explicitly reports the median bandwidth increase from 1.4 Gbps to 2.2 Gbps and the 97.5th percentile increase from 99 Gbps to 124 Gbps. It characterizes this as a 'trend that is hard to break' due to accessible bandwidth and CPU processing, and mentions that a contracted service clearing that bar can likely absorb the impact. The statement correctly qualifies these as measures of size",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 1,
+        "modality_error": false,
+        "rationale": "The record E_02_066AFE8300EDCEBB reports the growth of distributed DNS Water Torture attacks against shared DNS infrastructure and describes them as resource exhaustion attacks involving querying random name prefixes to cause cache misses and forwarding to authoritative servers. The statement correctly qualifies this as a vector observation rather than an incident count (NoI) trend.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 7,
+        "modality_error": false,
+        "rationale": "The 2023 Verizon DBIR (E_02_066AFE8300EDCEBB) explicitly reports the median (1.4 Gbps to 2.2 Gbps) and 97.5th percentile (99 Gbps to 124 Gbps) bandwidth increases and attributes the hard-to-break trend to accessible bandwidth and CPU processing.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 8,
+        "modality_error": false,
+        "rationale": "The 2023 Verizon DBIR (E_02_066AFE8300EDCEBB) reports growth in distributed DNS Water Torture attacks and describes them as resource exhaustion attacks against shared DNS infrastructure.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 2,
+        "modality_error": false,
+        "rationale": "The claim accurately reflects the content of E_08_3453329306E149CB regarding CVE-2023-44487 (HTTP/2 Rapid Reset, DDoS capability, and mitigation guidance). The metadata identifies it as a 'confirmed_exploitation_record' and explicitly prohibits 'prevalence_magnitude' and 'vulnerability_severity' claims, supporting the claim's boundary qualifications.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 3,
+        "modality_error": false,
+        "rationale": "E_03_06E6ABC42DA3AC77 explicitly lists DDoS as an example of 'Destructive Operations', and E_03_F13F996D181217BA reports claims by hacktivist personas on Telegram regarding DDoS, website defacements, and hack-and-leak operations. The qualification that this is context and not NoI direction is a correct logical boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 9,
+        "modality_error": false,
+        "rationale": "The claim correctly identifies the source (CISA KEV), the CVE ID, the nature of the vulnerability (HTTP/2 rapid reset allowing DDoS), and its status as a confirmed exploitation record as per E_08_3453329306E149CB.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 10,
+        "modality_error": false,
+        "rationale": "The claim correctly attributes the information to Mandiant M-Trends 2023, using E_03_06E6ABC42DA3AC77 for the classification of DDoS as destructive operations and E_03_F13F996D181217BA for the report on hacktivist claims of DDoS activity.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 4,
+        "modality_error": false,
+        "rationale": "E_04_892BBCAA3CE5CC92 reports observed hacktivism related to the Israel-Hamas conflict, identifies the target sectors (financial, government, travel, and transportation), notes claims were posted on Telegram, and recommends DDoS mitigation readiness (contacting a provider and incident-response planning). The analytical qualification correctly identifies this as context rather than a measurement of NoI (Number of Incu",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 5,
+        "modality_error": false,
+        "rationale": "E_33_ADC8BC66D812799F provides the exact publication counts for 2021-2024 (14, 18, 33, 87), the OLS slope (23.4), and the first-to-last delta (73), and explicitly excludes deployment maturity and effectiveness. The forecast summary confirms the PMT state modality is NoP (Number of Publications) and the direction is 'decreasing'; thus, an increasing NoP trend is a legitimate challenge to the forecast.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 11,
+        "modality_error": false,
+        "rationale": "E_04_892BBCAA3CE5CC92 confirms that IBM X-Force observed hacktivism related to the Israel-Hamas conflict and recommended DDoS mitigation readiness for organizations in the region.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 12,
+        "modality_error": false,
+        "rationale": "E_33_ADC8BC66D812799F explicitly reports the publication counts increasing from 14 in 2021 to 87 in 2024 and the OLS slope of 23.4 works/year.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 6,
+        "modality_error": false,
+        "rationale": "E_29_CD092D34A1331D02 explicitly lists the publication title 'Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case.' and the DOI '10.2139/ssrn.4996945'. The prohibited_claim_types metadata for this record explicitly forbid claims regarding 'deployment_maturity' and 'operational_effectiveness'. The assertion that it does not establish a directional publication trend is a valid logical scope_🎙",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 13,
+        "modality_error": false,
+        "rationale": "The evidence record E_29_CD092D34A1331D02 is sourced from Crossref and contains the specified publication title. The prohibited_claim_types metadata explicitly excludes 'deployment_maturity' and 'operational_effectiveness'. The claim that a single metadata record cannot establish a publication trend is a correct logical boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "b4a2fe3332ea27a8ebdebd0ae45a5c08d3c1634a9c6764f19c8a3d12f04fa165"
+}

@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      0,
+      1,
+      10,
+      11
+    ],
+    "input_sha256": "7e68057b78181d154dc7c21c97ac20f874e46ec6881a052ce43d1a730930f6dd",
+    "pair": {
+      "input_sha256": "871946b620d40d80381f83d79894f8fa7d62eab4673081fb57cb9f0fc3a8420e",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__targeted_attack__access_control__attack_feasibility",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim accurately reports the percentages (6% in 2022, 4% in 2021, 3% in 2020) provided in E_03_F0CD4F1DE74CC7AD regarding opportunistic compromise leveraged as a source of targeted attack activity. The qualification that this is a share of intrusions rather than a count or frequency is a correct logical boundary inference based on the source's use of percentage of intrusions.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 1,
+        "modality_error": false,
+        "rationale": "E_10_5C0B9AC35F2420B3 (ICSA-22-349-13) and E_10_CEB460BC4092B2D3 (ICSA-22-349-17) specifically describe improper access-control handling in the Siemens Mendix Workflow Commons and Mendix Email Connector modules, respectively, and note that authenticated remote attackers could read, delete (in ICSA-22-349-13), or manipulate (in ICSA-22-349-17) sensitive information. The qualification that these are point-specific vulv",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 10,
+        "modality_error": false,
+        "rationale": "The claim accurately reflects the data in E_03_F0CD4F1DE74CC7AD (6% in 2022, 4% in 2021, 3% in 2020). The distinction that the modality is a share of intrusions rather than a direct count/frequency is a valid logical inference from the source's phrasing.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 11,
+        "modality_error": false,
+        "rationale": "The factual descriptions of the CISA advisories (ICSA-22-349-13 and ICSA-22-349-17) regarding improper access-control handling in Mendix modules and the impact on sensitive information are directly supported by E_10_5C0B9AC35F2420B3 and E_10_CEB460BC4092B2D3. The qualification that these represent vulnerability mechanisms rather than incident frequency or trends is a correct logical boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "e9b5cc70f6649fbd8924673db3e8fcc59c8c223cf4c851476b548da14cbed4c7"
+}

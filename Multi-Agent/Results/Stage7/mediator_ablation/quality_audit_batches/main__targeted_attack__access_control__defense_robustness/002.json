@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      4,
+      5,
+      12,
+      13
+    ],
+    "input_sha256": "391baad2a3850d07dfa94e2fe37cdca8a9ca038b3801acf59b2a87caaf7e7914",
+    "pair": {
+      "input_sha256": "d1537af7398be80d8dae161acc3b57857d51d321a69447abda2093b6299b891b",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__targeted_attack__access_control__defense_robustness",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 4,
+        "modality_error": false,
+        "rationale": "CISA advisory ICSA-24-263-05 (E_10_B4F773BEC65685CC) explicitly states that exploitation of the Kastle Systems Access Control System Firmware vulnerabilities could allow an attacker to access sensitive information and that no known public exploitation targeting these vulnerabilities had been reported to CISA at that time.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 5,
+        "modality_error": false,
+        "rationale": "The 2023 DBIR (E_02_BE48A23ABD77A19C) identifies 'Access Control Management' as Control 5 and specifies that for the 'System Intrusion pattern' in Implementation Group 1 (IG1), the most helpful controls are 14 (89%), 11 (80%), and then 5 (67%).",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 12,
+        "modality_error": false,
+        "rationale": "MITRE ATT&CK M1015 (E_12_F6120325C44B5EA9) lists the specified Active Directory configuration measures (domain account configuration, interactive logon restrictions, RDP access limits, dedicated administrative accounts, and authentication silos) and states they are used to secure accounts, control access, and reduce the risk of unauthorized access and lateral movement.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 13,
+        "modality_error": false,
+        "rationale": "CISA advisories ICSA-22-349-13 (E_10_5C0B9AC35F2420B3) and ICSA-22-349-17 (E_10_CEB460BC4092B2D3) both describe Mendix modules (Workflow Commons and Email Connector) that improperly handle access control for some module entities, allowing authenticated remote attackers to read, delete, or manipulate sensitive information, and both state that Mendix recommends updating to the latest version.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "4d094eddbf29f11ecf03b585a35744b5350a1ff92836020a5ee503131a0fe0ca"
+}

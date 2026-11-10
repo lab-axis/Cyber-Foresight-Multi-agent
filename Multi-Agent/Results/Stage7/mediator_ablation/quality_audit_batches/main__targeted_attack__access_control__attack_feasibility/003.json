@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      6,
+      7,
+      16,
+      17
+    ],
+    "input_sha256": "f46846c9b56d69c13294b69b157f066272f406c06b8b85e280a129b1292f1f2b",
+    "pair": {
+      "input_sha256": "871946b620d40d80381f83d79894f8fa7d62eab4673081fb57cb9f0fc3a8420e",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__targeted_attack__access_control__attack_feasibility",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 6,
+        "modality_error": false,
+        "rationale": "The record E_02_BE48A23ABD77A19C from the 2023 DBIR specifically identifies Control 5 as 'Access Control Management' and states that for the System Intrusion pattern in Implementation Group 1 (IG1), it appears at 67%. The record describes this as a mapping to show which controls are 'commonly going to help', confirming it is a control-association mapping rather than a count of incidents.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 7,
+        "modality_error": false,
+        "rationale": "Record E_12_F6120325C44B5EA9 (MITRE ATT&CK M1015) describes Active Directory configuration measures including domain accounts, interactive logon restrictions, RDP access limits, dedicated administrative accounts, and authentication silos. It explicitly states these are intended to 'secure user accounts, control access, and minimize the attack surface' and reduce 'unauthorized access and lateral movement'. As a static",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 16,
+        "modality_error": false,
+        "rationale": "Record E_02_BE48A23ABD77A19C supports that the DBIR associates the System Intrusion pattern with recommended controls and reports that Control 5 (Access Control Management) appears at 67% in the IG1 mapping. The description of this mapping as 'control-association context' rather than evidence of incident movement or effectiveness is a correct boundary inference as the text discusses what controls are recommended to '",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 17,
+        "modality_error": false,
+        "rationale": "Record E_12_F6120325C44B5EA9 supports that MITRE ATT&CK M1015 describes Active Directory configuration measures for securing accounts, controlling access, restricting logons, and reducing unauthorized access and lateral movement. The statement that this is mitigation context and does not measure NoI or NoP trajectories is a correct limitation of the source's scope.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "397072a3e0b097a5c3010aa501129d4282b10202669407060a85cc640db31315"
+}

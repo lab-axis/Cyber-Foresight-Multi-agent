@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      4,
+      5,
+      14,
+      15
+    ],
+    "input_sha256": "918ea2903a9f78215e832f01b64e0d687956b4bc95d4b8ac46fb329d38ca6d70",
+    "pair": {
+      "input_sha256": "871946b620d40d80381f83d79894f8fa7d62eab4673081fb57cb9f0fc3a8420e",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__targeted_attack__access_control__attack_feasibility",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 4,
+        "modality_error": false,
+        "rationale": "The cited evidence E_33_F4FC25CE90264812 explicitly reports the annual publication counts (2021=1040, 2022=1005, 2023=1115, 2024=1070) and the OLS slope of 20.0 works/year. The observation that 2024 (1070) is lower than 2023 (1115) is factually correct based on these numbers, and the logical conclusion that a positive OLS slope does not imply monotonic increase is a valid boundary inference. The claim supports the PM",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 5,
+        "modality_error": false,
+        "rationale": "Evidence E_03_B4E8A797813EC72F explicitly states that organizations were notified of breaches by external entities in 63% of incidents in 2022 and that this continues the trend observed in 2021. The qualification that this is a detection-source share (percent) and not an incident count or frequency is supported by the 'Detections (percent)' label in the evidence.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 14,
+        "modality_error": false,
+        "rationale": "Evidence E_33_F4FC25CE90264812 provides the reported annual counts, the OLS slope (20.0), and the first-to-last delta (1070 - 1040 = 30). The qualification regarding the limits of the evidence (not evidence of deployment maturity, operational effectiveness, or causal mitigation effectiveness) is stated verbatim in the source.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 15,
+        "modality_error": false,
+        "rationale": "Evidence E_03_B4E8A797813EC72F explicitly supports the 63% external notification figure for 2022 and the trend from 2021. The qualification that this is detection-source context rather than direct incident count or frequency is accurate as the source provides percentages of detections.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "7dce1a884ee01e79a5be81aeb5659eb5556c97de149ea281b4191568a8411b24"
+}

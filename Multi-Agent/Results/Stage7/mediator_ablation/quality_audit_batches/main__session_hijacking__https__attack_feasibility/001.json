@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      2,
+      3,
+      7,
+      8
+    ],
+    "input_sha256": "f98f0419e23b1c46acc83c02edc29298896b812a142ddb983cdc5721033039b3",
+    "pair": {
+      "input_sha256": "f0bd137b09de69b2410170d8d2d6bbe5091f23b9a33d1993a9058705111552d3",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__session_hijacking__https__attack_feasibility",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 2,
+        "modality_error": false,
+        "rationale": "E_25_99857C4681E8FEE5 (NIST SP 800-53 Rev.5) explicitly states that authenticity protection includes protecting against 'man-in-the-middle' attacks, session hijacking, and the insertion of false information, and describes the enhancement (1) to invalidate session identifiers at logout.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 3,
+        "modality_error": false,
+        "rationale": "E_33_13A684B424C1D15B explicitly reports the annual counts (2021=14, 2022=8, 2023=8, 2024=15), OLS_slope=0.300000 works/year, total_results=45, and first_to_last_delta=1 for PMT_HTTPS.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 7,
+        "modality_error": false,
+        "rationale": "E_25_99857C4681E8FEE5 (NIST SP 800-53 Rev.5) explicitly states that authenticity protection includes protecting against 'man-in-the-middle' attacks, session hijacking, and the insertion of false information, and describes the enhancement (1) to invalidate session identifiers at logout.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 8,
+        "modality_error": false,
+        "rationale": "E_33_13A684B424C1D15B explicitly reports the annual counts (2021=14, 2022=8, 2023=8, 2024=15) and the OLS_slope=0.300000 (reported as 0.3) for PMT_HTTPS.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "10c7f0b4515d2f34ff4e368fa2e3052fcc2d9a678f2cc2b579e092a0f262ba49"
+}

@@ -1,0 +1,93 @@
+{
+  "identity": {
+    "input_sha256": "f0bd137b09de69b2410170d8d2d6bbe5091f23b9a33d1993a9058705111552d3",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+    "review_id": "main__session_hijacking__https__attack_feasibility",
+    "sampling": {
+      "min_p": 0.0,
+      "seed": 42,
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+    "version": "mediator-blind-claim-audit-gemma4-v3"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The cited CISA/Siemens advisory (E_10_AC5A58AF5E015229) explicitly states that there is a cross-site scripting vulnerability in SCALANCE switches which, if used by a threat actor, could result in the stealing of session cookies and session hijacking.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 1,
+        "modality_error": false,
+        "rationale": "The IBM X-Force 2024 report (E_04_B9A3190D9CA152A3) explicitly states that security misconfigurations were the most observed OWASP web application risk, that concurrent user sessions could weaken MFA through session hijacking, and that exploitation of public-facing applications occurred in 29% of incidents, which was slightly higher than in 2022.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 5,
+        "modality_error": false,
+        "rationale": "The cited CISA/Siemens advisory (E_10_AC5A58AF5E015229) explicitly states that there is a cross-site scripting vulnerability in SCALANCE switches which, if used by a threat actor, could result in the stealing of session cookies and session hijacking.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 6,
+        "modality_error": false,
+        "rationale": "The IBM X-Force 2024 report (E_04_B9A3190D9CA152A3) explicitly states that security misconfigurations were the most observed OWASP web application risk, that concurrent user sessions could weaken MFA through session hijacking, and that exploitation of public-facing applications occurred in 29% of incidents, which was slightly higher than in 2022.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 2,
+        "modality_error": false,
+        "rationale": "E_25_99857C4681E8FEE5 (NIST SP 800-53 Rev.5) explicitly states that authenticity protection includes protecting against 'man-in-the-middle' attacks, session hijacking, and the insertion of false information, and describes the enhancement (1) to invalidate session identifiers at logout.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 3,
+        "modality_error": false,
+        "rationale": "E_33_13A684B424C1D15B explicitly reports the annual counts (2021=14, 2022=8, 2023=8, 2024=15), OLS_slope=0.300000 works/year, total_results=45, and first_to_last_delta=1 for PMT_HTTPS.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 7,
+        "modality_error": false,
+        "rationale": "E_25_99857C4681E8FEE5 (NIST SP 800-53 Rev.5) explicitly states that authenticity protection includes protecting against 'man-in-the-middle' attacks, session hijacking, and the insertion of false information, and describes the enhancement (1) to invalidate session identifiers at logout.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 8,
+        "modality_error": false,
+        "rationale": "E_33_13A684B424C1D15B explicitly reports the annual counts (2021=14, 2022=8, 2023=8, 2024=15) and the OLS_slope=0.300000 (reported as 0.3) for PMT_HTTPS.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 4,
+        "modality_error": false,
+        "rationale": "E_12_9B8ECD82AD844621 explicitly identifies S0114 as a 'Bootkit that targets Windows operating systems' and E_12_CFEC6517865F0563 explicitly identifies S0073 as a 'Web shell'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 9,
+        "modality_error": false,
+        "rationale": "E_12_9B8ECD82AD844621 explicitly identifies S0114 as a 'Bootkit that targets Windows operating systems' and E_12_CFEC6517865F0563 explicitly identifies S0073 as a 'Web shell'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "21aa2ac57c01455a81cfc67108342503b293721ce14c785e2cd529f9da026f4c"
+}

@@ -1,0 +1,133 @@
+{
+  "assessment": {
+    "case_id": "main__brute_force__ids_ips",
+    "claims": [
+      {
+        "claim_id": "A1",
+        "evidence_ids": [
+          "E_02_669F59880AF52688"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "The 2024 Verizon DBIR reports 1,997 basic web application attack incidents and states that threat actors continue to exploit assets with default, simplistic, and easily guessable credentials by brute forcing, buying, or reusing them from previous breaches."
+      },
+      {
+        "claim_id": "A2",
+        "evidence_ids": [
+          "E_03_F2B2EBA86BEEFDC5"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "Mandiant M-Trends 2024 reports that in 2023 exploit was the most prevalent identified initial infection vector at 38%, a six percentage point increase from 2022; phishing was 17%, down from 22% in 2022; prior compromise was 15%; and Brute Force appears in the initial infection vector list, with a 6% value visible in the chart data only rather than as an explicitly narrated percentage."
+      },
+      {
+        "claim_id": "A3",
+        "evidence_ids": [
+          "E_03_C54C5F099169E020"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "Mandiant M-Trends 2024 describes attackers performing password guessing against cloud sign-in portals to identify accounts without MFA, along with related credential-abuse behaviors such as MFA push approval abuse, help-desk social engineering, and SIM swapping."
+      },
+      {
+        "claim_id": "A4",
+        "evidence_ids": [
+          "E_04_02D425B67E57F32D"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "IBM X-Force 2023 reports that old vulnerabilities and threats remain relevant in OT-related industries and that widespread, likely indiscriminate internal and external vulnerability scanning was the most common attack attempt in that sector, in a discussion that also mentions vulnerabilities that make brute force attacks easier."
+      },
+      {
+        "claim_id": "A5",
+        "evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "forecast_component": "PMT_TRAJECTORY",
+        "forecast_relation": "SUPPORTS_FORECAST",
+        "statement": "The Crossref cutoff-constrained publication trend for IDS/IPS reports annual publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year, and states that this publication-activity axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+      },
+      {
+        "claim_id": "A6",
+        "evidence_ids": [
+          "E_23_312B9513BCEE9B9D",
+          "E_23_B21FAA9377991F05",
+          "E_23_EBCAB9508641E703",
+          "E_25_FE58E4FCF044EDE3"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "CISA CPG and NIST SP 800-53 Rev.5 describe MFA, unique credential provisioning, account lockout, and alerting after unsuccessful logons as controls relevant to brute force techniques, without stating exact control effectiveness."
+      }
+    ],
+    "critic_type": "attack_feasibility",
+    "evidence_sufficiency": "PARTIAL",
+    "stance": 0,
+    "stance_basis": {
+      "challenging_claim_ids": [],
+      "decision": "NO_DIRECTIONAL_EVIDENCE",
+      "rationale": "No surfaced evidence reports a temporal increase or decrease in brute-force-specific incident count or frequency (NoI) from the 2024 baseline into the 2025-2027 forecast window. The DBIR 'continue' language (A1) and the Mandiant vector-share figures (A2) describe observed persistence and static 2023 shares respectively, not a directional NoI trajectory. The exploitation_signal evidence slot is missing, so no direct exploitation-signal trend is available. A5 supports the PMT NoP publication-activity direction but is a PMT-side claim and cannot serve as decisive Attack stance-basis under the role boundary. No THREAT_TRAJECTORY or GAP_DIRECTION claim is supported by the surfaced evidence, because establishing GAP_DIRECTION requires direct directional evidence for both the Threat NoI and PMT NoP modalities, and the Threat side lacks it. The revised A2 (per MA-2) is now NEUTRAL_CONTEXT and no longer functions as a CHALLENGES_FORECAST claim. All remaining threat-side claims are NEUTRAL_CONTEXT operational or adversary-behavior findings.",
+      "supporting_claim_ids": []
+    },
+    "unresolved_questions": [
+      "No supplied record explicitly reports a temporal change in brute-force-specific incident count or frequency (NoI) from the 2024 baseline into 2025-2027; the DBIR web-application attack counts and the Mandiant 2023 initial-infection-vector shares do not constitute a brute-force NoI time series.",
+      "The exploitation_signal evidence slot is missing from the frozen Stage 0 retrieval summary, so no direct observed exploitation-signal trend for the brute-force trajectory is established.",
+      "The 6% Brute Force value in the Mandiant M-Trends chart data is not explicitly narrated in the supplied text and is treated as chart-data-only per MA-2; it does not provide a year-over-year change in brute-force incident frequency.",
+      "A direct GAP_DIRECTION interpretation requires directional evidence for both the Threat NoI and PMT NoP forecast-state modalities; the PMT NoP publication trend (E_33) is established, but no corresponding Threat NoI directional signal is available in the surfaced evidence.",
+      "Whether the observed persistence of brute-force and credential-stuffing behaviors described in the DBIR and Mandiant reports constitutes a sufficient basis for inferring an increasing NoI trajectory remains unresolved, as no surfaced record quantifies a year-over-year change in brute-force incident counts."
+    ],
+    "unsupported_specificity_detected": false
+  },
+  "identity": {
+    "case_id": "main__brute_force__ids_ips",
+    "mediator": true,
+    "prompt_sha256": "01f1cd020bd0c00ad0d3975e61d93dee904b56fb4635079491b26ade98b5e037",
+    "role": "attack_feasibility",
+    "runtime": {
+      "batch_size": 2048,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 131072,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 1,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512
+    },
+    "schema_sha256": "1fee893effedd9d2b574dbf43d72d486b7d64dcba4e5dd5ffaf62fd247b6193b",
+    "seed": 42,
+    "source_hashes": {
+      "evidence_pack": "6058219ac145f10e6a0a2cc48eb12c0a6bfed8f0e9e82ee3bf0f427a64e738b0",
+      "round1_turns": "b0594d6e473650887953edab61eac103a84349931dcc6b5173eb99e3793d06c8",
+      "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+      "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a"
+    },
+    "version": "mediator-ablation-frozen-round1-v1"
+  },
+  "sha256": "789af29378ee3200f2c0636d9a112dc4d5a8c4d2291faddc50b3b46e223399d8"
+}

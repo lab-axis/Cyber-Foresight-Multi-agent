@@ -1,0 +1,93 @@
+{
+  "identity": {
+    "input_sha256": "23849ae91e733366b771e48b7757292eb6cfc5aa10ae1fdb0745fc2ec10542a7",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+    "review_id": "main__session_hijacking__https__defense_robustness",
+    "sampling": {
+      "min_p": 0.0,
+      "seed": 42,
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+    "version": "mediator-blind-claim-audit-gemma4-v3"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim accurately reports the annual publication counts (2021=14, 2022=8, 2023=8, 2024=15) and the OLS slope (0.300000 works/year) as specified in record E_33_13A684B424C1D15B.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 1,
+        "modality_error": false,
+        "rationale": "The claim accurately reports total_results=45 and first_to_last_delta=1 from E_33_13A684B424C1D15B. The observation that the net change is one publication (15-14=1) and that the sequence 14, 8, 8, 15 is not monotonically increasing are correct logical inferences from the provided data.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 5,
+        "modality_error": false,
+        "rationale": "The claim accurately reports the OLS slope (0.30) and annual counts (14, 8, 8, 15) from E_33_13A684B424C1D15B. It correctly identifies the data as a publication-activity measure (NoP), which aligns with the forecast's PMT state modality.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 6,
+        "modality_error": false,
+        "rationale": "The claim accurately reports total_results=45 and first_to_last_delta=1 from E_33_13A684B424C1D15B and correctly identifies the net increase as one publication. The qualification that this is a small-magnitude observation that does not reverse the positive OLS slope is a valid analytical description of the data limits.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 2,
+        "modality_error": false,
+        "rationale": "E_25_99857C4681E8FEE5 explicitly defines a control to 'Protect the authenticity of communications sessions' which includes protection against 'man-in-the-middle' attacks, session hijacking, and insertion of false information, and lists a control enhancement to 'Invalidate session identifiers upon user logout'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 3,
+        "modality_error": false,
+        "rationale": "E_10_AC5A58AF5E015229 reports that XSS in SCALANCE switches could result in session cookie stealing and session hijacking. E_04_B9A3190D9CA152A3 reports that allowing concurrent user sessions (15% of misconfigurations) could weaken MFA through session hijacking. E_04 also reports exploitation of public-facing applications in 29% of incidents; the claim's characterization of this as broader attack-vector context (as a",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 7,
+        "modality_error": false,
+        "rationale": "The factual description of the NIST control and enhancement is directly supported by E_25_99857C4681E8FEE5. The qualification that the document is static guidance and does not measure deployment, trajectory, or effectiveness is a valid logical boundary inference based on the nature of the source (official guidance chunk).",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 8,
+        "modality_error": false,
+        "rationale": "The factual mechanisms (XSS in SCALANCE and concurrent sessions weakening MFA) are supported by E_10_AC5A58AF5E015229 and E_04_B9A3190D9CA152A3. The qualification that these records are static capability/risk context and do not establish a temporal NoP/NoI trajectory is a valid scope limitation.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 4,
+        "modality_error": false,
+        "rationale": "The cited CISA advisory (E_10_AC5A58AF5E015229) explicitly recommends updating affected products to latest versions, minimizing network exposure for control system devices, isolating control system networks behind firewalls from business networks, and using more secure remote-access methods like updated VPNs.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 9,
+        "modality_error": false,
+        "rationale": "The cited record (E_10_AC5A58AF5E015229) is a CISA advisory addressing a vulnerability that could result in session hijacking for SCALANCE products. It explicitly recommends updating affected devices, minimizing network exposure, isolating control-system networks, and using updated VPNs for remote access.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "361e6f778002dcaab64cbc56011b2014312fd03a22d624cf8f7d32a5394fbed3"
+}

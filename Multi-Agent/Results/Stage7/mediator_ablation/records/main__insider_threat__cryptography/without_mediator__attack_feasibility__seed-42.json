@@ -1,0 +1,126 @@
+{
+  "assessment": {
+    "case_id": "main__insider_threat__cryptography",
+    "claims": [
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "forecast_component": "PMT_TRAJECTORY",
+        "forecast_relation": "SUPPORTS_FORECAST",
+        "statement": "The cutoff-constrained Crossref PMT publication trend reports that PMT_CRYPTOGRAPHY security-related cryptography annual publication counts increased from 210 in 2021 to 254 in 2022, 272 in 2023, and 330 in 2024, with an OLS slope of 37.8 works/year."
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_20_913B6F999A0F1458"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "NIST SP 800-161r1 C-SCRM guidance identifies insider threat bypass of security mechanisms as a risk and recommends less predictable predefined frequencies for automated component-inventory data collection."
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "E_22_C239828119FC69CD",
+          "E_26_92664A4339CF24C9"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "CISA and NIST records describe insider-threat mitigation programs, deter/detect/prevent practices, and assessment procedures for insider-threat program personnel and cross-discipline incident handling."
+      },
+      {
+        "claim_id": "C4",
+        "evidence_ids": [
+          "E_15_0A98378FC609EF7E",
+          "E_16_E7BB108A85B71262",
+          "E_23_A793FAF5B393EFE3",
+          "E_25_746173685B235ED2"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "NIST and CPG records describe cryptography-related mechanisms and controls, including the contrast between cryptography and widely used machine learning algorithms regarding information-theoretic security proofs, cryptographic hashes and digital signatures for metadata authentication, encryption/hashing definitions, and FIPS-validated cryptographic protections."
+      },
+      {
+        "claim_id": "C5",
+        "evidence_ids": [
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "Crossref metadata records establish publication metadata for Cryptography journal acknowledgments with publication dates 2021-01-30, 2023-01-18, and 2018-01-16."
+      }
+    ],
+    "critic_type": "attack_feasibility",
+    "evidence_sufficiency": "PARTIAL",
+    "stance": 0,
+    "stance_basis": {
+      "challenging_claim_ids": [],
+      "decision": "NO_DIRECTIONAL_EVIDENCE",
+      "rationale": "No THREAT_TRAJECTORY or GAP_DIRECTION claim can be constructed from the surfaced evidence. The threat forecast state uses NoP as its modality with direction increasing, yet the Stage 0 historical input marks threat NoP and NoI as unavailable and masked. The sole directional publication-trend record (E_33_CDE0F421E4D797ED) pertains to PMT_CRYPTOGRAPHY and, while properly grounded, is a PMT-side signal that cannot serve as decisive Attack-basis evidence. The exploitation_signal evidence slot is missing. All remaining evidence (C-SCRM control guidance, CISA/NIST insider-threat program descriptions, cryptography mechanism definitions, static Crossref metadata) is operational context or static metadata that does not measure a temporal change in threat NoP or NoI. Post-debate, the Defense's REVISE on C2 was accepted: the C-SCRM insider-bypass guidance is reclassified from SUPPORTS_FORECAST to NEUTRAL_CONTEXT because it identifies a control recommendation rather than providing directional threat-trajectory evidence. With no role-relevant directional evidence for the Threat side, neither support nor challenge of the forecasted threat trajectory is defensible.",
+      "supporting_claim_ids": []
+    },
+    "unresolved_questions": [
+      "The Stage 0 threat historical input marks NoP and NoI as unavailable/masked, yet the threat forecast state asserts NoP increasing; no surfaced evidence provides a temporal publication-activity or incident-frequency trajectory for THREAT_INSIDER_THREAT to validate or challenge that direction.",
+      "The PMT historical NoP recent_direction is decreasing while the external Crossref PMT_CRYPTOGRAPHY trend (E_33) reports increasing 2021-2024 publication counts; the payload does not contain sufficient detail to reconcile these two PMT NoP signals, and this discrepancy does not alter the Attack-side assessment because the threat-side signal remains absent.",
+      "The exploitation_signal evidence slot is missing from the retrieval, so no specific insider-threat exploitation mechanism linked to cryptography is directly evidenced; without this, no threat-side NoP or NoI directional claim can be grounded.",
+      "GAP_DIRECTION (threat_minus_pmt_increasing, slope ≈ 0.0005) cannot be independently validated because Boundary Rule 6 requires direct evidence for both forecast-state modalities, and the threat-side modality lacks any surfaced directional evidence."
+    ],
+    "unsupported_specificity_detected": false
+  },
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "mediator": false,
+    "prompt_sha256": "58adaca39ee53ee635868f9351571a92434613fe7d5cc39ec4c355da96b2c2ad",
+    "role": "attack_feasibility",
+    "runtime": {
+      "batch_size": 2048,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 131072,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 1,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512
+    },
+    "schema_sha256": "49752f43f19883f151f524b947f1e6de6f701c1bef09cfdeeea38577a012d395",
+    "seed": 42,
+    "source_hashes": {
+      "evidence_pack": "39cbad1783873b171b466b5b406d4b106b9cdf1afe0ae07fd512bb74c425a355",
+      "round1_turns": "4cf61ced2aec2e50f95f89736afcb1fdd8ea24fa992f455b424e7d7b9447bb42",
+      "stage1": "048aa9e6dd139b26dd32450ec0fda405bb883a62497ed108691cf7e840b16872",
+      "stage2": "3ddd4def226a25d78c6243f4382fb30d384b7793f7191e62a95b79e660f11d06"
+    },
+    "version": "mediator-ablation-frozen-round1-v1"
+  },
+  "sha256": "e3592cf34146ace1a4216b40bbfe6b87520c03bc094135e818b2dc56288aa67e"
+}

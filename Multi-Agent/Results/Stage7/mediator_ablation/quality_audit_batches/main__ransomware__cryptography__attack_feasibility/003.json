@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      6,
+      7,
+      17,
+      18
+    ],
+    "input_sha256": "7e71d3186657e41b52089c212607c754c44cf6f218fbe026550ea96510e97ad2",
+    "pair": {
+      "input_sha256": "b6a40492f41b7ae120a3e91efc94ff0a9c8e0007025c9c5a065dc025c2c0097f",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__ransomware__cryptography__attack_feasibility",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 6,
+        "modality_error": false,
+        "rationale": "E_26 (NIST SP 800-53A Rev.5) explicitly provides assessment objectives and methods for SC-12(06) 'CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT | PHYSICAL CONTROL OF KEYS' and SC-13 'CRYPTOGRAPHIC PROTECTION'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 7,
+        "modality_error": false,
+        "rationale": "E_23 (CISA CPG) states the nation has faced 'unprecedented cyber threats from ransomware to nation-state espionage' and describes the CPGs as 'aimed at addressing some of the most common and impactful cyber risks'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 17,
+        "modality_error": false,
+        "rationale": "E_26 explicitly covers assessment objectives and procedures for SC-12(06) (physical control of keys) and SC-13 (cryptographic protection). The conclusion that this establishes cryptography as an assessable control area in the U.S. federal framework is a legitimate logical boundary inference given the nature of the NIST SP 800-53A publication.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 18,
+        "modality_error": false,
+        "rationale": "E_23 is titled 'A LETTER FROM OUR DIRECTOR' and explicitly mentions ransomware among 'unprecedented cyber threats'. It frames the CPGs as addressing 'common and impactful cyber risks' and mentions applicability to 'organizations, both large and small', including 'critical infrastructure entities of all sizes'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "595457b84fc5f5f00c78772ed95d3da21b28a6522bf686a475f8e35c363e3fdf"
+}

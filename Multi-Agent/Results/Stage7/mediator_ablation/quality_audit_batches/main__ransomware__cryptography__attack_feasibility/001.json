@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      2,
+      3,
+      13,
+      14
+    ],
+    "input_sha256": "8bbc11eb101c7f0002c8a7d3244f9994a3f98bc797054b7202f30337c00176d7",
+    "pair": {
+      "input_sha256": "b6a40492f41b7ae120a3e91efc94ff0a9c8e0007025c9c5a065dc025c2c0097f",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__ransomware__cryptography__attack_feasibility",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 2,
+        "modality_error": false,
+        "rationale": "The CISA KEV record E_08_510579F0D776F3BE explicitly states that CVE-2022-27593 in QNAP Photo Station 'was observed being utilized in a Deadbolt ransomware campaign.'",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 3,
+        "modality_error": false,
+        "rationale": "E_03_0BAA7B22596028F4 confirms that intrusions involving ransomware had a median dwell time of 9 days in 2022, compared to 5 days in M-Trends 2022, and explicitly credits ransomware attacks as a driving factor in reducing dwell time.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 13,
+        "modality_error": false,
+        "rationale": "The factual claim about CVE-2022-27593 is directly supported by the content of E_08_510579F0D776F3BE. The qualification regarding the source contract is supported by the metadata for E_08, which allows 'confirmed_exploitation' and prohibits 'prevalence_magnitude' and 'vulnerability_severity'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 14,
+        "modality_error": false,
+        "rationale": "The data points regarding global median dwell time (16 days vs 21 days) and ransomware dwell time (9 days vs 5 days) are directly supported by E_03_0BAA7B22596028F4. The qualification that these are detection-speed metrics rather than incident-count measurements is a valid logical boundary inference regarding the scope of dwell-time data.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "783dacc9843aaa7f638a29d3ff8302cdcfa129777b181a57eb666fba80fa1c34"
+}

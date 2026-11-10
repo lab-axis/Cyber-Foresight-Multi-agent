@@ -1,0 +1,163 @@
+{
+  "identity": {
+    "input_sha256": "871946b620d40d80381f83d79894f8fa7d62eab4673081fb57cb9f0fc3a8420e",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+    "review_id": "main__targeted_attack__access_control__attack_feasibility",
+    "sampling": {
+      "min_p": 0.0,
+      "seed": 42,
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+    "version": "mediator-blind-claim-audit-gemma4-v3"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim accurately reports the percentages (6% in 2022, 4% in 2021, 3% in 2020) provided in E_03_F0CD4F1DE74CC7AD regarding opportunistic compromise leveraged as a source of targeted attack activity. The qualification that this is a share of intrusions rather than a count or frequency is a correct logical boundary inference based on the source's use of percentage of intrusions.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 1,
+        "modality_error": false,
+        "rationale": "E_10_5C0B9AC35F2420B3 (ICSA-22-349-13) and E_10_CEB460BC4092B2D3 (ICSA-22-349-17) specifically describe improper access-control handling in the Siemens Mendix Workflow Commons and Mendix Email Connector modules, respectively, and note that authenticated remote attackers could read, delete (in ICSA-22-349-13), or manipulate (in ICSA-22-349-17) sensitive information. The qualification that these are point-specific vulv",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 10,
+        "modality_error": false,
+        "rationale": "The claim accurately reflects the data in E_03_F0CD4F1DE74CC7AD (6% in 2022, 4% in 2021, 3% in 2020). The distinction that the modality is a share of intrusions rather than a direct count/frequency is a valid logical inference from the source's phrasing.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 11,
+        "modality_error": false,
+        "rationale": "The factual descriptions of the CISA advisories (ICSA-22-349-13 and ICSA-22-349-17) regarding improper access-control handling in Mendix modules and the impact on sensitive information are directly supported by E_10_5C0B9AC35F2420B3 and E_10_CEB460BC4092B2D3. The qualification that these represent vulnerability mechanisms rather than incident frequency or trends is a correct logical boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 2,
+        "modality_error": false,
+        "rationale": "The cited CISA advisory (E_10_B4F773BEC65685CC) explicitly states that 'Successful exploitation of these vulnerabilities could allow an attacker to access sensitive information on the affected product.' The qualification that this is a product-specific capability statement and not a broader NoI measurement is a valid logical boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 3,
+        "modality_error": false,
+        "rationale": "The cited CISA advisory (E_10_B4F773BEC65685CC) explicitly states: 'No known public exploitation specifically targeting these vulnerabilities have been reported to CISA at this time.' The qualification that this is a point-in-time observation limited to specific CVEs and does not establish a broader trend is a valid logical boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 12,
+        "modality_error": false,
+        "rationale": "The cited CISA advisory (E_10_B4F773BEC65685CC) confirms that successful exploitation could allow access to sensitive information on the affected product. The qualification that this is potential-exploitation context rather than direct evidence of incident count or frequency is a valid logical boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 13,
+        "modality_error": false,
+        "rationale": "The cited CISA advisory (E_10_B4F773BEC65685CC) confirms that no known public exploitation targeting the listed vulnerabilities had been reported to CISA at the time. The qualification that this is a vulnerability-specific absence statement and not a broader exploitation signal is a valid logical boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 4,
+        "modality_error": false,
+        "rationale": "The cited evidence E_33_F4FC25CE90264812 explicitly reports the annual publication counts (2021=1040, 2022=1005, 2023=1115, 2024=1070) and the OLS slope of 20.0 works/year. The observation that 2024 (1070) is lower than 2023 (1115) is factually correct based on these numbers, and the logical conclusion that a positive OLS slope does not imply monotonic increase is a valid boundary inference. The claim supports the PM",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 5,
+        "modality_error": false,
+        "rationale": "Evidence E_03_B4E8A797813EC72F explicitly states that organizations were notified of breaches by external entities in 63% of incidents in 2022 and that this continues the trend observed in 2021. The qualification that this is a detection-source share (percent) and not an incident count or frequency is supported by the 'Detections (percent)' label in the evidence.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 14,
+        "modality_error": false,
+        "rationale": "Evidence E_33_F4FC25CE90264812 provides the reported annual counts, the OLS slope (20.0), and the first-to-last delta (1070 - 1040 = 30). The qualification regarding the limits of the evidence (not evidence of deployment maturity, operational effectiveness, or causal mitigation effectiveness) is stated verbatim in the source.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 15,
+        "modality_error": false,
+        "rationale": "Evidence E_03_B4E8A797813EC72F explicitly supports the 63% external notification figure for 2022 and the trend from 2021. The qualification that this is detection-source context rather than direct incident count or frequency is accurate as the source provides percentages of detections.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 6,
+        "modality_error": false,
+        "rationale": "The record E_02_BE48A23ABD77A19C from the 2023 DBIR specifically identifies Control 5 as 'Access Control Management' and states that for the System Intrusion pattern in Implementation Group 1 (IG1), it appears at 67%. The record describes this as a mapping to show which controls are 'commonly going to help', confirming it is a control-association mapping rather than a count of incidents.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 7,
+        "modality_error": false,
+        "rationale": "Record E_12_F6120325C44B5EA9 (MITRE ATT&CK M1015) describes Active Directory configuration measures including domain accounts, interactive logon restrictions, RDP access limits, dedicated administrative accounts, and authentication silos. It explicitly states these are intended to 'secure user accounts, control access, and minimize the attack surface' and reduce 'unauthorized access and lateral movement'. As a static",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 16,
+        "modality_error": false,
+        "rationale": "Record E_02_BE48A23ABD77A19C supports that the DBIR associates the System Intrusion pattern with recommended controls and reports that Control 5 (Access Control Management) appears at 67% in the IG1 mapping. The description of this mapping as 'control-association context' rather than evidence of incident movement or effectiveness is a correct boundary inference as the text discusses what controls are recommended to '",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 17,
+        "modality_error": false,
+        "rationale": "Record E_12_F6120325C44B5EA9 supports that MITRE ATT&CK M1015 describes Active Directory configuration measures for securing accounts, controlling access, restricting logons, and reducing unauthorized access and lateral movement. The statement that this is mitigation context and does not measure NoI or NoP trajectories is a correct limitation of the source's scope.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 8,
+        "modality_error": false,
+        "rationale": "The definitions of 'access control' and 'advanced persistent threat' provided in the claim are accurately summarized from E_25_8F4D567857A97316. The qualification that these are definitional context and not threat trajectory evidence is a legitimate logical boundary inference given the source is a glossary.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 9,
+        "modality_error": false,
+        "rationale": "E_29_4ED97777A686537A, E_29_951AF8A7281A822E, and E_29_A8790308F8A745BD are indeed static bibliographic metadata records. The limitation that they do not establish deployment maturity or operational effectiveness is explicitly supported by the 'prohibited_claim_types' metadata in those records. The statement regarding the lack of a directional publication trajectory absent a trend record is a valid logical boundary.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 18,
+        "modality_error": false,
+        "rationale": "The definitions provided are accurately summarized from E_25_8F4D567857A97316 ('resourceful' corresponds to 'significant resources'). The qualification that this is definitional context rather than forecast trajectory evidence is a legitimate logical boundary.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 19,
+        "modality_error": false,
+        "rationale": "The E_29 records support the existence of these publications as bibliographic records. The limitation that they do not establish deployment maturity, operational effectiveness (supported by 'prohibited_claim_types'), or a directional trajectory (logical boundary for static metadata) is correct.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "724d8c9d526a1eabddc7b18a113cb4de337762fa96ab6f78a8b3dc9d506b2338"
+}

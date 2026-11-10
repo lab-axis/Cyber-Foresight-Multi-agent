@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      2,
+      3,
+      9,
+      10
+    ],
+    "input_sha256": "6ee96d5970cfe5bc848b2168b9de1f65c55c3cfe02e0b97cf45200ae90d6b062",
+    "pair": {
+      "input_sha256": "c090c186d6b2846f2724035e153e0168812bd86f7d11e591d4bd54a2a821fc18",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__ddos__nlp_llm__attack_feasibility",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 2,
+        "modality_error": false,
+        "rationale": "The claim accurately reflects the content of E_08_3453329306E149CB regarding CVE-2023-44487 (HTTP/2 Rapid Reset, DDoS capability, and mitigation guidance). The metadata identifies it as a 'confirmed_exploitation_record' and explicitly prohibits 'prevalence_magnitude' and 'vulnerability_severity' claims, supporting the claim's boundary qualifications.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 3,
+        "modality_error": false,
+        "rationale": "E_03_06E6ABC42DA3AC77 explicitly lists DDoS as an example of 'Destructive Operations', and E_03_F13F996D181217BA reports claims by hacktivist personas on Telegram regarding DDoS, website defacements, and hack-and-leak operations. The qualification that this is context and not NoI direction is a correct logical boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 9,
+        "modality_error": false,
+        "rationale": "The claim correctly identifies the source (CISA KEV), the CVE ID, the nature of the vulnerability (HTTP/2 rapid reset allowing DDoS), and its status as a confirmed exploitation record as per E_08_3453329306E149CB.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 10,
+        "modality_error": false,
+        "rationale": "The claim correctly attributes the information to Mandiant M-Trends 2023, using E_03_06E6ABC42DA3AC77 for the classification of DDoS as destructive operations and E_03_F13F996D181217BA for the report on hacktivist claims of DDoS activity.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "ca4ffcffe663cf9ebe03284cb9a65d0ab6d4e74e0ff2bc0aede3fba8a3186eb3"
+}

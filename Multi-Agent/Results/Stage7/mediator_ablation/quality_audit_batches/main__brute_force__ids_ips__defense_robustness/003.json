@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      6,
+      7,
+      18,
+      19
+    ],
+    "input_sha256": "22f9cdb644dc503ebe84767722c218608a82492af99837042642d7d89e8b34f2",
+    "pair": {
+      "input_sha256": "ce1b2aaceef2b76cfdfe37304da3234c32d956498e363c32468e680a04179ff3",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__brute_force__ids_ips__defense_robustness",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 6,
+        "modality_error": false,
+        "rationale": "The cited CISA CPG record (E_23_EBCAB9508641E703) explicitly states that organizations should 'provision unique and separate credentials for similar services and asset access on IT and OT networks' and lists 'Valid Accounts (T1078, ICS T0859)' and 'Brute Force - Password Guessing (T1110.001)' under the 'TTP or RISK ADDRESSED' section.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 7,
+        "modality_error": false,
+        "rationale": "The cited NIST SP 800-53 Rev. 5 record (E_25_FE58E4FCF044EDE3) discusses 'automatic system lockout or execution of a delay algorithm' and specifies that if these are not implemented, 'organizations consider a combination of other actions to help prevent brute force attacks'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 18,
+        "modality_error": false,
+        "rationale": "The cited CISA CPG record (E_23_EBCAB9508641E703) explicitly states that organizations should 'provision unique and separate credentials for similar services and asset access on IT and OT networks' and lists 'Valid Accounts (T1078, ICS T0859)' and 'Brute Force - Password Guessing (T1110.001)' under the 'TTP or RISK ADDRESSED' section.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 19,
+        "modality_error": false,
+        "rationale": "The cited NIST SP 800-53 Rev. 5 record (E_25_FE58E4FCF044EDE3) discusses 'automatic system lockout or execution of a delay algorithm' and specifies that if these are not implemented, 'organizations consider a combination of other actions to help prevent brute force attacks'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "f753c737e4c05ab8b9ad9082a3153c0c5d6cba81182cd75d9c7ffa9bd1eea494"
+}

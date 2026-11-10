@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      8,
+      9,
+      18,
+      19
+    ],
+    "input_sha256": "b87be5f2d1684285ea33e09e744585a0066fd1c944c6769826027d378803bb84",
+    "pair": {
+      "input_sha256": "871946b620d40d80381f83d79894f8fa7d62eab4673081fb57cb9f0fc3a8420e",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__targeted_attack__access_control__attack_feasibility",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 8,
+        "modality_error": false,
+        "rationale": "The definitions of 'access control' and 'advanced persistent threat' provided in the claim are accurately summarized from E_25_8F4D567857A97316. The qualification that these are definitional context and not threat trajectory evidence is a legitimate logical boundary inference given the source is a glossary.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 9,
+        "modality_error": false,
+        "rationale": "E_29_4ED97777A686537A, E_29_951AF8A7281A822E, and E_29_A8790308F8A745BD are indeed static bibliographic metadata records. The limitation that they do not establish deployment maturity or operational effectiveness is explicitly supported by the 'prohibited_claim_types' metadata in those records. The statement regarding the lack of a directional publication trajectory absent a trend record is a valid logical boundary.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 18,
+        "modality_error": false,
+        "rationale": "The definitions provided are accurately summarized from E_25_8F4D567857A97316 ('resourceful' corresponds to 'significant resources'). The qualification that this is definitional context rather than forecast trajectory evidence is a legitimate logical boundary.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 19,
+        "modality_error": false,
+        "rationale": "The E_29 records support the existence of these publications as bibliographic records. The limitation that they do not establish deployment maturity, operational effectiveness (supported by 'prohibited_claim_types'), or a directional trajectory (logical boundary for static metadata) is correct.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "6c9975b7d8223b886e3673959682a0534b11a21b09e0ee10ead5e91dfdc1f002"
+}

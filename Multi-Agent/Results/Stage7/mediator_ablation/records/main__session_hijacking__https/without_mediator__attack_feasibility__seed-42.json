@@ -1,0 +1,123 @@
+{
+  "assessment": {
+    "case_id": "main__session_hijacking__https",
+    "claims": [
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "E_10_AC5A58AF5E015229"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "The supplied CISA/Siemens advisory records a cross-site scripting vulnerability in SCALANCE switches that, if used by a threat actor, could result in stealing session cookies and session hijacking."
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "IBM X-Force 2024 reports security misconfigurations as the most observed OWASP web risk in penetration testing findings, including concurrent user sessions described as able to weaken MFA through session hijacking, and reports public-facing application exploitation in 29% of incidents, slightly higher than 2022."
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "E_25_99857C4681E8FEE5"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "NIST SP 800-53 Rev.5 identifies session authenticity protection as addressing man-in-the-middle attacks, session hijacking, and insertion of false information, with an enhancement to invalidate session identifiers at logout."
+      },
+      {
+        "claim_id": "C4",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "forecast_component": "PMT_TRAJECTORY",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "The cutoff-constrained Crossref trend for PMT_HTTPS reports annual HTTPS security publication counts of 14 in 2021, 8 in 2022, 8 in 2023, and 15 in 2024, with an OLS slope of 0.3 works per year."
+      },
+      {
+        "claim_id": "C5",
+        "evidence_ids": [
+          "E_12_9B8ECD82AD844621",
+          "E_12_CFEC6517865F0563"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "The supplied MITRE ATT&CK records identify S0114 as a Windows bootkit and S0073 as a web shell, providing general adversary software context."
+      }
+    ],
+    "critic_type": "attack_feasibility",
+    "evidence_sufficiency": "PARTIAL",
+    "stance": 0,
+    "stance_basis": {
+      "challenging_claim_ids": [],
+      "decision": "NO_DIRECTIONAL_EVIDENCE",
+      "rationale": "After deliberation, no supplied evidence provides a decisive role-relevant directional claim for the Attack side. The frozen forecast threat state uses NoP as its stated modality, but the evidence does not contain an explicit temporal publication-activity trend for THREAT_SESSION_HIJACKING NoP. E_04_B9A3190D9CA152A3 describes observed web-application threat patterns and a 2024 public-facing exploitation share that is slightly higher than 2022, but that is operational threat-context evidence, not direct NoP publication-activity evidence for the stated threat modality. E_33_13A684B424C1D15B is directional for the PMT_HTTPS side only and cannot become a decisive Attack stance-basis component. The remaining advisory, control, and MITRE records are static mechanism or control context and do not establish a temporal threat trajectory or a direct threat-minus-PMT gap direction.",
+      "supporting_claim_ids": []
+    },
+    "unresolved_questions": [
+      "No supplied evidence reports a temporal publication-activity trend for THREAT_SESSION_HIJACKING NoP, so the forecast's stated threat NoP increasing direction is not directly confirmed by the evidence.",
+      "The missing exploitation_signal slot leaves unresolved whether realized session-hijacking exploitation after the cutoff has increased, decreased, or persisted at a measurable level.",
+      "Historical threat NoI and NoP fields are unavailable or masked, limiting independent verification of the latest observed threat-state direction.",
+      "E_04_B9A3190D9CA152A3 reports public-facing application exploitation in 29% of incidents, slightly higher than 2022, but this does not directly measure the forecast's stated THREAT_SESSION_HIJACKING NoP modality.",
+      "The supplied PMT_HTTPS publication trend supports PMT-side publication activity, but the evidence does not resolve the relative movement between threat NoP and PMT NoP required to confirm the forecast gap direction.",
+      "Static advisories, control guidance, and bibliographic metadata do not establish control effectiveness, deployment maturity, or operational effectiveness, so they cannot independently confirm the future threat trajectory."
+    ],
+    "unsupported_specificity_detected": false
+  },
+  "identity": {
+    "case_id": "main__session_hijacking__https",
+    "mediator": false,
+    "prompt_sha256": "7d7f79ffa1ee48e39e518aca3efa23180def0ea94d107b265e3eee9115264f9a",
+    "role": "attack_feasibility",
+    "runtime": {
+      "batch_size": 2048,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 131072,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 1,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512
+    },
+    "schema_sha256": "bb7046bbf74dd9445783177dcf7e5df3ce4bd510c2a0ee8d5d0d478d1b451888",
+    "seed": 42,
+    "source_hashes": {
+      "evidence_pack": "6a4b7cb10d09f6b120e2783bf1bb0957dd7cd53c66243135af329756876c5170",
+      "round1_turns": "e3ab02229fb05d4b0b4fadf6e17531e7486fd832e752fbd8cb557785f7c4cdf1",
+      "stage1": "5b8473203535452075465098dd80d84de51fa302487b5d5c4f382f0f74f6b2d1",
+      "stage2": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7"
+    },
+    "version": "mediator-ablation-frozen-round1-v1"
+  },
+  "sha256": "272ae24619850c913cd760dcf77a1a8cf8858000de75040e3ac4f5fe16bccb86"
+}

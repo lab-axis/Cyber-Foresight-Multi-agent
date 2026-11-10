@@ -1,0 +1,191 @@
+{
+  "identity": {
+    "input_sha256": "b6a40492f41b7ae120a3e91efc94ff0a9c8e0007025c9c5a065dc025c2c0097f",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+    "review_id": "main__ransomware__cryptography__attack_feasibility",
+    "sampling": {
+      "min_p": 0.0,
+      "seed": 42,
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+    "version": "mediator-blind-claim-audit-gemma4-v3"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "E_31 (recital 54) explicitly mentions the 'exponential increase in ransomware attacks,' lists drivers including 'ransomware as a service', 'cryptocurrencies', 'ransom demands', and 'supply chain attacks', and states that 'Member States should develop a policy addressing the rise of ransomware attacks as part of their national cybersecurity strategy'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 1,
+        "modality_error": false,
+        "rationale": "E_04 confirms ransomware constituted 17% of remediated incidents in 2022, held the top spot since at least 2020, is an 'enduring threat', extortion was at 27% (most common impact), and phishing was at 41% (leading infection vector).",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 11,
+        "modality_error": false,
+        "rationale": "E_31 (recital 54) contains all the referenced elements: exponential increase, drivers (RaaS, cryptocurrencies, ransom demands, supply-chain attacks), and the call for Member States to address it in their national cybersecurity strategy.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 12,
+        "modality_error": false,
+        "rationale": "The factual data points (17% ransomware, top spot since 2020, 27% extortion, 41% phishing) are explicitly stated in E_04. The qualification that these are single-year shares and persistence observations rather than a temporal measurement of incident count (NoI) is a correct logical boundary inference based on the provided content.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 2,
+        "modality_error": false,
+        "rationale": "The CISA KEV record E_08_510579F0D776F3BE explicitly states that CVE-2022-27593 in QNAP Photo Station 'was observed being utilized in a Deadbolt ransomware campaign.'",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 3,
+        "modality_error": false,
+        "rationale": "E_03_0BAA7B22596028F4 confirms that intrusions involving ransomware had a median dwell time of 9 days in 2022, compared to 5 days in M-Trends 2022, and explicitly credits ransomware attacks as a driving factor in reducing dwell time.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 13,
+        "modality_error": false,
+        "rationale": "The factual claim about CVE-2022-27593 is directly supported by the content of E_08_510579F0D776F3BE. The qualification regarding the source contract is supported by the metadata for E_08, which allows 'confirmed_exploitation' and prohibits 'prevalence_magnitude' and 'vulnerability_severity'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 14,
+        "modality_error": false,
+        "rationale": "The data points regarding global median dwell time (16 days vs 21 days) and ransomware dwell time (9 days vs 5 days) are directly supported by E_03_0BAA7B22596028F4. The qualification that these are detection-speed metrics rather than incident-count measurements is a valid logical boundary inference regarding the scope of dwell-time data.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 4,
+        "modality_error": false,
+        "rationale": "E_33 explicitly reports annual publication counts of 210 (2021), 254 (2022), 272 (2023), and 330 (2024), with an OLS slope of 37.8 works/year.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 5,
+        "modality_error": false,
+        "rationale": "E_25 (NIST SP 800-53 Rev.5) lists 'ransomware attacks that encrypt organizational data on servers' as examples of 'actual threat events' within the context of contingency planning (specifically mentioning contingency training and testing).",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 15,
+        "modality_error": false,
+        "rationale": "E_33 reports the identical publication counts (210, 254, 272, 330) and OLS slope (37.8). The claim's statements regarding the source contract (allowing directional_publication_trend and prohibiting claims on deployment maturity, operational effectiveness, or causal mitigation effectiveness) are explicitly stated in the content and metadata of E_33. The distinction between PMT publication activity (NoP) and threat NoI",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 16,
+        "modality_error": false,
+        "rationale": "E_25 (NIST SP 800-53 Rev.5) lists 'ransomware attacks that encrypt organizational data on servers' as 'actual threat events' and specifically discusses this in the context of 'CONTINGENCY TRAINING'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 6,
+        "modality_error": false,
+        "rationale": "E_26 (NIST SP 800-53A Rev.5) explicitly provides assessment objectives and methods for SC-12(06) 'CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT | PHYSICAL CONTROL OF KEYS' and SC-13 'CRYPTOGRAPHIC PROTECTION'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 7,
+        "modality_error": false,
+        "rationale": "E_23 (CISA CPG) states the nation has faced 'unprecedented cyber threats from ransomware to nation-state espionage' and describes the CPGs as 'aimed at addressing some of the most common and impactful cyber risks'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 17,
+        "modality_error": false,
+        "rationale": "E_26 explicitly covers assessment objectives and procedures for SC-12(06) (physical control of keys) and SC-13 (cryptographic protection). The conclusion that this establishes cryptography as an assessable control area in the U.S. federal framework is a legitimate logical boundary inference given the nature of the NIST SP 800-53A publication.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 18,
+        "modality_error": false,
+        "rationale": "E_23 is titled 'A LETTER FROM OUR DIRECTOR' and explicitly mentions ransomware among 'unprecedented cyber threats'. It frames the CPGs as addressing 'common and impactful cyber risks' and mentions applicability to 'organizations, both large and small', including 'critical infrastructure entities of all sizes'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 8,
+        "modality_error": false,
+        "rationale": "E_02 contains the exact phrase 'it is a respite to not have to write about Ransomware for a couple of pages' and discusses the 'growth of median and above median percentiles in bits per second of DDoS attacks', confirming growth in magnitudes.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 9,
+        "modality_error": false,
+        "rationale": "E_24 explicitly provides an example where a Profile could be 'scoped to an organization’s financial systems or to countering ransomware threats and handling ransomware incidents involving those financial systems'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 19,
+        "modality_error": false,
+        "rationale": "The first part of the claim is supported by E_02. The second part is a correct boundary inference regarding the limits of the evidence; E_02 discusses DDoS magnitudes and contains an editorial comment, but provides no ransomware incident-count (NoI) time series data. This qualification is also explicitly validated in the cross-review turn for C9.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 20,
+        "modality_error": false,
+        "rationale": "E_24 explicitly provides an example where a Profile could be 'scoped to an organization’s financial systems or to countering ransomware threats and handling ransomware incidents involving those financial systems'.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 10,
+        "modality_error": false,
+        "rationale": "The three cited Crossref metadata records explicitly reference 'Acknowledgment to Reviewers of Cryptography' for the years 2017 (E_29_7C01F6CA0D982DFF), 2020 (E_29_185B62FFF51926EC), and 2022 (E_29_3C1B7B4F9532A5F2).",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 21,
+        "modality_error": false,
+        "rationale": "The first sentence is directly supported by the metadata records for 2017, 2020, and 2022. The second sentence is a valid logical boundary inference: a set of three individual metadata records for reviewer acknowledgments constitutes static data and does not provide the time-series frequency data required to establish a directional NoP (number of publications) trajectory.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 22,
+        "modality_error": false,
+        "rationale": "The factual propositions regarding the lack of information-theoretic security proofs for ML (relative to cryptography) and the emergence of impossibility results limiting mitigation effectiveness are directly supported by E_15_0A98378FC609EF7E. The qualification that this does not establish cryptography deployment maturity or ransomware-specific effectiveness is a correct description of the limits of the cited record",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 23,
+        "modality_error": false,
+        "rationale": "E_16 explicitly describes cryptographic hashes and perceptual hashing as methods for linking content to metadata, and digital signatures as providing assurance of the signatory (attribution) and that information was not modified (tamper-evidence). The source title establishes the synthetic-content provenance context. The statement's analytical qualifications regarding the lack of evidence for deployment maturity, NoP",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "69598fb13389c0cecea909fc5ac4ae0cef467435d8cb728596bca092138dde38"
+}

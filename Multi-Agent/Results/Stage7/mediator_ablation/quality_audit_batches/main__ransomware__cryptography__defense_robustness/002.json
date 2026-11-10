@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      4,
+      5,
+      12,
+      13
+    ],
+    "input_sha256": "2165b161e440f8a63c35772e5209398dfd05b9846c487572e87a69fbf156be49",
+    "pair": {
+      "input_sha256": "4e0d14ee5b016b539ea6092986e40aee707b87e2feb2acb8419cf4ff2a7b6c23",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__ransomware__cryptography__defense_robustness",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 4,
+        "modality_error": false,
+        "rationale": "The factual summary of EU Directive 2022/2555 (NIS2) recital 54 is directly supported by E_31, which mentions the 'exponential increase in ransomware attacks,' the encryption of data and systems, the drivers (RaaS, cryptocurrencies, ransom demands, supply chain attacks), and the call for Member States to address this in their national cybersecurity strategies. The statement regarding the source contract is also a a a",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 5,
+        "modality_error": false,
+        "rationale": "The description of NIST AI 100-2's findings regarding the lack of information-theoretic security proofs for ML algorithms compared to cryptography and the appearance of impossibility results limiting mitigation effectiveness is directly supported by E_15. The conclusion that this provides neutral adversarial-ML context and does not establish cryptography deployment maturity or ransomware effectiveness is a correct a",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 12,
+        "modality_error": false,
+        "rationale": "The factual summary of NIS2 recital 54 is directly supported by E_31. The statement that the source contract limits the record to legal and regulatory claims is supported by the 'allowed_claim_types' metadata in E_31 (legal_requirement, regulatory_scope, eu_legal_requirement).",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 13,
+        "modality_error": false,
+        "rationale": "The factual summary of NIST AI 100-2 is directly supported by E_15. The characterization of the evidence as neutral adversarial-ML context that does not establish cryptography maturity or ransomware-specific effectiveness is a valid boundary inference based on the content of E_15.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "1f5535b312599eccc139381a722ac2c08ba4725d45ee1ea426b3d32ee2bf61a6"
+}

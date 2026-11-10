@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      6,
+      7,
+      14,
+      15
+    ],
+    "input_sha256": "1d09d088e9e7f98b7ef30fc65b17344ea648cc29be9e056e2b5f3c39615aeaf9",
+    "pair": {
+      "input_sha256": "4e0d14ee5b016b539ea6092986e40aee707b87e2feb2acb8419cf4ff2a7b6c23",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__ransomware__cryptography__defense_robustness",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 6,
+        "modality_error": false,
+        "rationale": "E_16 describes cryptographic hashes, perceptual hashing, and digital signatures as mechanisms to link content to metadata and provide tamper-evidence and attribution within the context of synthetic content. The claim's qualification that this does not establish deployment maturity, ransomware effectiveness, or NoP trajectory is a correct boundary inference based on the source's content and the prohibited claim types.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 7,
+        "modality_error": false,
+        "rationale": "E_23 explicitly mentions ransomware as an unprecedented threat and describes the CPGs as a way for organizations across the spectrum (including critical infrastructure, state/local government, and hospitals/utilities) to focus investment on the most impactful security outcomes. The qualification that this is neutral risk-management context and not direct NoI/NoP trajectory evidence is a correct boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 14,
+        "modality_error": false,
+        "rationale": "E_16 describes cryptographic hashes, perceptual hashing, and digital signatures as mechanisms to link content to metadata and provide tamper-evidence and attribution within the context of synthetic content. The qualification that this is mechanism/provenance context and not ransomware-specific effectiveness or NoP trajectory evidence is a correct boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 15,
+        "modality_error": false,
+        "rationale": "E_23 describes the CPGs as addressing the need for organizations of all sizes (specifically mentioning critical infrastructure, state/local governments, and hospitals/utilities) to prioritize security investments against risks including ransomware.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "b4d1cb7a46efaf326ef55e38ffdba355e511a71c2a50f647613bc739ff6cee8a"
+}

@@ -1,0 +1,52 @@
+{
+  "identity": {
+    "indices": [
+      10,
+      21,
+      22
+    ],
+    "input_sha256": "22c3fc55df40ed5569bdf7aa6948ed93a2834aff9ed1ad1f916c2aafdd5751e7",
+    "pair": {
+      "input_sha256": "b6a40492f41b7ae120a3e91efc94ff0a9c8e0007025c9c5a065dc025c2c0097f",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__ransomware__cryptography__attack_feasibility",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 10,
+        "modality_error": false,
+        "rationale": "The three cited Crossref metadata records explicitly reference 'Acknowledgment to Reviewers of Cryptography' for the years 2017 (E_29_7C01F6CA0D982DFF), 2020 (E_29_185B62FFF51926EC), and 2022 (E_29_3C1B7B4F9532A5F2).",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 21,
+        "modality_error": false,
+        "rationale": "The first sentence is directly supported by the metadata records for 2017, 2020, and 2022. The second sentence is a valid logical boundary inference: a set of three individual metadata records for reviewer acknowledgments constitutes static data and does not provide the time-series frequency data required to establish a directional NoP (number of publications) trajectory.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 22,
+        "modality_error": false,
+        "rationale": "The factual propositions regarding the lack of information-theoretic security proofs for ML (relative to cryptography) and the emergence of impossibility results limiting mitigation effectiveness are directly supported by E_15_0A98378FC609EF7E. The qualification that this does not establish cryptography deployment maturity or ransomware-specific effectiveness is a correct description of the limits of the cited record",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "a2f7ec971d763028bf2e5062f51787df97829a172c2f80fdbf0bf37e086931ce"
+}

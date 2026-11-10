@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      0,
+      1,
+      5,
+      6
+    ],
+    "input_sha256": "c93d0e9b016ff087007621f5adcdee2917d3b2a8b271a3cae71ade9b0697b0fa",
+    "pair": {
+      "input_sha256": "23849ae91e733366b771e48b7757292eb6cfc5aa10ae1fdb0745fc2ec10542a7",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__session_hijacking__https__defense_robustness",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The claim accurately reports the annual publication counts (2021=14, 2022=8, 2023=8, 2024=15) and the OLS slope (0.300000 works/year) as specified in record E_33_13A684B424C1D15B.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 1,
+        "modality_error": false,
+        "rationale": "The claim accurately reports total_results=45 and first_to_last_delta=1 from E_33_13A684B424C1D15B. The observation that the net change is one publication (15-14=1) and that the sequence 14, 8, 8, 15 is not monotonically increasing are correct logical inferences from the provided data.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 5,
+        "modality_error": false,
+        "rationale": "The claim accurately reports the OLS slope (0.30) and annual counts (14, 8, 8, 15) from E_33_13A684B424C1D15B. It correctly identifies the data as a publication-activity measure (NoP), which aligns with the forecast's PMT state modality.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 6,
+        "modality_error": false,
+        "rationale": "The claim accurately reports total_results=45 and first_to_last_delta=1 from E_33_13A684B424C1D15B and correctly identifies the net increase as one publication. The qualification that this is a small-magnitude observation that does not reverse the positive OLS slope is a valid analytical description of the data limits.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "9c4aef2e0bf89e390b8f8d39d7fb52f6224ca65746ee92087194b3b3c1c0a7ff"
+}

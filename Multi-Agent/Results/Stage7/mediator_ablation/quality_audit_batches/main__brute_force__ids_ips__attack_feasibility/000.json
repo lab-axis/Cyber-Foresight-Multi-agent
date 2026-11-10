@@ -1,0 +1,60 @@
+{
+  "identity": {
+    "indices": [
+      0,
+      1,
+      6,
+      7
+    ],
+    "input_sha256": "fbb6fab4577294ebed1e748203e418b3bb303deaeaf5c904e5a3b3ad93c14225",
+    "pair": {
+      "input_sha256": "d20bf0093ac28c466443f41c698e906f96af2bae9d189152073318b486cd1891",
+      "model": "Gemma4-31B-it-Q6_K_L",
+      "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+      "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+      "review_id": "main__brute_force__ids_ips__attack_feasibility",
+      "sampling": {
+        "min_p": 0.0,
+        "seed": 42,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+      "version": "mediator-blind-claim-audit-gemma4-v3"
+    }
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The 2024 Verizon DBIR (E_02_669F59880AF52688) explicitly reports 1,997 incidents for basic web application attacks and states that threat actors continue to exploit assets with default, simplistic, and easily guessable credentials via brute forcing, buying, or reusing them from previous breaches.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 1,
+        "modality_error": false,
+        "rationale": "Mandiant M-Trends 2024 (E_03_F2B2EBA86BEEFDC5) supports all cited figures: exploit as the most prevalent vector at 38% (a 6 percentage point increase from 2022), phishing at 17% (down from 22% in 2022), and prior compromise at 15%. Brute force is listed in the chart data at 6% but is not mentioned in the narrative text.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 6,
+        "modality_error": false,
+        "rationale": "The 2024 Verizon DBIR (E_02_669F59880AF52688) explicitly reports 1,997 incidents for basic web application attacks and states that threat actors continue to exploit assets with default, simplistic, and easily guessable credentials via brute forcing, buying, or reusing them from previous breaches.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 7,
+        "modality_error": false,
+        "rationale": "The statistical figures for exploit (38%, +6pp), phishing (17%, from 22%), prior compromise (15%), and brute force (6% in chart) are directly supported by Mandiant M-Trends 2024 (E_03_F2B2EBA86BEEFDC5). The qualification that these are cross-sectional vector shares and not a temporal NoI frequency trajectory is a valid logical boundary inference based on the provided data.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "a9155208770641065f42f8f7ee3ebd8421fdfe4103dbf2bc14ce2af6eed344b0"
+}

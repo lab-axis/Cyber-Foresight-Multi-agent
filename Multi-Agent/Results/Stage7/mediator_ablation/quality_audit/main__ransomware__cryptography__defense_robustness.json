@@ -1,0 +1,142 @@
+{
+  "identity": {
+    "input_sha256": "4e0d14ee5b016b539ea6092986e40aee707b87e2feb2acb8419cf4ff2a7b6c23",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "cc049e389e8950bc036cef357d7a06dd044d3fac916f9eda91d05735161efabc",
+    "review_id": "main__ransomware__cryptography__defense_robustness",
+    "sampling": {
+      "min_p": 0.0,
+      "seed": 42,
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "schema_sha256": "89c1b96edfd270c1b2cbb704edc028134de045444df9cf3a320f794649e560ff",
+    "version": "mediator-blind-claim-audit-gemma4-v3"
+  },
+  "judgment": {
+    "claims": [
+      {
+        "index": 0,
+        "modality_error": false,
+        "rationale": "The stats for PMT_CRYPTOGRAPHY (counts 210, 254, 272, 330; slope 37.80; delta 120; total 1066) are verbatim from E_33. The source contract and content in E_33 explicitly permit 'directional_publication_trend' claims and exclude deployment maturity, operational effectiveness, and causal mitigation effectiveness. The cross-review confirms both critics agreed (attack_feasibility on C01 and defense_robustness on C5) that",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 1,
+        "modality_error": false,
+        "rationale": "E_26 explicitly lists SC-12(06) for physical control of keys with external providers and SC-13 for defining/implementing cryptographic uses and types. The inference that it is an established, assessable security control area in the U.S. federal framework is a valid logical boundary inference from a NIST SP 800-53A assessment guide. The cross-review confirms agreement (attack_feasibility on C02 and defense_robustnessな",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 8,
+        "modality_error": false,
+        "rationale": "The stats are verbatim from E_33. The consistency with the forecast is supported by the forecast summary, which lists the pmt_state direction as 'increasing' with 'NoP' modality. The contract and scope limitations are explicitly stated in E_33.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 9,
+        "modality_error": false,
+        "rationale": "E_26 provides the assessment objectives for SC-12(06) (physical control of keys with external service providers) and SC-13 (identification and implementation of cryptographic uses and types). The interpretation that it is an established, assessable control area is supported by the nature of the NIST document.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 2,
+        "modality_error": false,
+        "rationale": "E_04 confirms ransomware constituted 17% of incidents remediated in 2022, held the top action-on-objective spot since at least 2020, extortion was the most common attack impact at 27%, and phishing was the top initial access vector at 41%. The statement that these observations (share and prevalence) do not constitute direct NoI incident-count/frequency trajectory evidence is a valid logical boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 3,
+        "modality_error": false,
+        "rationale": "E_03 confirms the global median dwell time in 2022 was 16 days (down from 21 days in M-Trends 2022) and that ransomware intrusions had a median dwell time of 9 days in 2022 compared to 5 days in M-Trends 2022, while crediting ransomware as a driving factor in the reduction. The statement that dwell-time is a detection-speed metric and not direct NoI trajectory evidence is a valid logical boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 10,
+        "modality_error": false,
+        "rationale": "E_04 confirms ransomware constituted 17% of incidents remediated in 2022, held the top action-on-objective spot since at least 2020, extortion was the most common attack impact at 27%, and phishing was the top initial access vector at 41%. The statement that this is a threat-pattern/incident-share observation rather than a direct temporal measurement of NoI trajectory is a valid logical boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 11,
+        "modality_error": false,
+        "rationale": "E_03 confirms the global median dwell time in 2022 was 16 days (down from 21 days in M-Trends 2022) and that ransomware intrusions had a median dwell time of 9 days in 2022 compared to 5 days in M-Trends 2022, while crediting ransomware as a factor in the reduction. The statement that this is an operational detection-speed metric and not direct NoI trajectory evidence is a valid logical boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 4,
+        "modality_error": false,
+        "rationale": "The factual summary of EU Directive 2022/2555 (NIS2) recital 54 is directly supported by E_31, which mentions the 'exponential increase in ransomware attacks,' the encryption of data and systems, the drivers (RaaS, cryptocurrencies, ransom demands, supply chain attacks), and the call for Member States to address this in their national cybersecurity strategies. The statement regarding the source contract is also a a a",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 5,
+        "modality_error": false,
+        "rationale": "The description of NIST AI 100-2's findings regarding the lack of information-theoretic security proofs for ML algorithms compared to cryptography and the appearance of impossibility results limiting mitigation effectiveness is directly supported by E_15. The conclusion that this provides neutral adversarial-ML context and does not establish cryptography deployment maturity or ransomware effectiveness is a correct a",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 12,
+        "modality_error": false,
+        "rationale": "The factual summary of NIS2 recital 54 is directly supported by E_31. The statement that the source contract limits the record to legal and regulatory claims is supported by the 'allowed_claim_types' metadata in E_31 (legal_requirement, regulatory_scope, eu_legal_requirement).",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 13,
+        "modality_error": false,
+        "rationale": "The factual summary of NIST AI 100-2 is directly supported by E_15. The characterization of the evidence as neutral adversarial-ML context that does not establish cryptography maturity or ransomware-specific effectiveness is a valid boundary inference based on the content of E_15.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 6,
+        "modality_error": false,
+        "rationale": "E_16 describes cryptographic hashes, perceptual hashing, and digital signatures as mechanisms to link content to metadata and provide tamper-evidence and attribution within the context of synthetic content. The claim's qualification that this does not establish deployment maturity, ransomware effectiveness, or NoP trajectory is a correct boundary inference based on the source's content and the prohibited claim types.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 7,
+        "modality_error": false,
+        "rationale": "E_23 explicitly mentions ransomware as an unprecedented threat and describes the CPGs as a way for organizations across the spectrum (including critical infrastructure, state/local government, and hospitals/utilities) to focus investment on the most impactful security outcomes. The qualification that this is neutral risk-management context and not direct NoI/NoP trajectory evidence is a correct boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 14,
+        "modality_error": false,
+        "rationale": "E_16 describes cryptographic hashes, perceptual hashing, and digital signatures as mechanisms to link content to metadata and provide tamper-evidence and attribution within the context of synthetic content. The qualification that this is mechanism/provenance context and not ransomware-specific effectiveness or NoP trajectory evidence is a correct boundary inference.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 15,
+        "modality_error": false,
+        "rationale": "E_23 describes the CPGs as addressing the need for organizations of all sizes (specifically mentioning critical infrastructure, state/local governments, and hospitals/utilities) to prioritize security investments against risks including ransomware.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      },
+      {
+        "index": 16,
+        "modality_error": false,
+        "rationale": "The claim is fully supported by the content and metadata of E_08_510579F0D776F3BE. The record explicitly states that CVE-2022-27593 in QNAP Photo Station was used in a Deadbolt ransomware campaign. The metadata confirms the allowed_claim_types as 'confirmed_exploitation' and the prohibited_claim_types as 'prevalence_magnitude' and 'vulnerability_severity'. Finally, the assertion that the record does not establish NoI",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    ]
+  },
+  "sha256": "35e8534e8fb8585b9a1a632c26440a95e9e30d478e2dc8d5e9b82567dde50a20"
+}

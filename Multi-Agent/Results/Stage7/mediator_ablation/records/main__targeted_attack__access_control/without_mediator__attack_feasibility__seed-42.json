@@ -1,0 +1,169 @@
+{
+  "assessment": {
+    "case_id": "main__targeted_attack__access_control",
+    "claims": [
+      {
+        "claim_id": "ATK_C1",
+        "evidence_ids": [
+          "E_03_F0CD4F1DE74CC7AD"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "Mandiant M-Trends 2023 reports opportunistic compromise leveraged as a source of targeted attack activity in 6% of intrusions in 2022 compared with 4% in 2021 and 3% in 2020; the metric is a share of intrusions, not a count or frequency of targeted-attack incidents."
+      },
+      {
+        "claim_id": "ATK_C2",
+        "evidence_ids": [
+          "E_10_5C0B9AC35F2420B3",
+          "E_10_CEB460BC4092B2D3"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "CISA ICS advisories ICSA-22-349-13 and ICSA-22-349-17 describe improper access-control handling in Siemens Mendix Workflow Commons and Mendix Email Connector modules, stating that authenticated remote attackers could read, delete, or manipulate sensitive information; these are point-specific vulnerability mechanisms, not evidence of targeted-attack incident count or frequency."
+      },
+      {
+        "claim_id": "ATK_C3",
+        "evidence_ids": [
+          "E_10_B4F773BEC65685CC"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "CISA ICS advisory ICSA-24-263-05 states that successful exploitation of Kastle Systems Access Control System Firmware vulnerabilities could allow an attacker to access sensitive information on the affected product; this is a product-specific vulnerability capability statement, not a broader exploitation trend or NoI measurement."
+      },
+      {
+        "claim_id": "ATK_C4",
+        "evidence_ids": [
+          "E_10_B4F773BEC65685CC"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "CISA ICS advisory ICSA-24-263-05 states that no known public exploitation specifically targeting the listed Kastle firmware vulnerabilities had been reported to CISA at the time of the advisory; this is a point-in-time observation limited to those specific CVEs and does not establish a broader absence of targeted-attack exploitation or a declining threat trajectory."
+      },
+      {
+        "claim_id": "ATK_C5",
+        "evidence_ids": [
+          "E_33_F4FC25CE90264812"
+        ],
+        "forecast_component": "PMT_TRAJECTORY",
+        "forecast_relation": "SUPPORTS_FORECAST",
+        "statement": "Crossref cutoff-constrained publication-trend data for access-control topics reports annual publication counts of 1040 in 2021, 1005 in 2022, 1115 in 2023, and 1070 in 2024, with an OLS slope of 20.0 works per year; the 2024 count is lower than the 2023 count, so the positive OLS slope does not imply monotonic year-over-year increase."
+      },
+      {
+        "claim_id": "ATK_C6",
+        "evidence_ids": [
+          "E_03_B4E8A797813EC72F"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "Mandiant M-Trends 2023 reports that organizations were notified of breaches by an external entity in 63% of incidents in 2022, continuing the trend observed in 2021; this is a detection-source share, not a targeted-attack incident count or frequency."
+      },
+      {
+        "claim_id": "ATK_C7",
+        "evidence_ids": [
+          "E_02_BE48A23ABD77A19C"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "The 2023 DBIR chunk associates the System Intrusion pattern with commonly recommended controls and reports an IG1 control mapping in which Control 5, Access Control Management, appears at 67%; this is a control-association mapping, not direct evidence of targeted-attack incident count or frequency."
+      },
+      {
+        "claim_id": "ATK_C8",
+        "evidence_ids": [
+          "E_12_F6120325C44B5EA9"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "MITRE ATT&CK M1015 describes Active Directory configuration measures, including domain account configuration, interactive logon restrictions, RDP access limits, dedicated administrative accounts, and authentication silos, intended to secure user accounts, control access, and reduce the risk of unauthorized access and lateral movement; this is mitigation context, not threat trajectory evidence."
+      },
+      {
+        "claim_id": "ATK_C9",
+        "evidence_ids": [
+          "E_25_8F4D567857A97316"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "NIST SP 800-53 Rev. 5 defines access control as the process of granting or denying requests for information processing services and physical facility entry, and defines advanced persistent threat as a sophisticated adversary using multiple attack vectors over an extended period; these are definitional context, not threat trajectory evidence."
+      },
+      {
+        "claim_id": "ATK_C10",
+        "evidence_ids": [
+          "E_29_4ED97777A686537A",
+          "E_29_951AF8A7281A822E",
+          "E_29_A8790308F8A745BD"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "Static Crossref academic metadata records establish the existence of access-control design publications as bibliographic records but do not establish deployment maturity, operational effectiveness, or a directional publication trajectory absent a cutoff-constrained trend record."
+      }
+    ],
+    "critic_type": "attack_feasibility",
+    "evidence_sufficiency": "PARTIAL",
+    "stance": 0,
+    "stance_basis": {
+      "challenging_claim_ids": [],
+      "decision": "NO_DIRECTIONAL_EVIDENCE",
+      "rationale": "After deliberation, the modality-precision concerns raised by the defense critic were correctly identified and are accepted. The Mandiant opportunistic-compromise data (ATK_C1) reports a share of intrusions (3%, 4%, 6%), not a count or frequency of targeted-attack incidents; per the inherited modality boundary, intrusion share is not direct NoI direction. The CISA advisory records (ATK_C2, ATK_C3, ATK_C4) are point-specific vulnerability-mechanism and product-specific capability observations, not evidence of a temporal change in targeted-attack incident count or frequency. The Kastle no-known-public-exploitation statement (ATK_C4) is limited to two specific CVEs at a single reporting point and does not establish a broader absence of exploitation or a declining threat trajectory. No evidence in the frozen payload directly reports a temporal change in the count or frequency of targeted-attack incidents (NoI). Per the gap-direction boundary, a direct GAP_DIRECTION interpretation requires direct evidence for both forecast-state modalities (NoI and NoP); NoI evidence is absent, so the forecasted threat-minus-PMT gap movement cannot be independently assessed from the Attack side. The NoP publication-trend evidence (ATK_C5) is defense-side and cannot serve as decisive Attack stance basis. No role-relevant directional evidence for THREAT_TRAJECTORY or GAP_DIRECTION exists in the frozen payload, so the stance remains 0.",
+      "supporting_claim_ids": []
+    },
+    "unresolved_questions": [
+      "No cutoff-compliant evidence in the frozen payload reports a temporal change in the count or frequency of targeted-attack incidents (NoI); the Mandiant share-of-intrusions data (6% in 2022 vs 4% in 2021 vs 3% in 2020) and the DBIR control-mapping percentages do not constitute NoI measurements under the inherited modality boundary.",
+      "The missing exploitation-signal slot means the CISA advisories cannot be connected to realized targeted-attack exploitation; the Kastle no-known-public-exploitation statement is limited to two specific CVEs at a single reporting date and does not generalize to the broader threat landscape.",
+      "The Crossref publication-trend evidence (ATK_C5) directly measures NoP publication activity and supports a positive OLS slope, but it is defense-side and cannot serve as Attack stance basis; additionally, the 2024 count (1070) is below the 2023 count (1115), so the positive slope does not imply monotonic increase.",
+      "The forecasted gap movement from -0.081 in 2025 to +0.009 in 2027 (slope 0.045/year) includes a slight positive crossing in 2027; without direct NoI evidence, the Attack side cannot independently confirm or challenge the sign or magnitude of this gap movement relative to the reported confidence half-widths.",
+      "Whether the Mandiant increases in opportunistic-compromise share or external-notification share are driven by changes in investigation mix, reporting methodology, or detection capability rather than by a genuine change in targeted-attack incident frequency cannot be determined from the supplied evidence."
+    ],
+    "unsupported_specificity_detected": false
+  },
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "mediator": false,
+    "prompt_sha256": "012969abd12269e3251349afb5a433985ec836a2945f960c38aa2231e6291551",
+    "role": "attack_feasibility",
+    "runtime": {
+      "batch_size": 2048,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 131072,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 1,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512
+    },
+    "schema_sha256": "1f7676c5ed0dbb615d09d48fa413838b5551193a5d074a08113ec523f2baf662",
+    "seed": 42,
+    "source_hashes": {
+      "evidence_pack": "8c4c754ecb9a4dc21d899f6904a24d4b4e1c3f0dbe5ec6ff112d496110b9b29b",
+      "round1_turns": "aa1f3b84f37bb13aec972906a494823f7e26d6813405e02210fc6f7804e19a21",
+      "stage1": "304807a460c79b97a7c155ac0f3a11e974386cf0363fc072fef87238f7525724",
+      "stage2": "e32d514b41e64ac386fed97a222cbc7fd92d7328e840ea7c0bd6ce0bf758352d"
+    },
+    "version": "mediator-ablation-frozen-round1-v1"
+  },
+  "sha256": "7c34486a8eed8b49162a8a7d6fba53e5f9f83f13e797268a1d53d46c9c6d0092"
+}

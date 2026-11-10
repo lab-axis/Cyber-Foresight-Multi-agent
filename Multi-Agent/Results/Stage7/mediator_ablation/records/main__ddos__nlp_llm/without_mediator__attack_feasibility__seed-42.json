@@ -1,0 +1,139 @@
+{
+  "assessment": {
+    "case_id": "main__ddos__nlp_llm",
+    "claims": [
+      {
+        "claim_id": "AF_C1",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "The 2023 Verizon DBIR reports that DDoS attack bandwidth increased in 2023, with median bits per second rising from 1.4 Gbps to 2.2 Gbps and the 97.5th percentile rising from 99 Gbps to 124 Gbps, and characterizes this as a trend that is hard to break as bandwidth and CPU processing become more accessible."
+      },
+      {
+        "claim_id": "AF_C2",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "The 2023 Verizon DBIR reports growth in distributed DNS Water Torture attacks, described as a resource-exhaustion DDoS-like attack against shared DNS infrastructure."
+      },
+      {
+        "claim_id": "AF_C3",
+        "evidence_ids": [
+          "E_08_3453329306E149CB"
+        ],
+        "forecast_component": "OPERATIONAL_INTERPRETATION",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "CISA KEV records CVE-2023-44487 as an HTTP/2 rapid reset vulnerability that allows a distributed denial-of-service attack and is represented in the payload as a confirmed exploitation record."
+      },
+      {
+        "claim_id": "AF_C4",
+        "evidence_ids": [
+          "E_03_06E6ABC42DA3AC77",
+          "E_03_F13F996D181217BA"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "Mandiant M-Trends 2023 describes DDoS as an example of destructive operations and reports observed hacktivist claims of traditional DDoS activity."
+      },
+      {
+        "claim_id": "AF_C5",
+        "evidence_ids": [
+          "E_04_892BBCAA3CE5CC92"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "IBM X-Force reports observed hacktivism operations related to the Israel-Hamas conflict and recommends DDoS mitigation readiness for affected organizations."
+      },
+      {
+        "claim_id": "AF_C6",
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "forecast_component": "PMT_TRAJECTORY",
+        "forecast_relation": "CHALLENGES_FORECAST",
+        "statement": "The cutoff-constrained Crossref trend reports NLP/LLM security publication counts increasing from 14 in 2021 to 87 in 2024, with an OLS slope of 23.4 works/year."
+      },
+      {
+        "claim_id": "AF_C7",
+        "evidence_ids": [
+          "E_29_CD092D34A1331D02"
+        ],
+        "forecast_component": "CONTEXT",
+        "forecast_relation": "NEUTRAL_CONTEXT",
+        "statement": "The Crossref metadata record verifies the existence of a publication titled Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case. but does not establish deployment maturity, operational effectiveness, or a publication trend."
+      }
+    ],
+    "critic_type": "attack_feasibility",
+    "evidence_sufficiency": "PARTIAL",
+    "stance": 0,
+    "stance_basis": {
+      "challenging_claim_ids": [],
+      "decision": "NO_DIRECTIONAL_EVIDENCE",
+      "rationale": "The deliberation confirmed that the supplied DDoS evidence reports bandwidth growth, vector growth, exploitation signaling, and hacktivist context, but it does not measure a temporal increase or decrease in THREAT_DDOS NoI incident count/frequency. Because the frozen threat-state modality is NoI, those findings remain operational or contextual and cannot become decisive Attack stance-basis claims. The external NLP/LLM publication trend directly challenges the PMT NoP direction, but PMT_TRAJECTORY is not a permissible decisive Attack stance-basis component. No direct two-modality evidence establishes the forecast GAP_DIRECTION. Therefore no role-relevant Threat_TRAJECTORY or GAP_DIRECTION evidence supports or challenges the Threat-side forecast.",
+      "supporting_claim_ids": []
+    },
+    "unresolved_questions": [
+      "No supplied evidence explicitly reports a temporal change in DDoS incident count or frequency (NoI), so the forecasted increasing NoI threat state for THREAT_DDOS cannot be directly confirmed or challenged.",
+      "The strongest DDoS trend evidence concerns attack bandwidth and vector growth, not NoI incident-count/frequency direction, leaving the exact threat-side NoI forecast direction indeterminate.",
+      "The threat_capability_or_mechanism, mitigation_relation_or_control, and mitigation_implementation evidence slots remain missing, limiting direct assessment of the operational meaning of the Threat–PMT gap.",
+      "The external NLP/LLM publication trend is increasing while the forecast PMT NoP direction is decreasing; the cause of that discrepancy, including possible differences in scope, model input, or cutoff constraints, remains unresolved and cannot determine the Attack stance."
+    ],
+    "unsupported_specificity_detected": false
+  },
+  "identity": {
+    "case_id": "main__ddos__nlp_llm",
+    "mediator": false,
+    "prompt_sha256": "32fc5dbbc6c2376afa14233a757e2c12020d0a08a2f889d7f20f677298e1d43d",
+    "role": "attack_feasibility",
+    "runtime": {
+      "batch_size": 2048,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 131072,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 1,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512
+    },
+    "schema_sha256": "e62a97fd7625c88fe8ee6bf27d0c115e16e255b19a8b2501eadd0877af0a4165",
+    "seed": 42,
+    "source_hashes": {
+      "evidence_pack": "4f1aa58c04997eccedea420ef31d14ec049d0dbdf6841d449ca8dcbde8e6f1f5",
+      "round1_turns": "3274fb6fa659442819a78caa4ab43f644075207d2febbf1453a9e25efb124f3b",
+      "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+      "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343"
+    },
+    "version": "mediator-ablation-frozen-round1-v1"
+  },
+  "sha256": "e692675c5b2bbd81d2be0a39d39947eb9d9c32a8aa8a7d42f9b87b2a6251d3a9"
+}
