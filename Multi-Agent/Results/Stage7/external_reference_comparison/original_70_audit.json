@@ -1,0 +1,2243 @@
+{
+  "all_verdicts": {
+    "CONTRADICTS": 1,
+    "DIRECT_SUPPORT": 57,
+    "PARTIAL_SUPPORT": 12
+  },
+  "audit_items": [
+    {
+      "audit_id": "5eb5b36e36e69bb36785f0ae",
+      "case_id": "main__brute_force__ids_ips",
+      "claim_id": "D9",
+      "evidence_ids": [
+        "E_02_669F59880AF52688"
+      ],
+      "lens": null,
+      "scenario_id": null,
+      "source_layer": "forecast_critic",
+      "statement": "The 2024 DBIR reports 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and states that threat actors continue to brute force default, simplistic, or guessable credentials.",
+      "verdict": {
+        "audit_id": "5eb5b36e36e69bb36785f0ae",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_02_669F59880AF52688"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited DBIR chunk directly reports 1,997 basic web application attack incidents and 881 with confirmed data disclosure. It also states that threat actors continue to take advantage of assets with default, simplistic, and easily guessable credentials via brute forcing, which directly supports the claim's wording.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "e3f4b88259d28675b8207680",
+      "case_id": "main__brute_force__ids_ips",
+      "claim_id": "D10",
+      "evidence_ids": [
+        "E_03_F2B2EBA86BEEFDC5"
+      ],
+      "lens": null,
+      "scenario_id": null,
+      "source_layer": "forecast_critic",
+      "statement": "Mandiant M-Trends 2024 includes brute force in its 2023 initial infection vector list, alongside exploit, phishing, prior compromise, and stolen credentials.",
+      "verdict": {
+        "audit_id": "e3f4b88259d28675b8207680",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_03_F2B2EBA86BEEFDC5"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited Mandiant M-Trends 2024 record directly lists Brute Force among the 2023 initial infection vector categories, together with Exploit, Phishing, Prior Compromise, and Stolen Credentials.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "4b8d40edba84c82e29dc7e16",
+      "case_id": "main__ddos__nlp_llm",
+      "claim_id": "D6",
+      "evidence_ids": [
+        "E_03_06E6ABC42DA3AC77",
+        "E_03_F13F996D181217BA"
+      ],
+      "lens": null,
+      "scenario_id": null,
+      "source_layer": "forecast_critic",
+      "statement": "Mandiant M-Trends 2023 described destructive operations, such as DDoS, as an assessed threat-group goal and described hacktivist personas claiming DDoS attacks, website defacements, and hack-and-leak operations.",
+      "verdict": {
+        "audit_id": "4b8d40edba84c82e29dc7e16",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_03_06E6ABC42DA3AC77",
+          "E_03_F13F996D181217BA"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited Mandiant M-Trends 2023 records directly support the claim. One record defines 'Destructive Operations' as an assessed threat-group goal and gives DDoS as an example. Another record describes hacktivist personas/self-proclaimed hacktivist groups claiming DDoS attacks, website defacements, and hack-and-leak operations. The claim preserves the source, scope, and descriptive nature of the evidence.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "1d395277f588c735e6321a8f",
+      "case_id": "main__ddos__nlp_llm",
+      "claim_id": "AF_C3",
+      "evidence_ids": [
+        "E_08_3453329306E149CB"
+      ],
+      "lens": null,
+      "scenario_id": null,
+      "source_layer": "forecast_critic",
+      "statement": "CISA KEV records CVE-2023-44487 as an HTTP/2 rapid reset vulnerability that allows a distributed denial-of-service attack and is represented in the payload as a confirmed exploitation record.",
+      "verdict": {
+        "audit_id": "1d395277f588c735e6321a8f",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_08_3453329306E149CB"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited CISA KEV evidence directly states that CVE-2023-44487 is an HTTP/2 rapid reset vulnerability that allows a distributed denial-of-service attack, and the supplied evidence record is explicitly typed as a confirmed exploitation record from CISA KEV. The counter-evidence is unrelated publication-trend context and does not contradict the claim.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "ab5a9abc5eaedd0c760d3e65",
+      "case_id": "main__insider_threat__cryptography",
+      "claim_id": "C2",
+      "evidence_ids": [
+        "E_20_913B6F999A0F1458"
+      ],
+      "lens": null,
+      "scenario_id": null,
+      "source_layer": "forecast_critic",
+      "statement": "NIST SP 800-161r1 C-SCRM guidance identifies insider threat bypass of security mechanisms as a risk and recommends less predictable predefined frequencies for automated component-inventory data collection.",
+      "verdict": {
+        "audit_id": "ab5a9abc5eaedd0c760d3e65",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_20_913B6F999A0F1458"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited NIST SP 800-161 Rev.1 C-SCRM chunk directly states that predefined frequencies for data collection should be less predictable in order to reduce the risk of an insider threat bypassing security mechanisms, within the system component inventory automated maintenance context.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "126642e3f6b057df490d26a8",
+      "case_id": "main__insider_threat__cryptography",
+      "claim_id": "C6",
+      "evidence_ids": [
+        "E_15_0A98378FC609EF7E"
+      ],
+      "lens": null,
+      "scenario_id": null,
+      "source_layer": "forecast_critic",
+      "statement": "NIST AI 100-2 contrasts widely used machine learning algorithms with cryptography by stating that the machine learning algorithms lack information-theoretic security proofs.",
+      "verdict": {
+        "audit_id": "126642e3f6b057df490d26a8",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_15_0A98378FC609EF7E"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited NIST AI 100-2 record explicitly states: 'Unlike cryptography, there are no information-theoretic security proofs for the widely used machine learning algorithms.' This directly supports the claim that NIST AI 100-2 contrasts widely used machine learning algorithms with cryptography by stating that the machine learning algorithms lack information-theoretic security proofs.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "99abfe857bd45b5667966c4b",
+      "case_id": "main__malware__anomaly_detection",
+      "claim_id": "A5",
+      "evidence_ids": [
+        "E_08_197B243FDF3AA15A",
+        "E_08_FEE46219AABDA967"
+      ],
+      "lens": null,
+      "scenario_id": null,
+      "source_layer": "forecast_critic",
+      "statement": "CISA KEV records confirmed exploitation of CVE-2017-8540 in Microsoft Malware Protection Engine and confirmed exploitation of CVE-2013-7331 in Internet Explorer, the latter allowing detection of anti-malware applications.",
+      "verdict": {
+        "audit_id": "99abfe857bd45b5667966c4b",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_08_197B243FDF3AA15A",
+          "E_08_FEE46219AABDA967"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "Both supplied records are CISA KEV confirmed-exploitation records. The first directly ties CVE-2017-8540 to Microsoft Malware Protection Engine, and the second directly ties CVE-2013-7331 to Internet Explorer and states the vulnerability could allow an attacker to detect anti-malware applications. The claim's characterization of the latter as 'allowing detection of anti-malware applications' is a capability description supported by the record's 'could allow an attacker to detect anti-malware applications', without adding actual exploitation of that specific capability.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "0c8cc098690745c43d3d25db",
+      "case_id": "main__malware__anomaly_detection",
+      "claim_id": "D1",
+      "evidence_ids": [
+        "E_33_D28EA285670B0D01"
+      ],
+      "lens": null,
+      "scenario_id": null,
+      "source_layer": "forecast_critic",
+      "statement": "Crossref records first deposited on or before 2024-12-31 show increasing annual publication counts for anomaly-detection/security records from 1431 in 2021 to 2496 in 2024, with a positive OLS slope of 366.20 works per year.",
+      "verdict": {
+        "audit_id": "0c8cc098690745c43d3d25db",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_33_D28EA285670B0D01"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited Crossref evidence explicitly states that records first deposited on or before 2024-12-31 show annual publication counts of 1431 in 2021 and 2496 in 2024, with counts increasing across the intervening years, and an OLS slope of 366.20 works/year. This directly supports the claim's scope, temporality, population, numerical values, and positive trend. No material contradictory evidence is supplied.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "b3efc19da6271b45041e6b95",
+      "case_id": "main__ransomware__cryptography",
+      "claim_id": "C04",
+      "evidence_ids": [
+        "E_03_0BAA7B22596028F4"
+      ],
+      "lens": null,
+      "scenario_id": null,
+      "source_layer": "forecast_critic",
+      "statement": "Mandiant M-Trends 2023 reports that the global median dwell time decreased from 21 days in 2021 to 16 days in 2022, with ransomware intrusions at a 9-day median dwell time in 2022, and credits ransomware attacks as a driving factor in the reduction.",
+      "verdict": {
+        "audit_id": "b3efc19da6271b45041e6b95",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_03_0BAA7B22596028F4"
+        ],
+        "direct_support": false,
+        "overgeneralization": false,
+        "rationale": "The cited M-Trends 2023 passage directly supports the 2022 global median dwell time of 16 days, the decrease from 21 days, the 9-day median dwell time for ransomware intrusions in 2022, and the statement that ransomware is credited as a driving factor in reducing dwell time. However, the passage attributes the prior 21-day figure to the M-Trends 2022 report, not explicitly to 2021. Therefore, the claim’s specific attribution of the 21-day baseline to 2021 is not directly supported by the supplied evidence.",
+        "unsupported_specificity": true,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "ee4dada2caa3aa77e26626fe",
+      "case_id": "main__ransomware__cryptography",
+      "claim_id": "C08",
+      "evidence_ids": [
+        "E_23_AC2A498B747552DF"
+      ],
+      "lens": null,
+      "scenario_id": null,
+      "source_layer": "forecast_critic",
+      "statement": "CISA's Cross-Sector Cybersecurity Performance Goals (CPG) address the challenge of prioritizing security investments against risks including ransomware, targeting organizations across the size spectrum including critical infrastructure, state and local government, and healthcare.",
+      "verdict": {
+        "audit_id": "ee4dada2caa3aa77e26626fe",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_23_AC2A498B747552DF"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited CISA CPG letter directly states that the Cross-Sector Cybersecurity Performance Goals address the need for organizations to identify and prioritize important cybersecurity practices and secure adequate resources. It frames this challenge in the context of national cyber threats including ransomware and describes organizations across the spectrum, including state and local governments, critical infrastructure entities, and hospitals, which supports the claim's inclusion of healthcare as an in-scope population.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "d6d73b8a32d3d402624b99c7",
+      "case_id": "main__session_hijacking__https",
+      "claim_id": "C2",
+      "evidence_ids": [
+        "E_04_B9A3190D9CA152A3"
+      ],
+      "lens": null,
+      "scenario_id": null,
+      "source_layer": "forecast_critic",
+      "statement": "IBM X-Force 2024 reports security misconfigurations as the most observed OWASP web risk in penetration testing findings, including concurrent user sessions described as able to weaken MFA through session hijacking, and reports public-facing application exploitation in 29% of incidents, slightly higher than 2022.",
+      "verdict": {
+        "audit_id": "d6d73b8a32d3d402624b99c7",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited IBM X-Force 2024 evidence directly supports each material part of the claim: security misconfigurations were the most observed OWASP web application security risk in penetration-testing findings; allowing concurrent user sessions could weaken MFA through session hijacking; and exploitation of public-facing applications was identified in 29% of incidents, slightly higher than in 2022.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "03a662d3d97fb26a9d773f6a",
+      "case_id": "main__session_hijacking__https",
+      "claim_id": "D4",
+      "evidence_ids": [
+        "E_10_AC5A58AF5E015229",
+        "E_04_B9A3190D9CA152A3"
+      ],
+      "lens": null,
+      "scenario_id": null,
+      "source_layer": "forecast_critic",
+      "statement": "Supplied threat records report session-hijacking mechanisms that include XSS-based session cookie stealing in SCALANCE switches and web-application misconfigurations, such as allowing concurrent user sessions, that could weaken MFA through session hijacking.",
+      "verdict": {
+        "audit_id": "03a662d3d97fb26a9d773f6a",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_10_AC5A58AF5E015229",
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "E_10_AC5A58AF5E015229 directly reports a cross-site scripting vulnerability in Siemens SCALANCE switches that could allow session cookie stealing and session hijacking. E_04_B9A3190D9CA152A3 directly reports web-application security misconfiguration findings, including allowing concurrent user sessions, that could weaken MFA through session hijacking. The claim only states that the supplied threat records report these mechanisms and does not add unsupported prevalence, causal effectiveness, or deployment-maturity claims. The supplied counter-evidence records do not materially conflict with the claim.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "3bb9518665f7f89a093a9574",
+      "case_id": "main__targeted_attack__access_control",
+      "claim_id": "ATK_C9",
+      "evidence_ids": [
+        "E_25_8F4D567857A97316"
+      ],
+      "lens": null,
+      "scenario_id": null,
+      "source_layer": "forecast_critic",
+      "statement": "NIST SP 800-53 Rev. 5 defines access control as the process of granting or denying requests for information processing services and physical facility entry, and defines advanced persistent threat as a sophisticated, resourceful adversary using multiple attack vectors over an extended period.",
+      "verdict": {
+        "audit_id": "3bb9518665f7f89a093a9574",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_25_8F4D567857A97316"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited NIST SP 800-53 Rev. 5 glossary record directly supports the claim by defining access control in terms of granting or denying specific requests for information and related information processing services and entry to physical facilities, and by defining advanced persistent threat as a sophisticated, well-resourced adversary that uses multiple attack vectors repeatedly over an extended period.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "f29c668f9951aec9893f1ff3",
+      "case_id": "main__targeted_attack__access_control",
+      "claim_id": "C_PMT_TREND_NONMONOTONIC",
+      "evidence_ids": [
+        "E_33_F4FC25CE90264812"
+      ],
+      "lens": null,
+      "scenario_id": null,
+      "source_layer": "forecast_critic",
+      "statement": "The same Crossref trend shows the 2024 count of 1070 is lower than the 2023 count of 1115, so the positive OLS slope does not imply a monotonic year-over-year increase.",
+      "verdict": {
+        "audit_id": "f29c668f9951aec9893f1ff3",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_33_F4FC25CE90264812"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited Crossref record reports annual counts 2023=1115 and 2024=1070, while also reporting a positive OLS slope of 20.000000 works/year. This directly shows that the 2024 count is lower than the 2023 count and that a positive trend slope can coexist with a year-over-year decline, so it directly supports the claim that the positive OLS slope does not imply a monotonic year-over-year increase.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "d29c53947467a9f1e427c237",
+      "case_id": "main__brute_force__ids_ips",
+      "claim_id": "FA-CLM-2",
+      "evidence_ids": [
+        "DE_DE16_E455D97291B61E2A"
+      ],
+      "lens": "financial_adoption",
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "Integrating IDS/IPS information with a SIEM or consolidated log-management solution can reduce manual log-review effort and make review of operational and security data cheaper and easier.",
+      "verdict": {
+        "audit_id": "d29c53947467a9f1e427c237",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE16_E455D97291B61E2A"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The CISA record directly supports the claim: it states that porting logs into one solution eliminates the time and effort of manual log reviews, that a SIEM can integrate IDS/IPS information, and that a SIEM's analysis engine makes review of functional, operational, and security data cheaper and easier. The counter-evidence record discusses IDPS update testing and administrator skills, but it does not materially contradict or limit the claim as written.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "fb9703f745a9508198cc781a",
+      "case_id": "main__brute_force__ids_ips",
+      "claim_id": "FA-CLM-1",
+      "evidence_ids": [
+        "DE_DE07_86DF83870E0A768D"
+      ],
+      "lens": "financial_adoption",
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "Automated security monitoring related to IDS/IPS can lower costs, enhance efficiency, and reduce the time security professionals spend on redundant monitoring tasks.",
+      "verdict": {
+        "audit_id": "fb9703f745a9508198cc781a",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE07_86DF83870E0A768D"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited evidence directly supports the benefit claim: it states that organizations seek automated solutions to lower costs, enhance efficiency, and improve the reliability of monitoring security-related information, and that automation may reduce time security professionals spend on redundant tasks. The claim preserves the modal strength by using “can,” does not assert exact costs, budgets, staffing counts, or universal effectiveness, and its IDS/IPS scope is consistent with the supplied evidence record’s PMT mapping. The counter-evidence record discusses IDPS testing and skill requirements but does not materially contradict the claim’s limited benefit statement.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "a48ca2e98253cc1ac88dca14",
+      "case_id": "main__brute_force__ids_ips",
+      "claim_id": "IR-G2",
+      "evidence_ids": [
+        "DE_DE04_0B77B88875745973"
+      ],
+      "lens": "institutional_regional",
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "A NIST IDPS guidance record supports institutional implementation practices for IDPS, including multiple technology types, protected IDPS accounts and management communications, ongoing security monitoring, update testing, vulnerability assessment, and configuration backup.",
+      "verdict": {
+        "audit_id": "a48ca2e98253cc1ac88dca14",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE04_0B77B88875745973"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited NIST IDPS guidance directly supports each enumerated practice: considering multiple IDPS technology types, creating separate protected IDPS user/administrator accounts, protecting IDPS management communications, ongoing monitoring and verification, regular vulnerability assessment, testing and deploying updates, and backing up configuration settings.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "74ce3d548bf6d00bc1bca2cb",
+      "case_id": "main__brute_force__ids_ips",
+      "claim_id": "IR-D1",
+      "evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "lens": "institutional_regional",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The frozen deployment context is a CIS IG2 reference enterprise, described as a multi-department enterprise that may face regulatory burdens and may require enterprise-grade technology and specialized expertise for some safeguards.",
+      "verdict": {
+        "audit_id": "74ce3d548bf6d00bc1bca2cb",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited CIS IG2 context record directly supports the claim’s neutral-context description. It states that CIS Implementation Group 2 describes an enterprise responsible for managing and protecting IT infrastructure across multiple departments, that such enterprises may face regulatory burdens, and that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure. The claim restates these context attributes without adding unsupported numerical, product, budget, staffing, legal-applicability, or deployment-specific details. The supplied counter-evidence records concern NIST ISCM and IDPS guidance and do not materially contradict the CIS IG2 context description.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "dcac9dd454f2d962d847b265",
+      "case_id": "main__brute_force__ids_ips",
+      "claim_id": "TF-C2",
+      "evidence_ids": [
+        "AE05C_2D35A464AD6F0FAE"
+      ],
+      "lens": "technical_feasibility",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "Distributed low-rate brute-force attacks can stay below per-host login thresholds and evade ordinary IDS/IPS security rules; TOPASE was proposed because existing countermeasures were ineffective against this disciplined-IP pattern, documenting a direct limitation of conventional IDS/IPS use.",
+      "verdict": {
+        "audit_id": "dcac9dd454f2d962d847b265",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "AE05C_2D35A464AD6F0FAE"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The supplied evidence record AE05C_2D35A464AD6F0FAE directly states that distributed low-rate brute-force attacks can remain below per-host login thresholds and evade ordinary IDS/IPS security rules, and that TOPASE was proposed because existing countermeasures were ineffective against this disciplined-IP pattern. The claim preserves this scope, including the qualifiers 'distributed low-rate,' 'per-host login thresholds,' 'ordinary IDS/IPS security rules,' and 'disciplined-IP pattern,' so it does not overgeneralize to all brute-force attacks or all IDS/IPS controls. No unsupported numbers, products, versions, or deployment specifics are added. The counter-evidence record shows IDS-related components can be implemented for brute-force defense, but it does not materially contradict the narrower limitation described in the claim.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "a783b0313a4f4e924cda16ae",
+      "case_id": "main__brute_force__ids_ips",
+      "claim_id": "TF-C4",
+      "evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "lens": "technical_feasibility",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The frozen reference-enterprise profile is CIS IG2, described as an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments; some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+      "verdict": {
+        "audit_id": "a783b0313a4f4e924cda16ae",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited context evidence directly identifies CIS Implementation Group 2 as the enterprise profile and states that it describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments, and that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure. The supplied counter-evidence is about IDS/IPS brute-force limitations and does not materially contradict this neutral context statement.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "68470399b4707320c7ca61e9",
+      "case_id": "main__ddos__nlp_llm",
+      "claim_id": "FA_CLM_002",
+      "evidence_ids": [
+        "DE_DE15_1AEC6DDD669756FF",
+        "DE_DE01_E85CB6412740EF20"
+      ],
+      "lens": "financial_adoption",
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "A GENERAL financial/adoption burden/constraint is supported: secure-by-design AI development requires significant resources throughout the system life cycle, and AI risk management involves resourcing needs such as staffing and funding.",
+      "verdict": {
+        "audit_id": "68470399b4707320c7ca61e9",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE15_1AEC6DDD669756FF",
+          "DE_DE01_E85CB6412740EF20"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited NCSC record directly states that following secure-by-design principles requires significant resources throughout a system’s life cycle. The cited NIST AI RMF record directly states that AI risk management involves gauging resources needed, such as staffing and funding. Together these support the general financial/adoption burden or constraint described in the claim. The supplied counter-evidence records are topically relevant but do not materially contradict or materially limit the claim.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "05858c64c0692a996eda26b3",
+      "case_id": "main__ddos__nlp_llm",
+      "claim_id": "FA_CLM_002",
+      "evidence_ids": [
+        "DE_DE15_1AEC6DDD669756FF",
+        "DE_DE01_E85CB6412740EF20"
+      ],
+      "lens": "financial_adoption",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "A GENERAL financial/adoption burden/constraint is supported: secure-by-design AI development requires significant resources throughout the system life cycle, and AI risk management involves resourcing needs such as staffing and funding.",
+      "verdict": {
+        "audit_id": "05858c64c0692a996eda26b3",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE15_1AEC6DDD669756FF",
+          "DE_DE01_E85CB6412740EF20"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "DE_DE15_1AEC6DDD669756FF directly states that following 'secure by design' principles requires significant resources throughout a system's life cycle, supporting the general resource/burden part of the claim. DE_DE01_E85CB6412740EF20 directly states that AI risk management involves gauging needed resources, explicitly including staffing and funding, supporting the financial/resourcing part of the claim. The supplied counter-evidence discusses security practices and possible automation but does not materially contradict the general resource requirement. The claim remains general and does not add unsupported exact numbers, budgets, staffing counts, or product-specific details.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "1f8a14a62e9488408e8323b1",
+      "case_id": "main__ddos__nlp_llm",
+      "claim_id": "IR_C2",
+      "evidence_ids": [
+        "DE_DE15_271AFADC7B3D5999"
+      ],
+      "lens": "institutional_regional",
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied secure-AI development guidance identifies documentation practices and structures such as model cards, data cards, and SBOMs that support transparency and accountability, which supports institutional auditability for NLP/LLM systems.",
+      "verdict": {
+        "audit_id": "1f8a14a62e9488408e8323b1",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE15_271AFADC7B3D5999"
+        ],
+        "direct_support": false,
+        "overgeneralization": true,
+        "rationale": "The cited UK NCSC guidance directly supports that model cards, data cards, and SBOMs are useful documentation structures and that comprehensive documentation supports transparency and accountability. It does not explicitly state that these practices support institutional auditability, so the claim makes an inferential extension beyond the cited evidence. The NLP/LLM population is not the main issue, but the institutional auditability conclusion is not directly grounded in the supplied text.",
+        "unsupported_specificity": false,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "683e5c93666cbca5adc08944",
+      "case_id": "main__ddos__nlp_llm",
+      "claim_id": "IR_C4",
+      "evidence_ids": [
+        "DE_DE02_007F05150CB46131"
+      ],
+      "lens": "institutional_regional",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied generative-AI risk profile identifies reporting of GAI incidents in compliance with legal and regulatory requirements, with sector-specific examples cited in the record, which challenges institutional feasibility by adding regulatory compatibility and compliance-reporting considerations for NLP/LLM deployment.",
+      "verdict": {
+        "audit_id": "683e5c93666cbca5adc08944",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE02_007F05150CB46131"
+        ],
+        "direct_support": true,
+        "overgeneralization": true,
+        "rationale": "The supplied evidence directly supports that the Generative AI Risk Profile identifies a requirement to report GAI incidents in compliance with legal and regulatory requirements and provides sector-specific examples such as HIPAA/OCR and NHTSA. However, the record does not explicitly state that this constitutes an institutional feasibility challenge or that it adds a feasibility burden; the claim extends the source by characterizing the compliance requirement as challenging institutional feasibility.",
+        "unsupported_specificity": false,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "9d3303175740f14ca700879b",
+      "case_id": "main__ddos__nlp_llm",
+      "claim_id": "TF_CLM_003",
+      "evidence_ids": [
+        "DE_DE02_CFF4EAB2C4BEC522",
+        "DE_DE15_7C1849B1FD93975C"
+      ],
+      "lens": "technical_feasibility",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied AI deployment guidance records describe monitoring, provenance, update management, and secure operation practices for AI/GAI systems, but they do not establish action-specific deployment maturity for NLP/LLM DDoS controls.",
+      "verdict": {
+        "audit_id": "9d3303175740f14ca700879b",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE02_CFF4EAB2C4BEC522",
+          "DE_DE15_7C1849B1FD93975C"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The two supplied AI deployment guidance records directly describe general AI/GAI monitoring, provenance, update management, and secure operation practices. Neither record establishes action-specific deployment maturity for NLP/LLM DDoS controls; their content is general AI/GAI deployment guidance rather than DDoS-specific control maturity evidence.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "10cc3501b7ef5ad755883fab",
+      "case_id": "main__ddos__nlp_llm",
+      "claim_id": "TF_CLM_003",
+      "evidence_ids": [
+        "DE_DE02_CFF4EAB2C4BEC522",
+        "DE_DE15_7C1849B1FD93975C"
+      ],
+      "lens": "technical_feasibility",
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied AI deployment guidance records describe monitoring, provenance, update management, and secure operation practices for AI/GAI systems, but they do not establish action-specific deployment maturity for NLP/LLM DDoS controls.",
+      "verdict": {
+        "audit_id": "10cc3501b7ef5ad755883fab",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE02_CFF4EAB2C4BEC522",
+          "DE_DE15_7C1849B1FD93975C"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited guidance records explicitly describe monitoring, provenance, update management, and secure operation/maintenance practices for AI/GAI systems. They are generic deployment and operations guidance and do not provide action-specific deployment maturity evidence for NLP/LLM DDoS controls. The counter-evidence DDoS action records do not contradict the claim because they are not the cited deployment guidance records and they do not establish turnkey production deployment maturity.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "304079d378e0d73052a6cfcc",
+      "case_id": "main__insider_threat__cryptography",
+      "claim_id": "FA-3",
+      "evidence_ids": [
+        "DE_DE18_EAA59A9B7CEAD276",
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "lens": "financial_adoption",
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied deployment-maturity and context records add technical and organizational context but do not independently determine financial/adoption direction. TLS/SSL is described as a client/server protocol providing confidentiality, integrity, and authentication through encryption, with optional replay protection and certificate-based authentication. The frozen CIS IG2 reference-enterprise profile describes a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure, possible regulatory burdens, and IG2 safeguards that address increased operational complexity, some of which depend on enterprise-grade technology and specialized expertise.",
+      "verdict": {
+        "audit_id": "304079d378e0d73052a6cfcc",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE18_EAA59A9B7CEAD276",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The supplied records directly support the neutral context statement. The TLS/SSL evidence describes SSL/TLS as a client/server protocol that provides application-level confidentiality, integrity, and authentication through encryption, is optionally protected from replay attacks by MAC, and uses certificate-based authentication in server and mutual authentication cases. The CIS IG2 context record directly supports the described reference-enterprise profile: a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure, possible regulatory burdens, and IG2 safeguards addressing increased operational complexity, some of which depend on enterprise-grade technology and specialized expertise. The statement does not assert a financial, ROI, budget, staffing, or adoption-outcome conclusion, and the supplied records contain no such determination, so the neutral claim that they add context without independently determining financial/adoption direction is supported.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "c85adafa33f45fca4f673149",
+      "case_id": "main__insider_threat__cryptography",
+      "claim_id": "FA-1",
+      "evidence_ids": [
+        "DE_DE10_A086B3193CD6440B",
+        "DE_DE18_CDC975345637E009"
+      ],
+      "lens": "financial_adoption",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied adoption-benefit decision guidance documents a concrete adoption pathway for cryptography: TLS client authentication can be configured using certificate-based authentication with X.509 path validation and a trust anchor store, and IPSec deployment can be configured with mode choices such as transport mode, which adds less overhead than tunnel mode because it does not add an additional per-packet header. These records support feasibility as implementation enablers and an operational resource-efficiency consideration, but they do not quantify cost savings, ROI, payback period, or budget fit.",
+      "verdict": {
+        "audit_id": "c85adafa33f45fca4f673149",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The NIST TLS evidence directly supports that certificate-based TLS client authentication involves X.509 path validation and a trust anchor store. The DHS/CISA IPSec evidence directly supports that transport mode has less overhead than tunnel mode because it does not add an additional per-packet header. Together they support feasibility as implementation enablers and an operational resource-efficiency consideration. The supplied records do not quantify cost savings, ROI, payback period, or budget fit, and the counter-evidence does not materially contradict the claim’s scope.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "3605d90189c7895fa7c8f240",
+      "case_id": "main__insider_threat__cryptography",
+      "claim_id": "IR-GEN-CTX-1",
+      "evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4",
+        "E_22_C239828119FC69CD",
+        "E_26_92664A4339CF24C9"
+      ],
+      "lens": "institutional_regional",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The frozen CIS IG2 reference profile describes a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure, possible regulatory burdens, and safeguards that may depend on enterprise-grade technology and specialized expertise; insider-threat guidance records describe organization-wide program practices and responsible personnel, but these records do not by themselves establish jurisdiction-specific legal feasibility or measured effectiveness.",
+      "verdict": {
+        "audit_id": "3605d90189c7895fa7c8f240",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "E_22_C239828119FC69CD",
+          "E_26_92664A4339CF24C9"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The CIS IG2 context record directly supports the described multi-department enterprise IT environment, possible regulatory burdens, and safeguards that may depend on enterprise-grade technology and specialized expertise. The insider-threat guidance records directly support organization-wide program practices and responsible personnel. The cited records do not establish jurisdiction-specific legal feasibility, and the only quantitative insider-threat-related item is a cited cost-savings report rather than a direct measured effectiveness finding for the described practices. The supplied counter-evidence records do not materially contradict this neutral context.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "2865aaa661efa4b278b069f6",
+      "case_id": "main__insider_threat__cryptography",
+      "claim_id": "IR-GEN-CHL-1",
+      "evidence_ids": [
+        "DE_DE09_6719137897848A9E"
+      ],
+      "lens": "institutional_regional",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "A general compliance constraint exists for CRYPTOGRAPHY: the supplied NIST transition record assigns disallowed, deprecated, or acceptable statuses to specific cryptographic algorithms, creating an algorithm-selection and transition condition for the 2025–2027 timing window if that guidance applies or is adopted.",
+      "verdict": {
+        "audit_id": "2865aaa661efa4b278b069f6",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited NIST SP 800-131A Rev. 2 record explicitly assigns disallowed, deprecated, and acceptable statuses to specific cryptographic algorithms and states that three-key TDEA encryption is disallowed after December 31, 2023. This directly supports the claim that, if the guidance applies or is adopted, it creates an algorithm-selection and transition condition for the 2025-2027 timing window. The counter-evidence records are topically relevant to cryptography but do not materially contradict this conditional compliance framing.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "0f4a8e1fc04aa6a0a6427548",
+      "case_id": "main__insider_threat__cryptography",
+      "claim_id": "TECH_CHL_1",
+      "evidence_ids": [
+        "AE04C_F084D028D8E2AE06"
+      ],
+      "lens": "technical_feasibility",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "A supplied action-specific limitation record states that the insider-threat setting gives an authorized attacker stronger capabilities, including opportunities for known- or chosen-plaintext style attacks, and motivates a specialized construction rather than treating conventional encryption as automatically sufficient, so effectiveness depends on the cryptographic design and insider-access model.",
+      "verdict": {
+        "audit_id": "0f4a8e1fc04aa6a0a6427548",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "AE04C_F084D028D8E2AE06"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The claim restates the supplied action-specific limitation record almost verbatim, preserving its scope, qualifiers, and causality. It does not extend beyond the cited record, and the supplied counter-evidence does not materially contradict the limitation; it only indicates that a specialized cryptographic construction can be engineered for the threat model.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "afcd3fb6d45f63784bde6652",
+      "case_id": "main__insider_threat__cryptography",
+      "claim_id": "TECH_SUP_1",
+      "evidence_ids": [
+        "AE04S_2674461DBC059388"
+      ],
+      "lens": "technical_feasibility",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "A supplied action-specific enablement record describes a cryptography-based prototype explicitly designed to use cryptographic protection against insider-threat data leakage, including context-based key generation and file marking, and reports that the evaluated prototype passed most of the reported NIST randomness tests, providing direct evidence that cryptography can be engineered for this threat model.",
+      "verdict": {
+        "audit_id": "afcd3fb6d45f63784bde6652",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "AE04S_2674461DBC059388"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The supplied action-support evidence record explicitly states that Securecipher is designed to use cryptographic protection against insider-threat data leakage, includes context-based key generation and file marking, and that the evaluated prototype passed most of the reported NIST randomness tests. The claim closely paraphrases these facts and preserves the record's scope, including the qualifier 'most of the reported NIST randomness tests.' The counter-evidence record limits conventional encryption by noting dependence on design and insider-access model, but it does not materially conflict with the narrower claim that a cryptography-based prototype can be engineered for this threat model.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "119c2e28433600e594ef2df2",
+      "case_id": "main__malware__anomaly_detection",
+      "claim_id": "FIN_GEN_MATURITY_CONTEXT",
+      "evidence_ids": [
+        "DE_DE06_0380E777894ACF9A",
+        "DE_DE05_105D0030778F41BC"
+      ],
+      "lens": "financial_adoption",
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "DE_DE06_0380E777894ACF9A describes a behavior anomaly detection approach configured to receive packet streams in a test scenario. DE_DE05_105D0030778F41BC notes that commercially available products were used under collaborative agreements, that no product endorsement or compliance guarantee is provided, and that organizations should identify products that integrate with existing tools, processes, and system infrastructure. These records provide supplementary deployment-maturity context but do not quantify cost, budget, payback, or staffing for the frozen enterprise.",
+      "verdict": {
+        "audit_id": "119c2e28433600e594ef2df2",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE06_0380E777894ACF9A",
+          "DE_DE05_105D0030778F41BC"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "DE_DE06_0380E777894ACF9A directly supports that a behavior anomaly detection approach was configured to receive packet streams in a test context. DE_DE05_105D0030778F41BC directly supports the stated notes about commercially available products under collaborative agreements, absence of product endorsement or compliance guarantee, and the need for organizations to identify products that integrate with existing tools, processes, and infrastructure. The supplied records do not contain cost, budget, payback, or staffing quantification, and the counter-evidence records do not materially contradict this characterization.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "6dd8454501dc5450211d00f6",
+      "case_id": "main__malware__anomaly_detection",
+      "claim_id": "FIN_GEN_ENTERPRISE_PROFILE_CONTEXT",
+      "evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "lens": "financial_adoption",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "CTX_CIS_IG2_9F94838146D9C3A4 describes the frozen reference-enterprise profile as a CIS Implementation Group 2 enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles; it may process sensitive information, may face regulatory burdens, and IG2 safeguards address increased operational complexity, with some depending on enterprise-grade technology and specialized expertise. This is reference-profile context only and is not used to establish direction.",
+      "verdict": {
+        "audit_id": "6dd8454501dc5450211d00f6",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited CIS IG2 context record directly supports the claim's profile attributes: CIS IG2 describes enterprises with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles, possible processing of sensitive information, possible regulatory burdens, increased operational complexity, and some reliance on enterprise-grade technology and specialized expertise. The claim's neutral-context framing is consistent with the record's context definition role. The counter-evidence records concern ICS anomaly detection, SIEM, and IDPS guidance and do not materially contradict this organizational context.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "fa15125c4fd5e009d32ac362",
+      "case_id": "main__malware__anomaly_detection",
+      "claim_id": "IR-2",
+      "evidence_ids": [
+        "DE_DE04_0B77B88875745973"
+      ],
+      "lens": "institutional_regional",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "Supplied IDPS guidance identifies institutional governance and administrative controls for IDPS implementation, including separate accounts for IDPS users and administrators, restricted network access to IDPS components, protected management communications, ongoing component security, periodic configuration backup, and consideration of multiple IDPS technology types for comprehensive detection.",
+      "verdict": {
+        "audit_id": "fa15125c4fd5e009d32ac362",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE04_0B77B88875745973"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited NIST IDPS guidance explicitly identifies administrative and organizational controls, including separate user/administrator accounts, restricted network access to IDPS components, protected management communications, ongoing IDPS component security, periodic configuration backups, and organizational consideration of multiple IDPS technology types for more comprehensive detection. This directly supports the claim as written.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "38b3dd72abc2df4d8df64a0e",
+      "case_id": "main__malware__anomaly_detection",
+      "claim_id": "IR-7",
+      "evidence_ids": [
+        "E_15_D3680C31BEE2C0F8"
+      ],
+      "lens": "institutional_regional",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "Supplied NIST AI guidance documents poisoning of unsupervised learning/clustering used in malware classification and network traffic anomaly detection; the same supplied excerpt also documents evasion attacks for malware classification and network intrusion detection.",
+      "verdict": {
+        "audit_id": "38b3dd72abc2df4d8df64a0e",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_15_D3680C31BEE2C0F8"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The supplied NIST AI 100-2 excerpt directly states that poisoning unsupervised learning models has been shown for clustering used in malware classification and network traffic anomaly detection. The same excerpt also directly documents evasion attacks for malware classification and evasion attacks in network intrusion detection. The supplied counter-evidence records are topically related to anomaly detection/IDS but do not materially contradict this document-summary claim.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "5f1118667f7d2b6ab1863d8d",
+      "case_id": "main__malware__anomaly_detection",
+      "claim_id": "T-1",
+      "evidence_ids": [
+        "AE02S_61C8065AA576E7C5"
+      ],
+      "lens": "technical_feasibility",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The action-specific enablement record reports that anomaly-oriented malware detection was directly evaluated on Android, achieved high malware detection rates, detected temporally different and previously unseen APKs, and demonstrated that anomaly-style behavioral detection can be implemented as an on-device malware defense.",
+      "verdict": {
+        "audit_id": "5f1118667f7d2b6ab1863d8d",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "AE02S_61C8065AA576E7C5"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited evidence directly states that AProctor evaluated anomaly-oriented malware detection on Android, reported high malware detection rates, detected temporally different and previously unseen APKs, and demonstrated that anomaly-style behavioral detection can be implemented as an on-device malware defense. The claim preserves the same scope, population, and modality without adding unsupported numbers, vendor/version details, deployment guarantees, budget, staffing, or universal-effectiveness language. The counter-evidence notes resource-related deployment limitations, but it does not materially contradict the stated feasibility finding, and the claim does not assert that no limitations exist.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "00c23ab01d183e24f0e69ad4",
+      "case_id": "main__malware__anomaly_detection",
+      "claim_id": "T-7",
+      "evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "lens": "technical_feasibility",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The frozen CIS IG2 reference profile describes a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure, where some safeguards may depend on enterprise-grade technology and specialized expertise.",
+      "verdict": {
+        "audit_id": "00c23ab01d183e24f0e69ad4",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "direct_support": false,
+        "overgeneralization": false,
+        "rationale": "The cited evidence directly supports the claim's core propositions: the CIS IG2 context profile is described as applying to an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments, and it states that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure. The claim's wording is materially narrower or equivalent to the evidence rather than broader, and the supplied counter-evidence records concern a separate malware-detection action and do not contradict or materially limit this neutral context statement.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "75b81b7e4f5bad87c91a2756",
+      "case_id": "main__ransomware__cryptography",
+      "claim_id": "FA_002",
+      "evidence_ids": [
+        "E_23_534489D29C38B327"
+      ],
+      "lens": "financial_adoption",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied decision evidence documents a general adoption burden: proper and up-to-date SSL/TLS for data in transit where technically feasible, identification and update of outdated or weak encryption, consideration of post-quantum cryptography implications, coverage of IT traffic and remote OT assets, and OT encryption constrained by latency and availability feasibility.",
+      "verdict": {
+        "audit_id": "75b81b7e4f5bad87c91a2756",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited CISA CPG record directly states the enumerated adoption expectations and feasibility qualifiers: properly configured and up-to-date SSL/TLS for data in transit when technically feasible, identifying and updating outdated or weak encryption, considering post-quantum cryptography implications, scope covering all IT traffic and remote OT assets, and OT encryption used when feasible to minimize latency and availability impact. The supplied counter-evidence discusses IPSec and TLS implementation details but does not materially conflict with or limit the claim.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "619001888084272771cee54d",
+      "case_id": "main__ransomware__cryptography",
+      "claim_id": "FA_001",
+      "evidence_ids": [
+        "DE_DE18_CDC975345637E009",
+        "DE_DE10_A086B3193CD6440B"
+      ],
+      "lens": "financial_adoption",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied decision evidence documents an adoption-enabling financial/operational pathway for cryptographic implementation: IPsec transport mode is described as having less overhead than tunnel mode for node-to-node communications, and NIST TLS guidance provides concrete implementation mechanisms such as certificate-based client authentication, path validation, revocation-status validation, and minimum client-key security strength.",
+      "verdict": {
+        "audit_id": "619001888084272771cee54d",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE18_CDC975345637E009",
+          "DE_DE10_A086B3193CD6440B"
+        ],
+        "direct_support": false,
+        "overgeneralization": true,
+        "rationale": "The two decision-evidence records directly support the technical feasibility details in the claim: the IPsec record states that transport mode has less overhead than tunnel mode and that this overhead is not necessary for node-to-node communications, while the NIST TLS record supports certificate-based client authentication, path validation, revocation-status validation, and a minimum client-key security level of at least 112 bits. However, the supplied records do not document a financial pathway, cost implication, or financial adoption consideration. The claim’s “financial/operational pathway” characterization therefore broadens the evidence beyond what is supplied, while the specific operational and implementation mechanisms are supported.",
+        "unsupported_specificity": false,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "bf13f97cfab722c18a668a6d",
+      "case_id": "main__ransomware__cryptography",
+      "claim_id": "IR-2",
+      "evidence_ids": [
+        "DE_DE08_031120C53EF050F3"
+      ],
+      "lens": "institutional_regional",
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The NIST key-management record supports governance feasibility by describing accountability and traceability controls for cryptographic keys: identifying entities authorized to generate, access, destroy, or otherwise use keys; recording who or what performs key actions; auditing logs for security violations; and making access to plaintext keys, ciphertext keys, and key shares traceable to accessing entities.",
+      "verdict": {
+        "audit_id": "bf13f97cfab722c18a668a6d",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited NIST SP 800-57 Part 1 Rev. 5 record explicitly describes key-management accountability and traceability controls, including identification of entities authorized to generate, access, destroy, or otherwise use keys; recording who or what performs key actions; auditing logs for security violations; and traceability for plaintext key access, with traceability also described for ciphertext keys and key shares. This directly supports the claim’s enumerated governance-control content. The counter-evidence record concerns cryptographic algorithm approval status and does not contradict the claim.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "23ae3bb46de921586783159d",
+      "case_id": "main__ransomware__cryptography",
+      "claim_id": "IR-2",
+      "evidence_ids": [
+        "DE_DE08_031120C53EF050F3"
+      ],
+      "lens": "institutional_regional",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The NIST key-management record supports governance feasibility by describing accountability and traceability controls for cryptographic keys: identifying entities authorized to generate, access, destroy, or otherwise use keys; recording who or what performs key actions; auditing logs for security violations; and making access to plaintext keys, ciphertext keys, and key shares traceable to accessing entities.",
+      "verdict": {
+        "audit_id": "23ae3bb46de921586783159d",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited NIST SP 800-57pt1r5 record directly describes accountability/traceability controls for cryptographic keys, including identifying authorized entities, recording key actions, auditing logs, and tracing access to plaintext keys, ciphertext keys, and key shares to accessing entities. This supports the claim's feasibility-relevant governance description. The counter-evidence is topically related to cryptographic algorithm approval but does not materially contradict this key-management traceability claim.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "ae93dcbbe70db82a23c56195",
+      "case_id": "main__ransomware__cryptography",
+      "claim_id": "TF_C1",
+      "evidence_ids": [
+        "AE03C_E5522A35F4981027"
+      ],
+      "lens": "technical_feasibility",
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "Ransomware can deliberately alter the observable entropy pattern of its cryptographic operations to evade detectors that rely on high entropy, and some cryptography-related detection approaches are not universally robust and impose nontrivial computational cost.",
+      "verdict": {
+        "audit_id": "ae93dcbbe70db82a23c56195",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "AE03C_E5522A35F4981027"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited evidence record AE03C_E5522A35F4981027 directly supports the claim's two material propositions: ransomware can deliberately alter observable entropy patterns to evade detectors relying on high entropy, and some cryptography-related detection approaches are not universally robust and impose nontrivial computational cost. The counter-evidence record concerns a different cryptographic-analysis technique and does not materially contradict the claim's limited scope.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "d18bb73cc49be70b8d3c3c6d",
+      "case_id": "main__ransomware__cryptography",
+      "claim_id": "TF_N1",
+      "evidence_ids": [
+        "E_23_534489D29C38B327"
+      ],
+      "lens": "technical_feasibility",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "CISA CPG guidance recommends strong and agile encryption, with properly configured and up-to-date SSL/TLS for data in transit when technically feasible, and encourages identifying outdated or weak encryption, updating to sufficiently strong algorithms, and considering post-quantum implications.",
+      "verdict": {
+        "audit_id": "d18bb73cc49be70b8d3c3c6d",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited CISA CPG record directly supports the claim's scope and wording: it identifies a strong and agile encryption recommendation, states that properly configured and up-to-date SSL/TLS should be used for data in transit when technically feasible, and directs organizations to identify outdated or weak encryption, update to sufficiently strong algorithms, and consider post-quantum implications.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "b293304aed7d6cf41cc2e12d",
+      "case_id": "main__session_hijacking__https",
+      "claim_id": "FA_CLM_3",
+      "evidence_ids": [
+        "DE_DE14_EDCA207577B4607A"
+      ],
+      "lens": "financial_adoption",
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied adoption-burden decision-evidence for PMT_HTTPS reports that SSL/SSL-VPN performance can be affected by session-establishment time, back-end authentication system demand, certificate key size, packet fragmentation, and MTU handling, and that addressing performance problems may involve upgrading or replacing hardware, using an SSL accelerator to offload processing, or reducing processing demands such as simultaneous users or encrypted application traffic.",
+      "verdict": {
+        "audit_id": "b293304aed7d6cf41cc2e12d",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE14_EDCA207577B4607A"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited NIST SSL VPN guidance directly states that SSL VPN performance involves session establishment time affected by back-end authentication demand and certificate key size, that SSL encapsulation can cause packet fragmentation and MTU-related issues, and that addressing performance problems can involve hardware upgrades/replacement, SSL accelerators, or reducing processing demands such as simultaneous users and encrypted application traffic.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "9a1beaf9e4aa909433fccf5d",
+      "case_id": "main__session_hijacking__https",
+      "claim_id": "FA_CLM_2",
+      "evidence_ids": [
+        "DE_DE18_CDC975345637E009"
+      ],
+      "lens": "financial_adoption",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied adoption-benefit decision-evidence for PMT_HTTPS states that transport-mode encryption can add less per-packet overhead than tunnel mode because it does not add an additional tunnel header, indicating a possible resource-efficiency consideration for encrypted transport, although the record does not quantify HTTPS-specific cost savings.",
+      "verdict": {
+        "audit_id": "9a1beaf9e4aa909433fccf5d",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE18_CDC975345637E009"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited decision-evidence record directly states that transport mode has less overhead because it does not add an additional header to each packet to describe the tunnel. The claim preserves this as a possible resource-efficiency consideration and explicitly does not assert quantified HTTPS-specific cost savings. The supplied counter-evidence discusses SSL VPN performance factors but does not materially conflict with the narrower transport-versus-tunnel overhead statement.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "791805b49e7c03507b6dfa4c",
+      "case_id": "main__session_hijacking__https",
+      "claim_id": "IR_C3",
+      "evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "lens": "institutional_regional",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The frozen reference-enterprise profile is CIS IG2, describing an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles; such enterprises often process sensitive information, may face regulatory burdens, and some IG2 safeguards depend on enterprise-grade technology and specialized expertise. This profile supplies context only and does not establish jurisdiction-specific regulatory applicability or a feasibility direction.",
+      "verdict": {
+        "audit_id": "791805b49e7c03507b6dfa4c",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited CIS IG2 context profile directly supports the stated enterprise description, including personnel managing and protecting IT infrastructure across multiple departments with differing risk profiles, processing sensitive information, possible regulatory burdens, and dependencies on enterprise-grade technology and specialized expertise. The evidence record is a context standard profile, supporting the claim’s framing that it supplies context only rather than establishing jurisdiction-specific regulatory applicability or a feasibility direction. The supplied counter-evidence records are topical but do not materially contradict the claim.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "b761d3779539c2398cc57aba",
+      "case_id": "main__session_hijacking__https",
+      "claim_id": "IR_C2",
+      "evidence_ids": [
+        "DE_DE13_055FC5E35FA61DD5",
+        "DE_DE10_4BE87A62A6676C99"
+      ],
+      "lens": "institutional_regional",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied compliance-constraint records impose requirements that challenge GENERAL institutional feasibility by increasing implementation and compliance burden: session cookies shall be accessible only on secure HTTPS sessions, authenticated sessions shall not fall back to insecure transport after authentication, session identifiers shall be verified, and TLS configurations must satisfy specified implementation constraints such as supporting Encrypt-then-MAC when CBC cipher suites are negotiated, restricting truncated MAC with variable-length padding, and supporting TLS 1.3 PSK exchange-mode requirements. These records do not establish that HTTPS adoption is infeasible.",
+      "verdict": {
+        "audit_id": "b761d3779539c2398cc57aba",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE10_4BE87A62A6676C99"
+        ],
+        "direct_support": false,
+        "overgeneralization": true,
+        "rationale": "The cited evidence directly supports the enumerated normative requirements: HTTPS-only cookie accessibility, no authenticated fallback from HTTPS to HTTP, session identifier verification, Encrypt-then-MAC support when CBC cipher suites are negotiated, prohibition of truncated MAC tags with variable-length padding, and TLS 1.3 PSK exchange-mode extension requirements. However, the evidence does not state or directly support the broader inference that these records 'challenge GENERAL institutional feasibility' or establish a generalized increase in institutional implementation/compliance burden. The claim is therefore supported only for the narrower set of specific requirements, with the general feasibility-challenge characterization as an unsupported overextension. The counter-evidence does not materially contradict or materially limit the claim as written.",
+        "unsupported_specificity": false,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "a6e7b21facadaf3cf7936516",
+      "case_id": "main__session_hijacking__https",
+      "claim_id": "TF_GEN_MATURITY_1",
+      "evidence_ids": [
+        "DE_DE14_5FC183B8D7DD961A"
+      ],
+      "lens": "technical_feasibility",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "A supplied SSL VPN case study documents architecture selection, design, and implementation prototype using commonly available equipment and software; it is supplementary deployment-maturity context rather than direct direction-carrying evidence for HTTPS as session-hijacking mitigation.",
+      "verdict": {
+        "audit_id": "a6e7b21facadaf3cf7936516",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE14_5FC183B8D7DD961A"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The supplied NIST SSL VPN case-study chunk directly supports the claim’s factual core: it presents an SSL VPN planning and implementation case study, explains architecture selection over alternatives, discusses design, and provides implementation-prototype configuration examples using commonly available equipment and software. The record also explicitly frames the case study as illustrative rather than a product endorsement and warns against deploying the sample entries as-is, supporting the characterization of the record as supplementary deployment-maturity context. Its scope is SSL VPN remote-access architecture and implementation, not HTTPS-specific session-hijacking mitigation; the separate counter-evidence records address HTTPS/TLS session-hijacking controls and limits but do not make this SSL VPN case study direct direction-carrying evidence for HTTPS as session-hijacking mitigation.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "a3d595cd3a710a90a699b411",
+      "case_id": "main__session_hijacking__https",
+      "claim_id": "TF_GEN_SUPPORT_1",
+      "evidence_ids": [
+        "AE07S_C1EF15B9628497F0"
+      ],
+      "lens": "technical_feasibility",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "Supplied action-specific evidence supports HTTPS/TLS as a technically relevant transport-layer countermeasure for interception-oriented session hijacking, within a broader session-protection strategy.",
+      "verdict": {
+        "audit_id": "a3d595cd3a710a90a699b411",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "AE07S_C1EF15B9628497F0"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited action-specific evidence directly states that HTTPS/TLS is supported as an important transport-layer control against interception-oriented session hijacking within a broader session-protection strategy. The claim preserves that scope and does not assert universal or standalone effectiveness. The counter-evidence limits HTTPS to not covering all session-hijacking paths, but this is consistent with the claim's qualified, interception-oriented framing and does not materially undermine it.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "0585dc143edd49921042122c",
+      "case_id": "main__targeted_attack__access_control",
+      "claim_id": "FA_CLAIM_03",
+      "evidence_ids": [
+        "DE_DE12_6509E7A6D8467E38"
+      ],
+      "lens": "financial_adoption",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied zero-trust deployment guidance describes implementation considerations such as client-installation constraints, resource location, logging, protocol support, subject behavior changes, and pilot programs, but it does not by itself establish a financial or adoption direction.",
+      "verdict": {
+        "audit_id": "0585dc143edd49921042122c",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE12_6509E7A6D8467E38"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited NIST SP 800-207 chunk directly describes implementation considerations for zero-trust candidate solutions: client-asset installation constraints, resource location, logging support, protocol/application support, subject behavior changes, and pilot programs. It does not itself provide a financial or adoption direction such as cost, ROI, budget, staffing, or adoption benefit. The counter-evidence records discuss cost and adoption barriers in related guidance, but the claim is scoped to the cited guidance acting 'by itself' and does not overextend to all supplied guidance.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "e2345a751101782a98c93d33",
+      "case_id": "main__targeted_attack__access_control",
+      "claim_id": "FA_CLAIM_02",
+      "evidence_ids": [
+        "DE_DE11_1ECA9795EEF89DFA",
+        "DE_DE17_429D17A4E11A72C3",
+        "DE_DE12_CBF6FBB1313D37AF"
+      ],
+      "lens": "financial_adoption",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied decision evidence documents direct financial and adoption burdens for advanced access-control transitions: ABAC development, deployment, and maintenance may exceed benefits; application retrofitting and attribute/policy management can offset maintenance savings; zero-trust implementation can take years and initially add costs; and service-provider migration can involve extreme cost or a long transition program.",
+      "verdict": {
+        "audit_id": "e2345a751101782a98c93d33",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE11_1ECA9795EEF89DFA",
+          "DE_DE17_429D17A4E11A72C3",
+          "DE_DE12_CBF6FBB1313D37AF"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "Each material clause of the claim is directly supported by the supplied evidence: DE_DE11_1ECA9795EEF89DFA states that ABAC development, deployment, and maintenance may exceed benefits, that application retrofitting costs are separate, and that attribute/policy management can offset maintenance savings. DE_DE17_429D17A4E11A72C3 states that zero trust implementation may take years and initially add costs. DE_DE12_CBF6FBB1313D37AF states that service-provider migration can involve extreme cost or a long transition program. The claim preserves the source modality ('may', 'can', 'initially') and does not add unsupported exact numbers, vendors, versions, legal applicability, or causal strength.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "7583aec13de1a53b424a1180",
+      "case_id": "main__targeted_attack__access_control",
+      "claim_id": "IR_CLAIM_2",
+      "evidence_ids": [
+        "DE_DE13_055FC5E35FA61DD5"
+      ],
+      "lens": "institutional_regional",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied compliance-constraint record imposes specific requirements on access-control session and token handling, including secure storage and transport, session timeout and invalidation, prohibition of insecure fallback, session-identifier verification, cookie restrictions, and limits on interpreting access tokens as subscriber presence.",
+      "verdict": {
+        "audit_id": "7583aec13de1a53b424a1180",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited NIST SP 800-63B record directly states normative session and token-handling requirements: authenticated protected channel transport, prohibition of insecure fallback, session timeout and non-acceptance, session-identifier verification, restrictions on placement in insecure locations, cookie security requirements, and a prohibition on interpreting OAuth access tokens as subscriber presence without other signals. The supplied counter-evidence records concern zero trust and ABAC topics and do not materially contradict these session-management requirements.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "0f7bf7d63cce0c60fd4a588a",
+      "case_id": "main__targeted_attack__access_control",
+      "claim_id": "IR_CLAIM_1",
+      "evidence_ids": [
+        "DE_DE12_E6F93E4AB8722379",
+        "DE_DE17_567DDA7CFBC62829",
+        "DE_DE11_1E4AAE06CC3795D7"
+      ],
+      "lens": "institutional_regional",
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "The supplied governance-enablement records describe institutional pathways that can support access-control implementation: policy enforcement points and an industry compliance system as inputs to access-policy decisions; governance of cybersecurity policies, procedures, and processes with monitoring and assessment of security capabilities; and ABAC policy alignment, consistent attribute values, attribute lifecycle management, and access-failure procedures.",
+      "verdict": {
+        "audit_id": "0f7bf7d63cce0c60fd4a588a",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE17_567DDA7CFBC62829",
+          "DE_DE11_1E4AAE06CC3795D7"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The supplied records directly describe the institutional mechanisms named in the claim. NIST SP 800-207 describes the policy enforcement point as forwarding requests and receiving policy updates in the access-control path, and describes the industry compliance system as providing policy rules used by the policy engine for access decisions. CISA ZTMM v2 describes governance of cybersecurity policies, procedures, and processes and the need to monitor and assess security capabilities. NIST SP 800-162 describes ABAC policy alignment, consistent attribute values, attribute lifecycle management, and procedures for access failures. The supplied counter-evidence on session management is topically related but does not materially contradict the claim.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "fa545d68952239ef819cceea",
+      "case_id": "main__targeted_attack__access_control",
+      "claim_id": "TF_CLM_4",
+      "evidence_ids": [
+        "DE_DE17_429D17A4E11A72C3"
+      ],
+      "lens": "technical_feasibility",
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "CISA zero-trust maturity guidance describes the path to zero trust as incremental, potentially taking years, with initial implementation costs and a shift in cybersecurity philosophy and culture.",
+      "verdict": {
+        "audit_id": "fa545d68952239ef819cceea",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE17_429D17A4E11A72C3"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited CISA Zero Trust Maturity Model chunk directly supports the claim. It states that zero trust may require a change in an organization’s cybersecurity philosophy and culture, that the path to zero trust is an incremental process that may take years to implement, and that initial implementation of required capabilities and services will often lead to additional costs. These points match the claim’s source attribution, scope, modality, and temporal framing. The supplied counter-evidence records concern a separate APT/zero-trust access-control study and do not materially contradict this CISA guidance statement.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "14d3a3f1368851ba3d83e27d",
+      "case_id": "main__targeted_attack__access_control",
+      "claim_id": "TF_CLM_1",
+      "evidence_ids": [
+        "AE06S_407DDF87C86BB41B"
+      ],
+      "lens": "technical_feasibility",
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "decision_lens",
+      "statement": "An ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats, providing an action-specific technical enablement for adaptive access control as a Targeted Attack defense.",
+      "verdict": {
+        "audit_id": "14d3a3f1368851ba3d83e27d",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "AE06S_407DDF87C86BB41B"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited evidence directly matches the claim's core proposition: an ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats and supports adaptive access control as a targeted-attack defense mechanism. The counter-evidence states that effective access control depends on continuously updated threat/risk context rather than control category alone, but the claim does not assert that the control category alone is sufficient and is framed around a risk-model-integrated adaptive control approach, so no material contradiction or omitted limitation is present.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "f87b4cb8e6c96df1eb225ed5",
+      "case_id": "main__brute_force__ids_ips",
+      "claim_id": "REPORT_SENT_013",
+      "evidence_ids": [
+        "DE_DE16_CEA1C38E613068F8"
+      ],
+      "lens": null,
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "CISA characterizes IDS as a warning or audit system, not a silver bullet, often requiring more than one method or device .",
+      "verdict": {
+        "audit_id": "f87b4cb8e6c96df1eb225ed5",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE16_CEA1C38E613068F8"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited CISA/ICS-CERT evidence directly states that using IDS is not a “silver bullet,” that an IDS is more of a warning or audit system, and that it often takes more than one method or device to provide the most complete information about an event. This matches the claim’s scope, polarity, and attribution to CISA. No supplied counter-evidence materially contradicts or omits a limitation that would make the claim misleading as written.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "48f1a2efc1309e338cb5d5bf",
+      "case_id": "main__brute_force__ids_ips",
+      "claim_id": "REPORT_SENT_021",
+      "evidence_ids": [
+        "E_02_669F59880AF52688",
+        "E_03_F2B2EBA86BEEFDC5"
+      ],
+      "lens": null,
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "Forecast validation gap: the threat NoI direction lacks direct temporal incident-count/frequency evidence; the exploitation-signal slot is missing, and DBIR/Mandiant records are neutral context after adjudication  .",
+      "verdict": {
+        "audit_id": "48f1a2efc1309e338cb5d5bf",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_02_669F59880AF52688",
+          "E_03_F2B2EBA86BEEFDC5"
+        ],
+        "direct_support": false,
+        "overgeneralization": false,
+        "rationale": "The cited DBIR and Mandiant records contain explicit temporal incident-count and frequency material relevant to brute-force-related threat activity: DBIR reports 1,997 incidents and 881 confirmed breaches for basic web application attacks, and Mandiant reports 2023 initial infection vector percentages including brute force. This materially conflicts with the claim that the threat direction lacks direct temporal incident-count/frequency evidence. The claim also adds unsupported specificity by invoking undefined forecast terms and adjudication status, such as 'NoI direction', 'exploitation-signal slot', and 'after adjudication', none of which are stated in the supplied evidence records.",
+        "unsupported_specificity": true,
+        "verdict": "CONTRADICTS"
+      }
+    },
+    {
+      "audit_id": "d291f0bf964d25d8edf74801",
+      "case_id": "main__ddos__nlp_llm",
+      "claim_id": "REPORT_SENT_001",
+      "evidence_ids": [
+        "AE01S_6E6099FA4C2D13D4"
+      ],
+      "lens": null,
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "The supporting evidence is real but bounded: fine-tuned LLM variants detected DDoS traffic in benchmark experiments on CICIDS 2017 and an Urban IoT dataset, with reported mid-90-percent accuracy and outperformance of a compared MLP .",
+      "verdict": {
+        "audit_id": "d291f0bf964d25d8edf74801",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "AE01S_6E6099FA4C2D13D4"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited evidence directly states that direct DDoS experiments compared large language models with a conventional neural-network baseline, that fine-tuned LLM variants detected DDoS traffic on CICIDS 2017 and an Urban IoT dataset, that fine-tuned variants reported roughly mid-90-percent accuracy, and that they outperformed the compared MLP. The claim preserves the bounded, reported, experimental scope and does not introduce unsupported effectiveness, causality, deployment, or population claims. The supplied counter-evidence records concern secure AI development guidance and do not materially contradict this claim.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "b0e78d869d055601d2bf5ca8",
+      "case_id": "main__ddos__nlp_llm",
+      "claim_id": "REPORT_SENT_009",
+      "evidence_ids": [
+        "DE_DE15_1AEC6DDD669756FF",
+        "DE_DE01_E85CB6412740EF20"
+      ],
+      "lens": null,
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "A burden pathway is also supported: secure-by-design AI development requires significant resources across the system life cycle, and AI risk management involves staffing and funding needs  .",
+      "verdict": {
+        "audit_id": "b0e78d869d055601d2bf5ca8",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE15_1AEC6DDD669756FF",
+          "DE_DE01_E85CB6412740EF20"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The NCSC evidence directly states that following secure-by-design principles requires significant resources throughout a system's life cycle. The NIST AI RMF evidence directly identifies staffing and funding as examples of resources needed to achieve AI risk management goals. No supplied counter-evidence materially contradicts or limits these resource-burden statements.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "3a4ba60317fc1613b58b401d",
+      "case_id": "main__insider_threat__cryptography",
+      "claim_id": "REPORT_SENT_003",
+      "evidence_ids": [
+        "DE_DE18_EAA59A9B7CEAD276",
+        "DE_DE18_CDC975345637E009",
+        "E_23_534489D29C38B327"
+      ],
+      "lens": null,
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "Deployment-maturity records describe TLS/SSL protocol behavior, IPSec transport and tunnel modes, and recommended agile encryption, weak-crypto remediation, and post-quantum planning   .",
+      "verdict": {
+        "audit_id": "3a4ba60317fc1613b58b401d",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE18_EAA59A9B7CEAD276",
+          "DE_DE18_CDC975345637E009",
+          "E_23_534489D29C38B327"
+        ],
+        "direct_support": false,
+        "overgeneralization": true,
+        "rationale": "The cited evidence directly supports the enumerated technical descriptions: TLS/SSL protocol behavior, IPSec transport/tunnel mode behavior, and CPG guidance for agile encryption, weak-crypto remediation, and post-quantum planning. However, the supplied records do not establish that these records are specifically 'deployment-maturity' records; that qualifier overgeneralizes the evidentiary basis.",
+        "unsupported_specificity": false,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "20f2364bf146979f7158ec80",
+      "case_id": "main__insider_threat__cryptography",
+      "claim_id": "REPORT_SENT_014",
+      "evidence_ids": [
+        "E_20_913B6F999A0F1458"
+      ],
+      "lens": null,
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "The NIST C-SCRM record supports less predictable data-collection frequencies as operational-control guidance, but it does not establish a threat trajectory or measured risk reduction .",
+      "verdict": {
+        "audit_id": "20f2364bf146979f7158ec80",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_20_913B6F999A0F1458"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited NIST C-SCRM record explicitly recommends that predefined data-collection frequencies be less predictable to reduce insider-threat risk, directly supporting the claim that it provides operational-control guidance. The supplied record contains no threat-trajectory analysis and no measured or quantitative risk-reduction value, so the claim’s limitation is supported by the evidence.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "aa944de0d9033d264e25f196",
+      "case_id": "main__malware__anomaly_detection",
+      "claim_id": "REPORT_SENT_014",
+      "evidence_ids": [
+        "DE_DE16_CEA1C38E613068F8",
+        "DE_DE16_E455D97291B61E2A",
+        "E_20_BF167BDA75891A3B",
+        "E_15_D3680C31BEE2C0F8"
+      ],
+      "lens": null,
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "Operational and governance constraints remain: anomaly detection's false-negative risk, sensitivity, subjectivity, and complete-trust requirement ; vendor security requirements that should not be assumed and should be addressed early in procurement ; supply-chain and maintenance-tool controls requiring authorization, tracking, auditing, and function limitation ; and ML-based clustering governance to address documented poisoning risk .",
+      "verdict": {
+        "audit_id": "aa944de0d9033d264e25f196",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE16_CEA1C38E613068F8",
+          "DE_DE16_E455D97291B61E2A",
+          "E_20_BF167BDA75891A3B",
+          "E_15_D3680C31BEE2C0F8"
+        ],
+        "direct_support": false,
+        "overgeneralization": true,
+        "rationale": "The supplied evidence directly supports several components of the claim: DE_DE16_CEA1C38E613068F8 supports anomaly-detection limitations including false-negative risk, sensitivity, subjectivity, and the need to trust the system completely; DE_DE16_E455D97291B61E2A supports not assuming vendor security practices and addressing security requirements early in procurement; and E_20_BF167BDA75891A3B supports supply-chain/maintenance-tool controls involving authorization, tracking, auditing, and function limitation. However, E_15_D3680C31BEE2C0F8 only documents that poisoning attacks have been shown for unsupervised learning/clustering used in malware classification and network traffic anomaly detection. It does not directly support the claim’s stronger framing of “ML-based clustering governance to address” that risk. Therefore the claim is partially supported but overextends the ML-clustering evidence into a governance-control requirement not present in the supplied records.",
+        "unsupported_specificity": true,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "6773d203e0dfb9bd7c84cf50",
+      "case_id": "main__malware__anomaly_detection",
+      "claim_id": "REPORT_SENT_014",
+      "evidence_ids": [
+        "DE_DE04_C6F46FCDE66BFAC7"
+      ],
+      "lens": null,
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "The main challenge is adoption burden: implementation, operation, and maintenance require system administration, network administration, information-security knowledge, IDPS principles, incident-response policy understanding, monitored protocols/applications/operating systems, possible programming, update testing, and vendor training .",
+      "verdict": {
+        "audit_id": "6773d203e0dfb9bd7c84cf50",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE04_C6F46FCDE66BFAC7"
+        ],
+        "direct_support": false,
+        "overgeneralization": true,
+        "rationale": "The cited NIST SP 800-94 evidence directly supports that IDPS implementation, operation, and maintenance require or involve system administration, network administration, information-security knowledge, IDPS principles, understanding of monitored protocols, applications, and operating systems, update testing, and possible programming skills. It also supports vendor training as a method for gaining product-specific knowledge. However, the claim overextends by stating that adoption burden is 'the main challenge,' which the cited evidence does not establish. It also strengthens several items into requirements that the source presents as recommended, optional, or method-specific, such as incident-response policy understanding and vendor training. No counter-evidence materially contradicts the claim as written.",
+        "unsupported_specificity": false,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "daa74219d8b3a62499b30064",
+      "case_id": "main__ransomware__cryptography",
+      "claim_id": "REPORT_SENT_002",
+      "evidence_ids": [
+        "DE_DE18_EAA59A9B7CEAD276",
+        "DE_DE18_CDC975345637E009"
+      ],
+      "lens": null,
+      "scenario_id": "US__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "Standardized TLS/SSL and IPsec guidance also provides implementation context, including negotiation/key-exchange phases and transport versus tunnel trade-offs , , but it does not establish compatibility with the exact enterprise architecture.",
+      "verdict": {
+        "audit_id": "daa74219d8b3a62499b30064",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE18_EAA59A9B7CEAD276",
+          "DE_DE18_CDC975345637E009"
+        ],
+        "direct_support": false,
+        "overgeneralization": false,
+        "rationale": "The two cited DHS primer records directly support the implementation-context portions: TLS/SSL algorithm negotiation and key-exchange phases, and IPSec transport versus tunnel mode trade-offs. However, the supplied records do not explicitly establish the final negative limitation that the guidance does not establish compatibility with the exact enterprise architecture; that clause is not directly grounded by an explicit statement in the cited records. No supplied counter-evidence materially contradicts the claim.",
+        "unsupported_specificity": false,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "f01fcccaf6c1bb412550ec98",
+      "case_id": "main__ransomware__cryptography",
+      "claim_id": "REPORT_SENT_006",
+      "evidence_ids": [
+        "E_23_534489D29C38B327"
+      ],
+      "lens": null,
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "CPG guidance provides an actionable institutional pathway for cryptography: deploy properly configured and current SSL/TLS where feasible, plan to identify and update outdated or weak encryption, consider post-quantum implications, and aim for effective encryption that maintains confidentiality and integrity of IT and OT traffic .",
+      "verdict": {
+        "audit_id": "f01fcccaf6c1bb412550ec98",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The cited CISA CPG chunk directly supports the claim by describing a recommended encryption pathway: use properly configured and current SSL/TLS where technically feasible, plan to identify and update outdated or weak encryption, consider post-quantum implications, and deploy effective encryption to maintain confidentiality and integrity for IT and OT traffic where feasible. No supplied counter-evidence materially contradicts or omits a necessary limitation.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "8e0f564ddbde3fe7aa9424f5",
+      "case_id": "main__session_hijacking__https",
+      "claim_id": "REPORT_SENT_010",
+      "evidence_ids": [
+        "DE_DE14_5FC183B8D7DD961A"
+      ],
+      "lens": null,
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "The IPsec remote-access case study provides contextual information about significant IT labor, but it does not by itself create a directional financial/adoption conclusion .",
+      "verdict": {
+        "audit_id": "8e0f564ddbde3fe7aa9424f5",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE14_5FC183B8D7DD961A"
+        ],
+        "direct_support": false,
+        "overgeneralization": false,
+        "rationale": "The cited case-study evidence directly supports the portion of the claim about the IPsec remote-access context requiring significant IT labor to install and support client software. However, the evidence does not explicitly establish the broader meta-claim that the case study does not by itself create a directional financial or adoption conclusion; it only shows that this excerpt is contextual and does not contain such a conclusion. The supplied counter-evidence contains no material contradiction.",
+        "unsupported_specificity": false,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "512423fa6183fd7378d0a3ee",
+      "case_id": "main__session_hijacking__https",
+      "claim_id": "REPORT_SENT_010",
+      "evidence_ids": [
+        "DE_DE13_055FC5E35FA61DD5",
+        "DE_DE10_4BE87A62A6676C99"
+      ],
+      "lens": null,
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "The challenge direction is grounded in compliance constraints that increase implementation and integration burden: session cookies shall be accessible only on secure HTTPS sessions, authenticated sessions shall not fall back to insecure transport after authentication, session identifiers shall be verified, and TLS configurations must satisfy specified implementation constraints, including support for Encrypt-then-MAC when CBC cipher suites are negotiated, restrictions on truncated MAC with variable-length padding, and PSK exchange-mode requirements  .",
+      "verdict": {
+        "audit_id": "512423fa6183fd7378d0a3ee",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE10_4BE87A62A6676C99"
+        ],
+        "direct_support": false,
+        "overgeneralization": true,
+        "rationale": "The cited NIST SP 800-63B record directly supports the session-cookie HTTPS restriction, the prohibition on falling back to insecure transport after authentication, and the requirement that session identifiers be verified. The cited NIST SP 800-52 Rev. 2 record directly supports the TLS implementation constraints for Encrypt-then-MAC with CBC negotiation, the restriction on truncated MAC tags with variable-length padding, and the PSK exchange-mode requirements. However, the claim also asserts that these compliance constraints increase implementation and integration burden and that this grounds a challenge direction. The supplied records state the normative requirements but do not directly establish the burden/increase framing, so the claim overextends the directly evidenced proposition.",
+        "unsupported_specificity": false,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "ef1b13033c2737554d05bbf1",
+      "case_id": "main__targeted_attack__access_control",
+      "claim_id": "REPORT_SENT_002",
+      "evidence_ids": [
+        "E_03_F0CD4F1DE74CC7AD"
+      ],
+      "lens": null,
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "The Mandiant record supports reported shares of intrusions being leveraged into targeted-attack activity, but those are shares of intrusions, not targeted-attack incident counts or frequency .",
+      "verdict": {
+        "audit_id": "ef1b13033c2737554d05bbf1",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_03_F0CD4F1DE74CC7AD"
+        ],
+        "direct_support": true,
+        "overgeneralization": false,
+        "rationale": "The supplied Mandiant evidence explicitly states that Mandiant identified opportunistic compromise being leveraged as a source of targeted attack activity in 6% of intrusions in 2022, compared with 4% in 2021 and 3% in 2020. This directly supports the claim that the Mandiant record reports shares of intrusions associated with leveraged compromise/targeted-attack activity, and the denominator is intrusions rather than targeted-attack incident counts or frequency. The supplied counter-evidence records are implementation/governance sources and do not materially contradict this claim.",
+        "unsupported_specificity": false,
+        "verdict": "DIRECT_SUPPORT"
+      }
+    },
+    {
+      "audit_id": "ca7402ce3637999a357f238d",
+      "case_id": "main__targeted_attack__access_control",
+      "claim_id": "REPORT_SENT_009",
+      "evidence_ids": [
+        "DE_DE13_055FC5E35FA61DD5"
+      ],
+      "lens": null,
+      "scenario_id": "KR__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "A compliance constraint imposes mandatory session and token handling requirements, including secure storage and transport, timeout and invalidation, prohibition of insecure fallback, session-identifier verification, cookie restrictions, and limits on treating access tokens as subscriber presence .",
+      "verdict": {
+        "audit_id": "ca7402ce3637999a357f238d",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "direct_support": false,
+        "overgeneralization": true,
+        "rationale": "The cited NIST SP 800-63B excerpt directly supports several mandatory session and token handling controls: authenticated protected transport, session timeout and non-acceptance after defined periods, no fallback to insecure transport, session-identifier verification, core cookie restrictions, and a mandatory rule that OAuth access-token presence must not be interpreted as subscriber presence. However, the claim overgeneralizes by describing the full set as mandatory. Some cited controls are phrased as SHOULD rather than SHALL, including avoiding insecure local storage and certain cookie attributes such as HttpOnly or expiration timing. The excerpt also does not explicitly require “invalidation” beyond timeout-based non-acceptance. Therefore the evidence supports a narrower subset of the claim’s modality and scope.",
+        "unsupported_specificity": false,
+        "verdict": "PARTIAL_SUPPORT"
+      }
+    }
+  ],
+  "audit_population_count": 742,
+  "by_layer_verdict": {
+    "decision_lens": {
+      "DIRECT_SUPPORT": 38,
+      "PARTIAL_SUPPORT": 4
+    },
+    "final_report_cited_sentence": {
+      "CONTRADICTS": 1,
+      "DIRECT_SUPPORT": 6,
+      "PARTIAL_SUPPORT": 7
+    },
+    "forecast_critic": {
+      "DIRECT_SUPPORT": 13,
+      "PARTIAL_SUPPORT": 1
+    }
+  },
+  "contradiction_dossier": {
+    "audit": {
+      "audit_id": "48f1a2efc1309e338cb5d5bf",
+      "case_id": "main__brute_force__ids_ips",
+      "claim_id": "REPORT_SENT_021",
+      "evidence_ids": [
+        "E_02_669F59880AF52688",
+        "E_03_F2B2EBA86BEEFDC5"
+      ],
+      "lens": null,
+      "scenario_id": "EU__CIS_IG2",
+      "source_layer": "final_report_cited_sentence",
+      "statement": "Forecast validation gap: the threat NoI direction lacks direct temporal incident-count/frequency evidence; the exploitation-signal slot is missing, and DBIR/Mandiant records are neutral context after adjudication  .",
+      "verdict": {
+        "audit_id": "48f1a2efc1309e338cb5d5bf",
+        "contradictory_evidence_omission": false,
+        "decisive_evidence_ids": [
+          "E_02_669F59880AF52688",
+          "E_03_F2B2EBA86BEEFDC5"
+        ],
+        "direct_support": false,
+        "overgeneralization": false,
+        "rationale": "The cited DBIR and Mandiant records contain explicit temporal incident-count and frequency material relevant to brute-force-related threat activity: DBIR reports 1,997 incidents and 881 confirmed breaches for basic web application attacks, and Mandiant reports 2023 initial infection vector percentages including brute force. This materially conflicts with the claim that the threat direction lacks direct temporal incident-count/frequency evidence. The claim also adds unsupported specificity by invoking undefined forecast terms and adjudication status, such as 'NoI direction', 'exploitation-signal slot', and 'after adjudication', none of which are stated in the supplied evidence records.",
+        "unsupported_specificity": true,
+        "verdict": "CONTRADICTS"
+      }
+    },
+    "counter_evidence_records": [
+      {
+        "allowed_claim_types": [
+          "implementation_feasibility",
+          "implementation_limitation",
+          "reference_architecture",
+          "implementation_how_to",
+          "deployment_maturity",
+          "operational_benefit",
+          "adoption_benefit",
+          "adoption_barrier",
+          "resource_burden",
+          "organizational_applicability",
+          "cyber_governance",
+          "governance_enablement",
+          "compliance_constraint",
+          "recommended_control",
+          "prioritized_defensive_practice",
+          "security_control"
+        ],
+        "available_at": "2011-09-30",
+        "content": "Special Publication 800-137\nInformation Security Continuous Monitoring for\nFederal Information Systems and Organizations\nPAGE 12\nrequirements. Sampling of information system security objects, rather than 100 percent\ninspection, can also be an efficient and effective means of monitoring, particularly in cases where\nmonitoring is not automated. Important considerations in determining sample sizes and\nmonitoring frequencies are discussed in Chapter Three.\nMonitoring frequencies (e.g., annually, quarterly, monthly, daily) are not static, and they are not\nuniform across all metrics. Security control assessment and monitoring frequencies, for example,\nare adjusted to support changes in organizational information systems or their environments of\noperation, including emerging information on security threats and vulnerabilities. The priorities\nfor ISCM vary and are adjusted in response to security incidents, to identify problems with\nsecurity control implementations, or to evaluate changes to systems and system components that\nare determined to have a significant impact on security. An ISCM strategy can deliver dynamic\nupdates of security-related data to support system authorizations conducted at any interval.\nSection 3.2.2 includes a more complete discussion of factors to consider when determining\nmonitoring frequencies.\n2.3 ROLE OF AUTOMATION IN ISCM\nWhen possible, organizations look for automated solutions to lower costs, enhance efficiency,\nand improve the reliability of monitoring security-related information. Security is implemented\nthrough a combination of people, processes, and technology. The automation of information\nsecurity deals primarily with automating aspects of security that require little human interaction.\nAutomated tools are often able to recognize patterns and relationships that may escape the notice\nof human analysts, especially when the analysis is performed on large volumes of data. This\nincludes items such as verifying technical settings on individual network endpoints or ensuring\nthat the software on a machine is up to date with organizational policy. Automation serves to\naugment the security processes conducted by security professionals within an organization and\nmay reduce the amount of time a security professional must spend on doing redundant tasks,",
+        "content_hash": "86df83870e0a768dd71d0d77d45369dfac281f151e65f0c61a217123cfd5a2a9",
+        "evidence_chain_id": "decision-guidance:nist-sp-800-137",
+        "evidence_date": null,
+        "evidence_id": "DE_DE07_86DF83870E0A768D",
+        "evidence_type": "decision_guidance_chunk",
+        "pmt_ids": [
+          "PMT_IDS_IPS"
+        ],
+        "prohibited_claim_types": [
+          "exact_effectiveness",
+          "universal_control_effectiveness",
+          "product_roi",
+          "product_tco",
+          "exact_budget",
+          "exact_staffing_count"
+        ],
+        "publication_date": "2011-09-30",
+        "retrieval_role": "decision_guidance_curated",
+        "source": "NIST Information Security Continuous Monitoring",
+        "source_document_id": "nist-sp-800-137",
+        "source_family": "J",
+        "source_locator": "page:19:chunk:1",
+        "source_registry_id": "DE07",
+        "source_snapshot_id": "stage3-decision-sources-2024-12-31-v3",
+        "threat_ids": []
+      },
+      {
+        "allowed_claim_types": [
+          "implementation_feasibility",
+          "implementation_limitation",
+          "reference_architecture",
+          "implementation_how_to",
+          "deployment_maturity",
+          "operational_benefit",
+          "adoption_benefit",
+          "adoption_barrier",
+          "resource_burden",
+          "organizational_applicability",
+          "cyber_governance",
+          "governance_enablement",
+          "compliance_constraint",
+          "recommended_control",
+          "prioritized_defensive_practice",
+          "security_control"
+        ],
+        "available_at": "2016-09-01",
+        "content": "porting logs from multiple systems into one solution that eliminates the time and effort required for manu\nal log reviews. Organizations can set up a SIEM to integrate multiple log formats from widely distributed\nsources, and collect the information both remotely and automatically. The SIEM can also integrate IDS/\nIPS information and scanning results and generate alerts on identified traffic patterns. A SIEM’s analysis\nengine speeds data processing and formatting time, making it cheaper and easier to review functional,\noperational, and security data. In addition, using a SIEM provides the ability to select specific events for\ncompliance reporting, root cause failure analysis, and incident detection.\n2.8 Vendor Management and Security\nVendors represent a special case within the framework of a strong Defense-in-Depth program. In the\nlast several years, vendors have become aware of the importance of cybersecurity in industrial control\nsolutions and, in many cases, have incorporated security into their product life cycle to meet emerging\nmarket demands. Although not every vendor is taking this approach, many of the leading vendors are.\nThey have seen the cyber vulnerabilities associated with ICSs—especially after the publicity of exploits\nsuch as Stuxnet, SQL Slammer Worm, and others. One should not assume, however, that vendors always\nfollow stringent security practices. The organization should present and address requirements for control\nsystem security in great clarity early in the procurement process. This is not only advantageous to the\nasset owner but also provides the vendors specific guidance on what functionality they need.\nOver the last several years, asset owners and vendors have benefited from a tremendous amount of\nwork done in developing procurement guidance. This guidance has resulted in progress toward securing\nseveral vendor solutions applicable to many different sectors. The Department of Energy (DOE) devel\noped procurement language considerations to help ensure that products meet requirements. This guidance\ndocument provides baseline procurement language for use by asset owners, operators, integrators, and\nsuppliers during the procurement process. In addition, a more generalized procurement language docu",
+        "content_hash": "e455d97291b61e2a9f55bc1f2267f8a0aa3a0a700e52ce0435dd65c653b3e13b",
+        "evidence_chain_id": "decision-guidance:cisa-ics-defense-in-depth-2016",
+        "evidence_date": null,
+        "evidence_id": "DE_DE16_E455D97291B61E2A",
+        "evidence_type": "decision_guidance_chunk",
+        "pmt_ids": [
+          "PMT_ANOMALY_DETECTION",
+          "PMT_IDS_IPS"
+        ],
+        "prohibited_claim_types": [
+          "exact_effectiveness",
+          "universal_control_effectiveness",
+          "product_roi",
+          "product_tco",
+          "exact_budget",
+          "exact_staffing_count"
+        ],
+        "publication_date": "2016-09-01",
+        "retrieval_role": "decision_guidance_curated",
+        "source": "CISA/ICS-CERT Improving ICS Cybersecurity with Defense-in-Depth Strategies",
+        "source_document_id": "cisa-ics-defense-in-depth-2016",
+        "source_family": "J",
+        "source_locator": "page:40:chunk:2",
+        "source_registry_id": "DE16",
+        "source_snapshot_id": "stage3-decision-sources-2024-12-31-v3",
+        "threat_ids": []
+      },
+      {
+        "allowed_claim_types": [
+          "implementation_feasibility",
+          "implementation_limitation",
+          "reference_architecture",
+          "implementation_how_to",
+          "deployment_maturity",
+          "operational_benefit",
+          "adoption_benefit",
+          "adoption_barrier",
+          "resource_burden",
+          "organizational_applicability",
+          "cyber_governance",
+          "governance_enablement",
+          "compliance_constraint",
+          "recommended_control",
+          "prioritized_defensive_practice",
+          "security_control"
+        ],
+        "available_at": "2007-02-20",
+        "content": "Direct IDPS integration is most often performed when an organization uses multiple IDPS products from\na single vendor. For example, some vendors offer both network-based and host-based products. These\nvendors frequently offer a single console that can be used to manage and monitor both types of products.\nThis can provide significant time savings to administrators and users because it streamlines their work.\nSome products also share data; for example, a product might use host-based IDPS data to determine if an\nattack detected by network-based IDPS sensors was successful, or if an attack stopped by network-based\nIDPS data would have been successful if allowed to pass. This information can speed the analysis\nprocess and help users to better prioritize threats. The primary disadvantage of using a fully integrated\nsolution is that a failure or compromise could endanger all the IDPS technologies that are part of the\nintegrated solution.\nA more limited form of direct IDPS integration is having one IDPS product provide data for another IDPS\nproduct. As mentioned previously, two products from the same vendor often share data with each other\nfor correlation purposes. Data can also be shared among products from different vendors, although\ntypically this simply involves one product providing data as input to the second product. For example, a\nnetwork-based IDPS could potentially provide network flow information to an NBA sensor. A host-\nbased IDPS could provide system configuration information to NBA or network-based IDPS sensors.\nThis data can be used for event correlation and better prioritization of alerts.\n8-2",
+        "content_hash": "db6b29c9be1b0f0562f9e573e43084c6caee8d4df3aa3155ff71af4a7b87f233",
+        "evidence_chain_id": "decision-guidance:nist-sp-800-94",
+        "evidence_date": null,
+        "evidence_id": "DE_DE04_DB6B29C9BE1B0F05",
+        "evidence_type": "decision_guidance_chunk",
+        "pmt_ids": [
+          "PMT_ANOMALY_DETECTION",
+          "PMT_IDS_IPS"
+        ],
+        "prohibited_claim_types": [
+          "exact_effectiveness",
+          "universal_control_effectiveness",
+          "product_roi",
+          "product_tco",
+          "exact_budget",
+          "exact_staffing_count"
+        ],
+        "publication_date": "2007-02-20",
+        "retrieval_role": "decision_guidance_curated",
+        "source": "NIST Guide to Intrusion Detection and Prevention Systems",
+        "source_document_id": "nist-sp-800-94",
+        "source_family": "J",
+        "source_locator": "page:86:chunk:2",
+        "source_registry_id": "DE04",
+        "source_snapshot_id": "stage3-decision-sources-2024-12-31-v3",
+        "threat_ids": []
+      },
+      {
+        "allowed_claim_types": [
+          "implementation_feasibility",
+          "implementation_limitation",
+          "reference_architecture",
+          "implementation_how_to",
+          "deployment_maturity",
+          "operational_benefit",
+          "adoption_benefit",
+          "adoption_barrier",
+          "resource_burden",
+          "organizational_applicability",
+          "cyber_governance",
+          "governance_enablement",
+          "compliance_constraint",
+          "recommended_control",
+          "prioritized_defensive_practice",
+          "security_control"
+        ],
+        "available_at": "2007-02-20",
+        "content": "GUIDE TO INTRUSION DETECTION AND PREVENTION SYSTEMS (IDPS)\nAdministrators should test software and signature updates before applying them except for emergency\nsituations (e.g., a signature identifies a new, active threat that is damaging the organization and cannot\notherwise be detected or blocked). It is beneficial to have at least one sensor or agent host (one for each\ntype of agent) that is used strictly for testing updates. New detection capabilities can often cause large\nnumbers of alerts to be triggered, so testing signature updates on a single sensor or agent host, even\nbriefly (e.g., loading the update and observing how the IDPS functions when monitoring typical activity),\ncan help to identify signatures that are likely to be problematic and should possibly be disabled. In non-\nemergency situations, software and signature updates should be tested and deployed using the same\npractices that would be used for updating any other major security controls, such as firewalls and\nantivirus software. When updates are deployed into production, administrators should be ready to disable\nparticular signatures or perform other minor reconfigurations as needed.\n3.3.3 Building and Maintaining Skills\nVarious skills are needed for IDPS implementation, operation, and maintenance, including the following:\nThe administrators implementing IDPS components need to understand the basics of system\nadministration, network administration, and information security.\nThe administrators tuning and customizing the IDPS need reasonably comprehensive knowledge of\ninformation security and IDPS principles. An understanding of incident response principles and the\norganization’s incident response policies and procedures is also recommended. Administrators\nshould also have an understanding of the network protocols, applications, and operating systems to be\nmonitored by the IDPS.\nProgramming skills might also be needed for extensive code customization, report writing, and other\ntasks.\nSkills in IDPS principles can be built and maintained through many methods, including training, technical\nconferences, books and other technical references, and mentoring programs. Knowledge of specific IDPS\nproducts can also be gained through several methods, including the following:\nVendor Training. Many vendors of IDPS products offer one or more training courses for people",
+        "content_hash": "c6f46fcde66bfac78ac384030f237d1fd69379ba73c148486766cad461907772",
+        "evidence_chain_id": "decision-guidance:nist-sp-800-94",
+        "evidence_date": null,
+        "evidence_id": "DE_DE04_C6F46FCDE66BFAC7",
+        "evidence_type": "decision_guidance_chunk",
+        "pmt_ids": [
+          "PMT_ANOMALY_DETECTION",
+          "PMT_IDS_IPS"
+        ],
+        "prohibited_claim_types": [
+          "exact_effectiveness",
+          "universal_control_effectiveness",
+          "product_roi",
+          "product_tco",
+          "exact_budget",
+          "exact_staffing_count"
+        ],
+        "publication_date": "2007-02-20",
+        "retrieval_role": "decision_guidance_curated",
+        "source": "NIST Guide to Intrusion Detection and Prevention Systems",
+        "source_document_id": "nist-sp-800-94",
+        "source_family": "J",
+        "source_locator": "page:31:chunk:1",
+        "source_registry_id": "DE04",
+        "source_snapshot_id": "stage3-decision-sources-2024-12-31-v3",
+        "threat_ids": []
+      },
+      {
+        "allowed_claim_types": [
+          "implementation_feasibility",
+          "implementation_limitation",
+          "reference_architecture",
+          "implementation_how_to",
+          "deployment_maturity",
+          "operational_benefit",
+          "adoption_benefit",
+          "adoption_barrier",
+          "resource_burden",
+          "organizational_applicability",
+          "cyber_governance",
+          "governance_enablement",
+          "compliance_constraint",
+          "recommended_control",
+          "prioritized_defensive_practice",
+          "security_control"
+        ],
+        "available_at": "2007-02-20",
+        "content": "Organizations planning to use multiple types of IDPS technologies or multiple products of the same\nIDPS technology type should consider whether or not the IDPSs should be integrated.\nDirect IDPS integration most often occurs when an organization uses multiple IDPS products from a\nsingle vendor, by having a single console that can be used to manage and monitor the multiple products.\nSome products can also mutually share data, which can speed the analysis process and help users to better\nprioritize threats. A more limited form of direct IDPS integration is having one IDPS product provide\ndata for another IDPS product (but no data sharing in the opposite direction). Indirect IDPS integration is\nusually performed with security information and event management (SIEM) software, which is designed\nto import information from various security-related logs and correlate events among them. SIEM\nsoftware complements IDPS technologies in several ways, including correlating events logged by\ndifferent technologies, displaying data from many event sources, and providing supporting information\nfrom other sources to help users verify the accuracy of IDPS alerts.\nBefore evaluating IDPS products, organizations should define the requirements that the products\nshould meet.\nEvaluators need to understand the characteristics of the organization’s system and network environments,\nso that a compatible IDPS can be selected that can monitor the events of interest on the systems and/or\nnetworks. Evaluators should articulate the goals and objectives they wish to attain by using an IDPS,\nsuch as stopping common attacks, identifying misconfigured wireless network devices, and detecting\nmisuse of the organization’s system and network resources. Evaluators should also review their existing\nsecurity policies, which serve as a specification for many of the features that the IDPS products need to\nprovide. In addition, evaluators should understand whether or not the organization is subject to oversight\nES-2",
+        "content_hash": "0b017d64401987e439975d23182991417aed6112ae12a257f495d9e48058a265",
+        "evidence_chain_id": "decision-guidance:nist-sp-800-94",
+        "evidence_date": null,
+        "evidence_id": "DE_DE04_0B017D64401987E4",
+        "evidence_type": "decision_guidance_chunk",
+        "pmt_ids": [
+          "PMT_ANOMALY_DETECTION",
+          "PMT_IDS_IPS"
+        ],
+        "prohibited_claim_types": [
+          "exact_effectiveness",
+          "universal_control_effectiveness",
+          "product_roi",
+          "product_tco",
+          "exact_budget",
+          "exact_staffing_count"
+        ],
+        "publication_date": "2007-02-20",
+        "retrieval_role": "decision_guidance_curated",
+        "source": "NIST Guide to Intrusion Detection and Prevention Systems",
+        "source_document_id": "nist-sp-800-94",
+        "source_family": "J",
+        "source_locator": "page:10:chunk:2",
+        "source_registry_id": "DE04",
+        "source_snapshot_id": "stage3-decision-sources-2024-12-31-v3",
+        "threat_ids": []
+      },
+      {
+        "allowed_claim_types": [
+          "organizational_context",
+          "resource_profile",
+          "infrastructure_context",
+          "adoption_context"
+        ],
+        "available_at": "2019-03-30",
+        "content": "CIS Implementation Group 2 describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles. Such enterprises often process sensitive client or enterprise information, may face regulatory burdens, and can tolerate short service interruptions. IG2 safeguards address increased operational complexity; some depend on enterprise-grade technology and specialized expertise to install and configure.",
+        "content_hash": "9c328ea88f926ac924dbfcd9341fce81b5e32e53d4cc42e9fe0939b5cb9be82e",
+        "evidence_chain_id": "CIS_CONTROLS_V7_1_IG2",
+        "evidence_date": "2019-03-30",
+        "evidence_id": "CTX_CIS_IG2_9F94838146D9C3A4",
+        "evidence_type": "context_standard_profile",
+        "pmt_ids": [],
+        "prohibited_claim_types": [
+          "exact_budget",
+          "exact_staffing_count",
+          "product_roi",
+          "product_tco",
+          "universal_control_effectiveness"
+        ],
+        "publication_date": "2019-03-30",
+        "retrieval_role": "context_definition",
+        "source": "Center for Internet Security - CIS Controls v7.1, Implementation Group 2",
+        "source_content_sha256": "ae55cb37c6e5ed108601fc159e9c5e1e66d68d0f599499472cbddd14ed2fd984",
+        "source_document_id": "cis-ig2-reference-v1",
+        "source_family": "CONTEXT_STANDARD",
+        "source_locator": "page 9, Implementation Group 2",
+        "source_registry_id": "CTX_CIS_IG2",
+        "source_snapshot_id": "stage3-context-scenarios-v1",
+        "source_uri": "https://downloads.cisecurity.org/controls/CIS-Controls-Version-7-1.pdf",
+        "threat_ids": []
+      },
+      {
+        "allowed_claim_types": [
+          "implementation_feasibility",
+          "implementation_limitation",
+          "reference_architecture",
+          "implementation_how_to",
+          "deployment_maturity",
+          "operational_benefit",
+          "adoption_benefit",
+          "adoption_barrier",
+          "resource_burden",
+          "organizational_applicability",
+          "cyber_governance",
+          "governance_enablement",
+          "compliance_constraint",
+          "recommended_control",
+          "prioritized_defensive_practice",
+          "security_control"
+        ],
+        "available_at": "2011-09-30",
+        "content": "Special Publication 800-137\nInformation Security Continuous Monitoring for\nFederal Information Systems and Organizations\nPAGE 8\nFigure 2-1. Organization-wide ISCM\nAn organization-wide approach to continuous monitoring of information and information system\nsecurity supports risk-related decision making at the organization level (Tier 1), the\nmission/business processes level (Tier 2), and the information systems level (Tier 3).14\n2.1.1\nTIER 1- ORGANIZATION\nTier 1 risk management activities address high-level information security governance policy as it\nrelates to risk to the organization as a whole, to its core missions, and to its business functions. At\nthis tier, the criteria for ISCM are defined by the organization’s risk management strategy,\nincluding how the organization plans to assess, respond to, and monitor risk, and the oversight\nrequired to ensure that the risk management strategy is effective. Security controls, security status,\nand other metrics defined and monitored by officials at this tier are designed to deliver information\nnecessary to make risk management decisions in support of governance. Tier 1 metrics are\ndeveloped for supporting governance decisions regarding the organization, its core missions, and\n14 NIST Special Publication 800-39, as amended, provides guidelines on the holistic approach to risk management.\nORGANIZATION\nRisk Tolerance/\nGovernance/Policies/\nStrategies\nINFORMATION SYSTEMS\nCollection/Correlation/Analysis/Reporting\nData\nMISSION/BUSINESS PROCESSES\nCollection/Correlation/Analysis/Reporting\nTools\nData\nTools",
+        "content_hash": "e2c403c2ff05ba0992c61114e0874c518ff7e62247156541edd2040893397de9",
+        "evidence_chain_id": "decision-guidance:nist-sp-800-137",
+        "evidence_date": null,
+        "evidence_id": "DE_DE07_E2C403C2FF05BA09",
+        "evidence_type": "decision_guidance_chunk",
+        "pmt_ids": [
+          "PMT_IDS_IPS"
+        ],
+        "prohibited_claim_types": [
+          "exact_effectiveness",
+          "universal_control_effectiveness",
+          "product_roi",
+          "product_tco",
+          "exact_budget",
+          "exact_staffing_count"
+        ],
+        "publication_date": "2011-09-30",
+        "retrieval_role": "decision_guidance_curated",
+        "source": "NIST Information Security Continuous Monitoring",
+        "source_document_id": "nist-sp-800-137",
+        "source_family": "J",
+        "source_locator": "page:15:chunk:1",
+        "source_registry_id": "DE07",
+        "source_snapshot_id": "stage3-decision-sources-2024-12-31-v3",
+        "threat_ids": []
+      },
+      {
+        "allowed_claim_types": [
+          "implementation_feasibility",
+          "implementation_limitation",
+          "reference_architecture",
+          "implementation_how_to",
+          "deployment_maturity",
+          "operational_benefit",
+          "adoption_benefit",
+          "adoption_barrier",
+          "resource_burden",
+          "organizational_applicability",
+          "cyber_governance",
+          "governance_enablement",
+          "compliance_constraint",
+          "recommended_control",
+          "prioritized_defensive_practice",
+          "security_control"
+        ],
+        "available_at": "2007-02-20",
+        "content": "GUIDE TO INTRUSION DETECTION AND PREVENTION SYSTEMS (IDPS)\nprotective actions of particular importance include creating separate accounts for each IDPS user and\nadministrator, restricting network access to IDPS components, and ensuring that IDPS management\ncommunications are protected appropriately, such as encrypting them or transmitting them over a\nphysically or logically separate network. Administrators should maintain the security of the IDPS\ncomponents on an ongoing basis, including verifying that the components are functioning as desired,\nmonitoring the components for security issues, performing regular vulnerability assessments, responding\nappropriately to vulnerabilities in the IDPS components, and testing and deploying IDPS updates.\nAdministrators should also back up configuration settings periodically and before applying updates to\nensure that existing settings are not inadvertently lost.\nOrganizations should consider using multiple types of IDPS technologies to achieve more\ncomprehensive and accurate detection and prevention of malicious activity.\nThe four primary types of IDPS technologies—network-based, wireless, NBA, and host-based—each\noffer fundamentally different information gathering, logging, detection, and prevention capabilities. Each\ntechnology type offers benefits over the others, such as detecting some events that the others cannot and\ndetecting some events with significantly greater accuracy than the other technologies. In many\nenvironments, a robust IDPS solution cannot be achieved without using multiple types of IDPS\ntechnologies. For most environments, a combination of network-based and host-based IDPS technologies\nis needed for an effective IDPS solution. Wireless IDPS technologies may also be needed if the\norganization determines that its wireless networks need additional monitoring or if the organization wants\nto ensure that rogue wireless networks are not in use in the organization’s facilities. NBA technologies\ncan also be deployed if organizations desire additional detection capabilities for denial of service attacks,\nworms, and other threats that NBAs are particularly well-suited to detecting. Organizations should\nconsider the different capabilities of each technology type along with other cost-benefit information when\nselecting IDPS technologies.",
+        "content_hash": "0b77b88875745973c4f042c45bcfa79f9dd31af54cb8e1642fe175f4590e69d8",
+        "evidence_chain_id": "decision-guidance:nist-sp-800-94",
+        "evidence_date": null,
+        "evidence_id": "DE_DE04_0B77B88875745973",
+        "evidence_type": "decision_guidance_chunk",
+        "pmt_ids": [
+          "PMT_ANOMALY_DETECTION",
+          "PMT_IDS_IPS"
+        ],
+        "prohibited_claim_types": [
+          "exact_effectiveness",
+          "universal_control_effectiveness",
+          "product_roi",
+          "product_tco",
+          "exact_budget",
+          "exact_staffing_count"
+        ],
+        "publication_date": "2007-02-20",
+        "retrieval_role": "decision_guidance_curated",
+        "source": "NIST Guide to Intrusion Detection and Prevention Systems",
+        "source_document_id": "nist-sp-800-94",
+        "source_family": "J",
+        "source_locator": "page:10:chunk:1",
+        "source_registry_id": "DE04",
+        "source_snapshot_id": "stage3-decision-sources-2024-12-31-v3",
+        "threat_ids": []
+      }
+    ],
+    "exact_cited_records": [
+      {
+        "allowed_claim_types": [
+          "observed_threat_pattern",
+          "directional_threat_trend",
+          "observed_attack_vector",
+          "observed_adversary_behavior"
+        ],
+        "available_at": "2024-12-31",
+        "content": "42\nBasic Web\nApplication Attacks\nFrequency\n1,997 incidents,\n881 with confirmed\ndata disclosure\nThreat actors\nExternal (100%),\nInternal (1%),\nMultiple (1%)\n(breaches)\nActor motives\nFinancial (85%),\nEspionage (15%)\n(breaches)\nData\ncompromised\nCredentials (71%),\nPersonal (58%),\nOther (29%),\nInternal (17%)\n(breaches)\nSummary\nThreat actors continue to take\nadvantage of assets with default,\nsimplistic and easily guessable\ncredentials via brute forcing\nthem, buying them or reusing\nthem from previous breaches.\nWhat is the same?\nFinancially motivated external\nactors continue to target credentials\nand personal information.\nRelevant ATT&CK\ntechniques\nBrute Force: T1110\n– \u0007Credential Stuffing:\nT1110.004\n– \u0007Password Cracking:\nT1110.002\n– \u0007Password Guessing:\nT1110.001\n– \u0007Password Spraying:\nT1110.003\nCompromise Accounts: T1586\n– \u0007Email Accounts: T1586.002\nExploit Public-Facing Application:\nT1190\nExternal Remote Services: T1133\nValid Accounts: T1078\n– \u0007Default Accounts:\nT1078.001\n– \u0007Domain Accounts:\nT1078.002\nUse Alternate Authentication\nMaterial: T1550\n– \u0007Application Access Token:\nT1550.001\nActive Scanning: T1595\n– \u0007Vulnerability Scanning:\nT1595.002\n2024 DBIR Incident Classification Patterns",
+        "content_hash": "669f59880af52688e8039537b6f49f63d59dd96496d727294a141c81b8a06b30",
+        "evidence_chain_id": null,
+        "evidence_date": null,
+        "evidence_id": "E_02_669F59880AF52688",
+        "evidence_type": "annual_report_chunk",
+        "pmt_ids": [],
+        "prohibited_claim_types": [
+          "exact_future_probability",
+          "product_roi",
+          "product_tco",
+          "universal_control_effectiveness"
+        ],
+        "publication_date": "2024-12-31",
+        "retrieval_role": "neutral_candidate",
+        "source": "Verizon Data Breach Investigations Report (DBIR)",
+        "source_document_id": "dbir-2024",
+        "source_family": "B",
+        "source_locator": "page:42:chunk:1",
+        "source_registry_id": "02",
+        "source_snapshot_id": "stage0-2026-09-13-v4",
+        "threat_ids": [
+          "THREAT_BRUTE_FORCE_ATTACK",
+          "THREAT_VULNERABILITY"
+        ]
+      },
+      {
+        "allowed_claim_types": [
+          "observed_threat_pattern",
+          "directional_threat_trend",
+          "observed_attack_vector",
+          "observed_adversary_behavior"
+        ],
+        "available_at": "2024-12-31",
+        "content": "Special Report: Mandiant M-Trends 2024\n13\nTargeted Attacks\nInitial Infection Vector\nIn 2023, Mandiant experts once again saw exploits used as the most prevalent adversary\ninitial infection vector. In intrusions where the initial intrusion vector was identified, 38%\nof intrusions started with an exploit. This is a six percentage point increase from 2022,\nconsistent with what defenders faced in 2021. For more information, please see “Attacker\nOperations Involving Zero-Days Vary Depending on Motivation”.\nPhishing remained the second most common intrusion vector. However it declined in 2023,\nwith 17% of intrusions, compared to 22% in 2022. Phishing remains an effective method to\nestablish an initial foothold and a popular threat vector for adversaries. Full analysis can be\nfound in “Evolution of Phishing Among Shifting Security Controls”.\nPrior compromises were the third most significant intrusion vector used by attackers in\n2023. Mandiant investigators noted a three percentage point increase in 2023 compared\nto what was observed in 2022 with 15% of intrusions beginning with access provided by\na prior compromise. This increase is likely related to the ransomware ecosystem and the\ncontinued partnership between ransomware affiliates and various malware operators\nselling initial access.\nExploit\nPhishing\nPrior Compromise\nStolen Credentials\nBrute Force\nWeb\nCompromise\nServer\nCompromise\nThird-Party\nCompromise\nPhishing\n(Social Media)\nSIM Swap\nOther\n38\n%17\n% 10\n%\n6\n%\n3\n% 2\n%\n1\n%\n1\n%\n2\n%\n15\n%\n5\n%\nInitial Infection Vector (When Identified)",
+        "content_hash": "f2b2eba86beefdc53cb52021f5efe9b42db17059929a2c00041cc4a27748a418",
+        "evidence_chain_id": null,
+        "evidence_date": null,
+        "evidence_id": "E_03_F2B2EBA86BEEFDC5",
+        "evidence_type": "annual_report_chunk",
+        "pmt_ids": [],
+        "prohibited_claim_types": [
+          "exact_future_probability",
+          "product_roi",
+          "product_tco",
+          "universal_control_effectiveness"
+        ],
+        "publication_date": "2024-12-31",
+        "retrieval_role": "neutral_candidate",
+        "source": "Mandiant M-Trends",
+        "source_document_id": "mtrends-2024",
+        "source_family": "B",
+        "source_locator": "page:13:chunk:1",
+        "source_registry_id": "03",
+        "source_snapshot_id": "stage0-2026-09-13-v4",
+        "threat_ids": [
+          "THREAT_BRUTE_FORCE_ATTACK",
+          "THREAT_MALWARE",
+          "THREAT_PHISHING",
+          "THREAT_RANSOMWARE"
+        ]
+      }
+    ],
+    "inspection_note": "DBIR reports one-year basic-web-attack counts; Mandiant reports a one-year initial-infection-vector mix, not a multi-year brute-force incident-count trajectory. The claim denies direct temporally aligned count/frequency evidence. Thus the verifier's CONTRADICTS rationale does not itself establish a factual contradiction. Separate statements about the internal adjudication are not verifiable from these two external records alone. This is a source-inspection interpretation, NOT a new expert label."
+  },
+  "evaluator_type": "same-family Qwen LLM, NOT human/external ground truth",
+  "population_by_layer": {
+    "Stage1": 110,
+    "Stage4": 263,
+    "Stage6": 369
+  },
+  "selected_count": 70,
+  "selection_rule": "two smallest SHA256(seed|audit_id) per (source_layer,case,lens-or-NO_LENS), before judging",
+  "selection_seed": 20260916,
+  "sha256": "88038e1f87ec389673ed2f3f80b3c7aa3c18bb6537f345459e8b8ea0c9f5aa79",
+  "source_model": "Qwen3.8-27B-Q6_K_L",
+  "source_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+  "version": "reviewer2-external-reference-report-audit-v1"
+}
