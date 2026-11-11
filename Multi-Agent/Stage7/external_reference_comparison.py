@@ -546,27 +546,39 @@ def _audit_identity(kind: str, key: str, payload: dict) -> dict:
 
 
 def _query_gemma(system: str, payload: dict, model: type[BaseModel]) -> BaseModel:
-    response = requests.post(
-        CHAT_URL,
-        json={
-            "model": GEMMA_MODEL,
-            "messages": [
-                {"role": "system", "content": system},
-                {"role": "user", "content": canonical_json(payload)},
-            ],
-            "seed": 42,
-            "temperature": 0,
-            "max_tokens": 3000,
-            "response_format": {
-                "type": "json_object",
-                "schema": model.model_json_schema(),
+    # The original 3,000-token limit could truncate an otherwise valid JSON
+    # answer inside a quoted issue/rationale string. Retry only unfinished or
+    # invalid responses; completed checkpoints remain frozen and reusable.
+    for max_tokens in (8192, 12288):
+        response = requests.post(
+            CHAT_URL,
+            json={
+                "model": GEMMA_MODEL,
+                "messages": [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": canonical_json(payload)},
+                ],
+                "seed": 42,
+                "temperature": 0,
+                "max_tokens": max_tokens,
+                "response_format": {
+                    "type": "json_object",
+                    "schema": model.model_json_schema(),
+                },
             },
-        },
-        timeout=1800,
-    )
-    response.raise_for_status()
-    content = response.json()["choices"][0]["message"]["content"]
-    return model.model_validate_json(content)
+            timeout=1800,
+        )
+        response.raise_for_status()
+        choice = response.json()["choices"][0]
+        finish_reason = choice.get("finish_reason")
+        if finish_reason in ("length", "max_tokens"):
+            print(f"Gemma output truncated at {max_tokens} tokens; retrying if possible", flush=True)
+            continue
+        try:
+            return model.model_validate_json(choice["message"]["content"])
+        except (ValueError, KeyError, TypeError) as exc:
+            print(f"Gemma JSON/schema invalid at {max_tokens} tokens: {str(exc)[:180]}", flush=True)
+    raise RuntimeError("Gemma returned no complete schema-valid response after two attempts; checkpoint not written")
 
 
 def _audit_cases() -> list[dict]:
@@ -865,6 +877,45 @@ def self_test() -> None:
     assert not citation_check["unknown_cited_ids"]
     counterfeit = _report_input(rows[0], "Claim [EVIDENCE:NONEXISTENT_CITATION]", "HOLD")
     assert counterfeit["invalid_or_unknown_citations"] == ["NONEXISTENT_CITATION"]
+
+    # A truncated response must not be parsed or checkpointed; verify retry
+    # without a live model call or changing any original audit identity.
+    from unittest.mock import Mock, patch
+
+    good_grade = ReportGrade(
+        factual_grounding=2,
+        technical_scope=2,
+        forecast_modality=2,
+        constraints_and_uncertainty=2,
+        internal_decision_coherence=2,
+        material_issues=[],
+        rationale="Mocked response for verifying recovery from an incomplete JSON generation.",
+    )
+    incomplete = Mock()
+    incomplete.json.return_value = {
+        "choices": [{"finish_reason": "length", "message": {"content": '{"rationale":"unfinished'}}]
+    }
+    complete = Mock()
+    complete.json.return_value = {
+        "choices": [{"finish_reason": "stop", "message": {"content": good_grade.model_dump_json()}}]
+    }
+    with patch.object(requests, "post", side_effect=[incomplete, complete]) as mocked:
+        assert _query_gemma(REPORT_SYSTEM, {"test": True}, ReportGrade) == good_grade
+        assert [call.kwargs["json"]["max_tokens"] for call in mocked.call_args_list] == [8192, 12288]
+    malformed = Mock()
+    malformed.json.return_value = {
+        "choices": [{"finish_reason": "stop", "message": {"content": '{"rationale":"unfinished'}}]
+    }
+    with patch.object(requests, "post", side_effect=[malformed, complete]) as mocked:
+        assert _query_gemma(REPORT_SYSTEM, {"test": True}, ReportGrade) == good_grade
+        assert mocked.call_count == 2
+    with patch.object(requests, "post", side_effect=[incomplete, incomplete]):
+        try:
+            _query_gemma(REPORT_SYSTEM, {"test": True}, ReportGrade)
+        except RuntimeError as exc:
+            assert "no complete schema-valid response" in str(exc)
+        else:
+            raise AssertionError("Truncated Gemma judgments must not be accepted")
 
     # Exercise the complete checkpoint and summary plumbing with MOCK outputs
     # isolated under a temporary directory, never mixing mock and real data.
