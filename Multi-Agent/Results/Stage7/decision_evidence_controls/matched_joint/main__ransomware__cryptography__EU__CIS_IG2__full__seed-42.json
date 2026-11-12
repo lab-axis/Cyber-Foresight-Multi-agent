@@ -1,0 +1,201 @@
+{
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "96b322b869d3ba76434967a8df0735b62041641372b0097f214d3e3226f5c3fc",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "11461a065105b649e7b0a11feecf9bda22872dd0631f5734806e09ffc0f5e735",
+    "source_hashes": {
+      "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+      "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+      "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+      "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+      "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+      "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile describes a multi-department enterprise IT context that may require enterprise-grade technology and specialized expertise, without supplying numeric budget, price, ROI, TCO, staffing count, or procurement ceiling.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__3ba36a931c4d6a67",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, and no evaluation evidence establishes a financial-specific adoption benefit or burden for CRYPTOGRAPHY in this EU CIS IG2 enterprise. The available adoption-level sources do not provide financial quantities. Therefore the financial lens remains insufficient rather than supportable or challengeable."
+      ],
+      "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+      "lens_type": "financial_adoption",
+      "rationale": "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, and no evaluation evidence establishes a financial-specific adoption benefit or burden for CRYPTOGRAPHY in this EU CIS IG2 enterprise. The available adoption-level sources do not provide financial quantities. Therefore the financial lens remains insufficient rather than supportable or challengeable.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_31_A0893427DD4F5B04",
+            "E_31_C1CFA326F0420DCA"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "EU primary-law evidence includes pseudonymisation and encryption of personal data among appropriate technical security measures and references encryption in national cybersecurity strategy and public procurement policy, supporting a deployment-specific EU institutional direction for cryptographic safeguards.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST algorithm-transition guidance imposes compliance constraints by deprecating or disallowing certain legacy cryptographic algorithms and directing use of acceptable algorithms such as AES.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__3ba36a931c4d6a67",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Institutional support is stronger than the challenge. EU primary-law evidence places encryption and pseudonymisation within appropriate security measures and references encryption in national cybersecurity strategy and public procurement policy. NIST key-management guidance adds governance_enablement for cryptographic key traceability. The compliance constraint from NIST algorithm-transition guidance is real but less deployment-specific than the EU regulatory evidence and does not outweigh the support. Sufficiency is PARTIAL because the exact sector or entity status of the CIS IG2 reference enterprise is not specified.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic-primitive analysis can materially support ransomware neutralization and reverse engineering by identifying cipher classes and extracting cryptographic keys or state from execution traces.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ransomware can alter observable entropy patterns to evade entropy-based detection of cryptographic operations, and some existing approaches impose nontrivial computational cost, limiting robustness of cryptography-related detection.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__3ba36a931c4d6a67",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "The technical lens contains a direct technical_enablement finding and a direct technical_limitation finding. CipherTrace evidence shows cryptographic-primitive analysis can materially support ransomware neutralization and reverse engineering. Separately, entropy-sharing evidence shows ransomware can evade entropy-based cryptographic-operation detection and that some approaches impose nontrivial computational cost. These two directions are both direct enough to be retained, but they are genuinely mixed and do not establish enterprise-specific technical success for the EU CIS IG2 scenario.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "Forecast fields were treated as decision context only. The cited claims rely exclusively on supplied evaluation evidence, not on forecast identifiers, invented financial quantities, or external sources.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile describes a multi-department enterprise IT context that may require enterprise-grade technology and specialized expertise, without supplying numeric budget, price, ROI, TCO, staffing count, or procurement ceiling.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+      "rationale": "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, and no evaluation evidence establishes a financial-specific adoption benefit or burden for CRYPTOGRAPHY in this EU CIS IG2 enterprise. The available adoption-level sources do not provide financial quantities. Therefore the financial lens remains insufficient rather than supportable or challengeable.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_31_A0893427DD4F5B04",
+            "E_31_C1CFA326F0420DCA"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "EU primary-law evidence includes pseudonymisation and encryption of personal data among appropriate technical security measures and references encryption in national cybersecurity strategy and public procurement policy, supporting a deployment-specific EU institutional direction for cryptographic safeguards.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST algorithm-transition guidance imposes compliance constraints by deprecating or disallowing certain legacy cryptographic algorithms and directing use of acceptable algorithms such as AES.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Institutional support is stronger than the challenge. EU primary-law evidence places encryption and pseudonymisation within appropriate security measures and references encryption in national cybersecurity strategy and public procurement policy. NIST key-management guidance adds governance_enablement for cryptographic key traceability. The compliance constraint from NIST algorithm-transition guidance is real but less deployment-specific than the EU regulatory evidence and does not outweigh the support. Sufficiency is PARTIAL because the exact sector or entity status of the CIS IG2 reference enterprise is not specified.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic-primitive analysis can materially support ransomware neutralization and reverse engineering by identifying cipher classes and extracting cryptographic keys or state from execution traces.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ransomware can alter observable entropy patterns to evade entropy-based detection of cryptographic operations, and some existing approaches impose nontrivial computational cost, limiting robustness of cryptography-related detection.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The technical lens contains a direct technical_enablement finding and a direct technical_limitation finding. CipherTrace evidence shows cryptographic-primitive analysis can materially support ransomware neutralization and reverse engineering. Separately, entropy-sharing evidence shows ransomware can evade entropy-based cryptographic-operation detection and that some approaches impose nontrivial computational cost. These two directions are both direct enough to be retained, but they are genuinely mixed and do not establish enterprise-specific technical success for the EU CIS IG2 scenario.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "112adfa02f335ddc35a3feebc33abcec18f1356636be221460ee00c5b4a52d4a",
+  "withheld_evidence_id": null
+}

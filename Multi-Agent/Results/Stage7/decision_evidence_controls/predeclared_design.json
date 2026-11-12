@@ -1,0 +1,1205 @@
+{
+  "design": {
+    "case_selection": "All seven predeclared Threat--PMT cases, KR reference jurisdiction",
+    "intervention": "Remove sole technical_enablement source, no synthetic facts inserted",
+    "isolated_control": "Technical-only Qwen, identical evidence contract and policy mapping",
+    "limitations": "Source removal changes available technical evidence; not a calibrated optimal-policy label or real-enterprise correctness test",
+    "matched_joint": "Same deterministic frozen policy, joint Qwen lens outputs from one invocation",
+    "original_artifacts": "READ ONLY; all new checkpoints isolated under decision_evidence_controls",
+    "randomness": "seed42 controlled comparisons; 42/43/44 matched joint repetitions"
+  },
+  "interventions": [
+    {
+      "case_id": "main__ddos__nlp_llm",
+      "joint_input_sha256": "3cdcda52e88ac7a7f431615a2a180a97e72914fc4fcc188986628425818f7413",
+      "scenario_id": "KR__CIS_IG2",
+      "shadow_object_sha256": "3209e6788688fc6d64d90bf9ca90f5e14b3dbcf5d926012035f734401f2328fd",
+      "withheld_evidence_id": "AE01S_6E6099FA4C2D13D4",
+      "withheld_source_provenance": {
+        "allowed_claim_types": [
+          "action_effectiveness"
+        ],
+        "available_at": "2024-02-05",
+        "content": "Direct DDoS experiments compared large language models with a conventional neural-network baseline. Few-shot and fine-tuned LLM variants detected DDoS traffic on CICIDS 2017 and an Urban IoT dataset, with fine-tuned variants reporting roughly mid-90-percent accuracy and outperforming the compared MLP.",
+        "content_hash": "6e6099fa4c2d13d4e54fe1df7bc4eecfa54949e0b70d963f41a28cf083ce52a9",
+        "evidence_chain_id": "action-evidence:guastalla-llm-ddos-2024",
+        "evidence_date": null,
+        "evidence_id": "AE01S_6E6099FA4C2D13D4",
+        "evidence_type": "curated_action_finding",
+        "pmt_ids": [
+          "PMT_NLP_LLM"
+        ],
+        "prohibited_claim_types": [
+          "product_roi",
+          "product_tco",
+          "exact_budget",
+          "exact_staffing_count",
+          "universal_control_effectiveness"
+        ],
+        "publication_date": "2024-02-05",
+        "retrieval_role": "decision_action_curated",
+        "source": "Guastalla et al., Application of Large Language Models to DDoS Attack Detection",
+        "source_document_id": "guastalla-llm-ddos-2024",
+        "source_family": "K",
+        "source_locator": "https://eudl.eu/doi/10.1007/978-3-031-51630-6_6#curated-finding-support",
+        "source_registry_id": "AE01S",
+        "source_snapshot_id": "stage3-action-evidence-2024-12-31-v1",
+        "threat_ids": [
+          "THREAT_DDOS"
+        ]
+      }
+    },
+    {
+      "case_id": "main__malware__anomaly_detection",
+      "joint_input_sha256": "8af82fd73f3c6a67b88e6b709220c202c7e48a4a0789a532c49bbf98825e7b97",
+      "scenario_id": "KR__CIS_IG2",
+      "shadow_object_sha256": "e7f1c34b01597b57694253293b3ead9f4903c2b8572f1f657b42978cd9e5c486",
+      "withheld_evidence_id": "AE02S_61C8065AA576E7C5",
+      "withheld_source_provenance": {
+        "allowed_claim_types": [
+          "action_effectiveness"
+        ],
+        "available_at": "2023-03-13",
+        "content": "AProctor directly evaluates anomaly-oriented malware detection on Android and reports high malware detection rates, including detection of temporally different and previously unseen APKs. The work demonstrates that anomaly-style behavioral detection can be implemented as an on-device malware defense.",
+        "content_hash": "61c8065aa576e7c5b08ce662e84bf4ee21ebc60ce39af74aa7faf27c3492d997",
+        "evidence_chain_id": "action-evidence:patel-aproctor-malware-2023",
+        "evidence_date": null,
+        "evidence_id": "AE02S_61C8065AA576E7C5",
+        "evidence_type": "curated_action_finding",
+        "pmt_ids": [
+          "PMT_ANOMALY_DETECTION"
+        ],
+        "prohibited_claim_types": [
+          "product_roi",
+          "product_tco",
+          "exact_budget",
+          "exact_staffing_count",
+          "universal_control_effectiveness"
+        ],
+        "publication_date": "2023-03-13",
+        "retrieval_role": "decision_action_curated",
+        "source": "Patel et al., AProctor - A practical on-device antidote for Android malware",
+        "source_document_id": "patel-aproctor-malware-2023",
+        "source_family": "K",
+        "source_locator": "https://doi.org/10.1145/3579375.3579386#curated-finding-support",
+        "source_registry_id": "AE02S",
+        "source_snapshot_id": "stage3-action-evidence-2024-12-31-v1",
+        "threat_ids": [
+          "THREAT_MALWARE"
+        ]
+      }
+    },
+    {
+      "case_id": "main__ransomware__cryptography",
+      "joint_input_sha256": "1ceaa2c7ca66929bb650dcdde4bcdc15ee2648d05d6d09d0198ac591f0eac53b",
+      "scenario_id": "KR__CIS_IG2",
+      "shadow_object_sha256": "0be9257e8b72b7b0911867d5f862f287368c62ae7a9b35f416f2b65a043bc2a9",
+      "withheld_evidence_id": "AE03S_C5AF41A880A404C2",
+      "withheld_source_provenance": {
+        "allowed_claim_types": [
+          "action_effectiveness"
+        ],
+        "available_at": "2024-06-06",
+        "content": "CipherTrace directly uses cryptographic-primitive analysis against ransomware. It identifies cipher classes and extracts cryptographic keys or state from execution traces across evaluated ransomware specimens, showing that cryptographic analysis can materially support ransomware neutralization and reverse engineering.",
+        "content_hash": "c5af41a880a404c29f51c834dc5b86554d026e36d5bb1a5177c108105444585b",
+        "evidence_chain_id": "action-evidence:ciphertrace-ransomware-2024",
+        "evidence_date": null,
+        "evidence_id": "AE03S_C5AF41A880A404C2",
+        "evidence_type": "curated_action_finding",
+        "pmt_ids": [
+          "PMT_CRYPTOGRAPHY"
+        ],
+        "prohibited_claim_types": [
+          "product_roi",
+          "product_tco",
+          "exact_budget",
+          "exact_staffing_count",
+          "universal_control_effectiveness"
+        ],
+        "publication_date": "2024-06-06",
+        "retrieval_role": "decision_action_curated",
+        "source": "Hassanin and Martinovic, CipherTrace: automatic detection of ciphers from execution traces to neutralize ransomware",
+        "source_document_id": "ciphertrace-ransomware-2024",
+        "source_family": "K",
+        "source_locator": "https://academic.oup.com/cybersecurity/article/10/1/tyae008/7688556#curated-finding-support",
+        "source_registry_id": "AE03S",
+        "source_snapshot_id": "stage3-action-evidence-2024-12-31-v1",
+        "threat_ids": [
+          "THREAT_RANSOMWARE"
+        ]
+      }
+    },
+    {
+      "case_id": "main__insider_threat__cryptography",
+      "joint_input_sha256": "7a3b93425ee3decd9d0c64f0b6930520decfbd592726dc16800de1acdf65922a",
+      "scenario_id": "KR__CIS_IG2",
+      "shadow_object_sha256": "137394047c6a83ad0389aab51f2be901aa9c6e210da40f10f3ab0e5cc515c989",
+      "withheld_evidence_id": "AE04S_2674461DBC059388",
+      "withheld_source_provenance": {
+        "allowed_claim_types": [
+          "action_effectiveness"
+        ],
+        "available_at": "2024-06-12",
+        "content": "Securecipher is explicitly designed to use cryptographic protection against insider-threat data leakage. The evaluated prototype passed most of the reported NIST randomness tests and included context-based key generation and file marking, providing direct evidence that cryptography can be engineered for this threat model.",
+        "content_hash": "2674461dbc0593888a70a952ed744b906f6e7bdbcd844dd90f28f8d8a3fa38ef",
+        "evidence_chain_id": "action-evidence:securecipher-insider-2024",
+        "evidence_date": null,
+        "evidence_id": "AE04S_2674461DBC059388",
+        "evidence_type": "curated_action_finding",
+        "pmt_ids": [
+          "PMT_CRYPTOGRAPHY"
+        ],
+        "prohibited_claim_types": [
+          "product_roi",
+          "product_tco",
+          "exact_budget",
+          "exact_staffing_count",
+          "universal_control_effectiveness"
+        ],
+        "publication_date": "2024-06-12",
+        "retrieval_role": "decision_action_curated",
+        "source": "Herrera Montano et al., Securecipher: an encryption system for insider-threat data leakage protection",
+        "source_document_id": "securecipher-insider-2024",
+        "source_family": "K",
+        "source_locator": "https://doi.org/10.1016/j.eswa.2024.124470#curated-finding-support",
+        "source_registry_id": "AE04S",
+        "source_snapshot_id": "stage3-action-evidence-2024-12-31-v1",
+        "threat_ids": [
+          "THREAT_INSIDER_THREAT"
+        ]
+      }
+    },
+    {
+      "case_id": "main__brute_force__ids_ips",
+      "joint_input_sha256": "1d9001ebe84f9999de4a574c53ef3f39b5b9262b66530ac86df5947d2bc72dc5",
+      "scenario_id": "KR__CIS_IG2",
+      "shadow_object_sha256": "025a6a0596a99268471de180dd5aaea6e34d7ee4a06c1978366f3517703e1894",
+      "withheld_evidence_id": "AE05S_CCD7CA4B2AE10DC9",
+      "withheld_source_provenance": {
+        "allowed_claim_types": [
+          "action_effectiveness"
+        ],
+        "available_at": "2024-07-31",
+        "content": "A 2024 case study directly applies IDS components including Snort and Fail2Ban to brute-force defense, combined with a honeypot and alerting workflow. The study treats IDS/IPS-style monitoring and blocking as an implementable response to repeated authentication attacks rather than only a generic control.",
+        "content_hash": "ccd7ca4b2ae10dc9c9d442ab3dffab6ef5e16d452e7034df4ff05e4e0e3750b3",
+        "evidence_chain_id": "action-evidence:snort-fail2ban-bruteforce-2024",
+        "evidence_date": null,
+        "evidence_id": "AE05S_CCD7CA4B2AE10DC9",
+        "evidence_type": "curated_action_finding",
+        "pmt_ids": [
+          "PMT_IDS_IPS"
+        ],
+        "prohibited_claim_types": [
+          "product_roi",
+          "product_tco",
+          "exact_budget",
+          "exact_staffing_count",
+          "universal_control_effectiveness"
+        ],
+        "publication_date": "2024-07-31",
+        "retrieval_role": "decision_action_curated",
+        "source": "Abdullah et al., Snort and Fail2ban as IDS for Brute Force Attack Mitigation",
+        "source_document_id": "snort-fail2ban-bruteforce-2024",
+        "source_family": "K",
+        "source_locator": "https://doi.org/10.26418/justin.v12i3.79617#curated-finding-support",
+        "source_registry_id": "AE05S",
+        "source_snapshot_id": "stage3-action-evidence-2024-12-31-v1",
+        "threat_ids": [
+          "THREAT_BRUTE_FORCE_ATTACK"
+        ]
+      }
+    },
+    {
+      "case_id": "main__targeted_attack__access_control",
+      "joint_input_sha256": "34b6215fd01e947988c12afa93cb2b24dad8acd3f7648ba464177cab99bd1d51",
+      "scenario_id": "KR__CIS_IG2",
+      "shadow_object_sha256": "550a861b02456c7789dc39db9c285473f5aa17064ec07285b5c09e855342ff10",
+      "withheld_evidence_id": "AE06S_407DDF87C86BB41B",
+      "withheld_source_provenance": {
+        "allowed_claim_types": [
+          "action_effectiveness"
+        ],
+        "available_at": "2024-03-01",
+        "content": "The study evaluates an ATT&CK-informed zero-trust risk model for advanced persistent threats and integrates the result with centralized access-control decisions. It reports improved ability to respond to sophisticated multi-stage threats, directly supporting adaptive access control as a targeted-attack defense mechanism.",
+        "content_hash": "407ddf87c86bb41bcddf09d3710ecb0ae220f0e820c435397a802be425b77d93",
+        "evidence_chain_id": "action-evidence:apt-zero-trust-access-control-2024",
+        "evidence_date": null,
+        "evidence_id": "AE06S_407DDF87C86BB41B",
+        "evidence_type": "curated_action_finding",
+        "pmt_ids": [
+          "PMT_ACCESS_CONTROL"
+        ],
+        "prohibited_claim_types": [
+          "product_roi",
+          "product_tco",
+          "exact_budget",
+          "exact_staffing_count",
+          "universal_control_effectiveness"
+        ],
+        "publication_date": "2024-03-01",
+        "retrieval_role": "decision_action_curated",
+        "source": "Zhang et al., ATT&CK-based APT risk propagation assessment model for zero trust networks",
+        "source_document_id": "apt-zero-trust-access-control-2024",
+        "source_family": "K",
+        "source_locator": "https://doi.org/10.1016/j.comnet.2024.110376#curated-finding-support",
+        "source_registry_id": "AE06S",
+        "source_snapshot_id": "stage3-action-evidence-2024-12-31-v1",
+        "threat_ids": [
+          "THREAT_TARGETED_ATTACK"
+        ]
+      }
+    },
+    {
+      "case_id": "main__session_hijacking__https",
+      "joint_input_sha256": "4b45bfe19434a4e9a31b908bca79a03014bf8787f3e15149b07ca5e1b9fc8a3b",
+      "scenario_id": "KR__CIS_IG2",
+      "shadow_object_sha256": "2e1f65ade03ae4de732cb662c84ddaab2e8d56d4b359a00ddcfacc7b884a7152",
+      "withheld_evidence_id": "AE07S_C1EF15B9628497F0",
+      "withheld_source_provenance": {
+        "allowed_claim_types": [
+          "action_effectiveness"
+        ],
+        "available_at": "2024-06-01",
+        "content": "The 2024 session-hijacking study treats encrypted web communication and related secure-session practices as concrete countermeasures against interception-oriented hijacking. It supports HTTPS/TLS as an important transport-layer control within a broader session-protection strategy.",
+        "content_hash": "c1ef15b9628497f05f8dc73b6fd05f278ee22278942ae026d9c112ee971fa35f",
+        "evidence_chain_id": "action-evidence:session-hijacking-countermeasures-2024",
+        "evidence_date": null,
+        "evidence_id": "AE07S_C1EF15B9628497F0",
+        "evidence_type": "curated_action_finding",
+        "pmt_ids": [
+          "PMT_HTTPS"
+        ],
+        "prohibited_claim_types": [
+          "product_roi",
+          "product_tco",
+          "exact_budget",
+          "exact_staffing_count",
+          "universal_control_effectiveness"
+        ],
+        "publication_date": "2024-06-01",
+        "retrieval_role": "decision_action_curated",
+        "source": "Cherckesova et al., The development of countermeasures against session hijacking",
+        "source_document_id": "session-hijacking-countermeasures-2024",
+        "source_family": "K",
+        "source_locator": "https://doi.org/10.1051/e3sconf/202453103019#curated-finding-support",
+        "source_registry_id": "AE07S",
+        "source_snapshot_id": "stage3-action-evidence-2024-12-31-v1",
+        "threat_ids": [
+          "THREAT_SESSION_HIJACKING"
+        ]
+      }
+    }
+  ],
+  "original_policy_replay": [
+    {
+      "case_id": "main__ddos__nlp_llm",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": -1
+      },
+      "recommendation": "DO_NOT_RECOMMEND",
+      "report_citations": {
+        "all_ids": [
+          "AE01C_A6798E23EEB1E487",
+          "AE01S_6E6099FA4C2D13D4",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE01_0B9728FE19095FD0",
+          "DE_DE01_E85CB6412740EF20",
+          "DE_DE02_007F05150CB46131",
+          "DE_DE02_CFF4EAB2C4BEC522",
+          "DE_DE03_6786A7AB93821D48",
+          "DE_DE03_912FC8A63179A943",
+          "DE_DE15_1AEC6DDD669756FF",
+          "DE_DE15_271AFADC7B3D5999",
+          "DE_DE15_7C1849B1FD93975C",
+          "E_02_066AFE8300EDCEBB",
+          "E_03_06E6ABC42DA3AC77",
+          "E_03_F13F996D181217BA",
+          "E_04_892BBCAA3CE5CC92",
+          "E_08_3453329306E149CB",
+          "E_33_ADC8BC66D812799F"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 28,
+        "properly_bracketed": 28,
+        "unknown_ids": []
+      },
+      "scenario_id": "KR__CIS_IG2",
+      "source_hashes": {
+        "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+        "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+        "stage3_context": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+        "stage4_context": "10c834266961c7c4ea048c04a09db58d572d8606365b27c21677992d23f5b7ea",
+        "stage5": "86d070634eb0c7cff097e1c054be40d2b7c670b208640da9ea80b40d55a8683b",
+        "stage6": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+      }
+    },
+    {
+      "case_id": "main__ddos__nlp_llm",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": -1
+      },
+      "recommendation": "DO_NOT_RECOMMEND",
+      "report_citations": {
+        "all_ids": [
+          "AE01C_A6798E23EEB1E487",
+          "AE01S_6E6099FA4C2D13D4",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE01_0B9728FE19095FD0",
+          "DE_DE01_E85CB6412740EF20",
+          "DE_DE02_007F05150CB46131",
+          "DE_DE02_CFF4EAB2C4BEC522",
+          "DE_DE03_6786A7AB93821D48",
+          "DE_DE03_912FC8A63179A943",
+          "DE_DE15_1AEC6DDD669756FF",
+          "DE_DE15_271AFADC7B3D5999",
+          "DE_DE15_7C1849B1FD93975C",
+          "E_02_066AFE8300EDCEBB",
+          "E_03_06E6ABC42DA3AC77",
+          "E_03_F13F996D181217BA",
+          "E_04_892BBCAA3CE5CC92",
+          "E_08_3453329306E149CB",
+          "E_33_ADC8BC66D812799F"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 22,
+        "properly_bracketed": 22,
+        "unknown_ids": []
+      },
+      "scenario_id": "EU__CIS_IG2",
+      "source_hashes": {
+        "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+        "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+        "stage3_context": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+        "stage4_context": "10c834266961c7c4ea048c04a09db58d572d8606365b27c21677992d23f5b7ea",
+        "stage5": "86d070634eb0c7cff097e1c054be40d2b7c670b208640da9ea80b40d55a8683b",
+        "stage6": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+      }
+    },
+    {
+      "case_id": "main__ddos__nlp_llm",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": -1
+      },
+      "recommendation": "DO_NOT_RECOMMEND",
+      "report_citations": {
+        "all_ids": [
+          "AE01C_A6798E23EEB1E487",
+          "AE01S_6E6099FA4C2D13D4",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE01_0B9728FE19095FD0",
+          "DE_DE01_E85CB6412740EF20",
+          "DE_DE02_007F05150CB46131",
+          "DE_DE02_CFF4EAB2C4BEC522",
+          "DE_DE03_6786A7AB93821D48",
+          "DE_DE03_912FC8A63179A943",
+          "DE_DE15_1AEC6DDD669756FF",
+          "DE_DE15_271AFADC7B3D5999",
+          "DE_DE15_7C1849B1FD93975C",
+          "E_02_066AFE8300EDCEBB",
+          "E_03_06E6ABC42DA3AC77",
+          "E_03_F13F996D181217BA",
+          "E_04_892BBCAA3CE5CC92",
+          "E_08_3453329306E149CB",
+          "E_33_ADC8BC66D812799F"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 26,
+        "properly_bracketed": 26,
+        "unknown_ids": []
+      },
+      "scenario_id": "US__CIS_IG2",
+      "source_hashes": {
+        "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+        "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+        "stage3_context": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+        "stage4_context": "10c834266961c7c4ea048c04a09db58d572d8606365b27c21677992d23f5b7ea",
+        "stage5": "86d070634eb0c7cff097e1c054be40d2b7c670b208640da9ea80b40d55a8683b",
+        "stage6": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+      }
+    },
+    {
+      "case_id": "main__malware__anomaly_detection",
+      "original_stances": {
+        "financial_adoption": 1,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "RECOMMEND",
+      "report_citations": {
+        "all_ids": [
+          "AE02C_E333FEC17F65B4E1",
+          "AE02S_61C8065AA576E7C5",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE04_0B77B88875745973",
+          "DE_DE04_C6F46FCDE66BFAC7",
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE06_0380E777894ACF9A",
+          "DE_DE06_14CCCEB6F82351D5",
+          "DE_DE16_CEA1C38E613068F8",
+          "DE_DE16_E455D97291B61E2A",
+          "E_03_F1CA4CD00581F628",
+          "E_04_270A1E7C47ACC4FF",
+          "E_04_58956777A1075C28",
+          "E_15_D3680C31BEE2C0F8",
+          "E_20_BF167BDA75891A3B",
+          "E_33_D28EA285670B0D01"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 22,
+        "properly_bracketed": 22,
+        "unknown_ids": []
+      },
+      "scenario_id": "KR__CIS_IG2",
+      "source_hashes": {
+        "stage1": "d2ad2ff2aed47f534516a3cc0dade9db667d69ce68e480939faad5ddc4bb4234",
+        "stage2": "4b1bda9bc3c6511b0f0d1f282f0a359241cdbfe37793102521e7c78c4386d0e5",
+        "stage3_context": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+        "stage4_context": "9adb50ef9cd12fc94e4060bd06c5beae369b188fb87d542eb49e9655986f1ac7",
+        "stage5": "6d41f018b9ddd79a9dd6a72d0ad40bcc1a26af8a456d75d137ad50ac0b604903",
+        "stage6": "2eeab7d5a56d34e56ea72d3301d3e19210085f1ee85f86c1c89c92e05130f96f"
+      }
+    },
+    {
+      "case_id": "main__malware__anomaly_detection",
+      "original_stances": {
+        "financial_adoption": 1,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "RECOMMEND",
+      "report_citations": {
+        "all_ids": [
+          "AE02C_E333FEC17F65B4E1",
+          "AE02S_61C8065AA576E7C5",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE04_0B77B88875745973",
+          "DE_DE04_C6F46FCDE66BFAC7",
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE06_0380E777894ACF9A",
+          "DE_DE06_14CCCEB6F82351D5",
+          "DE_DE16_CEA1C38E613068F8",
+          "DE_DE16_E455D97291B61E2A",
+          "E_02_F60155CA81B80881",
+          "E_03_F1CA4CD00581F628",
+          "E_04_270A1E7C47ACC4FF",
+          "E_04_58956777A1075C28",
+          "E_08_197B243FDF3AA15A",
+          "E_08_FEE46219AABDA967",
+          "E_15_D3680C31BEE2C0F8",
+          "E_20_BF167BDA75891A3B",
+          "E_33_D28EA285670B0D01"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 29,
+        "properly_bracketed": 29,
+        "unknown_ids": []
+      },
+      "scenario_id": "EU__CIS_IG2",
+      "source_hashes": {
+        "stage1": "d2ad2ff2aed47f534516a3cc0dade9db667d69ce68e480939faad5ddc4bb4234",
+        "stage2": "4b1bda9bc3c6511b0f0d1f282f0a359241cdbfe37793102521e7c78c4386d0e5",
+        "stage3_context": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+        "stage4_context": "9adb50ef9cd12fc94e4060bd06c5beae369b188fb87d542eb49e9655986f1ac7",
+        "stage5": "6d41f018b9ddd79a9dd6a72d0ad40bcc1a26af8a456d75d137ad50ac0b604903",
+        "stage6": "2eeab7d5a56d34e56ea72d3301d3e19210085f1ee85f86c1c89c92e05130f96f"
+      }
+    },
+    {
+      "case_id": "main__malware__anomaly_detection",
+      "original_stances": {
+        "financial_adoption": 1,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "RECOMMEND",
+      "report_citations": {
+        "all_ids": [
+          "AE02C_E333FEC17F65B4E1",
+          "AE02S_61C8065AA576E7C5",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE04_0B77B88875745973",
+          "DE_DE04_C6F46FCDE66BFAC7",
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE06_0380E777894ACF9A",
+          "DE_DE06_14CCCEB6F82351D5",
+          "DE_DE16_CEA1C38E613068F8",
+          "DE_DE16_E455D97291B61E2A",
+          "E_02_F60155CA81B80881",
+          "E_03_F1CA4CD00581F628",
+          "E_04_270A1E7C47ACC4FF",
+          "E_04_58956777A1075C28",
+          "E_15_D3680C31BEE2C0F8",
+          "E_20_BF167BDA75891A3B",
+          "E_33_D28EA285670B0D01"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 34,
+        "properly_bracketed": 34,
+        "unknown_ids": []
+      },
+      "scenario_id": "US__CIS_IG2",
+      "source_hashes": {
+        "stage1": "d2ad2ff2aed47f534516a3cc0dade9db667d69ce68e480939faad5ddc4bb4234",
+        "stage2": "4b1bda9bc3c6511b0f0d1f282f0a359241cdbfe37793102521e7c78c4386d0e5",
+        "stage3_context": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+        "stage4_context": "9adb50ef9cd12fc94e4060bd06c5beae369b188fb87d542eb49e9655986f1ac7",
+        "stage5": "6d41f018b9ddd79a9dd6a72d0ad40bcc1a26af8a456d75d137ad50ac0b604903",
+        "stage6": "2eeab7d5a56d34e56ea72d3301d3e19210085f1ee85f86c1c89c92e05130f96f"
+      }
+    },
+    {
+      "case_id": "main__ransomware__cryptography",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "RECOMMEND_PILOT",
+      "report_citations": {
+        "all_ids": [
+          "AE03C_E5522A35F4981027",
+          "AE03S_C5AF41A880A404C2",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE08_031120C53EF050F3",
+          "DE_DE09_6719137897848A9E",
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE18_EAA59A9B7CEAD276",
+          "E_03_0BAA7B22596028F4",
+          "E_04_270A1E7C47ACC4FF",
+          "E_08_510579F0D776F3BE",
+          "E_23_534489D29C38B327",
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF",
+          "E_31_6C5988FD2D0D8867",
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 21,
+        "properly_bracketed": 21,
+        "unknown_ids": []
+      },
+      "scenario_id": "KR__CIS_IG2",
+      "source_hashes": {
+        "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+        "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+        "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+        "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+        "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+        "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+      }
+    },
+    {
+      "case_id": "main__ransomware__cryptography",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "RECOMMEND_PILOT",
+      "report_citations": {
+        "all_ids": [
+          "AE03C_E5522A35F4981027",
+          "AE03S_C5AF41A880A404C2",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE08_031120C53EF050F3",
+          "DE_DE09_6719137897848A9E",
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE18_EAA59A9B7CEAD276",
+          "E_03_0BAA7B22596028F4",
+          "E_04_270A1E7C47ACC4FF",
+          "E_08_510579F0D776F3BE",
+          "E_23_534489D29C38B327",
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF",
+          "E_31_6BBE82F2BAC198B3",
+          "E_31_6C5988FD2D0D8867",
+          "E_31_A0893427DD4F5B04",
+          "E_31_C1CFA326F0420DCA",
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 27,
+        "properly_bracketed": 27,
+        "unknown_ids": []
+      },
+      "scenario_id": "EU__CIS_IG2",
+      "source_hashes": {
+        "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+        "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+        "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+        "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+        "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+        "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+      }
+    },
+    {
+      "case_id": "main__ransomware__cryptography",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "RECOMMEND_PILOT",
+      "report_citations": {
+        "all_ids": [
+          "AE03C_E5522A35F4981027",
+          "AE03S_C5AF41A880A404C2",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE08_031120C53EF050F3",
+          "DE_DE09_6719137897848A9E",
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE18_EAA59A9B7CEAD276",
+          "E_03_0BAA7B22596028F4",
+          "E_04_270A1E7C47ACC4FF",
+          "E_08_510579F0D776F3BE",
+          "E_23_534489D29C38B327",
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF",
+          "E_31_6C5988FD2D0D8867",
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 20,
+        "properly_bracketed": 20,
+        "unknown_ids": []
+      },
+      "scenario_id": "US__CIS_IG2",
+      "source_hashes": {
+        "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+        "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+        "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+        "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+        "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+        "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+      }
+    },
+    {
+      "case_id": "main__insider_threat__cryptography",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "RECOMMEND_PILOT",
+      "report_citations": {
+        "all_ids": [
+          "AE04C_F084D028D8E2AE06",
+          "AE04S_2674461DBC059388",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE08_031120C53EF050F3",
+          "DE_DE09_6719137897848A9E",
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE18_EAA59A9B7CEAD276",
+          "E_15_0A98378FC609EF7E",
+          "E_16_E7BB108A85B71262",
+          "E_20_913B6F999A0F1458",
+          "E_22_C239828119FC69CD",
+          "E_23_534489D29C38B327",
+          "E_23_A793FAF5B393EFE3",
+          "E_25_746173685B235ED2",
+          "E_26_92664A4339CF24C9",
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 30,
+        "properly_bracketed": 30,
+        "unknown_ids": []
+      },
+      "scenario_id": "KR__CIS_IG2",
+      "source_hashes": {
+        "stage1": "048aa9e6dd139b26dd32450ec0fda405bb883a62497ed108691cf7e840b16872",
+        "stage2": "3ddd4def226a25d78c6243f4382fb30d384b7793f7191e62a95b79e660f11d06",
+        "stage3_context": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+        "stage4_context": "903f67ef37fb5c791e24edf9e95e89eab3871357daaf710dbd35a12093a6e9d9",
+        "stage5": "21782b723a9d2a4314a244c1d347b57acf3ce4923dab23db75a071d0d7ee8b79",
+        "stage6": "37b347c8a4f93dbe5bae0f66037abd59c4c085642673b2cc7f66fc31c0c1fbd9"
+      }
+    },
+    {
+      "case_id": "main__insider_threat__cryptography",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "RECOMMEND_PILOT",
+      "report_citations": {
+        "all_ids": [
+          "AE04C_F084D028D8E2AE06",
+          "AE04S_2674461DBC059388",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE08_031120C53EF050F3",
+          "DE_DE09_6719137897848A9E",
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE18_EAA59A9B7CEAD276",
+          "E_20_913B6F999A0F1458",
+          "E_22_C239828119FC69CD",
+          "E_23_534489D29C38B327",
+          "E_31_6BBE82F2BAC198B3",
+          "E_31_A0893427DD4F5B04",
+          "E_31_C1CFA326F0420DCA",
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 21,
+        "properly_bracketed": 21,
+        "unknown_ids": []
+      },
+      "scenario_id": "EU__CIS_IG2",
+      "source_hashes": {
+        "stage1": "048aa9e6dd139b26dd32450ec0fda405bb883a62497ed108691cf7e840b16872",
+        "stage2": "3ddd4def226a25d78c6243f4382fb30d384b7793f7191e62a95b79e660f11d06",
+        "stage3_context": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+        "stage4_context": "903f67ef37fb5c791e24edf9e95e89eab3871357daaf710dbd35a12093a6e9d9",
+        "stage5": "21782b723a9d2a4314a244c1d347b57acf3ce4923dab23db75a071d0d7ee8b79",
+        "stage6": "37b347c8a4f93dbe5bae0f66037abd59c4c085642673b2cc7f66fc31c0c1fbd9"
+      }
+    },
+    {
+      "case_id": "main__insider_threat__cryptography",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "RECOMMEND_PILOT",
+      "report_citations": {
+        "all_ids": [
+          "AE04C_F084D028D8E2AE06",
+          "AE04S_2674461DBC059388",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE08_031120C53EF050F3",
+          "DE_DE09_6719137897848A9E",
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE18_EAA59A9B7CEAD276",
+          "E_16_E7BB108A85B71262",
+          "E_20_913B6F999A0F1458",
+          "E_22_C239828119FC69CD",
+          "E_23_534489D29C38B327",
+          "E_25_746173685B235ED2",
+          "E_26_92664A4339CF24C9",
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF",
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 28,
+        "properly_bracketed": 28,
+        "unknown_ids": []
+      },
+      "scenario_id": "US__CIS_IG2",
+      "source_hashes": {
+        "stage1": "048aa9e6dd139b26dd32450ec0fda405bb883a62497ed108691cf7e840b16872",
+        "stage2": "3ddd4def226a25d78c6243f4382fb30d384b7793f7191e62a95b79e660f11d06",
+        "stage3_context": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+        "stage4_context": "903f67ef37fb5c791e24edf9e95e89eab3871357daaf710dbd35a12093a6e9d9",
+        "stage5": "21782b723a9d2a4314a244c1d347b57acf3ce4923dab23db75a071d0d7ee8b79",
+        "stage6": "37b347c8a4f93dbe5bae0f66037abd59c4c085642673b2cc7f66fc31c0c1fbd9"
+      }
+    },
+    {
+      "case_id": "main__brute_force__ids_ips",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "RECOMMEND_PILOT",
+      "report_citations": {
+        "all_ids": [
+          "AE05C_2D35A464AD6F0FAE",
+          "AE05S_CCD7CA4B2AE10DC9",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE04_0B017D64401987E4",
+          "DE_DE04_0B77B88875745973",
+          "DE_DE04_C6F46FCDE66BFAC7",
+          "DE_DE04_DB6B29C9BE1B0F05",
+          "DE_DE07_86DF83870E0A768D",
+          "DE_DE07_E2C403C2FF05BA09",
+          "DE_DE16_CEA1C38E613068F8",
+          "DE_DE16_E455D97291B61E2A",
+          "E_02_669F59880AF52688",
+          "E_03_F2B2EBA86BEEFDC5",
+          "E_23_312B9513BCEE9B9D",
+          "E_23_B21FAA9377991F05",
+          "E_23_EBCAB9508641E703",
+          "E_25_FE58E4FCF044EDE3",
+          "E_33_A707006877BFD1C2"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 33,
+        "properly_bracketed": 33,
+        "unknown_ids": []
+      },
+      "scenario_id": "KR__CIS_IG2",
+      "source_hashes": {
+        "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+        "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+        "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+        "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+        "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+        "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+      }
+    },
+    {
+      "case_id": "main__brute_force__ids_ips",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "RECOMMEND_PILOT",
+      "report_citations": {
+        "all_ids": [
+          "AE05C_2D35A464AD6F0FAE",
+          "AE05S_CCD7CA4B2AE10DC9",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE04_0B017D64401987E4",
+          "DE_DE04_0B77B88875745973",
+          "DE_DE04_C6F46FCDE66BFAC7",
+          "DE_DE04_DB6B29C9BE1B0F05",
+          "DE_DE07_86DF83870E0A768D",
+          "DE_DE07_E2C403C2FF05BA09",
+          "DE_DE16_CEA1C38E613068F8",
+          "DE_DE16_E455D97291B61E2A",
+          "E_02_669F59880AF52688",
+          "E_03_F2B2EBA86BEEFDC5",
+          "E_23_312B9513BCEE9B9D",
+          "E_23_B21FAA9377991F05",
+          "E_23_EBCAB9508641E703",
+          "E_25_FE58E4FCF044EDE3",
+          "E_33_A707006877BFD1C2"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 42,
+        "properly_bracketed": 42,
+        "unknown_ids": []
+      },
+      "scenario_id": "EU__CIS_IG2",
+      "source_hashes": {
+        "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+        "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+        "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+        "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+        "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+        "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+      }
+    },
+    {
+      "case_id": "main__brute_force__ids_ips",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "RECOMMEND_PILOT",
+      "report_citations": {
+        "all_ids": [
+          "AE05C_2D35A464AD6F0FAE",
+          "AE05S_CCD7CA4B2AE10DC9",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE04_0B017D64401987E4",
+          "DE_DE04_0B77B88875745973",
+          "DE_DE04_C6F46FCDE66BFAC7",
+          "DE_DE04_DB6B29C9BE1B0F05",
+          "DE_DE07_86DF83870E0A768D",
+          "DE_DE07_E2C403C2FF05BA09",
+          "DE_DE16_CEA1C38E613068F8",
+          "DE_DE16_E455D97291B61E2A",
+          "E_02_669F59880AF52688",
+          "E_03_F2B2EBA86BEEFDC5",
+          "E_23_312B9513BCEE9B9D",
+          "E_23_B21FAA9377991F05",
+          "E_23_EBCAB9508641E703",
+          "E_25_FE58E4FCF044EDE3",
+          "E_33_A707006877BFD1C2"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 22,
+        "properly_bracketed": 22,
+        "unknown_ids": []
+      },
+      "scenario_id": "US__CIS_IG2",
+      "source_hashes": {
+        "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+        "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+        "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+        "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+        "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+        "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+      }
+    },
+    {
+      "case_id": "main__targeted_attack__access_control",
+      "original_stances": {
+        "financial_adoption": -1,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "HOLD",
+      "report_citations": {
+        "all_ids": [
+          "AE06C_8C41709C0D8EE834",
+          "AE06S_407DDF87C86BB41B",
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE11_1ECA9795EEF89DFA",
+          "DE_DE12_6509E7A6D8467E38",
+          "DE_DE12_CBF6FBB1313D37AF",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE17_429D17A4E11A72C3",
+          "DE_DE17_567DDA7CFBC62829",
+          "E_02_BE48A23ABD77A19C",
+          "E_03_F0CD4F1DE74CC7AD",
+          "E_10_5C0B9AC35F2420B3",
+          "E_10_B4F773BEC65685CC",
+          "E_10_CEB460BC4092B2D3",
+          "E_12_F6120325C44B5EA9",
+          "E_33_F4FC25CE90264812"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 19,
+        "properly_bracketed": 19,
+        "unknown_ids": []
+      },
+      "scenario_id": "KR__CIS_IG2",
+      "source_hashes": {
+        "stage1": "304807a460c79b97a7c155ac0f3a11e974386cf0363fc072fef87238f7525724",
+        "stage2": "e32d514b41e64ac386fed97a222cbc7fd92d7328e840ea7c0bd6ce0bf758352d",
+        "stage3_context": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+        "stage4_context": "b197de3415acc19c31e3f821ed025c29e9bf15b3b293e7c0ad5f6b35b1ef2cee",
+        "stage5": "f33b3c4296fd820cb26a9525899ee8fc2a36c30f0775e3ce10ae5de1aa804127",
+        "stage6": "ec942bd1085a56ecfa8a3e7863ae3ce4b7791dc5e1d96dd1f7a878f67d61e958"
+      }
+    },
+    {
+      "case_id": "main__targeted_attack__access_control",
+      "original_stances": {
+        "financial_adoption": -1,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "HOLD",
+      "report_citations": {
+        "all_ids": [
+          "AE06C_8C41709C0D8EE834",
+          "AE06S_407DDF87C86BB41B",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE11_1ECA9795EEF89DFA",
+          "DE_DE12_6509E7A6D8467E38",
+          "DE_DE12_CBF6FBB1313D37AF",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE17_429D17A4E11A72C3",
+          "E_02_BE48A23ABD77A19C",
+          "E_03_F0CD4F1DE74CC7AD",
+          "E_10_5C0B9AC35F2420B3",
+          "E_10_B4F773BEC65685CC",
+          "E_10_CEB460BC4092B2D3",
+          "E_12_F6120325C44B5EA9",
+          "E_31_52DCE9554453ADEF",
+          "E_31_96F42990F3AEAC86",
+          "E_33_F4FC25CE90264812"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 21,
+        "properly_bracketed": 21,
+        "unknown_ids": []
+      },
+      "scenario_id": "EU__CIS_IG2",
+      "source_hashes": {
+        "stage1": "304807a460c79b97a7c155ac0f3a11e974386cf0363fc072fef87238f7525724",
+        "stage2": "e32d514b41e64ac386fed97a222cbc7fd92d7328e840ea7c0bd6ce0bf758352d",
+        "stage3_context": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+        "stage4_context": "b197de3415acc19c31e3f821ed025c29e9bf15b3b293e7c0ad5f6b35b1ef2cee",
+        "stage5": "f33b3c4296fd820cb26a9525899ee8fc2a36c30f0775e3ce10ae5de1aa804127",
+        "stage6": "ec942bd1085a56ecfa8a3e7863ae3ce4b7791dc5e1d96dd1f7a878f67d61e958"
+      }
+    },
+    {
+      "case_id": "main__targeted_attack__access_control",
+      "original_stances": {
+        "financial_adoption": -1,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "recommendation": "HOLD",
+      "report_citations": {
+        "all_ids": [
+          "AE06C_8C41709C0D8EE834",
+          "AE06S_407DDF87C86BB41B",
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE11_1ECA9795EEF89DFA",
+          "DE_DE12_6509E7A6D8467E38",
+          "DE_DE12_CBF6FBB1313D37AF",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE17_429D17A4E11A72C3",
+          "DE_DE17_567DDA7CFBC62829",
+          "E_02_BE48A23ABD77A19C",
+          "E_03_F0CD4F1DE74CC7AD",
+          "E_10_5C0B9AC35F2420B3",
+          "E_10_B4F773BEC65685CC",
+          "E_10_CEB460BC4092B2D3",
+          "E_12_F6120325C44B5EA9",
+          "E_33_F4FC25CE90264812"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 31,
+        "properly_bracketed": 31,
+        "unknown_ids": []
+      },
+      "scenario_id": "US__CIS_IG2",
+      "source_hashes": {
+        "stage1": "304807a460c79b97a7c155ac0f3a11e974386cf0363fc072fef87238f7525724",
+        "stage2": "e32d514b41e64ac386fed97a222cbc7fd92d7328e840ea7c0bd6ce0bf758352d",
+        "stage3_context": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+        "stage4_context": "b197de3415acc19c31e3f821ed025c29e9bf15b3b293e7c0ad5f6b35b1ef2cee",
+        "stage5": "f33b3c4296fd820cb26a9525899ee8fc2a36c30f0775e3ce10ae5de1aa804127",
+        "stage6": "ec942bd1085a56ecfa8a3e7863ae3ce4b7791dc5e1d96dd1f7a878f67d61e958"
+      }
+    },
+    {
+      "case_id": "main__session_hijacking__https",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 0,
+        "technical_feasibility": 1
+      },
+      "recommendation": "HOLD",
+      "report_citations": {
+        "all_ids": [
+          "AE07C_9CBF5980D3BA474A",
+          "AE07S_C1EF15B9628497F0",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE10_4BE87A62A6676C99",
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE14_575D613F0598EF5E",
+          "DE_DE14_5FC183B8D7DD961A",
+          "DE_DE14_EDCA207577B4607A",
+          "DE_DE18_20A979A3238D1DE6",
+          "DE_DE18_CDC975345637E009",
+          "E_04_B9A3190D9CA152A3",
+          "E_10_AC5A58AF5E015229",
+          "E_25_99857C4681E8FEE5",
+          "E_33_13A684B424C1D15B"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 26,
+        "properly_bracketed": 26,
+        "unknown_ids": []
+      },
+      "scenario_id": "KR__CIS_IG2",
+      "source_hashes": {
+        "stage1": "5b8473203535452075465098dd80d84de51fa302487b5d5c4f382f0f74f6b2d1",
+        "stage2": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+        "stage3_context": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+        "stage4_context": "d1853be1e80bea8b4894668ef60ba1d5b4f878e2f8334340759ec658b9685c3d",
+        "stage5": "31865f18b575039e9744f107701fda16da6862860b705e5c4e2439a55372649d",
+        "stage6": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+      }
+    },
+    {
+      "case_id": "main__session_hijacking__https",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 0,
+        "technical_feasibility": 1
+      },
+      "recommendation": "HOLD",
+      "report_citations": {
+        "all_ids": [
+          "AE07C_9CBF5980D3BA474A",
+          "AE07S_C1EF15B9628497F0",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE10_4BE87A62A6676C99",
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE14_575D613F0598EF5E",
+          "DE_DE14_5FC183B8D7DD961A",
+          "DE_DE14_EDCA207577B4607A",
+          "DE_DE18_20A979A3238D1DE6",
+          "DE_DE18_CDC975345637E009",
+          "E_04_B9A3190D9CA152A3",
+          "E_10_AC5A58AF5E015229",
+          "E_25_99857C4681E8FEE5",
+          "E_33_13A684B424C1D15B"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 25,
+        "properly_bracketed": 25,
+        "unknown_ids": []
+      },
+      "scenario_id": "EU__CIS_IG2",
+      "source_hashes": {
+        "stage1": "5b8473203535452075465098dd80d84de51fa302487b5d5c4f382f0f74f6b2d1",
+        "stage2": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+        "stage3_context": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+        "stage4_context": "d1853be1e80bea8b4894668ef60ba1d5b4f878e2f8334340759ec658b9685c3d",
+        "stage5": "31865f18b575039e9744f107701fda16da6862860b705e5c4e2439a55372649d",
+        "stage6": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+      }
+    },
+    {
+      "case_id": "main__session_hijacking__https",
+      "original_stances": {
+        "financial_adoption": 0,
+        "institutional_regional": 0,
+        "technical_feasibility": 1
+      },
+      "recommendation": "HOLD",
+      "report_citations": {
+        "all_ids": [
+          "AE07C_9CBF5980D3BA474A",
+          "AE07S_C1EF15B9628497F0",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE10_4BE87A62A6676C99",
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE14_575D613F0598EF5E",
+          "DE_DE14_5FC183B8D7DD961A",
+          "DE_DE14_EDCA207577B4607A",
+          "DE_DE18_20A979A3238D1DE6",
+          "DE_DE18_CDC975345637E009",
+          "E_04_B9A3190D9CA152A3",
+          "E_10_AC5A58AF5E015229",
+          "E_25_99857C4681E8FEE5",
+          "E_33_13A684B424C1D15B"
+        ],
+        "malformed_mentions": 0,
+        "mentions": 17,
+        "properly_bracketed": 17,
+        "unknown_ids": []
+      },
+      "scenario_id": "US__CIS_IG2",
+      "source_hashes": {
+        "stage1": "5b8473203535452075465098dd80d84de51fa302487b5d5c4f382f0f74f6b2d1",
+        "stage2": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+        "stage3_context": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+        "stage4_context": "d1853be1e80bea8b4894668ef60ba1d5b4f878e2f8334340759ec658b9685c3d",
+        "stage5": "31865f18b575039e9744f107701fda16da6862860b705e5c4e2439a55372649d",
+        "stage6": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+      }
+    }
+  ],
+  "sha256": "b4117ac8ca1c18f7beb35b1906762b1d3ebcb16df196f31f3f28a936ae0d69bc",
+  "version": "r2-c6-policy-matched-evidence-ablation-v1"
+}

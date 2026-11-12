@@ -1,0 +1,293 @@
+{
+  "identity": {
+    "case_id": "main__session_hijacking__https",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "4145af4fea3aba1731e24c2857189c6b4f19423a1489258606b19af1dae1b6a5",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "5dbb9f26e36b61b3edb101d77431b372eb4b87a0e15dfa984090a6ec3f536752",
+    "source_hashes": {
+      "stage1": "5b8473203535452075465098dd80d84de51fa302487b5d5c4f382f0f74f6b2d1",
+      "stage2": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+      "stage3_context": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+      "stage4_context": "d1853be1e80bea8b4894668ef60ba1d5b4f878e2f8334340759ec658b9685c3d",
+      "stage5": "31865f18b575039e9744f107701fda16da6862860b705e5c4e2439a55372649d",
+      "stage6": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORTS_1",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "Control-systems communications-encryption guidance frames encryption as a beneficial practice for protecting sensitive data such as credentials and employee information.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_SUPPORTS_2",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST TLS guidance provides an established client-authentication and certificate path-validation practice, giving a qualitative adoption benefit for strong authentication over TLS.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGES_1",
+          "evidence_ids": [
+            "DE_DE14_EDCA207577B4607A"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL VPN guidance identifies performance, MTU/fragmentation, back-end authentication, testing, and possible hardware-upgrade or SSL-accelerator burdens as adoption challenges for TLS/SSL-based access.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "GENERAL",
+          "statement": "The SSL VPN case study provides deployment-maturity context for TLS/SSL-based remote access, but it does not supply numeric financial quantities for the target enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial feasibility remains qualitative and conditional because numeric resource or cost evidence is absent."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+        "No cited evidence quantifies financial benefit or burden for HTTPS adoption in the KR CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial and adoption evidence is qualitatively mixed. Eligible adoption-benefit evidence frames transport encryption and TLS client-authentication practices as beneficial, while eligible adoption-burden evidence describes SSL/TLS performance, testing, and configuration burdens. No numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile describes a multi-department enterprise with possible regulatory burdens and enterprise-grade safeguard needs, but it does not supply KR-specific regulatory applicability for HTTPS/session-hijacking controls.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "INST_CONTEXT_2",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NIST digital-identity guidance contains general session-channel requirements for HTTPS and secure sessions, but under the grounding contract it cannot establish a KR deployment-specific institutional direction without regulatory_applicability evidence.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "KR-specific regulatory applicability evidence would be required before a deployment-specific institutional support or challenge claim could be made."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_gaps": [
+        "No supplied evaluation_evidence item provides KR-specific regulatory_applicability for HTTPS as a session-hijacking safeguard."
+      ],
+      "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+      "lens_type": "institutional_regional",
+      "rationale": "A deployment-specific institutional claim for the Republic of Korea requires regulatory_applicability evidence. The supplied institutional evidence includes general NIST session-channel and TLS governance material, but it does not establish KR-specific regulatory applicability for HTTPS as a session-hijacking safeguard.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORTS_1",
+          "evidence_ids": [
+            "AE07S_C1EF15B9628497F0"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS/TLS is identified as an important transport-layer control within a broader session-protection strategy for interception-oriented session hijacking.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGES_1",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "Session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists, so HTTPS alone cannot cover all session-hijacking paths.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "GENERAL",
+          "statement": "An SSL VPN deployment case study provides contextual deployment-maturity information for TLS/SSL-based access, but it does not establish HTTPS-specific effectiveness for session hijacking in the target enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "HTTPS/TLS should be treated as one component of a broader session-protection strategy rather than a standalone mitigation for all session-hijacking vectors."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_gaps": [
+        "No cited evidence shows that HTTPS alone is technically sufficient across all session-hijacking paths in the KR CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Technical evidence is mixed: a direct session-hijacking finding supports HTTPS/TLS as an important transport-layer control, while another direct finding limits HTTPS as a standalone control because session tokens can still be stolen through XSS or malicious browser extensions.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "The forecast values are not used as cited evidence for feasibility claims. The technical, institutional, and financial lenses each retain explicit gaps or unmet conditions. GENERAL technical and financial findings are used only within the scopes permitted by the grounding contract and are not treated as proof of enterprise-specific success.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORTS_1",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "Control-systems communications-encryption guidance frames encryption as a beneficial practice for protecting sensitive data such as credentials and employee information.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_SUPPORTS_2",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST TLS guidance provides an established client-authentication and certificate path-validation practice, giving a qualitative adoption benefit for strong authentication over TLS.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGES_1",
+          "evidence_ids": [
+            "DE_DE14_EDCA207577B4607A"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL VPN guidance identifies performance, MTU/fragmentation, back-end authentication, testing, and possible hardware-upgrade or SSL-accelerator burdens as adoption challenges for TLS/SSL-based access.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "GENERAL",
+          "statement": "The SSL VPN case study provides deployment-maturity context for TLS/SSL-based remote access, but it does not supply numeric financial quantities for the target enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial feasibility remains qualitative and conditional because numeric resource or cost evidence is absent."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+        "No cited evidence quantifies financial benefit or burden for HTTPS adoption in the KR CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial and adoption evidence is qualitatively mixed. Eligible adoption-benefit evidence frames transport encryption and TLS client-authentication practices as beneficial, while eligible adoption-burden evidence describes SSL/TLS performance, testing, and configuration burdens. No numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile describes a multi-department enterprise with possible regulatory burdens and enterprise-grade safeguard needs, but it does not supply KR-specific regulatory applicability for HTTPS/session-hijacking controls.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "INST_CONTEXT_2",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NIST digital-identity guidance contains general session-channel requirements for HTTPS and secure sessions, but under the grounding contract it cannot establish a KR deployment-specific institutional direction without regulatory_applicability evidence.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "KR-specific regulatory applicability evidence would be required before a deployment-specific institutional support or challenge claim could be made."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evaluation_evidence item provides KR-specific regulatory_applicability for HTTPS as a session-hijacking safeguard."
+      ],
+      "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+      "rationale": "A deployment-specific institutional claim for the Republic of Korea requires regulatory_applicability evidence. The supplied institutional evidence includes general NIST session-channel and TLS governance material, but it does not establish KR-specific regulatory applicability for HTTPS as a session-hijacking safeguard.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORTS_1",
+          "evidence_ids": [
+            "AE07S_C1EF15B9628497F0"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS/TLS is identified as an important transport-layer control within a broader session-protection strategy for interception-oriented session hijacking.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGES_1",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "Session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists, so HTTPS alone cannot cover all session-hijacking paths.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "GENERAL",
+          "statement": "An SSL VPN deployment case study provides contextual deployment-maturity information for TLS/SSL-based access, but it does not establish HTTPS-specific effectiveness for session hijacking in the target enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "HTTPS/TLS should be treated as one component of a broader session-protection strategy rather than a standalone mitigation for all session-hijacking vectors."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No cited evidence shows that HTTPS alone is technically sufficient across all session-hijacking paths in the KR CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Technical evidence is mixed: a direct session-hijacking finding supports HTTPS/TLS as an important transport-layer control, while another direct finding limits HTTPS as a standalone control because session tokens can still be stolen through XSS or malicious browser extensions.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "227a15cc3304465b71fe1331b05ee703552a875c1f3b82f51309e4cb16a820d1",
+  "withheld_evidence_id": null
+}

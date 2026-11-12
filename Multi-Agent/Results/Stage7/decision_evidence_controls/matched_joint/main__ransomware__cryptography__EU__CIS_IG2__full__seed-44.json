@@ -1,0 +1,243 @@
+{
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "96b322b869d3ba76434967a8df0735b62041641372b0097f214d3e3226f5c3fc",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 44,
+    "shadow_object_sha256": "11461a065105b649e7b0a11feecf9bda22872dd0631f5734806e09ffc0f5e735",
+    "source_hashes": {
+      "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+      "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+      "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+      "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+      "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+      "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST TLS and DHS IPSec guidance provide practical deployment paths for cryptographic protections in transit, supporting adoption feasibility in an enterprise IT environment.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CPG guidance indicates operational adoption burden: encryption is used when technically feasible, OT latency and availability must be considered, weak encryption must be identified and updated, and post-quantum implications should be considered.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__3ba36a931c4d6a67",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+        "No vendor, product version, or enterprise procurement evidence is supplied."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "The financial-adoption lens is genuinely mixed. Adoption-benefit evidence exists in the form of practical TLS and IPSec deployment guidance, but it does not establish budget, TCO, ROI, staffing capacity, or procurement feasibility. Adoption-burden evidence is also present, including feasibility-dependent encryption use, OT latency/availability considerations, weak-crypto replacement, and post-quantum planning. Because both support and challenge evidence is present but no financial quantities are supplied, the stance is mixed with partial sufficiency.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327",
+            "E_31_A0893427DD4F5B04",
+            "E_31_C1CFA326F0420DCA",
+            "E_31_6BBE82F2BAC198B3"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "EU legal sources tie encryption/cryptography to personal-data security and ICT procurement contexts, and governance guidance provides operational mechanisms for cryptographic key management and encryption.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E",
+            "E_31_A0893427DD4F5B04"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NIST cryptographic-transition guidance imposes algorithm-selection constraints by disallowing or deprecating certain symmetric algorithms, creating a compliance burden for cryptographic implementation choices.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__3ba36a931c4d6a67",
+      "evidence_gaps": [
+        "EU regulatory applicability is established, but no EU-specific implementation, procurement, or organizational compliance-capacity evidence is supplied.",
+        "The NIST transition constraint is not itself an EU legal obligation; it is a compliance constraint only if NIST-aligned cryptographic selections are used."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "The EU context provides regulatory applicability evidence for encryption/cryptography in personal-data security and ICT procurement contexts, which supports deployment-specific institutional feasibility. Governance-enablement guidance for key management and encryption operations also exists. However, the NIST algorithm-transition evidence introduces a compliance constraint on cryptographic choices, and the governance sources are not EU-specific, so institutional support is positive but partial rather than sufficient.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic analysis can materially support ransomware neutralization and reverse engineering.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptography-related detection is not universally robust; ransomware can alter observable entropy patterns and some approaches impose nontrivial computational cost.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__3ba36a931c4d6a67",
+      "evidence_gaps": [
+        "No enterprise-specific deployment, product/version, staffing, or cost evidence is supplied for the CIS IG2 reference enterprise.",
+        "The positive technical evidence is study-level and does not by itself establish successful deployment in the given reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Technical feasibility has a direct positive signal because cryptographic-primitive analysis is explicitly linked to ransomware neutralization and reverse engineering. The challenge signal is narrower, targeting entropy-based detection robustness and computational cost. The positive claim is more direct to the threat, but enterprise-specific deployment maturity, staffing, product versioning, and cost remain unmet, so the stance is positive but only partial.",
+      "stance": 1
+    }
+  },
+  "raw": {
+    "analysis_note": "The strongest direct support is technical, followed by EU-regional institutional support. Financial-adoption evidence is mixed because adoption-path guidance exists but concrete financial capacity evidence does not.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST TLS and DHS IPSec guidance provide practical deployment paths for cryptographic protections in transit, supporting adoption feasibility in an enterprise IT environment.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CPG guidance indicates operational adoption burden: encryption is used when technically feasible, OT latency and availability must be considered, weak encryption must be identified and updated, and post-quantum implications should be considered.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+        "No vendor, product version, or enterprise procurement evidence is supplied."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The financial-adoption lens is genuinely mixed. Adoption-benefit evidence exists in the form of practical TLS and IPSec deployment guidance, but it does not establish budget, TCO, ROI, staffing capacity, or procurement feasibility. Adoption-burden evidence is also present, including feasibility-dependent encryption use, OT latency/availability considerations, weak-crypto replacement, and post-quantum planning. Because both support and challenge evidence is present but no financial quantities are supplied, the stance is mixed with partial sufficiency.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327",
+            "E_31_A0893427DD4F5B04",
+            "E_31_C1CFA326F0420DCA",
+            "E_31_6BBE82F2BAC198B3"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "EU legal sources tie encryption/cryptography to personal-data security and ICT procurement contexts, and governance guidance provides operational mechanisms for cryptographic key management and encryption.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E",
+            "E_31_A0893427DD4F5B04"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NIST cryptographic-transition guidance imposes algorithm-selection constraints by disallowing or deprecating certain symmetric algorithms, creating a compliance burden for cryptographic implementation choices.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "EU regulatory applicability is established, but no EU-specific implementation, procurement, or organizational compliance-capacity evidence is supplied.",
+        "The NIST transition constraint is not itself an EU legal obligation; it is a compliance constraint only if NIST-aligned cryptographic selections are used."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The EU context provides regulatory applicability evidence for encryption/cryptography in personal-data security and ICT procurement contexts, which supports deployment-specific institutional feasibility. Governance-enablement guidance for key management and encryption operations also exists. However, the NIST algorithm-transition evidence introduces a compliance constraint on cryptographic choices, and the governance sources are not EU-specific, so institutional support is positive but partial rather than sufficient.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic analysis can materially support ransomware neutralization and reverse engineering.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptography-related detection is not universally robust; ransomware can alter observable entropy patterns and some approaches impose nontrivial computational cost.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No enterprise-specific deployment, product/version, staffing, or cost evidence is supplied for the CIS IG2 reference enterprise.",
+        "The positive technical evidence is study-level and does not by itself establish successful deployment in the given reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Technical feasibility has a direct positive signal because cryptographic-primitive analysis is explicitly linked to ransomware neutralization and reverse engineering. The challenge signal is narrower, targeting entropy-based detection robustness and computational cost. The positive claim is more direct to the threat, but enterprise-specific deployment maturity, staffing, product versioning, and cost remain unmet, so the stance is positive but only partial.",
+      "stance": 1
+    }
+  },
+  "recommendation": "RECOMMEND_PILOT",
+  "sha256": "befc7dca1032923e9562860c74561b6bf35988df7fdccecf5ed8cbdce520dc16",
+  "withheld_evidence_id": null
+}

@@ -1,0 +1,275 @@
+{
+  "identity": {
+    "case_id": "main__session_hijacking__https",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "da000810104054b956198d128f1e69c9a64a17f8ee53e89abd4f081f52eb013e",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 44,
+    "shadow_object_sha256": "232164db430b3023187f24e98555f3835759207c710ac197d21bcd422b97abb6",
+    "source_hashes": {
+      "stage1": "5b8473203535452075465098dd80d84de51fa302487b5d5c4f382f0f74f6b2d1",
+      "stage2": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+      "stage3_context": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+      "stage4_context": "d1853be1e80bea8b4894668ef60ba1d5b4f878e2f8334340759ec658b9685c3d",
+      "stage5": "31865f18b575039e9744f107701fda16da6862860b705e5c4e2439a55372649d",
+      "stage6": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORTS_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS/HTTPS implementation guidance and communications-encryption guidance support adoption benefits by describing deployable controls for protecting sensitive sessions and sensitive data in transit.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGES_1",
+          "evidence_ids": [
+            "DE_DE14_EDCA207577B4607A"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL/TLS deployment can introduce performance overhead, fragmentation, latency, testing, hardware or accelerator considerations, and ongoing operational effort, which constitute an adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile implies a multi-department enterprise environment that may require enterprise-grade technology and specialized expertise, increasing the operational context for adoption, but no numeric financial quantities are supplied.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "The evidence contains both adoption-benefit and adoption-burden signals, so the financial lens is genuinely mixed; no numeric budget, price, ROI, TCO, staffing, or procurement data is supplied, so residual deployment-specific financial context remains only partially grounded.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORTS_1",
+          "evidence_ids": [
+            "DE_DE14_575D613F0598EF5E",
+            "DE_DE18_20A979A3238D1DE6"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL/TLS and HTTPS-related deployment guidance supports governance enablement through lifecycle management, testing, pilot deployment, documentation, monitoring, patching, and certificate renewal.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGES_1",
+          "evidence_ids": [
+            "DE_DE10_4BE87A62A6676C99",
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST TLS implementation and digital identity session-channel requirements create compliance constraints and implementation obligations for HTTPS-based session protection.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_GAP_1",
+          "evidence_ids": [
+            "DE_DE14_575D613F0598EF5E"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "No supplied eligible evidence establishes EU-specific regulatory applicability required for a DEPLOYMENT_SPECIFIC institutional direction.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General governance and implementation-process evidence supports institutional feasibility, but the supplied eligible evidence does not establish EU-specific regulatory applicability for a DEPLOYMENT_SPECIFIC institutional direction. Therefore the lens is genuinely mixed: general support exists, but regional deployment-specific support is insufficient.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORTS_1",
+          "evidence_ids": [
+            "AE07S_C1EF15B9628497F0"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS/TLS is supported as an important transport-layer countermeasure against interception-oriented session hijacking.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGES_1",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS alone does not cover all session-hijacking paths because session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The SSL VPN deployment case study shows that SSL/TLS-based remote access can be planned, piloted, documented, and migrated in an enterprise context, supporting deployment maturity without proving HTTPS-specific sufficiency.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "SUFFICIENT",
+      "lens_type": "technical_feasibility",
+      "rationale": "The directional evidence supports HTTPS as a technically feasible and relevant transport-layer mitigation for interception-oriented session hijacking, while also showing that it is not a complete session-hijacking control. This supports feasibility without implying sufficiency.",
+      "stance": 1
+    }
+  },
+  "raw": {
+    "analysis_note": "The preselected Threat--PMT pairing is decision-relevant because the forecast shows the PMT state increasing relative to the threat state, with the signed threat-minus-PMT gap moving negative from 2025 through 2027. This supports keeping HTTPS in the action set as a necessary transport-layer control, but the evidence does not justify treating HTTPS as sufficient alone. The institutional lens remains only partially supported for the EU scenario because no eligible EU-specific regulatory applicability evidence is present, and the financial lens remains only partially grounded for a numeric feasibility judgment.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORTS_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS/HTTPS implementation guidance and communications-encryption guidance support adoption benefits by describing deployable controls for protecting sensitive sessions and sensitive data in transit.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGES_1",
+          "evidence_ids": [
+            "DE_DE14_EDCA207577B4607A"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL/TLS deployment can introduce performance overhead, fragmentation, latency, testing, hardware or accelerator considerations, and ongoing operational effort, which constitute an adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile implies a multi-department enterprise environment that may require enterprise-grade technology and specialized expertise, increasing the operational context for adoption, but no numeric financial quantities are supplied.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The evidence contains both adoption-benefit and adoption-burden signals, so the financial lens is genuinely mixed; no numeric budget, price, ROI, TCO, staffing, or procurement data is supplied, so residual deployment-specific financial context remains only partially grounded.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORTS_1",
+          "evidence_ids": [
+            "DE_DE14_575D613F0598EF5E",
+            "DE_DE18_20A979A3238D1DE6"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL/TLS and HTTPS-related deployment guidance supports governance enablement through lifecycle management, testing, pilot deployment, documentation, monitoring, patching, and certificate renewal.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGES_1",
+          "evidence_ids": [
+            "DE_DE10_4BE87A62A6676C99",
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST TLS implementation and digital identity session-channel requirements create compliance constraints and implementation obligations for HTTPS-based session protection.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_GAP_1",
+          "evidence_ids": [
+            "DE_DE14_575D613F0598EF5E"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "No supplied eligible evidence establishes EU-specific regulatory applicability required for a DEPLOYMENT_SPECIFIC institutional direction.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General governance and implementation-process evidence supports institutional feasibility, but the supplied eligible evidence does not establish EU-specific regulatory applicability for a DEPLOYMENT_SPECIFIC institutional direction. Therefore the lens is genuinely mixed: general support exists, but regional deployment-specific support is insufficient.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORTS_1",
+          "evidence_ids": [
+            "AE07S_C1EF15B9628497F0"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS/TLS is supported as an important transport-layer countermeasure against interception-oriented session hijacking.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGES_1",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS alone does not cover all session-hijacking paths because session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The SSL VPN deployment case study shows that SSL/TLS-based remote access can be planned, piloted, documented, and migrated in an enterprise context, supporting deployment maturity without proving HTTPS-specific sufficiency.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "SUFFICIENT",
+      "rationale": "The directional evidence supports HTTPS as a technically feasible and relevant transport-layer mitigation for interception-oriented session hijacking, while also showing that it is not a complete session-hijacking control. This supports feasibility without implying sufficiency.",
+      "stance": 1
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "5fb9415424fa2360aa8a4e661ba1049849d88c976995e8dddbdd735540fcd6a3",
+  "withheld_evidence_id": null
+}

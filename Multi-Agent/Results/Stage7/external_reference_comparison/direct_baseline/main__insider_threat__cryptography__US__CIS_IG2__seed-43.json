@@ -1,0 +1,34 @@
+{
+  "identity": {
+    "arm": "single_direct_end_to_end",
+    "case_id": "main__insider_threat__cryptography",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "79afd54857659e150a41ea0d0090cfdf770dff14f6e521d0b01d7f6b086c729a",
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "18e7e404cf766858cf448d8ce4555ada40d799456d13936b3970d594a5d69f90",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "745146f909ebc5a9a778ef176e3abf279f1cfd0e3ec4e61076fad47b2ac6be8f",
+    "seed": 43,
+    "source_hashes": {
+      "stage1": "048aa9e6dd139b26dd32450ec0fda405bb883a62497ed108691cf7e840b16872",
+      "stage2": "3ddd4def226a25d78c6243f4382fb30d384b7793f7191e62a95b79e660f11d06",
+      "stage3_context": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+      "stage4_context": "903f67ef37fb5c791e24edf9e95e89eab3871357daaf710dbd35a12093a6e9d9",
+      "stage5": "21782b723a9d2a4314a244c1d347b57acf3ce4923dab23db75a071d0d7ee8b79",
+      "stage6": "37b347c8a4f93dbe5bae0f66037abd59c4c085642673b2cc7f66fc31c0c1fbd9"
+    },
+    "version": "reviewer2-external-reference-report-audit-v1"
+  },
+  "output": {
+    "recommendation": "RECOMMEND_PILOT",
+    "report": "The candidate mitigation is a qualified pilot rather than a full enterprise recommendation. The 2025-2027 forecast shows an increasing signed gap between insider-threat state and cryptography mitigation state, with threat mean z 0.887192, PMT mean z -0.119069, and gap values of 0.9766 in 2025, 1.0646 in 2026, and 0.9776 in 2027. This suggests that insider threat pressure is projected to remain ahead of the modeled cryptography mitigation state. The strongest support for cryptography is that it is a recognized protective mechanism, that it can be engineered for insider-threat data leakage, and that it can support information separation when access approvals are insufficient [EVIDENCE:AE04S_2674461DBC059388] [EVIDENCE:E_25_746173685B235ED2]. Standard guidance also supports using approved algorithms, TLS, IPSec, key-management traceability, and cryptographic hashing or signatures [EVIDENCE:DE_DE09_6719137897848A9E] [EVIDENCE:DE_DE10_A086B3193CD6440B] [EVIDENCE:DE_DE18_CDC975345637E009] [EVIDENCE:DE_DE08_031120C53EF050F3] [EVIDENCE:E_16_E7BB108A85B71262]. However, the insider-specific evidence is bounded: an insider-threat setting gives authorized attackers stronger capabilities, including known- or chosen-plaintext style attacks, and conventional encryption is not automatically sufficient; effectiveness depends on cryptographic design and insider-access model [EVIDENCE:AE04C_F084D028D8E2AE06]. The CIS IG2 reference enterprise can process sensitive information, may face regulatory burdens, can tolerate short service interruptions, but may require enterprise-grade technology and specialized expertise [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed, so financial feasibility is indeterminate. CISA insider-threat guidance also notes that insider-threat programs are organization-wide and some mitigation measures can be cost prohibitive, meaning cryptography should not be treated as a standalone fix [EVIDENCE:E_22_C239828119FC69CD]. Forecast uncertainty is material: the PMT confidence half-width is 0.1349, larger than the threat confidence half-width of 0.0637, and the legacy variance warning is retained; the gap is a modeled z-score difference, not measured incident reduction. Missing deployment information includes exact budget, vendor/product selection, architecture, legal duties, staffing, data classification, and the specific insider-access paths to protect. A defensible dissent is HOLD because the only direct insider-specific cryptography evidence is a specialized prototype and the same source explicitly warns that conventional encryption may be insufficient without the right design and access model [EVIDENCE:AE04C_F084D028D8E2AE06]. Therefore, the candidate action should proceed only as a bounded pilot. The pilot should be limited to a clearly scoped data path or insider-leakage risk, use approved cryptography such as AES or TLS with strong authentication where appropriate, include key-management accountability and traceability, integrate with access controls rather than relying on encryption alone, and avoid production manual static keying when IPSec is used [EVIDENCE:DE_DE09_6719137897848A9E] [EVIDENCE:DE_DE10_A086B3193CD6440B] [EVIDENCE:DE_DE08_031120C53EF050F3] [EVIDENCE:DE_DE18_CDC975345637E009]. If key traceability, access control, or specialized expertise cannot be implemented, the decision should move to HOLD. If the deployment relies only on conventional encryption assumed to be sufficient for authorized insiders, the decision should move to DO_NOT_RECOMMEND for full rollout."
+  },
+  "sha256": "e8d5f077bc6b02bff7031ede1af86b3a33ab01b4c7d025b7325c0e4e7a529650"
+}

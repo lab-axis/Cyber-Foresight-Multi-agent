@@ -1,0 +1,257 @@
+{
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "410c586435bc7115f84c49591ba18555402682d9a4864d8022240e1e43226653",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 43,
+    "shadow_object_sha256": "6de16e8909a5a40d0a9005357333589feba73620fe0cf4e645ac2cae5fae4b32",
+    "source_hashes": {
+      "stage1": "304807a460c79b97a7c155ac0f3a11e974386cf0363fc072fef87238f7525724",
+      "stage2": "e32d514b41e64ac386fed97a222cbc7fd92d7328e840ea7c0bd6ce0bf758352d",
+      "stage3_context": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+      "stage4_context": "b197de3415acc19c31e3f821ed025c29e9bf15b3b293e7c0ad5f6b35b1ef2cee",
+      "stage5": "f33b3c4296fd820cb26a9525899ee8fc2a36c30f0775e3ce10ae5de1aa804127",
+      "stage6": "ec942bd1085a56ecfa8a3e7863ae3ce4b7791dc5e1d96dd1f7a878f67d61e958"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "Zero-trust transformation may enable more prudent allocation of security investments in the long term, constituting an adoption benefit for access-control-related deployment.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "The path to zero trust is described as incremental, potentially taking years, and initially leading to additional costs, constituting an adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_2",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA"
+          ],
+          "scope": "GENERAL",
+          "statement": "Development, deployment, and maintenance of attribute-based access control may exceed its benefits in the long term, and retrofitting applications to ABAC is a separate cost, constituting an adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_3",
+          "evidence_ids": [
+            "DE_DE12_CBF6FBB1313D37AF"
+          ],
+          "scope": "GENERAL",
+          "statement": "Dependence on service providers for dynamic access-control components can create extreme switching costs or long transition programs, and disruption can affect core business functions, constituting an adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied; financial feasibility is assessed only qualitatively."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial adoption evidence is mixed. Eligible adoption_benefit evidence describes a long-term investment-allocation benefit for zero-trust/access-control transformation, while multiple eligible adoption_burden items describe multi-year implementation, initial cost increases, ABAC retrofit/maintenance costs, and provider switching or disruption risk. No numeric budget, TCO, ROI, staffing, or procurement ceiling is supplied, so the lens remains qualitatively mixed rather than decisively supportive or adverse.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_567DDA7CFBC62829"
+          ],
+          "scope": "GENERAL",
+          "statement": "Zero-trust governance is described as defining and enforcing cybersecurity policies, procedures, and processes to manage enterprise risk, but this is general governance context and does not by itself establish KR regulatory applicability for ACCESS CONTROL.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "INST_NEUTRAL_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile describes a multi-department enterprise that may face regulatory burdens and require specialized expertise, but it does not supply Republic of Korea regulatory applicability for ACCESS CONTROL.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "evidence_gaps": [
+        "No KR-specific regulatory_applicability evidence is available in the supplied evaluation_evidence for ACCESS CONTROL under the DEPLOYMENT_SPECIFIC institutional lens."
+      ],
+      "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+      "lens_type": "institutional_regional",
+      "rationale": "Institutional evidence is available only as general zero-trust governance context and a generic CIS IG2 enterprise profile. Neither supplied item establishes Republic of Korea regulatory_applicability for ACCESS CONTROL, so the institutional direction remains unsupported for this deployment scenario.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE06S_407DDF87C86BB41B"
+          ],
+          "scope": "GENERAL",
+          "statement": "An ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats, directly supporting adaptive access control as a technical countermeasure for targeted attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "Conventional perimeter and static access-control assumptions are insufficient for evolving APT behavior, and effective access control depends on continuously updated threat/risk context rather than the control category alone.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "The technical evidence contains a direct, eligible technical_enablement item supporting adaptive access control for sophisticated targeted/APT activity, and an eligible technical_limitation item identifying a key condition: static or perimeter-only assumptions are insufficient without continuously updated threat/risk context. The support is more directly aligned with the targeted-attack threat than the limitation, but the limitation prevents a SUFFICIENT deployment-specific technical conclusion.",
+      "stance": 1
+    }
+  },
+  "raw": {
+    "analysis_note": "The technical lens is positive but conditional because the supporting evidence is general and the limitation identifies a continuing threat/risk-context dependency. The institutional lens is neutral with insufficient evidence because the available governance items are general and do not satisfy the KR deployment-specific regulatory_applicability requirement. The financial lens is neutral with partial evidence because the supplied adoption benefit and adoption burden evidence are both present and qualitatively offsetting, without numeric financial deployment constraints.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "Zero-trust transformation may enable more prudent allocation of security investments in the long term, constituting an adoption benefit for access-control-related deployment.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "The path to zero trust is described as incremental, potentially taking years, and initially leading to additional costs, constituting an adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_2",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA"
+          ],
+          "scope": "GENERAL",
+          "statement": "Development, deployment, and maintenance of attribute-based access control may exceed its benefits in the long term, and retrofitting applications to ABAC is a separate cost, constituting an adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_3",
+          "evidence_ids": [
+            "DE_DE12_CBF6FBB1313D37AF"
+          ],
+          "scope": "GENERAL",
+          "statement": "Dependence on service providers for dynamic access-control components can create extreme switching costs or long transition programs, and disruption can affect core business functions, constituting an adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied; financial feasibility is assessed only qualitatively."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial adoption evidence is mixed. Eligible adoption_benefit evidence describes a long-term investment-allocation benefit for zero-trust/access-control transformation, while multiple eligible adoption_burden items describe multi-year implementation, initial cost increases, ABAC retrofit/maintenance costs, and provider switching or disruption risk. No numeric budget, TCO, ROI, staffing, or procurement ceiling is supplied, so the lens remains qualitatively mixed rather than decisively supportive or adverse.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_567DDA7CFBC62829"
+          ],
+          "scope": "GENERAL",
+          "statement": "Zero-trust governance is described as defining and enforcing cybersecurity policies, procedures, and processes to manage enterprise risk, but this is general governance context and does not by itself establish KR regulatory applicability for ACCESS CONTROL.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "INST_NEUTRAL_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile describes a multi-department enterprise that may face regulatory burdens and require specialized expertise, but it does not supply Republic of Korea regulatory applicability for ACCESS CONTROL.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No KR-specific regulatory_applicability evidence is available in the supplied evaluation_evidence for ACCESS CONTROL under the DEPLOYMENT_SPECIFIC institutional lens."
+      ],
+      "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Institutional evidence is available only as general zero-trust governance context and a generic CIS IG2 enterprise profile. Neither supplied item establishes Republic of Korea regulatory_applicability for ACCESS CONTROL, so the institutional direction remains unsupported for this deployment scenario.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE06S_407DDF87C86BB41B"
+          ],
+          "scope": "GENERAL",
+          "statement": "An ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats, directly supporting adaptive access control as a technical countermeasure for targeted attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "Conventional perimeter and static access-control assumptions are insufficient for evolving APT behavior, and effective access control depends on continuously updated threat/risk context rather than the control category alone.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The technical evidence contains a direct, eligible technical_enablement item supporting adaptive access control for sophisticated targeted/APT activity, and an eligible technical_limitation item identifying a key condition: static or perimeter-only assumptions are insufficient without continuously updated threat/risk context. The support is more directly aligned with the targeted-attack threat than the limitation, but the limitation prevents a SUFFICIENT deployment-specific technical conclusion.",
+      "stance": 1
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "55b2b124d80e5a2af36d7727951069a2d1df701ff267e1869cc7f515d51f7448",
+  "withheld_evidence_id": null
+}

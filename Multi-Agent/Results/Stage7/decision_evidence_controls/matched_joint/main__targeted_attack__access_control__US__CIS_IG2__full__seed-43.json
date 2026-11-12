@@ -1,0 +1,293 @@
+{
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "c8e353b35caa77ad7d1c528a8c1b0998de8ad7b73b0b1fcda51b03999cd6e28d",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 43,
+    "shadow_object_sha256": "2c801a83678bee8eaf116be869319f2c16588601f37a7ced2bf360ace07502a2",
+    "source_hashes": {
+      "stage1": "304807a460c79b97a7c155ac0f3a11e974386cf0363fc072fef87238f7525724",
+      "stage2": "e32d514b41e64ac386fed97a222cbc7fd92d7328e840ea7c0bd6ce0bf758352d",
+      "stage3_context": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+      "stage4_context": "b197de3415acc19c31e3f821ed025c29e9bf15b3b293e7c0ad5f6b35b1ef2cee",
+      "stage5": "f33b3c4296fd820cb26a9525899ee8fc2a36c30f0775e3ce10ae5de1aa804127",
+      "stage6": "ec942bd1085a56ecfa8a3e7863ae3ce4b7791dc5e1d96dd1f7a878f67d61e958"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA zero-trust maturity guidance states that, in the long term, zero trust can enable a more prudent allocation of security investments, providing an adoption benefit relevant to access-control deployment.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA",
+            "DE_DE12_CBF6FBB1313D37AF",
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "ABAC and zero-trust guidance warns that development, deployment, retrofitting, maintenance, governance changes, initial implementation costs, and provider switching or transition burdens may offset or exceed the benefits of access-control adoption.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_NEUTRAL_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The reference enterprise context notes possible need for enterprise-grade technology and specialized expertise but supplies no numeric resource quantities.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, so the stated long-term benefit and transition/maintenance burdens cannot be reconciled quantitatively.",
+        "No deployment-specific financial commitment, procurement path, or implementation timeline is supplied for the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Eligible adoption-benefit evidence describes long-term investment benefit from zero-trust adoption, while eligible adoption-burden evidence directly warns about development, deployment, retrofitting, maintenance, governance transition, initial costs, and provider-switching burdens. Because no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, the benefit and burden cannot be reconciled into a definitive financial feasibility direction.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_567DDA7CFBC62829",
+            "DE_DE12_E6F93E4AB8722379",
+            "DE_DE11_1E4AAE06CC3795D7"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST/CISA governance and zero-trust guidance describes governance pillars, policy enforcement, compliance-data integration, and attribute/policy governance that can enable institutionalization of access-control decisions.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST digital identity guidance imposes strict session, cookie, access-token, and secure-channel requirements, creating a compliance constraint on how access-control and authentication components must be implemented.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_NEUTRAL_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 reference profile describes multi-department enterprise IT complexity and possible need for enterprise-grade technology, but does not establish US-specific regulatory applicability for this reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606",
+      "evidence_gaps": [
+        "No regulatory_applicability evidence is supplied to establish a US-specific legal or regulatory obligation for this reference enterprise.",
+        "The governance support is general; it does not prove that this reference enterprise has already adopted the required governance processes."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Eligible governance-enablement evidence is stronger than the compliance-constraint evidence: multiple NIST/CISA guidance sources describe governance, policy enforcement, compliance-data integration, and attribute/policy governance that can support institutionalizing access control. The challenge is a set of implementation constraints rather than evidence of institutional infeasibility. US-specific regulatory applicability remains unestablished, so the support remains general rather than deployment-specific.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE06S_407DDF87C86BB41B"
+          ],
+          "scope": "GENERAL",
+          "statement": "A curated action finding reports that an ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions improves the ability to respond to sophisticated multi-stage targeted-attack behavior, providing direct technical enablement for adaptive access control as a targeted-attack defense mechanism.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "The same work states that conventional perimeter and static access-control assumptions are insufficient for evolving APT behavior and that effective access control depends on continuously updated threat/risk context rather than the control category alone, leaving feasibility conditional on dynamic context capability.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_NEUTRAL_1",
+          "evidence_ids": [
+            "DE_DE12_6509E7A6D8467E38"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST zero-trust guidance describes candidate-solution selection, deployment models, and pilot use for zero-trust access-control deployments, but does not by itself prove effectiveness in the reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606",
+      "evidence_gaps": [
+        "No supplied evidence establishes that the reference CIS IG2 environment can maintain the continuously updated threat/risk context required for the supported adaptive access-control approach.",
+        "No product, version, deployment architecture, or operational implementation detail is supplied for the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Eligible technical evidence supports adaptive access control for targeted attacks, but also directly limits static or perimeter-style access control by requiring continuously updated threat/risk context. Because the reference context does not establish that this dynamic-context capability exists, the lens is genuinely mixed rather than clearly positive.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "No final decision label is assigned; the lens stances are limited to the direction of the supplied grounding evidence.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA zero-trust maturity guidance states that, in the long term, zero trust can enable a more prudent allocation of security investments, providing an adoption benefit relevant to access-control deployment.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA",
+            "DE_DE12_CBF6FBB1313D37AF",
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "ABAC and zero-trust guidance warns that development, deployment, retrofitting, maintenance, governance changes, initial implementation costs, and provider switching or transition burdens may offset or exceed the benefits of access-control adoption.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_NEUTRAL_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The reference enterprise context notes possible need for enterprise-grade technology and specialized expertise but supplies no numeric resource quantities.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, so the stated long-term benefit and transition/maintenance burdens cannot be reconciled quantitatively.",
+        "No deployment-specific financial commitment, procurement path, or implementation timeline is supplied for the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Eligible adoption-benefit evidence describes long-term investment benefit from zero-trust adoption, while eligible adoption-burden evidence directly warns about development, deployment, retrofitting, maintenance, governance transition, initial costs, and provider-switching burdens. Because no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, the benefit and burden cannot be reconciled into a definitive financial feasibility direction.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_567DDA7CFBC62829",
+            "DE_DE12_E6F93E4AB8722379",
+            "DE_DE11_1E4AAE06CC3795D7"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST/CISA governance and zero-trust guidance describes governance pillars, policy enforcement, compliance-data integration, and attribute/policy governance that can enable institutionalization of access-control decisions.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST digital identity guidance imposes strict session, cookie, access-token, and secure-channel requirements, creating a compliance constraint on how access-control and authentication components must be implemented.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_NEUTRAL_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 reference profile describes multi-department enterprise IT complexity and possible need for enterprise-grade technology, but does not establish US-specific regulatory applicability for this reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No regulatory_applicability evidence is supplied to establish a US-specific legal or regulatory obligation for this reference enterprise.",
+        "The governance support is general; it does not prove that this reference enterprise has already adopted the required governance processes."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Eligible governance-enablement evidence is stronger than the compliance-constraint evidence: multiple NIST/CISA guidance sources describe governance, policy enforcement, compliance-data integration, and attribute/policy governance that can support institutionalizing access control. The challenge is a set of implementation constraints rather than evidence of institutional infeasibility. US-specific regulatory applicability remains unestablished, so the support remains general rather than deployment-specific.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE06S_407DDF87C86BB41B"
+          ],
+          "scope": "GENERAL",
+          "statement": "A curated action finding reports that an ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions improves the ability to respond to sophisticated multi-stage targeted-attack behavior, providing direct technical enablement for adaptive access control as a targeted-attack defense mechanism.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "The same work states that conventional perimeter and static access-control assumptions are insufficient for evolving APT behavior and that effective access control depends on continuously updated threat/risk context rather than the control category alone, leaving feasibility conditional on dynamic context capability.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_NEUTRAL_1",
+          "evidence_ids": [
+            "DE_DE12_6509E7A6D8467E38"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST zero-trust guidance describes candidate-solution selection, deployment models, and pilot use for zero-trust access-control deployments, but does not by itself prove effectiveness in the reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence establishes that the reference CIS IG2 environment can maintain the continuously updated threat/risk context required for the supported adaptive access-control approach.",
+        "No product, version, deployment architecture, or operational implementation detail is supplied for the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Eligible technical evidence supports adaptive access control for targeted attacks, but also directly limits static or perimeter-style access control by requiring continuously updated threat/risk context. Because the reference context does not establish that this dynamic-context capability exists, the lens is genuinely mixed rather than clearly positive.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "128295f8ed812c07c502d0fd2dbd78b044839e8bf34dd2769870b23eadd0c322",
+  "withheld_evidence_id": null
+}

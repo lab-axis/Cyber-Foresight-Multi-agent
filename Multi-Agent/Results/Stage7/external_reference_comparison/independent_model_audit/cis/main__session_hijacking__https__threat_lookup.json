@@ -1,0 +1,24 @@
+{
+  "identity": {
+    "input_sha256": "433503446e1e52d874ff0cbd8670cbf5bd510f68cf63193baceca57ffcdeb4f8",
+    "key": "main__session_hijacking__https__threat_lookup",
+    "kind": "cis",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "ff71ec15009be39adf922c61fcd190151bd3f89fd6aee417e3bd4904377a1321",
+    "schema_sha256": "cae356e111e388512d75184f967cbfc19277772111c1bbed65821c5972f18b61",
+    "seed": 42,
+    "temperature": 0,
+    "version": "reviewer2-external-reference-report-audit-v1"
+  },
+  "judgment": {
+    "mappings": [
+      {
+        "rationale": "Automatic session locking prevents unauthorized physical access to an active session on an unattended device, which is a specific vector for session takeover, but it does not directly mitigate logical session hijacking techniques such as session token theft, side-jacking, or XSS-",
+        "relevance": "ADJACENT",
+        "safeguard_id": "4.3"
+      }
+    ]
+  },
+  "sha256": "58544e3c8d10b48e6306c4fc3e1c1ac898042693655285b37505aa1e529756b3"
+}

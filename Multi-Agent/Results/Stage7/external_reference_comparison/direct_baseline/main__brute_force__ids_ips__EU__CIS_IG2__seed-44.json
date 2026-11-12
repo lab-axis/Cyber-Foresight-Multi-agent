@@ -1,0 +1,34 @@
+{
+  "identity": {
+    "arm": "single_direct_end_to_end",
+    "case_id": "main__brute_force__ids_ips",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "9cabf6597783fc2477a189c6e14c3fd1e8d250f998be0c7bd755f636a8eac8dd",
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "18e7e404cf766858cf448d8ce4555ada40d799456d13936b3970d594a5d69f90",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "745146f909ebc5a9a778ef176e3abf279f1cfd0e3ec4e61076fad47b2ac6be8f",
+    "seed": 44,
+    "source_hashes": {
+      "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+      "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+      "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+      "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+      "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+      "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+    },
+    "version": "reviewer2-external-reference-report-audit-v1"
+  },
+  "output": {
+    "recommendation": "RECOMMEND_PILOT",
+    "report": "A pilot of IDS/IPS is supportable for a CIS IG2 enterprise in the EU scenario because the forecast shows the brute-force threat state increasing and the threat-minus-PMT gap turning positive from 2026 through 2027, while at least one directly relevant case study demonstrates that IDS/IPS-style monitoring and blocking can be used against repeated authentication attacks [EVIDENCE:AE05S_CCD7CA4B2AE10DC9]. However, a full recommendation is not justified because ordinary IDS/IPS rules can be evaded by distributed low-rate brute-force patterns [EVIDENCE:AE05C_2D35A464AD6F0FAE], IDS is described as a warning or audit system rather than a silver bullet [EVIDENCE:DE_DE16_CEA1C38E613068F8], and the supplied corpus contains no EU-specific deployment evidence, numeric budget, ROI, TCO, staffing count, procurement ceiling, or confirmed current authentication controls. The CIS IG2 profile permits short service interruptions and identifies responsible infrastructure personnel, but it also warns that some safeguards may require enterprise-grade technology and specialized expertise [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. Therefore, IDS/IPS should be piloted in a bounded, monitoring-first manner and only expanded if detection value, false-positive burden, integration with existing controls, and operational capacity are demonstrated. Technical feasibility is supported by NIST guidance that robust IDPS solutions often combine network-based and host-based technologies and use SIEM-style correlation [EVIDENCE:DE_DE04_0B77B88875745973] [EVIDENCE:DE_DE04_0B017D64401987E4], and by the fact that IDS/IPS log forwarding to a remote security system is an established mitigation practice [EVIDENCE:E_12_D8076704AE363FE2]. Feasibility is challenged by the need for skills, training, update testing, and alert handling [EVIDENCE:DE_DE04_C6F46FCDE66BFAC7], by signature-versus-anomaly tradeoffs [EVIDENCE:DE_DE16_CEA1C38E613068F8], and by official brute-force guidance that prioritizes MFA, account lockout, unique credentials, and other authentication hardening [EVIDENCE:E_23_B21FAA9377991F05] [EVIDENCE:E_23_312B9513BCEE9B9D] [EVIDENCE:E_23_EBCAB9508641E703] [EVIDENCE:E_25_FE58E4FCF044EDE3]. Threat reports confirm that brute force and credential abuse remain relevant, but they do not prove that IDS/IPS will reduce risk in this specific enterprise [EVIDENCE:E_02_669F59880AF52688] [EVIDENCE:E_03_C54C5F099169E020] [EVIDENCE:E_03_F2B2EBA86BEEFDC5] [EVIDENCE:E_04_02D425B67E57F32D]. Publication records and trend data show IDS/IPS activity but do not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness [EVIDENCE:E_33_A707006877BFD1C2] [EVIDENCE:E_29_8E495DC2A98305B1] [EVIDENCE:E_29_BAD6581A8E96027C] [EVIDENCE:E_29_CA00E63DF08A6FC1]. Missing information includes existing IDS/IPS or SIEM inventory, network architecture, authentication endpoints, MFA coverage, OT/ICS constraints, staffing, log retention, false-positive tolerance, incident-response workflow, vendor integration, and any EU-specific regulatory or privacy constraints. The forecast has modest uncertainty, with 95% half-width z means of 0.1024 for threat and 0.1444 for PMT, but it is a directional state forecast, not an incident probability or an enterprise deployment outcome. Dissent favors HOLD if the enterprise cannot staff alerting, lacks SIEM/log capability, or cannot instrument authentication paths; DO_NOT_RECOMMEND would be supportable only if the dominant expected attack is low-rate distributed brute force and complementary authentication controls are absent [EVIDENCE:AE05C_2D35A464AD6F0FAE]. Conditions for proceeding with the pilot are: monitoring mode first on critical authentication paths; integration with alerting, account lockout, MFA, and unique-credential controls; SIEM or remote log forwarding; tested signature/update processes; defined scope, success metrics, and escalation paths; and confirmation of sufficient expertise before any broader blocking deployment [EVIDENCE:DE_DE04_C6F46FCDE66BFAC7] [EVIDENCE:DE_DE04_DB6B29C9BE1B0F05] [EVIDENCE:DE_DE07_86DF83870E0A768D] [EVIDENCE:E_23_B21FAA9377991F05]."
+  },
+  "sha256": "6ff1b7e32f4c98630004b62b7a6bbb225764c9d2f79fb8d4c096d056bfad06a1"
+}

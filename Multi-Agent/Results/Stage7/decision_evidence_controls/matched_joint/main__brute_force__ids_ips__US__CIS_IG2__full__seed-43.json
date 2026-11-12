@@ -1,0 +1,317 @@
+{
+  "identity": {
+    "case_id": "main__brute_force__ids_ips",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "15ffcaa9681e1436ab1b5e67fce3af90faed368f14dd46856ce344d6477db56a",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 43,
+    "shadow_object_sha256": "305b66846f343fec35145e45117454b945901cbf628e9a0651c70dc128c49884",
+    "source_hashes": {
+      "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+      "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+      "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+      "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+      "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+      "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA-SUPPORT-1",
+          "evidence_ids": [
+            "DE_DE07_86DF83870E0A768D"
+          ],
+          "scope": "GENERAL",
+          "statement": "Automated security monitoring can lower costs, enhance efficiency and reliability, and reduce repetitive analyst work, supporting financial feasibility of IDS/IPS operations.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA-SUPPORT-2",
+          "evidence_ids": [
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "Integrating IDS/IPS information into SIEM or related tooling can make collection, alert generation, and log review cheaper and easier.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA-SUPPORT-3",
+          "evidence_ids": [
+            "DE_DE04_DB6B29C9BE1B0F05"
+          ],
+          "scope": "GENERAL",
+          "statement": "Integrated IDPS management can streamline administrative work and speed alert prioritization, supporting operational efficiency benefits for IDS/IPS adoption.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA-CHALLENGE-1",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDPS implementation, tuning, testing, and maintenance require specialized administrative, security, network, and sometimes programming skills, creating a non-quantified adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA-CONTEXT-1",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4"
+          ],
+          "scope": "GENERAL",
+          "statement": "Before evaluating IDPS products, organizations must understand their environment and define requirements; exact budget, staffing, or cost quantities are not supplied.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+      "evidence_gaps": [
+        "Financial support is qualitative; no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is available to make a quantitative financial sufficiency determination."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Qualitative adoption-benefit evidence supports financial feasibility through automation, integration, and administrative streamlining. Adoption-burden evidence is present but non-quantified, and no numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied.",
+      "stance": 1
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR-CONTEXT-1",
+          "evidence_ids": [
+            "DE_DE07_E2C403C2FF05BA09"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST ISCM guidance frames continuous monitoring as an organizational governance capability, but it is general guidance and does not establish US CIS IG2-specific institutional feasibility for IDS/IPS.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "IR-CONTEXT-2",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile describes multi-department enterprise complexity and possible regulatory burdens, but it does not supply regulatory_applicability or compliance-specific evidence for this scenario.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "IR-CONTEXT-3",
+          "evidence_ids": [
+            "DE_DE16_CEA1C38E613068F8"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA ICS guidance frames IDS as a warning or audit capability within layered defense, indicating institutional layering expectations without establishing a US-specific compliance constraint or enablement.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+      "evidence_gaps": [
+        "No regulatory_applicability evidence is available for a deployment-specific institutional_regional feasibility claim.",
+        "No compliance_constraint evidence is available to support a negative institutional_regional feasibility claim."
+      ],
+      "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+      "lens_type": "institutional_regional",
+      "rationale": "General governance guidance frames IDS/IPS within monitoring and defense-in-depth governance, but no regulatory_applicability or compliance_constraint evidence is supplied for a deployment-specific US CIS IG2 institutional feasibility claim.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF-SUPPORT-1",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "A 2024 case study applies Snort and Fail2Ban IDS components to brute-force defense with alerting, showing IDS/IPS-style monitoring and blocking is implementable for repeated authentication attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF-CHALLENGE-1",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Distributed low-rate brute-force attacks using disciplined IPs can remain below per-host thresholds and evade ordinary IDS/IPS rules, limiting IDS/IPS as a standalone defense.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF-CONTEXT-1",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST IDPS guidance requires organizations to understand their environment, define requirements, and consider integration before product evaluation; this is deployment context rather than proof of enterprise-specific effectiveness.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+      "evidence_gaps": [
+        "No enterprise-specific technical deployment or effectiveness evidence for the US CIS IG2 reference enterprise is cited; the technical stance is based on general direct support and limitation."
+      ],
+      "evidence_sufficiency": "SUFFICIENT",
+      "lens_type": "technical_feasibility",
+      "rationale": "Direct general evidence supports IDS/IPS implementability for brute-force monitoring and blocking, while another direct general evidence item documents evasion of ordinary IDS/IPS rules by distributed low-rate brute-force patterns. The mixed direction is therefore evidenced rather than insufficient.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "The technical lens is mixed because direct implementability evidence and direct evasion-limitation evidence are both present. The institutional lens is context-insufficient for deployment-specific US CIS IG2 claims because required regulatory applicability and compliance evidence are absent. The financial lens leans supportive because qualitative adoption benefits outweigh non-quantified skill and maintenance burden, but quantitative financial sufficiency is not established.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA-SUPPORT-1",
+          "evidence_ids": [
+            "DE_DE07_86DF83870E0A768D"
+          ],
+          "scope": "GENERAL",
+          "statement": "Automated security monitoring can lower costs, enhance efficiency and reliability, and reduce repetitive analyst work, supporting financial feasibility of IDS/IPS operations.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA-SUPPORT-2",
+          "evidence_ids": [
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "Integrating IDS/IPS information into SIEM or related tooling can make collection, alert generation, and log review cheaper and easier.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA-SUPPORT-3",
+          "evidence_ids": [
+            "DE_DE04_DB6B29C9BE1B0F05"
+          ],
+          "scope": "GENERAL",
+          "statement": "Integrated IDPS management can streamline administrative work and speed alert prioritization, supporting operational efficiency benefits for IDS/IPS adoption.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA-CHALLENGE-1",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDPS implementation, tuning, testing, and maintenance require specialized administrative, security, network, and sometimes programming skills, creating a non-quantified adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA-CONTEXT-1",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4"
+          ],
+          "scope": "GENERAL",
+          "statement": "Before evaluating IDPS products, organizations must understand their environment and define requirements; exact budget, staffing, or cost quantities are not supplied.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "Financial support is qualitative; no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is available to make a quantitative financial sufficiency determination."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Qualitative adoption-benefit evidence supports financial feasibility through automation, integration, and administrative streamlining. Adoption-burden evidence is present but non-quantified, and no numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied.",
+      "stance": 1
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR-CONTEXT-1",
+          "evidence_ids": [
+            "DE_DE07_E2C403C2FF05BA09"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST ISCM guidance frames continuous monitoring as an organizational governance capability, but it is general guidance and does not establish US CIS IG2-specific institutional feasibility for IDS/IPS.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "IR-CONTEXT-2",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile describes multi-department enterprise complexity and possible regulatory burdens, but it does not supply regulatory_applicability or compliance-specific evidence for this scenario.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "IR-CONTEXT-3",
+          "evidence_ids": [
+            "DE_DE16_CEA1C38E613068F8"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA ICS guidance frames IDS as a warning or audit capability within layered defense, indicating institutional layering expectations without establishing a US-specific compliance constraint or enablement.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No regulatory_applicability evidence is available for a deployment-specific institutional_regional feasibility claim.",
+        "No compliance_constraint evidence is available to support a negative institutional_regional feasibility claim."
+      ],
+      "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+      "rationale": "General governance guidance frames IDS/IPS within monitoring and defense-in-depth governance, but no regulatory_applicability or compliance_constraint evidence is supplied for a deployment-specific US CIS IG2 institutional feasibility claim.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF-SUPPORT-1",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "A 2024 case study applies Snort and Fail2Ban IDS components to brute-force defense with alerting, showing IDS/IPS-style monitoring and blocking is implementable for repeated authentication attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF-CHALLENGE-1",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Distributed low-rate brute-force attacks using disciplined IPs can remain below per-host thresholds and evade ordinary IDS/IPS rules, limiting IDS/IPS as a standalone defense.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF-CONTEXT-1",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST IDPS guidance requires organizations to understand their environment, define requirements, and consider integration before product evaluation; this is deployment context rather than proof of enterprise-specific effectiveness.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No enterprise-specific technical deployment or effectiveness evidence for the US CIS IG2 reference enterprise is cited; the technical stance is based on general direct support and limitation."
+      ],
+      "evidence_sufficiency": "SUFFICIENT",
+      "rationale": "Direct general evidence supports IDS/IPS implementability for brute-force monitoring and blocking, while another direct general evidence item documents evasion of ordinary IDS/IPS rules by distributed low-rate brute-force patterns. The mixed direction is therefore evidenced rather than insufficient.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "490464d878c8612d1c412ec5973e159f785c3bd8d2af276e75b98a1c9060dab2",
+  "withheld_evidence_id": null
+}

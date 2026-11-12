@@ -1,0 +1,34 @@
+{
+  "identity": {
+    "arm": "single_direct_end_to_end",
+    "case_id": "main__ransomware__cryptography",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "6c90c62b407b84262449513c80d90eeabc8089c9d9052ad1cc556afb76fc4833",
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "18e7e404cf766858cf448d8ce4555ada40d799456d13936b3970d594a5d69f90",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "745146f909ebc5a9a778ef176e3abf279f1cfd0e3ec4e61076fad47b2ac6be8f",
+    "seed": 44,
+    "source_hashes": {
+      "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+      "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+      "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+      "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+      "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+      "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+    },
+    "version": "reviewer2-external-reference-report-audit-v1"
+  },
+  "output": {
+    "recommendation": "RECOMMEND_PILOT",
+    "report": "Candidate CRYPTOGRAPHY is supported as a qualified pilot, not as a full enterprise mandate. The evidence supports technical feasibility for targeted cryptographic safeguards and cryptographic analysis of ransomware, and it is institutionally applicable to a US CIS IG2 reference enterprise through NIST and CISA guidance. However, the evidence does not establish deployment-specific effectiveness, cost, staffing, or universal ransomware-prevention performance. The forecast shows a positive and widening threat-minus-PMT gap, indicating that the ransomware threat state remains materially above the cryptography PMT state, but the gap is expressed in z-score units and carries moderate uncertainty. A limited pilot is appropriate because it allows the organization to test approved algorithm usage, key-management traceability, TLS strengthening, and cryptographic ransomware analytics while preserving the ability to stop expansion if feasibility or operational constraints emerge. Key conditions include limiting the pilot to cryptography-specific actions, requiring traceable key access and auditability, assessing implementation against NIST assessment objectives, and avoiding claims of universal detection or enterprise-wide neutralization. A HOLD decision is a reasonable dissent because the candidate is broad, the strongest ransomware-specific evidence is specimen-based research, entropy evasion undermines some cryptography-related detection, and exact financial and staffing feasibility is unknown."
+  },
+  "sha256": "965ceb6b8320253ce406c65c0f2c14a142e117e38ee02c5e93772f8dc9252762"
+}

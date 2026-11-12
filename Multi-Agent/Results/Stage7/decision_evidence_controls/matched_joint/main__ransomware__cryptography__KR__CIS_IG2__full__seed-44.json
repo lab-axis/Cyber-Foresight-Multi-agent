@@ -1,0 +1,241 @@
+{
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "324f71a8042931deab0481e9d7f5d3b4446e26aa7def2ea9a4670dc439584dff",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 44,
+    "shadow_object_sha256": "1b5aca6ee1bc39efebb3f452de311d62e113707591e2f0fb010b86e92c933504",
+    "source_hashes": {
+      "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+      "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+      "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+      "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+      "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+      "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "GENERAL adoption benefit exists for cryptographic deployment because decision guidance describes TLS-based authentication and key exchange controls as well as IPsec-based confidentiality, integrity, and key-negotiation practices.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "GENERAL adoption burden exists because guidance frames encryption deployment as subject to technical feasibility, OT latency and availability constraints, and the need to identify, update, or manage outdated or weak encryption and post-quantum implications.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial adoption feasibility cannot be numerically bounded from the supplied evidence."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "evidence_gaps": [
+        "No supplied numeric budget, price, ROI, TCO, staffing count, procurement ceiling, or adoption cost evidence is available for the KR CIS IG2 context."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "GENERAL financial adoption evidence contains both adoption benefit and adoption burden signals. NIST TLS and IPsec guidance supplies adoption-benefit rationale for cryptographic deployment, while CISA CPG guidance identifies operational adoption burdens such as feasibility constraints, latency or availability considerations, and the need to identify and update weak encryption. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "GENERAL governance enablement exists for cryptographic key accountability and traceability, as well as for recommended practices around proper TLS configuration, replacement of outdated or weak encryption, and consideration of post-quantum implications.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "GENERAL compliance constraint exists because cryptographic transition guidance disallows or deprecates certain symmetric algorithms and requires management of legacy cryptographic configurations.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "A DEPLOYMENT_SPECIFIC institutional direction would require additional regulatory_applicability evidence; none is supplied."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "evidence_gaps": [
+        "No supplied regulatory_applicability evidence establishes that the relevant institutional governance or compliance constraints are applicable to the Republic of Korea deployment context."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "GENERAL institutional evidence contains both governance enablement and a compliance constraint. NIST key-management guidance and CISA encryption guidance support governance enablement, while NIST cryptographic transition guidance imposes algorithm constraints. No supplied regulatory_applicability evidence supports a DEPLOYMENT_SPECIFIC institutional direction for the Republic of Korea, so the lens is assessed at the GENERAL level and remains mixed.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "GENERAL technical enablement exists for cryptographic-primitive analysis applied to ransomware, including cipher identification and cryptographic key or state extraction from execution traces to support ransomware neutralization and reverse engineering.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "GENERAL technical limitation exists for cryptography-related detection because ransomware can alter observable entropy patterns to evade entropy-based detectors, and related approaches are not universally robust and may impose nontrivial computational cost.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Deployment-specific success remains unestablished absent additional evidence tied to the specific reference enterprise, product, version, or architecture."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "evidence_gaps": [
+        "No supplied evidence establishes enterprise-specific technical integration, performance, or operational validation for CRYPTOGRAPHY in the KR CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "GENERAL technical evidence contains both an enablement signal and a limitation signal. The enablement evidence is direct to cryptographic analysis of ransomware, while the limitation evidence is direct to cryptography-related detection robustness and cost. Because both directions are eligible and material, the lens is mixed rather than purely supportive or purely challenging.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "All three lenses show GENERAL-level support and GENERAL-level challenge. The support signals do not establish product, version, or enterprise-specific success, and the challenge signals do not automatically defeat the support signals. The KR CIS IG2 deployment context remains visible through unmet technical integration, regional regulatory applicability, and financial-quantity gaps.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "GENERAL adoption benefit exists for cryptographic deployment because decision guidance describes TLS-based authentication and key exchange controls as well as IPsec-based confidentiality, integrity, and key-negotiation practices.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "GENERAL adoption burden exists because guidance frames encryption deployment as subject to technical feasibility, OT latency and availability constraints, and the need to identify, update, or manage outdated or weak encryption and post-quantum implications.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial adoption feasibility cannot be numerically bounded from the supplied evidence."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied numeric budget, price, ROI, TCO, staffing count, procurement ceiling, or adoption cost evidence is available for the KR CIS IG2 context."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "GENERAL financial adoption evidence contains both adoption benefit and adoption burden signals. NIST TLS and IPsec guidance supplies adoption-benefit rationale for cryptographic deployment, while CISA CPG guidance identifies operational adoption burdens such as feasibility constraints, latency or availability considerations, and the need to identify and update weak encryption. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "GENERAL governance enablement exists for cryptographic key accountability and traceability, as well as for recommended practices around proper TLS configuration, replacement of outdated or weak encryption, and consideration of post-quantum implications.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "GENERAL compliance constraint exists because cryptographic transition guidance disallows or deprecates certain symmetric algorithms and requires management of legacy cryptographic configurations.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "A DEPLOYMENT_SPECIFIC institutional direction would require additional regulatory_applicability evidence; none is supplied."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied regulatory_applicability evidence establishes that the relevant institutional governance or compliance constraints are applicable to the Republic of Korea deployment context."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "GENERAL institutional evidence contains both governance enablement and a compliance constraint. NIST key-management guidance and CISA encryption guidance support governance enablement, while NIST cryptographic transition guidance imposes algorithm constraints. No supplied regulatory_applicability evidence supports a DEPLOYMENT_SPECIFIC institutional direction for the Republic of Korea, so the lens is assessed at the GENERAL level and remains mixed.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "GENERAL technical enablement exists for cryptographic-primitive analysis applied to ransomware, including cipher identification and cryptographic key or state extraction from execution traces to support ransomware neutralization and reverse engineering.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "GENERAL technical limitation exists for cryptography-related detection because ransomware can alter observable entropy patterns to evade entropy-based detectors, and related approaches are not universally robust and may impose nontrivial computational cost.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Deployment-specific success remains unestablished absent additional evidence tied to the specific reference enterprise, product, version, or architecture."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence establishes enterprise-specific technical integration, performance, or operational validation for CRYPTOGRAPHY in the KR CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "GENERAL technical evidence contains both an enablement signal and a limitation signal. The enablement evidence is direct to cryptographic analysis of ransomware, while the limitation evidence is direct to cryptography-related detection robustness and cost. Because both directions are eligible and material, the lens is mixed rather than purely supportive or purely challenging.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "1c7132a65a9a4a1acbe6d1e78b471967b422261a361f37f971df6e5c51f92225",
+  "withheld_evidence_id": null
+}

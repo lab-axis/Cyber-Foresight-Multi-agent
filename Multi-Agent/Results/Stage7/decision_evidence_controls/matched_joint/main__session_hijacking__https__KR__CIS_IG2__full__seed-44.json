@@ -1,0 +1,255 @@
+{
+  "identity": {
+    "case_id": "main__session_hijacking__https",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "4145af4fea3aba1731e24c2857189c6b4f19423a1489258606b19af1dae1b6a5",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 44,
+    "shadow_object_sha256": "5dbb9f26e36b61b3edb101d77431b372eb4b87a0e15dfa984090a6ec3f536752",
+    "source_hashes": {
+      "stage1": "5b8473203535452075465098dd80d84de51fa302487b5d5c4f382f0f74f6b2d1",
+      "stage2": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+      "stage3_context": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+      "stage4_context": "d1853be1e80bea8b4894668ef60ba1d5b4f878e2f8334340759ec658b9685c3d",
+      "stage5": "31865f18b575039e9744f107701fda16da6862860b705e5c4e2439a55372649d",
+      "stage6": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS/HTTPS-related guidance identifies adoption benefits, including support for certificate-based client authentication and protection of sensitive credentials and personal data in transit.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "DE_DE14_EDCA207577B4607A"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL/HTTPS deployment guidance identifies adoption burden factors, including session-establishment considerations, encapsulation and fragmentation effects, and possible need for testing, MTU adjustment, or capacity-related changes.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_GENERAL",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 reference profile describes a multi-department enterprise with IT management responsibilities and possible regulatory burdens, but it does not supply numeric budget, TCO, ROI, staffing count, or procurement ceiling information.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial adoption evidence is qualitatively mixed. The supplied evidence identifies adoption benefits and adoption burdens, but no numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied; the residual CIS IG2 resource context therefore supports a partial, not sufficient, financial feasibility assessment.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "DE_DE14_575D613F0598EF5E",
+            "DE_DE18_20A979A3238D1DE6"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST SSL VPN and DHS control-systems encryption guidance provide governance practices for SSL/TLS deployment, lifecycle management, monitoring, upgrading, and certificate renewal, supporting institutional enablement for HTTPS-related controls.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5",
+            "DE_DE10_4BE87A62A6676C99"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST session-management and TLS implementation guidance impose standards-derived constraints, including secure-channel and cookie requirements for authenticated sessions and TLS protocol implementation requirements.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CONTEXT_GENERAL",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 reference profile describes an enterprise with personnel responsible for managing IT infrastructure across multiple departments, possible regulatory burdens, and safeguards that may require enterprise-grade technology and specialized expertise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Institutional evidence is mixed at GENERAL scope. NIST and DHS guidance provides governance-enablement material for SSL/TLS deployment, lifecycle management, certificate renewal, and encryption configuration. At the same time, NIST session-management and TLS implementation guidance impose standards-derived configuration constraints, such as secure-channel requirements and TLS protocol requirements. No KR-specific regulatory_applicability evidence is supplied, so a DEPLOYMENT_SPECIFIC institutional claim is not supported.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "AE07S_C1EF15B9628497F0"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS/TLS is supported as an important transport-layer countermeasure against interception-oriented session hijacking within a broader session-protection strategy.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS alone cannot cover all session-hijacking paths because session tokens may still be stolen through XSS or malicious browser extensions after a secure transport channel exists.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Technical evidence is directionally mixed. AE07S supports HTTPS/TLS as an important transport-layer control against interception-oriented session hijacking, but AE07C limits standalone HTTPS by noting that session tokens can still be stolen through XSS or malicious browser extensions. The candidate action is therefore technically feasible as a session-protection control, yet it has an unmet complement condition and does not by itself cover all session-hijacking paths.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "All three lenses were assessed jointly using only supplied evaluation evidence and the directional grounding contract. No recommendation class, final decision label, invented budget, invented legal obligation, or product/version-specific deployment success was asserted.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS/HTTPS-related guidance identifies adoption benefits, including support for certificate-based client authentication and protection of sensitive credentials and personal data in transit.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "DE_DE14_EDCA207577B4607A"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL/HTTPS deployment guidance identifies adoption burden factors, including session-establishment considerations, encapsulation and fragmentation effects, and possible need for testing, MTU adjustment, or capacity-related changes.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_GENERAL",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 reference profile describes a multi-department enterprise with IT management responsibilities and possible regulatory burdens, but it does not supply numeric budget, TCO, ROI, staffing count, or procurement ceiling information.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial adoption evidence is qualitatively mixed. The supplied evidence identifies adoption benefits and adoption burdens, but no numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied; the residual CIS IG2 resource context therefore supports a partial, not sufficient, financial feasibility assessment.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "DE_DE14_575D613F0598EF5E",
+            "DE_DE18_20A979A3238D1DE6"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST SSL VPN and DHS control-systems encryption guidance provide governance practices for SSL/TLS deployment, lifecycle management, monitoring, upgrading, and certificate renewal, supporting institutional enablement for HTTPS-related controls.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5",
+            "DE_DE10_4BE87A62A6676C99"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST session-management and TLS implementation guidance impose standards-derived constraints, including secure-channel and cookie requirements for authenticated sessions and TLS protocol implementation requirements.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CONTEXT_GENERAL",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 reference profile describes an enterprise with personnel responsible for managing IT infrastructure across multiple departments, possible regulatory burdens, and safeguards that may require enterprise-grade technology and specialized expertise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Institutional evidence is mixed at GENERAL scope. NIST and DHS guidance provides governance-enablement material for SSL/TLS deployment, lifecycle management, certificate renewal, and encryption configuration. At the same time, NIST session-management and TLS implementation guidance impose standards-derived configuration constraints, such as secure-channel requirements and TLS protocol requirements. No KR-specific regulatory_applicability evidence is supplied, so a DEPLOYMENT_SPECIFIC institutional claim is not supported.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "AE07S_C1EF15B9628497F0"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS/TLS is supported as an important transport-layer countermeasure against interception-oriented session hijacking within a broader session-protection strategy.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS alone cannot cover all session-hijacking paths because session tokens may still be stolen through XSS or malicious browser extensions after a secure transport channel exists.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Technical evidence is directionally mixed. AE07S supports HTTPS/TLS as an important transport-layer control against interception-oriented session hijacking, but AE07C limits standalone HTTPS by noting that session tokens can still be stolen through XSS or malicious browser extensions. The candidate action is therefore technically feasible as a session-protection control, yet it has an unmet complement condition and does not by itself cover all session-hijacking paths.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "514f293f51e4c93e63ae3cd2aad9dc196a6aab8a7824b37c073faf66f23df9b6",
+  "withheld_evidence_id": null
+}

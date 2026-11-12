@@ -1,0 +1,311 @@
+{
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "886c720e113dbb6643ae6d3698cdeb08a323c4c753f984329bc29fd71847a2b1",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "e8abf4c16de54a5be479b3bec2a616c8afb9c0c1253ed50de35f6f40455b892a",
+    "source_hashes": {
+      "stage1": "048aa9e6dd139b26dd32450ec0fda405bb883a62497ed108691cf7e840b16872",
+      "stage2": "3ddd4def226a25d78c6243f4382fb30d384b7793f7191e62a95b79e660f11d06",
+      "stage3_context": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+      "stage4_context": "903f67ef37fb5c791e24edf9e95e89eab3871357daaf710dbd35a12093a6e9d9",
+      "stage5": "21782b723a9d2a4314a244c1d347b57acf3ce4923dab23db75a071d0d7ee8b79",
+      "stage6": "37b347c8a4f93dbe5bae0f66037abd59c4c085642673b2cc7f66fc31c0c1fbd9"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "fin_support_tls_ipsec_benefit",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST TLS guidance and DHS encryption guidance frame cryptographic controls as providing security properties such as authentication, integrity, confidentiality, or protection of sensitive data in transit, which is a non-financial adoption benefit.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_challenge_configuration_burden",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG guidance makes effective encryption contingent on proper configuration, current strong algorithms, updating weak encryption, considering post-quantum implications, and respecting feasibility constraints such as OT latency and availability.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_context_tls_capability",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276"
+          ],
+          "scope": "GENERAL",
+          "statement": "DHS TLS/SSL guidance describes the protocol as providing confidentiality, integrity, and authentication through encryption, but it does not quantify adoption cost, savings, or financial return.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial quantities must be supplied before a positive or negative financial-adoption conclusion can be grounded.",
+        "Operational effort for configuration, weak-crypto remediation, key management, and post-quantum planning must be considered.",
+        "Resource capacity beyond the CIS IG2 profile is unspecified and remains an unmet deployment condition."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is cited.",
+        "No observed adoption outcome or cost-saving result for cryptography in the reference enterprise is present."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Eligible evidence provides non-financial adoption benefits from cryptographic controls and also identifies operational adoption burdens. However, no numeric budget, price, ROI, TCO, staffing count, procurement ceiling, or observed adoption outcome is present, so the financial-adoption lens is mixed and partial rather than decisively favorable or unfavorable.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "inst_support_key_management",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance enables governance through role definitions, accountability, traceability of key access, and audit logs, which can reduce the impact of key compromise and support organized cryptographic control.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_challenge_algorithm_transition",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST algorithm-transition guidance imposes compliance constraints by disallowing or deprecating certain cryptographic algorithms, restricting legacy use, and requiring organizations to manage acceptable cryptographic choices.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_context_ig2_profile",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 profile describes a multi-department enterprise that may face regulatory burdens and may require enterprise-grade technology and specialized expertise, but it does not supply KR-specific regulatory applicability for cryptography.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "KR legal or regulatory applicability must be evidenced before deployment-specific institutional feasibility can be supported or challenged.",
+        "Organization-defined cryptography, key-management policy, audit, and algorithm-transition compliance must be evidenced.",
+        "Regulatory burdens implied by the CIS IG2 profile remain unmet unless jurisdiction-specific evidence is supplied."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f",
+      "evidence_gaps": [
+        "No KR-specific regulatory_applicability evidence is present, so DEPLOYMENT_SPECIFIC institutional support or challenge cannot be claimed.",
+        "No cited evidence establishes observed governance outcomes in the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General institutional evidence supports governance enablement through key-management accountability and also identifies compliance constraints from algorithm-transition guidance. However, the evidence does not establish KR-specific regulatory applicability, so a deployment-specific institutional direction is not supported.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "tech_support_securecipher",
+          "evidence_ids": [
+            "AE04S_2674461DBC059388"
+          ],
+          "scope": "GENERAL",
+          "statement": "A purpose-built cryptographic system for insider-threat data leakage was prototyped and reported to pass most of the NIST randomness tests cited, providing direct technical-enablement evidence that cryptography can be engineered for part of this threat model.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_limitation_insider_access",
+          "evidence_ids": [
+            "AE04C_F084D028D8E2AE06"
+          ],
+          "scope": "GENERAL",
+          "statement": "Insider-threat settings can give authorized attackers stronger capabilities, including known- or chosen-plaintext style attack opportunities, so conventional encryption is not automatically sufficient and effectiveness depends on the cryptographic design and insider-access model.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_context_cpg_encryption",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG guidance frames effective encryption and TLS as a recommended action with scope, feasibility, and weak-algorithm-update conditions, but it is contextual deployment-maturity evidence and does not by itself prove insider-threat mitigation effectiveness.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Cryptographic design must match the insider-access model and threat assumptions.",
+        "Key management, traceability, access control, and operational validation must be addressed.",
+        "Enterprise-grade configuration and maintenance assumptions must be evidenced before deployment-specific support can be asserted."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f",
+      "evidence_gaps": [
+        "No cited evidence demonstrates enterprise-scale deployment, integration, validation, or sustained effectiveness in a CIS IG2 KR reference environment.",
+        "The positive technical evidence is prototype-level and does not establish product-version or enterprise-specific success."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Eligible evidence contains both a direct technical-enabling observation and a direct technical-limitation observation for insider-threat cryptography. The support is prototype-level and does not establish enterprise-scale deployment in the CIS IG2 KR reference scenario, so the lens is mixed rather than decisively supportive or challenging.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "All three lenses are assessed jointly. The technical lens is mixed because direct insider-threat cryptography enablement is offset by design-dependence limitations. The institutional-regional lens is mixed at the GENERAL scope but lacks KR-specific regulatory_applicability for DEPLOYMENT_SPECIFIC claims. The financial-adoption lens is mixed because adoption benefits and burdens are both present, while quantitative financial evidence is absent.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "fin_support_tls_ipsec_benefit",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST TLS guidance and DHS encryption guidance frame cryptographic controls as providing security properties such as authentication, integrity, confidentiality, or protection of sensitive data in transit, which is a non-financial adoption benefit.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_challenge_configuration_burden",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG guidance makes effective encryption contingent on proper configuration, current strong algorithms, updating weak encryption, considering post-quantum implications, and respecting feasibility constraints such as OT latency and availability.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_context_tls_capability",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276"
+          ],
+          "scope": "GENERAL",
+          "statement": "DHS TLS/SSL guidance describes the protocol as providing confidentiality, integrity, and authentication through encryption, but it does not quantify adoption cost, savings, or financial return.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial quantities must be supplied before a positive or negative financial-adoption conclusion can be grounded.",
+        "Operational effort for configuration, weak-crypto remediation, key management, and post-quantum planning must be considered.",
+        "Resource capacity beyond the CIS IG2 profile is unspecified and remains an unmet deployment condition."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is cited.",
+        "No observed adoption outcome or cost-saving result for cryptography in the reference enterprise is present."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Eligible evidence provides non-financial adoption benefits from cryptographic controls and also identifies operational adoption burdens. However, no numeric budget, price, ROI, TCO, staffing count, procurement ceiling, or observed adoption outcome is present, so the financial-adoption lens is mixed and partial rather than decisively favorable or unfavorable.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "inst_support_key_management",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance enables governance through role definitions, accountability, traceability of key access, and audit logs, which can reduce the impact of key compromise and support organized cryptographic control.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_challenge_algorithm_transition",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST algorithm-transition guidance imposes compliance constraints by disallowing or deprecating certain cryptographic algorithms, restricting legacy use, and requiring organizations to manage acceptable cryptographic choices.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_context_ig2_profile",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 profile describes a multi-department enterprise that may face regulatory burdens and may require enterprise-grade technology and specialized expertise, but it does not supply KR-specific regulatory applicability for cryptography.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "KR legal or regulatory applicability must be evidenced before deployment-specific institutional feasibility can be supported or challenged.",
+        "Organization-defined cryptography, key-management policy, audit, and algorithm-transition compliance must be evidenced.",
+        "Regulatory burdens implied by the CIS IG2 profile remain unmet unless jurisdiction-specific evidence is supplied."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No KR-specific regulatory_applicability evidence is present, so DEPLOYMENT_SPECIFIC institutional support or challenge cannot be claimed.",
+        "No cited evidence establishes observed governance outcomes in the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General institutional evidence supports governance enablement through key-management accountability and also identifies compliance constraints from algorithm-transition guidance. However, the evidence does not establish KR-specific regulatory applicability, so a deployment-specific institutional direction is not supported.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "tech_support_securecipher",
+          "evidence_ids": [
+            "AE04S_2674461DBC059388"
+          ],
+          "scope": "GENERAL",
+          "statement": "A purpose-built cryptographic system for insider-threat data leakage was prototyped and reported to pass most of the NIST randomness tests cited, providing direct technical-enablement evidence that cryptography can be engineered for part of this threat model.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_limitation_insider_access",
+          "evidence_ids": [
+            "AE04C_F084D028D8E2AE06"
+          ],
+          "scope": "GENERAL",
+          "statement": "Insider-threat settings can give authorized attackers stronger capabilities, including known- or chosen-plaintext style attack opportunities, so conventional encryption is not automatically sufficient and effectiveness depends on the cryptographic design and insider-access model.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_context_cpg_encryption",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG guidance frames effective encryption and TLS as a recommended action with scope, feasibility, and weak-algorithm-update conditions, but it is contextual deployment-maturity evidence and does not by itself prove insider-threat mitigation effectiveness.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Cryptographic design must match the insider-access model and threat assumptions.",
+        "Key management, traceability, access control, and operational validation must be addressed.",
+        "Enterprise-grade configuration and maintenance assumptions must be evidenced before deployment-specific support can be asserted."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No cited evidence demonstrates enterprise-scale deployment, integration, validation, or sustained effectiveness in a CIS IG2 KR reference environment.",
+        "The positive technical evidence is prototype-level and does not establish product-version or enterprise-specific success."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Eligible evidence contains both a direct technical-enabling observation and a direct technical-limitation observation for insider-threat cryptography. The support is prototype-level and does not establish enterprise-scale deployment in the CIS IG2 KR reference scenario, so the lens is mixed rather than decisively supportive or challenging.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "237a4562d244d544ed1d324039b103ccfd4b6bf6f89756037bc9e449f412ca46",
+  "withheld_evidence_id": null
+}

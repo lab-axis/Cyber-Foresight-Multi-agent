@@ -1,0 +1,221 @@
+{
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "without_technical_enablement",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "34b6215fd01e947988c12afa93cb2b24dad8acd3f7648ba464177cab99bd1d51",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "550a861b02456c7789dc39db9c285473f5aa17064ec07285b5c09e855342ff10",
+    "source_hashes": {
+      "stage1": "304807a460c79b97a7c155ac0f3a11e974386cf0363fc072fef87238f7525724",
+      "stage2": "e32d514b41e64ac386fed97a222cbc7fd92d7328e840ea7c0bd6ce0bf758352d",
+      "stage3_context": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+      "stage4_context": "b197de3415acc19c31e3f821ed025c29e9bf15b3b293e7c0ad5f6b35b1ef2cee",
+      "stage5": "f33b3c4296fd820cb26a9525899ee8fc2a36c30f0775e3ce10ae5de1aa804127",
+      "stage6": "ec942bd1085a56ecfa8a3e7863ae3ce4b7791dc5e1d96dd1f7a878f67d61e958"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_CHALLENGE_ADOPTION_BURDEN",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA",
+            "DE_DE12_CBF6FBB1313D37AF",
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "Adoption of ACCESS CONTROL carries material financial and adoption-burden risks, including cost overruns, transition costs, provider dependence, long implementation timelines, and potential business disruption.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_SUPPORT_ADOPTION_BENEFIT_WEAK",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "A qualitative long-term adoption benefit is noted, but it is not sufficient to overcome the direct adoption-burden evidence because no numeric financial context is supplied.",
+          "status": "SUPPORTS_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is available.",
+        "No enterprise-specific financial baseline or resource-capacity measurement is supplied beyond the CIS IG2 reference profile."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "The financial adoption lens is challenged at the GENERAL scope by adoption_burden evidence. DE_DE11_1ECA9795EEF89DFA states that ABAC development, deployment, maintenance, and retrofitting costs may exceed benefits and that ABAC is not the right solution for every access-control problem. DE_DE12_CBF6FBB1313D37AF describes zero-trust/access-control provider dependence, migration or switching costs, long transition programs, and disruption risk to core business functions. DE_DE17_429D17A4E11A72C3 states that the path to zero trust may take years and that initial implementation often leads to additional costs. The same source also contains a qualitative adoption_benefit statement about more prudent long-term security investment allocation, but it does not supply numeric budget, TCO, ROI, payback, staffing, or procurement-ceiling evidence. Therefore, the direct adoption burdens are not overcome. Sufficiency is PARTIAL because the financial evidence is qualitative and lacks enterprise-specific financial quantities.",
+      "stance": -1
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_GENERAL_GOVERNANCE",
+          "evidence_ids": [
+            "DE_DE11_1E4AAE06CC3795D7",
+            "DE_DE12_E6F93E4AB8722379",
+            "DE_DE17_567DDA7CFBC62829"
+          ],
+          "scope": "GENERAL",
+          "statement": "General governance_enablement evidence supports institutional feasibility for operating access-control policy, attribute governance, policy enforcement, and monitoring in an enterprise setting.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_GENERAL_COMPLIANCE",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "Session, cookie, and access-token requirements create implementation constraints on access-control deployment, but they do not outweigh the general governance_enablement evidence.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "evidence_gaps": [
+        "No KR-specific regulatory_applicability evidence is supplied, so a DEPLOYMENT_SPECIFIC institutional direction is not claimed.",
+        "The support is GENERAL and does not establish enterprise-specific or product-specific success."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "The institutional lens is supported at the GENERAL scope by governance_enablement evidence. DE_DE11_1E4AAE06CC3795D7 describes enterprise policy alignment, attribute governance, and access-failure procedures for ABAC-style access control. DE_DE12_E6F93E4AB8722379 describes zero-trust governance elements, including policy engines, enforcement points, and data sources used in access decisions. DE_DE17_567DDA7CFBC62829 describes zero-trust governance, monitoring, and policy enforcement as part of a maturity model. The eligible compliance_constraint source DE_DE13_055FC5E35FA61DD5 imposes session, cookie, and access-token requirements, which create implementation constraints, but it is less directly an institutional barrier than the multi-source governance_enablement evidence. No DEPLOYMENT_SPECIFIC institutional claim is made because no KR-specific regulatory_applicability evidence is supplied. Sufficiency is PARTIAL because the support is GENERAL and lacks jurisdiction-specific regulatory applicability.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_CHALLENGE_AE06C",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "ACCESS CONTROL is technically challenged for Targeted Attack if treated as a static control category because effective access control requires continuously updated threat/risk context.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "evidence_gaps": [
+        "No eligible technical_enablement evidence is available to establish a positive GENERAL technical feasibility claim for ACCESS CONTROL.",
+        "No evidence establishes that the required continuously updated threat/risk context is present in the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "The technical lens is challenged at the GENERAL scope. AE06C_8C41709C0D8EE834 states that static perimeter or static access-control assumptions are insufficient for evolving APT behavior and that effective access control depends on continuously updated threat/risk context rather than the control category alone. This creates an unmet deployment condition: ACCESS CONTROL against Targeted Attack is not supported as a standalone static control unless dynamic threat/risk context is continuously available. No eligible technical_enablement evidence is present in the grounding contract, so no positive technical feasibility claim is made. Sufficiency is PARTIAL because the challenge is direct and applicable but is conditional and single-sourced.",
+      "stance": -1
+    }
+  },
+  "raw": {
+    "analysis_note": "The technical lens shows a partial challenge because effective access control against targeted attack requires dynamic threat/risk context. The institutional lens shows partial GENERAL support because governance_enablement sources are direct and multi-source, but KR-specific regulatory applicability is absent. The financial lens shows a partial challenge because adoption-burden evidence is direct and multi-source, while the available adoption benefit is qualitative and unsupported by numeric financial data. These are lens-level feasibility signals only and do not select or recommend a final action class.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_CHALLENGE_ADOPTION_BURDEN",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA",
+            "DE_DE12_CBF6FBB1313D37AF",
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "Adoption of ACCESS CONTROL carries material financial and adoption-burden risks, including cost overruns, transition costs, provider dependence, long implementation timelines, and potential business disruption.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_SUPPORT_ADOPTION_BENEFIT_WEAK",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "A qualitative long-term adoption benefit is noted, but it is not sufficient to overcome the direct adoption-burden evidence because no numeric financial context is supplied.",
+          "status": "SUPPORTS_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is available.",
+        "No enterprise-specific financial baseline or resource-capacity measurement is supplied beyond the CIS IG2 reference profile."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The financial adoption lens is challenged at the GENERAL scope by adoption_burden evidence. DE_DE11_1ECA9795EEF89DFA states that ABAC development, deployment, maintenance, and retrofitting costs may exceed benefits and that ABAC is not the right solution for every access-control problem. DE_DE12_CBF6FBB1313D37AF describes zero-trust/access-control provider dependence, migration or switching costs, long transition programs, and disruption risk to core business functions. DE_DE17_429D17A4E11A72C3 states that the path to zero trust may take years and that initial implementation often leads to additional costs. The same source also contains a qualitative adoption_benefit statement about more prudent long-term security investment allocation, but it does not supply numeric budget, TCO, ROI, payback, staffing, or procurement-ceiling evidence. Therefore, the direct adoption burdens are not overcome. Sufficiency is PARTIAL because the financial evidence is qualitative and lacks enterprise-specific financial quantities.",
+      "stance": -1
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_GENERAL_GOVERNANCE",
+          "evidence_ids": [
+            "DE_DE11_1E4AAE06CC3795D7",
+            "DE_DE12_E6F93E4AB8722379",
+            "DE_DE17_567DDA7CFBC62829"
+          ],
+          "scope": "GENERAL",
+          "statement": "General governance_enablement evidence supports institutional feasibility for operating access-control policy, attribute governance, policy enforcement, and monitoring in an enterprise setting.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_GENERAL_COMPLIANCE",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "Session, cookie, and access-token requirements create implementation constraints on access-control deployment, but they do not outweigh the general governance_enablement evidence.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No KR-specific regulatory_applicability evidence is supplied, so a DEPLOYMENT_SPECIFIC institutional direction is not claimed.",
+        "The support is GENERAL and does not establish enterprise-specific or product-specific success."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The institutional lens is supported at the GENERAL scope by governance_enablement evidence. DE_DE11_1E4AAE06CC3795D7 describes enterprise policy alignment, attribute governance, and access-failure procedures for ABAC-style access control. DE_DE12_E6F93E4AB8722379 describes zero-trust governance elements, including policy engines, enforcement points, and data sources used in access decisions. DE_DE17_567DDA7CFBC62829 describes zero-trust governance, monitoring, and policy enforcement as part of a maturity model. The eligible compliance_constraint source DE_DE13_055FC5E35FA61DD5 imposes session, cookie, and access-token requirements, which create implementation constraints, but it is less directly an institutional barrier than the multi-source governance_enablement evidence. No DEPLOYMENT_SPECIFIC institutional claim is made because no KR-specific regulatory_applicability evidence is supplied. Sufficiency is PARTIAL because the support is GENERAL and lacks jurisdiction-specific regulatory applicability.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_CHALLENGE_AE06C",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "ACCESS CONTROL is technically challenged for Targeted Attack if treated as a static control category because effective access control requires continuously updated threat/risk context.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No eligible technical_enablement evidence is available to establish a positive GENERAL technical feasibility claim for ACCESS CONTROL.",
+        "No evidence establishes that the required continuously updated threat/risk context is present in the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The technical lens is challenged at the GENERAL scope. AE06C_8C41709C0D8EE834 states that static perimeter or static access-control assumptions are insufficient for evolving APT behavior and that effective access control depends on continuously updated threat/risk context rather than the control category alone. This creates an unmet deployment condition: ACCESS CONTROL against Targeted Attack is not supported as a standalone static control unless dynamic threat/risk context is continuously available. No eligible technical_enablement evidence is present in the grounding contract, so no positive technical feasibility claim is made. Sufficiency is PARTIAL because the challenge is direct and applicable but is conditional and single-sourced.",
+      "stance": -1
+    }
+  },
+  "recommendation": "DO_NOT_RECOMMEND",
+  "sha256": "720c42cb8f220339e6c95d16ecedfb882212f92f392ffee6daf107a0cb372043",
+  "withheld_evidence_id": "AE06S_407DDF87C86BB41B"
+}

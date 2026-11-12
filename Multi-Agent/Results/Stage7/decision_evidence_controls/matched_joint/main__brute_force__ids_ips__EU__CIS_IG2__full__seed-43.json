@@ -1,0 +1,217 @@
+{
+  "identity": {
+    "case_id": "main__brute_force__ids_ips",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "ca14f085abbdb1b2581ee8458e123a9ec2b13292b87bf471c49cb8ef52b0093d",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 43,
+    "shadow_object_sha256": "3d293d6423b97fc13771ceb2589101a7b893b5262ab9176fba7cc04416cc7f3a",
+    "source_hashes": {
+      "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+      "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+      "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+      "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+      "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+      "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORTS_1",
+          "evidence_ids": [
+            "DE_DE04_DB6B29C9BE1B0F05"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST IDPS guidance states that integrated IDPS deployment can provide significant time savings to administrators and users by streamlining management and improving analysis and alert prioritization.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_SUPPORTS_2",
+          "evidence_ids": [
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST ISCM and CISA/ICS-CERT guidance document that automation and SIEM integration of IDS/IPS can lower monitoring costs, improve efficiency, and make review of security data cheaper and easier.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGES_1",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST IDPS guidance identifies implementation, tuning, operation, maintenance, and training requirements, including specialized administrative, network, security, and programming skills, as an adoption burden for IDPS deployment.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial adoption evidence supports feasibility qualitatively through documented time savings, efficiency gains, and cheaper monitoring review associated with IDPS and SIEM integration. A direct adoption_burden record identifies required skills, tuning, maintenance, and training, but no numeric budget, TCO, ROI, or staffing quantity is supplied. The benefit evidence is more directly relevant to financial adoption than the unquantified burden evidence, so the lens supports feasibility partially.",
+      "stance": 1
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORTS_1",
+          "evidence_ids": [
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE04_0B77B88875745973"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST ISCM guidance treats organization-wide continuous monitoring as support for Tier 1 governance risk decisions, and NIST IDPS guidance prescribes administrative safeguards, component security, and multi-technology selection for IDPS deployment, supporting governance-level embedding of IDS/IPS.",
+          "status": "SUPPORTS_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General institutional support is present: NIST ISCM and NIST IDPS guidance position IDS/IPS within organization-wide continuous monitoring, governance, administrative safeguards, and control evaluation. No EU-specific regulatory_applicability evidence is supplied, so deployment-specific EU institutional feasibility is not established, but GENERAL governance_enablement evidence supports feasibility without a compliance challenge.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORTS_1",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "A 2024 curated action finding reports Snort and Fail2Ban applied as IDS/IPS-style monitoring and blocking for repeated authentication attacks, indicating IDS/IPS components can be an implementable response to brute-force attack behavior.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGES_1",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "A 2016 curated action finding reports that distributed low-rate brute-force attacks can stay below per-host login thresholds and evade ordinary IDS/IPS security rules, demonstrating a direct limitation of conventional IDS/IPS use against disciplined-IP brute-force patterns.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Technical evidence is genuinely mixed. A direct technical_enablement record shows IDS/IPS-style monitoring and blocking applied to brute-force defense, while a direct technical_limitation record shows ordinary IDS/IPS rules can miss distributed low-rate brute-force patterns. Neither direction is enterprise-specific to the EU CIS IG2 reference profile, so the lens remains unresolved rather than insufficient.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "Forecast fields frame the threat and PMT trajectory but are not used as eligibility evidence for any lens stance. The EU CIS IG2 context remains a reference scenario, not an observed real organization, and no EU-specific regulatory, product-version, budget, TCO, ROI, or multi-year incident-trend evidence is assumed.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORTS_1",
+          "evidence_ids": [
+            "DE_DE04_DB6B29C9BE1B0F05"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST IDPS guidance states that integrated IDPS deployment can provide significant time savings to administrators and users by streamlining management and improving analysis and alert prioritization.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_SUPPORTS_2",
+          "evidence_ids": [
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST ISCM and CISA/ICS-CERT guidance document that automation and SIEM integration of IDS/IPS can lower monitoring costs, improve efficiency, and make review of security data cheaper and easier.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGES_1",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST IDPS guidance identifies implementation, tuning, operation, maintenance, and training requirements, including specialized administrative, network, security, and programming skills, as an adoption burden for IDPS deployment.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial adoption evidence supports feasibility qualitatively through documented time savings, efficiency gains, and cheaper monitoring review associated with IDPS and SIEM integration. A direct adoption_burden record identifies required skills, tuning, maintenance, and training, but no numeric budget, TCO, ROI, or staffing quantity is supplied. The benefit evidence is more directly relevant to financial adoption than the unquantified burden evidence, so the lens supports feasibility partially.",
+      "stance": 1
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORTS_1",
+          "evidence_ids": [
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE04_0B77B88875745973"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST ISCM guidance treats organization-wide continuous monitoring as support for Tier 1 governance risk decisions, and NIST IDPS guidance prescribes administrative safeguards, component security, and multi-technology selection for IDPS deployment, supporting governance-level embedding of IDS/IPS.",
+          "status": "SUPPORTS_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General institutional support is present: NIST ISCM and NIST IDPS guidance position IDS/IPS within organization-wide continuous monitoring, governance, administrative safeguards, and control evaluation. No EU-specific regulatory_applicability evidence is supplied, so deployment-specific EU institutional feasibility is not established, but GENERAL governance_enablement evidence supports feasibility without a compliance challenge.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORTS_1",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "A 2024 curated action finding reports Snort and Fail2Ban applied as IDS/IPS-style monitoring and blocking for repeated authentication attacks, indicating IDS/IPS components can be an implementable response to brute-force attack behavior.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGES_1",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "A 2016 curated action finding reports that distributed low-rate brute-force attacks can stay below per-host login thresholds and evade ordinary IDS/IPS security rules, demonstrating a direct limitation of conventional IDS/IPS use against disciplined-IP brute-force patterns.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Technical evidence is genuinely mixed. A direct technical_enablement record shows IDS/IPS-style monitoring and blocking applied to brute-force defense, while a direct technical_limitation record shows ordinary IDS/IPS rules can miss distributed low-rate brute-force patterns. Neither direction is enterprise-specific to the EU CIS IG2 reference profile, so the lens remains unresolved rather than insufficient.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "a9d979f59af1332480493e7b60ce291afe7e266b22e2452c0e899e09ec735a23",
+  "withheld_evidence_id": null
+}

@@ -1,0 +1,108 @@
+{
+  "identity": {
+    "case_id": "main__brute_force__ids_ips",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "f80fd55bd4208d67b9cca2de8ed086f889624fbf46b9e76cfdb0ba09e77a881c",
+    "isolated": true,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "eccc7ab867bdf4e383199100fcba71bc8eff80b04e282c37323832f5a744e7a4",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "283268a8153993dfc30753afa1c4d1f64303300198578e4c3f22cc617d7d7da4",
+    "seed": 42,
+    "shadow_object_sha256": "0c4a732d8158722d49b9fc2e134f54ef41084067c5213cc3b282cabd5bcab3b1",
+    "source_hashes": {
+      "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+      "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+      "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+      "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+      "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+      "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "technical_supports_feasibility",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDS/IPS-style monitoring and blocking is technically feasible for brute-force attack defense.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "technical_challenges_feasibility",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Conventional IDS/IPS rules may be insufficient against distributed low-rate brute-force attacks that evade per-host thresholds.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Deployment requirements and environment understanding for IDPS selection must be defined before enterprise-specific feasibility can be fully established.",
+        "Coverage for low-rate distributed brute-force evasion remains unaddressed by the supplied evidence."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "evidence_gaps": [
+        "No CIS IG2-specific IDS/IPS deployment evidence is supplied.",
+        "No product, version, architecture, or network-topology details are supplied to confirm enterprise-specific technical fit.",
+        "The forecast does not specify whether the brute-force threat includes disciplined low-rate distributed variants that may evade ordinary IDS/IPS rules."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Support evidence directly demonstrates IDS/IPS-style technical enablement for brute-force defense in a 2024 case study, while challenge evidence identifies a specific limitation for low-rate distributed brute-force evasion. The support is treated as stronger for general technical feasibility because it directly addresses implementation of IDS/IPS-style monitoring and blocking for repeated authentication attacks; however, sufficiency remains partial because enterprise-specific deployment fit and coverage of the evasion variant are not established.",
+      "stance": 1
+    }
+  },
+  "raw": {
+    "claims": [
+      {
+        "claim_id": "technical_supports_feasibility",
+        "evidence_ids": [
+          "AE05S_CCD7CA4B2AE10DC9"
+        ],
+        "scope": "GENERAL",
+        "statement": "IDS/IPS-style monitoring and blocking is technically feasible for brute-force attack defense.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "technical_challenges_feasibility",
+        "evidence_ids": [
+          "AE05C_2D35A464AD6F0FAE"
+        ],
+        "scope": "GENERAL",
+        "statement": "Conventional IDS/IPS rules may be insufficient against distributed low-rate brute-force attacks that evade per-host thresholds.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "Deployment requirements and environment understanding for IDPS selection must be defined before enterprise-specific feasibility can be fully established.",
+      "Coverage for low-rate distributed brute-force evasion remains unaddressed by the supplied evidence."
+    ],
+    "constraints": [],
+    "evidence_gaps": [
+      "No CIS IG2-specific IDS/IPS deployment evidence is supplied.",
+      "No product, version, architecture, or network-topology details are supplied to confirm enterprise-specific technical fit.",
+      "The forecast does not specify whether the brute-force threat includes disciplined low-rate distributed variants that may evade ordinary IDS/IPS rules."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "rationale": "Support evidence directly demonstrates IDS/IPS-style technical enablement for brute-force defense in a 2024 case study, while challenge evidence identifies a specific limitation for low-rate distributed brute-force evasion. The support is treated as stronger for general technical feasibility because it directly addresses implementation of IDS/IPS-style monitoring and blocking for repeated authentication attacks; however, sufficiency remains partial because enterprise-specific deployment fit and coverage of the evasion variant are not established.",
+    "stance": 1
+  },
+  "recommendation": null,
+  "sha256": "bd7f598ac74e1ba0c272f7c7e35fff703acf255661d9af74140878e5b96d24d0",
+  "withheld_evidence_id": null
+}

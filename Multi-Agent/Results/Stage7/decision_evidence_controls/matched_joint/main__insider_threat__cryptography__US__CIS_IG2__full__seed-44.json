@@ -1,0 +1,253 @@
+{
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "2cd3c198b4174d52c7bb4827994fef4e16d417a5263a5427ba50324452fb46e0",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 44,
+    "shadow_object_sha256": "f815b38f90270d9a471b23884f2b9687b5e5f9bac5028a48e5c98f558c5b2b55",
+    "source_hashes": {
+      "stage1": "048aa9e6dd139b26dd32450ec0fda405bb883a62497ed108691cf7e840b16872",
+      "stage2": "3ddd4def226a25d78c6243f4382fb30d384b7793f7191e62a95b79e660f11d06",
+      "stage3_context": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+      "stage4_context": "903f67ef37fb5c791e24edf9e95e89eab3871357daaf710dbd35a12093a6e9d9",
+      "stage5": "21782b723a9d2a4314a244c1d347b57acf3ce4923dab23db75a071d0d7ee8b79",
+      "stage6": "37b347c8a4f93dbe5bae0f66037abd59c4c085642673b2cc7f66fc31c0c1fbd9"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY: Adoption of TLS/IPSec cryptography can provide authentication, confidentiality, integrity, forward secrecy, and replay-protection benefits.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY: Encryption adoption carries operational burdens, including technical feasibility limits, latency/availability considerations, and the need to replace weak or outdated algorithms.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial feasibility cannot be confirmed without budget or cost evidence.",
+        "Adoption must account for operational constraints and ongoing algorithm-maintenance burden."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__d374108f130df77c",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is available.",
+        "No evidence quantifies the financial cost of the adoption burdens identified by E_23_534489D29C38B327."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Eligible financial adoption evidence contains both adoption benefits and adoption burdens. DE_DE10 and DE_DE18 describe security benefits associated with adopting TLS/IPSec cryptography, while E_23_534489D29C38B327 identifies operational and maintenance burdens related to deploying and updating encryption. No numeric budget, ROI, TCO, staffing, or procurement evidence is present.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY: Key-management governance and recommended encryption controls provide institutional enablement for cryptography.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY: Cryptographic algorithm choices are constrained by NIST transition guidance, including disallowed and deprecated algorithms.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Algorithm selection must satisfy applicable NIST transition constraints.",
+        "Key-management accountability, access control, and audit traceability must be established."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__d374108f130df77c",
+      "evidence_gaps": [
+        "No regulatory_applicability evidence is available to support a DEPLOYMENT_SPECIFIC institutional claim for the US CIS IG2 scenario.",
+        "No evidence establishes that the specific governance or compliance conditions are already satisfied by the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Eligible institutional evidence contains both governance enablement and a compliance constraint. DE_DE08 and E_23_534489D29C38B327 support institutional enablement through key-management governance and recommended encryption practice, while DE_DE09 imposes algorithm-transition constraints that challenge straightforward adoption. No regulatory_applicability evidence is present for a DEPLOYMENT_SPECIFIC institutional direction, so the assessment remains GENERAL.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE04S_2674461DBC059388"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY: Cryptography can be engineered for insider-threat leakage protection.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE04C_F084D028D8E2AE06"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY: Conventional encryption is not automatically sufficient in an insider-threat setting; effectiveness depends on cryptographic design and insider-access model.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Cryptographic construction must account for authorized insiders' possible plaintext or access advantages.",
+        "Deployment would require design validation beyond general cryptography adoption."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__d374108f130df77c",
+      "evidence_gaps": [
+        "No eligible evidence establishes product- or enterprise-specific success for CIS IG2 in the United States.",
+        "No eligible technical_enablement evidence demonstrates that the specific cryptographic design required by AE04C has been deployed in the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Eligible technical evidence contains both a direct support claim and a direct challenge claim. AE04S supports the feasibility of engineering cryptography for insider-threat data leakage, while AE04C challenges reliance on conventional encryption by showing that insider access can undermine assumptions and make effectiveness design-dependent.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "The forecast pair is contextual only: the threat state remains above the PMT state and the threat-minus-PMT gap is slowly increasing. That forecast does not by itself establish or defeat feasibility in any lens.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY: Adoption of TLS/IPSec cryptography can provide authentication, confidentiality, integrity, forward secrecy, and replay-protection benefits.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY: Encryption adoption carries operational burdens, including technical feasibility limits, latency/availability considerations, and the need to replace weak or outdated algorithms.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial feasibility cannot be confirmed without budget or cost evidence.",
+        "Adoption must account for operational constraints and ongoing algorithm-maintenance burden."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is available.",
+        "No evidence quantifies the financial cost of the adoption burdens identified by E_23_534489D29C38B327."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Eligible financial adoption evidence contains both adoption benefits and adoption burdens. DE_DE10 and DE_DE18 describe security benefits associated with adopting TLS/IPSec cryptography, while E_23_534489D29C38B327 identifies operational and maintenance burdens related to deploying and updating encryption. No numeric budget, ROI, TCO, staffing, or procurement evidence is present.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY: Key-management governance and recommended encryption controls provide institutional enablement for cryptography.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY: Cryptographic algorithm choices are constrained by NIST transition guidance, including disallowed and deprecated algorithms.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Algorithm selection must satisfy applicable NIST transition constraints.",
+        "Key-management accountability, access control, and audit traceability must be established."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No regulatory_applicability evidence is available to support a DEPLOYMENT_SPECIFIC institutional claim for the US CIS IG2 scenario.",
+        "No evidence establishes that the specific governance or compliance conditions are already satisfied by the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Eligible institutional evidence contains both governance enablement and a compliance constraint. DE_DE08 and E_23_534489D29C38B327 support institutional enablement through key-management governance and recommended encryption practice, while DE_DE09 imposes algorithm-transition constraints that challenge straightforward adoption. No regulatory_applicability evidence is present for a DEPLOYMENT_SPECIFIC institutional direction, so the assessment remains GENERAL.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE04S_2674461DBC059388"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY: Cryptography can be engineered for insider-threat leakage protection.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE04C_F084D028D8E2AE06"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY: Conventional encryption is not automatically sufficient in an insider-threat setting; effectiveness depends on cryptographic design and insider-access model.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Cryptographic construction must account for authorized insiders' possible plaintext or access advantages.",
+        "Deployment would require design validation beyond general cryptography adoption."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No eligible evidence establishes product- or enterprise-specific success for CIS IG2 in the United States.",
+        "No eligible technical_enablement evidence demonstrates that the specific cryptographic design required by AE04C has been deployed in the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Eligible technical evidence contains both a direct support claim and a direct challenge claim. AE04S supports the feasibility of engineering cryptography for insider-threat data leakage, while AE04C challenges reliance on conventional encryption by showing that insider access can undermine assumptions and make effectiveness design-dependent.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "072db4c058994d6cbaa79ef88175eb8cccc7d0872ca7881d0970657dab346fb3",
+  "withheld_evidence_id": null
+}

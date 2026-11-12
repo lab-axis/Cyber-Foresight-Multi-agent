@@ -1,0 +1,255 @@
+{
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "c8e353b35caa77ad7d1c528a8c1b0998de8ad7b73b0b1fcda51b03999cd6e28d",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "2c801a83678bee8eaf116be869319f2c16588601f37a7ced2bf360ace07502a2",
+    "source_hashes": {
+      "stage1": "304807a460c79b97a7c155ac0f3a11e974386cf0363fc072fef87238f7525724",
+      "stage2": "e32d514b41e64ac386fed97a222cbc7fd92d7328e840ea7c0bd6ce0bf758352d",
+      "stage3_context": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+      "stage4_context": "b197de3415acc19c31e3f821ed025c29e9bf15b3b293e7c0ad5f6b35b1ef2cee",
+      "stage5": "f33b3c4296fd820cb26a9525899ee8fc2a36c30f0775e3ce10ae5de1aa804127",
+      "stage6": "ec942bd1085a56ecfa8a3e7863ae3ce4b7791dc5e1d96dd1f7a878f67d61e958"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "General financial feasibility is supported qualitatively by evidence that long-term zero-trust adoption can enable more prudent allocation of security investments.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA",
+            "DE_DE12_CBF6FBB1313D37AF"
+          ],
+          "scope": "GENERAL",
+          "statement": "General financial feasibility is challenged by adoption burdens, including development, deployment, maintenance, retrofitting, attribute-management, governance transition, provider switching, and long transition costs.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Adoption must account for transition, retrofit, attribute-management, and ongoing maintenance costs.",
+        "Provider switching, lock-in, and long implementation timelines must be evaluated before deployment."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606",
+      "evidence_gaps": [
+        "No supplied evidence contains numeric budget, price, TCO, ROI, staffing count, procurement ceiling, or payback-period data.",
+        "No supplied evidence quantifies the adoption burden or benefit for a US CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial evidence is mixed and qualitative. One source provides a general adoption benefit by associating zero-trust adoption with more prudent long-term allocation of security investments. Other sources provide adoption burdens, including transition costs, maintenance and attribute-management costs, retrofit costs, provider switching costs, and long implementation timelines. No numeric budget, TCO, ROI, staffing, or procurement evidence is supplied, so the lens remains partial.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE11_1E4AAE06CC3795D7",
+            "DE_DE12_E6F93E4AB8722379",
+            "DE_DE17_567DDA7CFBC62829"
+          ],
+          "scope": "GENERAL",
+          "statement": "General institutional feasibility is supported by governance and policy-enablement guidance for access-control implementation, including attribute governance, policy administration, compliance-system inputs, and zero-trust governance processes.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "General institutional feasibility is challenged by compliance constraints on session handling, access tokens, cookie security, and authenticated channels that must be satisfied during access-control implementation.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Enterprise governance for access policies, attributes, lifecycle management, and exception handling must be available.",
+        "Identity, session, token, and channel protections must satisfy the cited compliance constraints before the control can be considered institutionally operational."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606",
+      "evidence_gaps": [
+        "No supplied evidence establishes US CIS IG2-specific regulatory applicability or deployment-specific legal compliance outcomes for this access-control candidate.",
+        "No supplied evidence shows that the referenced governance frameworks have been institutionalized in the target enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General governance-enablement evidence supports the institutional work needed to manage access-control policies, attributes, compliance inputs, and zero-trust governance. A compliance-constraint source identifies identity, session, and token requirements that can constrain implementation. Because the institutional direction is assessed as general rather than deployment-specific, no regulatory-applicability evidence is required, but the absence of US CIS IG2-specific regulatory applicability evidence keeps the lens partial.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_1",
+          "evidence_ids": [
+            "AE06S_407DDF87C86BB41B"
+          ],
+          "scope": "GENERAL",
+          "statement": "General technical feasibility is supported for adaptive, risk-context-driven access control against sophisticated multi-stage targeted attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_1",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "General technical feasibility is challenged for conventional static or perimeter-based access control because effective access control depends on continuously updated threat and risk context.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Access control must be operationalized with dynamic or adaptive decisioning rather than relying solely on static perimeter assumptions.",
+        "Continuously updated threat and risk context must be available to the access-control decision path."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606",
+      "evidence_gaps": [
+        "No supplied evidence establishes enterprise-specific deployment success for a named access-control product or version in a US CIS IG2 reference enterprise.",
+        "No supplied evidence measures the forecasted PMT-state improvement as realized technical performance in the target enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Mixed general evidence is present: one eligible technical enablement source supports adaptive access control for APT-like targeted attacks, while one eligible technical limitation source shows that static or perimeter-only access control is insufficient and that effectiveness depends on continuously updated threat/risk context. No supplied evidence establishes product, version, or CIS IG2 deployment-specific success.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "All three lenses are genuinely mixed with partial sufficiency: each contains at least one general support claim and at least one general challenge claim, but no lens contains enough enterprise-specific, regulatory-applicability, deployment-outcome, or numeric financial evidence to establish a definitive feasibility direction.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "General financial feasibility is supported qualitatively by evidence that long-term zero-trust adoption can enable more prudent allocation of security investments.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA",
+            "DE_DE12_CBF6FBB1313D37AF"
+          ],
+          "scope": "GENERAL",
+          "statement": "General financial feasibility is challenged by adoption burdens, including development, deployment, maintenance, retrofitting, attribute-management, governance transition, provider switching, and long transition costs.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Adoption must account for transition, retrofit, attribute-management, and ongoing maintenance costs.",
+        "Provider switching, lock-in, and long implementation timelines must be evaluated before deployment."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence contains numeric budget, price, TCO, ROI, staffing count, procurement ceiling, or payback-period data.",
+        "No supplied evidence quantifies the adoption burden or benefit for a US CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial evidence is mixed and qualitative. One source provides a general adoption benefit by associating zero-trust adoption with more prudent long-term allocation of security investments. Other sources provide adoption burdens, including transition costs, maintenance and attribute-management costs, retrofit costs, provider switching costs, and long implementation timelines. No numeric budget, TCO, ROI, staffing, or procurement evidence is supplied, so the lens remains partial.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE11_1E4AAE06CC3795D7",
+            "DE_DE12_E6F93E4AB8722379",
+            "DE_DE17_567DDA7CFBC62829"
+          ],
+          "scope": "GENERAL",
+          "statement": "General institutional feasibility is supported by governance and policy-enablement guidance for access-control implementation, including attribute governance, policy administration, compliance-system inputs, and zero-trust governance processes.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "General institutional feasibility is challenged by compliance constraints on session handling, access tokens, cookie security, and authenticated channels that must be satisfied during access-control implementation.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Enterprise governance for access policies, attributes, lifecycle management, and exception handling must be available.",
+        "Identity, session, token, and channel protections must satisfy the cited compliance constraints before the control can be considered institutionally operational."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence establishes US CIS IG2-specific regulatory applicability or deployment-specific legal compliance outcomes for this access-control candidate.",
+        "No supplied evidence shows that the referenced governance frameworks have been institutionalized in the target enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General governance-enablement evidence supports the institutional work needed to manage access-control policies, attributes, compliance inputs, and zero-trust governance. A compliance-constraint source identifies identity, session, and token requirements that can constrain implementation. Because the institutional direction is assessed as general rather than deployment-specific, no regulatory-applicability evidence is required, but the absence of US CIS IG2-specific regulatory applicability evidence keeps the lens partial.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_1",
+          "evidence_ids": [
+            "AE06S_407DDF87C86BB41B"
+          ],
+          "scope": "GENERAL",
+          "statement": "General technical feasibility is supported for adaptive, risk-context-driven access control against sophisticated multi-stage targeted attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_1",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "General technical feasibility is challenged for conventional static or perimeter-based access control because effective access control depends on continuously updated threat and risk context.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Access control must be operationalized with dynamic or adaptive decisioning rather than relying solely on static perimeter assumptions.",
+        "Continuously updated threat and risk context must be available to the access-control decision path."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence establishes enterprise-specific deployment success for a named access-control product or version in a US CIS IG2 reference enterprise.",
+        "No supplied evidence measures the forecasted PMT-state improvement as realized technical performance in the target enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Mixed general evidence is present: one eligible technical enablement source supports adaptive access control for APT-like targeted attacks, while one eligible technical limitation source shows that static or perimeter-only access control is insufficient and that effectiveness depends on continuously updated threat/risk context. No supplied evidence establishes product, version, or CIS IG2 deployment-specific success.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "beb194e87f1302870f80bd0f8955a8c5aeedd6c688425d53c96cbf9bf745d443",
+  "withheld_evidence_id": null
+}

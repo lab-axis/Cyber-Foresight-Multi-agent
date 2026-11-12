@@ -1,0 +1,34 @@
+{
+  "identity": {
+    "arm": "single_direct_end_to_end",
+    "case_id": "main__insider_threat__cryptography",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "2750f8e4e56f7bfce7c4fcd3beb9ac96b2f190a12ac6c39d73c2a25c226003d8",
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "18e7e404cf766858cf448d8ce4555ada40d799456d13936b3970d594a5d69f90",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "745146f909ebc5a9a778ef176e3abf279f1cfd0e3ec4e61076fad47b2ac6be8f",
+    "seed": 42,
+    "source_hashes": {
+      "stage1": "048aa9e6dd139b26dd32450ec0fda405bb883a62497ed108691cf7e840b16872",
+      "stage2": "3ddd4def226a25d78c6243f4382fb30d384b7793f7191e62a95b79e660f11d06",
+      "stage3_context": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+      "stage4_context": "903f67ef37fb5c791e24edf9e95e89eab3871357daaf710dbd35a12093a6e9d9",
+      "stage5": "21782b723a9d2a4314a244c1d347b57acf3ce4923dab23db75a071d0d7ee8b79",
+      "stage6": "37b347c8a4f93dbe5bae0f66037abd59c4c085642673b2cc7f66fc31c0c1fbd9"
+    },
+    "version": "reviewer2-external-reference-report-audit-v1"
+  },
+  "output": {
+    "recommendation": "RECOMMEND_PILOT",
+    "report": "RECOMMEND_PILOT is the most defensible decision for CRYPTOGRAPHY under the supplied KR CIS IG2 insider-threat scenario. The forecast shows the insider-threat state above the cryptography mitigation state across 2025-2027, with gaps of 0.9766, 1.0646, and 0.9776 respectively; however, the slope is very small (0.00049/year) and the PMT confidence half-width is wide (0.1349), so the signal is directional, not a strong causal or incident-time trend. Technically, cryptography is supported by standard guidance and a prototype insider-threat construction: NIST SP 800-131A identifies acceptable AES variants and restricts legacy TDEA [EVIDENCE:DE_DE09_6719137897848A9E], TLS guidance supports strong client authentication and path validation [EVIDENCE:DE_DE10_A086B3193CD6440B], CISA CPG recommends properly configured SSL/TLS and planning for weak-encryption removal and post-quantum implications [EVIDENCE:E_23_534489D29C38B327], and the Securecipher prototype provides direct action-level support for cryptography engineered against insider-threat data leakage [EVIDENCE:AE04S_2674461DBC059388]. The CIS IG2 profile is institutionally plausible because it describes multi-department enterprise IT, infrastructure personnel, possible enterprise-grade technology and specialized expertise, and tolerance for short service interruptions [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. However, a full RECOMMEND is not supported: the same insider-threat source cautions that authorized insiders have stronger capabilities, including known- or chosen-plaintext opportunities, and that conventional encryption is not automatically sufficient without a matching insider-access model [EVIDENCE:AE04C_F084D028D8E2AE06]. Key management is also a material dependency: NIST guidance requires accountability/traceability for key access and ideally no human viewing of keys [EVIDENCE:DE_DE08_031120C53EF050F3]. Financial feasibility is unquantified; no budget, TCO, staffing count, or ROI is supplied. CISA insider-threat guidance frames mitigation as multidisciplinary and acknowledges cost constraints, but does not establish that cryptography alone is sufficient [EVIDENCE:E_22_C239828119FC69CD]. No KR-specific deployment, legal, or enterprise-specific effectiveness evidence is supplied, so regional applicability remains limited to the fixed CIS IG2 scenario. A pilot is therefore appropriate, scoped to a bounded data-leakage use case, conditioned on an explicit insider-access model, approved algorithms, and key traceability, with no claim of universal effectiveness or ROI. Dissent would favor HOLD because the direct insider-threat evidence is prototype-specific and the corpus lacks deployment-specific financial, staffing, and KR-specific facts; DO_NOT_RECOMMEND would overstate the limitations given the strong standards-based technical baseline."
+  },
+  "sha256": "86de1b310f2235c0c88870dc85b9edb9df92947153a3e547d9f08a86423810e2"
+}

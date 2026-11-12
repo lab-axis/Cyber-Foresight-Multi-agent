@@ -1,0 +1,34 @@
+{
+  "identity": {
+    "arm": "single_direct_end_to_end",
+    "case_id": "main__ddos__nlp_llm",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "6a730a94a8909bc16427644585bd2f70cde52cdd53b0ba6af32a3618656d87b6",
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "18e7e404cf766858cf448d8ce4555ada40d799456d13936b3970d594a5d69f90",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "745146f909ebc5a9a778ef176e3abf279f1cfd0e3ec4e61076fad47b2ac6be8f",
+    "seed": 44,
+    "source_hashes": {
+      "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+      "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+      "stage3_context": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+      "stage4_context": "10c834266961c7c4ea048c04a09db58d572d8606365b27c21677992d23f5b7ea",
+      "stage5": "86d070634eb0c7cff097e1c054be40d2b7c670b208640da9ea80b40d55a8683b",
+      "stage6": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+    },
+    "version": "reviewer2-external-reference-report-audit-v1"
+  },
+  "output": {
+    "recommendation": "RECOMMEND_PILOT",
+    "report": "A bounded pilot is supportable, but a full production recommendation is not supported by the supplied evidence. The only direct DDoS-relevant effectiveness evidence for NLP/LLM is benchmark-based: fine-tuned LLM variants detected DDoS traffic on CICIDS 2017 and an Urban IoT dataset and outperformed a compared MLP baseline [EVIDENCE:AE01S_6E6099FA4C2D13D4]. However, the same evidence corpus states that the study does not establish turnkey production deployment, performance depended on prompt context or fine-tuning, few-shot results were materially weaker on the harder Urban IoT setting, and the evidence is not an enterprise operational deployment or cost study [EVIDENCE:AE01C_A6798E23EEB1E487]. Therefore, NLP/LLM can be considered technically feasible only under controlled evaluation conditions, not as a proven enterprise control. The CIS IG2 reference enterprise is a multi-department environment where safeguards may depend on enterprise-grade technology and specialized expertise [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4], which raises implementation burden but does not by itself defeat feasibility. DDoS threat context supports continued relevance of the threat, including growth in attack sizes, DNS resource-exhaustion concerns, destructive and hacktivist DDoS activity, and an exploited HTTP/2 rapid reset DDoS condition [EVIDENCE:E_02_066AFE8300EDCEBB, EVIDENCE:E_03_06E6ABC42DA3AC77, EVIDENCE:E_03_F13F996D181217BA, EVIDENCE:E_04_892BBCAA3CE5CC92, EVIDENCE:E_08_3453329306E149CB]. These records do not prove that NLP/LLM is the required mitigation, only that DDoS mitigation remains operationally important. NIST and NCSC AI governance guidance supports the conditions needed for a responsible pilot, including governance, inventory, accountability, monitoring, provenance, secure development, data integrity, code/model review, and incident handling [EVIDENCE:DE_DE01_0B9728FE19095FD0, EVIDENCE:DE_DE01_E85CB6412740EF20, EVIDENCE:DE_DE02_007F05150CB46131, EVIDENCE:DE_DE02_CFF4EAB2C4BEC522, EVIDENCE:DE_DE03_6786A7AB93821D48, EVIDENCE:DE_DE03_912FC8A63179A943, EVIDENCE:DE_DE15_1AEC6DDD669756FF, EVIDENCE:DE_DE15_271AFADC7B3D5999, EVIDENCE:DE_DE15_7C1849B1FD93975C]. These are deployment-enabling practices, not evidence of DDoS detection effectiveness. The increasing NLP/LLM security publication trend indicates research activity but does not establish deployment maturity, operational effectiveness, or causal mitigation value [EVIDENCE:E_33_ADC8BC66D812799F]. Financial and adoption feasibility cannot be affirmed because the evidence corpus contains no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling, while the reference profile may require specialized expertise and enterprise-grade technology [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4, EVIDENCE:DE_DE01_E85CB6412740EF20]. The supplied forecast shows a statistical gap with threat direction increasing, PMT direction decreasing, negative threat-minus-PMT gap values in 2025, 2026, and 2027, and a positive average slope; this should be treated as model uncertainty and not as proof that deploying NLP/LLM will close an operational protection gap. The appropriate decision is therefore RECOMMEND_PILOT: a limited, shadow-mode or analytics-assist pilot should be permitted, with no reliance on NLP/LLM as the sole DDoS detection or blocking control, while conventional DDoS mitigation, vendor patching, and incident response remain the primary controls [EVIDENCE:E_02_066AFE8300EDCEBB, EVIDENCE:E_04_892BBCAA3CE5CC92, EVIDENCE:E_08_3453329306E149CB]. Pilot conditions should include: defining a narrow evaluation scope; using representative non-production or shadow traffic where possible; comparing LLM output against existing baselines; validating data provenance and integrity before use [EVIDENCE:DE_DE03_912FC8A63179A943]; applying code/model review and scanning for vulnerabilities, malware, backdoors, and security issues [EVIDENCE:DE_DE03_6786A7AB93821D48]; maintaining model inventory, roles, training, monitoring, decommissioning, and incident disclosure processes [EVIDENCE:DE_DE01_0B9728FE19095FD0, EVIDENCE:DE_DE02_007F05150CB46131, EVIDENCE:DE_DE02_CFF4EAB2C4BEC522]; and documenting limitations, provenance, failure modes, and operational boundaries [EVIDENCE:DE_DE15_271AFADC7B3D5999, EVIDENCE:DE_DE15_7C1849B1FD93975C]. Expansion to production should require deployment-specific evidence showing acceptable detection accuracy, false-positive behavior, latency, integration burden, data-handling risk, and resource burden in the CIS IG2 enterprise context [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. Dissent is warranted for HOLD or DO_NOT_RECOMMEND because the direct effectiveness evidence is single-source, benchmark-based, not production-validated, and lacks cost, staffing, and enterprise deployment detail [EVIDENCE:AE01C_A6798E23EEB1E487]. Nevertheless, because the evidence is not negative and the pilot can be tightly constrained, RECOMMEND_PILOT is the qualified decision."
+  },
+  "sha256": "b955a777bc645a2262d57c83f050932330a587a88c9eb498c2bd1bb306ca9025"
+}

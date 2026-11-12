@@ -1,0 +1,102 @@
+{
+  "identity": {
+    "case_id": "main__session_hijacking__https",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "1016d5c9cf82a6354d8ecb90f61d0217a4ed27e273a5267aa0519f74b894cac0",
+    "isolated": true,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "eccc7ab867bdf4e383199100fcba71bc8eff80b04e282c37323832f5a744e7a4",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "283268a8153993dfc30753afa1c4d1f64303300198578e4c3f22cc617d7d7da4",
+    "seed": 42,
+    "shadow_object_sha256": "5dbb9f26e36b61b3edb101d77431b372eb4b87a0e15dfa984090a6ec3f536752",
+    "source_hashes": {
+      "stage1": "5b8473203535452075465098dd80d84de51fa302487b5d5c4f382f0f74f6b2d1",
+      "stage2": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+      "stage3_context": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+      "stage4_context": "d1853be1e80bea8b4894668ef60ba1d5b4f878e2f8334340759ec658b9685c3d",
+      "stage5": "31865f18b575039e9744f107701fda16da6862860b705e5c4e2439a55372649d",
+      "stage6": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_GENERAL_SUPPORTS",
+          "evidence_ids": [
+            "AE07S_C1EF15B9628497F0"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS/TLS is supported as an important transport-layer control for interception-oriented session hijacking, within a broader session-protection strategy.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_GENERAL_CHALLENGES",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS alone cannot cover all session-hijacking paths because session tokens can still be stolen through XSS, malicious browser extensions, or user-level malware after a secure transport channel exists.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "HTTPS must be treated as a transport-layer control requiring complementary session-protection measures; it is not established as sufficient by itself against all session-hijacking paths."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_gaps": [
+        "No supplied evidence establishes product-version-specific effectiveness, deployment-specific maturity, or enterprise-specific technical feasibility for HTTPS in the CIS IG2 reference profile."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "The available technical evidence is directionally mixed for HTTPS as a mitigation for session hijacking. A general technical-enablement source supports HTTPS/TLS as an important transport-layer control for interception-oriented session hijacking, but explicitly frames it as part of a broader session-protection strategy. A separate technical-limitation source challenges the adequacy of HTTPS alone by noting that session tokens can still be stolen through XSS, malicious browser extensions, or user-level malware. Therefore, HTTPS is technically feasible as a partial transport-layer control, but the evidence does not support it as a complete standalone technical solution for all session-hijacking paths.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "claims": [
+      {
+        "claim_id": "TF_GENERAL_SUPPORTS",
+        "evidence_ids": [
+          "AE07S_C1EF15B9628497F0"
+        ],
+        "scope": "GENERAL",
+        "statement": "HTTPS/TLS is supported as an important transport-layer control for interception-oriented session hijacking, within a broader session-protection strategy.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_GENERAL_CHALLENGES",
+        "evidence_ids": [
+          "AE07C_9CBF5980D3BA474A"
+        ],
+        "scope": "GENERAL",
+        "statement": "HTTPS alone cannot cover all session-hijacking paths because session tokens can still be stolen through XSS, malicious browser extensions, or user-level malware after a secure transport channel exists.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "HTTPS must be treated as a transport-layer control requiring complementary session-protection measures; it is not established as sufficient by itself against all session-hijacking paths."
+    ],
+    "constraints": [],
+    "evidence_gaps": [
+      "No supplied evidence establishes product-version-specific effectiveness, deployment-specific maturity, or enterprise-specific technical feasibility for HTTPS in the CIS IG2 reference profile."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "rationale": "The available technical evidence is directionally mixed for HTTPS as a mitigation for session hijacking. A general technical-enablement source supports HTTPS/TLS as an important transport-layer control for interception-oriented session hijacking, but explicitly frames it as part of a broader session-protection strategy. A separate technical-limitation source challenges the adequacy of HTTPS alone by noting that session tokens can still be stolen through XSS, malicious browser extensions, or user-level malware. Therefore, HTTPS is technically feasible as a partial transport-layer control, but the evidence does not support it as a complete standalone technical solution for all session-hijacking paths.",
+    "stance": 0
+  },
+  "recommendation": null,
+  "sha256": "cdafa487e64f108429af9c1e97eb80be4230edacfb1750cb4200d49eed9793b5",
+  "withheld_evidence_id": null
+}

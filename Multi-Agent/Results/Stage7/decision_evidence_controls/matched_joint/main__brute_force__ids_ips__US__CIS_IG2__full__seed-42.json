@@ -1,0 +1,299 @@
+{
+  "identity": {
+    "case_id": "main__brute_force__ids_ips",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "15ffcaa9681e1436ab1b5e67fce3af90faed368f14dd46856ce344d6477db56a",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "305b66846f343fec35145e45117454b945901cbf628e9a0651c70dc128c49884",
+    "source_hashes": {
+      "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+      "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+      "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+      "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+      "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+      "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_01",
+          "evidence_ids": [
+            "DE_DE04_DB6B29C9BE1B0F05",
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "Integrated IDPS operation and SIEM-based review are described as reducing administrative effort and making IDS/IPS information easier to process.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_01",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDPS implementation and maintenance require substantial administrative skills, testing discipline, and training, representing an adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_01",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "Deployment decisions require defined requirements, environmental compatibility, and integration choices, while the scenario does not supply numeric budget, TCO, ROI, staffing, or procurement data.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial feasibility cannot be resolved beyond a mixed partial stance without numeric resource-capacity or cost data.",
+        "Deployment-specific adoption burden depends on the organization's existing skill and testing practices."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+      "evidence_gaps": [
+        "No numeric budget, TCO, ROI, staffing count, or procurement ceiling is available.",
+        "Financial feasibility evidence is qualitative adoption benefit and burden rather than enterprise-specific financial quantification."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial and adoption feasibility is genuinely mixed: eligible evidence supports adoption benefit through integration, automation, and easier review, while other eligible evidence identifies adoption burden from skills, training, and testing requirements. Exact financial quantities remain unknown, so the lens is partial rather than sufficient.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_01",
+          "evidence_ids": [
+            "DE_DE04_0B77B88875745973"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST IDPS guidance supplies governance and operational-administration practices that enable institutional adoption of IDPS components.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_01",
+          "evidence_ids": [
+            "DE_DE16_CEA1C38E613068F8"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA/ICS-CERT guidance treats IDS as a warning or audit mechanism rather than a silver bullet, and notes resource penalties, which limits the strength of institutional support.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "INST_CONTEXT_01",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile is context only and does not establish regulatory applicability or a specific compliance constraint for the US scenario.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Institutional support remains general and does not establish product- or version-specific success in the CIS IG2 reference enterprise.",
+        "Deployment-specific institutional feasibility would require additional regulatory_applicability evidence."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+      "evidence_gaps": [
+        "No eligible regulatory_applicability evidence is available to support a DEPLOYMENT_SPECIFIC institutional direction.",
+        "No eligible compliance_constraint evidence is available for the institutional lens."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Eligible governance-enablement evidence supports institutional feasibility at a general level, but the support is partial because no eligible regulatory_applicability or compliance_constraint evidence is available for a deployment-specific institutional direction.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_01",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDS/IPS has a direct technical-enablement evidence path for brute-force defense in an implemented monitoring and alerting setup.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_01",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Distributed low-rate brute-force activity can evade ordinary IDS/IPS thresholds, which directly challenges IDS/IPS feasibility for this threat.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_01",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "Deployment maturity for IDPS depends on environment-specific requirements, integration decisions, and compatible product selection, so unmet deployment conditions remain visible.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Environment-specific IDPS product compatibility and requirement definition must be established.",
+        "Deployment cannot be treated as product- or version-specific success based on the general case-study evidence alone."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "SUFFICIENT",
+      "lens_type": "technical_feasibility",
+      "rationale": "Technical feasibility is genuinely mixed: eligible evidence directly supports IDS/IPS enablement for brute-force defense, while other eligible evidence directly documents a brute-force evasion limitation of ordinary IDS/IPS rules.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "The assessment keeps unmet deployment conditions visible and does not convert general technical, institutional, or financial findings into product-, version-, or enterprise-specific success.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_01",
+          "evidence_ids": [
+            "DE_DE04_DB6B29C9BE1B0F05",
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "Integrated IDPS operation and SIEM-based review are described as reducing administrative effort and making IDS/IPS information easier to process.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_01",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDPS implementation and maintenance require substantial administrative skills, testing discipline, and training, representing an adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_01",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "Deployment decisions require defined requirements, environmental compatibility, and integration choices, while the scenario does not supply numeric budget, TCO, ROI, staffing, or procurement data.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial feasibility cannot be resolved beyond a mixed partial stance without numeric resource-capacity or cost data.",
+        "Deployment-specific adoption burden depends on the organization's existing skill and testing practices."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, TCO, ROI, staffing count, or procurement ceiling is available.",
+        "Financial feasibility evidence is qualitative adoption benefit and burden rather than enterprise-specific financial quantification."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial and adoption feasibility is genuinely mixed: eligible evidence supports adoption benefit through integration, automation, and easier review, while other eligible evidence identifies adoption burden from skills, training, and testing requirements. Exact financial quantities remain unknown, so the lens is partial rather than sufficient.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_01",
+          "evidence_ids": [
+            "DE_DE04_0B77B88875745973"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST IDPS guidance supplies governance and operational-administration practices that enable institutional adoption of IDPS components.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_01",
+          "evidence_ids": [
+            "DE_DE16_CEA1C38E613068F8"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA/ICS-CERT guidance treats IDS as a warning or audit mechanism rather than a silver bullet, and notes resource penalties, which limits the strength of institutional support.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "INST_CONTEXT_01",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile is context only and does not establish regulatory applicability or a specific compliance constraint for the US scenario.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Institutional support remains general and does not establish product- or version-specific success in the CIS IG2 reference enterprise.",
+        "Deployment-specific institutional feasibility would require additional regulatory_applicability evidence."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No eligible regulatory_applicability evidence is available to support a DEPLOYMENT_SPECIFIC institutional direction.",
+        "No eligible compliance_constraint evidence is available for the institutional lens."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Eligible governance-enablement evidence supports institutional feasibility at a general level, but the support is partial because no eligible regulatory_applicability or compliance_constraint evidence is available for a deployment-specific institutional direction.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_01",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDS/IPS has a direct technical-enablement evidence path for brute-force defense in an implemented monitoring and alerting setup.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_01",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Distributed low-rate brute-force activity can evade ordinary IDS/IPS thresholds, which directly challenges IDS/IPS feasibility for this threat.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_01",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "Deployment maturity for IDPS depends on environment-specific requirements, integration decisions, and compatible product selection, so unmet deployment conditions remain visible.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Environment-specific IDPS product compatibility and requirement definition must be established.",
+        "Deployment cannot be treated as product- or version-specific success based on the general case-study evidence alone."
+      ],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "SUFFICIENT",
+      "rationale": "Technical feasibility is genuinely mixed: eligible evidence directly supports IDS/IPS enablement for brute-force defense, while other eligible evidence directly documents a brute-force evasion limitation of ordinary IDS/IPS rules.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "3444add45b5dc03a9c0423c60fe2d513929a4e2d7dc7e3730366f652d6e3118e",
+  "withheld_evidence_id": null
+}

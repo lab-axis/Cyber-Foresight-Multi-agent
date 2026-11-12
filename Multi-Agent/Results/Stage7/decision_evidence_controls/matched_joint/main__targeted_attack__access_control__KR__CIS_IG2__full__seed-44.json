@@ -1,0 +1,287 @@
+{
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "410c586435bc7115f84c49591ba18555402682d9a4864d8022240e1e43226653",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 44,
+    "shadow_object_sha256": "6de16e8909a5a40d0a9005357333589feba73620fe0cf4e645ac2cae5fae4b32",
+    "source_hashes": {
+      "stage1": "304807a460c79b97a7c155ac0f3a11e974386cf0363fc072fef87238f7525724",
+      "stage2": "e32d514b41e64ac386fed97a222cbc7fd92d7328e840ea7c0bd6ce0bf758352d",
+      "stage3_context": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+      "stage4_context": "b197de3415acc19c31e3f821ed025c29e9bf15b3b293e7c0ad5f6b35b1ef2cee",
+      "stage5": "f33b3c4296fd820cb26a9525899ee8fc2a36c30f0775e3ce10ae5de1aa804127",
+      "stage6": "ec942bd1085a56ecfa8a3e7863ae3ce4b7791dc5e1d96dd1f7a878f67d61e958"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA",
+            "DE_DE12_CBF6FBB1313D37AF",
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE12_6509E7A6D8467E38"
+          ],
+          "scope": "GENERAL",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "evidence_gaps": [
+        "No quantitative financial quantities are supplied, so support and challenge cannot be reconciled into a definitive financial feasibility stance."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial adoption evidence is qualitatively mixed. One source describes a long-term investment-allocation benefit for zero-trust/access-control maturation, while other sources describe transition costs, ABAC governance burden, provider dependence, switching costs, and incremental implementation effort. No numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied, so the financial direction remains genuinely mixed.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE12_E6F93E4AB8722379",
+            "DE_DE17_567DDA7CFBC62829",
+            "DE_DE11_1E4AAE06CC3795D7"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE17_567DDA7CFBC62829"
+          ],
+          "scope": "GENERAL",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "evidence_gaps": [
+        "No eligible regulatory_applicability evidence for the Republic of Korea is present, so a DEPLOYMENT_SPECIFIC institutional direction cannot be claimed."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General governance evidence indicates that access-control policy enforcement, ABAC governance, and zero-trust governance processes can support institutional adoption, but the supplied evidence does not establish KR-specific regulatory applicability for a deployment-specific institutional claim. A compliance-constraint source also limits the strength of the institutional support.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_1",
+          "evidence_ids": [
+            "AE06S_407DDF87C86BB41B"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_1",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE12_6509E7A6D8467E38"
+          ],
+          "scope": "GENERAL",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "evidence_gaps": [
+        "No enterprise-specific deployment evidence confirms that the KR CIS IG2 reference enterprise can sustain the continuous threat/risk context required by the technical limitation claim."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Technical enablement evidence supports adaptive, risk-integrated access control for targeted APT-like activity, but the paired limitation evidence shows that static or perimeter-only access-control assumptions are insufficient unless continuous threat/risk context is available. The evidence is directionally mixed rather than decisively supportive for the frozen deployment.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "Joint assessment of ACCESS CONTROL for the targeted-attack forecast in the KR CIS IG2 reference scenario. Technical evidence is mixed because adaptive risk-integrated access control is supported, but static access-control assumptions are insufficient without continuous threat/risk context. Institutional evidence is also mixed because general governance and compliance-system support exists, but KR-specific regulatory applicability is absent and a compliance constraint is present. Financial adoption is mixed because qualitative long-term investment benefit is offset by transition, maintenance, provider-dependence, and implementation-effort burdens, with no numeric budget or ROI supplied. No final recommendation class is inferred from these lens outputs.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA",
+            "DE_DE12_CBF6FBB1313D37AF",
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE12_6509E7A6D8467E38"
+          ],
+          "scope": "GENERAL",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No quantitative financial quantities are supplied, so support and challenge cannot be reconciled into a definitive financial feasibility stance."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial adoption evidence is qualitatively mixed. One source describes a long-term investment-allocation benefit for zero-trust/access-control maturation, while other sources describe transition costs, ABAC governance burden, provider dependence, switching costs, and incremental implementation effort. No numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied, so the financial direction remains genuinely mixed.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE12_E6F93E4AB8722379",
+            "DE_DE17_567DDA7CFBC62829",
+            "DE_DE11_1E4AAE06CC3795D7"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE17_567DDA7CFBC62829"
+          ],
+          "scope": "GENERAL",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No eligible regulatory_applicability evidence for the Republic of Korea is present, so a DEPLOYMENT_SPECIFIC institutional direction cannot be claimed."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General governance evidence indicates that access-control policy enforcement, ABAC governance, and zero-trust governance processes can support institutional adoption, but the supplied evidence does not establish KR-specific regulatory applicability for a deployment-specific institutional claim. A compliance-constraint source also limits the strength of the institutional support.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_1",
+          "evidence_ids": [
+            "AE06S_407DDF87C86BB41B"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_1",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE12_6509E7A6D8467E38"
+          ],
+          "scope": "GENERAL",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No enterprise-specific deployment evidence confirms that the KR CIS IG2 reference enterprise can sustain the continuous threat/risk context required by the technical limitation claim."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Technical enablement evidence supports adaptive, risk-integrated access control for targeted APT-like activity, but the paired limitation evidence shows that static or perimeter-only access-control assumptions are insufficient unless continuous threat/risk context is available. The evidence is directionally mixed rather than decisively supportive for the frozen deployment.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "848e25dc6dfb889b808201d901dde364268c656d90672b397d07cb8c2224a4f2",
+  "withheld_evidence_id": null
+}

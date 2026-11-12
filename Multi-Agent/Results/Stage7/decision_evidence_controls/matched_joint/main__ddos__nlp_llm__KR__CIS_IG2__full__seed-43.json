@@ -1,0 +1,257 @@
+{
+  "identity": {
+    "case_id": "main__ddos__nlp_llm",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "60ff4b9a530472e4824431665f970f1734c778ec1765732cb8077c39edb191fd",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 43,
+    "shadow_object_sha256": "0c021e7346c9bf8b8d563c36a3dce2de0f6fc1c9d3bb8d4c3fc103cf84289d06",
+    "source_hashes": {
+      "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+      "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+      "stage3_context": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+      "stage4_context": "10c834266961c7c4ea048c04a09db58d572d8606365b27c21677992d23f5b7ea",
+      "stage5": "86d070634eb0c7cff097e1c054be40d2b7c670b208640da9ea80b40d55a8683b",
+      "stage6": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "fin_support_1",
+          "evidence_ids": [
+            "DE_DE03_6786A7AB93821D48",
+            "DE_DE03_912FC8A63179A943"
+          ],
+          "scope": "GENERAL",
+          "statement": "Secure-by-design integration and automated code/model analysis can reduce effort and resources for vulnerability detection and support development efficiency.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_challenge_1",
+          "evidence_ids": [
+            "DE_DE15_1AEC6DDD669756FF",
+            "DE_DE01_E85CB6412740EF20"
+          ],
+          "scope": "GENERAL",
+          "statement": "Secure AI development and operation require significant lifecycle resources, and AI risk management requires gauging resources such as staffing and funding.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Quantified financial feasibility conditions remain unmet.",
+        "CIS IG2-specific specialized expertise or enterprise-grade technology costs are not evidenced."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+        "No KR/CIS IG2-specific financial adoption evidence is supplied."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Mixed at GENERAL scope: guidance indicates possible efficiency benefits from secure AI development practices, but also significant lifecycle resource burdens, with no scenario-specific financial data.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "inst_support_1",
+          "evidence_ids": [
+            "DE_DE01_0B9728FE19095FD0",
+            "DE_DE15_271AFADC7B3D5999",
+            "DE_DE15_7C1849B1FD93975C"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST and UK NCSC guidance provide governance enablement for AI/NLP-LLM systems through roles, accountability, documentation, secure development, monitoring, logging, update management, and incident response practices.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_challenge_1",
+          "evidence_ids": [
+            "DE_DE02_007F05150CB46131"
+          ],
+          "scope": "GENERAL",
+          "statement": "GAI incident reporting must comply with legal and regulatory requirements, creating a compliance constraint; the supplied examples are not KR-specific.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "DEPLOYMENT_SPECIFIC institutional claims are not supported because required regulatory_applicability evidence is absent.",
+        "KR-specific regulatory applicability remains an unmet condition."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_gaps": [
+        "No regulatory_applicability evidence for the Republic of Korea or the CIS IG2 reference enterprise is supplied.",
+        "No supplied evidence maps the cited NIST/NCSC guidance to KR-specific institutional obligations."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Mixed at GENERAL scope: governance enablement exists, but compliance constraints are also present and deployment-specific regulatory applicability for KR/CIS IG2 is not evidenced.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "tech_support_1",
+          "evidence_ids": [
+            "AE01S_6E6099FA4C2D13D4"
+          ],
+          "scope": "GENERAL",
+          "statement": "LLM/NLP methods show direct DDoS-detection capability in benchmark experiments, with fine-tuned variants outperforming a compared baseline.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_challenge_1",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "GENERAL",
+          "statement": "The evidence does not establish turnkey production deployment; results depend on prompt context or fine-tuning, few-shot performance is materially weaker on harder settings, and the study is benchmark-based rather than enterprise operational or cost evidence.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Enterprise operational deployment evidence is unmet.",
+        "Prompt/fine-tuning dependence remains an unresolved deployment condition."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_gaps": [
+        "No supplied evidence demonstrates operational deployment maturity in a CIS IG2 multi-department enterprise.",
+        "No supplied evidence resolves the benchmark-to-production gap for DDoS-specific NLP/LLM operation."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Mixed: direct benchmark evidence supports LLM/NLP DDoS detection, but the same source explicitly limits production-deployment conclusions.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "All three lenses contain both support and challenge claims, producing mixed stance 0 with PARTIAL sufficiency. No DEPLOYMENT_SPECIFIC institutional claim is asserted because required regulatory_applicability evidence is absent.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "fin_support_1",
+          "evidence_ids": [
+            "DE_DE03_6786A7AB93821D48",
+            "DE_DE03_912FC8A63179A943"
+          ],
+          "scope": "GENERAL",
+          "statement": "Secure-by-design integration and automated code/model analysis can reduce effort and resources for vulnerability detection and support development efficiency.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_challenge_1",
+          "evidence_ids": [
+            "DE_DE15_1AEC6DDD669756FF",
+            "DE_DE01_E85CB6412740EF20"
+          ],
+          "scope": "GENERAL",
+          "statement": "Secure AI development and operation require significant lifecycle resources, and AI risk management requires gauging resources such as staffing and funding.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Quantified financial feasibility conditions remain unmet.",
+        "CIS IG2-specific specialized expertise or enterprise-grade technology costs are not evidenced."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+        "No KR/CIS IG2-specific financial adoption evidence is supplied."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Mixed at GENERAL scope: guidance indicates possible efficiency benefits from secure AI development practices, but also significant lifecycle resource burdens, with no scenario-specific financial data.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "inst_support_1",
+          "evidence_ids": [
+            "DE_DE01_0B9728FE19095FD0",
+            "DE_DE15_271AFADC7B3D5999",
+            "DE_DE15_7C1849B1FD93975C"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST and UK NCSC guidance provide governance enablement for AI/NLP-LLM systems through roles, accountability, documentation, secure development, monitoring, logging, update management, and incident response practices.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_challenge_1",
+          "evidence_ids": [
+            "DE_DE02_007F05150CB46131"
+          ],
+          "scope": "GENERAL",
+          "statement": "GAI incident reporting must comply with legal and regulatory requirements, creating a compliance constraint; the supplied examples are not KR-specific.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "DEPLOYMENT_SPECIFIC institutional claims are not supported because required regulatory_applicability evidence is absent.",
+        "KR-specific regulatory applicability remains an unmet condition."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No regulatory_applicability evidence for the Republic of Korea or the CIS IG2 reference enterprise is supplied.",
+        "No supplied evidence maps the cited NIST/NCSC guidance to KR-specific institutional obligations."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Mixed at GENERAL scope: governance enablement exists, but compliance constraints are also present and deployment-specific regulatory applicability for KR/CIS IG2 is not evidenced.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "tech_support_1",
+          "evidence_ids": [
+            "AE01S_6E6099FA4C2D13D4"
+          ],
+          "scope": "GENERAL",
+          "statement": "LLM/NLP methods show direct DDoS-detection capability in benchmark experiments, with fine-tuned variants outperforming a compared baseline.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_challenge_1",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "GENERAL",
+          "statement": "The evidence does not establish turnkey production deployment; results depend on prompt context or fine-tuning, few-shot performance is materially weaker on harder settings, and the study is benchmark-based rather than enterprise operational or cost evidence.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Enterprise operational deployment evidence is unmet.",
+        "Prompt/fine-tuning dependence remains an unresolved deployment condition."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence demonstrates operational deployment maturity in a CIS IG2 multi-department enterprise.",
+        "No supplied evidence resolves the benchmark-to-production gap for DDoS-specific NLP/LLM operation."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Mixed: direct benchmark evidence supports LLM/NLP DDoS detection, but the same source explicitly limits production-deployment conclusions.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "798850b466c499c4be6f46c1dc019e230ed8fedf9b97f37adcf52c2fc4cfcf80",
+  "withheld_evidence_id": null
+}

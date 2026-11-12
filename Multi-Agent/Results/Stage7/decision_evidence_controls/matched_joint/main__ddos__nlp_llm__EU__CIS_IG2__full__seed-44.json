@@ -1,0 +1,307 @@
+{
+  "identity": {
+    "case_id": "main__ddos__nlp_llm",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "1228b5c0e63298a8a59d43aba44ccacd5d87598a4bfacbed7d9325cc5da5a504",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 44,
+    "shadow_object_sha256": "9866c8abc4c245e18e30cd5cdffa8a0c04a166d089cef3a70df598466de4e752",
+    "source_hashes": {
+      "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+      "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+      "stage3_context": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+      "stage4_context": "10c834266961c7c4ea048c04a09db58d572d8606365b27c21677992d23f5b7ea",
+      "stage5": "86d070634eb0c7cff097e1c054be40d2b7c670b208640da9ea80b40d55a8683b",
+      "stage6": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE03_912FC8A63179A943",
+            "DE_DE03_6786A7AB93821D48"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST secure software development guidance links secure-by-design practices to improved development efficiency and suggests automated code/model review and analysis can lower the effort and resources needed to detect vulnerabilities.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE15_1AEC6DDD669756FF",
+            "DE_DE01_E85CB6412740EF20"
+          ],
+          "scope": "GENERAL",
+          "statement": "Secure AI system development guidance states that secure-by-design requires significant resources throughout the system life cycle, and the AI RMF notes that resources such as staffing and funding must be gauged for AI risk management goals, without quantified cost for this deployment.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_NEUTRAL_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 profile indicates that enterprise-grade technology and specialized expertise may be needed, but it does not supply a budget, price, ROI, TCO, staffing count, or procurement ceiling.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial quantities remain unknown.",
+        "No DDoS-specific adoption economics are established."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "evidence_gaps": [
+        "No supplied evidence provides numeric budget, price, ROI, TCO, staffing count, procurement ceiling, or DDoS-specific adoption cost/benefit for NLP/LLM in the CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "General secure AI development guidance indicates possible efficiency benefits and resource burdens, but no supplied evidence quantifies budget, TCO, ROI, staffing, procurement limits, or DDoS-specific adoption economics.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE01_0B9728FE19095FD0",
+            "DE_DE15_271AFADC7B3D5999",
+            "DE_DE15_7C1849B1FD93975C"
+          ],
+          "scope": "GENERAL",
+          "statement": "General AI governance guidance provides enabling institutional practices, including documented accountability and AI inventory, secure development documentation, and secure operation with monitoring, logging, update management, and incident response.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE02_007F05150CB46131"
+          ],
+          "scope": "GENERAL",
+          "statement": "Generative AI guidance identifies incident reporting in compliance with legal and regulatory requirements as a constraint, but the cited examples are not established as EU-specific obligations for this deployment.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_NEUTRAL_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile describes an enterprise that may face regulatory burdens, but it does not identify the EU legal or regulatory applicability for NLP/LLM DDoS safeguards.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "EU-specific regulatory applicability remains unestablished.",
+        "Enterprise-specific governance implementation conditions remain unestablished."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "evidence_gaps": [
+        "No supplied evidence establishes EU-specific regulatory applicability or enterprise-specific institutional burden or benefit for deploying NLP/LLM as a DDoS safeguard."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General AI governance evidence can support institutional manageability, while general compliance-reporting evidence creates a constraint, but EU-specific regulatory applicability for this NLP/LLM DDoS safeguard is not established.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE01S_6E6099FA4C2D13D4"
+          ],
+          "scope": "GENERAL",
+          "statement": "Curated DDoS experiments report that few-shot and fine-tuned LLM variants detected DDoS traffic on CICIDS 2017 and an Urban IoT dataset, with fine-tuned variants reporting roughly mid-90-percent accuracy and outperforming the compared MLP baseline.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The same curated DDoS study does not establish turnkey production deployment; performance depended on prompt context or fine-tuning, few-shot results were materially weaker on the harder Urban IoT setting, and the evidence is benchmark-based rather than an enterprise operational deployment or cost study.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_NEUTRAL_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "E_33_ADC8BC66D812799F"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile and NLP/LLM publication-trend record provide context only; they do not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness for this DDoS candidate.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Turnkey production deployment remains unestablished.",
+        "Enterprise operational deployment or cost evidence remains absent."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "evidence_gaps": [
+        "No supplied evidence establishes production integration, real-time operational performance, enterprise deployment maturity, or DDoS-specific mitigation effectiveness under the CIS IG2 reference profile."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Direct DDoS evidence shows possible LLM technical enablement, but the same source limits the evidence to benchmark detection and does not establish turnkey production or enterprise deployment.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "The three lenses jointly show mixed, partial evidence. Technical feasibility has direct benchmark support for LLM-based DDoS detection but lacks turnkey production and enterprise operational evidence. Institutional feasibility has general governance enablement and a general compliance constraint, but EU-specific regulatory applicability is absent. Financial adoption has general efficiency benefits and resource-burden considerations, but no quantified enterprise adoption economics. These gaps leave deployment conditions unmet and the evidence partial rather than definitive.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE03_912FC8A63179A943",
+            "DE_DE03_6786A7AB93821D48"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST secure software development guidance links secure-by-design practices to improved development efficiency and suggests automated code/model review and analysis can lower the effort and resources needed to detect vulnerabilities.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE15_1AEC6DDD669756FF",
+            "DE_DE01_E85CB6412740EF20"
+          ],
+          "scope": "GENERAL",
+          "statement": "Secure AI system development guidance states that secure-by-design requires significant resources throughout the system life cycle, and the AI RMF notes that resources such as staffing and funding must be gauged for AI risk management goals, without quantified cost for this deployment.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_NEUTRAL_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 profile indicates that enterprise-grade technology and specialized expertise may be needed, but it does not supply a budget, price, ROI, TCO, staffing count, or procurement ceiling.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial quantities remain unknown.",
+        "No DDoS-specific adoption economics are established."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence provides numeric budget, price, ROI, TCO, staffing count, procurement ceiling, or DDoS-specific adoption cost/benefit for NLP/LLM in the CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General secure AI development guidance indicates possible efficiency benefits and resource burdens, but no supplied evidence quantifies budget, TCO, ROI, staffing, procurement limits, or DDoS-specific adoption economics.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE01_0B9728FE19095FD0",
+            "DE_DE15_271AFADC7B3D5999",
+            "DE_DE15_7C1849B1FD93975C"
+          ],
+          "scope": "GENERAL",
+          "statement": "General AI governance guidance provides enabling institutional practices, including documented accountability and AI inventory, secure development documentation, and secure operation with monitoring, logging, update management, and incident response.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE02_007F05150CB46131"
+          ],
+          "scope": "GENERAL",
+          "statement": "Generative AI guidance identifies incident reporting in compliance with legal and regulatory requirements as a constraint, but the cited examples are not established as EU-specific obligations for this deployment.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_NEUTRAL_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile describes an enterprise that may face regulatory burdens, but it does not identify the EU legal or regulatory applicability for NLP/LLM DDoS safeguards.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "EU-specific regulatory applicability remains unestablished.",
+        "Enterprise-specific governance implementation conditions remain unestablished."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence establishes EU-specific regulatory applicability or enterprise-specific institutional burden or benefit for deploying NLP/LLM as a DDoS safeguard."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General AI governance evidence can support institutional manageability, while general compliance-reporting evidence creates a constraint, but EU-specific regulatory applicability for this NLP/LLM DDoS safeguard is not established.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE01S_6E6099FA4C2D13D4"
+          ],
+          "scope": "GENERAL",
+          "statement": "Curated DDoS experiments report that few-shot and fine-tuned LLM variants detected DDoS traffic on CICIDS 2017 and an Urban IoT dataset, with fine-tuned variants reporting roughly mid-90-percent accuracy and outperforming the compared MLP baseline.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The same curated DDoS study does not establish turnkey production deployment; performance depended on prompt context or fine-tuning, few-shot results were materially weaker on the harder Urban IoT setting, and the evidence is benchmark-based rather than an enterprise operational deployment or cost study.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_NEUTRAL_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "E_33_ADC8BC66D812799F"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile and NLP/LLM publication-trend record provide context only; they do not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness for this DDoS candidate.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Turnkey production deployment remains unestablished.",
+        "Enterprise operational deployment or cost evidence remains absent."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence establishes production integration, real-time operational performance, enterprise deployment maturity, or DDoS-specific mitigation effectiveness under the CIS IG2 reference profile."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Direct DDoS evidence shows possible LLM technical enablement, but the same source limits the evidence to benchmark detection and does not establish turnkey production or enterprise deployment.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "bca7941ef41e7dfdc648ed35097208ba015126a2e6996bc5fde16cbb59b94478",
+  "withheld_evidence_id": null
+}

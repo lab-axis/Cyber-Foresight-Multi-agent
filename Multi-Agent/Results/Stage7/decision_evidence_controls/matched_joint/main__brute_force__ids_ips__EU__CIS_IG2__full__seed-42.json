@@ -1,0 +1,255 @@
+{
+  "identity": {
+    "case_id": "main__brute_force__ids_ips",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "ca14f085abbdb1b2581ee8458e123a9ec2b13292b87bf471c49cb8ef52b0093d",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "3d293d6423b97fc13771ceb2589101a7b893b5262ab9176fba7cc04416cc7f3a",
+    "source_hashes": {
+      "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+      "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+      "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+      "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+      "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+      "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "fin_general_support",
+          "evidence_ids": [
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE16_E455D97291B61E2A",
+            "DE_DE04_DB6B29C9BE1B0F05"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_general_challenge",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_deployment_context",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "General financial/adoption evidence is mixed. Eligible adoption-benefit guidance describes automation, SIEM integration, and integrated IDPS management as reducing manual review effort and streamlining administrator work. Eligible adoption-burden guidance identifies skills, testing, tuning, training, and maintenance demands. No numeric budget, TCO, ROI, or staffing count is supplied, so financial feasibility remains partially supported but not conclusively established.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "inst_general_support",
+          "evidence_ids": [
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE04_0B77B88875745973"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_deployment_context_gap",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General governance guidance supports IDS/IPS feasibility as an enablement factor for governance and continuous monitoring. The supplied record does not establish EU-specific or CIS IG2 deployment-specific regulatory applicability, so the general +1 direction is retained with PARTIAL sufficiency rather than a mixed or insufficient context.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "tech_general_support",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_general_challenge",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_deployment_context",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "General technical evidence is mixed. A direct 2024 case study supports using IDS components, including Snort and Fail2Ban, for brute-force defense, while a direct limitation finding shows disciplined distributed low-rate brute-force can evade ordinary IDS/IPS rules. Neither general finding establishes product/version-specific or CIS IG2/EU-specific technical success, and deployment-maturity conditions remain unmet.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "No recommendation class is selected. General evidence is used only as general feasibility support or challenge, not as proof of CIS IG2/EU-specific deployment success. Missing numeric financial data and missing EU-specific regulatory applicability are preserved as unmet conditions.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "fin_general_support",
+          "evidence_ids": [
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE16_E455D97291B61E2A",
+            "DE_DE04_DB6B29C9BE1B0F05"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_general_challenge",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_deployment_context",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General financial/adoption evidence is mixed. Eligible adoption-benefit guidance describes automation, SIEM integration, and integrated IDPS management as reducing manual review effort and streamlining administrator work. Eligible adoption-burden guidance identifies skills, testing, tuning, training, and maintenance demands. No numeric budget, TCO, ROI, or staffing count is supplied, so financial feasibility remains partially supported but not conclusively established.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "inst_general_support",
+          "evidence_ids": [
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE04_0B77B88875745973"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_deployment_context_gap",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General governance guidance supports IDS/IPS feasibility as an enablement factor for governance and continuous monitoring. The supplied record does not establish EU-specific or CIS IG2 deployment-specific regulatory applicability, so the general +1 direction is retained with PARTIAL sufficiency rather than a mixed or insufficient context.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "tech_general_support",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_general_challenge",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_deployment_context",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General technical evidence is mixed. A direct 2024 case study supports using IDS components, including Snort and Fail2Ban, for brute-force defense, while a direct limitation finding shows disciplined distributed low-rate brute-force can evade ordinary IDS/IPS rules. Neither general finding establishes product/version-specific or CIS IG2/EU-specific technical success, and deployment-maturity conditions remain unmet.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "2da458a5063c83ac71c14fc86063848369080ed03243e14311e2695d0d4bb7d0",
+  "withheld_evidence_id": null
+}

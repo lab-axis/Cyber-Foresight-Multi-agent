@@ -1,0 +1,34 @@
+{
+  "identity": {
+    "arm": "single_direct_end_to_end",
+    "case_id": "main__insider_threat__cryptography",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "88fdd3b00e94cc9fcf7217b09e48d4cca68fa84c14d4a9b05899077b3e044fc6",
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "18e7e404cf766858cf448d8ce4555ada40d799456d13936b3970d594a5d69f90",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "745146f909ebc5a9a778ef176e3abf279f1cfd0e3ec4e61076fad47b2ac6be8f",
+    "seed": 44,
+    "source_hashes": {
+      "stage1": "048aa9e6dd139b26dd32450ec0fda405bb883a62497ed108691cf7e840b16872",
+      "stage2": "3ddd4def226a25d78c6243f4382fb30d384b7793f7191e62a95b79e660f11d06",
+      "stage3_context": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+      "stage4_context": "903f67ef37fb5c791e24edf9e95e89eab3871357daaf710dbd35a12093a6e9d9",
+      "stage5": "21782b723a9d2a4314a244c1d347b57acf3ce4923dab23db75a071d0d7ee8b79",
+      "stage6": "37b347c8a4f93dbe5bae0f66037abd59c4c085642673b2cc7f66fc31c0c1fbd9"
+    },
+    "version": "reviewer2-external-reference-report-audit-v1"
+  },
+  "output": {
+    "recommendation": "RECOMMEND_PILOT",
+    "report": "The candidate is a qualified pilot recommendation rather than a full deployment. The EU context supports cryptography as a baseline and regulatory control: GDPR Article 32 includes pseudonymisation and encryption of personal data where personal data is processed [EVIDENCE:E_31_A0893427DD4F5B04], and EU NIS2 material references encryption as part of state-of-the-art security and privacy measures and procurement-related encryption expectations [EVIDENCE:E_31_6BBE82F2BAC198B3][EVIDENCE:E_31_C1CFA326F0420DCA]. NIST SP 800-53 SC-13 requires implementation of defined cryptography consistent with law, FIPS, or NSA-approved options where applicable [EVIDENCE:E_25_746173685B235ED2]. CISA CPG recommends strong, current SSL/TLS for IT traffic and remote OT connections, identification of weak encryption, update to strong algorithms, and PQC consideration [EVIDENCE:E_23_534489D29C38B327]. NIST SP 800-131A identifies AES as acceptable while deprecating or disallowing older symmetric ciphers [EVIDENCE:DE_DE09_6719137897848A9E], and TLS/IPSec guidance provides implementation pathways for transport protection, key exchange, path validation, and encryption of sensitive data [EVIDENCE:DE_DE10_A086B3193CD6440B][EVIDENCE:DE_DE18_EAA59A9B7CEAD276][EVIDENCE:DE_DE18_CDC975345637E009]. This makes technical feasibility and institutional applicability plausible for a CIS IG2 enterprise, which is multi-department, may handle sensitive information, faces regulatory burdens, and may need enterprise-grade technology and specialized expertise [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. The insider-threat forecast justifies attention: threat state is increasing and threat_minus_pmt gap is positive through 2027, although the slope is very small and the 2027 gap is lower than 2026. The mitigation confidence interval is wider than the threat interval, so the forecast does not establish a large or stable deployment gap. Direct insider-threat evidence is mixed: an insider-threat study warns that authorized attackers have stronger capabilities and conventional encryption is not automatically sufficient; effectiveness depends on cryptographic design and insider-access model [EVIDENCE:AE04C_F084D028D8E2AE06]. The same study provides prototype-level support that cryptography can be engineered for insider-threat data leakage through context-based key generation and file marking [EVIDENCE:AE04S_2674461DBC059388], but that is not enterprise deployment effectiveness. General NIST, CISA, and EU guidance does not prove that a specific deployment will reduce insider leakage in this reference enterprise. Financial and adoption feasibility cannot be fully established because the scenario assumes no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling. NIST key-management guidance requires role definitions, access control, logging, and traceability for key access, which creates operational burden and possible need for specialized expertise [EVIDENCE:DE_DE08_031120C53EF050F3]. CISA insider-threat guidance emphasizes that insider programs require tailored technology and personnel, and cost can shape program design [EVIDENCE:E_22_C239828119FC69CD], but the supplied evidence does not quantify this candidate's financial burden. Publication activity for cryptography is increasing, but that does not establish deployment maturity or operational effectiveness [EVIDENCE:E_33_CDE0F421E4D797ED]. Missing deployment information includes the actual data flows to protect, data-at-rest and data-in-transit surfaces, insider access model, key ownership, HSM or KMS capacity, existing TLS/IPSec inventory, algorithm retirement schedule, access-control and audit integration, data classification, performance constraints, and whether the candidate is generic hardening or a specialized anti-insider construction. Dissent: a stronger HOLD position is defensible because generic cryptography is not shown to be sufficient against authorized insiders, no enterprise-specific ROI or effectiveness is supplied, and the forecast gap is modest with nontrivial uncertainty. DO_NOT_RECOMMEND is not supported because EU legal material, NIST/CISA guidance, and the insider-threat prototype indicate that cryptography can be a relevant, standards-aligned control when scoped correctly. Decision conditions: pilot only for sensitive data and insider-access paths; use approved algorithms such as AES where applicable and avoid deprecated ciphers [EVIDENCE:DE_DE09_6719137897848A9E]; implement TLS or IPSec according to sensitivity and feasibility [EVIDENCE:DE_DE10_A086B3193CD6440B][EVIDENCE:DE_DE18_CDC975345637E009]; add key-management accountability, traceability, and logging [EVIDENCE:DE_DE08_031120C53EF050F3]; combine with access control and insider-threat monitoring rather than treating cryptography as standalone [EVIDENCE:AE04C_F084D028D8E2AE06][EVIDENCE:E_22_C239828119FC69CD]; evaluate whether a specialized construction such as context-based key generation/file marking is needed [EVIDENCE:AE04S_2674461DBC059388]; and define measurable success criteria without assuming numeric budget or ROI."
+  },
+  "sha256": "f8585dbb0699ad73690debe882b67a06c2bc33fb1e4f0fec881e9e5a075a5d57"
+}

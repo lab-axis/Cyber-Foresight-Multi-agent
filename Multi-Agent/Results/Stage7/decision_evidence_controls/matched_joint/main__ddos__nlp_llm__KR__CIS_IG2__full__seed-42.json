@@ -1,0 +1,249 @@
+{
+  "identity": {
+    "case_id": "main__ddos__nlp_llm",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "60ff4b9a530472e4824431665f970f1734c778ec1765732cb8077c39edb191fd",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "0c021e7346c9bf8b8d563c36a3dce2de0f6fc1c9d3bb8d4c3fc103cf84289d06",
+    "source_hashes": {
+      "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+      "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+      "stage3_context": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+      "stage4_context": "10c834266961c7c4ea048c04a09db58d572d8606365b27c21677992d23f5b7ea",
+      "stage5": "86d070634eb0c7cff097e1c054be40d2b7c670b208640da9ea80b40d55a8683b",
+      "stage6": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "DE_DE03_6786A7AB93821D48",
+            "DE_DE03_912FC8A63179A943"
+          ],
+          "scope": "GENERAL",
+          "statement": "Secure generative AI practices can provide general adoption benefits through efficiency and reduced vulnerability-detection effort.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "DE_DE15_1AEC6DDD669756FF",
+            "DE_DE01_E85CB6412740EF20"
+          ],
+          "scope": "GENERAL",
+          "statement": "Secure AI development and AI risk management impose lifecycle resource burdens.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "A stronger financial feasibility assessment would require enterprise-specific resourcing, budget, or procurement evidence."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_gaps": [
+        "No numeric budget, price, TCO, ROI, staffing count, procurement ceiling, or KR/CIS IG2-specific cost evidence is supplied.",
+        "Financial adoption cannot be quantified for the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial evidence is mixed and qualitative: secure generative AI practices may reduce some effort, but lifecycle resource requirements and risk-management resourcing remain unmet deployment conditions.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "DE_DE01_0B9728FE19095FD0",
+            "DE_DE15_271AFADC7B3D5999",
+            "DE_DE15_7C1849B1FD93975C"
+          ],
+          "scope": "GENERAL",
+          "statement": "AI governance and secure-development guidance provides general institutional enablement for deploying NLP/LLM systems.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "DE_DE02_007F05150CB46131"
+          ],
+          "scope": "GENERAL",
+          "statement": "Generative AI guidance introduces compliance-related constraints for institutional adoption.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Deployment-specific institutional support would require additional KR regulatory applicability evidence and evidence of enterprise governance implementation."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_gaps": [
+        "No KR-specific regulatory_applicability evidence is supplied, so deployment-specific institutional feasibility cannot be established.",
+        "No enterprise-specific evidence shows that the reference CIS IG2 organization has adopted or can adopt the required AI governance controls for NLP/LLM."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Institutional evidence is general and mixed: governance frameworks can support responsible AI deployment, while compliance guidance identifies constraints; the supplied evidence does not establish KR/CIS IG2-specific institutional readiness.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "AE01S_6E6099FA4C2D13D4"
+          ],
+          "scope": "GENERAL",
+          "statement": "NLP/LLM has direct benchmark-level technical enablement for DDoS detection.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "GENERAL",
+          "statement": "The DDoS LLM study does not establish production deployment or enterprise operational effectiveness.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Production deployment would require validation beyond benchmark detection, including prompt/fine-tuning stability and enterprise operational fit."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_gaps": [
+        "No supplied evidence establishes KR-specific or CIS IG2-specific operational deployment, integration, maintenance, reliability, or cost performance for NLP/LLM against DDoS."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Technical evidence is genuinely mixed: benchmark DDoS detection support exists, but the same source limits it to non-production benchmark conditions and lacks enterprise deployment validation.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "All three lenses show mixed or context-limited evidence; no positive or negative feasibility claim is made stronger than the supplied evidence supports.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "DE_DE03_6786A7AB93821D48",
+            "DE_DE03_912FC8A63179A943"
+          ],
+          "scope": "GENERAL",
+          "statement": "Secure generative AI practices can provide general adoption benefits through efficiency and reduced vulnerability-detection effort.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "DE_DE15_1AEC6DDD669756FF",
+            "DE_DE01_E85CB6412740EF20"
+          ],
+          "scope": "GENERAL",
+          "statement": "Secure AI development and AI risk management impose lifecycle resource burdens.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "A stronger financial feasibility assessment would require enterprise-specific resourcing, budget, or procurement evidence."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, TCO, ROI, staffing count, procurement ceiling, or KR/CIS IG2-specific cost evidence is supplied.",
+        "Financial adoption cannot be quantified for the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial evidence is mixed and qualitative: secure generative AI practices may reduce some effort, but lifecycle resource requirements and risk-management resourcing remain unmet deployment conditions.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "DE_DE01_0B9728FE19095FD0",
+            "DE_DE15_271AFADC7B3D5999",
+            "DE_DE15_7C1849B1FD93975C"
+          ],
+          "scope": "GENERAL",
+          "statement": "AI governance and secure-development guidance provides general institutional enablement for deploying NLP/LLM systems.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "DE_DE02_007F05150CB46131"
+          ],
+          "scope": "GENERAL",
+          "statement": "Generative AI guidance introduces compliance-related constraints for institutional adoption.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Deployment-specific institutional support would require additional KR regulatory applicability evidence and evidence of enterprise governance implementation."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No KR-specific regulatory_applicability evidence is supplied, so deployment-specific institutional feasibility cannot be established.",
+        "No enterprise-specific evidence shows that the reference CIS IG2 organization has adopted or can adopt the required AI governance controls for NLP/LLM."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Institutional evidence is general and mixed: governance frameworks can support responsible AI deployment, while compliance guidance identifies constraints; the supplied evidence does not establish KR/CIS IG2-specific institutional readiness.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "AE01S_6E6099FA4C2D13D4"
+          ],
+          "scope": "GENERAL",
+          "statement": "NLP/LLM has direct benchmark-level technical enablement for DDoS detection.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "GENERAL",
+          "statement": "The DDoS LLM study does not establish production deployment or enterprise operational effectiveness.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Production deployment would require validation beyond benchmark detection, including prompt/fine-tuning stability and enterprise operational fit."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence establishes KR-specific or CIS IG2-specific operational deployment, integration, maintenance, reliability, or cost performance for NLP/LLM against DDoS."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Technical evidence is genuinely mixed: benchmark DDoS detection support exists, but the same source limits it to non-production benchmark conditions and lacks enterprise deployment validation.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "73dd66cad310c5f95d3636636a3aaf6e85916e0f4b5d38d0976ffb18e9b62c8e",
+  "withheld_evidence_id": null
+}

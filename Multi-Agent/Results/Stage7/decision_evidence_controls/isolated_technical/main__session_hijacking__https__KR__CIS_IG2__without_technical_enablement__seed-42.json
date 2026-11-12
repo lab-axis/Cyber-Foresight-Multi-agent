@@ -1,0 +1,84 @@
+{
+  "identity": {
+    "case_id": "main__session_hijacking__https",
+    "condition": "without_technical_enablement",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "d17866c28cd00ef687b5b82b5c7917c1c8ee54954ccfea9ba974ebd1e456a048",
+    "isolated": true,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "eccc7ab867bdf4e383199100fcba71bc8eff80b04e282c37323832f5a744e7a4",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "283268a8153993dfc30753afa1c4d1f64303300198578e4c3f22cc617d7d7da4",
+    "seed": 42,
+    "shadow_object_sha256": "2e1f65ade03ae4de732cb662c84ddaab2e8d56d4b359a00ddcfacc7b884a7152",
+    "source_hashes": {
+      "stage1": "5b8473203535452075465098dd80d84de51fa302487b5d5c4f382f0f74f6b2d1",
+      "stage2": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+      "stage3_context": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+      "stage4_context": "d1853be1e80bea8b4894668ef60ba1d5b4f878e2f8334340759ec658b9685c3d",
+      "stage5": "31865f18b575039e9744f107701fda16da6862860b705e5c4e2439a55372649d",
+      "stage6": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS secure transport alone does not cover all session-hijacking paths, because session tokens can still be stolen through XSS or malicious browser extensions after a secure channel exists.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "The supplied technical limitation leaves an unmet condition: HTTPS alone would not address all session-hijacking paths, and the supplied evidence does not establish enterprise-specific controls or deployment conditions to close that gap."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_gaps": [
+        "No eligible technical_enablement evidence establishes that HTTPS can be deployed or operated in the CIS IG2 reference enterprise to fully address the residual session-hijacking paths identified in the limitation."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "The only directionally eligible evidence is a technical limitation: HTTPS secure transport does not prevent all session-hijacking paths, including session-token theft via XSS or malicious browser extensions. This challenges the feasibility of HTTPS as a standalone technical mitigation for the session-hijacking threat in the CIS IG2 reference enterprise. The evidence is direct for the PMT and threat, but it does not establish enterprise-specific deployment effectiveness or completeness, so sufficiency is partial.",
+      "stance": -1
+    }
+  },
+  "raw": {
+    "claims": [
+      {
+        "claim_id": "TECH_CHALLENGE_1",
+        "evidence_ids": [
+          "AE07C_9CBF5980D3BA474A"
+        ],
+        "scope": "GENERAL",
+        "statement": "HTTPS secure transport alone does not cover all session-hijacking paths, because session tokens can still be stolen through XSS or malicious browser extensions after a secure channel exists.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "The supplied technical limitation leaves an unmet condition: HTTPS alone would not address all session-hijacking paths, and the supplied evidence does not establish enterprise-specific controls or deployment conditions to close that gap."
+    ],
+    "constraints": [],
+    "evidence_gaps": [
+      "No eligible technical_enablement evidence establishes that HTTPS can be deployed or operated in the CIS IG2 reference enterprise to fully address the residual session-hijacking paths identified in the limitation."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "rationale": "The only directionally eligible evidence is a technical limitation: HTTPS secure transport does not prevent all session-hijacking paths, including session-token theft via XSS or malicious browser extensions. This challenges the feasibility of HTTPS as a standalone technical mitigation for the session-hijacking threat in the CIS IG2 reference enterprise. The evidence is direct for the PMT and threat, but it does not establish enterprise-specific deployment effectiveness or completeness, so sufficiency is partial.",
+    "stance": -1
+  },
+  "recommendation": null,
+  "sha256": "75968a4d7afc9ba0c57f604cab3ca68ac18cdc26d804d776b636d821e7825abe",
+  "withheld_evidence_id": "AE07S_C1EF15B9628497F0"
+}

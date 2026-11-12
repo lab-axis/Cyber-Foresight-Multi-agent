@@ -1,0 +1,34 @@
+{
+  "identity": {
+    "arm": "single_direct_end_to_end",
+    "case_id": "main__session_hijacking__https",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "c0cb5c1f4c23e405d6ecb9824b9698467628a138e2b20889d6c73c8b6e646e38",
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "18e7e404cf766858cf448d8ce4555ada40d799456d13936b3970d594a5d69f90",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "745146f909ebc5a9a778ef176e3abf279f1cfd0e3ec4e61076fad47b2ac6be8f",
+    "seed": 43,
+    "source_hashes": {
+      "stage1": "5b8473203535452075465098dd80d84de51fa302487b5d5c4f382f0f74f6b2d1",
+      "stage2": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+      "stage3_context": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+      "stage4_context": "d1853be1e80bea8b4894668ef60ba1d5b4f878e2f8334340759ec658b9685c3d",
+      "stage5": "31865f18b575039e9744f107701fda16da6862860b705e5c4e2439a55372649d",
+      "stage6": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+    },
+    "version": "reviewer2-external-reference-report-audit-v1"
+  },
+  "output": {
+    "recommendation": "RECOMMEND_PILOT",
+    "report": "The evidence supports HTTPS as an important transport-layer control for interception-oriented session hijacking, but it does not support HTTPS as a standalone enterprise-wide fix. A pilot is the appropriate qualified decision because the control is institutionally plausible for a CIS IG2 US enterprise, yet the supplied evidence explicitly shows residual session-hijacking paths and lacks deployment-specific effectiveness data. [EVIDENCE:AE07S_C1EF15B9628497F0] [EVIDENCE:AE07C_9CBF5980D3BA474A] [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]"
+  },
+  "sha256": "b2062c24a8fa8adb961b9ae14cac8b0afdb0a434c6cc5a8a1ef4569e9ff22b30"
+}

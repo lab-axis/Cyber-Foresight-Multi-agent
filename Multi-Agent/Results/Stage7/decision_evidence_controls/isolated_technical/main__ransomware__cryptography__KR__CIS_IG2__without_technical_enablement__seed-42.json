@@ -1,0 +1,118 @@
+{
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "without_technical_enablement",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "1b7c1b168f29440a5e2d38fdfc1e85f1c8b59e96b9db075db6dc69a26b508162",
+    "isolated": true,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "eccc7ab867bdf4e383199100fcba71bc8eff80b04e282c37323832f5a744e7a4",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "283268a8153993dfc30753afa1c4d1f64303300198578e4c3f22cc617d7d7da4",
+    "seed": 42,
+    "shadow_object_sha256": "0be9257e8b72b7b0911867d5f862f287368c62ae7a9b35f416f2b65a043bc2a9",
+    "source_hashes": {
+      "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+      "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+      "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+      "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+      "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+      "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "CLM_T1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "Official guidance confirms that cryptographic controls such as TLS and IPSec are standard, but does not prove their effectiveness against Ransomware in the reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "CLM_T2",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPGs recommend strong and agile encryption for IT and OT traffic, but the technical feasibility of deploying this for Ransomware mitigation in the specific reference enterprise is not established.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "CLM_T3",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 profile indicates that the enterprise may require specialized expertise and enterprise-grade technology, which introduces potential deployment challenges for cryptographic safeguards, but does not establish infeasibility.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "evidence_gaps": [
+        "No evidence is provided that directly links the implementation of cryptography to the mitigation of Ransomware in the CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+      "lens_type": "technical_feasibility",
+      "rationale": "The available evidence confirms the existence and standardization of cryptographic practices (e.g., NIST guidance, CPGs, TLS/IPSec deployment), but it does not establish that the CRYPTOGRAPHY PMT is technically feasible or effective against the specific Ransomware threat in the given CIS IG2 reference enterprise. No evidence is provided that directly links the implementation or configuration of cryptography to the mitigation of Ransomware in this deployment context.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "claims": [
+      {
+        "claim_id": "CLM_T1",
+        "evidence_ids": [
+          "DE_DE18_EAA59A9B7CEAD276",
+          "DE_DE18_CDC975345637E009"
+        ],
+        "scope": "GENERAL",
+        "statement": "Official guidance confirms that cryptographic controls such as TLS and IPSec are standard, but does not prove their effectiveness against Ransomware in the reference enterprise.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLM_T2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPGs recommend strong and agile encryption for IT and OT traffic, but the technical feasibility of deploying this for Ransomware mitigation in the specific reference enterprise is not established.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLM_T3",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The CIS IG2 profile indicates that the enterprise may require specialized expertise and enterprise-grade technology, which introduces potential deployment challenges for cryptographic safeguards, but does not establish infeasibility.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [],
+    "constraints": [],
+    "evidence_gaps": [
+      "No evidence is provided that directly links the implementation of cryptography to the mitigation of Ransomware in the CIS IG2 reference enterprise."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+    "rationale": "The available evidence confirms the existence and standardization of cryptographic practices (e.g., NIST guidance, CPGs, TLS/IPSec deployment), but it does not establish that the CRYPTOGRAPHY PMT is technically feasible or effective against the specific Ransomware threat in the given CIS IG2 reference enterprise. No evidence is provided that directly links the implementation or configuration of cryptography to the mitigation of Ransomware in this deployment context.",
+    "stance": 0
+  },
+  "recommendation": null,
+  "sha256": "0e9a307896a6f5612dca5b81102f4e0dc11abcb5a0a0c8b568839d7666503785",
+  "withheld_evidence_id": "AE03S_C5AF41A880A404C2"
+}

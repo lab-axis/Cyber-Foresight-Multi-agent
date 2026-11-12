@@ -1,0 +1,323 @@
+{
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "601df5e8d2b3dc9578a77aad7e71d4ac51d31b54ed2ef8fc6c4aca10a3246b95",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "bb93d44ba33215926b277a920b86e497589cff5acf9f7ce6cb71eaed57a083ee",
+    "source_hashes": {
+      "stage1": "304807a460c79b97a7c155ac0f3a11e974386cf0363fc072fef87238f7525724",
+      "stage2": "e32d514b41e64ac386fed97a222cbc7fd92d7328e840ea7c0bd6ce0bf758352d",
+      "stage3_context": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+      "stage4_context": "b197de3415acc19c31e3f821ed025c29e9bf15b3b293e7c0ad5f6b35b1ef2cee",
+      "stage5": "f33b3c4296fd820cb26a9525899ee8fc2a36c30f0775e3ce10ae5de1aa804127",
+      "stage6": "ec942bd1085a56ecfa8a3e7863ae3ce4b7791dc5e1d96dd1f7a878f67d61e958"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA zero-trust maturity guidance states that, in the long term, zero trust can enable a more prudent allocation of security investments, which is a qualitative adoption benefit.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA",
+            "DE_DE12_CBF6FBB1313D37AF",
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "ABAC and zero-trust guidance describe adoption burdens including development, deployment, and maintenance costs that may exceed benefits; retrofit and policy-transition costs; provider switching costs; and an incremental path that may take years and initially add costs. These challenge financial adoption feasibility without assuming numeric budget values.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE12_6509E7A6D8467E38"
+          ],
+          "scope": "GENERAL",
+          "statement": "CIS IG2 describes personnel and possible regulatory or enterprise-grade complexity, and zero-trust deployment guidance describes candidate-solution fit and pilot deployment. These contextual factors frame adoption complexity but do not supply budget, ROI, TCO, or staffing quantities.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Demonstrated cost capacity or funding decision",
+        "Ability to absorb implementation, transition, and maintenance burdens",
+        "Assessment of provider switching or transition costs"
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+        "No evidence quantifies whether the long-term adoption benefit offsets the described adoption burdens for the CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial adoption evidence is weighted as challenging feasibility because the supplied adoption-burden evidence directly describes costs, maintenance burdens, retrofit burdens, provider switching costs, and an incremental implementation path that may add initial costs. The only adoption-benefit evidence is qualitative and long-term, so it does not outweigh the more direct burden evidence. Sufficiency remains partial because no numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied.",
+      "stance": -1
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "E_31_96F42990F3AEAC86",
+            "DE_DE11_1E4AAE06CC3795D7",
+            "DE_DE12_E6F93E4AB8722379"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "EU NIS2 recital direction provides regional institutional direction for appropriate access control policies, and NIST ABAC/zero-trust governance guidance supplies mechanisms for policy definition, attribute context, compliance inputs, and access-failure processes. Together they support institutional feasibility in the EU scenario without asserting that the CIS IG2 enterprise is legally in scope.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST digital-identity guidance imposes session, cookie, and access-token handling constraints on access-control implementations, creating compliance requirements that can constrain deployment choices.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "E_31_52DCE9554453ADEF"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "CIS IG2 context describes a multi-department IT enterprise with possible regulatory burdens and enterprise-grade safeguards; EU NIS2 also references access policy and access management in a regional cybersecurity direction. These contextual sources frame the deployment environment but do not by themselves prove legal applicability or operational effectiveness.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Confirmation of EU regulatory applicability to the reference enterprise",
+        "Governance process for access-control policy definition and enforcement",
+        "Compliance with session and access-token handling constraints"
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+      "evidence_gaps": [
+        "No supplied evidence establishes that the CIS IG2 reference enterprise is an essential or important entity under the cited EU framework.",
+        "No EU-specific implementation, enforcement, or audit outcome evidence is supplied for this reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Institutional evidence supports feasibility in the EU scenario because EU primary-source direction names appropriate access control policies and governance guidance provides policy mechanisms for institutionalizing access-control decisions. The compliance-constraint challenge is real but weaker and more general than the EU-specific institutional direction. Sufficiency remains partial because the supplied evidence does not establish that the CIS IG2 reference enterprise is an essential or important entity under the cited EU framework.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE06S_407DDF87C86BB41B"
+          ],
+          "scope": "GENERAL",
+          "statement": "An ATT&CK-informed zero-trust APT risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats, supporting adaptive access control as a targeted-attack defense mechanism in a general technical sense.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "Conventional perimeter and static access-control assumptions are reported to be insufficient for evolving APT behavior, and effective access control depends on continuously updated threat/risk context rather than the control category alone, which limits feasibility for static or context-free access-control deployments.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE12_6509E7A6D8467E38",
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "Zero-trust deployment guidance describes deployment-maturity conditions such as workflow fit, logging, protocol support, pilot programs, and incremental implementation; these are contextual conditions rather than independent proof of technical effectiveness.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Continuous threat/risk context integration",
+        "Policy decision feedback and logging",
+        "Adaptive access-control operation rather than static perimeter-only controls"
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+      "evidence_gaps": [
+        "No supplied evidence establishes that the CIS IG2 reference enterprise can maintain the continuously updated threat/risk context required by the technical-limitation evidence.",
+        "No product, version, architecture, or measured performance evidence is supplied for this enterprise context."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "The technical lens is genuinely mixed: there is direct general technical enablement for adaptive, risk-informed access control against targeted attacks, but there is also direct general technical limitation showing that static or context-free access control is insufficient for evolving APT behavior. The support and challenge claims are equally direct, so the stance is 0.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "No overall recommendation label is provided; lens-level stances and evidence status are reported only for downstream deterministic policy application.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA zero-trust maturity guidance states that, in the long term, zero trust can enable a more prudent allocation of security investments, which is a qualitative adoption benefit.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA",
+            "DE_DE12_CBF6FBB1313D37AF",
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "ABAC and zero-trust guidance describe adoption burdens including development, deployment, and maintenance costs that may exceed benefits; retrofit and policy-transition costs; provider switching costs; and an incremental path that may take years and initially add costs. These challenge financial adoption feasibility without assuming numeric budget values.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE12_6509E7A6D8467E38"
+          ],
+          "scope": "GENERAL",
+          "statement": "CIS IG2 describes personnel and possible regulatory or enterprise-grade complexity, and zero-trust deployment guidance describes candidate-solution fit and pilot deployment. These contextual factors frame adoption complexity but do not supply budget, ROI, TCO, or staffing quantities.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Demonstrated cost capacity or funding decision",
+        "Ability to absorb implementation, transition, and maintenance burdens",
+        "Assessment of provider switching or transition costs"
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+        "No evidence quantifies whether the long-term adoption benefit offsets the described adoption burdens for the CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial adoption evidence is weighted as challenging feasibility because the supplied adoption-burden evidence directly describes costs, maintenance burdens, retrofit burdens, provider switching costs, and an incremental implementation path that may add initial costs. The only adoption-benefit evidence is qualitative and long-term, so it does not outweigh the more direct burden evidence. Sufficiency remains partial because no numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied.",
+      "stance": -1
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "E_31_96F42990F3AEAC86",
+            "DE_DE11_1E4AAE06CC3795D7",
+            "DE_DE12_E6F93E4AB8722379"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "EU NIS2 recital direction provides regional institutional direction for appropriate access control policies, and NIST ABAC/zero-trust governance guidance supplies mechanisms for policy definition, attribute context, compliance inputs, and access-failure processes. Together they support institutional feasibility in the EU scenario without asserting that the CIS IG2 enterprise is legally in scope.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST digital-identity guidance imposes session, cookie, and access-token handling constraints on access-control implementations, creating compliance requirements that can constrain deployment choices.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "E_31_52DCE9554453ADEF"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "CIS IG2 context describes a multi-department IT enterprise with possible regulatory burdens and enterprise-grade safeguards; EU NIS2 also references access policy and access management in a regional cybersecurity direction. These contextual sources frame the deployment environment but do not by themselves prove legal applicability or operational effectiveness.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Confirmation of EU regulatory applicability to the reference enterprise",
+        "Governance process for access-control policy definition and enforcement",
+        "Compliance with session and access-token handling constraints"
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence establishes that the CIS IG2 reference enterprise is an essential or important entity under the cited EU framework.",
+        "No EU-specific implementation, enforcement, or audit outcome evidence is supplied for this reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Institutional evidence supports feasibility in the EU scenario because EU primary-source direction names appropriate access control policies and governance guidance provides policy mechanisms for institutionalizing access-control decisions. The compliance-constraint challenge is real but weaker and more general than the EU-specific institutional direction. Sufficiency remains partial because the supplied evidence does not establish that the CIS IG2 reference enterprise is an essential or important entity under the cited EU framework.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE06S_407DDF87C86BB41B"
+          ],
+          "scope": "GENERAL",
+          "statement": "An ATT&CK-informed zero-trust APT risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats, supporting adaptive access control as a targeted-attack defense mechanism in a general technical sense.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "Conventional perimeter and static access-control assumptions are reported to be insufficient for evolving APT behavior, and effective access control depends on continuously updated threat/risk context rather than the control category alone, which limits feasibility for static or context-free access-control deployments.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE12_6509E7A6D8467E38",
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "Zero-trust deployment guidance describes deployment-maturity conditions such as workflow fit, logging, protocol support, pilot programs, and incremental implementation; these are contextual conditions rather than independent proof of technical effectiveness.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Continuous threat/risk context integration",
+        "Policy decision feedback and logging",
+        "Adaptive access-control operation rather than static perimeter-only controls"
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence establishes that the CIS IG2 reference enterprise can maintain the continuously updated threat/risk context required by the technical-limitation evidence.",
+        "No product, version, architecture, or measured performance evidence is supplied for this enterprise context."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The technical lens is genuinely mixed: there is direct general technical enablement for adaptive, risk-informed access control against targeted attacks, but there is also direct general technical limitation showing that static or context-free access control is insufficient for evolving APT behavior. The support and challenge claims are equally direct, so the stance is 0.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "b503c619295b68f225ae662074d70ee19f21b129cb1dd1a49d7b4885622c2f74",
+  "withheld_evidence_id": null
+}

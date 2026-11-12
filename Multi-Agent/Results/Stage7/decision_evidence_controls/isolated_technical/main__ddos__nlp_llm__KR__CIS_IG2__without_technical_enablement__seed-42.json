@@ -1,0 +1,84 @@
+{
+  "identity": {
+    "case_id": "main__ddos__nlp_llm",
+    "condition": "without_technical_enablement",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "30f9e6235fbd1e65632d34f4553e0fdf9eaed332192a294839e05b92979962db",
+    "isolated": true,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "eccc7ab867bdf4e383199100fcba71bc8eff80b04e282c37323832f5a744e7a4",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "283268a8153993dfc30753afa1c4d1f64303300198578e4c3f22cc617d7d7da4",
+    "seed": 42,
+    "shadow_object_sha256": "3209e6788688fc6d64d90bf9ca90f5e14b3dbcf5d926012035f734401f2328fd",
+    "source_hashes": {
+      "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+      "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+      "stage3_context": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+      "stage4_context": "10c834266961c7c4ea048c04a09db58d572d8606365b27c21677992d23f5b7ea",
+      "stage5": "86d070634eb0c7cff097e1c054be40d2b7c670b208640da9ea80b40d55a8683b",
+      "stage6": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_FEAS_CHALLENGE_1",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NLP/LLM for DDoS is challenged by evidence showing that the supplied DDoS/LLM study does not establish turnkey production deployment; performance depended on prompt context or fine-tuning, few-shot results were materially weaker in a harder Urban IoT setting, and the evidence is benchmark-based rather than an enterprise operational deployment.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Any deployment would require enterprise operational validation, because the supplied DDoS/LLM evidence is benchmark-based rather than an enterprise operational deployment or cost study."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_gaps": [
+        "No technical_enablement evidence is supplied to show that NLP/LLM can reliably perform the intended DDoS-related function in the CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "The supplied evidence includes a direct technical limitation for NLP/LLM use in DDoS: the DDoS/LLM study does not establish turnkey production deployment, performance depended on prompt context or fine-tuning, few-shot results were materially weaker in a harder Urban IoT setting, and the evidence is benchmark-based rather than an enterprise operational deployment. No supplied technical_enablement evidence establishes that NLP/LLM can be effectively deployed for DDoS in this CIS IG2 reference enterprise. The available security-development and secure-operation guidance is contextual only and does not prove technical enablement.",
+      "stance": -1
+    }
+  },
+  "raw": {
+    "claims": [
+      {
+        "claim_id": "TECH_FEAS_CHALLENGE_1",
+        "evidence_ids": [
+          "AE01C_A6798E23EEB1E487"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "NLP/LLM for DDoS is challenged by evidence showing that the supplied DDoS/LLM study does not establish turnkey production deployment; performance depended on prompt context or fine-tuning, few-shot results were materially weaker in a harder Urban IoT setting, and the evidence is benchmark-based rather than an enterprise operational deployment.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "Any deployment would require enterprise operational validation, because the supplied DDoS/LLM evidence is benchmark-based rather than an enterprise operational deployment or cost study."
+    ],
+    "constraints": [],
+    "evidence_gaps": [
+      "No technical_enablement evidence is supplied to show that NLP/LLM can reliably perform the intended DDoS-related function in the CIS IG2 reference enterprise."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "rationale": "The supplied evidence includes a direct technical limitation for NLP/LLM use in DDoS: the DDoS/LLM study does not establish turnkey production deployment, performance depended on prompt context or fine-tuning, few-shot results were materially weaker in a harder Urban IoT setting, and the evidence is benchmark-based rather than an enterprise operational deployment. No supplied technical_enablement evidence establishes that NLP/LLM can be effectively deployed for DDoS in this CIS IG2 reference enterprise. The available security-development and secure-operation guidance is contextual only and does not prove technical enablement.",
+    "stance": -1
+  },
+  "recommendation": null,
+  "sha256": "f9eec369c67fca6c6075c323c51d00598cae0f7fcb174022e5828563cd722ecc",
+  "withheld_evidence_id": "AE01S_6E6099FA4C2D13D4"
+}

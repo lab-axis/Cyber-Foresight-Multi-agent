@@ -1,0 +1,259 @@
+{
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "0ce5debb448fc152fc42dc0c60b7f3c49650a91a10b6c35a6c60fe186dc01922",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "55decb64d7e213318d80a4429ce1a0474a7f7c7def0343e88740307cd45f00d3",
+    "source_hashes": {
+      "stage1": "048aa9e6dd139b26dd32450ec0fda405bb883a62497ed108691cf7e840b16872",
+      "stage2": "3ddd4def226a25d78c6243f4382fb30d384b7793f7191e62a95b79e660f11d06",
+      "stage3_context": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+      "stage4_context": "903f67ef37fb5c791e24edf9e95e89eab3871357daaf710dbd35a12093a6e9d9",
+      "stage5": "21782b723a9d2a4314a244c1d347b57acf3ce4923dab23db75a071d0d7ee8b79",
+      "stage6": "37b347c8a4f93dbe5bae0f66037abd59c4c085642673b2cc7f66fc31c0c1fbd9"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptography adoption has a documented benefit by enabling strong authentication and protecting sensitive data in transit.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "Adoption carries a burden because organizations must maintain current encryption, identify and update weak or outdated cryptography, consider post-quantum implications, and account for feasibility limits in operational environments.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Adoption would require resource capacity for configuration, key management, and ongoing algorithm maintenance.",
+        "Weak or outdated cryptographic usage would need identification and remediation planning.",
+        "Any deployment decision would need explicit financial or resource evidence beyond the supplied qualitative guidance."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied for this reference enterprise.",
+        "No supplied evidence quantifies the financial adoption cost or benefit specifically for CIS IG2 insider-threat cryptography deployment."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial adoption evidence is qualitative and mixed. Guidance describes adoption benefits such as strong authentication and protection of sensitive data in transit, while also describing adoption burdens such as maintaining current TLS/SSL, identifying weak or outdated encryption, and considering post-quantum implications. No numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied, so financial feasibility cannot be treated as sufficiently established.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "E_31_A0893427DD4F5B04",
+            "E_31_6BBE82F2BAC198B3",
+            "DE_DE08_031120C53EF050F3"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "In the EU scenario, encryption is institutionally supported by applicable regulatory material and by key-management governance practices that enable accountable cryptographic use.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "Algorithm-transition guidance requires avoidance of disallowed or deprecated cryptographic algorithms, creating a compliance condition for deployment.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Deployment must be aligned with applicable EU data-protection and cybersecurity expectations where relevant.",
+        "Key-generation, access, use, destruction, and traceability controls must be established for cryptographic material.",
+        "Disallowed or deprecated algorithms must be identified and transitioned where applicable."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944",
+      "evidence_gaps": [
+        "No supplied evidence confirms that the specific CIS IG2 reference enterprise already has the required key-management governance, algorithm inventory, or EU compliance process operating.",
+        "The EU regulatory applicability evidence supports feasibility in the EU scenario but does not by itself prove organization-specific institutional readiness."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "The EU institutional lens is more supportive than challenging. EU regulatory material identifies encryption as an applicable technical measure for sensitive or personal-data processing, and key-management guidance supplies governance enablement through traceability, accountability, and access-control practices. Algorithm-transition guidance remains a compliance condition, but it does not outweigh the EU-specific regulatory applicability evidence.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE04S_2674461DBC059388"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptography can be technically enabled for insider-threat data leakage when the cryptographic construction is specifically designed for the insider-access model.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE04C_F084D028D8E2AE06"
+          ],
+          "scope": "GENERAL",
+          "statement": "Insider-threat settings give authorized attackers stronger capabilities, so conventional encryption is not automatically sufficient and effectiveness depends on cryptographic design and insider-access modeling.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "A cryptographic design must be matched to the insider-access model rather than assumed sufficient from generic encryption.",
+        "Deployment maturity for key management, algorithm selection, and configuration must be established separately for the reference enterprise."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944",
+      "evidence_gaps": [
+        "No supplied evidence establishes that a production-grade, CIS IG2-appropriate insider-threat cryptography deployment is already mature in this reference enterprise.",
+        "The supporting action finding is prototype-level and does not by itself establish enterprise-specific deployment success."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Technical evidence is directly mixed: an insider-threat-specific cryptographic construction is reported as feasible in prototype form, but the same insider-threat setting also limits confidence in conventional encryption because attacker access can be stronger and effectiveness depends on design and access modeling. No enterprise-specific CIS IG2 production deployment evidence is supplied.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "The three lenses were assessed jointly using only supplied evidence. Technical feasibility is mixed at prototype level, EU institutional feasibility is partially supported but not enterprise-specific, and financial adoption remains qualitatively mixed with missing quantitative resource evidence.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptography adoption has a documented benefit by enabling strong authentication and protecting sensitive data in transit.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "Adoption carries a burden because organizations must maintain current encryption, identify and update weak or outdated cryptography, consider post-quantum implications, and account for feasibility limits in operational environments.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Adoption would require resource capacity for configuration, key management, and ongoing algorithm maintenance.",
+        "Weak or outdated cryptographic usage would need identification and remediation planning.",
+        "Any deployment decision would need explicit financial or resource evidence beyond the supplied qualitative guidance."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied for this reference enterprise.",
+        "No supplied evidence quantifies the financial adoption cost or benefit specifically for CIS IG2 insider-threat cryptography deployment."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial adoption evidence is qualitative and mixed. Guidance describes adoption benefits such as strong authentication and protection of sensitive data in transit, while also describing adoption burdens such as maintaining current TLS/SSL, identifying weak or outdated encryption, and considering post-quantum implications. No numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied, so financial feasibility cannot be treated as sufficiently established.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "E_31_A0893427DD4F5B04",
+            "E_31_6BBE82F2BAC198B3",
+            "DE_DE08_031120C53EF050F3"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "In the EU scenario, encryption is institutionally supported by applicable regulatory material and by key-management governance practices that enable accountable cryptographic use.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "Algorithm-transition guidance requires avoidance of disallowed or deprecated cryptographic algorithms, creating a compliance condition for deployment.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Deployment must be aligned with applicable EU data-protection and cybersecurity expectations where relevant.",
+        "Key-generation, access, use, destruction, and traceability controls must be established for cryptographic material.",
+        "Disallowed or deprecated algorithms must be identified and transitioned where applicable."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence confirms that the specific CIS IG2 reference enterprise already has the required key-management governance, algorithm inventory, or EU compliance process operating.",
+        "The EU regulatory applicability evidence supports feasibility in the EU scenario but does not by itself prove organization-specific institutional readiness."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The EU institutional lens is more supportive than challenging. EU regulatory material identifies encryption as an applicable technical measure for sensitive or personal-data processing, and key-management guidance supplies governance enablement through traceability, accountability, and access-control practices. Algorithm-transition guidance remains a compliance condition, but it does not outweigh the EU-specific regulatory applicability evidence.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE04S_2674461DBC059388"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptography can be technically enabled for insider-threat data leakage when the cryptographic construction is specifically designed for the insider-access model.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE04C_F084D028D8E2AE06"
+          ],
+          "scope": "GENERAL",
+          "statement": "Insider-threat settings give authorized attackers stronger capabilities, so conventional encryption is not automatically sufficient and effectiveness depends on cryptographic design and insider-access modeling.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "A cryptographic design must be matched to the insider-access model rather than assumed sufficient from generic encryption.",
+        "Deployment maturity for key management, algorithm selection, and configuration must be established separately for the reference enterprise."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence establishes that a production-grade, CIS IG2-appropriate insider-threat cryptography deployment is already mature in this reference enterprise.",
+        "The supporting action finding is prototype-level and does not by itself establish enterprise-specific deployment success."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Technical evidence is directly mixed: an insider-threat-specific cryptographic construction is reported as feasible in prototype form, but the same insider-threat setting also limits confidence in conventional encryption because attacker access can be stronger and effectiveness depends on design and access modeling. No enterprise-specific CIS IG2 production deployment evidence is supplied.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "0832e585f61f84b37f007c2076c812b7ac6bafa274adbfdb20b7e1ddcc7dbb0a",
+  "withheld_evidence_id": null
+}

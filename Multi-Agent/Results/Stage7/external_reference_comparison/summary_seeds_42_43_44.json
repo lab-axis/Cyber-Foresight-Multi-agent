@@ -1,0 +1,1752 @@
+{
+  "case_cluster_score_differences": [
+    {
+      "case_id": "main__brute_force__ids_ips",
+      "model_score_differences_multi_minus_direct": {
+        "constraints_and_uncertainty": 0.0,
+        "factual_grounding": 0.0,
+        "forecast_modality": 0.0,
+        "internal_decision_coherence": 0.0,
+        "technical_scope": 0.0
+      },
+      "paired_scenarios": 3,
+      "recommendation_agreement_count": 3
+    },
+    {
+      "case_id": "main__ddos__nlp_llm",
+      "model_score_differences_multi_minus_direct": {
+        "constraints_and_uncertainty": 0.0,
+        "factual_grounding": 0.0,
+        "forecast_modality": 0.0,
+        "internal_decision_coherence": 0.0,
+        "technical_scope": 0.0
+      },
+      "paired_scenarios": 3,
+      "recommendation_agreement_count": 0
+    },
+    {
+      "case_id": "main__insider_threat__cryptography",
+      "model_score_differences_multi_minus_direct": {
+        "constraints_and_uncertainty": 0.0,
+        "factual_grounding": -0.6666666666666666,
+        "forecast_modality": -0.3333333333333333,
+        "internal_decision_coherence": 0.0,
+        "technical_scope": 0.0
+      },
+      "paired_scenarios": 3,
+      "recommendation_agreement_count": 3
+    },
+    {
+      "case_id": "main__malware__anomaly_detection",
+      "model_score_differences_multi_minus_direct": {
+        "constraints_and_uncertainty": 0.0,
+        "factual_grounding": 0.0,
+        "forecast_modality": 0.0,
+        "internal_decision_coherence": 0.0,
+        "technical_scope": 0.0
+      },
+      "paired_scenarios": 3,
+      "recommendation_agreement_count": 0
+    },
+    {
+      "case_id": "main__ransomware__cryptography",
+      "model_score_differences_multi_minus_direct": {
+        "constraints_and_uncertainty": 0.0,
+        "factual_grounding": -0.3333333333333333,
+        "forecast_modality": -0.3333333333333333,
+        "internal_decision_coherence": 0.0,
+        "technical_scope": 0.0
+      },
+      "paired_scenarios": 3,
+      "recommendation_agreement_count": 3
+    },
+    {
+      "case_id": "main__session_hijacking__https",
+      "model_score_differences_multi_minus_direct": {
+        "constraints_and_uncertainty": 0.0,
+        "factual_grounding": 0.0,
+        "forecast_modality": 0.0,
+        "internal_decision_coherence": 0.0,
+        "technical_scope": 0.0
+      },
+      "paired_scenarios": 3,
+      "recommendation_agreement_count": 0
+    },
+    {
+      "case_id": "main__targeted_attack__access_control",
+      "model_score_differences_multi_minus_direct": {
+        "constraints_and_uncertainty": 0.0,
+        "factual_grounding": 0.0,
+        "forecast_modality": 0.0,
+        "internal_decision_coherence": 0.0,
+        "technical_scope": 0.0
+      },
+      "paired_scenarios": 3,
+      "recommendation_agreement_count": 0
+    }
+  ],
+  "cis_reference": [
+    {
+      "candidate_action": "NLP/LLM",
+      "case_id": "main__ddos__nlp_llm",
+      "retrieval_rule": "Separate technique-only and threat-only BM25 over exact CIS v8.1 IG2 safeguards with fixed vocabulary aliases; no recommendation labels",
+      "technique_direct_count": 0,
+      "technique_ig2_safeguards": [],
+      "technique_relevance": [],
+      "threat": "DDoS",
+      "threat_direct_count": 0,
+      "threat_ig2_safeguards": [],
+      "threat_relevance": []
+    },
+    {
+      "candidate_action": "ANOMALY DETECTION",
+      "case_id": "main__malware__anomaly_detection",
+      "retrieval_rule": "Separate technique-only and threat-only BM25 over exact CIS v8.1 IG2 safeguards with fixed vocabulary aliases; no recommendation labels",
+      "technique_direct_count": 4,
+      "technique_ig2_safeguards": [
+        {
+          "description": "Deploy a host-based intrusion detection solution on enterprise assets, where appropriate and/or supported.",
+          "id": "13.2",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 15.86295,
+          "title": "Deploy a Host-Based Intrusion Detection Solution"
+        },
+        {
+          "description": "Deploy a network intrusion detection solution on enterprise assets, where appropriate. Example implementations include the use of a Network Intrusion Detection System (NIDS) or equivalent cloud service provider (CSP) service.",
+          "id": "13.3",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 12.695566,
+          "title": "Deploy a Network Intrusion Detection Solution"
+        },
+        {
+          "description": "Use behavior-based anti-malware software.",
+          "id": "10.7",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 10.271243,
+          "title": "Use Behavior-Based Anti-Malware Software"
+        },
+        {
+          "description": "Conduct reviews of audit logs to detect anomalies or abnormal events that could indicate a potential threat. Conduct reviews on a weekly, or more frequent, basis.",
+          "id": "8.11",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 9.726283,
+          "title": "Conduct Audit Log Reviews"
+        },
+        {
+          "description": "Enforce and update network-based URL filters to limit an enterprise asset from connecting to potentially malicious or unapproved websites. Example implementations include category-based filtering, reputation-based filtering, or through the use of block lists. Enforce filters for all enterprise assets.",
+          "id": "9.3",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 3.416852,
+          "title": "Maintain and Enforce Network-Based URL Filters"
+        }
+      ],
+      "technique_relevance": [
+        {
+          "rationale": "Host-based intrusion detection systems (HIDS) are primary mechanisms used to perform anomaly detection on enterprise assets.",
+          "relevance": "DIRECT",
+          "safeguard_id": "13.2"
+        },
+        {
+          "rationale": "Network intrusion detection systems (NIDS) are primary mechanisms used to perform anomaly detection on network traffic.",
+          "relevance": "DIRECT",
+          "safeguard_id": "13.3"
+        },
+        {
+          "rationale": "Behavior-based detection is a specific form of anomaly detection that identifies deviations from normal software execution patterns.",
+          "relevance": "DIRECT",
+          "safeguard_id": "10.7"
+        },
+        {
+          "rationale": "The safeguard explicitly mandates the review of audit logs to 'detect anomalies or abnormal events'.",
+          "relevance": "DIRECT",
+          "safeguard_id": "8.11"
+        },
+        {
+          "rationale": "URL filtering is a preventative control based on reputation or categories, not a detection technique based on anomalies.",
+          "relevance": "NOT_RELEVANT",
+          "safeguard_id": "9.3"
+        }
+      ],
+      "threat": "Malware",
+      "threat_direct_count": 5,
+      "threat_ig2_safeguards": [
+        {
+          "description": "Deploy and maintain anti-malware software on all enterprise assets.",
+          "id": "10.1",
+          "implementation_groups": [
+            "IG1",
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 19.37411,
+          "title": "Deploy and Maintain Anti-Malware Software"
+        },
+        {
+          "description": "Centrally manage anti-malware software.",
+          "id": "10.6",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 19.247461,
+          "title": "Centrally Manage Anti-Malware Software"
+        },
+        {
+          "description": "Use behavior-based anti-malware software.",
+          "id": "10.7",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 19.247461,
+          "title": "Use Behavior-Based Anti-Malware Software"
+        },
+        {
+          "description": "Configure anti-malware software to automatically scan removable media.",
+          "id": "10.4",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 18.462377,
+          "title": "Configure Automatic Anti-Malware Scanning of Removable Media"
+        },
+        {
+          "description": "Configure automatic updates for anti-malware signature files on all enterprise assets.",
+          "id": "10.2",
+          "implementation_groups": [
+            "IG1",
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 18.293934,
+          "title": "Configure Automatic Anti-Malware Signature Updates"
+        }
+      ],
+      "threat_relevance": [
+        {
+          "rationale": "The safeguard explicitly requires the deployment of anti-malware software to protect assets from malware.",
+          "relevance": "DIRECT",
+          "safeguard_id": "10.1"
+        },
+        {
+          "rationale": "Central management of anti-malware software is a direct operational requirement for combating malware across the enterprise.",
+          "relevance": "DIRECT",
+          "safeguard_id": "10.6"
+        },
+        {
+          "rationale": "Behavior-based anti-malware software is specifically designed to detect and mitigate malware based on activity.",
+          "relevance": "DIRECT",
+          "safeguard_id": "10.7"
+        },
+        {
+          "rationale": "Scanning removable media with anti-malware software directly addresses a common malware delivery vector.",
+          "relevance": "DIRECT",
+          "safeguard_id": "10.4"
+        },
+        {
+          "rationale": "Updating anti-malware signature files is a direct mechanism for detecting known malware variants.",
+          "relevance": "DIRECT",
+          "safeguard_id": "10.2"
+        }
+      ]
+    },
+    {
+      "candidate_action": "CRYPTOGRAPHY",
+      "case_id": "main__ransomware__cryptography",
+      "retrieval_rule": "Separate technique-only and threat-only BM25 over exact CIS v8.1 IG2 safeguards with fixed vocabulary aliases; no recommendation labels",
+      "technique_direct_count": 5,
+      "technique_ig2_safeguards": [
+        {
+          "description": "Encrypt sensitive data at rest on servers, applications, and databases. Storage-layer encryption, also known as server-side encryption, meets the minimum requirement of this Safeguard. Additional encryption methods may include application-layer encryption, also known as client-side encryption, where access to the data storage device(s) does not permit access to the plain-text data.",
+          "id": "3.11",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 8.961172,
+          "title": "Encrypt Sensitive Data at Rest"
+        },
+        {
+          "description": "Encrypt data on removable media.",
+          "id": "3.9",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 5.814234,
+          "title": "Encrypt Data on Removable Media"
+        },
+        {
+          "description": "Encrypt sensitive data in transit. Example implementations can include: Transport Layer Security (TLS) and Open Secure Shell (OpenSSH).",
+          "id": "3.10",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 5.121057,
+          "title": "Encrypt Sensitive Data in Transit"
+        },
+        {
+          "description": "Encrypt data on end-user devices containing sensitive data. Example implementations can include: Windows BitLocker®, Apple FileVault®, Linux® dm-crypt.",
+          "id": "3.6",
+          "implementation_groups": [
+            "IG1",
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 4.908269,
+          "title": "Encrypt Data on End-User Devices"
+        },
+        {
+          "description": "Protect recovery data with equivalent controls to the original data. Reference encryption or data separation, based on requirements.",
+          "id": "11.3",
+          "implementation_groups": [
+            "IG1",
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 4.187991,
+          "title": "Protect Recovery Data"
+        }
+      ],
+      "technique_relevance": [
+        {
+          "rationale": "The safeguard explicitly requires the encryption of sensitive data at rest, which is a direct application of cryptography.",
+          "relevance": "DIRECT",
+          "safeguard_id": "3.11"
+        },
+        {
+          "rationale": "The safeguard explicitly requires the encryption of data on removable media, which is a direct application of cryptography.",
+          "relevance": "DIRECT",
+          "safeguard_id": "3.9"
+        },
+        {
+          "rationale": "The safeguard explicitly requires the encryption of sensitive data in transit, which is a direct application of cryptography.",
+          "relevance": "DIRECT",
+          "safeguard_id": "3.10"
+        },
+        {
+          "rationale": "The safeguard explicitly requires the encryption of data on end-user devices, which is a direct application of cryptography.",
+          "relevance": "DIRECT",
+          "safeguard_id": "3.6"
+        },
+        {
+          "rationale": "The safeguard explicitly references encryption as a control to protect recovery data, which is a direct application of cryptography.",
+          "relevance": "DIRECT",
+          "safeguard_id": "11.3"
+        }
+      ],
+      "threat": "Ransomware",
+      "threat_direct_count": 0,
+      "threat_ig2_safeguards": [],
+      "threat_relevance": []
+    },
+    {
+      "candidate_action": "CRYPTOGRAPHY",
+      "case_id": "main__insider_threat__cryptography",
+      "retrieval_rule": "Separate technique-only and threat-only BM25 over exact CIS v8.1 IG2 safeguards with fixed vocabulary aliases; no recommendation labels",
+      "technique_direct_count": 5,
+      "technique_ig2_safeguards": [
+        {
+          "description": "Encrypt sensitive data at rest on servers, applications, and databases. Storage-layer encryption, also known as server-side encryption, meets the minimum requirement of this Safeguard. Additional encryption methods may include application-layer encryption, also known as client-side encryption, where access to the data storage device(s) does not permit access to the plain-text data.",
+          "id": "3.11",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 8.961172,
+          "title": "Encrypt Sensitive Data at Rest"
+        },
+        {
+          "description": "Encrypt data on removable media.",
+          "id": "3.9",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 5.814234,
+          "title": "Encrypt Data on Removable Media"
+        },
+        {
+          "description": "Encrypt sensitive data in transit. Example implementations can include: Transport Layer Security (TLS) and Open Secure Shell (OpenSSH).",
+          "id": "3.10",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 5.121057,
+          "title": "Encrypt Sensitive Data in Transit"
+        },
+        {
+          "description": "Encrypt data on end-user devices containing sensitive data. Example implementations can include: Windows BitLocker®, Apple FileVault®, Linux® dm-crypt.",
+          "id": "3.6",
+          "implementation_groups": [
+            "IG1",
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 4.908269,
+          "title": "Encrypt Data on End-User Devices"
+        },
+        {
+          "description": "Protect recovery data with equivalent controls to the original data. Reference encryption or data separation, based on requirements.",
+          "id": "11.3",
+          "implementation_groups": [
+            "IG1",
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 4.187991,
+          "title": "Protect Recovery Data"
+        }
+      ],
+      "technique_relevance": [
+        {
+          "rationale": "The safeguard explicitly requires the encryption of sensitive data at rest, which is a direct application of cryptography.",
+          "relevance": "DIRECT",
+          "safeguard_id": "3.11"
+        },
+        {
+          "rationale": "The safeguard explicitly requires the encryption of data on removable media, which is a direct application of cryptography.",
+          "relevance": "DIRECT",
+          "safeguard_id": "3.9"
+        },
+        {
+          "rationale": "The safeguard explicitly requires the encryption of sensitive data in transit, which is a direct application of cryptography.",
+          "relevance": "DIRECT",
+          "safeguard_id": "3.10"
+        },
+        {
+          "rationale": "The safeguard explicitly requires the encryption of data on end-user devices, which is a direct application of cryptography.",
+          "relevance": "DIRECT",
+          "safeguard_id": "3.6"
+        },
+        {
+          "rationale": "The safeguard explicitly references encryption as a control to protect recovery data, which is a direct application of cryptography.",
+          "relevance": "DIRECT",
+          "safeguard_id": "11.3"
+        }
+      ],
+      "threat": "Insider Threat",
+      "threat_direct_count": 0,
+      "threat_ig2_safeguards": [
+        {
+          "description": "Conduct reviews of audit logs to detect anomalies or abnormal events that could indicate a potential threat. Conduct reviews on a weekly, or more frequent, basis.",
+          "id": "8.11",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 4.863142,
+          "title": "Conduct Audit Log Reviews"
+        }
+      ],
+      "threat_relevance": [
+        {
+          "rationale": "The safeguard describes a general detection mechanism for any 'potential threat' via audit log reviews, which is a primary method for identifying insider threats, but it does not explicitly name or describe the 'Insider Threat' class specifically.",
+          "relevance": "ADJACENT",
+          "safeguard_id": "8.11"
+        }
+      ]
+    },
+    {
+      "candidate_action": "IDS/IPS",
+      "case_id": "main__brute_force__ids_ips",
+      "retrieval_rule": "Separate technique-only and threat-only BM25 over exact CIS v8.1 IG2 safeguards with fixed vocabulary aliases; no recommendation labels",
+      "technique_direct_count": 2,
+      "technique_ig2_safeguards": [
+        {
+          "description": "Deploy a network intrusion detection solution on enterprise assets, where appropriate. Example implementations include the use of a Network Intrusion Detection System (NIDS) or equivalent cloud service provider (CSP) service.",
+          "id": "13.3",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 19.043349,
+          "title": "Deploy a Network Intrusion Detection Solution"
+        },
+        {
+          "description": "Deploy a host-based intrusion detection solution on enterprise assets, where appropriate and/or supported.",
+          "id": "13.2",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 18.859501,
+          "title": "Deploy a Host-Based Intrusion Detection Solution"
+        },
+        {
+          "description": "Enable anti-exploitation features on enterprise assets and software, where possible, such as Microsoft® Data Execution Prevention (DEP), Windows® Defender Exploit Guard (WDEG), or Apple® System Integrity Protection (SIP) and Gatekeeper™.",
+          "id": "10.5",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 3.997077,
+          "title": "Enable Anti-Exploitation Features"
+        },
+        {
+          "description": "Conduct role-specific security awareness and skills training. Example implementations include secure system administration courses for IT professionals, OWASP® Top 10 vulnerability awareness and prevention training for web application developers, and advanced social engineering awareness training for high-profile roles.",
+          "id": "14.9",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 3.538294,
+          "title": "Conduct Role-Specific Security Awareness and Skills Training"
+        }
+      ],
+      "technique_relevance": [
+        {
+          "rationale": "The safeguard explicitly requires the deployment of a network intrusion detection solution (NIDS), which is a direct implementation of the target IDS/IPS.",
+          "relevance": "DIRECT",
+          "safeguard_id": "13.3"
+        },
+        {
+          "rationale": "The safeguard explicitly requires the deployment of a host-based intrusion detection solution, which is a direct implementation of the target IDS/IPS.",
+          "relevance": "DIRECT",
+          "safeguard_id": "13.2"
+        },
+        {
+          "rationale": "Anti-exploitation features provide preventative protection against the types of attacks that IDS/IPS are designed to detect, but they are distinct technical controls.",
+          "relevance": "ADJACENT",
+          "safeguard_id": "10.5"
+        },
+        {
+          "rationale": "Role-specific security training is a general administrative control and does not directly implement or relate to the technical deployment of IDS/IPS.",
+          "relevance": "NOT_RELEVANT",
+          "safeguard_id": "14.9"
+        }
+      ],
+      "threat": "Brute Force Attack",
+      "threat_direct_count": 0,
+      "threat_ig2_safeguards": [
+        {
+          "description": "Establish and maintain a penetration testing program appropriate to the size, complexity, industry, and maturity of the enterprise. Penetration testing program characteristics include scope, such as network, web application, Application Programming Interface (API), hosted services, and physical premise controls; frequency; limitations, such as acceptable hours, and excluded attack types; point of contact information; remediation, such as how findings will be routed internally; and retrospective requirements.",
+          "id": "18.1",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 3.002253,
+          "title": "Establish and Maintain a Penetration Testing Program"
+        },
+        {
+          "description": "Apply secure design principles in application architectures. Secure design principles include the concept of least privilege and enforcing mediation to validate every operation that the user makes, promoting the concept of \"never trust user input.\" Examples include ensuring that explicit error checking is performed and documented for all input, including for size, data type, and acceptable ranges or formats. Secure design also means minimizing the application infrastructure attack surface, such as turning off unprotected ports and services, removing unnecessary programs and files, and renaming or removing default accounts.",
+          "id": "16.10",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 2.403941,
+          "title": "Apply Secure Design Principles in Application Architectures"
+        }
+      ],
+      "threat_relevance": [
+        {
+          "rationale": "A penetration testing program is used to identify vulnerabilities, including susceptibility to brute force attacks, but the safeguard describes the management of the testing program rather than a direct technical control to prevent or mitigate the attack itself.",
+          "relevance": "ADJACENT",
+          "safeguard_id": "18.1"
+        },
+        {
+          "rationale": "While removing default accounts (mentioned in the safeguard) reduces the attack surface for brute force attacks targeting known credentials, the safeguard focuses on general secure design principles rather than explicitly addressing the mechanism of brute force attacks.",
+          "relevance": "ADJACENT",
+          "safeguard_id": "16.10"
+        }
+      ]
+    },
+    {
+      "candidate_action": "ACCESS CONTROL",
+      "case_id": "main__targeted_attack__access_control",
+      "retrieval_rule": "Separate technique-only and threat-only BM25 over exact CIS v8.1 IG2 safeguards with fixed vocabulary aliases; no recommendation labels",
+      "technique_direct_count": 5,
+      "technique_ig2_safeguards": [
+        {
+          "description": "Configure data access control lists based on a user’s need to know. Apply data access control lists, also known as access permissions, to local and remote file systems, databases, and applications.",
+          "id": "3.3",
+          "implementation_groups": [
+            "IG1",
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 16.224052,
+          "title": "Configure Data Access Control Lists"
+        },
+        {
+          "description": "Require MFA for remote network access.",
+          "id": "6.4",
+          "implementation_groups": [
+            "IG1",
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 15.978502,
+          "title": "Require MFA for Remote Network Access"
+        },
+        {
+          "description": "Centralize access control for all enterprise assets through a directory service or SSO provider, where supported.",
+          "id": "6.7",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 15.711676,
+          "title": "Centralize Access Control"
+        },
+        {
+          "description": "Manage access control for assets remotely connecting to enterprise resources. Determine amount of access to enterprise resources based on: up-to-date anti-malware software installed, configuration compliance with the enterprise’s secure configuration process, and ensuring the operating system and applications are up-to-date.",
+          "id": "13.5",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 15.026916,
+          "title": "Manage Access Control for Remote Assets"
+        },
+        {
+          "description": "Establish and follow a documented process, preferably automated, for granting access to enterprise assets upon new hire or role change of a user.",
+          "id": "6.1",
+          "implementation_groups": [
+            "IG1",
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 14.96538,
+          "title": "Establish an Access Granting Process"
+        }
+      ],
+      "technique_relevance": [
+        {
+          "rationale": "The safeguard explicitly describes configuring data access control lists and access permissions.",
+          "relevance": "DIRECT",
+          "safeguard_id": "3.3"
+        },
+        {
+          "rationale": "Multi-factor authentication (MFA) is a direct mechanism for controlling access to remote networks.",
+          "relevance": "DIRECT",
+          "safeguard_id": "6.4"
+        },
+        {
+          "rationale": "The safeguard explicitly addresses the centralization of access control for enterprise assets.",
+          "relevance": "DIRECT",
+          "safeguard_id": "6.7"
+        },
+        {
+          "rationale": "The safeguard explicitly describes managing access control for remote assets based on specific security criteria.",
+          "relevance": "DIRECT",
+          "safeguard_id": "13.5"
+        },
+        {
+          "rationale": "The safeguard explicitly describes the process for granting access to enterprise assets.",
+          "relevance": "DIRECT",
+          "safeguard_id": "6.1"
+        }
+      ],
+      "threat": "Targeted Attack",
+      "threat_direct_count": 1,
+      "threat_ig2_safeguards": [
+        {
+          "description": "Establish and maintain a penetration testing program appropriate to the size, complexity, industry, and maturity of the enterprise. Penetration testing program characteristics include scope, such as network, web application, Application Programming Interface (API), hosted services, and physical premise controls; frequency; limitations, such as acceptable hours, and excluded attack types; point of contact information; remediation, such as how findings will be routed internally; and retrospective requirements.",
+          "id": "18.1",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 3.002253,
+          "title": "Establish and Maintain a Penetration Testing Program"
+        },
+        {
+          "description": "Apply secure design principles in application architectures. Secure design principles include the concept of least privilege and enforcing mediation to validate every operation that the user makes, promoting the concept of \"never trust user input.\" Examples include ensuring that explicit error checking is performed and documented for all input, including for size, data type, and acceptable ranges or formats. Secure design also means minimizing the application infrastructure attack surface, such as turning off unprotected ports and services, removing unnecessary programs and files, and renaming or removing default accounts.",
+          "id": "16.10",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 2.403941,
+          "title": "Apply Secure Design Principles in Application Architectures"
+        }
+      ],
+      "threat_relevance": [
+        {
+          "rationale": "Penetration testing is a validation activity used to identify vulnerabilities that could be exploited by a targeted attack, but it is a discovery process rather than a direct preventative or detective control against the attack itself.",
+          "relevance": "ADJACENT",
+          "safeguard_id": "18.1"
+        },
+        {
+          "rationale": "Secure design principles, specifically minimizing the attack surface and enforcing input validation, directly mitigate the primary vectors and techniques used to execute targeted attacks against applications.",
+          "relevance": "DIRECT",
+          "safeguard_id": "16.10"
+        }
+      ]
+    },
+    {
+      "candidate_action": "HTTPS",
+      "case_id": "main__session_hijacking__https",
+      "retrieval_rule": "Separate technique-only and threat-only BM25 over exact CIS v8.1 IG2 safeguards with fixed vocabulary aliases; no recommendation labels",
+      "technique_direct_count": 3,
+      "technique_ig2_safeguards": [
+        {
+          "description": "Securely manage network infrastructure. Example implementations include version-controlled Infrastructure-as-Code (IaC), and the use of secure network protocols, such as SSH and HTTPS.",
+          "id": "12.3",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 22.696848,
+          "title": "Securely Manage Network Infrastructure"
+        },
+        {
+          "description": "Encrypt sensitive data in transit. Example implementations can include: Transport Layer Security (TLS) and Open Secure Shell (OpenSSH).",
+          "id": "3.10",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 17.817981,
+          "title": "Encrypt Sensitive Data in Transit"
+        },
+        {
+          "description": "Securely manage enterprise assets and software. Example implementations include managing configuration through version-controlled Infrastructure-as-Code (IaC) and accessing administrative interfaces over secure network protocols, such as Secure Shell (SSH) and Hypertext Transfer Protocol Secure (HTTPS). Do not use insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless operationally essential.",
+          "id": "4.6",
+          "implementation_groups": [
+            "IG1",
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 16.986082,
+          "title": "Securely Manage Enterprise Assets and Software"
+        },
+        {
+          "description": "Encrypt sensitive data at rest on servers, applications, and databases. Storage-layer encryption, also known as server-side encryption, meets the minimum requirement of this Safeguard. Additional encryption methods may include application-layer encryption, also known as client-side encryption, where access to the data storage device(s) does not permit access to the plain-text data.",
+          "id": "3.11",
+          "implementation_groups": [
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 3.683744,
+          "title": "Encrypt Sensitive Data at Rest"
+        }
+      ],
+      "technique_relevance": [
+        {
+          "rationale": "The safeguard explicitly lists HTTPS as an example implementation for securely managing network infrastructure.",
+          "relevance": "DIRECT",
+          "safeguard_id": "12.3"
+        },
+        {
+          "rationale": "HTTPS is the primary implementation of Transport Layer Security (TLS) for encrypting sensitive data in transit.",
+          "relevance": "DIRECT",
+          "safeguard_id": "3.10"
+        },
+        {
+          "rationale": "The safeguard explicitly lists HTTPS as a secure network protocol for accessing administrative interfaces to manage enterprise assets and software.",
+          "relevance": "DIRECT",
+          "safeguard_id": "4.6"
+        },
+        {
+          "rationale": "This safeguard focuses on data at rest, whereas HTTPS is a protocol for data in transit.",
+          "relevance": "NOT_RELEVANT",
+          "safeguard_id": "3.11"
+        }
+      ],
+      "threat": "Session Hijacking",
+      "threat_direct_count": 0,
+      "threat_ig2_safeguards": [
+        {
+          "description": "Configure automatic session locking on enterprise assets after a defined period of inactivity. For general purpose operating systems, the period must not exceed 15 minutes. For mobile end-user devices, the period must not exceed 2 minutes.",
+          "id": "4.3",
+          "implementation_groups": [
+            "IG1",
+            "IG2",
+            "IG3"
+          ],
+          "lexical_bm25_score": 6.066681,
+          "title": "Configure Automatic Session Locking on Enterprise Assets"
+        }
+      ],
+      "threat_relevance": [
+        {
+          "rationale": "Automatic session locking prevents unauthorized physical access to an active session on an unattended device, which is a specific vector for session takeover, but it does not directly mitigate logical session hijacking techniques such as session token theft, side-jacking, or XSS-",
+          "relevance": "ADJACENT",
+          "safeguard_id": "4.3"
+        }
+      ]
+    }
+  ],
+  "deterministic_citation_diagnostics": {
+    "direct": {
+      "reports_with_unknown_citations": 1,
+      "reports_without_citations": 0
+    },
+    "original": {
+      "reports_with_unknown_citations": 0,
+      "reports_without_citations": 0
+    }
+  },
+  "direct_baseline_seed_pairs": [
+    {
+      "case_clusters_with_any_change": 0,
+      "scenario_changes": 0,
+      "seed_pair": [
+        42,
+        43
+      ]
+    },
+    {
+      "case_clusters_with_any_change": 0,
+      "scenario_changes": 0,
+      "seed_pair": [
+        42,
+        44
+      ]
+    },
+    {
+      "case_clusters_with_any_change": 0,
+      "scenario_changes": 0,
+      "seed_pair": [
+        43,
+        44
+      ]
+    }
+  ],
+  "evaluator": "Gemma4-31B-it-Q6_K_L: independent model, not expert correctness labels",
+  "limitations": "CIS lexical retrieval is not an actionable four-class gold policy. Gemma is an LLM judge, not an external expert. Score differences do not establish accuracy superiority. The direct baseline and original architecture have differing access to intermediate deliberation by design. Baseline reports for seeds 43/44 have no matched regenerated full-pipeline reports; report-quality comparisons use seed 42 only. Seven cases and overlapping jurisdiction/seed rows are not independent observations. No practitioner panel was conducted.",
+  "mean_ordinal_model_scores": {
+    "constraints_and_uncertainty": {
+      "case_cluster_note": "Descriptive means only; KR/EU/US share case inputs.",
+      "direct_llm": 2.0,
+      "multi_agent": 2.0
+    },
+    "factual_grounding": {
+      "case_cluster_note": "Descriptive means only; KR/EU/US share case inputs.",
+      "direct_llm": 2.0,
+      "multi_agent": 1.8571428571428572
+    },
+    "forecast_modality": {
+      "case_cluster_note": "Descriptive means only; KR/EU/US share case inputs.",
+      "direct_llm": 2.0,
+      "multi_agent": 1.9047619047619047
+    },
+    "internal_decision_coherence": {
+      "case_cluster_note": "Descriptive means only; KR/EU/US share case inputs.",
+      "direct_llm": 2.0,
+      "multi_agent": 2.0
+    },
+    "technical_scope": {
+      "case_cluster_note": "Descriptive means only; KR/EU/US share case inputs.",
+      "direct_llm": 2.0,
+      "multi_agent": 2.0
+    }
+  },
+  "original_semantic_audit": {
+    "by_layer_verdict": {
+      "decision_lens": {
+        "DIRECT_SUPPORT": 38,
+        "PARTIAL_SUPPORT": 4
+      },
+      "final_report_cited_sentence": {
+        "CONTRADICTS": 1,
+        "DIRECT_SUPPORT": 6,
+        "PARTIAL_SUPPORT": 7
+      },
+      "forecast_critic": {
+        "DIRECT_SUPPORT": 13,
+        "PARTIAL_SUPPORT": 1
+      }
+    },
+    "contradiction_id": "48f1a2efc1309e338cb5d5bf",
+    "count": 70
+  },
+  "paired_report_assessments": [
+    {
+      "case_id": "main__ddos__nlp_llm",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 39,
+        "known_cited_record_count": 18,
+        "report_characters": 6305,
+        "unique_cited_record_count": 18,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 28,
+        "known_cited_record_count": 18,
+        "report_characters": 8939,
+        "unique_cited_record_count": 18,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "DO_NOT_RECOMMEND",
+      "recommendation_agrees": false,
+      "scenario_id": "KR__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence, accurately distinguishing between benchmark-based effectiveness (AE01S) and the lack of turnkey production deployment (AE01C). It correctly transfers the CIS IG2 organizational context and acknowledges the absence of region-specific evidence for the Republic of Korea. The forecast data, including the signed gap, slope, and confidence intervals, is preserved and interpreted correctly. All financial and deployment unknowns are explicitly acknowledged. The narrative is internally coherent, leading logically from technical plausibility and operational constraints to a recommendation for a limited pilot with specific, evidence-based conditions for proceeding.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence. It correctly identifies the technical capabilities and limitations of the NLP/LLM candidate for DDoS detection, citing the benchmark success (AE01S_6E6099FA4C2D13D4) and the production-deployment gaps (AE01C_A6798E23EEB1E487). It accurately applies the CIS IG2 organizational context and acknowledges the lack of jurisdiction-specific evidence for the Republic of Korea. Crucially, it preserves forecast modalities, correctly noting that the NLP/LLM state is measured by publication activity (NoP) and identifying a direct contradiction between the historical increasing trend (E_33_ADC8BC66D812799F) and the forecasted decreasing direction. It also correctly observes that the DDoS evidence focuses on bandwidth and vectors rather than incident frequency (NoI). All financial and budget constraints are explicitly acknowledged as unevC",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__ddos__nlp_llm",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 14,
+        "known_cited_record_count": 14,
+        "report_characters": 3077,
+        "unique_cited_record_count": 14,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 22,
+        "known_cited_record_count": 18,
+        "report_characters": 11500,
+        "unique_cited_record_count": 18,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "DO_NOT_RECOMMEND",
+      "recommendation_agrees": false,
+      "scenario_id": "EU__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence. It correctly distinguishes between the benchmark-based effectiveness of LLMs for DDoS detection (AE01S_6E6099FA4C2D13D4) and the lack of turnkey production deployment evidence (AE01C_A6798E23EEB1E487). It accurately incorporates the CIS IG2 organizational profile (CTX_CIS_IG2_9F94838146D9C3A4) and the threat landscape (E_02_066AFE8300EDCEBB, E_03_06E6ABC42DA3AC77, E_03_F13F996D181217BA, E_04_892BBCAA3CE5CC92). The report explicitly acknowledges the absence of budget, ROI, and TCO data, adhering to the reference enterprise constraints. The recommendation for a pilot is logically derived from the gap between benchmark success and operational uncertainty, and the pilot conditions are directly mapped to the provided AI governance and secure development guidance (DE_DE01_0B9728FE19095FD0, DE_DE03_6786A7AB93821D48, DE_DE03_912FC8A",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates exceptional fidelity to the provided evidence and forecast. It correctly distinguishes between benchmark-based detection accuracy (AE01S) and the lack of turnkey production deployment evidence (AE01C), using this distinction to justify the 'challenged' technical feasibility lens. It accurately identifies the tension between the forecasted decrease in NLP/LLM mitigation publications and the observed increase in the 2021-2024 Crossref trend (E_33). Furthermore, it correctly notes that while the threat forecast indicates an increasing state, the provided evidence (e.g., E_02) supports growth in attack size/bandwidth rather than a temporal increase in incident count. The report properly acknowledges the lack of numeric financial data and jurisdiction-specific regulatory details, maintaining a strict boundary between general governance support and deployment-specific a",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__ddos__nlp_llm",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 35,
+        "known_cited_record_count": 15,
+        "report_characters": 7068,
+        "unique_cited_record_count": 15,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 26,
+        "known_cited_record_count": 18,
+        "report_characters": 12160,
+        "unique_cited_record_count": 18,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "DO_NOT_RECOMMEND",
+      "recommendation_agrees": false,
+      "scenario_id": "US__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence. It correctly distinguishes between benchmark-based results (AE01S) and the lack of turnkey production evidence (AE01C), ensuring that technical scope is not inappropriately transferred to an enterprise setting. It accurately incorporates the CIS IG2 organizational context (CTX_CIS_IG2) and the specific guidance from NIST (DE_DE01, DE_DE02, DE_DE03) and NCSC (DE_DE15) to define the conditions for a pilot. The forecast's direction and time-series limits (2025-2027) are preserved. The report explicitly acknowledges the absence of numeric budget, ROI, and TCO data, as required by the scenario constraints. The recommendation to pilot is internally coherent given the combination of benchmark success and persistent threat relevance, balanced against the lack of operational deployment data.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence, correctly distinguishing between benchmark-based detection capabilities (AE01S) and the lack of turnkey production feasibility (AE01C). It meticulously preserves forecast modalities, noting that the evidence for DDoS (bandwidth/vectors) does not directly confirm the forecasted increase in incident count (NoI), and that the observed increase in NLP/LLM publications (E_33) contradicts the forecasted decrease (NoP). The report explicitly acknowledges the absence of numeric budget, ROI, and jurisdiction-specific regulatory data, marking the financial dimension as UNRESOLVED. The internal logic is coherent: the technical-feasibility challenge serves as the primary trigger for the DO_NOT_RECOMMEND outcome according to the stated policy.",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__malware__anomaly_detection",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 25,
+        "known_cited_record_count": 18,
+        "report_characters": 5856,
+        "unique_cited_record_count": 18,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 22,
+        "known_cited_record_count": 16,
+        "report_characters": 9106,
+        "unique_cited_record_count": 16,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "RECOMMEND",
+      "recommendation_agrees": false,
+      "scenario_id": "KR__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence, accurately citing technical capabilities and limitations of anomaly detection from the curated findings and NIST guidance. It correctly avoids transferring the specific success of Android-based detection (AE02S) or ICS-based monitoring (DE_DE05, DE_DE06) as guaranteed outcomes for the general CIS IG2 enterprise scenario. The forecast data is reported with precision, including the non-monotonic gap values and the correct interpretation of the 'threat_minus_pmt_increasing' direction. The report explicitly acknowledges the absence of numeric budget, ROI, and Korea-specific evidence, and it lists specific missing deployment details that justify the 'RECOMMEND_PILOT' decision over a full rollout. The narrative is internally coherent, balancing technical plausibility with operational risks and resource constraints.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence. It accurately summarizes technical findings (e.g., Android detection rates in AE02S and resource constraints in AE02C), correctly distinguishes between poisoning and evasion attacks in the context of anomaly detection (E_15), and precisely attributes infostealer activity to specific threat actors (E_04). It preserves the forecast's time-series limits and correctly identifies the directional inconsistency between the forecast's PMT NoP and the Crossref publication trend (E_33), while adhering to the record's disclaimer that the two are independent axes. The report explicitly acknowledges the absence of KR-specific regulatory evidence and the lack of quantitative financial data (budget, TCO, ROI), ensuring no unsupported scope transfer or financial assumptions. The narrative is internally coherent, supporting the strategic 'RE",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__malware__anomaly_detection",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 24,
+        "known_cited_record_count": 19,
+        "report_characters": 6474,
+        "unique_cited_record_count": 20,
+        "unknown_cited_ids": [
+          "forecast"
+        ]
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 29,
+        "known_cited_record_count": 19,
+        "report_characters": 13016,
+        "unique_cited_record_count": 19,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "RECOMMEND",
+      "recommendation_agrees": false,
+      "scenario_id": "EU__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence and forecast. It correctly extracts technical details from the malware study (Android/APKs), the NIST ICS guidance, and the CISA ICS guidance, while distinguishing between these specific contexts and the general CIS IG2 enterprise profile. The forecast data (z-scores, gap slope, and negative yearly gaps) is accurately integrated and interpreted without overstating the causal link to control effectiveness. The report explicitly acknowledges the absence of numeric budget, ROI, and deployment-specific details, as required by the boundary. The recommendation for a pilot is internally coherent, given the identified technical trade-offs (resource consumption, false negatives, adversarial evasion) and the partial institutional fit. No material omissions or unsupported assertions were identified.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence and forecast. It correctly identifies the forecast directions (Malware increasing, PMT decreasing, gap increasing) and accurately interprets the 'gap direction' as signed movement. It meticulously cites the evidence for both the benefits and the challenges of anomaly detection, including resource constraints on devices (AE02C), the need for specialized skills (DE_DE04_C6F46FCDE66BFAC7), and adversarial risks like poisoning (E_15_D3680C31BEE2C0F8). The report is exceptionally disciplined regarding scope, explicitly stating that the recommendation is 'GENERAL' and not 'DEPLOYMENT_SPECIFIC' due to the absence of budget, staffing, and EU-specific legal evidence. It correctly identifies the tension between the forecast's decreasing NoP signal and the increasing publication trend in the Crossref data (E_33_D28EA285670B0D01), noting",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__malware__anomaly_detection",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 40,
+        "known_cited_record_count": 21,
+        "report_characters": 9001,
+        "unique_cited_record_count": 21,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 34,
+        "known_cited_record_count": 17,
+        "report_characters": 13042,
+        "unique_cited_record_count": 17,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "RECOMMEND",
+      "recommendation_agrees": false,
+      "scenario_id": "US__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence. It correctly identifies the specific scopes of the technical evidence (Android for AProctor, ICS for NISTIR 8219 and SP 1800-10B) and explicitly cautions that these do not automatically translate to a general CIS IG2 enterprise. The forecast is handled with precision, noting the direction of the threat and mitigation states while correctly observing that the gap values are negative and non-monotonic. The report thoroughly acknowledges the absence of financial and staffing data, as required by the boundary. The narrative is internally coherent, moving from operational relevance (forecast) to feasibility (technical evidence) to risks (CISA/ICS-CERT and Mandiant), culminating in a logically supported RECOMMEND_PILOT decision with conditions derived directly from the evidence.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates exceptional fidelity to the provided evidence and strict adherence to the evaluation boundaries. It correctly distinguishes between general guidance (e.g., NIST and CISA IDPS/BAD benefits) and specific technical findings (e.g., Android-specific results in AE02S and AE02C), ensuring that technical scope is not improperly transferred to the general enterprise. The report explicitly acknowledges the absence of critical deployment-specific data, including exact budgets, ROI, TCO, and jurisdiction-specific legal requirements, marking these as conditions for the recommendation. The treatment of the forecast is particularly precise; the author correctly identifies the forecast as a model output and carefully notes that the provided external evidence (such as X-Force and Mandiant reports) provides operational context but does not provide the specific temporal measurements",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__ransomware__cryptography",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 36,
+        "known_cited_record_count": 14,
+        "report_characters": 9540,
+        "unique_cited_record_count": 14,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 21,
+        "known_cited_record_count": 17,
+        "report_characters": 13391,
+        "unique_cited_record_count": 17,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "RECOMMEND_PILOT",
+      "recommendation_agrees": true,
+      "scenario_id": "KR__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence. It accurately synthesizes technical guidance from NIST, CISA, and DHS regarding algorithm migration, TLS hardening, and key management. It correctly identifies the limitations of entropy-based detection (AE03C_E5522A35F4981027) and the specific capabilities of CipherTrace (AE03S_C5AF41A880A404C2). The report properly handles the organizational context (CIS IG2) and the jurisdiction (Republic of Korea), explicitly noting the lack of KR-specific evidence and the non-applicability of EU NIS2 legal requirements to the KR scenario. The forecast data is transferred accurately, and the report correctly interprets the z-scores as directional indicators rather than causal probabilities. All prohibited claim types (budget, ROI, universal effectiveness) are avoided, and the recommendation for a pilot is logically coherent given the gap",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 1,
+        "forecast_modality": 1,
+        "internal_decision_coherence": 2,
+        "material_issues": [
+          "The report claims 'the historical recent direction for the cryptography side is reported as decreasing', which contradicts the provided forecast JSON where the pmt_state direction is explicitly listed as 'increasing'."
+        ],
+        "rationale": "The report demonstrates high fidelity to the cited evidence records and correctly identifies the organizational context (CIS IG2) and the lack of jurisdiction-specific (KR) evidence. It properly acknowledges the absence of numeric budget, ROI, and TCO data. The internal logic for the RECOMMEND_PILOT decision is coherent, based on the unresolved financial/adoption dimension. However, the report contains a material contradiction regarding the forecast: it asserts that the historical recent direction for cryptography is 'decreasing', whereas the provided forecast JSON explicitly states the pmt_state direction is 'increasing'. This error affects both the factual grounding and the forecast modality scores.",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__ransomware__cryptography",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 24,
+        "known_cited_record_count": 20,
+        "report_characters": 6344,
+        "unique_cited_record_count": 20,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 27,
+        "known_cited_record_count": 20,
+        "report_characters": 10707,
+        "unique_cited_record_count": 20,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "RECOMMEND_PILOT",
+      "recommendation_agrees": true,
+      "scenario_id": "EU__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence universe. It accurately extracts and cites regulatory requirements (GDPR, NIS2), technical implementation guidance (NIST SP 800-131A, 800-52, 800-57, CISA CPG), and assessment frameworks (NIST SP 800-53A, CSF). The forecast data, including z-scores, gap values, slope, and confidence half-widths, are transferred without error, and the report correctly identifies the non-monotonic nature of the gap in 2027. It explicitly acknowledges the absence of numeric budget, ROI, and staffing data, correctly limiting its feasibility analysis to the CIS IG2 profile. The narrative is internally coherent, logically transitioning from the forecast-driven need for action to a qualified 'Pilot' recommendation based on the lack of enterprise-specific deployment evidence and the necessity of complementary controls (patching, MFA). No material a-p",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence, correctly citing technical capabilities (AE03S_C5AF41A880A404C2), technical challenges (AE03C_E5522A35F4981027), and regulatory/guidance frameworks (E_31_A0893427DD4F5B04, DE_DE09_6719137897848A9E). It strictly adheres to the organizational context (EU CIS IG2) and correctly identifies that financial and adoption feasibility are unresolved due to a lack of numeric budget, ROI, or staffing data in the evidence universe. The report preserves the modality of the forecast, treating it as a model output and explicitly distinguishing it from empirical threat-trajectory evidence. The internal logic is coherent: technical and institutional feasibility are supported at a general level, while financial/adoption feasibility is unresolved, leading to the RECOMMEND_PILOT action according to the described policy.",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__ransomware__cryptography",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 33,
+        "known_cited_record_count": 18,
+        "report_characters": 8493,
+        "unique_cited_record_count": 18,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 20,
+        "known_cited_record_count": 17,
+        "report_characters": 9981,
+        "unique_cited_record_count": 17,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "RECOMMEND_PILOT",
+      "recommendation_agrees": true,
+      "scenario_id": "US__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates exceptional fidelity to the provided evidence. It accurately maps technical guidance from CISA and NIST to the proposed action, correctly identifies the limitations of cryptographic detection (entropy evasion and computational cost) using the provided curated findings, and respects the constraints of the CIS IG2 organizational profile. The forecast data is transferred with precise modality, including the correct interpretation that z-score trends do not imply causal mitigation effectiveness. The report explicitly acknowledges the absence of numeric budget, ROI, and TCO data, and identifies specific missing deployment details that justify the qualified 'RECOMMEND_PILOT' decision over a full recommendation. The narrative is internally coherent and logically structured.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence. It correctly distinguishes between general technical feasibility (supported by CipherTrace and NIST guidelines) and deployment-specific feasibility (unresolved due to the lack of specific enterprise architecture data). It accurately reports the forecast values and modalities, correctly bounding the Crossref publication trend as an indicator of activity rather than deployment maturity. It explicitly acknowledges the absence of budget, staffing, and jurisdiction-specific regulatory evidence. The internal logic—where supported technical/institutional dimensions and an unresolved adoption dimension lead to a RECOMMEND_PILOT decision—is coherent and consistent with the provided context.",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__insider_threat__cryptography",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 8,
+        "known_cited_record_count": 8,
+        "report_characters": 2841,
+        "unique_cited_record_count": 8,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 30,
+        "known_cited_record_count": 17,
+        "report_characters": 10119,
+        "unique_cited_record_count": 17,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "RECOMMEND_PILOT",
+      "recommendation_agrees": true,
+      "scenario_id": "KR__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence and forecast. It accurately cites the forecast gap values and slope, correctly interprets the technical guidance from NIST and CISA, and properly identifies the Securecipher evidence as a prototype. It explicitly acknowledges the lack of financial data (budget, TCO, ROI) and the absence of KR-specific deployment evidence, adhering strictly to the provided boundary. The logic for recommending a pilot—balancing strong general standards against prototype-specific insider-threat evidence and missing operational details—is internally coherent and well-supported.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 1,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [
+          "The report claims the frozen model-input PMT direction is 'recorded as decreasing', but the provided forecast data explicitly states the pmt_state direction is 'increasing'."
+        ],
+        "rationale": "The report demonstrates high fidelity to the evidence records and correctly applies the organizational context (CIS IG2) and jurisdiction (KR). It accurately identifies the forecast modality (NoP) and the specific gap slope. It explicitly acknowledges the absence of numeric budget, ROI, and staffing data, which justifies the 'unresolved' status of financial feasibility. The internal logic—recommending a pilot to resolve these specific unknowns—is coherent. However, there is a material factual error regarding the forecast: the report asserts the PMT direction is 'decreasing' when the provided forecast object explicitly lists it as 'increasing'.",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__insider_threat__cryptography",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 34,
+        "known_cited_record_count": 14,
+        "report_characters": 10556,
+        "unique_cited_record_count": 14,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 21,
+        "known_cited_record_count": 15,
+        "report_characters": 8732,
+        "unique_cited_record_count": 15,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "RECOMMEND_PILOT",
+      "recommendation_agrees": true,
+      "scenario_id": "EU__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence and forecast. It accurately cites the technical capabilities and limitations of cryptography against insider threats (AE04S, AE04C), correctly applies NIST algorithm and TLS standards (DE_DE09, DE_DE10), and aligns with EU regulatory contexts (GDPR, NIS2). The forecast data, including mean z-scores, gap values, slope, and confidence intervals, is transferred without error. The report explicitly acknowledges the absence of budget, ROI, and deployment-specific details, correctly identifying these as unknowns. The recommendation for a bounded pilot is internally coherent with the identified technical risks (insider capabilities) and the weak forecast slope. No material problems were identified.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 1,
+        "forecast_modality": 1,
+        "internal_decision_coherence": 2,
+        "material_issues": [
+          "The report states that the PMT model-input trajectory is 'recorded as decreasing', but the provided forecast JSON explicitly lists the 'pmt_state' direction as 'increasing'."
+        ],
+        "rationale": "The report demonstrates high fidelity to the evidence regarding technical and institutional feasibility, correctly identifying the limitations of the provided records (e.g., distinguishing between general engineering feasibility and deployment-specific compatibility). It properly acknowledges the absence of financial and budget data and treats the forecast as a model output rather than empirical fact. However, there is a material contradiction between the report's description of the PMT trajectory ('decreasing') and the provided forecast data ('increasing').",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__insider_threat__cryptography",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 20,
+        "known_cited_record_count": 9,
+        "report_characters": 6949,
+        "unique_cited_record_count": 9,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 28,
+        "known_cited_record_count": 18,
+        "report_characters": 9006,
+        "unique_cited_record_count": 18,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "RECOMMEND_PILOT",
+      "recommendation_agrees": true,
+      "scenario_id": "US__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence, accurately citing specific technical constraints from NIST and CISA guidance and the specific findings of the Securecipher prototype. It correctly identifies the limitations of the forecast, noting that while the gap direction is labeled as increasing, the annual values are not monotonic. It explicitly acknowledges the absence of budget, ROI, and staffing data, and lists the specific deployment unknowns that necessitate a pilot rather than a full recommendation. The narrative is internally coherent, providing a clear justification for the RECOMMEND_PILOT decision and establishing specific conditions for the pilot's success or termination.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence. It correctly distinguishes between the general engineering feasibility of cryptography for insider threats (citing the prototype in AE04S) and the specific challenges of the insider-threat model (citing AE04C). It accurately transfers the CIS IG2 organizational context, noting the potential need for specialized expertise. The report preserves the forecast's modality, correctly identifying that the increasing trend in the forecast is based on publication activity (NoP) rather than deployment maturity or operational effectiveness. It explicitly acknowledges the absence of budget, ROI, and jurisdiction-specific regulatory data, which justifies the recommendation for a limited pilot rather than full adoption. The narrative is internally coherent, linking the identified evidence gaps directly to the proposed objectives of the a a",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__brute_force__ids_ips",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 42,
+        "known_cited_record_count": 21,
+        "report_characters": 5492,
+        "unique_cited_record_count": 21,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 33,
+        "known_cited_record_count": 18,
+        "report_characters": 12455,
+        "unique_cited_record_count": 18,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "RECOMMEND_PILOT",
+      "recommendation_agrees": true,
+      "scenario_id": "KR__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence, correctly citing the effectiveness of IDS/IPS components (AE05S), its limitations regarding low-rate brute-force evasion (AE05C), and its status as a non-standalone 'silver bullet' (DE_DE16). It accurately maps the CIS IG2 organizational profile to the operational requirements of IDPS deployment. The forecast's time-series data (z-score directions and gap signs for 2025-2027) is preserved without overstating the model's predictive power. The report explicitly acknowledges the absence of budget, ROI, and specific deployment details, listing them as missing information. The internal logic is coherent: given the evidence of both utility and evasion, a conditional pilot is the most defensible action.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence universe. It correctly maps technical feasibility to the 2024 case study (AE05S) and NIST guidance (DE_DE04_0B017D64401987E4), while explicitly preserving the technical limitation regarding distributed low-rate attacks (AE05C). Institutional enablement is grounded in NIST ISCM and IDPS guidance (DE_DE07_E2C403C2FF05BA09, DE_DE04_0B77B88875745973). The financial/adoption dimension is correctly marked as unresolved, citing both benefits (automation/integration) and burdens (specialized skills) without inventing numeric budget or ROI data. The report is exceptionally disciplined regarding the forecast: it correctly identifies the PMT state as publication activity (NoP) and the threat state as NoI, noting that the provided DBIR and Mandiant records are observed context rather than trajectory evidence. It correctly identifies the ",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__brute_force__ids_ips",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 39,
+        "known_cited_record_count": 23,
+        "report_characters": 6823,
+        "unique_cited_record_count": 23,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 42,
+        "known_cited_record_count": 18,
+        "report_characters": 12018,
+        "unique_cited_record_count": 18,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "RECOMMEND_PILOT",
+      "recommendation_agrees": true,
+      "scenario_id": "EU__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates exceptional fidelity to the provided evidence. It correctly identifies the implementability of IDS/IPS from a 2024 case study [AE05S_CCD7CA4B2AE10DC9] while balancing this with a critical limitation regarding distributed low-rate brute-force attacks [AE05C_2D35A464AD6F0FAE]. The forecast data (z-scores, gap slope, and direction) are transferred with high precision, and the report correctly interprets them as state-pressure indicators rather than causal effectiveness. The organizational context (CIS IG2) is applied appropriately, and the report explicitly acknowledges the absence of quantitative financial, architectural, and EU-specific legal data. The recommendation for a pilot is internally coherent, as it proposes a bounded, evidence-generating approach that specifically tests the identified limitation (distributed low-rate attacks) and integrates with other a-p",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates exceptional fidelity to the provided evidence. Every technical claim, including the specific limitations of IDS/IPS against disciplined-IP patterns [AE05C_2D35A464AD6F0FAE] and the 'silver bullet' warning [DE_DE16_CEA1C38E613068F8], is accurately cited. The report correctly interprets the forecast data, identifying the specific gap sign change from 2025 to 2026 and preserving the modality by distinguishing between model outputs and empirical evidence. It correctly identifies that the Crossref data [E_33_A707006877BFD1C2] represents publication activity rather than deployment maturity. The report explicitly acknowledges the absence of numeric budget, ROI, and EU-specific regulatory data, and correctly applies the CIS IG2 profile as a reference scenario rather than an observed organization. The recommendation for a pilot is internally coherent, based on the balance'",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__brute_force__ids_ips",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 46,
+        "known_cited_record_count": 24,
+        "report_characters": 7706,
+        "unique_cited_record_count": 24,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 22,
+        "known_cited_record_count": 18,
+        "report_characters": 11154,
+        "unique_cited_record_count": 18,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "RECOMMEND_PILOT",
+      "recommendation_agrees": true,
+      "scenario_id": "US__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates exceptional fidelity to the provided evidence universe. It correctly identifies the specific limitation of IDS/IPS regarding low-rate brute-force attacks (AE05C) while balancing this with implementability evidence from a 2024 case study (AE05S). It adheres strictly to the CIS IG2 reference enterprise profile, acknowledging its nature as a frozen profile rather than a real organization. The report preserves the forecast's time-series limits and modality metadata without overinterpreting them, and it explicitly acknowledges the total absence of budget, ROI, and TCO data. The recommendation for a pilot is internally coherent, supported by a detailed set of conditions derived directly from NIST, CISA, and MITRE guidance. No material problems were identified.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence, correctly distinguishing between general technical feasibility and deployment-specific feasibility. It strictly adheres to forecast modality, treating the model's NoI and NoP directions as outputs rather than empirical trends, and correctly interprets the DBIR and Mandiant records as neutral context rather than forward-looking validation. All missing financial, budget, and jurisdiction-specific details are explicitly acknowledged. The recommendation for a pilot is internally coherent, driven by the unresolved state of financial/adoption feasibility (where grounded support for efficiency is balanced by grounded challenges regarding specialized skill requirements and operational burden).",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__targeted_attack__access_control",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 44,
+        "known_cited_record_count": 23,
+        "report_characters": 8763,
+        "unique_cited_record_count": 23,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 19,
+        "known_cited_record_count": 17,
+        "report_characters": 8340,
+        "unique_cited_record_count": 17,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "HOLD",
+      "recommendation_agrees": false,
+      "scenario_id": "KR__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates exceptional fidelity to the provided evidence. It accurately synthesizes technical requirements for ABAC and ZTA from NIST and CISA sources, correctly identifies the limitations of static access control for APTs using the Zhang et al. study, and properly applies the CIS IG2 organizational profile. It explicitly avoids unsupported scope transfers, such as correctly rejecting the application of EU NIS2 to the Republic of Korea and noting that Active Directory configurations are general options rather than confirmed infrastructure. The forecast analysis is precise, correctly interpreting z-scores and gaps as node states rather than causal trends and acknowledging the uncertainty introduced by confidence intervals. All budget and deployment constraints are explicitly acknowledged as unknown. The recommendation for a pilot is internally coherent, based on the technical",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence, accurately distinguishing between general technical feasibility and deployment-specific feasibility. It correctly interprets the forecast's signed gap movement and acknowledges the statistical uncertainty (confidence half-widths) of the 2027 crossing. It explicitly identifies missing critical data (budget, TCO, ROI, jurisdiction-specific regulations for KR) and avoids over-extrapolating general findings to the specific reference enterprise. The internal logic is coherent: the recommendation to HOLD is driven by a substantive financial/adoption challenge that outweighs the supported technical and institutional dimensions.",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__targeted_attack__access_control",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 32,
+        "known_cited_record_count": 21,
+        "report_characters": 6998,
+        "unique_cited_record_count": 21,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 21,
+        "known_cited_record_count": 19,
+        "report_characters": 12469,
+        "unique_cited_record_count": 19,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "HOLD",
+      "recommendation_agrees": false,
+      "scenario_id": "EU__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates exceptional fidelity to the provided evidence. Every claim is supported by a specific citation, and the report correctly distinguishes between general framework guidance (NIST, MITRE) and product-specific vulnerabilities. The forecast analysis is precise, correctly citing the gap values, slope, and 95% confidence half-widths to conclude that the projected gap is within the margin of uncertainty. The report explicitly acknowledges the lack of numeric budget, ROI, and TCO data, and provides a detailed list of missing deployment information. The recommendation for a pilot is internally coherent, serving as a bounded middle path between the forecast threat and the operational unknowns of the CIS IG2 reference enterprise. The decision conditions are directly mapped to the evidence (e.g., pilot boundaries and testing methods). No material problems were identified.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence and forecast. It correctly interprets the forecast's gap movement and accurately notes that the 2027 positive crossing is statistically insignificant given the provided confidence half-widths. It precisely identifies the non-monotonic nature of the Crossref publication trend and the specific nature of the Mandiant data (shares of intrusions rather than absolute counts). Technical and institutional feasibility are correctly framed as 'general scope' support, while the report explicitly acknowledges the lack of deployment-specific details (architecture, current maturity, exact EU regulatory status of the reference enterprise). The financial/adoption challenge is well-supported by the cited NIST and CISA guidance regarding ABAC costs, retrofitting, and ZTA implementation timelines. The internal logic is coherent: the HOLD is トリガ",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__targeted_attack__access_control",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 30,
+        "known_cited_record_count": 20,
+        "report_characters": 10138,
+        "unique_cited_record_count": 20,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 31,
+        "known_cited_record_count": 17,
+        "report_characters": 10056,
+        "unique_cited_record_count": 17,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "HOLD",
+      "recommendation_agrees": false,
+      "scenario_id": "US__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence, accurately citing specific findings from Zhang et al. regarding adaptive access control and APTs, and correctly applying NIST and CISA guidance on Zero Trust and ABAC. It preserves the population scope by correctly identifying the CIS IG2 profile and explicitly avoiding the overextension of DBIR IG1 data. The forecast analysis is precise, correctly citing mean z-scores, gap values, and confidence intervals to justify a cautious approach. The report explicitly acknowledges the absence of financial and deployment-specific data, aligning with the provided budget context. The recommendation for a pilot is internally coherent and directly supported by NIST ZTA guidance (DE_DE12_6509E7A6D8467E38) and the identified technical complexities of ABAC.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence, accurately distinguishing between general feasibility support and the lack of deployment-specific evidence. It correctly interprets the forecast as model output rather than empirical observation and accurately describes the time-series gap movement and its associated uncertainty (confidence half-widths). All cited evidence records are used appropriately to support or challenge the feasibility dimensions. The report explicitly acknowledges the absence of budget, ROI, and architecture details, and the internal logic leading to the HOLD recommendation is coherent and consistent with the provided decision policy.",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__session_hijacking__https",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 26,
+        "known_cited_record_count": 18,
+        "report_characters": 6478,
+        "unique_cited_record_count": 18,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 26,
+        "known_cited_record_count": 15,
+        "report_characters": 10074,
+        "unique_cited_record_count": 15,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "HOLD",
+      "recommendation_agrees": false,
+      "scenario_id": "KR__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates exceptional fidelity to the provided evidence. Every technical claim regarding HTTPS/TLS effectiveness, limitations (XSS, malware), and implementation guidelines (NIST SP 800-63B, 800-52, 800-113) is accurately cited and mapped to the source text. The report correctly handles the organizational context, explicitly noting that the Republic of Korea is a scenario parameter without specific supporting evidence in the corpus and that the SSL VPN case study is a general example rather than a direct match for the enterprise. Forecast data is preserved with high precision, including the distinction between model node states and observed incident rates, and the specific gap values and slope. Constraints regarding budget, ROI, and staffing are explicitly acknowledged as unknown. The recommendation to conduct a limited pilot rather than an enterprise-wide rollout is coheren",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence. Technical claims regarding HTTPS effectiveness and limitations are accurately sourced from AE07S and AE07C. Institutional and financial dimensions are correctly identified as unresolved, with the report explicitly citing the specific constraints (e.g., TLS conformance in DE_DE10 and session cookie requirements in DE_DE13) and burdens (e.g., performance issues in DE_DE14) that create the unresolved state. The report correctly treats the forecast as model output and attempts to validate it against the evidence, noting the weakness of the publication trend (E_33) and the absence of temporal threat data. It strictly adheres to the organizational context, acknowledging the lack of numeric budget, ROI, and jurisdiction-specific regulatory data. The internal logic is coherent: it identifies a critical gate (Institutional/Regional)'",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__session_hijacking__https",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 21,
+        "known_cited_record_count": 13,
+        "report_characters": 5681,
+        "unique_cited_record_count": 13,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 25,
+        "known_cited_record_count": 15,
+        "report_characters": 10148,
+        "unique_cited_record_count": 15,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "HOLD",
+      "recommendation_agrees": false,
+      "scenario_id": "EU__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence. All technical claims regarding HTTPS/TLS effectiveness, limitations (XSS, malware), and NIST/CISA guidelines are accurately mapped to the cited records. The report correctly identifies the organizational context (CIS IG2) and explicitly acknowledges the lack of EU-specific regulatory data and numeric financial constraints. The forecast data (z-scores, gaps, and confidence intervals) is transferred with precision, and the report correctly interprets the NoP modality as requiring caution. The recommendation to pilot is internally coherent, as it balances the necessity of HTTPS as a transport-layer control with the evidence that it is insufficient as a standalone solution, while utilizing the provided SSL-VPN lifecycle guidance as a framework for phased deployment.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence, correctly distinguishing between technical support (AE07S) and technical limitations (AE07C). It meticulously handles the forecast, noting that the model's NoP directions are not independently confirmed by the evidence and correctly interpreting the gap semantics. It avoids unsupported scope transfer by acknowledging that the SSL VPN case study does not automatically apply to the reference enterprise. All financial and budget constraints are explicitly acknowledged as unknown, and the report correctly identifies the lack of EU-specific regulatory evidence as a primary driver for the HOLD recommendation. The internal narrative is coherent and logically structured.",
+        "technical_scope": 2
+      }
+    },
+    {
+      "case_id": "main__session_hijacking__https",
+      "citation_checks_direct": {
+        "any_citation": true,
+        "citation_mentions": 24,
+        "known_cited_record_count": 13,
+        "report_characters": 5527,
+        "unique_cited_record_count": 13,
+        "unknown_cited_ids": []
+      },
+      "citation_checks_original": {
+        "any_citation": true,
+        "citation_mentions": 17,
+        "known_cited_record_count": 15,
+        "report_characters": 8503,
+        "unique_cited_record_count": 15,
+        "unknown_cited_ids": []
+      },
+      "direct_recommendation": "RECOMMEND_PILOT",
+      "original_recommendation": "HOLD",
+      "recommendation_agrees": false,
+      "scenario_id": "US__CIS_IG2",
+      "scores_direct": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence, accurately citing the effectiveness and limitations of HTTPS (AE07S, AE07C) and the specific implementation requirements from NIST (DE_DE13, DE_DE10). It correctly applies the CIS IG2 organizational context without overextending the scope to assume deployment-specific feasibility. The forecast is handled with precision, correctly identifying the z-score state signals and the relative uncertainty between the PMT and threat states. The report explicitly acknowledges the absence of numeric budget/ROI data and lists the specific missing deployment details that prevent a full recommendation. The recommendation for a pilot is internally coherent, with the pilot conditions directly mapped to the cited guidance on TLS configuration, session management, and performance testing.",
+        "technical_scope": 2
+      },
+      "scores_original": {
+        "constraints_and_uncertainty": 2,
+        "factual_grounding": 2,
+        "forecast_modality": 2,
+        "internal_decision_coherence": 2,
+        "material_issues": [],
+        "rationale": "The report demonstrates high fidelity to the provided evidence. It correctly maps the support and challenges for the three decision dimensions (Institutional/Regional, Financial/Adoption, and Technical) using the cited records. Specifically, it accurately identifies the transport-layer utility of HTTPS (AE07S) and its limitations regarding XSS and malware (AE07C). It correctly identifies the implementation guidelines (DE_DE14, DE_DE18) and the compliance burdens (DE_DE13, DE_DE10). The report explicitly acknowledges the absence of budget, ROI, and deployment-specific data, adhering to the constraints of the reference enterprise profile (CTX_CIS_IG2). The forecast analysis is handled with appropriate caution, noting that while the publication trend (E_33) aligns with the PMT direction, it does not definitively confirm the forecast's magnitude or the threat-minus-PMT gap. The internal a-to",
+        "technical_scope": 2
+      }
+    }
+  ],
+  "recommendation_agreement": 9,
+  "recommendation_comparisons": 21,
+  "sha256": "5bbe909f139db7718b20d3e6ea9ccec2e809beca47111a96090f4816be61a5e6",
+  "source_evidence_contract": "Same frozen forecast, enterprise context and evidence records; original policy retained only in original arm",
+  "version": "reviewer2-external-reference-report-audit-v1"
+}

@@ -1,0 +1,307 @@
+{
+  "identity": {
+    "case_id": "main__ddos__nlp_llm",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "1228b5c0e63298a8a59d43aba44ccacd5d87598a4bfacbed7d9325cc5da5a504",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 43,
+    "shadow_object_sha256": "9866c8abc4c245e18e30cd5cdffa8a0c04a166d089cef3a70df598466de4e752",
+    "source_hashes": {
+      "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+      "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+      "stage3_context": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+      "stage4_context": "10c834266961c7c4ea048c04a09db58d572d8606365b27c21677992d23f5b7ea",
+      "stage5": "86d070634eb0c7cff097e1c054be40d2b7c670b208640da9ea80b40d55a8683b",
+      "stage6": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE03_912FC8A63179A943",
+            "DE_DE03_6786A7AB93821D48"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST secure-software-development guidance for generative AI indicates potential adoption benefits from standardized integration with existing log management, identity management, access control, and vulnerability management systems, as well as from automated code review and model scanning.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE15_1AEC6DDD669756FF"
+          ],
+          "scope": "GENERAL",
+          "statement": "UK NCSC secure-AI guidance states that secure-by-design AI development requires significant resources throughout a system's life cycle, indicating a general adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_NEUTRAL_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling was supplied.",
+        "No product, vendor, version, sector, or deployment architecture was supplied that would allow a product-specific financial adoption claim."
+      ],
+      "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+      "lens_type": "financial_adoption",
+      "rationale": "The financial lens has general benefit signals from secure-development guidance, such as standardization and automated code/model analysis potentially lowering effort, and a general burden signal from secure AI development guidance stating that significant resources are needed throughout the system life cycle. However, no numeric budget, price, ROI, TCO, staffing count, procurement ceiling, or product-specific financial impact was supplied. Therefore neither a support nor a challenge financial claim can be treated as sufficient for the reference enterprise.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE01_0B9728FE19095FD0"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST AI RMF governance categories provide organizational structures for monitoring, inventorying, decommissioning, accountability, training, and leadership for AI systems.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_SUPPORT_2",
+          "evidence_ids": [
+            "DE_DE15_271AFADC7B3D5999",
+            "DE_DE15_7C1849B1FD93975C"
+          ],
+          "scope": "GENERAL",
+          "statement": "UK NCSC secure-AI guidance describes documentation, secure development, monitoring, update management, and information-sharing practices for AI systems.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE02_007F05150CB46131"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST generative-AI guidance requires reporting GAI incidents in compliance with legal and regulatory requirements, with non-EU examples such as HIPAA and NHTSA requirements, representing a compliance constraint.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_NEUTRAL_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile describes an enterprise with multi-department IT infrastructure, differing risk profiles, possible regulatory burdens, and some safeguards that depend on enterprise-grade technology and specialized expertise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "evidence_gaps": [
+        "No EU-specific regulatory_applicability evidence was supplied for NLP/LLM or generative-AI deployment in this DDoS mitigation context.",
+        "No evidence was supplied that the CIS IG2 reference enterprise has existing AI governance roles, inventory, monitoring, or incident-response processes resourced for NLP/LLM deployment."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "The institutional evidence provides general governance support through AI risk-management, secure-development, documentation, monitoring, and operational-maintenance guidance, while also identifying a compliance constraint from legal and regulatory incident-reporting requirements. The residual EU/CIS IG2 deployment-specific context is represented as PARTIAL rather than INSUFFICIENT_CONTEXT, without asserting a deployment-specific directional claim.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE01S_6E6099FA4C2D13D4"
+          ],
+          "scope": "GENERAL",
+          "statement": "Fine-tuned LLM variants showed benchmark-level DDoS detection capability and outperformed a compared MLP baseline in the cited experiments.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "GENERAL",
+          "statement": "The cited DDoS study does not establish turnkey production deployment; performance depended on prompt context or fine-tuning, few-shot results were materially weaker on the harder Urban IoT setting, and the evidence is benchmark-based rather than enterprise operational deployment or cost study.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_NEUTRAL_CONTEXT_1",
+          "evidence_ids": [
+            "E_33_ADC8BC66D812799F"
+          ],
+          "scope": "GENERAL",
+          "statement": "Publication-activity trends for NLP/LLM do not by themselves establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "evidence_gaps": [
+        "No evidence was supplied showing that NLP/LLM DDoS detection has been deployed in an enterprise-grade operational environment.",
+        "No evidence was supplied showing that benchmark performance transfers to a CIS IG2 reference-enterprise deployment without additional integration, fine-tuning, or operational controls."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "The technical evidence is directly DDoS-specific and mixed: one curated finding supports LLM-based DDoS detection in benchmark settings, while the paired limitation finding explicitly states that the study does not establish turnkey production deployment and that performance depended on prompt context or fine-tuning. Because the challenge evidence is more directly applicable to enterprise operational feasibility than the benchmark-only support evidence, the technical lens challenges feasibility.",
+      "stance": -1
+    }
+  },
+  "raw": {
+    "analysis_note": "The technical lens is the only lens with direct DDoS-specific PMT evidence; however, that evidence is benchmark-based and explicitly lacks turnkey production deployment. Institutional and financial lenses rely on general AI governance and secure-development guidance rather than EU-specific regulatory applicability or product-specific financial data. GENERAL findings here do not establish product/version/enterprise-specific success for the EU CIS IG2 reference scenario.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE03_912FC8A63179A943",
+            "DE_DE03_6786A7AB93821D48"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST secure-software-development guidance for generative AI indicates potential adoption benefits from standardized integration with existing log management, identity management, access control, and vulnerability management systems, as well as from automated code review and model scanning.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE15_1AEC6DDD669756FF"
+          ],
+          "scope": "GENERAL",
+          "statement": "UK NCSC secure-AI guidance states that secure-by-design AI development requires significant resources throughout a system's life cycle, indicating a general adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_NEUTRAL_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling was supplied.",
+        "No product, vendor, version, sector, or deployment architecture was supplied that would allow a product-specific financial adoption claim."
+      ],
+      "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+      "rationale": "The financial lens has general benefit signals from secure-development guidance, such as standardization and automated code/model analysis potentially lowering effort, and a general burden signal from secure AI development guidance stating that significant resources are needed throughout the system life cycle. However, no numeric budget, price, ROI, TCO, staffing count, procurement ceiling, or product-specific financial impact was supplied. Therefore neither a support nor a challenge financial claim can be treated as sufficient for the reference enterprise.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE01_0B9728FE19095FD0"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST AI RMF governance categories provide organizational structures for monitoring, inventorying, decommissioning, accountability, training, and leadership for AI systems.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_SUPPORT_2",
+          "evidence_ids": [
+            "DE_DE15_271AFADC7B3D5999",
+            "DE_DE15_7C1849B1FD93975C"
+          ],
+          "scope": "GENERAL",
+          "statement": "UK NCSC secure-AI guidance describes documentation, secure development, monitoring, update management, and information-sharing practices for AI systems.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE02_007F05150CB46131"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST generative-AI guidance requires reporting GAI incidents in compliance with legal and regulatory requirements, with non-EU examples such as HIPAA and NHTSA requirements, representing a compliance constraint.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_NEUTRAL_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile describes an enterprise with multi-department IT infrastructure, differing risk profiles, possible regulatory burdens, and some safeguards that depend on enterprise-grade technology and specialized expertise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No EU-specific regulatory_applicability evidence was supplied for NLP/LLM or generative-AI deployment in this DDoS mitigation context.",
+        "No evidence was supplied that the CIS IG2 reference enterprise has existing AI governance roles, inventory, monitoring, or incident-response processes resourced for NLP/LLM deployment."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The institutional evidence provides general governance support through AI risk-management, secure-development, documentation, monitoring, and operational-maintenance guidance, while also identifying a compliance constraint from legal and regulatory incident-reporting requirements. The residual EU/CIS IG2 deployment-specific context is represented as PARTIAL rather than INSUFFICIENT_CONTEXT, without asserting a deployment-specific directional claim.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE01S_6E6099FA4C2D13D4"
+          ],
+          "scope": "GENERAL",
+          "statement": "Fine-tuned LLM variants showed benchmark-level DDoS detection capability and outperformed a compared MLP baseline in the cited experiments.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "GENERAL",
+          "statement": "The cited DDoS study does not establish turnkey production deployment; performance depended on prompt context or fine-tuning, few-shot results were materially weaker on the harder Urban IoT setting, and the evidence is benchmark-based rather than enterprise operational deployment or cost study.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_NEUTRAL_CONTEXT_1",
+          "evidence_ids": [
+            "E_33_ADC8BC66D812799F"
+          ],
+          "scope": "GENERAL",
+          "statement": "Publication-activity trends for NLP/LLM do not by themselves establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No evidence was supplied showing that NLP/LLM DDoS detection has been deployed in an enterprise-grade operational environment.",
+        "No evidence was supplied showing that benchmark performance transfers to a CIS IG2 reference-enterprise deployment without additional integration, fine-tuning, or operational controls."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The technical evidence is directly DDoS-specific and mixed: one curated finding supports LLM-based DDoS detection in benchmark settings, while the paired limitation finding explicitly states that the study does not establish turnkey production deployment and that performance depended on prompt context or fine-tuning. Because the challenge evidence is more directly applicable to enterprise operational feasibility than the benchmark-only support evidence, the technical lens challenges feasibility.",
+      "stance": -1
+    }
+  },
+  "recommendation": "DO_NOT_RECOMMEND",
+  "sha256": "c6ac2345547262e679cc5d34dbeb85542ca40a11a918b86643435d8f7b79c124",
+  "withheld_evidence_id": null
+}

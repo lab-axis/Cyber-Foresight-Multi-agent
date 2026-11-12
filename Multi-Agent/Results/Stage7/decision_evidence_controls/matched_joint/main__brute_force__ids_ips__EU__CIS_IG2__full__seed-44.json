@@ -1,0 +1,295 @@
+{
+  "identity": {
+    "case_id": "main__brute_force__ids_ips",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "ca14f085abbdb1b2581ee8458e123a9ec2b13292b87bf471c49cb8ef52b0093d",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 44,
+    "shadow_object_sha256": "3d293d6423b97fc13771ceb2589101a7b893b5262ab9176fba7cc04416cc7f3a",
+    "source_hashes": {
+      "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+      "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+      "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+      "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+      "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+      "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE04_DB6B29C9BE1B0F05",
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDPS adoption can provide operational and economic benefits through integration, automation, and SIEM-assisted review.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDPS adoption imposes skill, testing, and tuning burdens that can constrain deployment and operation.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4",
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "E_33_A707006877BFD1C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "The reference-enterprise profile and publication-trend record do not supply numeric financial quantities or enterprise-specific financial feasibility.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Skill, testing, tuning, integration, and ongoing oversight conditions must be addressed before financial adoption feasibility can be judged more strongly."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+        "No CIS IG2- or EU-specific financial adoption analysis for IDS/IPS is supplied."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial-adoption evidence is mixed. Adoption benefits are documented for IDPS integration, automation, and SIEM-based review, including reduced administrative effort and lower-cost monitoring workflows. Adoption burdens are also documented, including required administrative skills, signature testing, and operational readiness to reconfigure or disable problematic signatures. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, and the CIS IG2 profile does not provide exact financial quantities. Therefore the evidence supports a mixed financial-adoption judgment rather than a stronger directional one.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference-enterprise profile does not establish EU-specific IDS/IPS regulatory applicability or compliance constraints.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "INST_CONTEXT_2",
+          "evidence_ids": [
+            "DE_DE04_0B77B88875745973",
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE16_CEA1C38E613068F8"
+          ],
+          "scope": "GENERAL",
+          "statement": "General governance-enablement sources are available but are insufficient for a DEPLOYMENT_SPECIFIC EU institutional claim without regulatory_applicability evidence.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "EU-specific regulatory or compliance applicability evidence would be required to support a deployment-specific institutional direction."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+      "evidence_gaps": [
+        "No regulatory_applicability evidence for the EU scenario is supplied.",
+        "No compliance_constraint evidence for the EU scenario is supplied."
+      ],
+      "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+      "lens_type": "institutional_regional",
+      "rationale": "For the EU reference-enterprise scope, the required regulatory_applicability evidence for a DEPLOYMENT_SPECIFIC institutional claim is absent. No compliance_constraint evidence is supplied either. General governance_enablement sources are present, but they do not establish EU-specific institutional feasibility or compliance applicability for IDS/IPS. The supplied CIS IG2 context defines the reference enterprise profile but does not supply the missing regulatory or compliance evidence.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDS/IPS-style detection and blocking can be technically enabled for repeated brute-force authentication attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ordinary IDS/IPS thresholding can be evaded by distributed low-rate brute-force attacks using disciplined source-IP patterns.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4",
+            "E_33_A707006877BFD1C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Deployment-maturity and publication-activity sources do not by themselves establish operational effectiveness for this reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Environment-specific IDPS requirements and monitored-system compatibility must be defined before deployment.",
+        "Ordinary IDS/IPS rules may need additional logic or integration to cover distributed low-rate brute-force behavior."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+      "evidence_gaps": [
+        "No EU- or CIS IG2-specific IDS/IPS deployment evidence for Brute Force Attack is supplied.",
+        "No product-, version-, or architecture-specific validation is supplied for the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Technical evidence is directionally mixed for IDS/IPS against Brute Force Attack. AE05S_CCD7CA4B2AE10DC9 provides a direct technical_enablement example in which IDS components, including Snort and Fail2Ban, are applied to brute-force defense and treated as an implementable response to repeated authentication attacks. AE05C_2D35A464AD6F0FAE provides a direct technical_limitation example showing that distributed low-rate brute-force attacks can remain below ordinary per-host login thresholds and evade conventional IDS/IPS rules. The evidence is relevant but not sufficient to establish product-, version-, architecture-, or CIS IG2/EU-specific deployment success. Unmet technical conditions remain visible, including the need for environment-specific requirement definition, tuning, oversight, and additional logic for disciplined low-rate brute-force patterns.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "The assessment is limited to the supplied evidence and the directional grounding contract. No new PMT, product, vendor, budget, legal obligation, or multi-year incident trend is inferred.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE04_DB6B29C9BE1B0F05",
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDPS adoption can provide operational and economic benefits through integration, automation, and SIEM-assisted review.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDPS adoption imposes skill, testing, and tuning burdens that can constrain deployment and operation.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4",
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "E_33_A707006877BFD1C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "The reference-enterprise profile and publication-trend record do not supply numeric financial quantities or enterprise-specific financial feasibility.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Skill, testing, tuning, integration, and ongoing oversight conditions must be addressed before financial adoption feasibility can be judged more strongly."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+        "No CIS IG2- or EU-specific financial adoption analysis for IDS/IPS is supplied."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial-adoption evidence is mixed. Adoption benefits are documented for IDPS integration, automation, and SIEM-based review, including reduced administrative effort and lower-cost monitoring workflows. Adoption burdens are also documented, including required administrative skills, signature testing, and operational readiness to reconfigure or disable problematic signatures. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, and the CIS IG2 profile does not provide exact financial quantities. Therefore the evidence supports a mixed financial-adoption judgment rather than a stronger directional one.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference-enterprise profile does not establish EU-specific IDS/IPS regulatory applicability or compliance constraints.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "INST_CONTEXT_2",
+          "evidence_ids": [
+            "DE_DE04_0B77B88875745973",
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE16_CEA1C38E613068F8"
+          ],
+          "scope": "GENERAL",
+          "statement": "General governance-enablement sources are available but are insufficient for a DEPLOYMENT_SPECIFIC EU institutional claim without regulatory_applicability evidence.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "EU-specific regulatory or compliance applicability evidence would be required to support a deployment-specific institutional direction."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No regulatory_applicability evidence for the EU scenario is supplied.",
+        "No compliance_constraint evidence for the EU scenario is supplied."
+      ],
+      "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+      "rationale": "For the EU reference-enterprise scope, the required regulatory_applicability evidence for a DEPLOYMENT_SPECIFIC institutional claim is absent. No compliance_constraint evidence is supplied either. General governance_enablement sources are present, but they do not establish EU-specific institutional feasibility or compliance applicability for IDS/IPS. The supplied CIS IG2 context defines the reference enterprise profile but does not supply the missing regulatory or compliance evidence.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDS/IPS-style detection and blocking can be technically enabled for repeated brute-force authentication attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ordinary IDS/IPS thresholding can be evaded by distributed low-rate brute-force attacks using disciplined source-IP patterns.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4",
+            "E_33_A707006877BFD1C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Deployment-maturity and publication-activity sources do not by themselves establish operational effectiveness for this reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Environment-specific IDPS requirements and monitored-system compatibility must be defined before deployment.",
+        "Ordinary IDS/IPS rules may need additional logic or integration to cover distributed low-rate brute-force behavior."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No EU- or CIS IG2-specific IDS/IPS deployment evidence for Brute Force Attack is supplied.",
+        "No product-, version-, or architecture-specific validation is supplied for the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Technical evidence is directionally mixed for IDS/IPS against Brute Force Attack. AE05S_CCD7CA4B2AE10DC9 provides a direct technical_enablement example in which IDS components, including Snort and Fail2Ban, are applied to brute-force defense and treated as an implementable response to repeated authentication attacks. AE05C_2D35A464AD6F0FAE provides a direct technical_limitation example showing that distributed low-rate brute-force attacks can remain below ordinary per-host login thresholds and evade conventional IDS/IPS rules. The evidence is relevant but not sufficient to establish product-, version-, architecture-, or CIS IG2/EU-specific deployment success. Unmet technical conditions remain visible, including the need for environment-specific requirement definition, tuning, oversight, and additional logic for disciplined low-rate brute-force patterns.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "b183601e55e3adcd04d6afe8d3c06270e8e15b2187c27149cacc4356d1bf4e90",
+  "withheld_evidence_id": null
+}

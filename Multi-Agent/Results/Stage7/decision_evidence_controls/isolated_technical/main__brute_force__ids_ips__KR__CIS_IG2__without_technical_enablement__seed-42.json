@@ -1,0 +1,90 @@
+{
+  "identity": {
+    "case_id": "main__brute_force__ids_ips",
+    "condition": "without_technical_enablement",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "508c4d64120e0038ccb211800dd39b7af26b204d01a8a489b74bdcd68f4a4f7d",
+    "isolated": true,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "eccc7ab867bdf4e383199100fcba71bc8eff80b04e282c37323832f5a744e7a4",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "283268a8153993dfc30753afa1c4d1f64303300198578e4c3f22cc617d7d7da4",
+    "seed": 42,
+    "shadow_object_sha256": "025a6a0596a99268471de180dd5aaea6e34d7ee4a06c1978366f3517703e1894",
+    "source_hashes": {
+      "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+      "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+      "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+      "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+      "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+      "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "CHALLENGE_TECH_1",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Distributed low-rate brute-force attacks can stay below per-host login thresholds and evade ordinary IDS/IPS security rules, indicating a direct limitation of conventional IDS/IPS for some brute-force attack patterns.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "CIS IG2 reference enterprises may require enterprise-grade technology and specialized expertise to install and configure some safeguards.",
+        "IDPS deployment requires defined requirements, environment understanding, compatible technology selection, and organizational goals before a robust solution can be assessed."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "evidence_gaps": [
+        "No eligible technical_enablement evidence is present in the supplied evaluation_evidence that establishes IDS/IPS effectiveness for brute-force detection or prevention under the CIS IG2 reference-enterprise profile.",
+        "The supplied academic metadata, attack-technique mitigation records, and general IDPS guidance are topically related but are not sufficient to support a positive technical feasibility claim under the required technical_enablement slot.",
+        "No product-, version-, or deployment-specific feasibility evidence is available for this reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Eligible technical-limitation evidence directly challenges the feasibility of conventional IDS/IPS as a standalone mitigation for some brute-force attack patterns, specifically distributed low-rate attacks that can evade ordinary IDS/IPS rules. However, the evidence is pattern-specific and does not establish complete infeasibility across all IDS/IPS configurations or deployment contexts. No eligible technical_enablement evidence is present to establish a positive feasibility claim for IDS/IPS under the given reference enterprise profile.",
+      "stance": -1
+    }
+  },
+  "raw": {
+    "claims": [
+      {
+        "claim_id": "CHALLENGE_TECH_1",
+        "evidence_ids": [
+          "AE05C_2D35A464AD6F0FAE"
+        ],
+        "scope": "GENERAL",
+        "statement": "Distributed low-rate brute-force attacks can stay below per-host login thresholds and evade ordinary IDS/IPS security rules, indicating a direct limitation of conventional IDS/IPS for some brute-force attack patterns.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "CIS IG2 reference enterprises may require enterprise-grade technology and specialized expertise to install and configure some safeguards.",
+      "IDPS deployment requires defined requirements, environment understanding, compatible technology selection, and organizational goals before a robust solution can be assessed."
+    ],
+    "constraints": [],
+    "evidence_gaps": [
+      "No eligible technical_enablement evidence is present in the supplied evaluation_evidence that establishes IDS/IPS effectiveness for brute-force detection or prevention under the CIS IG2 reference-enterprise profile.",
+      "The supplied academic metadata, attack-technique mitigation records, and general IDPS guidance are topically related but are not sufficient to support a positive technical feasibility claim under the required technical_enablement slot.",
+      "No product-, version-, or deployment-specific feasibility evidence is available for this reference enterprise."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "rationale": "Eligible technical-limitation evidence directly challenges the feasibility of conventional IDS/IPS as a standalone mitigation for some brute-force attack patterns, specifically distributed low-rate attacks that can evade ordinary IDS/IPS rules. However, the evidence is pattern-specific and does not establish complete infeasibility across all IDS/IPS configurations or deployment contexts. No eligible technical_enablement evidence is present to establish a positive feasibility claim for IDS/IPS under the given reference enterprise profile.",
+    "stance": -1
+  },
+  "recommendation": null,
+  "sha256": "b2b39b35afddcc883547150a38119ec4ee7cf3b578806cfceda64e430b5052aa",
+  "withheld_evidence_id": "AE05S_CCD7CA4B2AE10DC9"
+}

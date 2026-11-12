@@ -1,0 +1,39 @@
+{
+  "identity": {
+    "input_sha256": "95efc3454f6a3187b20b69de0829bc6ca368ea45a88c55b81a6e33522da4f84b",
+    "key": "main__session_hijacking__https__technique_lookup",
+    "kind": "cis",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "ff71ec15009be39adf922c61fcd190151bd3f89fd6aee417e3bd4904377a1321",
+    "schema_sha256": "cae356e111e388512d75184f967cbfc19277772111c1bbed65821c5972f18b61",
+    "seed": 42,
+    "temperature": 0,
+    "version": "reviewer2-external-reference-report-audit-v1"
+  },
+  "judgment": {
+    "mappings": [
+      {
+        "rationale": "The safeguard explicitly lists HTTPS as an example implementation for securely managing network infrastructure.",
+        "relevance": "DIRECT",
+        "safeguard_id": "12.3"
+      },
+      {
+        "rationale": "HTTPS is the primary implementation of Transport Layer Security (TLS) for encrypting sensitive data in transit.",
+        "relevance": "DIRECT",
+        "safeguard_id": "3.10"
+      },
+      {
+        "rationale": "The safeguard explicitly lists HTTPS as a secure network protocol for accessing administrative interfaces to manage enterprise assets and software.",
+        "relevance": "DIRECT",
+        "safeguard_id": "4.6"
+      },
+      {
+        "rationale": "This safeguard focuses on data at rest, whereas HTTPS is a protocol for data in transit.",
+        "relevance": "NOT_RELEVANT",
+        "safeguard_id": "3.11"
+      }
+    ]
+  },
+  "sha256": "904084a931bcb368fcaec10a5a5cf74887d0d2710aa4eb7dfca6400e0819ad01"
+}

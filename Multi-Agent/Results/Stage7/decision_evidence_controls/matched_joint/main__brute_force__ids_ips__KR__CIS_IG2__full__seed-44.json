@@ -1,0 +1,227 @@
+{
+  "identity": {
+    "case_id": "main__brute_force__ids_ips",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "768d55d99e58b30e0f223a3fa4111a924eb5450cb8dfcb5f80f79ff5cc86446b",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 44,
+    "shadow_object_sha256": "0c4a732d8158722d49b9fc2e134f54ef41084067c5213cc3b282cabd5bcab3b1",
+    "source_hashes": {
+      "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+      "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+      "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+      "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+      "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+      "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "DE_DE04_DB6B29C9BE1B0F05",
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "A stronger financial adoption conclusion would require KR/CIS IG2-specific cost, staffing, procurement, or operational-budget evidence."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "evidence_gaps": [
+        "No numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied for the KR/CIS IG2 reference-enterprise scenario.",
+        "No enterprise-specific financial adoption outcome is supplied; only GENERAL adoption-benefit and adoption-burden evidence is available."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial adoption evidence is mixed: GENERAL adoption-benefit evidence supports efficiency, integration, and reduced review workload, while GENERAL adoption-burden evidence identifies required skills, tuning, testing, and maintenance effort. No numeric budget, TCO, ROI, staffing, or procurement evidence is supplied.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE04_0B77B88875745973"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "A DEPLOYMENT_SPECIFIC institutional claim would require additional regulatory_applicability evidence tied to the KR/CIS IG2 scenario."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "evidence_gaps": [
+        "No regulatory_applicability evidence is supplied for the KR/CIS IG2 reference-enterprise context, so DEPLOYMENT_SPECIFIC institutional feasibility cannot be claimed."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Institutional evidence supports feasibility at a GENERAL scope by placing IDS/IPS and continuous monitoring inside governance and risk-decision frameworks. A DEPLOYMENT_SPECIFIC KR institutional claim is not made because no regulatory_applicability evidence is supplied.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Enterprise-specific IDS/IPS feasibility would require deployment evidence tied to the CIS IG2 reference-enterprise profile or a KR-scoped operational context."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "evidence_gaps": [
+        "No CIS IG2/KR-specific technical deployment evidence is supplied, so the technical feasibility stance rests on GENERAL case-study and limitation evidence rather than enterprise-specific validation."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Technical evidence is genuinely mixed: there is direct GENERAL support that IDS/IPS-style monitoring and blocking has been applied to brute-force authentication attacks, and a direct GENERAL challenge that low-rate distributed brute-force patterns can evade ordinary IDS/IPS rules.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "The assessment intentionally limits positive feasibility claims to GENERAL scope unless deployment-specific evidence is supplied. Technical feasibility is mixed because IDS/IPS can address repeated brute-force authentication attempts but has a documented limitation against low-rate distributed evasion. Institutional support is limited to governance enablement and is not extended to KR-specific regulatory applicability. Financial adoption is mixed because integration and automation can improve efficiency, but implementation and tuning impose nontrivial operational burden.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "DE_DE04_DB6B29C9BE1B0F05",
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "A stronger financial adoption conclusion would require KR/CIS IG2-specific cost, staffing, procurement, or operational-budget evidence."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied for the KR/CIS IG2 reference-enterprise scenario.",
+        "No enterprise-specific financial adoption outcome is supplied; only GENERAL adoption-benefit and adoption-burden evidence is available."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial adoption evidence is mixed: GENERAL adoption-benefit evidence supports efficiency, integration, and reduced review workload, while GENERAL adoption-burden evidence identifies required skills, tuning, testing, and maintenance effort. No numeric budget, TCO, ROI, staffing, or procurement evidence is supplied.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE04_0B77B88875745973"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "A DEPLOYMENT_SPECIFIC institutional claim would require additional regulatory_applicability evidence tied to the KR/CIS IG2 scenario."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No regulatory_applicability evidence is supplied for the KR/CIS IG2 reference-enterprise context, so DEPLOYMENT_SPECIFIC institutional feasibility cannot be claimed."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Institutional evidence supports feasibility at a GENERAL scope by placing IDS/IPS and continuous monitoring inside governance and risk-decision frameworks. A DEPLOYMENT_SPECIFIC KR institutional claim is not made because no regulatory_applicability evidence is supplied.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_GENERAL",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_GENERAL",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Enterprise-specific IDS/IPS feasibility would require deployment evidence tied to the CIS IG2 reference-enterprise profile or a KR-scoped operational context."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No CIS IG2/KR-specific technical deployment evidence is supplied, so the technical feasibility stance rests on GENERAL case-study and limitation evidence rather than enterprise-specific validation."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Technical evidence is genuinely mixed: there is direct GENERAL support that IDS/IPS-style monitoring and blocking has been applied to brute-force authentication attacks, and a direct GENERAL challenge that low-rate distributed brute-force patterns can evade ordinary IDS/IPS rules.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "2ddef0336fc687f9ea2772ee7790909b5c67c79cb5dfaf7951dab728cf2b5415",
+  "withheld_evidence_id": null
+}

@@ -1,0 +1,130 @@
+{
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "3a6295b5b6c97da967a0389e7a1a35ecde2e61a018e5ca2caa7bd158c76bf539",
+    "isolated": true,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "eccc7ab867bdf4e383199100fcba71bc8eff80b04e282c37323832f5a744e7a4",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "283268a8153993dfc30753afa1c4d1f64303300198578e4c3f22cc617d7d7da4",
+    "seed": 42,
+    "shadow_object_sha256": "1b5aca6ee1bc39efebb3f452de311d62e113707591e2f0fb010b86e92c933504",
+    "source_hashes": {
+      "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+      "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+      "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+      "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+      "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+      "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_1",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic-primitive analysis of ransomware execution traces is technically feasible and can materially support ransomware neutralization and reverse engineering.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_1",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptography-related ransomware detection is not universally robust because entropy-based signals can be evaded, and some existing approaches impose nontrivial computational cost.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276",
+            "DE_DE18_CDC975345637E009",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "Deployment guidance for TLS, IPSec, and encryption identifies feasibility conditions such as technical feasibility, key management, and OT latency/availability constraints.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Encryption, TLS, or IPSec use remains subject to technical feasibility in the target environment.",
+        "Cryptographic key establishment, management, accountability, and secure key infrastructure must be implementable.",
+        "OT or latency/availability-sensitive communications may limit encryption where it is not technically feasible."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "evidence_gaps": [
+        "No KR or CIS IG2-specific deployment outcome, product/version, or implementation-success evidence is supplied.",
+        "No numeric performance, cost, staffing, or TCO evidence is supplied."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "The eligible GENERAL technical_enablement evidence directly supports feasibility: CipherTrace demonstrates that cryptographic-primitive analysis can materially support ransomware neutralization and reverse engineering. The eligible GENERAL technical_limitation evidence identifies a real constraint on cryptography-related detection robustness and computational cost, but it is narrower than the direct feasibility support and does not outweigh it. Deployment-maturity sources keep visible that enterprise adoption is conditional on technical feasibility, key management, and latency/availability constraints, but they do not establish enterprise-specific success.",
+      "stance": 1
+    }
+  },
+  "raw": {
+    "claims": [
+      {
+        "claim_id": "TF_SUPPORT_1",
+        "evidence_ids": [
+          "AE03S_C5AF41A880A404C2"
+        ],
+        "scope": "GENERAL",
+        "statement": "Cryptographic-primitive analysis of ransomware execution traces is technically feasible and can materially support ransomware neutralization and reverse engineering.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CHALLENGE_1",
+        "evidence_ids": [
+          "AE03C_E5522A35F4981027"
+        ],
+        "scope": "GENERAL",
+        "statement": "Cryptography-related ransomware detection is not universally robust because entropy-based signals can be evaded, and some existing approaches impose nontrivial computational cost.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CONTEXT_1",
+        "evidence_ids": [
+          "DE_DE18_EAA59A9B7CEAD276",
+          "DE_DE18_CDC975345637E009",
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "Deployment guidance for TLS, IPSec, and encryption identifies feasibility conditions such as technical feasibility, key management, and OT latency/availability constraints.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "Encryption, TLS, or IPSec use remains subject to technical feasibility in the target environment.",
+      "Cryptographic key establishment, management, accountability, and secure key infrastructure must be implementable.",
+      "OT or latency/availability-sensitive communications may limit encryption where it is not technically feasible."
+    ],
+    "constraints": [],
+    "evidence_gaps": [
+      "No KR or CIS IG2-specific deployment outcome, product/version, or implementation-success evidence is supplied.",
+      "No numeric performance, cost, staffing, or TCO evidence is supplied."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "rationale": "The eligible GENERAL technical_enablement evidence directly supports feasibility: CipherTrace demonstrates that cryptographic-primitive analysis can materially support ransomware neutralization and reverse engineering. The eligible GENERAL technical_limitation evidence identifies a real constraint on cryptography-related detection robustness and computational cost, but it is narrower than the direct feasibility support and does not outweigh it. Deployment-maturity sources keep visible that enterprise adoption is conditional on technical feasibility, key management, and latency/availability constraints, but they do not establish enterprise-specific success.",
+    "stance": 1
+  },
+  "recommendation": null,
+  "sha256": "f4240dee25027ecf082c352d73262a41c3dbe1e41030ba93a4e189428c605486",
+  "withheld_evidence_id": null
+}

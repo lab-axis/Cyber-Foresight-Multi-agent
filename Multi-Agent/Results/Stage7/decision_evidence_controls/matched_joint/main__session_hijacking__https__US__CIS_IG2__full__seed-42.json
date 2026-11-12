@@ -1,0 +1,283 @@
+{
+  "identity": {
+    "case_id": "main__session_hijacking__https",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "9900fea128e47b3f62f5d90548122f34ec215226f87abfc1bc41680adec36bfc",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "8fbdc66e2c734177a91224f67b50d25ca3850636d25474cf41ea48cf9daac021",
+    "source_hashes": {
+      "stage1": "5b8473203535452075465098dd80d84de51fa302487b5d5c4f382f0f74f6b2d1",
+      "stage2": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+      "stage3_context": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+      "stage4_context": "d1853be1e80bea8b4894668ef60ba1d5b4f878e2f8334340759ec658b9685c3d",
+      "stage5": "31865f18b575039e9744f107701fda16da6862860b705e5c4e2439a55372649d",
+      "stage6": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA-SUP-1",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "DHS transport-encryption guidance supports adoption of encryption when sensitive data such as usernames, passwords, or personal employee information is in scope, providing an adoption benefit for protecting session-relevant credentials.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA-SUP-2",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST TLS guidance provides standardized mechanisms for TLS client authentication, certificate validation, and strong identity options, which can reduce uncertainty in adopting HTTPS/TLS controls.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA-CHAL-1",
+          "evidence_ids": [
+            "DE_DE14_EDCA207577B4607A"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL/HTTPS-related deployment can create adoption burdens, including session establishment performance considerations, back-end authentication demand, MTU fragmentation, testing under load, and possible hardware or SSL offload changes.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051",
+      "evidence_gaps": [
+        "No numeric budget, TCO, ROI, procurement ceiling, or staffing count is supplied, so financial feasibility is not quantified.",
+        "Deployment maturity evidence is present in the supplied sources but is not used to create a positive financial claim because exact financial quantities remain unknown."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial adoption evidence is mixed and partial. Qualitative adoption benefits are present because transport encryption is linked to protection of sensitive data such as credentials, and standardized TLS mechanisms can support organizational adoption. Qualitative adoption burdens are also present because SSL/HTTPS-related deployments may require performance testing, MTU tuning, load considerations, and possible hardware or offload changes. No numeric budget, TCO, ROI, procurement ceiling, or staffing count is supplied, so financial sufficiency remains partial.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR-SUP-1",
+          "evidence_ids": [
+            "DE_DE14_575D613F0598EF5E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST SSL VPN guidance provides governance enablement through lifecycle recommendations such as prototype testing, pilot programs, phased migration, documentation, monitoring, and certificate renewal.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR-SUP-2",
+          "evidence_ids": [
+            "DE_DE18_20A979A3238D1DE6"
+          ],
+          "scope": "GENERAL",
+          "statement": "DHS control-systems guidance provides governance enablement for SSL/TLS retrofitting, including trusted CA deployment, identity proofing, and transport-security design considerations.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR-CHAL-1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST 800-63B imposes compliance constraints on session management, including authenticated protected channels, no HTTPS-to-HTTP fallback, secure-session cookie handling, and session identifier verification.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR-CHAL-2",
+          "evidence_ids": [
+            "DE_DE10_4BE87A62A6676C99"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST TLS implementation guidance imposes compliance constraints on TLS configuration, including CBC extension requirements and restrictions on truncated HMAC use with variable-length padding.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051",
+      "evidence_gaps": [
+        "No regulatory_applicability evidence was supplied, so deployment-specific institutional feasibility is not established.",
+        "The CIS IG2 profile is contextual and does not by itself prove enterprise-specific success."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Institutional evidence is mixed and partial. NIST and DHS guidance provides governance enablement for planning, piloting, documenting, and operating SSL/TLS or SSL VPN deployments, but NIST session and TLS guidance also imposes compliance constraints that require additional configuration and lifecycle controls. No regulatory_applicability evidence was supplied, so a DEPLOYMENT_SPECIFIC institutional direction is not asserted; the assessment remains GENERAL for the US CIS IG2 reference scenario.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF-SUP-1",
+          "evidence_ids": [
+            "AE07S_C1EF15B9628497F0"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS/TLS is a direct transport-layer countermeasure for interception-oriented session hijacking, supporting feasibility as part of a broader session-protection strategy.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF-CHAL-1",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS alone does not cover all session-hijacking paths because session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051",
+      "evidence_gaps": [
+        "No product-, version-, or CIS-IG2-specific technical effectiveness evidence is supplied, so technical sufficiency remains partial."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Direct session-hijacking evidence supports HTTPS/TLS as a transport-layer countermeasure against interception-oriented hijacking, while direct token-abuse evidence shows that user-level paths such as XSS or malicious browser extensions can remain open. The technical picture is therefore mixed and partial: HTTPS is technically relevant and deployable, but it does not by itself close all session-hijacking paths. General findings do not establish product-, version-, or enterprise-specific success for the CIS IG2 reference enterprise.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "No final decision label is provided. The three lenses are assessed jointly using only supplied evaluation evidence, with GENERAL scope because no product, version, sector, or enterprise-specific success evidence is supplied.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA-SUP-1",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "DHS transport-encryption guidance supports adoption of encryption when sensitive data such as usernames, passwords, or personal employee information is in scope, providing an adoption benefit for protecting session-relevant credentials.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA-SUP-2",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST TLS guidance provides standardized mechanisms for TLS client authentication, certificate validation, and strong identity options, which can reduce uncertainty in adopting HTTPS/TLS controls.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA-CHAL-1",
+          "evidence_ids": [
+            "DE_DE14_EDCA207577B4607A"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL/HTTPS-related deployment can create adoption burdens, including session establishment performance considerations, back-end authentication demand, MTU fragmentation, testing under load, and possible hardware or SSL offload changes.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, TCO, ROI, procurement ceiling, or staffing count is supplied, so financial feasibility is not quantified.",
+        "Deployment maturity evidence is present in the supplied sources but is not used to create a positive financial claim because exact financial quantities remain unknown."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial adoption evidence is mixed and partial. Qualitative adoption benefits are present because transport encryption is linked to protection of sensitive data such as credentials, and standardized TLS mechanisms can support organizational adoption. Qualitative adoption burdens are also present because SSL/HTTPS-related deployments may require performance testing, MTU tuning, load considerations, and possible hardware or offload changes. No numeric budget, TCO, ROI, procurement ceiling, or staffing count is supplied, so financial sufficiency remains partial.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR-SUP-1",
+          "evidence_ids": [
+            "DE_DE14_575D613F0598EF5E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST SSL VPN guidance provides governance enablement through lifecycle recommendations such as prototype testing, pilot programs, phased migration, documentation, monitoring, and certificate renewal.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR-SUP-2",
+          "evidence_ids": [
+            "DE_DE18_20A979A3238D1DE6"
+          ],
+          "scope": "GENERAL",
+          "statement": "DHS control-systems guidance provides governance enablement for SSL/TLS retrofitting, including trusted CA deployment, identity proofing, and transport-security design considerations.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR-CHAL-1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST 800-63B imposes compliance constraints on session management, including authenticated protected channels, no HTTPS-to-HTTP fallback, secure-session cookie handling, and session identifier verification.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR-CHAL-2",
+          "evidence_ids": [
+            "DE_DE10_4BE87A62A6676C99"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST TLS implementation guidance imposes compliance constraints on TLS configuration, including CBC extension requirements and restrictions on truncated HMAC use with variable-length padding.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No regulatory_applicability evidence was supplied, so deployment-specific institutional feasibility is not established.",
+        "The CIS IG2 profile is contextual and does not by itself prove enterprise-specific success."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Institutional evidence is mixed and partial. NIST and DHS guidance provides governance enablement for planning, piloting, documenting, and operating SSL/TLS or SSL VPN deployments, but NIST session and TLS guidance also imposes compliance constraints that require additional configuration and lifecycle controls. No regulatory_applicability evidence was supplied, so a DEPLOYMENT_SPECIFIC institutional direction is not asserted; the assessment remains GENERAL for the US CIS IG2 reference scenario.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF-SUP-1",
+          "evidence_ids": [
+            "AE07S_C1EF15B9628497F0"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS/TLS is a direct transport-layer countermeasure for interception-oriented session hijacking, supporting feasibility as part of a broader session-protection strategy.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF-CHAL-1",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS alone does not cover all session-hijacking paths because session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No product-, version-, or CIS-IG2-specific technical effectiveness evidence is supplied, so technical sufficiency remains partial."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Direct session-hijacking evidence supports HTTPS/TLS as a transport-layer countermeasure against interception-oriented hijacking, while direct token-abuse evidence shows that user-level paths such as XSS or malicious browser extensions can remain open. The technical picture is therefore mixed and partial: HTTPS is technically relevant and deployable, but it does not by itself close all session-hijacking paths. General findings do not establish product-, version-, or enterprise-specific success for the CIS IG2 reference enterprise.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "86da052033a880eea3716ccb367c3fcbcfca0479f0f61ac888d204cc42f87382",
+  "withheld_evidence_id": null
+}

@@ -1,0 +1,275 @@
+{
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "f6895e7c987e1538707cf6ef9c1c1e12a9f3714e4f223991735771ab60e257ea",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 44,
+    "shadow_object_sha256": "19baf78ec5e23c29726ed1a3fe67e39db86ff4edc34c26ed3c6c01e68d51d789",
+    "source_hashes": {
+      "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+      "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+      "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+      "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+      "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+      "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "fin_support_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "Standardized NIST TLS implementation guidance and DHS IPSec deployment guidance can reduce adoption uncertainty and integration friction for cryptography-related controls.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_challenge_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CPG strong-and-agile-encryption action imposes adoption burden by requiring current and properly configured TLS, identification and replacement of weak or outdated encryption, consideration of post-quantum implications, and feasible encryption in OT environments.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_context_1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS/SSL deployment guidance shows deployment maturity, but it does not establish numeric financial feasibility, ROI, TCO, or budget impact.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial-adoption evidence is mixed and remains qualitative because the scenario supplies no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling. Supportive eligibility comes from DE_DE10_A086B3193CD6440B and DE_DE18_CDC975345637E009, which provide standardized TLS and IPSec deployment guidance that can reduce adoption uncertainty and integration friction. The main challenge comes from E_23_534489D29C38B327, which recommends strong and agile encryption but also implies adoption burden through requirements for properly configured current TLS, replacement of weak or outdated encryption, post-quantum considerations, and feasible OT encryption. DE_DE18_EAA59A9B7CEAD276 adds deployment-maturity context but does not itself establish financial feasibility. Because both adoption-benefit and adoption-burden evidence are eligible and present, the financial-adoption stance is mixed with partial evidence sufficiency.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "inst_support_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance and CISA CPG encryption recommendations provide governance mechanisms that can support institutional adoption of cryptography, including key accountability, traceability, and encryption practice.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_challenge_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST algorithm-transition guidance disallows or deprecates certain cryptographic algorithms, creating compliance constraints on algorithm selection, legacy use, and migration.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_gap_1",
+          "evidence_ids": [
+            "E_23_AC2A498B747552DF"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "No supplied evidence provides the required regulatory_applicability evidence for a deployment-specific institutional claim in the US CIS IG2 reference scenario.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Institutional evidence is also genuinely mixed. DE_DE08_031120C53EF050F3 and E_23_534489D29C38B327 provide governance-enablement evidence: NIST key-management guidance defines accountability and traceability for cryptographic key access, and CISA CPG recommends strong and agile encryption practices. These can support institutional adoption in a US reference context. However, DE_DE09_6719137897848A9E provides a direct compliance-constraint challenge because NIST algorithm-transition guidance disallows or deprecates certain cryptographic algorithms, imposing migration and algorithm-selection constraints. A deployment-specific institutional claim would require regulatory_applicability evidence, and no supplied evidence satisfies that requirement. Therefore the deployment-specific institutional direction is insufficient, while the general institutional direction is mixed.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "tech_support_1",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic analysis of ransomware execution traces can identify cipher classes and extract cryptographic keys or state, providing a technical pathway to support ransomware neutralization and reverse engineering.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_challenge_1",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ransomware can deliberately alter observable entropy patterns to evade entropy-based cryptographic-operation detectors, and some cryptography-related detection approaches are not universally robust and may impose nontrivial computational cost.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_context_1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276",
+            "DE_DE18_CDC975345637E009",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "Eligible guidance shows deployment maturity for cryptography-related controls, but it does not prove enterprise-specific operational effectiveness for the frozen US CIS IG2 reference scenario.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Technical evidence is genuinely mixed. AE03S_C5AF41A880A404C2 supports feasibility by showing that cryptographic-primitive analysis can support ransomware neutralization and reverse engineering, which is directly relevant to the PMT_CRYPTOGRAPHY vs THREAT_RANSOMWARE pairing. AE03C_E5522A35F4981027 challenges feasibility by showing that ransomware can manipulate observable entropy patterns to evade some cryptography-related detection approaches and that such approaches may have nontrivial computational cost. Additional eligible deployment-maturity evidence, including DE_DE18_EAA59A9B7CEAD276, DE_DE18_CDC975345637E009, and E_23_534489D29C38B327, shows that TLS/SSL, IPSec, and CPG encryption practices exist, but it does not establish enterprise-specific effectiveness in the frozen CIS IG2 US scenario. Because both support and challenge evidence are direct, the technical stance is mixed rather than clearly favorable or unfavorable.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling was inferred. GENERAL findings do not establish product, version, or enterprise-specific success in the frozen US CIS IG2 reference scenario.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "fin_support_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "Standardized NIST TLS implementation guidance and DHS IPSec deployment guidance can reduce adoption uncertainty and integration friction for cryptography-related controls.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_challenge_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CPG strong-and-agile-encryption action imposes adoption burden by requiring current and properly configured TLS, identification and replacement of weak or outdated encryption, consideration of post-quantum implications, and feasible encryption in OT environments.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_context_1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS/SSL deployment guidance shows deployment maturity, but it does not establish numeric financial feasibility, ROI, TCO, or budget impact.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial-adoption evidence is mixed and remains qualitative because the scenario supplies no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling. Supportive eligibility comes from DE_DE10_A086B3193CD6440B and DE_DE18_CDC975345637E009, which provide standardized TLS and IPSec deployment guidance that can reduce adoption uncertainty and integration friction. The main challenge comes from E_23_534489D29C38B327, which recommends strong and agile encryption but also implies adoption burden through requirements for properly configured current TLS, replacement of weak or outdated encryption, post-quantum considerations, and feasible OT encryption. DE_DE18_EAA59A9B7CEAD276 adds deployment-maturity context but does not itself establish financial feasibility. Because both adoption-benefit and adoption-burden evidence are eligible and present, the financial-adoption stance is mixed with partial evidence sufficiency.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "inst_support_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance and CISA CPG encryption recommendations provide governance mechanisms that can support institutional adoption of cryptography, including key accountability, traceability, and encryption practice.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_challenge_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST algorithm-transition guidance disallows or deprecates certain cryptographic algorithms, creating compliance constraints on algorithm selection, legacy use, and migration.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_gap_1",
+          "evidence_ids": [
+            "E_23_AC2A498B747552DF"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "No supplied evidence provides the required regulatory_applicability evidence for a deployment-specific institutional claim in the US CIS IG2 reference scenario.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Institutional evidence is also genuinely mixed. DE_DE08_031120C53EF050F3 and E_23_534489D29C38B327 provide governance-enablement evidence: NIST key-management guidance defines accountability and traceability for cryptographic key access, and CISA CPG recommends strong and agile encryption practices. These can support institutional adoption in a US reference context. However, DE_DE09_6719137897848A9E provides a direct compliance-constraint challenge because NIST algorithm-transition guidance disallows or deprecates certain cryptographic algorithms, imposing migration and algorithm-selection constraints. A deployment-specific institutional claim would require regulatory_applicability evidence, and no supplied evidence satisfies that requirement. Therefore the deployment-specific institutional direction is insufficient, while the general institutional direction is mixed.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "tech_support_1",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic analysis of ransomware execution traces can identify cipher classes and extract cryptographic keys or state, providing a technical pathway to support ransomware neutralization and reverse engineering.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_challenge_1",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ransomware can deliberately alter observable entropy patterns to evade entropy-based cryptographic-operation detectors, and some cryptography-related detection approaches are not universally robust and may impose nontrivial computational cost.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_context_1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276",
+            "DE_DE18_CDC975345637E009",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "Eligible guidance shows deployment maturity for cryptography-related controls, but it does not prove enterprise-specific operational effectiveness for the frozen US CIS IG2 reference scenario.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Technical evidence is genuinely mixed. AE03S_C5AF41A880A404C2 supports feasibility by showing that cryptographic-primitive analysis can support ransomware neutralization and reverse engineering, which is directly relevant to the PMT_CRYPTOGRAPHY vs THREAT_RANSOMWARE pairing. AE03C_E5522A35F4981027 challenges feasibility by showing that ransomware can manipulate observable entropy patterns to evade some cryptography-related detection approaches and that such approaches may have nontrivial computational cost. Additional eligible deployment-maturity evidence, including DE_DE18_EAA59A9B7CEAD276, DE_DE18_CDC975345637E009, and E_23_534489D29C38B327, shows that TLS/SSL, IPSec, and CPG encryption practices exist, but it does not establish enterprise-specific effectiveness in the frozen CIS IG2 US scenario. Because both support and challenge evidence are direct, the technical stance is mixed rather than clearly favorable or unfavorable.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "fd4bef9e6765f679f7d37d5cc274170f7f51cb2423126e3be27f8a2e6661403b",
+  "withheld_evidence_id": null
+}

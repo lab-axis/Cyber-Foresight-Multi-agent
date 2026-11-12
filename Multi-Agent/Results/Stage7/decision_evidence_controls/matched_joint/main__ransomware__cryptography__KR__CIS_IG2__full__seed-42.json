@@ -1,0 +1,217 @@
+{
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "324f71a8042931deab0481e9d7f5d3b4446e26aa7def2ea9a4670dc439584dff",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "1b5aca6ee1bc39efebb3f452de311d62e113707591e2f0fb010b86e92c933504",
+    "source_hashes": {
+      "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+      "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+      "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+      "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+      "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+      "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_GENERAL_01",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS and IPsec guidance identify adoption benefits associated with strong cryptographic authentication and encryption of sensitive data in transit.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_GENERAL_01",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CPG encryption guidance conditions use on technical feasibility and notes latency, availability, and weak-algorithm update considerations, indicating adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Qualitative adoption benefits are present from TLS and IPsec guidance, while qualitative adoption burdens are present from CPG conditions on technical feasibility, latency, availability, and algorithm updates. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, so the lens remains mixed and partial.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_GENERAL_01",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "Key-management accountability and CPG encryption guidance provide general governance enablement for cryptographic controls.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_GENERAL_01",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST algorithm approval, deprecation, and disallowance rules create compliance constraints on cryptographic implementation choices.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General governance enablement is present through key-management and CPG encryption guidance, but general compliance constraints are also present through NIST algorithm-transition guidance. No KR-specific regulatory_applicability evidence is supplied, so deployment-specific institutional support is not asserted.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_GENERAL_01",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic analysis can materially support ransomware neutralization and reverse engineering.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_GENERAL_01",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Some cryptography-related ransomware detection approaches can be evaded and can impose nontrivial computational cost.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "A direct ransomware-specific cryptographic enablement signal is present, while the challenge signal is narrower and limited to entropy-based detection robustness and computational cost. The support is therefore treated as stronger, but enterprise-deployment validation is not supplied.",
+      "stance": 1
+    }
+  },
+  "raw": {
+    "analysis_note": "Technical: AE03S_C5AF41A880A404C2 supplies the only technical_enablement citation required for a GENERAL support claim, while AE03C_E5522A35F4981027 supplies the corresponding technical_limitation challenge. Institutional: DE_DE08_031120C53EF050F3 and E_23_534489D29C38B327 supply governance_enablement support, and DE_DE09_6719137897848A9E supplies compliance_constraint challenge; because regulatory_applicability evidence is absent, no DEPLOYMENT_SPECIFIC institutional claim is made. Financial: DE_DE10_A086B3193CD6440B and DE_DE18_CDC975345637E009 supply adoption_benefit support, and E_23_534489D29C38B327 supplies adoption_burden challenge; the missing financial-quantity context remains visible but is not converted into a numeric inference.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_GENERAL_01",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS and IPsec guidance identify adoption benefits associated with strong cryptographic authentication and encryption of sensitive data in transit.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_GENERAL_01",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CPG encryption guidance conditions use on technical feasibility and notes latency, availability, and weak-algorithm update considerations, indicating adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Qualitative adoption benefits are present from TLS and IPsec guidance, while qualitative adoption burdens are present from CPG conditions on technical feasibility, latency, availability, and algorithm updates. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, so the lens remains mixed and partial.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_GENERAL_01",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "Key-management accountability and CPG encryption guidance provide general governance enablement for cryptographic controls.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_GENERAL_01",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST algorithm approval, deprecation, and disallowance rules create compliance constraints on cryptographic implementation choices.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General governance enablement is present through key-management and CPG encryption guidance, but general compliance constraints are also present through NIST algorithm-transition guidance. No KR-specific regulatory_applicability evidence is supplied, so deployment-specific institutional support is not asserted.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_GENERAL_01",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic analysis can materially support ransomware neutralization and reverse engineering.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_GENERAL_01",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Some cryptography-related ransomware detection approaches can be evaded and can impose nontrivial computational cost.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "A direct ransomware-specific cryptographic enablement signal is present, while the challenge signal is narrower and limited to entropy-based detection robustness and computational cost. The support is therefore treated as stronger, but enterprise-deployment validation is not supplied.",
+      "stance": 1
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "5f9e0ae326816214f8c27595a9f6b59f297d27c8c683b8ce86ba4af5bab93f76",
+  "withheld_evidence_id": null
+}

@@ -1,0 +1,263 @@
+{
+  "identity": {
+    "case_id": "main__session_hijacking__https",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "da000810104054b956198d128f1e69c9a64a17f8ee53e89abd4f081f52eb013e",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "232164db430b3023187f24e98555f3835759207c710ac197d21bcd422b97abb6",
+    "source_hashes": {
+      "stage1": "5b8473203535452075465098dd80d84de51fa302487b5d5c4f382f0f74f6b2d1",
+      "stage2": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+      "stage3_context": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+      "stage4_context": "d1853be1e80bea8b4894668ef60ba1d5b4f878e2f8334340759ec658b9685c3d",
+      "stage5": "31865f18b575039e9744f107701fda16da6862860b705e5c4e2439a55372649d",
+      "stage6": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009",
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY: DHS encryption guidance recommends protecting sensitive data in transit, and NIST TLS implementation guidance provides HTTPS/TLS implementation options, indicating adoption benefits for secure transport.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE14_EDCA207577B4607A"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY: NIST SSL VPN guidance identifies performance, authentication-backend, fragmentation, MTU, testing, and hardware/offload burdens associated with SSL/HTTPS deployment.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "GENERAL",
+          "statement": "NEUTRAL_CONTEXT: The NIST SSL VPN case study provides deployment context for SSL/HTTPS but does not quantify budget, TCO, ROI, or staffing for this scenario.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "evidence_gaps": [
+        "No numeric budget, TCO, ROI, staffing count, or procurement ceiling was supplied in the evaluation evidence."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Eligible adoption_benefit evidence indicates benefits of secure transport and TLS implementation options, while eligible adoption_burden evidence identifies operational deployment overhead such as performance, testing, MTU, and hardware/offload concerns. The stance is mixed because no numeric budget, TCO, ROI, staffing, or enterprise-specific cost-benefit evidence was supplied, so financial/adoption feasibility remains unresolved rather than clearly supported or defeated.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE14_575D613F0598EF5E",
+            "DE_DE18_20A979A3238D1DE6"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY: NIST SSL VPN lifecycle guidance and DHS SSL/TLS retrofitting guidance provide operational governance practices for deploying and maintaining SSL/HTTPS, including logging, piloting, documentation, monitoring, and trusted-CA considerations.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5",
+            "DE_DE10_4BE87A62A6676C99"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY: NIST SP 800-63B and SP 800-52R2 impose strict session-channel, HTTPS-cookie, no-fallback, and TLS configuration requirements that can constrain implementation choices and increase compliance burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "evidence_gaps": [
+        "No EU-specific regulatory_applicability evidence for HTTPS or session hijacking was supplied in the evaluation evidence."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General governance_enablement evidence supports operational governance for SSL/HTTPS deployment, while compliance_constraint evidence shows strict session-channel and TLS configuration obligations. The stance is mixed because the supplied institutional evidence is GENERAL and no EU-specific regulatory_applicability evidence for HTTPS or session hijacking is present, so enterprise-specific institutional success is not established.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE07S_C1EF15B9628497F0"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY: The 2024 session-hijacking countermeasure finding treats HTTPS/TLS as an important transport-layer control within a broader session-protection strategy, directly supporting technical enablement for the HTTPS PMT.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY: The OIPM finding states that session tokens can still be stolen through XSS or malicious browser extensions and that HTTPS alone cannot cover all session-hijacking paths, limiting HTTPS-only effectiveness.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "GENERAL",
+          "statement": "NEUTRAL_CONTEXT: NIST SSL VPN case-study guidance provides enterprise deployment-maturity context for SSL/HTTPS-based access, but it does not by itself establish HTTPS effectiveness against session hijacking.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "A direct session-hijacking countermeasure source supports HTTPS/TLS as a transport-layer control against interception-oriented hijacking, while a direct limitation source shows HTTPS alone does not cover all session-token-theft paths. The limitation is real but does not negate the technical feasibility of HTTPS as part of a broader session-protection posture.",
+      "stance": 1
+    }
+  },
+  "raw": {
+    "analysis_note": "No final decision label is provided. The outputs above are lens-level feasibility assessments only, with GENERAL findings kept separate from enterprise-specific success and all unmet deployment conditions preserved in the rationale and evidence gaps.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009",
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY: DHS encryption guidance recommends protecting sensitive data in transit, and NIST TLS implementation guidance provides HTTPS/TLS implementation options, indicating adoption benefits for secure transport.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE14_EDCA207577B4607A"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY: NIST SSL VPN guidance identifies performance, authentication-backend, fragmentation, MTU, testing, and hardware/offload burdens associated with SSL/HTTPS deployment.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "GENERAL",
+          "statement": "NEUTRAL_CONTEXT: The NIST SSL VPN case study provides deployment context for SSL/HTTPS but does not quantify budget, TCO, ROI, or staffing for this scenario.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, TCO, ROI, staffing count, or procurement ceiling was supplied in the evaluation evidence."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Eligible adoption_benefit evidence indicates benefits of secure transport and TLS implementation options, while eligible adoption_burden evidence identifies operational deployment overhead such as performance, testing, MTU, and hardware/offload concerns. The stance is mixed because no numeric budget, TCO, ROI, staffing, or enterprise-specific cost-benefit evidence was supplied, so financial/adoption feasibility remains unresolved rather than clearly supported or defeated.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE14_575D613F0598EF5E",
+            "DE_DE18_20A979A3238D1DE6"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY: NIST SSL VPN lifecycle guidance and DHS SSL/TLS retrofitting guidance provide operational governance practices for deploying and maintaining SSL/HTTPS, including logging, piloting, documentation, monitoring, and trusted-CA considerations.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5",
+            "DE_DE10_4BE87A62A6676C99"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY: NIST SP 800-63B and SP 800-52R2 impose strict session-channel, HTTPS-cookie, no-fallback, and TLS configuration requirements that can constrain implementation choices and increase compliance burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No EU-specific regulatory_applicability evidence for HTTPS or session hijacking was supplied in the evaluation evidence."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General governance_enablement evidence supports operational governance for SSL/HTTPS deployment, while compliance_constraint evidence shows strict session-channel and TLS configuration obligations. The stance is mixed because the supplied institutional evidence is GENERAL and no EU-specific regulatory_applicability evidence for HTTPS or session hijacking is present, so enterprise-specific institutional success is not established.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE07S_C1EF15B9628497F0"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY: The 2024 session-hijacking countermeasure finding treats HTTPS/TLS as an important transport-layer control within a broader session-protection strategy, directly supporting technical enablement for the HTTPS PMT.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY: The OIPM finding states that session tokens can still be stolen through XSS or malicious browser extensions and that HTTPS alone cannot cover all session-hijacking paths, limiting HTTPS-only effectiveness.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "GENERAL",
+          "statement": "NEUTRAL_CONTEXT: NIST SSL VPN case-study guidance provides enterprise deployment-maturity context for SSL/HTTPS-based access, but it does not by itself establish HTTPS effectiveness against session hijacking.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "A direct session-hijacking countermeasure source supports HTTPS/TLS as a transport-layer control against interception-oriented hijacking, while a direct limitation source shows HTTPS alone does not cover all session-token-theft paths. The limitation is real but does not negate the technical feasibility of HTTPS as part of a broader session-protection posture.",
+      "stance": 1
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "1b0a80b376d4ddcf780518b627dc5e629f815e5747b47def908565a0dc415e90",
+  "withheld_evidence_id": null
+}

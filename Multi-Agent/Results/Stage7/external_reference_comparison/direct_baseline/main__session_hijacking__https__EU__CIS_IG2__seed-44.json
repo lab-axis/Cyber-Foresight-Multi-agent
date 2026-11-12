@@ -1,0 +1,34 @@
+{
+  "identity": {
+    "arm": "single_direct_end_to_end",
+    "case_id": "main__session_hijacking__https",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "968fc69164052563cfcbc3ede16465a3465f264327df07e6468c478f5f5e2ce9",
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "18e7e404cf766858cf448d8ce4555ada40d799456d13936b3970d594a5d69f90",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "745146f909ebc5a9a778ef176e3abf279f1cfd0e3ec4e61076fad47b2ac6be8f",
+    "seed": 44,
+    "source_hashes": {
+      "stage1": "5b8473203535452075465098dd80d84de51fa302487b5d5c4f382f0f74f6b2d1",
+      "stage2": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+      "stage3_context": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+      "stage4_context": "d1853be1e80bea8b4894668ef60ba1d5b4f878e2f8334340759ec658b9685c3d",
+      "stage5": "31865f18b575039e9744f107701fda16da6862860b705e5c4e2439a55372649d",
+      "stage6": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+    },
+    "version": "reviewer2-external-reference-report-audit-v1"
+  },
+  "output": {
+    "recommendation": "RECOMMEND_PILOT",
+    "report": "Candidate HTTPS is technically supported as a transport-layer countermeasure for interception-oriented session hijacking, and it aligns with baseline session-protection guidance for authenticated sessions and secure cookies. However, the supplied evidence is insufficient for a full enterprise recommendation because HTTPS alone does not cover post-transport session-hijacking paths, exact deployment facts are missing, and financial/adoption quantities are unknown. A qualified pilot is therefore preferred: pilot HTTPS/TLS enforcement on representative enterprise session-bearing services with NIST-consistent TLS configuration, no insecure fallback, secure session handling, logging, and performance/compatibility testing. The forecast shows the threat state increasing while the HTTPS mitigation state is also increasing and positioned above the threat state, with a negative threat-minus-pmt gap that becomes more negative from 2025 to 2027. This relative mitigation posture is favorable, but the PMT confidence half-width is larger than the threat confidence half-width, and the state modality is NoP, so the forecast should be treated as statistical rather than as observed incident reduction. The EU jurisdiction is a scenario parameter, and the corpus does not provide EU-specific HTTPS deployment effectiveness or legal-duty evidence; CIS IG2 applicability supports enterprise-scale consideration but also notes possible need for enterprise-grade technology and specialized expertise. Evidence supporting feasibility includes the 2024 session-hijacking study treating encrypted web communication as a countermeasure [EVIDENCE:AE07S_C1EF15B9628497F0], NIST SP 800-63B requiring authenticated protected channels and secure HTTPS-only cookies [EVIDENCE:DE_DE13_055FC5E35FA61DD5], NIST SP 800-52R2 TLS implementation guidance [EVIDENCE:DE_DE10_4BE87A62A6676C99] and client-authentication/path-validation requirements [EVIDENCE:DE_DE10_A086B3193CD6440B], NIST SP 800-53 session-authenticity control language [EVIDENCE:E_25_99857C4681E8FEE5], and lifecycle guidance for logging, piloting, phased migration, documentation, and ongoing TLS/SSL operations [EVIDENCE:DE_DE14_575D613F0598EF5E]. Evidence challenging full recommendation includes the OIPM finding that session tokens can still be stolen through XSS or malicious browser extensions after a secure channel exists [EVIDENCE:AE07C_9CBF5980D3BA474A], the CISA advisory showing XSS can steal session cookies and cause session hijacking [EVIDENCE:E_10_AC5A58AF5E015229], IBM X-Force findings that misconfigurations such as concurrent user sessions and excessive timeouts can weaken MFA through session hijacking [EVIDENCE:E_04_B9A3190D9CA152A3], SSL/TLS retrofitting cautions about trusted CAs, DNS security, and underlying vulnerabilities [EVIDENCE:DE_DE18_20A979A3238D1DE6], performance/testing burdens for SSL/TLS-like deployments [EVIDENCE:DE_DE14_EDCA207577B4607A], and the explicit limitation that Crossref HTTPS publication trends do not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness [EVIDENCE:E_33_13A684B424C1D15B]. The CIS IG2 profile confirms a multi-department enterprise IT context with possible specialized expertise requirements [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4], but no numeric budget, ROI, TCO, staffing count, or procurement ceiling is available, so financial feasibility remains unevaluated. An EU-specific applicability claim is not supported; the only EU-referenced item is an ENISA IoT baseline citation that does not prove HTTPS deployment effectiveness in this scenario [EVIDENCE:E_19_E896356AEE4DB2CD]. Decision conditions: escalate to RECOMMEND if the pilot confirms removal of insecure fallback for session-bearing services, TLS configuration follows the supplied guidance, certificate/path-validation and revocation management are workable, secure session attributes and logging are operational, and HTTPS is implemented as part of broader session protection. Downgrade to HOLD or DO_NOT_RECOMMEND if deployment facts show no plausible interception exposure, required TLS/session controls cannot be implemented, operational monitoring/patching capacity is absent, or HTTPS is intended as the sole mitigation against session hijacking. Dissent: the strongest dissent is that HTTPS should not be represented as sufficient for session hijacking because endpoint compromise, XSS, browser extensions, user-level malware, and application misconfiguration can persist after transport encryption [EVIDENCE:AE07C_9CBF5980D3BA474A] [EVIDENCE:E_10_AC5A58AF5E015229] [EVIDENCE:E_04_B9A3190D9CA152A3]. Therefore, the defensible decision is a qualified pilot rather than a full recommendation."
+  },
+  "sha256": "a1d83527458856387000e2d0ef75e3ff3f7403d2f3f881c019fdec48a6729ca0"
+}

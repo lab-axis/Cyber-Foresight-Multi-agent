@@ -1,0 +1,307 @@
+{
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "2cd3c198b4174d52c7bb4827994fef4e16d417a5263a5427ba50324452fb46e0",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 43,
+    "shadow_object_sha256": "f815b38f90270d9a471b23884f2b9687b5e5f9bac5028a48e5c98f558c5b2b55",
+    "source_hashes": {
+      "stage1": "048aa9e6dd139b26dd32450ec0fda405bb883a62497ed108691cf7e840b16872",
+      "stage2": "3ddd4def226a25d78c6243f4382fb30d384b7793f7191e62a95b79e660f11d06",
+      "stage3_context": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+      "stage4_context": "903f67ef37fb5c791e24edf9e95e89eab3871357daaf710dbd35a12093a6e9d9",
+      "stage5": "21782b723a9d2a4314a244c1d347b57acf3ce4923dab23db75a071d0d7ee8b79",
+      "stage6": "37b347c8a4f93dbe5bae0f66037abd59c4c085642673b2cc7f66fc31c0c1fbd9"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "fin_support_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_challenge_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_context_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__d374108f130df77c",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing, or procurement evidence is supplied for the US CIS IG2 reference enterprise.",
+        "No enterprise-specific adoption_benefit or adoption_burden evidence is supplied that would allow a financial feasibility stance beyond general guidance."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "General adoption_benefit evidence is present for TLS/IPSec-style cryptography (DE_DE10_A086B3193CD6440B, DE_DE18_CDC975345637E009), and an adoption_burden challenge is present from CPG encryption guidance (E_23_534489D29C38B327). The general directional evidence survives strict slot grounding, but the residual deployment-specific financial context remains unmet because no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied for the US CIS IG2 reference enterprise. Therefore the financial lens is mixed and partial rather than negative.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "inst_support_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_challenge_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_context_1",
+          "evidence_ids": [
+            "E_25_746173685B235ED2"
+          ],
+          "scope": "GENERAL",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "inst_context_2",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__d374108f130df77c",
+      "evidence_gaps": [
+        "No regulatory_applicability evidence is supplied that links the US CIS IG2 reference enterprise to a specific cryptography-related regulatory or compliance obligation.",
+        "The governance and compliance evidence is general and does not establish deployment-specific institutional feasibility for this frozen Insider Threat / CRYPTOGRAPHY decision object."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General governance_enablement evidence exists for cryptography (DE_DE08_031120C53EF050F3, E_23_534489D29C38B327), and a compliance_constraint challenge exists from algorithm-transition guidance (DE_DE09_6719137897848A9E). The general directional evidence survives strict slot grounding, but the residual deployment-specific regulatory applicability condition remains unmet for the US CIS IG2 reference enterprise. Therefore the institutional lens is mixed and partial rather than negative.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "tech_support_1",
+          "evidence_ids": [
+            "AE04S_2674461DBC059388"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_challenge_1",
+          "evidence_ids": [
+            "AE04C_F084D028D8E2AE06"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_context_1",
+          "evidence_ids": [
+            "E_25_746173685B235ED2"
+          ],
+          "scope": "GENERAL",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__d374108f130df77c",
+      "evidence_gaps": [
+        "The supporting evidence is prototype-level and does not establish deployment maturity in the specific CIS IG2 reference enterprise.",
+        "The limitation evidence requires that the cryptographic construction be matched to the insider-access model; no evidence confirms that a selected enterprise-grade configuration satisfies that condition."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "The curated insider-threat action finding under technical_enablement (AE04S_2674461DBC059388) directly supports that cryptography can be engineered for insider-threat data leakage, including context-based key generation and file marking in an evaluated prototype. The corresponding technical_limitation (AE04C_F084D028D8E2AE06) shows that conventional encryption is not automatically sufficient in insider-threat settings because authorized attackers may have stronger access, including known- or chosen-plaintext-style opportunities. This challenge is treated as an unmet design condition rather than as a defeat of feasibility because the support evidence is directly scoped to PMT_CRYPTOGRAPHY and THREAT_INSIDER_THREAT and identifies a specialized construction.",
+      "stance": 1
+    }
+  },
+  "raw": {
+    "analysis_note": "The forecast indicates an increasing threat-minus-PMT gap over 2025-2027 with higher PMT uncertainty than threat uncertainty, but the forecast is not used as cited feasibility evidence. The technical lens has direct insider-threat cryptography enablement evidence but remains partial because the limitation evidence imposes a design-specific condition. The institutional and financial lenses are held at stance 0 because the supplied evidence does not establish deployment-specific regulatory applicability or enterprise-specific financial adoption feasibility for the frozen US CIS IG2 reference enterprise.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "fin_support_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_challenge_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "fin_context_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing, or procurement evidence is supplied for the US CIS IG2 reference enterprise.",
+        "No enterprise-specific adoption_benefit or adoption_burden evidence is supplied that would allow a financial feasibility stance beyond general guidance."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General adoption_benefit evidence is present for TLS/IPSec-style cryptography (DE_DE10_A086B3193CD6440B, DE_DE18_CDC975345637E009), and an adoption_burden challenge is present from CPG encryption guidance (E_23_534489D29C38B327). The general directional evidence survives strict slot grounding, but the residual deployment-specific financial context remains unmet because no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied for the US CIS IG2 reference enterprise. Therefore the financial lens is mixed and partial rather than negative.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "inst_support_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_challenge_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "inst_context_1",
+          "evidence_ids": [
+            "E_25_746173685B235ED2"
+          ],
+          "scope": "GENERAL",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "inst_context_2",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No regulatory_applicability evidence is supplied that links the US CIS IG2 reference enterprise to a specific cryptography-related regulatory or compliance obligation.",
+        "The governance and compliance evidence is general and does not establish deployment-specific institutional feasibility for this frozen Insider Threat / CRYPTOGRAPHY decision object."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General governance_enablement evidence exists for cryptography (DE_DE08_031120C53EF050F3, E_23_534489D29C38B327), and a compliance_constraint challenge exists from algorithm-transition guidance (DE_DE09_6719137897848A9E). The general directional evidence survives strict slot grounding, but the residual deployment-specific regulatory applicability condition remains unmet for the US CIS IG2 reference enterprise. Therefore the institutional lens is mixed and partial rather than negative.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "tech_support_1",
+          "evidence_ids": [
+            "AE04S_2674461DBC059388"
+          ],
+          "scope": "GENERAL",
+          "statement": "SUPPORTS_FEASIBILITY",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_challenge_1",
+          "evidence_ids": [
+            "AE04C_F084D028D8E2AE06"
+          ],
+          "scope": "GENERAL",
+          "statement": "CHALLENGES_FEASIBILITY",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "tech_context_1",
+          "evidence_ids": [
+            "E_25_746173685B235ED2"
+          ],
+          "scope": "GENERAL",
+          "statement": "NEUTRAL_CONTEXT",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "The supporting evidence is prototype-level and does not establish deployment maturity in the specific CIS IG2 reference enterprise.",
+        "The limitation evidence requires that the cryptographic construction be matched to the insider-access model; no evidence confirms that a selected enterprise-grade configuration satisfies that condition."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The curated insider-threat action finding under technical_enablement (AE04S_2674461DBC059388) directly supports that cryptography can be engineered for insider-threat data leakage, including context-based key generation and file marking in an evaluated prototype. The corresponding technical_limitation (AE04C_F084D028D8E2AE06) shows that conventional encryption is not automatically sufficient in insider-threat settings because authorized attackers may have stronger access, including known- or chosen-plaintext-style opportunities. This challenge is treated as an unmet design condition rather than as a defeat of feasibility because the support evidence is directly scoped to PMT_CRYPTOGRAPHY and THREAT_INSIDER_THREAT and identifies a specialized construction.",
+      "stance": 1
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "4d83ede72284a0b3a8018844b2edc3ecf58a080bcea5a9c0fbadd9809e674826",
+  "withheld_evidence_id": null
+}

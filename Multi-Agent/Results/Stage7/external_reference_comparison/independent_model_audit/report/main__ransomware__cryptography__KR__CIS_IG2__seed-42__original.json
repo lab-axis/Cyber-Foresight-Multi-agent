@@ -1,0 +1,26 @@
+{
+  "identity": {
+    "input_sha256": "5788e393ba31fc971556a8da54e4aeca5e1445ef8e4189c0bd9a949cdfed258c",
+    "key": "main__ransomware__cryptography__KR__CIS_IG2__seed-42__original",
+    "kind": "report",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "c4fc1fded0f484d2a395a5cbb7046be9c90e6fc59aaa11a4199d9304d80d0fac",
+    "schema_sha256": "9393abe4eefc8f671b0521b80596b77e677d2eedb2ad982a2828b3b9e7fd057d",
+    "seed": 42,
+    "temperature": 0,
+    "version": "reviewer2-external-reference-report-audit-v1"
+  },
+  "judgment": {
+    "constraints_and_uncertainty": 2,
+    "factual_grounding": 1,
+    "forecast_modality": 1,
+    "internal_decision_coherence": 2,
+    "material_issues": [
+      "The report claims 'the historical recent direction for the cryptography side is reported as decreasing', which contradicts the provided forecast JSON where the pmt_state direction is explicitly listed as 'increasing'."
+    ],
+    "rationale": "The report demonstrates high fidelity to the cited evidence records and correctly identifies the organizational context (CIS IG2) and the lack of jurisdiction-specific (KR) evidence. It properly acknowledges the absence of numeric budget, ROI, and TCO data. The internal logic for the RECOMMEND_PILOT decision is coherent, based on the unresolved financial/adoption dimension. However, the report contains a material contradiction regarding the forecast: it asserts that the historical recent direction for cryptography is 'decreasing', whereas the provided forecast JSON explicitly states the pmt_state direction is 'increasing'. This error affects both the factual grounding and the forecast modality scores.",
+    "technical_scope": 2
+  },
+  "sha256": "6a3c79a0bcce8e06004eddfee650ae2dc9e03d852ffe129cf27147813bac68c2"
+}

@@ -1,0 +1,289 @@
+{
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "f6895e7c987e1538707cf6ef9c1c1e12a9f3714e4f223991735771ab60e257ea",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 43,
+    "shadow_object_sha256": "19baf78ec5e23c29726ed1a3fe67e39db86ff4edc34c26ed3c6c01e68d51d789",
+    "source_hashes": {
+      "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+      "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+      "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+      "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+      "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+      "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "IPSec guidance provides an adoption benefit by describing a recommended configuration path, key negotiation, and encryption for sensitive data in communications.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_SUPPORT_2",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS implementation guidance provides an adoption benefit by defining requirements for strong cryptographic client authentication and certificate validation.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CPG encryption recommendation introduces adoption burden by acknowledging feasibility limits, latency and availability impacts in OT contexts, and the need to update outdated or weak encryption while considering post-quantum implications.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS/SSL deployment guidance provides deployment-maturity context but does not establish financial quantities, product-specific cost, or enterprise-specific adoption success.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial-adoption feasibility is qualitatively supported by evidence mapped to adoption_benefit, showing that cryptography has standardized adoption paths and operational benefits in TLS/IPSec contexts. Adoption burden is also present, including feasibility constraints, latency/availability considerations, and the need to update weak or outdated encryption. No numeric budget, ROI, TCO, staffing count, or procurement ceiling is supplied, so the financial lens cannot be rated as fully sufficient.",
+      "stance": 1
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance supports governance enablement by requiring accountability, traceability, and access controls for cryptographic key handling.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_SUPPORT_2",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG provides governance enablement by recommending strong and agile encryption, including properly configured TLS/SSL and updating outdated or weak encryption.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST SP 800-131A Rev. 2 creates a compliance constraint by disallowing, deprecating, or restricting certain legacy cryptographic algorithms and limiting their use in new applications.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General institutional support is present from US-relevant governance guidance and CPG encryption recommendations. A compliance constraint exists from NIST algorithm-transition guidance, which imposes restrictions on legacy cryptographic use. Because no regulatory_applicability evidence is supplied, a DEPLOYMENT_SPECIFIC institutional claim is not made. The institutional evidence supports feasibility at the general level, but only partially, due to the compliance constraint and lack of deployment-specific regulatory applicability.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic analysis can materially support ransomware neutralization and reverse engineering by identifying cipher classes and extracting cryptographic keys or state from execution traces across evaluated ransomware specimens.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ransomware can alter observable entropy patterns to evade cryptography-related detectors, and some existing detection approaches impose nontrivial computational cost, indicating that cryptography-related detection is not universally robust.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009",
+            "DE_DE18_EAA59A9B7CEAD276",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "Deployment-maturity sources provide general context for cryptography and TLS/IPSec deployment, but they do not by themselves establish ransomware-specific effectiveness or enterprise-specific success.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "There is direct ransomware-specific technical enablement for cryptography-related analysis, but also direct evidence that cryptography-related detection can be evaded and that some approaches carry computational cost. The support is direction-aligned and directly applicable to the PMT, while the limitation prevents a fully robust feasibility claim. Because the evidence remains general and the limitation is substantive, the stance is positive but partially sufficient.",
+      "stance": 1
+    }
+  },
+  "raw": {
+    "analysis_note": "All three lenses show positive direction-aligned evidence for CRYPTOGRAPHY under the frozen Ransomware forecast pair. The technical lens has the most direct PMT-specific effectiveness evidence, but it is partially offset by detection-evasion and cost limitations. The institutional lens is supported by governance enablement evidence but lacks regulatory_applicability evidence needed for a deployment-specific institutional claim. The financial lens is qualitatively supported by adoption-benefit evidence but lacks numeric financial context and includes adoption-burden evidence. These assessments are limited to the supplied evidence and do not establish product, version, sector, or enterprise-specific deployment success.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "IPSec guidance provides an adoption benefit by describing a recommended configuration path, key negotiation, and encryption for sensitive data in communications.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_SUPPORT_2",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS implementation guidance provides an adoption benefit by defining requirements for strong cryptographic client authentication and certificate validation.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CPG encryption recommendation introduces adoption burden by acknowledging feasibility limits, latency and availability impacts in OT contexts, and the need to update outdated or weak encryption while considering post-quantum implications.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS/SSL deployment guidance provides deployment-maturity context but does not establish financial quantities, product-specific cost, or enterprise-specific adoption success.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial-adoption feasibility is qualitatively supported by evidence mapped to adoption_benefit, showing that cryptography has standardized adoption paths and operational benefits in TLS/IPSec contexts. Adoption burden is also present, including feasibility constraints, latency/availability considerations, and the need to update weak or outdated encryption. No numeric budget, ROI, TCO, staffing count, or procurement ceiling is supplied, so the financial lens cannot be rated as fully sufficient.",
+      "stance": 1
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance supports governance enablement by requiring accountability, traceability, and access controls for cryptographic key handling.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_SUPPORT_2",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG provides governance enablement by recommending strong and agile encryption, including properly configured TLS/SSL and updating outdated or weak encryption.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST SP 800-131A Rev. 2 creates a compliance constraint by disallowing, deprecating, or restricting certain legacy cryptographic algorithms and limiting their use in new applications.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General institutional support is present from US-relevant governance guidance and CPG encryption recommendations. A compliance constraint exists from NIST algorithm-transition guidance, which imposes restrictions on legacy cryptographic use. Because no regulatory_applicability evidence is supplied, a DEPLOYMENT_SPECIFIC institutional claim is not made. The institutional evidence supports feasibility at the general level, but only partially, due to the compliance constraint and lack of deployment-specific regulatory applicability.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic analysis can materially support ransomware neutralization and reverse engineering by identifying cipher classes and extracting cryptographic keys or state from execution traces across evaluated ransomware specimens.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ransomware can alter observable entropy patterns to evade cryptography-related detectors, and some existing detection approaches impose nontrivial computational cost, indicating that cryptography-related detection is not universally robust.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009",
+            "DE_DE18_EAA59A9B7CEAD276",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "Deployment-maturity sources provide general context for cryptography and TLS/IPSec deployment, but they do not by themselves establish ransomware-specific effectiveness or enterprise-specific success.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "There is direct ransomware-specific technical enablement for cryptography-related analysis, but also direct evidence that cryptography-related detection can be evaded and that some approaches carry computational cost. The support is direction-aligned and directly applicable to the PMT, while the limitation prevents a fully robust feasibility claim. Because the evidence remains general and the limitation is substantive, the stance is positive but partially sufficient.",
+      "stance": 1
+    }
+  },
+  "recommendation": "RECOMMEND",
+  "sha256": "4495f8678bd75a550b0bd44d72316d072d8b555f2d8b2df186125052358bf9ab",
+  "withheld_evidence_id": null
+}

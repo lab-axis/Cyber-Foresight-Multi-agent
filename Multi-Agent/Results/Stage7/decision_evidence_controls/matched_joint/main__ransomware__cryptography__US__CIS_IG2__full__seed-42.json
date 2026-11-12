@@ -1,0 +1,217 @@
+{
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "f6895e7c987e1538707cf6ef9c1c1e12a9f3714e4f223991735771ab60e257ea",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "19baf78ec5e23c29726ed1a3fe67e39db86ff4edc34c26ed3c6c01e68d51d789",
+    "source_hashes": {
+      "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+      "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+      "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+      "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+      "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+      "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_GENERAL_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST guidance for TLS and IPSec provides adoption-enabling implementation pathways, including certificate-based authentication, path validation, and deployment configuration options.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_GENERAL_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG guidance identifies adoption burdens, including the need to apply encryption when technically feasible, balance latency and availability in OT contexts, remediate outdated or weak encryption, and consider post-quantum implications.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Established implementation guidance for IPSec and TLS supports adoption feasibility by reducing implementation ambiguity, but official guidance also identifies adoption burdens related to feasibility, latency, weak encryption remediation, and post-quantum considerations. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_GENERAL_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance and CISA CPG encryption guidance provide governance-enabling expectations for cryptographic adoption, including key management, accountability, traceability, and use of properly configured SSL/TLS.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CHALLENGE_GENERAL_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST SP 800-131A REV. 2 imposes algorithm approval and transition constraints, including disallowed or deprecated use of certain symmetric encryption algorithms, which can constrain cryptographic implementation choices.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General governance and regulatory guidance enables cryptographic adoption, while algorithm-transition guidance imposes compliance constraints. Deployment-specific regulatory applicability is not asserted because no evidence is mapped to regulatory_applicability.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_GENERAL_1",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic-primitive analysis can identify cipher classes and extract cryptographic keys or state from ransomware execution traces, supporting ransomware neutralization and reverse engineering.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_GENERAL_1",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ransomware can alter observable entropy patterns to evade some cryptography-related detectors, and such detection approaches may impose nontrivial computational cost.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Direct general technical enablement exists for cryptography as a ransomware PMT through cryptographic analysis of execution traces, while a narrower technical limitation exists for some cryptography-related detection approaches.",
+      "stance": 1
+    }
+  },
+  "raw": {
+    "analysis_note": "The technical lens is positively weighted because the cited enablement is directly tied to ransomware cryptographic analysis, while the cited limitation is narrower. The institutional lens is positively weighted because governance enablement is present, though algorithm-compliance constraints remain visible. The financial-adoption lens is mixed because adoption-pathway support and adoption-burden constraints are both present, and no numeric financial quantities are supplied.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_GENERAL_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST guidance for TLS and IPSec provides adoption-enabling implementation pathways, including certificate-based authentication, path validation, and deployment configuration options.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_GENERAL_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG guidance identifies adoption burdens, including the need to apply encryption when technically feasible, balance latency and availability in OT contexts, remediate outdated or weak encryption, and consider post-quantum implications.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Established implementation guidance for IPSec and TLS supports adoption feasibility by reducing implementation ambiguity, but official guidance also identifies adoption burdens related to feasibility, latency, weak encryption remediation, and post-quantum considerations. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_GENERAL_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance and CISA CPG encryption guidance provide governance-enabling expectations for cryptographic adoption, including key management, accountability, traceability, and use of properly configured SSL/TLS.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CHALLENGE_GENERAL_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST SP 800-131A REV. 2 imposes algorithm approval and transition constraints, including disallowed or deprecated use of certain symmetric encryption algorithms, which can constrain cryptographic implementation choices.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General governance and regulatory guidance enables cryptographic adoption, while algorithm-transition guidance imposes compliance constraints. Deployment-specific regulatory applicability is not asserted because no evidence is mapped to regulatory_applicability.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_GENERAL_1",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic-primitive analysis can identify cipher classes and extract cryptographic keys or state from ransomware execution traces, supporting ransomware neutralization and reverse engineering.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_GENERAL_1",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ransomware can alter observable entropy patterns to evade some cryptography-related detectors, and such detection approaches may impose nontrivial computational cost.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Direct general technical enablement exists for cryptography as a ransomware PMT through cryptographic analysis of execution traces, while a narrower technical limitation exists for some cryptography-related detection approaches.",
+      "stance": 1
+    }
+  },
+  "recommendation": "RECOMMEND_PILOT",
+  "sha256": "13e40447056be235981e05280a14adee5f8f0bbe0fcd428e26a2bede0d647e03",
+  "withheld_evidence_id": null
+}

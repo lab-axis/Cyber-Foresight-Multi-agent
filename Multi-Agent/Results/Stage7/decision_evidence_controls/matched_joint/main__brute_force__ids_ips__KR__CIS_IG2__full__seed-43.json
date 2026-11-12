@@ -1,0 +1,225 @@
+{
+  "identity": {
+    "case_id": "main__brute_force__ids_ips",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "768d55d99e58b30e0f223a3fa4111a924eb5450cb8dfcb5f80f79ff5cc86446b",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 43,
+    "shadow_object_sha256": "0c4a732d8158722d49b9fc2e134f54ef41084067c5213cc3b282cabd5bcab3b1",
+    "source_hashes": {
+      "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+      "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+      "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+      "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+      "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+      "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE04_DB6B29C9BE1B0F05",
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "Qualitative adoption benefits are present: integrated IDPS consoles and data sharing can streamline administration, and automation or SIEM integration can reduce monitoring and review effort for IDS/IPS information.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "Adoption burdens are present: administrators must test updates, maintain broad network/security/protocol skills, and may need customization or reconfiguration work for IDPS components.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Numeric budget or TCO evidence would be required before assigning a positive or negative financial stance."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, so financial feasibility cannot be resolved as positive or negative for this reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Qualitative adoption benefits and adoption burdens are both present, and the absence of numeric budget or TCO evidence leaves the financial direction genuinely mixed.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE04_0B77B88875745973"
+          ],
+          "scope": "GENERAL",
+          "statement": "Institutional guidance supports using IDS/IPS as a governance-relevant monitoring and control practice: organization-wide ISCM uses security-control metrics for risk decisions, and NIST IDPS guidance directs organizations to plan, select, combine, and integrate IDPS technologies.",
+          "status": "SUPPORTS_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "KR regulatory applicability would be required before making a deployment-specific institutional feasibility claim."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "evidence_gaps": [
+        "No Republic of Korea regulatory applicability, KR-specific governance, or compliance-constraint evidence is present, so the support is general and does not establish KR/CIS IG2-specific institutional success."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General governance guidance supports institutional use of IDS/IPS, but Republic of Korea regulatory applicability and compliance-constraint evidence are absent.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "A 2024 case study directly applies IDS components, including Snort and Fail2Ban, to brute-force defense and treats IDS/IPS-style monitoring and blocking as an implementable response to repeated authentication attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Distributed low-rate brute-force attacks can remain below per-host login thresholds and evade ordinary IDS/IPS rules, which limits the completeness of conventional IDS/IPS detection for some brute-force patterns.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Deployment would need coverage for low-rate distributed brute-force behavior, which is not established by the supplied evidence."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "evidence_gaps": [
+        "No supplied evidence quantifies detection or prevention performance for the specific 2025-2027 brute-force forecast, a particular product or version, or this CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Direct brute-force application evidence supports IDS/IPS technical feasibility, but a documented evasion limitation prevents a sufficient rating.",
+      "stance": 1
+    }
+  },
+  "raw": {
+    "analysis_note": "This joint assessment uses only the supplied grounding-contract evidence for the IDS/IPS brute-force candidate and does not add a recommendation label.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE04_DB6B29C9BE1B0F05",
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "Qualitative adoption benefits are present: integrated IDPS consoles and data sharing can streamline administration, and automation or SIEM integration can reduce monitoring and review effort for IDS/IPS information.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "Adoption burdens are present: administrators must test updates, maintain broad network/security/protocol skills, and may need customization or reconfiguration work for IDPS components.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Numeric budget or TCO evidence would be required before assigning a positive or negative financial stance."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, so financial feasibility cannot be resolved as positive or negative for this reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Qualitative adoption benefits and adoption burdens are both present, and the absence of numeric budget or TCO evidence leaves the financial direction genuinely mixed.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE04_0B77B88875745973"
+          ],
+          "scope": "GENERAL",
+          "statement": "Institutional guidance supports using IDS/IPS as a governance-relevant monitoring and control practice: organization-wide ISCM uses security-control metrics for risk decisions, and NIST IDPS guidance directs organizations to plan, select, combine, and integrate IDPS technologies.",
+          "status": "SUPPORTS_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "KR regulatory applicability would be required before making a deployment-specific institutional feasibility claim."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No Republic of Korea regulatory applicability, KR-specific governance, or compliance-constraint evidence is present, so the support is general and does not establish KR/CIS IG2-specific institutional success."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General governance guidance supports institutional use of IDS/IPS, but Republic of Korea regulatory applicability and compliance-constraint evidence are absent.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "A 2024 case study directly applies IDS components, including Snort and Fail2Ban, to brute-force defense and treats IDS/IPS-style monitoring and blocking as an implementable response to repeated authentication attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Distributed low-rate brute-force attacks can remain below per-host login thresholds and evade ordinary IDS/IPS rules, which limits the completeness of conventional IDS/IPS detection for some brute-force patterns.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Deployment would need coverage for low-rate distributed brute-force behavior, which is not established by the supplied evidence."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence quantifies detection or prevention performance for the specific 2025-2027 brute-force forecast, a particular product or version, or this CIS IG2 reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Direct brute-force application evidence supports IDS/IPS technical feasibility, but a documented evasion limitation prevents a sufficient rating.",
+      "stance": 1
+    }
+  },
+  "recommendation": "RECOMMEND_PILOT",
+  "sha256": "b011ecdfee4ddcf7b7cbb63ab7af985a8565359da19936e7094c26092577b253",
+  "withheld_evidence_id": null
+}

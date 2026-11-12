@@ -1,0 +1,110 @@
+{
+  "identity": {
+    "case_id": "main__ddos__nlp_llm",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "d91b5cfd59790a679933ff2db28e9b426f6f9ea51177bc2aa6a9210e3ebae92a",
+    "isolated": true,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "eccc7ab867bdf4e383199100fcba71bc8eff80b04e282c37323832f5a744e7a4",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "283268a8153993dfc30753afa1c4d1f64303300198578e4c3f22cc617d7d7da4",
+    "seed": 42,
+    "shadow_object_sha256": "0c021e7346c9bf8b8d563c36a3dce2de0f6fc1c9d3bb8d4c3fc103cf84289d06",
+    "source_hashes": {
+      "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+      "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+      "stage3_context": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+      "stage4_context": "10c834266961c7c4ea048c04a09db58d572d8606365b27c21677992d23f5b7ea",
+      "stage5": "86d070634eb0c7cff097e1c054be40d2b7c670b208640da9ea80b40d55a8683b",
+      "stage6": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_1",
+          "evidence_ids": [
+            "AE01S_6E6099FA4C2D13D4"
+          ],
+          "scope": "GENERAL",
+          "statement": "NLP/LLM variants demonstrated technical capability for DDoS attack detection in controlled experiments, including fine-tuned variants outperforming a compared MLP baseline on benchmark DDoS datasets.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_1",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The DDoS study does not establish turnkey production deployment; results depended on prompt context or fine-tuning, few-shot performance was materially weaker in a harder setting, and the evidence is benchmark-based rather than an enterprise operational deployment.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Deployment would require fine-tuning or prompt-context engineering rather than relying only on few-shot performance.",
+        "Deployment would require validation on enterprise traffic conditions, not only benchmark datasets.",
+        "Operational use would require monitoring, update management, and secure maintenance practices consistent with the supplied AI-system guidance."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_gaps": [
+        "No supplied evidence demonstrates production-grade NLP/LLM deployment for DDoS detection in a CIS IG2 reference enterprise.",
+        "No supplied evidence demonstrates integration maturity, operational maintenance readiness, or enterprise-scale validation for this PMT.",
+        "No supplied evidence demonstrates that the forecast pair has been validated in the target enterprise context."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "There is direct technical evidence that NLP/LLM methods can support DDoS detection in benchmark experiments, but the same evidence does not establish turnkey production deployment or enterprise operational effectiveness. The support and challenge evidence are both directly relevant and from the same DDoS study, making the technical-feasibility direction genuinely mixed rather than clearly supportable or clearly challenging.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "claims": [
+      {
+        "claim_id": "TF_SUPPORT_1",
+        "evidence_ids": [
+          "AE01S_6E6099FA4C2D13D4"
+        ],
+        "scope": "GENERAL",
+        "statement": "NLP/LLM variants demonstrated technical capability for DDoS attack detection in controlled experiments, including fine-tuned variants outperforming a compared MLP baseline on benchmark DDoS datasets.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CHALLENGE_1",
+        "evidence_ids": [
+          "AE01C_A6798E23EEB1E487"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The DDoS study does not establish turnkey production deployment; results depended on prompt context or fine-tuning, few-shot performance was materially weaker in a harder setting, and the evidence is benchmark-based rather than an enterprise operational deployment.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "Deployment would require fine-tuning or prompt-context engineering rather than relying only on few-shot performance.",
+      "Deployment would require validation on enterprise traffic conditions, not only benchmark datasets.",
+      "Operational use would require monitoring, update management, and secure maintenance practices consistent with the supplied AI-system guidance."
+    ],
+    "constraints": [],
+    "evidence_gaps": [
+      "No supplied evidence demonstrates production-grade NLP/LLM deployment for DDoS detection in a CIS IG2 reference enterprise.",
+      "No supplied evidence demonstrates integration maturity, operational maintenance readiness, or enterprise-scale validation for this PMT.",
+      "No supplied evidence demonstrates that the forecast pair has been validated in the target enterprise context."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "rationale": "There is direct technical evidence that NLP/LLM methods can support DDoS detection in benchmark experiments, but the same evidence does not establish turnkey production deployment or enterprise operational effectiveness. The support and challenge evidence are both directly relevant and from the same DDoS study, making the technical-feasibility direction genuinely mixed rather than clearly supportable or clearly challenging.",
+    "stance": 0
+  },
+  "recommendation": null,
+  "sha256": "725505e4619346fd23ec5507c0a839d683e4d17c03bad27981e2812f69480127",
+  "withheld_evidence_id": null
+}

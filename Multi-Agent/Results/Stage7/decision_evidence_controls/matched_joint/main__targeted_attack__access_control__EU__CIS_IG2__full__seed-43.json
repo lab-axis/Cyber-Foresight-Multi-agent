@@ -1,0 +1,287 @@
+{
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "601df5e8d2b3dc9578a77aad7e71d4ac51d31b54ed2ef8fc6c4aca10a3246b95",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 43,
+    "shadow_object_sha256": "bb93d44ba33215926b277a920b86e497589cff5acf9f7ce6cb71eaed57a083ee",
+    "source_hashes": {
+      "stage1": "304807a460c79b97a7c155ac0f3a11e974386cf0363fc072fef87238f7525724",
+      "stage2": "e32d514b41e64ac386fed97a222cbc7fd92d7328e840ea7c0bd6ce0bf758352d",
+      "stage3_context": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+      "stage4_context": "b197de3415acc19c31e3f821ed025c29e9bf15b3b293e7c0ad5f6b35b1ef2cee",
+      "stage5": "f33b3c4296fd820cb26a9525899ee8fc2a36c30f0775e3ce10ae5de1aa804127",
+      "stage6": "ec942bd1085a56ecfa8a3e7863ae3ce4b7791dc5e1d96dd1f7a878f67d61e958"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "In the long term, zero-trust implementation is described as enabling a more prudent allocation of security investments, providing a qualitative adoption benefit for access-control deployment.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA"
+          ],
+          "scope": "GENERAL",
+          "statement": "ABAC adoption may involve development, deployment, maintenance, retrofit, and attribute-management costs that can exceed long-term benefits, creating an adoption burden for access-control implementation.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_2",
+          "evidence_ids": [
+            "DE_DE12_CBF6FBB1313D37AF",
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "Zero-trust access-control deployments can involve provider switching costs, disruption risk, and incremental multi-year implementation, which burden financial adoption.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial feasibility depends on whether the enterprise can absorb initial implementation and transition costs without a supplied numeric budget basis.",
+        "Adoption benefit is conditional on achieving the long-term zero-trust investment allocation described in the evidence."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+      "evidence_gaps": [
+        "No supplied numeric budget, TCO, ROI, staffing, or procurement ceiling evidence exists to quantify financial feasibility.",
+        "No supplied evidence directly measures the financial benefit of generic ACCESS CONTROL rather than zero-trust or ABAC-specific implementations."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "The financial adoption lens is mixed. Supplied guidance indicates that zero-trust adoption, of which access control is a core component, may lead to a more prudent long-term allocation of security investments, which is an adoption benefit. At the same time, multiple sources describe adoption burdens, including incremental multi-year rollout, initial additional costs, governance and business-process changes, ABAC transition costs, and vendor or provider switching risks. Because no numeric budget, TCO, ROI, staffing, or procurement ceiling is supplied, and because the benefits are qualitative and tied to zero-trust or ABAC variants rather than a generic access-control action, the financial stance remains mixed and only partially evidenced.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE12_E6F93E4AB8722379"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST zero-trust guidance identifies industry compliance systems as a data source whose policy rules can inform access decisions, supporting institutional enablement of access control.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST session-management requirements for secure channels, session identifiers, and tokens are compliance-relevant constraints for access-control implementation, but the supplied text does not show that they make access control infeasible for the CIS IG2 reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "INST_CONTEXT_1",
+          "evidence_ids": [
+            "E_31_96F42990F3AEAC86"
+          ],
+          "scope": "GENERAL",
+          "statement": "EU primary-source text identifies appropriate access control policies as part of cybersecurity risk-management measures, but the supplied evidence does not confirm that the CIS IG2 reference enterprise is an entity in scope for that requirement.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Institutional support is strongest if the enterprise falls within, or voluntarily aligns with, the cited EU access-control policy expectations.",
+        "Compliance with session, authentication, and token handling requirements must be addressed for institutional feasibility."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+      "evidence_gaps": [
+        "The CIS IG2 reference enterprise is not confirmed to be an essential or important entity under the cited EU legal context.",
+        "No supplied evidence confirms that the reference enterprise has the organizational governance capacity to implement the required access-control policy lifecycle."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Institutional evidence supports feasibility because zero-trust governance guidance identifies compliance systems as policy inputs to access decisions, providing governance enablement. EU primary-source material identifies access control policies as cybersecurity risk-management context, but the reference enterprise's legal status under that regime is not established, so it is treated as neutral context. NIST session-management requirements are also treated as neutral compliance context because they describe implementation constraints without showing infeasibility for the CIS IG2 reference enterprise.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE06S_407DDF87C86BB41B"
+          ],
+          "scope": "GENERAL",
+          "statement": "Adaptive access control integrated with ATT&CK-informed APT risk assessment can improve response to sophisticated targeted threats, supporting technical feasibility of ACCESS CONTROL for Targeted Attack.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "Static or perimeter-based access-control assumptions are insufficient for evolving APT behavior, and effective access control requires continuously updated threat and risk context rather than the control category alone.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Access control must be operationally coupled to continuously updated APT threat and risk context for the supported feasibility claim to apply.",
+        "Enterprise deployment maturity and integration capacity remain unverified."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+      "evidence_gaps": [
+        "No supplied evidence confirms that the CIS IG2 reference enterprise has or can obtain the continuous threat/risk context required by the supported adaptive access-control model.",
+        "No supplied evidence establishes that a generic access-control implementation without dynamic APT risk integration can close the forecast threat-minus-PMT gap."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Evidence both supports and challenges technical feasibility for ACCESS CONTROL against Targeted Attack. The curated zero-trust APT finding supports adaptive, centrally coordinated access control as a defense mechanism against sophisticated multi-stage threats. However, the same source indicates that conventional static or perimeter-based access-control assumptions are insufficient and that effective access control depends on continuously updated threat and risk context. This creates a mixed technical stance: feasibility is plausible when access control is dynamically integrated with threat context, but the evidence does not establish that a generic IG2 access-control implementation without that context is sufficient. No enterprise-specific deployment evidence confirms that the reference CIS IG2 environment can meet that condition.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "The joint assessment is mixed overall. Institutional evidence is the strongest support, especially in the EU scenario, while technical and financial lenses remain conditional. The forecast shows the threat-minus-PMT gap moving from negative in 2025 toward slightly positive by 2027, which increases decision relevance but does not itself prove that ACCESS CONTROL will outpace Targeted Attack.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "In the long term, zero-trust implementation is described as enabling a more prudent allocation of security investments, providing a qualitative adoption benefit for access-control deployment.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA"
+          ],
+          "scope": "GENERAL",
+          "statement": "ABAC adoption may involve development, deployment, maintenance, retrofit, and attribute-management costs that can exceed long-term benefits, creating an adoption burden for access-control implementation.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_2",
+          "evidence_ids": [
+            "DE_DE12_CBF6FBB1313D37AF",
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "Zero-trust access-control deployments can involve provider switching costs, disruption risk, and incremental multi-year implementation, which burden financial adoption.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial feasibility depends on whether the enterprise can absorb initial implementation and transition costs without a supplied numeric budget basis.",
+        "Adoption benefit is conditional on achieving the long-term zero-trust investment allocation described in the evidence."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied numeric budget, TCO, ROI, staffing, or procurement ceiling evidence exists to quantify financial feasibility.",
+        "No supplied evidence directly measures the financial benefit of generic ACCESS CONTROL rather than zero-trust or ABAC-specific implementations."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The financial adoption lens is mixed. Supplied guidance indicates that zero-trust adoption, of which access control is a core component, may lead to a more prudent long-term allocation of security investments, which is an adoption benefit. At the same time, multiple sources describe adoption burdens, including incremental multi-year rollout, initial additional costs, governance and business-process changes, ABAC transition costs, and vendor or provider switching risks. Because no numeric budget, TCO, ROI, staffing, or procurement ceiling is supplied, and because the benefits are qualitative and tied to zero-trust or ABAC variants rather than a generic access-control action, the financial stance remains mixed and only partially evidenced.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE12_E6F93E4AB8722379"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST zero-trust guidance identifies industry compliance systems as a data source whose policy rules can inform access decisions, supporting institutional enablement of access control.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST session-management requirements for secure channels, session identifiers, and tokens are compliance-relevant constraints for access-control implementation, but the supplied text does not show that they make access control infeasible for the CIS IG2 reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "INST_CONTEXT_1",
+          "evidence_ids": [
+            "E_31_96F42990F3AEAC86"
+          ],
+          "scope": "GENERAL",
+          "statement": "EU primary-source text identifies appropriate access control policies as part of cybersecurity risk-management measures, but the supplied evidence does not confirm that the CIS IG2 reference enterprise is an entity in scope for that requirement.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Institutional support is strongest if the enterprise falls within, or voluntarily aligns with, the cited EU access-control policy expectations.",
+        "Compliance with session, authentication, and token handling requirements must be addressed for institutional feasibility."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "The CIS IG2 reference enterprise is not confirmed to be an essential or important entity under the cited EU legal context.",
+        "No supplied evidence confirms that the reference enterprise has the organizational governance capacity to implement the required access-control policy lifecycle."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Institutional evidence supports feasibility because zero-trust governance guidance identifies compliance systems as policy inputs to access decisions, providing governance enablement. EU primary-source material identifies access control policies as cybersecurity risk-management context, but the reference enterprise's legal status under that regime is not established, so it is treated as neutral context. NIST session-management requirements are also treated as neutral compliance context because they describe implementation constraints without showing infeasibility for the CIS IG2 reference enterprise.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE06S_407DDF87C86BB41B"
+          ],
+          "scope": "GENERAL",
+          "statement": "Adaptive access control integrated with ATT&CK-informed APT risk assessment can improve response to sophisticated targeted threats, supporting technical feasibility of ACCESS CONTROL for Targeted Attack.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "Static or perimeter-based access-control assumptions are insufficient for evolving APT behavior, and effective access control requires continuously updated threat and risk context rather than the control category alone.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Access control must be operationally coupled to continuously updated APT threat and risk context for the supported feasibility claim to apply.",
+        "Enterprise deployment maturity and integration capacity remain unverified."
+      ],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence confirms that the CIS IG2 reference enterprise has or can obtain the continuous threat/risk context required by the supported adaptive access-control model.",
+        "No supplied evidence establishes that a generic access-control implementation without dynamic APT risk integration can close the forecast threat-minus-PMT gap."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Evidence both supports and challenges technical feasibility for ACCESS CONTROL against Targeted Attack. The curated zero-trust APT finding supports adaptive, centrally coordinated access control as a defense mechanism against sophisticated multi-stage threats. However, the same source indicates that conventional static or perimeter-based access-control assumptions are insufficient and that effective access control depends on continuously updated threat and risk context. This creates a mixed technical stance: feasibility is plausible when access control is dynamically integrated with threat context, but the evidence does not establish that a generic IG2 access-control implementation without that context is sufficient. No enterprise-specific deployment evidence confirms that the reference CIS IG2 environment can meet that condition.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "b8f24ff07fd01e6428453ca3b0efd11a8ce9ecade1931f3d9c3e15f5d53b1b42",
+  "withheld_evidence_id": null
+}

@@ -1,0 +1,39 @@
+{
+  "identity": {
+    "input_sha256": "18ba3e968730eb409e1767fb5f39b6283f2d02ac3a253f37cf97370df17d5228",
+    "key": "main__brute_force__ids_ips__technique_lookup",
+    "kind": "cis",
+    "model": "Gemma4-31B-it-Q6_K_L",
+    "model_sha256": "f77819db7b83a145425084048efec024b5efbc175bc0fdc4bc4bfe7d4b5802df",
+    "prompt_sha256": "ff71ec15009be39adf922c61fcd190151bd3f89fd6aee417e3bd4904377a1321",
+    "schema_sha256": "cae356e111e388512d75184f967cbfc19277772111c1bbed65821c5972f18b61",
+    "seed": 42,
+    "temperature": 0,
+    "version": "reviewer2-external-reference-report-audit-v1"
+  },
+  "judgment": {
+    "mappings": [
+      {
+        "rationale": "The safeguard explicitly requires the deployment of a network intrusion detection solution (NIDS), which is a direct implementation of the target IDS/IPS.",
+        "relevance": "DIRECT",
+        "safeguard_id": "13.3"
+      },
+      {
+        "rationale": "The safeguard explicitly requires the deployment of a host-based intrusion detection solution, which is a direct implementation of the target IDS/IPS.",
+        "relevance": "DIRECT",
+        "safeguard_id": "13.2"
+      },
+      {
+        "rationale": "Anti-exploitation features provide preventative protection against the types of attacks that IDS/IPS are designed to detect, but they are distinct technical controls.",
+        "relevance": "ADJACENT",
+        "safeguard_id": "10.5"
+      },
+      {
+        "rationale": "Role-specific security training is a general administrative control and does not directly implement or relate to the technical deployment of IDS/IPS.",
+        "relevance": "NOT_RELEVANT",
+        "safeguard_id": "14.9"
+      }
+    ]
+  },
+  "sha256": "ba260b87970e427546acbd0c671df9b085721826d946c41d30d84bc060e71485"
+}

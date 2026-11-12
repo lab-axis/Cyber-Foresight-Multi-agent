@@ -1,0 +1,261 @@
+{
+  "identity": {
+    "case_id": "main__ddos__nlp_llm",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "1228b5c0e63298a8a59d43aba44ccacd5d87598a4bfacbed7d9325cc5da5a504",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "9866c8abc4c245e18e30cd5cdffa8a0c04a166d089cef3a70df598466de4e752",
+    "source_hashes": {
+      "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+      "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+      "stage3_context": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+      "stage4_context": "10c834266961c7c4ea048c04a09db58d572d8606365b27c21677992d23f5b7ea",
+      "stage5": "86d070634eb0c7cff097e1c054be40d2b7c670b208640da9ea80b40d55a8683b",
+      "stage6": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE03_6786A7AB93821D48",
+            "DE_DE03_912FC8A63179A943"
+          ],
+          "scope": "GENERAL",
+          "statement": "General adoption-benefit evidence identifies efficiency, automation, and integration advantages that can support financial adoption of NLP/LLM.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE15_1AEC6DDD669756FF",
+            "DE_DE01_E85CB6412740EF20"
+          ],
+          "scope": "GENERAL",
+          "statement": "General adoption-burden evidence identifies significant lifecycle resource and risk-management resourcing requirements that challenge financial adoption.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 reference profile indicates an enterprise resource context without exact financial quantities, keeping financial uncertainty visible.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial adoption is mixed because general adoption-benefit evidence identifies potential efficiency and integration advantages, while general adoption-burden evidence identifies significant lifecycle resource needs. No numeric budget, TCO, ROI, staffing, or deployment-specific financial evidence is supplied, so the net financial stance is 0 with PARTIAL sufficiency.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE01_0B9728FE19095FD0",
+            "DE_DE15_271AFADC7B3D5999",
+            "DE_DE15_7C1849B1FD93975C"
+          ],
+          "scope": "GENERAL",
+          "statement": "General governance-enablement evidence provides AI risk-management, secure-development, and secure-operation practices that can support institutional adoption of NLP/LLM.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE02_007F05150CB46131",
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "Compliance-reporting guidance and the CIS IG2 profile show that institutional conditions may include regulatory or accountability burdens, but no EU-specific regulatory_applicability evidence is supplied.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Institutional feasibility is supported by general AI governance and secure-development guidance that can enable responsible NLP/LLM deployment. The compliance evidence identifies a reporting category but does not establish EU-specific regulatory applicability, so deployment-specific institutional success is not proven and sufficiency remains PARTIAL.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE01S_6E6099FA4C2D13D4"
+          ],
+          "scope": "GENERAL",
+          "statement": "NLP/LLM has direct technical enablement evidence for DDoS attack detection in the cited study.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "GENERAL",
+          "statement": "The same DDoS study does not establish turnkey production deployment and reports benchmark-based, prompt/fine-tuning-dependent performance rather than enterprise operational evidence.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE02_CFF4EAB2C4BEC522"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 reference enterprise profile and AI monitoring guidance make deployment complexity and unmet operational conditions visible without asserting that they are satisfied.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Technical feasibility is mixed because the supplied evidence contains a direct technical_enablement finding for DDoS detection and a direct technical_limitation finding about production applicability. The support is benchmark-based and the limitation is directly relevant to enterprise deployment readiness, so the net technical stance is 0 with PARTIAL sufficiency.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "This is a joint lens assessment of the preselected NLP/LLM candidate for the frozen DDoS forecast pair. No recommendation class, new PMT, product, version, vendor, budget, legal obligation, or deployment-specific success claim is asserted.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE03_6786A7AB93821D48",
+            "DE_DE03_912FC8A63179A943"
+          ],
+          "scope": "GENERAL",
+          "statement": "General adoption-benefit evidence identifies efficiency, automation, and integration advantages that can support financial adoption of NLP/LLM.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE15_1AEC6DDD669756FF",
+            "DE_DE01_E85CB6412740EF20"
+          ],
+          "scope": "GENERAL",
+          "statement": "General adoption-burden evidence identifies significant lifecycle resource and risk-management resourcing requirements that challenge financial adoption.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 reference profile indicates an enterprise resource context without exact financial quantities, keeping financial uncertainty visible.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial adoption is mixed because general adoption-benefit evidence identifies potential efficiency and integration advantages, while general adoption-burden evidence identifies significant lifecycle resource needs. No numeric budget, TCO, ROI, staffing, or deployment-specific financial evidence is supplied, so the net financial stance is 0 with PARTIAL sufficiency.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE01_0B9728FE19095FD0",
+            "DE_DE15_271AFADC7B3D5999",
+            "DE_DE15_7C1849B1FD93975C"
+          ],
+          "scope": "GENERAL",
+          "statement": "General governance-enablement evidence provides AI risk-management, secure-development, and secure-operation practices that can support institutional adoption of NLP/LLM.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE02_007F05150CB46131",
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "Compliance-reporting guidance and the CIS IG2 profile show that institutional conditions may include regulatory or accountability burdens, but no EU-specific regulatory_applicability evidence is supplied.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Institutional feasibility is supported by general AI governance and secure-development guidance that can enable responsible NLP/LLM deployment. The compliance evidence identifies a reporting category but does not establish EU-specific regulatory applicability, so deployment-specific institutional success is not proven and sufficiency remains PARTIAL.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE01S_6E6099FA4C2D13D4"
+          ],
+          "scope": "GENERAL",
+          "statement": "NLP/LLM has direct technical enablement evidence for DDoS attack detection in the cited study.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "GENERAL",
+          "statement": "The same DDoS study does not establish turnkey production deployment and reports benchmark-based, prompt/fine-tuning-dependent performance rather than enterprise operational evidence.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE02_CFF4EAB2C4BEC522"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 reference enterprise profile and AI monitoring guidance make deployment complexity and unmet operational conditions visible without asserting that they are satisfied.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Technical feasibility is mixed because the supplied evidence contains a direct technical_enablement finding for DDoS detection and a direct technical_limitation finding about production applicability. The support is benchmark-based and the limitation is directly relevant to enterprise deployment readiness, so the net technical stance is 0 with PARTIAL sufficiency.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "ad72a7add9720a7ff57fa224702d87f8fb020670f3fcaae311e5d1f5142ff807",
+  "withheld_evidence_id": null
+}

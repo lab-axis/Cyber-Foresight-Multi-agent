@@ -1,0 +1,269 @@
+{
+  "identity": {
+    "case_id": "main__insider_threat__cryptography",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "886c720e113dbb6643ae6d3698cdeb08a323c4c753f984329bc29fd71847a2b1",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 43,
+    "shadow_object_sha256": "e8abf4c16de54a5be479b3bec2a616c8afb9c0c1253ed50de35f6f40455b892a",
+    "source_hashes": {
+      "stage1": "048aa9e6dd139b26dd32450ec0fda405bb883a62497ed108691cf7e840b16872",
+      "stage2": "3ddd4def226a25d78c6243f4382fb30d384b7793f7191e62a95b79e660f11d06",
+      "stage3_context": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+      "stage4_context": "903f67ef37fb5c791e24edf9e95e89eab3871357daaf710dbd35a12093a6e9d9",
+      "stage5": "21782b723a9d2a4314a244c1d347b57acf3ce4923dab23db75a071d0d7ee8b79",
+      "stage6": "37b347c8a4f93dbe5bae0f66037abd59c4c085642673b2cc7f66fc31c0c1fbd9"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST and DHS decision guidance presents TLS/SSL and IPSec cryptographic configurations as adoptable practices, including strong client authentication, peer identity proofing, and recommended secure configurations, indicating adoption benefits.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG requires properly configured and up-to-date TLS/SSL when technically feasible, identification and replacement of weak encryption, and consideration of OT latency and availability, indicating adoption burden across IT and remote OT traffic.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS/SSL deployment guidance describes mature protocol and configuration practices, but it does not establish budget, price, ROI, TCO, staffing, or procurement ceiling for the reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "The financial adoption lens is mixed because NIST and DHS decision guidance presents TLS/SSL and IPSec cryptographic configurations as adoptable practices with benefits such as strong client authentication and recommended secure peer identity proofing, while CISA CPG indicates adoption burden through requirements for current TLS/SSL, replacement of weak encryption, and attention to OT latency and availability. The supplied evidence does not establish numeric budget, price, ROI, TCO, staffing, or procurement ceiling, so financial feasibility remains unquantified.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance supports institutional feasibility by requiring traceability of key access, accountability, access control, and auditability, which can enable responsible cryptography deployment.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST algorithm-transition guidance disallows or deprecates certain cryptographic modes and key lengths, imposing compliance constraints on algorithm selection and migration.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CONTEXT_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG frames strong and agile encryption as a recommended organizational action, providing general governance context, but the supplied evidence is not KR-specific regulatory applicability evidence.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "The institutional lens is mixed because NIST key-management guidance supports governance enablement through traceability, accountability, access control, and auditability, while NIST algorithm-transition guidance imposes compliance constraints on allowed cryptographic modes and key lengths. The supplied evidence is general; it does not establish Republic of Korea-specific regulatory applicability, so DEPLOYMENT_SPECIFIC institutional direction remains unmet.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_1",
+          "evidence_ids": [
+            "AE04S_2674461DBC059388"
+          ],
+          "scope": "GENERAL",
+          "statement": "A specialized cryptographic system for insider-threat data leakage is feasible as an engineering direction because the Securecipher prototype used context-based key generation and file marking and passed most reported NIST randomness tests.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_1",
+          "evidence_ids": [
+            "AE04C_F084D028D8E2AE06"
+          ],
+          "scope": "GENERAL",
+          "statement": "The insider-threat setting gives an authorized attacker stronger capabilities, including known- or chosen-plaintext style opportunities, so conventional encryption is not automatically sufficient and effectiveness depends on cryptographic design and insider-access model.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS/SSL guidance describes application-level confidentiality, integrity, and authentication mechanisms, indicating mature cryptographic deployment artifacts, but it does not establish deployment effectiveness for the KR CIS IG2 reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "The technical lens contains direct insider-threat-specific support and a direct limitation from the same threat model. AE04S_2674461DBC059388 supports feasibility by describing an engineered cryptographic construction for insider-threat data leakage, while AE04C_F084D028D8E2AE06 challenges feasibility by showing that insider access can enable stronger attack capabilities and that conventional encryption is not automatically sufficient. DE_DE18_EAA59A9B7CEAD276 provides deployment-maturity context for TLS/SSL mechanisms but does not establish enterprise-specific success in the Republic of Korea CIS IG2 scenario.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "All three lenses contain at least one support and at least one challenge, producing a mixed stance. GENERAL findings do not establish product/version/enterprise-specific success, and unmet KR-specific or financial deployment conditions are kept visible without inventing budget, TCO, ROI, staffing, legal obligation, or incident-trend data.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST and DHS decision guidance presents TLS/SSL and IPSec cryptographic configurations as adoptable practices, including strong client authentication, peer identity proofing, and recommended secure configurations, indicating adoption benefits.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG requires properly configured and up-to-date TLS/SSL when technically feasible, identification and replacement of weak encryption, and consideration of OT latency and availability, indicating adoption burden across IT and remote OT traffic.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS/SSL deployment guidance describes mature protocol and configuration practices, but it does not establish budget, price, ROI, TCO, staffing, or procurement ceiling for the reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The financial adoption lens is mixed because NIST and DHS decision guidance presents TLS/SSL and IPSec cryptographic configurations as adoptable practices with benefits such as strong client authentication and recommended secure peer identity proofing, while CISA CPG indicates adoption burden through requirements for current TLS/SSL, replacement of weak encryption, and attention to OT latency and availability. The supplied evidence does not establish numeric budget, price, ROI, TCO, staffing, or procurement ceiling, so financial feasibility remains unquantified.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance supports institutional feasibility by requiring traceability of key access, accountability, access control, and auditability, which can enable responsible cryptography deployment.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST algorithm-transition guidance disallows or deprecates certain cryptographic modes and key lengths, imposing compliance constraints on algorithm selection and migration.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CONTEXT_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG frames strong and agile encryption as a recommended organizational action, providing general governance context, but the supplied evidence is not KR-specific regulatory applicability evidence.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The institutional lens is mixed because NIST key-management guidance supports governance enablement through traceability, accountability, access control, and auditability, while NIST algorithm-transition guidance imposes compliance constraints on allowed cryptographic modes and key lengths. The supplied evidence is general; it does not establish Republic of Korea-specific regulatory applicability, so DEPLOYMENT_SPECIFIC institutional direction remains unmet.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_1",
+          "evidence_ids": [
+            "AE04S_2674461DBC059388"
+          ],
+          "scope": "GENERAL",
+          "statement": "A specialized cryptographic system for insider-threat data leakage is feasible as an engineering direction because the Securecipher prototype used context-based key generation and file marking and passed most reported NIST randomness tests.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_1",
+          "evidence_ids": [
+            "AE04C_F084D028D8E2AE06"
+          ],
+          "scope": "GENERAL",
+          "statement": "The insider-threat setting gives an authorized attacker stronger capabilities, including known- or chosen-plaintext style opportunities, so conventional encryption is not automatically sufficient and effectiveness depends on cryptographic design and insider-access model.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS/SSL guidance describes application-level confidentiality, integrity, and authentication mechanisms, indicating mature cryptographic deployment artifacts, but it does not establish deployment effectiveness for the KR CIS IG2 reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The technical lens contains direct insider-threat-specific support and a direct limitation from the same threat model. AE04S_2674461DBC059388 supports feasibility by describing an engineered cryptographic construction for insider-threat data leakage, while AE04C_F084D028D8E2AE06 challenges feasibility by showing that insider access can enable stronger attack capabilities and that conventional encryption is not automatically sufficient. DE_DE18_EAA59A9B7CEAD276 provides deployment-maturity context for TLS/SSL mechanisms but does not establish enterprise-specific success in the Republic of Korea CIS IG2 scenario.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "e73dd90db4f35f3114744b52d2c4ecda048055e43bd42732659a3f16c2856f08",
+  "withheld_evidence_id": null
+}

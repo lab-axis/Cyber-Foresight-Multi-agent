@@ -1,0 +1,34 @@
+{
+  "identity": {
+    "arm": "single_direct_end_to_end",
+    "case_id": "main__ddos__nlp_llm",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "b0160558dd0631f79bf8aca6bb142c72b58cea1b12af74aa6d7ff435540506a9",
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "18e7e404cf766858cf448d8ce4555ada40d799456d13936b3970d594a5d69f90",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "745146f909ebc5a9a778ef176e3abf279f1cfd0e3ec4e61076fad47b2ac6be8f",
+    "seed": 44,
+    "source_hashes": {
+      "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+      "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+      "stage3_context": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+      "stage4_context": "10c834266961c7c4ea048c04a09db58d572d8606365b27c21677992d23f5b7ea",
+      "stage5": "86d070634eb0c7cff097e1c054be40d2b7c670b208640da9ea80b40d55a8683b",
+      "stage6": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+    },
+    "version": "reviewer2-external-reference-report-audit-v1"
+  },
+  "output": {
+    "recommendation": "RECOMMEND_PILOT",
+    "report": "The candidate NLP/LLM mitigation should be treated as a limited, evidence-generating pilot, not as a production deployment. The strongest technical support is the DDoS-specific LLM study, where fine-tuned and few-shot LLM variants detected DDoS traffic on CICIDS2017 and an Urban IoT dataset, with fine-tuned variants reporting roughly mid-90-percent accuracy and outperforming the compared MLP [EVIDENCE:AE01S_6E6099FA4C2D13D4]. However, the same evidence is benchmark-based, not turnkey, and explicitly does not establish enterprise operational deployment or cost feasibility [EVIDENCE:AE01C_A6798E23EEB1E487]. It also shows material dependence on prompt context or fine-tuning, and materially weaker few-shot performance on the harder Urban IoT setting, which limits confidence in direct transfer to the Republic of Korea CIS IG2 enterprise context [EVIDENCE:AE01C_A6798E23EEB1E487]. The forecast adds urgency but not maturity: the DDoS threat state is forecast as increasing, the NLP/LLM PMT state is forecast as decreasing, and the signed threat-minus-PMT gap is increasing through 2027, with nontrivial predictive half-widths [EVIDENCE:forecast]. This combination supports a scoped pilot to test detection value without allowing reliance on NLP/LLM as a primary DDoS countermeasure. Institutional applicability is mixed. The CIS IG2 reference enterprise is a multi-department IT environment with personnel responsible for managing and protecting infrastructure, but some safeguards may require enterprise-grade technology and specialized expertise [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. No numeric budget, staffing count, TCO, ROI, or procurement ceiling is assumed, so financial feasibility remains unproven [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. AI governance guidance makes a disciplined pilot plausible: NIST AI RMF requires roles, accountability, inventory, decommissioning, training, and executive responsibility [EVIDENCE:DE_DE01_0B9728FE19095FD0], and encourages risk-based resourcing [EVIDENCE:DE_DE01_E85CB6412740EF20]. The generative AI and secure development guidance further requires monitoring, incident disclosure, provenance, secure development, model code review, and data-integrity controls [EVIDENCE:DE_DE02_007F05150CB46131] [EVIDENCE:DE_DE02_CFF4EAB2C4BEC522] [EVIDENCE:DE_DE03_6786A7AB93821D48] [EVIDENCE:DE_DE03_912FC8A63179A943]. UK NCSC guidance similarly stresses secure-by-design AI, documentation, and operational monitoring [EVIDENCE:DE_DE15_1AEC6DDD669756FF] [EVIDENCE:DE_DE15_271AFADC7B3D5999] [EVIDENCE:DE_DE15_7C1849B1FD93975C]. These practices are enabling, but they also create adoption burden. The threat context is real but only partially aligned with the candidate: DDoS remains an observed attack pattern, with volume growth, DNS exhaustion concerns, hacktivist activity, and known vulnerable protocols such as HTTP/2 rapid reset [EVIDENCE:E_02_066AFE8300EDCEBB] [EVIDENCE:E_03_06E6ABC42DA3AC77] [EVIDENCE:E_03_F13F996D181217BA] [EVIDENCE:E_04_892BBCAA3CE5CC92] [EVIDENCE:E_08_3453329306E149CB]. However, the threat evidence does not show that NLP/LLM detection is superior to conventional DDoS mitigation, incident response, contracted scrubbing, or vulnerability remediation. Publication trend evidence shows increasing NLP/LLM security research activity, but explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness [EVIDENCE:E_33_ADC8BC66D812799F]. The dissent position is HOLD: the only direct DDoS-specific LLM evidence is benchmark detection, production transfer is unproven, and the organization lacks demonstrated LLM-specific expertise, cost data, and deployment information [EVIDENCE:AE01C_A6798E23EEB1E487] [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. RECOMMEND_PILOT is nevertheless preferred because the candidate can be tested safely in a non-production, detection-only role, with strict governance, monitoring, and stop conditions. The pilot should not assume ROI, cost recovery, incident-time improvement, or enterprise-wide adoption. It should proceed only if it can be resourced within the CIS IG2 profile, does not displace established DDoS controls, and produces deployment-specific performance, safety, and operational-burden evidence before any broader recommendation."
+  },
+  "sha256": "f03df8728c77790fa4f577d3c4a837406981284bd6c073784817869e78bf4ef7"
+}

@@ -1,0 +1,235 @@
+{
+  "identity": {
+    "case_id": "main__ransomware__cryptography",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "324f71a8042931deab0481e9d7f5d3b4446e26aa7def2ea9a4670dc439584dff",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 43,
+    "shadow_object_sha256": "1b5aca6ee1bc39efebb3f452de311d62e113707591e2f0fb010b86e92c933504",
+    "source_hashes": {
+      "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+      "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+      "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+      "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+      "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+      "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009",
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "IPSec and TLS guidance describe cryptography as providing confidentiality, integrity, authentication, and strong client authentication, which are qualitative adoption benefits for protecting sensitive traffic and identities.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG encryption guidance conditions deployment on technical feasibility, notes OT latency and availability implications, and requires planning to replace outdated or weak encryption while considering post-quantum implications.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "evidence_gaps": [
+        "No budget, price, TCO, ROI, payback period, staffing count, or procurement ceiling is supplied.",
+        "No KR or CIS IG2-specific evidence quantifies adoption cost, organizational capacity, or resource burden for cryptography deployment."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial and adoption evidence is mixed but non-quantitative. Adoption-benefit sources describe confidentiality, integrity, authentication, and strong client-authentication benefits associated with cryptographic deployment, while adoption-burden evidence identifies feasibility constraints, operational impact, and upgrade obligations. No numeric budget, TCO, ROI, or staffing data is assumed.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance provides accountability and traceability controls for cryptographic key access, and CISA CPG recommends strong, properly configured encryption to maintain confidentiality and integrity of IT and OT traffic.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST transition guidance constrains acceptable cryptographic algorithms by disallowing or deprecating legacy symmetric algorithms and requiring movement toward approved algorithms such as AES.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "evidence_gaps": [
+        "No KR-specific regulatory_applicability evidence is present, so DEPLOYMENT_SPECIFIC institutional feasibility cannot be established.",
+        "No evidence confirms that the CIS IG2 reference enterprise has the existing key-management, algorithm-inventory, or governance capacity required to satisfy the cited controls."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Institutional evidence is mixed at the GENERAL level. Governance-enablement sources support cryptography through key-management accountability and encryption-oriented protective outcomes, while a compliance-constraint source imposes algorithm-transition obligations. Because no KR regulatory_applicability evidence is present, deployment-specific institutional direction is not claimed.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_1",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic-primitive analysis, cipher-class identification, and key/state extraction from execution traces can materially support ransomware neutralization and reverse engineering.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_1",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ransomware can deliberately alter observable entropy patterns of cryptographic operations to evade entropy-based detectors, and some cryptography-related detection approaches impose nontrivial computational cost.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "evidence_gaps": [
+        "No product-version, enterprise-grade, or KR-specific operational validation of cryptography for ransomware mitigation is supplied.",
+        "No evidence quantifies residual risk reduction, detection reliability across enterprise environments, or deployment-specific technical performance."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Technical evidence is genuinely mixed for CRYPTOGRAPHY in the ransomware context. A direct technical-enablement source shows that cryptographic analysis can materially support ransomware neutralization and reverse engineering, while a direct technical-limitation source shows that cryptography-related detection can be bypassed and may impose nontrivial computational cost. Both claims are grounded in evidence eligible under the GENERAL technical feasibility lens.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "The three lenses are assessed jointly for the same PMT_CRYPTOGRAPHY candidate under the same GENERAL scope assumptions. The lens stances and sufficiency values are provided for deterministic downstream policy evaluation without assigning a final decision label.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009",
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "IPSec and TLS guidance describe cryptography as providing confidentiality, integrity, authentication, and strong client authentication, which are qualitative adoption benefits for protecting sensitive traffic and identities.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG encryption guidance conditions deployment on technical feasibility, notes OT latency and availability implications, and requires planning to replace outdated or weak encryption while considering post-quantum implications.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No budget, price, TCO, ROI, payback period, staffing count, or procurement ceiling is supplied.",
+        "No KR or CIS IG2-specific evidence quantifies adoption cost, organizational capacity, or resource burden for cryptography deployment."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial and adoption evidence is mixed but non-quantitative. Adoption-benefit sources describe confidentiality, integrity, authentication, and strong client-authentication benefits associated with cryptographic deployment, while adoption-burden evidence identifies feasibility constraints, operational impact, and upgrade obligations. No numeric budget, TCO, ROI, or staffing data is assumed.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance provides accountability and traceability controls for cryptographic key access, and CISA CPG recommends strong, properly configured encryption to maintain confidentiality and integrity of IT and OT traffic.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST transition guidance constrains acceptable cryptographic algorithms by disallowing or deprecating legacy symmetric algorithms and requiring movement toward approved algorithms such as AES.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No KR-specific regulatory_applicability evidence is present, so DEPLOYMENT_SPECIFIC institutional feasibility cannot be established.",
+        "No evidence confirms that the CIS IG2 reference enterprise has the existing key-management, algorithm-inventory, or governance capacity required to satisfy the cited controls."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Institutional evidence is mixed at the GENERAL level. Governance-enablement sources support cryptography through key-management accountability and encryption-oriented protective outcomes, while a compliance-constraint source imposes algorithm-transition obligations. Because no KR regulatory_applicability evidence is present, deployment-specific institutional direction is not claimed.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_1",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic-primitive analysis, cipher-class identification, and key/state extraction from execution traces can materially support ransomware neutralization and reverse engineering.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_1",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ransomware can deliberately alter observable entropy patterns of cryptographic operations to evade entropy-based detectors, and some cryptography-related detection approaches impose nontrivial computational cost.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No product-version, enterprise-grade, or KR-specific operational validation of cryptography for ransomware mitigation is supplied.",
+        "No evidence quantifies residual risk reduction, detection reliability across enterprise environments, or deployment-specific technical performance."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Technical evidence is genuinely mixed for CRYPTOGRAPHY in the ransomware context. A direct technical-enablement source shows that cryptographic analysis can materially support ransomware neutralization and reverse engineering, while a direct technical-limitation source shows that cryptography-related detection can be bypassed and may impose nontrivial computational cost. Both claims are grounded in evidence eligible under the GENERAL technical feasibility lens.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "80c669f225f3616010fedbac7b34cda41bfd8086e6574fa7bbc7d42142e820b5",
+  "withheld_evidence_id": null
+}

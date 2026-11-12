@@ -1,0 +1,253 @@
+{
+  "identity": {
+    "case_id": "main__session_hijacking__https",
+    "condition": "without_technical_enablement",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "4b45bfe19434a4e9a31b908bca79a03014bf8787f3e15149b07ca5e1b9fc8a3b",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "2e1f65ade03ae4de732cb662c84ddaab2e8d56d4b359a00ddcfacc7b884a7152",
+    "source_hashes": {
+      "stage1": "5b8473203535452075465098dd80d84de51fa302487b5d5c4f382f0f74f6b2d1",
+      "stage2": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+      "stage3_context": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+      "stage4_context": "d1853be1e80bea8b4894668ef60ba1d5b4f878e2f8334340759ec658b9685c3d",
+      "stage5": "31865f18b575039e9744f107701fda16da6862860b705e5c4e2439a55372649d",
+      "stage6": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS implementation guidance identifies a potential adoption benefit from raw public keys reducing public-key structure size and simplifying processing.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE14_EDCA207577B4607A"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL VPN guidance identifies adoption burdens including session-establishment latency, packet fragmentation, MTU tuning, testing under load, and possible hardware, SSL acceleration, or user-limiting measures.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "GENERAL",
+          "statement": "No numeric financial quantities are supplied, so adoption benefit and burden cannot be converted into a cost-benefit determination.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial-adoption evidence is weighted negatively because the adoption_burden evidence is more directly tied to SSL/HTTPS deployment performance and operational effort than the adoption_benefit evidence, which is a limited TLS processing simplification. No numeric budget, price, ROI, TCO, staffing, or procurement evidence is supplied, so the negative stance is partial rather than sufficient.",
+      "stance": -1
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE14_575D613F0598EF5E",
+            "DE_DE18_20A979A3238D1DE6"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL/TLS and SSL VPN lifecycle guidance provides governance practices that can enable institutional adoption of HTTPS/TLS controls, including logging, pilots, phased deployment, documentation, monitoring, trusted CA deployment, and DNS security considerations.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5",
+            "DE_DE10_4BE87A62A6676C99"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST digital identity and TLS implementation guidance imposes compliance constraints on protected session channels, authenticated transport, prohibition of HTTPS-to-HTTP fallback, secure cookie tagging, and TLS configuration requirements, increasing institutional implementation burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 reference enterprise profile describes multi-department infrastructure management and potential regulatory burden, but it does not establish Korea-specific institutional success or failure.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Institutional evidence is genuinely mixed: governance_enablement evidence supports deployment through lifecycle, logging, pilot, and trusted-CA/DNS practices, while compliance_constraint evidence challenges feasibility by imposing strict protected-channel, fallback-prohibition, secure-cookie, and TLS-configuration requirements. The evidence is general rather than Korea-specific, and no regulatory_applicability evidence is supplied for a deployment-specific institutional claim.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS/secure transport does not by itself eliminate all session-hijacking paths because session tokens may still be stolen through XSS or malicious browser extensions.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_GAP_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "GENERAL",
+          "statement": "No eligible technical_enablement evidence is present to establish a positive technical feasibility claim.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "The only direction-eligible technical evidence is a direct technical limitation for HTTPS in session-hijacking contexts. No eligible technical_enablement evidence is supplied to support technical feasibility, so the lens is weighted negatively but not conclusively because the limitation is framed as an insufficiency of HTTPS alone rather than an absolute technical block.",
+      "stance": -1
+    }
+  },
+  "raw": {
+    "analysis_note": "All claims are general and grounded only in the supplied evaluation_evidence. No Korea-specific regulatory conclusion, product/version conclusion, budget, TCO, ROI, staffing count, or invented incident trend is asserted.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS implementation guidance identifies a potential adoption benefit from raw public keys reducing public-key structure size and simplifying processing.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE14_EDCA207577B4607A"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL VPN guidance identifies adoption burdens including session-establishment latency, packet fragmentation, MTU tuning, testing under load, and possible hardware, SSL acceleration, or user-limiting measures.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "GENERAL",
+          "statement": "No numeric financial quantities are supplied, so adoption benefit and burden cannot be converted into a cost-benefit determination.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial-adoption evidence is weighted negatively because the adoption_burden evidence is more directly tied to SSL/HTTPS deployment performance and operational effort than the adoption_benefit evidence, which is a limited TLS processing simplification. No numeric budget, price, ROI, TCO, staffing, or procurement evidence is supplied, so the negative stance is partial rather than sufficient.",
+      "stance": -1
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE14_575D613F0598EF5E",
+            "DE_DE18_20A979A3238D1DE6"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL/TLS and SSL VPN lifecycle guidance provides governance practices that can enable institutional adoption of HTTPS/TLS controls, including logging, pilots, phased deployment, documentation, monitoring, trusted CA deployment, and DNS security considerations.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5",
+            "DE_DE10_4BE87A62A6676C99"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST digital identity and TLS implementation guidance imposes compliance constraints on protected session channels, authenticated transport, prohibition of HTTPS-to-HTTP fallback, secure cookie tagging, and TLS configuration requirements, increasing institutional implementation burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 reference enterprise profile describes multi-department infrastructure management and potential regulatory burden, but it does not establish Korea-specific institutional success or failure.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Institutional evidence is genuinely mixed: governance_enablement evidence supports deployment through lifecycle, logging, pilot, and trusted-CA/DNS practices, while compliance_constraint evidence challenges feasibility by imposing strict protected-channel, fallback-prohibition, secure-cookie, and TLS-configuration requirements. The evidence is general rather than Korea-specific, and no regulatory_applicability evidence is supplied for a deployment-specific institutional claim.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS/secure transport does not by itself eliminate all session-hijacking paths because session tokens may still be stolen through XSS or malicious browser extensions.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_GAP_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "GENERAL",
+          "statement": "No eligible technical_enablement evidence is present to establish a positive technical feasibility claim.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The only direction-eligible technical evidence is a direct technical limitation for HTTPS in session-hijacking contexts. No eligible technical_enablement evidence is supplied to support technical feasibility, so the lens is weighted negatively but not conclusively because the limitation is framed as an insufficiency of HTTPS alone rather than an absolute technical block.",
+      "stance": -1
+    }
+  },
+  "recommendation": "DO_NOT_RECOMMEND",
+  "sha256": "3719c48d4fc89b794e571bc6c9d885718aec35cefd209ecc65e631ba859a28d8",
+  "withheld_evidence_id": "AE07S_C1EF15B9628497F0"
+}

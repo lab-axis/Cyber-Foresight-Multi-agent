@@ -1,0 +1,34 @@
+{
+  "identity": {
+    "arm": "single_direct_end_to_end",
+    "case_id": "main__ransomware__cryptography",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "af73640c2694914a034bcc8913cb0f8f5f137e1591c816c3af9eee03c95c007d",
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "18e7e404cf766858cf448d8ce4555ada40d799456d13936b3970d594a5d69f90",
+    "scenario_id": "EU__CIS_IG2",
+    "schema_sha256": "745146f909ebc5a9a778ef176e3abf279f1cfd0e3ec4e61076fad47b2ac6be8f",
+    "seed": 43,
+    "source_hashes": {
+      "stage1": "c8ebda2ea9b25fdd3f2b07beebb562884ec312a509c86c8f139ff318ad7d60a1",
+      "stage2": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+      "stage3_context": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+      "stage4_context": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+      "stage5": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+      "stage6": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a"
+    },
+    "version": "reviewer2-external-reference-report-audit-v1"
+  },
+  "output": {
+    "recommendation": "RECOMMEND_PILOT",
+    "report": "A qualified recommendation is issued rather than a full recommendation because the corpus supports technical and institutional feasibility, but it does not prove deployment-specific ransomware reduction, cost-effectiveness, or enterprise readiness. The supplied forecast shows the ransomware threat state increasing, with a positive threat-minus-PMT gap that widens from 0.6634 in 2025 to 1.1974 in 2026 and remains 1.1501 in 2027, while the cryptography PMT state also increases from a negative mean state; the 95 percent half-widths of 0.1349 for PMT and 0.1020 for threat indicate nonzero uncertainty, so the forecast supports prioritization but not certainty. Technical feasibility is supported by general cryptographic guidance: key management traceability and accountability are described as effective tools to help prevent and reduce key compromises [EVIDENCE:DE_DE08_031120C53EF050F3]; approved algorithm migration is specified, including AES acceptance and disallowing 3-key TDEA after 2023 [EVIDENCE:DE_DE09_6719137897848A9E]; TLS client authentication and path validation provide an implementable control [EVIDENCE:DE_DE10_A086B3193CD6440B]; IPSec and TLS transport or tunnel modes with key negotiation and strong authentication are feasible configurations [EVIDENCE:DE_DE18_CDC975345637E009] [EVIDENCE:DE_DE18_EAA59A9B7CEAD276]; and CISA CPG recommends strong and agile encryption, including proper TLS, identification of weak encryption, and feasibility constraints for OT [EVIDENCE:E_23_534489D29C38B327]. CipherTrace evidence shows cryptographic-primitive analysis can materially support ransomware neutralization and reverse engineering in evaluated specimens [EVIDENCE:AE03S_C5AF41A880A404C2], which supports a controlled pilot use of crypto-focused detection or forensics rather than a blanket assurance claim. Institutional applicability is plausible for a CIS IG2 reference enterprise because IG2 includes personnel responsible for protecting infrastructure and may require enterprise-grade technology and specialized expertise [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4], and NIST SP 800-53A provides assessment objectives for cryptographic key management and protection [EVIDENCE:E_26_A710FE8084614182]. Regional applicability in the EU is supported by legal-context evidence: GDPR Article 32 lists pseudonymisation and encryption of personal data among appropriate technical and organisational measures [EVIDENCE:E_31_A0893427DD4F5B04], and NIS2 text references state-of-the-art security and privacy-preserving measures such as encryption and the rise of ransomware [EVIDENCE:E_31_6BBE82F2BAC198B3] [EVIDENCE:E_31_6C5988FD2D0D8867]; however, the corpus does not establish that this reference enterprise is within a particular regulatory scope. Financial and adoption feasibility cannot be fully assessed because the supplied context assumes no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling, and the CIS profile represents resource capacity without numeric quantities [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. General evidence does not prove deployment-specific effectiveness, and the publication trend only shows increased cryptography-related publication activity without establishing operational effectiveness [EVIDENCE:E_33_CDE0F421E4D797ED]. Missing deployment information includes existing cryptographic inventory, product choices, OT latency or availability constraints, personal-data processing scope, expertise counts, and controlled test results. The main technical challenge is that ransomware can alter observable entropy patterns to evade entropy-based detectors, and cryptography-related detection is not universally robust and may impose nontrivial computational cost [EVIDENCE:AE03C_E5522A35F4981027]. Threat reports indicate ransomware remains a large and enduring incident driver, with extortion and phishing patterns, but they do not show that cryptographic controls reduce dwell time, incidence, or recovery cost [EVIDENCE:E_04_270A1E7C47ACC4FF] [EVIDENCE:E_03_0BAA7B22596028F4]. Dissent is warranted against a full recommendation because the candidate action is broad, the strongest ransomware-specific cryptographic evidence is limited to research specimens and general controls, the forecast does not establish causal mitigation benefit, and the EU IG2 context may require specialized expertise that is not quantified. A pilot should therefore be limited to a bounded inventory and migration exercise: identify weak or deprecated algorithms such as 3-key TDEA [EVIDENCE:DE_DE09_6719137897848A9E], implement key traceability and access accountability [EVIDENCE:DE_DE08_031120C53EF050F3], configure TLS or IPSec where feasible [EVIDENCE:DE_DE10_A086B3193CD6440B] [EVIDENCE:DE_DE18_CDC975345637E009], and assess against cryptographic protection objectives [EVIDENCE:E_26_A710FE8084614182]. The pilot should also test cipher-analysis capability in a controlled scope while accounting for entropy evasion [EVIDENCE:AE03S_C5AF41A880A404C2] [EVIDENCE:AE03C_E5522A35F4981027]. Escalate to RECOMMEND only if the pilot demonstrates operational feasibility, governance traceability, and no unresolved EU personal-data alignment issues; hold or withdraw if the pilot shows incompatible operational impact, detection limitations dominate the selected use case, or financial and adoption constraints make the scope unmanageable."
+  },
+  "sha256": "a103e2f8751690fe80e52668211bdffc2ec4721c4340fe985601995011d0062c"
+}

@@ -1,0 +1,112 @@
+{
+  "identity": {
+    "case_id": "main__targeted_attack__access_control",
+    "condition": "without_technical_enablement",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "8952b7f3de939ec1c14dc295b18e2f29e11ae2f93526c62e56ced1b28b89bfd1",
+    "isolated": true,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "eccc7ab867bdf4e383199100fcba71bc8eff80b04e282c37323832f5a744e7a4",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "283268a8153993dfc30753afa1c4d1f64303300198578e4c3f22cc617d7d7da4",
+    "seed": 42,
+    "shadow_object_sha256": "550a861b02456c7789dc39db9c285473f5aa17064ec07285b5c09e855342ff10",
+    "source_hashes": {
+      "stage1": "304807a460c79b97a7c155ac0f3a11e974386cf0363fc072fef87238f7525724",
+      "stage2": "e32d514b41e64ac386fed97a222cbc7fd92d7328e840ea7c0bd6ce0bf758352d",
+      "stage3_context": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+      "stage4_context": "b197de3415acc19c31e3f821ed025c29e9bf15b3b293e7c0ad5f6b35b1ef2cee",
+      "stage5": "f33b3c4296fd820cb26a9525899ee8fc2a36c30f0775e3ce10ae5de1aa804127",
+      "stage6": "ec942bd1085a56ecfa8a3e7863ae3ce4b7791dc5e1d96dd1f7a878f67d61e958"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_LIMITATION_STATIC_ACCESS_CONTROL",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "Conventional perimeter- and static-access-control assumptions are insufficient for evolving APT behavior; effective access control depends on continuously updated threat/risk context rather than on the access-control category alone. This partially challenges the feasibility of treating ACCESS CONTROL as a standalone or static mitigation for targeted attacks in the reference enterprise.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_DEPLOYMENT_MATURITY_CONTEXT",
+          "evidence_ids": [
+            "DE_DE12_6509E7A6D8467E38",
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "Access-control and zero-trust-related deployments require attention to solution fit, client-component implications, resource location, logging, protocol support, user behavior, piloting, and incremental transition. This is deployment-maturity context rather than direct feasibility support or refutation.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Availability and integration of continuously updated threat/risk context for access decisions.",
+        "Solution fit for enterprise workflows, assets, protocols, logging, and user behavior.",
+        "Incremental deployment, monitoring, and pilot validation before broader transition."
+      ],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "evidence_gaps": [
+        "No eligible technical_enablement evidence is available under the technical_feasibility grounding contract to support a GENERAL SUPPORTS_FEASIBILITY claim.",
+        "No deployment-specific evidence establishes that the CIS IG2 reference enterprise can technically deploy the required continuously updated threat/risk context.",
+        "No product, version, vendor, or deployment-architecture evidence is supplied, so enterprise-specific technical success cannot be established."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "A general technical limitation is present for relying on conventional or static access-control assumptions against targeted/APT activity, but no eligible technical_enablement evidence is supplied to support feasibility, and deployment-specific evidence is limited to general deployment-maturity context.",
+      "stance": -1
+    }
+  },
+  "raw": {
+    "claims": [
+      {
+        "claim_id": "TECH_LIMITATION_STATIC_ACCESS_CONTROL",
+        "evidence_ids": [
+          "AE06C_8C41709C0D8EE834"
+        ],
+        "scope": "GENERAL",
+        "statement": "Conventional perimeter- and static-access-control assumptions are insufficient for evolving APT behavior; effective access control depends on continuously updated threat/risk context rather than on the access-control category alone. This partially challenges the feasibility of treating ACCESS CONTROL as a standalone or static mitigation for targeted attacks in the reference enterprise.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TECH_DEPLOYMENT_MATURITY_CONTEXT",
+        "evidence_ids": [
+          "DE_DE12_6509E7A6D8467E38",
+          "DE_DE17_429D17A4E11A72C3"
+        ],
+        "scope": "GENERAL",
+        "statement": "Access-control and zero-trust-related deployments require attention to solution fit, client-component implications, resource location, logging, protocol support, user behavior, piloting, and incremental transition. This is deployment-maturity context rather than direct feasibility support or refutation.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "Availability and integration of continuously updated threat/risk context for access decisions.",
+      "Solution fit for enterprise workflows, assets, protocols, logging, and user behavior.",
+      "Incremental deployment, monitoring, and pilot validation before broader transition."
+    ],
+    "constraints": [],
+    "evidence_gaps": [
+      "No eligible technical_enablement evidence is available under the technical_feasibility grounding contract to support a GENERAL SUPPORTS_FEASIBILITY claim.",
+      "No deployment-specific evidence establishes that the CIS IG2 reference enterprise can technically deploy the required continuously updated threat/risk context.",
+      "No product, version, vendor, or deployment-architecture evidence is supplied, so enterprise-specific technical success cannot be established."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "rationale": "A general technical limitation is present for relying on conventional or static access-control assumptions against targeted/APT activity, but no eligible technical_enablement evidence is supplied to support feasibility, and deployment-specific evidence is limited to general deployment-maturity context.",
+    "stance": -1
+  },
+  "recommendation": null,
+  "sha256": "09909a1f01a039bbaba1072536b8ef75c5b99dcd93ff5b77c3a28fc12b5daebc",
+  "withheld_evidence_id": "AE06S_407DDF87C86BB41B"
+}

@@ -1,0 +1,293 @@
+{
+  "identity": {
+    "case_id": "main__ddos__nlp_llm",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "60ff4b9a530472e4824431665f970f1734c778ec1765732cb8077c39edb191fd",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 44,
+    "shadow_object_sha256": "0c021e7346c9bf8b8d563c36a3dce2de0f6fc1c9d3bb8d4c3fc103cf84289d06",
+    "source_hashes": {
+      "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+      "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+      "stage3_context": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+      "stage4_context": "10c834266961c7c4ea048c04a09db58d572d8606365b27c21677992d23f5b7ea",
+      "stage5": "86d070634eb0c7cff097e1c054be40d2b7c670b208640da9ea80b40d55a8683b",
+      "stage6": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE03_912FC8A63179A943",
+            "DE_DE03_6786A7AB93821D48"
+          ],
+          "scope": "GENERAL",
+          "statement": "Standardized security integration and automated review/scan practices can reduce effort and improve development efficiency for NLP/LLM systems.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE15_1AEC6DDD669756FF"
+          ],
+          "scope": "GENERAL",
+          "statement": "Secure-by-design AI development requires significant resources throughout the system lifecycle.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The reference enterprise profile indicates resource capacity is represented only by the CIS IG2 profile, with enterprise-grade technology and specialized expertise potentially required, but without numeric financial quantities.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+        "No supplied evidence measures actual adoption cost or benefit in the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Qualitative guidance identifies possible adoption benefits such as improved development efficiency and lower effort through standardized security integration and automated model/code analysis. The same body of guidance also indicates that secure AI development can require significant lifecycle resources. Because no numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied, the financial lens remains mixed and only partially evidenced.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE01_0B9728FE19095FD0",
+            "DE_DE15_271AFADC7B3D5999",
+            "DE_DE15_7C1849B1FD93975C"
+          ],
+          "scope": "GENERAL",
+          "statement": "AI risk-management and secure-AI development guidance provides governance mechanisms that can support accountable deployment of NLP/LLM systems.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE02_007F05150CB46131"
+          ],
+          "scope": "GENERAL",
+          "statement": "GAI incident reporting must comply with legal and regulatory requirements, but the supplied examples are not KR-specific and no KR regulatory applicability evidence is available.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile may involve regulatory burdens and enterprise-grade safeguards, but it does not supply KR-specific regulatory applicability for NLP/LLM DDoS deployment.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_gaps": [
+        "No KR-specific regulatory_applicability evidence is supplied.",
+        "No supplied evidence demonstrates that the reference enterprise has actually implemented the described governance mechanisms."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General governance and secure-development guidance supports the availability of institutional mechanisms for AI/NLP-LLM oversight, while GAI incident-reporting guidance shows that compliance constraints can be relevant. However, no KR-specific regulatory_applicability evidence is supplied, so a deployment-specific institutional conclusion for the Republic of Korea cannot be established from the available evidence.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_1",
+          "evidence_ids": [
+            "AE01S_6E6099FA4C2D13D4"
+          ],
+          "scope": "GENERAL",
+          "statement": "LLM/NLP has demonstrated DDoS detection capability in controlled benchmark experiments.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_1",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "GENERAL",
+          "statement": "The DDoS LLM evidence does not establish turnkey production deployment, and performance depends on prompt context or fine-tuning, with weaker few-shot results in harder settings.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "E_33_ADC8BC66D812799F"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 profile and publication-trend source do not by themselves establish enterprise deployment maturity or operational effectiveness for NLP/LLM DDoS detection.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_gaps": [
+        "No supplied evidence demonstrates production operation in the CIS IG2 reference enterprise.",
+        "No supplied evidence addresses deployment cost, staffing, or operational maturity specific to the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Direct DDoS-related evidence supports LLM/NLP detection capability in benchmark settings, but the same source also documents that turnkey production deployment is not established and that performance depends on prompt context or fine-tuning. No supplied evidence establishes operational deployment maturity in the CIS IG2 reference enterprise, so the technical lens remains mixed rather than decisively positive or negative.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "The three lenses are assessed jointly: technical evidence is DDoS-relevant but benchmark-bounded and production-limited; institutional evidence provides general governance enablement and a compliance constraint but lacks KR-specific regulatory applicability; financial evidence offers qualitative efficiency and resource statements without numeric budget or observed adoption outcomes. Unmet deployment conditions are retained above.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE03_912FC8A63179A943",
+            "DE_DE03_6786A7AB93821D48"
+          ],
+          "scope": "GENERAL",
+          "statement": "Standardized security integration and automated review/scan practices can reduce effort and improve development efficiency for NLP/LLM systems.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE15_1AEC6DDD669756FF"
+          ],
+          "scope": "GENERAL",
+          "statement": "Secure-by-design AI development requires significant resources throughout the system lifecycle.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The reference enterprise profile indicates resource capacity is represented only by the CIS IG2 profile, with enterprise-grade technology and specialized expertise potentially required, but without numeric financial quantities.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+        "No supplied evidence measures actual adoption cost or benefit in the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Qualitative guidance identifies possible adoption benefits such as improved development efficiency and lower effort through standardized security integration and automated model/code analysis. The same body of guidance also indicates that secure AI development can require significant lifecycle resources. Because no numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied, the financial lens remains mixed and only partially evidenced.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE01_0B9728FE19095FD0",
+            "DE_DE15_271AFADC7B3D5999",
+            "DE_DE15_7C1849B1FD93975C"
+          ],
+          "scope": "GENERAL",
+          "statement": "AI risk-management and secure-AI development guidance provides governance mechanisms that can support accountable deployment of NLP/LLM systems.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE02_007F05150CB46131"
+          ],
+          "scope": "GENERAL",
+          "statement": "GAI incident reporting must comply with legal and regulatory requirements, but the supplied examples are not KR-specific and no KR regulatory applicability evidence is available.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile may involve regulatory burdens and enterprise-grade safeguards, but it does not supply KR-specific regulatory applicability for NLP/LLM DDoS deployment.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No KR-specific regulatory_applicability evidence is supplied.",
+        "No supplied evidence demonstrates that the reference enterprise has actually implemented the described governance mechanisms."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General governance and secure-development guidance supports the availability of institutional mechanisms for AI/NLP-LLM oversight, while GAI incident-reporting guidance shows that compliance constraints can be relevant. However, no KR-specific regulatory_applicability evidence is supplied, so a deployment-specific institutional conclusion for the Republic of Korea cannot be established from the available evidence.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_1",
+          "evidence_ids": [
+            "AE01S_6E6099FA4C2D13D4"
+          ],
+          "scope": "GENERAL",
+          "statement": "LLM/NLP has demonstrated DDoS detection capability in controlled benchmark experiments.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_1",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "GENERAL",
+          "statement": "The DDoS LLM evidence does not establish turnkey production deployment, and performance depends on prompt context or fine-tuning, with weaker few-shot results in harder settings.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CONTEXT_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "E_33_ADC8BC66D812799F"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 profile and publication-trend source do not by themselves establish enterprise deployment maturity or operational effectiveness for NLP/LLM DDoS detection.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No supplied evidence demonstrates production operation in the CIS IG2 reference enterprise.",
+        "No supplied evidence addresses deployment cost, staffing, or operational maturity specific to the reference enterprise."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Direct DDoS-related evidence supports LLM/NLP detection capability in benchmark settings, but the same source also documents that turnkey production deployment is not established and that performance depends on prompt context or fine-tuning. No supplied evidence establishes operational deployment maturity in the CIS IG2 reference enterprise, so the technical lens remains mixed rather than decisively positive or negative.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "fa406a5920665b851ac09f01b20803b62ef625c1349a29d4b6b2224ae08aef0a",
+  "withheld_evidence_id": null
+}

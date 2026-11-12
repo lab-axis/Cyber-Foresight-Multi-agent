@@ -1,0 +1,261 @@
+{
+  "identity": {
+    "case_id": "main__brute_force__ids_ips",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "768d55d99e58b30e0f223a3fa4111a924eb5450cb8dfcb5f80f79ff5cc86446b",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "0c4a732d8158722d49b9fc2e134f54ef41084067c5213cc3b282cabd5bcab3b1",
+    "source_hashes": {
+      "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+      "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+      "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+      "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+      "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+      "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_GEN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE04_DB6B29C9BE1B0F05",
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "Guidance identifies adoption benefits such as time savings from integrated IDPS management, automation that can lower cost and improve reliability, and SIEM integration that can make IDS/IPS information review and incident detection cheaper and easier.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_GEN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDPS adoption burden includes testing software and signature updates, maintaining administration, network, security, and incident-response skills, and product-specific training; these are qualitative operational burdens, not numeric TCO or budget facts.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_DEPLOY_NEUTRAL_1",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4",
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed; the CIS IG2 profile may involve enterprise-grade technology and specialized expertise, but no supplied evidence quantifies financial feasibility for this reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial adoption is genuinely mixed. Eligible adoption_benefit evidence provides qualitative efficiency, integration, and automation benefits, while adoption_burden evidence identifies skills, testing, and maintenance burdens. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, so the financial direction remains mixed with partial sufficiency.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_GEN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE04_0B77B88875745973",
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE16_CEA1C38E613068F8"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST and CISA guidance positions IDPS/IDS within governance, continuous monitoring, and defense-in-depth, enabling risk-based decisions, multi-tier monitoring, and integration with host- or network-based detection; this supports institutional use but does not prove standalone effectiveness.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_DEPLOY_NEUTRAL_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The scenario is a fixed CIS IG2 reference enterprise in the Republic of Korea; no supplied institutional evidence establishes KR-specific regulatory applicability, legal obligation, or compliance constraint, so a DEPLOYMENT_SPECIFIC institutional support or challenge claim is not made.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Supplied governance guidance supports an institutional role for IDS/IPS within continuous monitoring, risk governance, and defense-in-depth. This support is general and does not establish KR-specific regulatory applicability or compliance fit. Because no compliance-constraint evidence is supplied and no regulatory_applicability evidence is available for a DEPLOYMENT_SPECIFIC institutional claim, sufficiency is partial rather than sufficient.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_GEN_SUPPORT_1",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "A 2024 case study directly applies Snort and Fail2Ban IDS components, with a honeypot and alerting workflow, to brute-force defense and treats IDS/IPS-style monitoring and blocking as an implementable response to repeated authentication attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_GEN_CHALLENGE_1",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Distributed low-rate brute-force attacks using disciplined IPs can stay below ordinary per-host login thresholds and evade ordinary IDS/IPS security rules, documenting a direct technical limitation of conventional IDS/IPS for that attack pattern.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_DEPLOY_NEUTRAL_1",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4",
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "IDPS deployment requires requirements definition, environment and policy understanding, integration choices, and update testing; the CIS IG2 reference enterprise is multi-department and may require enterprise-grade technology and specialized expertise, but no supplied evidence establishes KR-specific or this-enterprise-specific IDS/IPS success.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "A direct brute-force IDS/IPS implementation finding supports general technical feasibility, while a direct low-rate brute-force evasion finding identifies an important limitation. The support is treated as stronger for this general brute-force candidate because it is direct to brute-force defense and more recent, but it is not enterprise-, product-version-, or KR-specific, so sufficiency is partial.",
+      "stance": 1
+    }
+  },
+  "raw": {
+    "analysis_note": "The joint assessment ties each directional claim only to evidence in the supplied eligibility set. Technical support is general and direct to brute force, but a direct brute-force evasion limitation is also present. Institutional support is general governance enablement without KR-specific regulatory applicability. Financial adoption is mixed because qualitative benefits coexist with qualitative adoption burdens and no numeric financial quantities are available. Unmet deployment conditions are preserved: no KR-specific regulatory evidence, no enterprise-specific success evidence, and no numeric financial quantities.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_GEN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE04_DB6B29C9BE1B0F05",
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "Guidance identifies adoption benefits such as time savings from integrated IDPS management, automation that can lower cost and improve reliability, and SIEM integration that can make IDS/IPS information review and incident detection cheaper and easier.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_GEN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDPS adoption burden includes testing software and signature updates, maintaining administration, network, security, and incident-response skills, and product-specific training; these are qualitative operational burdens, not numeric TCO or budget facts.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_DEPLOY_NEUTRAL_1",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4",
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed; the CIS IG2 profile may involve enterprise-grade technology and specialized expertise, but no supplied evidence quantifies financial feasibility for this reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial adoption is genuinely mixed. Eligible adoption_benefit evidence provides qualitative efficiency, integration, and automation benefits, while adoption_burden evidence identifies skills, testing, and maintenance burdens. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, so the financial direction remains mixed with partial sufficiency.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_GEN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE04_0B77B88875745973",
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE16_CEA1C38E613068F8"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST and CISA guidance positions IDPS/IDS within governance, continuous monitoring, and defense-in-depth, enabling risk-based decisions, multi-tier monitoring, and integration with host- or network-based detection; this supports institutional use but does not prove standalone effectiveness.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_DEPLOY_NEUTRAL_1",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The scenario is a fixed CIS IG2 reference enterprise in the Republic of Korea; no supplied institutional evidence establishes KR-specific regulatory applicability, legal obligation, or compliance constraint, so a DEPLOYMENT_SPECIFIC institutional support or challenge claim is not made.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Supplied governance guidance supports an institutional role for IDS/IPS within continuous monitoring, risk governance, and defense-in-depth. This support is general and does not establish KR-specific regulatory applicability or compliance fit. Because no compliance-constraint evidence is supplied and no regulatory_applicability evidence is available for a DEPLOYMENT_SPECIFIC institutional claim, sufficiency is partial rather than sufficient.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_GEN_SUPPORT_1",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "A 2024 case study directly applies Snort and Fail2Ban IDS components, with a honeypot and alerting workflow, to brute-force defense and treats IDS/IPS-style monitoring and blocking as an implementable response to repeated authentication attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_GEN_CHALLENGE_1",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Distributed low-rate brute-force attacks using disciplined IPs can stay below ordinary per-host login thresholds and evade ordinary IDS/IPS security rules, documenting a direct technical limitation of conventional IDS/IPS for that attack pattern.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_DEPLOY_NEUTRAL_1",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4",
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "IDPS deployment requires requirements definition, environment and policy understanding, integration choices, and update testing; the CIS IG2 reference enterprise is multi-department and may require enterprise-grade technology and specialized expertise, but no supplied evidence establishes KR-specific or this-enterprise-specific IDS/IPS success.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "A direct brute-force IDS/IPS implementation finding supports general technical feasibility, while a direct low-rate brute-force evasion finding identifies an important limitation. The support is treated as stronger for this general brute-force candidate because it is direct to brute-force defense and more recent, but it is not enterprise-, product-version-, or KR-specific, so sufficiency is partial.",
+      "stance": 1
+    }
+  },
+  "recommendation": "RECOMMEND_PILOT",
+  "sha256": "caaeb083056e3d1d6032f114bf3a1af87d1531730e40146f6ae843bee9605a6f",
+  "withheld_evidence_id": null
+}

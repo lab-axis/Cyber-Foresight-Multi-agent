@@ -1,0 +1,221 @@
+{
+  "identity": {
+    "case_id": "main__ddos__nlp_llm",
+    "condition": "without_technical_enablement",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "3cdcda52e88ac7a7f431615a2a180a97e72914fc4fcc188986628425818f7413",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "KR__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 42,
+    "shadow_object_sha256": "3209e6788688fc6d64d90bf9ca90f5e14b3dbcf5d926012035f734401f2328fd",
+    "source_hashes": {
+      "stage1": "8558465125d1e82bd5d0079ecebd5a28ec0ddd4f7995ee6e3080f2111b67279d",
+      "stage2": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+      "stage3_context": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+      "stage4_context": "10c834266961c7c4ea048c04a09db58d572d8606365b27c21677992d23f5b7ea",
+      "stage5": "86d070634eb0c7cff097e1c054be40d2b7c670b208640da9ea80b40d55a8683b",
+      "stage6": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE03_6786A7AB93821D48",
+            "DE_DE03_912FC8A63179A943"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST secure-development guidance states that automated code/model review methods can lower effort and resources for vulnerability detection, and risk modeling or data-integrity practices support development efficiency.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE15_1AEC6DDD669756FF",
+            "DE_DE01_E85CB6412740EF20"
+          ],
+          "scope": "GENERAL",
+          "statement": "NCSC secure-AI guidance states that secure-by-design requires significant resources throughout the system life cycle, and NIST AI RMF notes that AI risk management requires resourced staffing and funding.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling evidence is available.",
+        "No enterprise-specific financial benefit or burden evidence for NLP/LLM DDoS deployment is available."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "General secure-development guidance provides adoption-benefit language related to reduced effort and resources for automated vulnerability detection and development efficiency, while separate AI secure-development guidance identifies significant life-cycle resource requirements as an adoption burden. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling evidence is available.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE01_0B9728FE19095FD0",
+            "DE_DE15_271AFADC7B3D5999",
+            "DE_DE15_7C1849B1FD93975C"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST AI RMF and NCSC guidance provide governance and secure-operation mechanisms such as risk-management roles, AI inventory, model documentation, monitoring, update management, and information sharing that can enable institutional handling of AI systems.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE02_007F05150CB46131"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST generative-AI profile guidance identifies a compliance task to report GAI incidents according to legal and regulatory requirements; this is a general compliance constraint and does not establish a KR-specific legal obligation.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_gaps": [
+        "No regulatory_applicability evidence is available for the Republic of Korea scenario.",
+        "The available governance and compliance guidance is general and not tied to a specific KR regulatory obligation."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General AI governance and secure-operation guidance provides institutional enablement mechanisms, while separate generative-AI profile guidance identifies a compliance-constraint task for incident reporting. However, no regulatory_applicability evidence for the Republic of Korea scenario is available, so no DEPLOYMENT_SPECIFIC institutional claim can be grounded.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "GENERAL",
+          "statement": "The cited DDoS LLM study is benchmark-based rather than an enterprise operational deployment or cost study, and its performance depended on prompt context or fine-tuning; it does not establish turnkey production deployment.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_gaps": [
+        "No technical_enablement evidence is available in the supplied evaluation evidence.",
+        "No enterprise-operational DDoS deployment evidence for NLP/LLM is available."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "The only eligible technical limitation evidence is directly about LLM-based DDoS detection and states that the cited study is benchmark-based, performance depended on prompt context or fine-tuning, and the study does not establish turnkey production deployment. No eligible technical_enablement evidence is available to support a positive technical feasibility claim.",
+      "stance": -1
+    }
+  },
+  "raw": {
+    "analysis_note": "I will not propose a new PMT or change the action set. The lens outputs above assess only the preselected Threat--PMT candidate using the supplied evaluation evidence and directional grounding contract. GENERAL findings are not treated as product/version/enterprise-specific success. Positive and negative feasibility claims are restricted to evidence IDs that appear in evaluation_evidence and are eligible under the supplied lens, direction, and scope. No numeric budget, TCO, ROI, staffing count, procurement ceiling, legal obligation, or multi-year incident trend is invented. Unmet deployment conditions are kept visible in each lens.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE03_6786A7AB93821D48",
+            "DE_DE03_912FC8A63179A943"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST secure-development guidance states that automated code/model review methods can lower effort and resources for vulnerability detection, and risk modeling or data-integrity practices support development efficiency.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE15_1AEC6DDD669756FF",
+            "DE_DE01_E85CB6412740EF20"
+          ],
+          "scope": "GENERAL",
+          "statement": "NCSC secure-AI guidance states that secure-by-design requires significant resources throughout the system life cycle, and NIST AI RMF notes that AI risk management requires resourced staffing and funding.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling evidence is available.",
+        "No enterprise-specific financial benefit or burden evidence for NLP/LLM DDoS deployment is available."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General secure-development guidance provides adoption-benefit language related to reduced effort and resources for automated vulnerability detection and development efficiency, while separate AI secure-development guidance identifies significant life-cycle resource requirements as an adoption burden. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling evidence is available.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE01_0B9728FE19095FD0",
+            "DE_DE15_271AFADC7B3D5999",
+            "DE_DE15_7C1849B1FD93975C"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST AI RMF and NCSC guidance provide governance and secure-operation mechanisms such as risk-management roles, AI inventory, model documentation, monitoring, update management, and information sharing that can enable institutional handling of AI systems.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE02_007F05150CB46131"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST generative-AI profile guidance identifies a compliance task to report GAI incidents according to legal and regulatory requirements; this is a general compliance constraint and does not establish a KR-specific legal obligation.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No regulatory_applicability evidence is available for the Republic of Korea scenario.",
+        "The available governance and compliance guidance is general and not tied to a specific KR regulatory obligation."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General AI governance and secure-operation guidance provides institutional enablement mechanisms, while separate generative-AI profile guidance identifies a compliance-constraint task for incident reporting. However, no regulatory_applicability evidence for the Republic of Korea scenario is available, so no DEPLOYMENT_SPECIFIC institutional claim can be grounded.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE01C_A6798E23EEB1E487"
+          ],
+          "scope": "GENERAL",
+          "statement": "The cited DDoS LLM study is benchmark-based rather than an enterprise operational deployment or cost study, and its performance depended on prompt context or fine-tuning; it does not establish turnkey production deployment.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [
+        "No technical_enablement evidence is available in the supplied evaluation evidence.",
+        "No enterprise-operational DDoS deployment evidence for NLP/LLM is available."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "The only eligible technical limitation evidence is directly about LLM-based DDoS detection and states that the cited study is benchmark-based, performance depended on prompt context or fine-tuning, and the study does not establish turnkey production deployment. No eligible technical_enablement evidence is available to support a positive technical feasibility claim.",
+      "stance": -1
+    }
+  },
+  "recommendation": "DO_NOT_RECOMMEND",
+  "sha256": "9e9e8ed8069d134da446bba739cbcdc6c2ce795553c9f9d3a9c2a55bc690dc6a",
+  "withheld_evidence_id": "AE01S_6E6099FA4C2D13D4"
+}

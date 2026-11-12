@@ -1,0 +1,259 @@
+{
+  "identity": {
+    "case_id": "main__brute_force__ids_ips",
+    "condition": "full",
+    "generation_config": {
+      "min_p": 0.0,
+      "reasoning_effort": "xhigh",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "input_sha256": "15ffcaa9681e1436ab1b5e67fce3af90faed368f14dd46856ce344d6477db56a",
+    "isolated": false,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "prompt_sha256": "22c05bf10660704fde292c5438fcbf1c22054c5289904f2e5be206ff8679acba",
+    "scenario_id": "US__CIS_IG2",
+    "schema_sha256": "c2ec335fdab1029924f8798bbfaf8763d8543900795c09b89bf47cefb3adbcf1",
+    "seed": 44,
+    "shadow_object_sha256": "305b66846f343fec35145e45117454b945901cbf628e9a0651c70dc128c49884",
+    "source_hashes": {
+      "stage1": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+      "stage2": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+      "stage3_context": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+      "stage4_context": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+      "stage5": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+      "stage6": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd"
+    },
+    "version": "r2-c6-policy-matched-evidence-ablation-v1"
+  },
+  "normalized": {
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORTS_GENERAL",
+          "evidence_ids": [
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE16_E455D97291B61E2A",
+            "DE_DE04_DB6B29C9BE1B0F05"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDS/IPS adoption can be financially feasible in a general adoption sense through automation, integration, and reduced manual log-review effort.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGES_GENERAL",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDS/IPS adoption imposes operational burden because implementation, tuning, update testing, and maintenance require specialized skills and ongoing administration.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_DEPLOYMENT_GAP",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile indicates multi-department enterprise IT with personnel responsible for managing and protecting infrastructure, differing risk profiles, possible regulatory burdens, and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial-adoption evidence is genuinely mixed: general sources describe efficiency, time-saving, and monitoring-automation benefits, while another source identifies skills, testing, and operational burdens. No numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied or inferred.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORTS_GENERAL",
+          "evidence_ids": [
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE04_0B77B88875745973",
+            "DE_DE16_CEA1C38E613068F8"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST and CISA guidance address IDS/IPS in the context of continuous monitoring, host/network intrusion detection, and IDPS implementation planning.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CONTEXT_DEPLOYMENT_GAP",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 profile describes an enterprise with multiple departments, differing risk profiles, possible regulatory burdens, and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "General governance and defense-in-depth guidance supports IDS/IPS as institutionally feasible, but the supplied evidence does not satisfy deployment-specific regulatory_applicability for the US CIS IG2 reference enterprise; no binding legal obligation is assumed.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORTS_GENERAL",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDS/IPS can be technically feasible for brute-force defense in a general technical sense when configured for repeated authentication attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGES_GENERAL",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ordinary IDS/IPS detection can be evaded by distributed low-rate brute-force attacks that stay below per-host login thresholds.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_DEPLOYMENT_GAP",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "E_33_A707006877BFD1C2"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile and publication-trend record do not establish enterprise-specific IDS/IPS deployment maturity or causal effectiveness for this scenario.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "General technical evidence is genuinely mixed: one source supports IDS/IPS applicability to brute-force defense, while another directly limits ordinary IDS/IPS coverage against low-rate distributed brute-force patterns. Deployment-specific feasibility for the US CIS IG2 reference enterprise is not established by the supplied sources.",
+      "stance": 0
+    }
+  },
+  "raw": {
+    "analysis_note": "The forecast indicates that both threat and PMT states are increasing, with the signed threat-minus-PMT gap moving from -0.34218763772174093 in 2025 to 0.33360196353894545 in 2026 and 0.3282731411870303 in 2027. This forecast context is preserved for decision relevance, but the feasibility stance above is based only on the cited evidence and the supplied directional grounding contract.",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORTS_GENERAL",
+          "evidence_ids": [
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE16_E455D97291B61E2A",
+            "DE_DE04_DB6B29C9BE1B0F05"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDS/IPS adoption can be financially feasible in a general adoption sense through automation, integration, and reduced manual log-review effort.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGES_GENERAL",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDS/IPS adoption imposes operational burden because implementation, tuning, update testing, and maintenance require specialized skills and ongoing administration.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONTEXT_DEPLOYMENT_GAP",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile indicates multi-department enterprise IT with personnel responsible for managing and protecting infrastructure, differing risk profiles, possible regulatory burdens, and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "Financial-adoption evidence is genuinely mixed: general sources describe efficiency, time-saving, and monitoring-automation benefits, while another source identifies skills, testing, and operational burdens. No numeric budget, TCO, ROI, staffing count, or procurement ceiling is supplied or inferred.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORTS_GENERAL",
+          "evidence_ids": [
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE04_0B77B88875745973",
+            "DE_DE16_CEA1C38E613068F8"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST and CISA guidance address IDS/IPS in the context of continuous monitoring, host/network intrusion detection, and IDPS implementation planning.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CONTEXT_DEPLOYMENT_GAP",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 profile describes an enterprise with multiple departments, differing risk profiles, possible regulatory burdens, and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General governance and defense-in-depth guidance supports IDS/IPS as institutionally feasible, but the supplied evidence does not satisfy deployment-specific regulatory_applicability for the US CIS IG2 reference enterprise; no binding legal obligation is assumed.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORTS_GENERAL",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDS/IPS can be technically feasible for brute-force defense in a general technical sense when configured for repeated authentication attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGES_GENERAL",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ordinary IDS/IPS detection can be evaded by distributed low-rate brute-force attacks that stay below per-host login thresholds.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONTEXT_DEPLOYMENT_GAP",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "E_33_A707006877BFD1C2"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "The CIS IG2 reference profile and publication-trend record do not establish enterprise-specific IDS/IPS deployment maturity or causal effectiveness for this scenario.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [],
+      "constraints": [],
+      "evidence_gaps": [],
+      "evidence_sufficiency": "PARTIAL",
+      "rationale": "General technical evidence is genuinely mixed: one source supports IDS/IPS applicability to brute-force defense, while another directly limits ordinary IDS/IPS coverage against low-rate distributed brute-force patterns. Deployment-specific feasibility for the US CIS IG2 reference enterprise is not established by the supplied sources.",
+      "stance": 0
+    }
+  },
+  "recommendation": "HOLD",
+  "sha256": "a989b9e0381af5825ca684c81751d86c0755de65ccfc7e604aa40e7c98ef9aa7",
+  "withheld_evidence_id": null
+}
